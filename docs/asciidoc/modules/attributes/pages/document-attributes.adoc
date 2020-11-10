@@ -1,0 +1,83 @@
+= Get Started with Document Attributes
+
+You can think of a document attribute as a global variable for the AsciiDoc language.
+
+== What are document attributes?
+
+Document attributes are a powerful text replacement tool and means of controlling built-in settings and behavior for a whole document or regions of a document.
+
+Document attributes:
+
+* Turn on or turn off built-in features
+* Configure built-in features
+* Declare built-in asset locations
+* Hold content for reuse throughout a document
+
+== Types of document attributes
+
+Document attributes fall into the following groups.
+
+Built-in attributes:: Built-in attributes add, configure, and control common features in a document.
+Many built-in attributes only take effect when defined in the document header with an attribute entry.
+
+Boolean attributes:: Boolean attributes are a subgroup of the built-in attribute.
+They don't have an explicitly assigned value because they act like a toggle.
+Their sole function is to turn on or turn off a feature.
+
+User-defined attributes:: #TBA#
+
+== What does setting a document attribute mean?
+
+* be set (turned on)
+
+== What does defining a document attribute mean?
+
+* have default values in the case of built-in attributes
+* have no value in the case of boolean attributes and built-in attributes with default values
+* have a single line value
+* have a value that xref:wrap-values.adoc[spans multiple, contiguous lines]
+* have a value that includes basic inline AsciiDoc syntax, such as:
+** attribute references
+** text formatting (if wrapped in a xref:pass:pass-macro.adoc#pass-subs[pass macro])
+** inline macros (if wrapped in a xref:pass:pass-macro.adoc#pass-subs[pass macro])
+
+But there are certain limitations to be aware of.
+Document attributes cannot:
+
+* have a value that includes AsciiDoc block content, such as:
+** lists
+** multiple paragraphs
+** blocks (tables, sidebars, examples, etc)
+** other whitespace-dependent markup
+
+== What does unsetting a document attribute mean?
+
+* be unset (turned off) with a leading (preferred) or trailing `!` added to the name
+
+== Where are document attributes set, defined, and unset?
+
+Document attributes can be declared in the:
+
+* document header as an xref:attribute-entries.adoc[attribute entry]
+* document body as an xref:attribute-entries.adoc[attribute entry]
+* API via the `:attributes` option
+* CLI via the `-a` option
+* override locked attributes assigned from the command line
+
+== What does referencing a document attribute mean?
+
+TBA
+
+== Where can document attributes be referenced?
+
+TBA
+
+
+
+
+
+////
+== Handling a missing attribute
+
+If you use an attribute that xref:handle-unresolved-ref.adoc[is not defined], you can specify how Asciidoctor handles attribute reference errors.
+////

@@ -1,0 +1,78 @@
+= Assign an ID
+
+You can assign an ID to any block using an attribute list.
+Once you've assigned an ID to a block, you can use that ID to link to it using a cross reference.
+
+== Block ID syntax
+
+An ID is assigned to a block by prefixing the ID value with a hash (`#`) and placing it in the block's attribute list.
+
+[source]
+----
+[#the-id-of-this-block]
+====
+Content of delimited example block
+====
+----
+
+Let's go through some examples of assigning an ID to a block with several attributes, a title, and delimiters.
+
+== Assign an ID to a block with attributes
+
+In this section, we'll assign an ID to this blockquote:
+
+[quote#roads,Dr. Emmett Brown,Back to the Future]
+Roads? Where we're going, we don't need roads.
+
+When the style attribute is explicitly assigned to a block, the style name is always placed in the first position of the attribute list.
+Then, the ID is attached directly to the end of the style name.
+
+The blockquote with an assigned style and ID in <<ex-style-id>> shows this order of attributes.
+
+
+.Assign a style and ID to a block
+[source#ex-style-id]
+----
+[quote#roads]
+Roads? Where we're going, we don't need roads.
+----
+
+Since <<ex-style-id>> is a blockquote it should have some attribution and citation information.
+In <<ex-cite>>, let's attribute this quote to its speaker and original context using the positional attribution attributes that are built into the `quote` style.
+
+
+.Assign a style, ID, and positional attributes to a block
+[source#ex-cite]
+----
+[quote#roads,Dr. Emmett Brown,Back to the Future]
+Roads? Where we're going, we don't need roads.
+----
+
+Except when the `role` and `options` attributes are assigned values using their shorthand syntax (`.` and `%`, respectively), all other block attributes are typically separated by commas (`,`).
+
+////
+
+In addition to a title, a block can be assigned additional metadata including:
+
+* ID (xref:attributes:id.adoc#anchor[anchor])
+* Block style (first positional attribute)
+* Block attributes
+
+Here's an example of a quote block with metadata:
+
+[source]
+----
+include::example$block.adoc[tag=meta-co]
+----
+<1> Title: Gettysburg Address
+<2> ID: gettysburg
+<3> Block name: quote
+<4> attribution: Abraham Lincoln (Named block attribute)
+<5> citetitle: Address delivered at the dedication of the Cemetery at Gettysburg (Named block attribute)
+
+TIP: A block can have multiple block attribute lines.
+The attributes will be aggregated.
+If there is a name conflict, the last attribute defined wins.
+
+Some metadata is used as supplementary content, such as the title, whereas other metadata controls how the block is converted, such as the block name.
+////

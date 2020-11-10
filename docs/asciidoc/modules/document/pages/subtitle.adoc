@@ -1,0 +1,117 @@
+= Subtitle
+//From @graphitefriction: this page has some weird complexity for such a simple thing
+
+An optional subtitle can be appended to a xref:title.adoc[document title].
+
+NOTE: The HTML 5 converter does not distinguish the document title from the subtitle in its output.
+It's only distinguished from the document title when you use the Docbook, EPUB 3, and PDF converters.
+
+== Subtitle syntax
+
+When the document title contains a colon followed by a space (i.e, `:{sp}`), the text after the final colon-space sequence is treated as a subtitle.
+
+.A document title and subtitle
+[source]
+----
+= Main Title: Subtitle
+----
+
+The separator is searched for from the end of the text.
+Therefore, only the last occurrence of the separator (i.e, `:{sp}`) is used for partitioning the title.
+
+.A document title that contains more than one colon-space sequence
+[source]
+----
+= Main Title: Main Title Continued: Subtitle
+----
+
+=== Modify the title separator
+
+You can change the title separator by specifying the `separator` block attribute explicitly above the document title.
+A space will automatically be appended to the separator value.
+
+.Assign separator to the document title
+[source]
+----
+[separator=::]
+= Main Title:: Subtitle
+----
+
+You can also assign a separator using a document attribute `title-separator` in the header.
+
+.Assign title-separator to the document title
+[source]
+----
+= Main Title:: Subtitle
+:title-separator: ::
+----
+
+`title-separator` can also be assigned via the CLI.
+
+....
+$ asciidoctor -a title-separator=:: document.adoc
+....
+
+== Partition the title using the API
+
+You can partition the title from the API when calling the `doctitle` method on Document:
+
+.Retrieving a partitioned document title
+[source,ruby]
+----
+title_parts = document.doctitle partition: true
+puts title_parts.title
+puts title_parts.subtitle
+----
+
+You can partition the title in an arbitrary way by passing the separator as a value to the partition option.
+In this case, the partition option both activates subtitle partitioning and passes in a custom separator.
+
+.Retrieving a partitioned document title with a custom separator
+[source,ruby]
+----
+title_parts = document.doctitle partition: '::'
+puts title_parts.title
+puts title_parts.subtitle
+----
+
+////
+.Document with a subtitle
+[source]
+----
+include::example$title.adoc[tag=sub-1]
+----
+
+In this example, the following is true:
+
+Main title:: The Dangerous and Thrilling Documentation Chronicles
+Subtitle:: A Tale of Caffeine and Words
+
+.Document with a subtitle and multiple colons
+[source]
+----
+include::example$title.adoc[tag=sub-2]
+----
+
+In this example, the following is true:
+
+Main title:: A Cautionary Tale: The Dangerous and Thrilling Documentation Chronicles
+Subtitle:: A Tale of Caffeine and Words
+
+Instead of using a colon followed by a space as the separator characters between the main title and the subtitle, you can specify a custom separator using the `title-separator` attribute.
+
+.Document with a subtitle using a custom separator
+[source]
+----
+include::example$title.adoc[tag=sub-3]
+----
+
+Note that a space is always appended to the value of the `title-separator` (making the default value of the `title-separator` effectively a single colon).
+
+This content needs to be moved or reconsidered:
+
+Asciidoctor also provides an API for extracting the title and subtitle.
+See the API docs for the https://www.rubydoc.info/gems/asciidoctor/2.0.9/Asciidoctor/Document/Title[Document::Title] for more information.
+Support for subtitle functionality for other sections is being considered.
+Refer to https://github.com/asciidoctor/asciidoctor/issues/1493[issue #1493].
+////

@@ -1,0 +1,98 @@
+= Format Content by Cell
+
+== Cell styles and their operators
+
+You can style all of the content in an individual cell by adding a style operator to the xref:add-cells-and-rows.adoc#specifiers[cell's specifier].
+
+include::partial$style-operators.adoc[]
+
+When a style operator isn't explicitly assigned to a cell specifier (or xref:format-column-content.adoc[column specifier]), the cell falls back to the default (`d`) style and is processed as regular paragraph text.
+
+== Apply a style to a table cell
+
+The style operator is always entered last in a xref:add-cells-and-rows.adoc#specifiers[cell specifier].
+Don't insert any blank spaces between the `|` and the operator.
+
+====
+<factor><span or duplication operator><horizontal alignment operator><vertical alignment operator><**style operator**>|<cell's content>
+====
+
+Let's apply a style operator to each cell in <<ex-cell-styles>>.
+
+.Apply a style operator to a cell
+[source#ex-cell-styles]
+----
+include::example$cell.adoc[tag=styles]
+----
+
+The table from <<ex-cell-styles>> is rendered below.
+
+.Result of <<ex-cell-styles>>
+include::example$cell.adoc[tag=styles]
+
+[#override-column-style]
+== Override the column style on a cell
+
+When you assign a style operator to a cell, it overrides the xref:format-column-content.adoc[column's style operator].
+In <<ex-override>>, the style operator assigned to the first column is overridden on two cells.
+The header row also overrides style operators.
+However, inline formatting markup is applied in addition to the style specified by an operator.
+
+.Override the column style using a cell style operator
+[source#ex-override]
+----
+[cols="m,m"] <.>
+|===
+|Column 1, header row |Column 2, header row <.>
+
+|This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+|This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+
+s|This content is rendered as bold paragraph text because the `s` operator in the cell's specifier overrides the style operator in the column specifier. <.>
+|*This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+It's also bold because it's marked up with the inline syntax for bold formatting.* <.>
+
+d|This content is rendered as regular paragraph text because the `d` operator in the cell's specifier overrides the style operator in the column specifier. <.>
+|This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+|===
+----
+<.> The monospace operator (`m`) is assigned to both columns.
+<.> The header row ignores any style operators assigned via column or cell specifiers.
+<.> The strong operator (`s`) is assigned to this cell's specifier, overriding the column's monospace style.
+<.> Inline formatting is applied in addition to the style assigned via a column specifier.
+<.> The default operator (`d`) is assigned to this cell's specifier, resetting it to the default text style.
+
+The table from <<ex-override>> is displayed below.
+
+.Result of <<ex-override>>
+[cols="m,m"]
+|===
+|Column 1, header row |Column 2, header row
+
+|This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+|This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+
+s|This content is rendered as bold paragraph text because the `s` operator in the cell's specifier overrides the style operator in the column specifier.
+|*This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+It's also bold because it's marked up with the inline syntax for bold formatting.*
+
+d|This content is rendered as regular paragraph text because the `d` operator in the cell's specifier overrides the style operator in the column specifier.
+|This content is rendered using a monospace font because the column's specifier includes the `m` operator.
+|===
+
+[#a-operator]
+== Use AsciiDoc block elements in a table cell
+
+To use AsciiDoc block elements, such as delimited source blocks and lists, in a cell, place the `a` operator directly in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any blank spaces between the `|` and the operator.
+
+.Apply the AsciiDoc block style operator to two cells
+[source#ex-asciidoc]
+....
+include::example$cell.adoc[tag=adoc]
+....
+
+The table from <<ex-asciidoc>> is rendered below.
+
+.Result of <<ex-asciidoc>>
+include::example$cell.adoc[tag=adoc]

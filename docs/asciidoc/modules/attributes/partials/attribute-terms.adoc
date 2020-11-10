@@ -1,0 +1,35 @@
+[[attr-ref-def]]Attribute reference:: An attribute reference marks the location where the information stored in the value of an attribute should be inserted when the document is converted.
+This is called _referencing an attribute_.
+User-defined attributes are most often referenced, though some built-in attributes that store replacement text or data, such as `author` and `localyear`, can also be used in the document.
+See xref:document.adoc#ref-anatomy[Attribute Reference Anatomy] for more information.
+
+Attribute value:: An attribute value is the built-in or user-defined replacement content or behavior that is assigned to an attribute.
+Once assigned to an attribute, a value is applied to a document, either as a whole or wherever the attribute is referenced.
+The value may be empty, an integer, or a string of characters.
+Most built-in attributes have a restricted range of allowable values while user-defined attributes only accept strings.
+See the built-in xref:ref-environment.adoc[environment attributes] and xref:ref-document.adoc[document attributes] reference tables for more information.
+Also see <<default-def,default attribute value>>.
+
+[[built-in-def]]Built-in attribute:: Built-in attributes are predefined and their names reserved.
+Asciidoctor automatically sets many built-in attributes and assigns default values when it processes a document.
+However, these built-in attributes can be unset and/or their default values overridden.
+See xref:document.adoc#set-built-in[Set built-in document attributes] and xref:element.adoc#attribute-lists[Attribute lists] for more information about using built-in attributes.
+
+Character replacement attribute:: Character replacement attributes are built-in document attributes that can be used when you don't want a character, such as a caret (^) or vertical bar (|), to be interpreted as AsciiDoc syntax.
+The xref:ref-character-replacement.adoc[Character Replacement Attributes Reference] lists these built-in attributes and their values.
+
+[[default-def]]Default attribute value:: Many built-in attributes have a default value.
+This default value is a built-in value that is used when the attribute is set and its value is left empty.
+
+Set:: When an attribute is _set_ it's "`turned on`".
+Attributes need to be set in order for their value to be applied to a document or element.
+How an attribute is set depends on what type of attribute it is and where it is being set.
+See xref:document.adoc#set-built-in[Set built-in document attributes], xref:document.adoc#set-built-in[Set user-defined document attributes], and xref:element.adoc#attribute-lists[Attribute lists] for more information about setting attributes.
+
+Unset:: When an attribute is _unset_ it's "`turned off`".
+When unset, an attribute's behavior or value will not be applied to a document or element.
+Only attributes that are automatically set when the document is loaded or converted or attributes the user explicitly set have to be unset if the user wants them to be turned off.
+See xref:document.adoc#unset[Unset a document attribute] or xref:element.adoc#unset[Unset a named attribute] for more information.
+
+[[user-defined-def]]User-defined attribute:: User-defined attributes are custom attributes that are created, set, and assigned a value by you.
+There are some user-defined xref:document.adoc#user-defined-limits[attribute name and value restrictions].

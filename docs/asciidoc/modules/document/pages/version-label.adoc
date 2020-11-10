@@ -1,0 +1,37 @@
+= Version Label Attribute
+
+The `version-label` attribute controls the version label displayed before the revision number in the byline.
+
+[#set]
+== Change the version label in the byline
+
+By default, `version-label` is assigned the value `Version`.
+This label can be changed by setting `version-label` and assigning it a new value in the document header.
+
+.Assign a new label to version-label
+[source#ex-label]
+----
+include::example$version-label.adoc[tag=set]
+----
+
+The result of <<ex-label>> is displayed below.
+
+image::set-version-label.png["Byline with custom version label",role=screenshot]
+
+Notice that when `revnumber` is implicitly set using the revision line, any preceding letters are still removed even though `version-label` is explicitly assigned a value.
+
+[#unset]
+== Unset the version label
+
+You can remove the default version label from the byline by unsetting the `version-label` attribute.
+In an attribute entry, add a bang (`!`) to the attribute's name.
+
+.Unset version-label
+[source#ex-unset-label]
+----
+include::example$version-label.adoc[tag=unset]
+----
+
+The result of <<ex-unset-label>> is displayed below.
+
+image::unset-version-label.png["Byline without a version label",role=screenshot]

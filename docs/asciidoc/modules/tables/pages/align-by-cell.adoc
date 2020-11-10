@@ -1,0 +1,142 @@
+= Align Content by Cell
+
+The alignment operators are applied to a xref:add-cells-and-rows.adoc#specifiers[cell's specifier] and allow you to horizontally and vertically align a cell's content.
+
+[#horizontal-operators]
+== Horizontal alignment operators
+
+Content can be horizontally aligned to the left or right side of the cell as well as the center of the cell.
+
+Flush left operator (<):: The less-than sign (`<`) aligns the content to the left side of the cell.
+This is the default horizontal alignment.
+Flush right operator (>):: The greater-than sign (`>`) aligns the content to the right side of the cell.
+Center operator (^):: The caret (`+^+`) centers the content horizontally in the cell.
+
+A horizontal alignment operator is entered after a span or duplication operator (if present) and in front a <<vertical-operators,vertical alignment operator>> (if present).
+
+====
+<factor><span or duplication operator><**horizontal alignment operator**><vertical alignment operator><style operator>|<cell's content>
+====
+
+=== Center content horizontally in a cell
+
+To horizontally center the content in a cell, place the `+^+` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any blank spaces between the `|` and the operator.
+
+.Center the content of a cell horizontally
+[source#ex-hcenter]
+----
+include::example$align-cell.adoc[tag=hcenter]
+----
+
+The table from <<ex-hcenter>> is rendered below.
+
+.Result of <<ex-hcenter>>
+include::example$align-cell.adoc[tag=hcenter]
+
+If the cell specifier includes a span (`<n>+`) or duplication (`+<n>*+`), place the `+^+` directly after the span or duplication operator.
+
+.Center content horizontally in spanned columns and duplicated cells
+[source#ex-factor]
+----
+include::example$align-cell.adoc[tag=factor]
+----
+
+The table from <<ex-factor>> is rendered below.
+
+.Result of <<ex-factor>>
+include::example$align-cell.adoc[tag=factor]
+
+== Align the content of a cell to the right
+
+To align the content in a cell to its right side, place the `>` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`), but after a span (`<n>+`) or duplication (`+<n>*+`) operator (if present).
+Don't insert any blank spaces between the `|` and the operators.
+
+.Right align the content of a cell
+[source#ex-right]
+----
+include::example$align-cell.adoc[tag=right]
+----
+
+The table from <<ex-right>> is rendered below.
+
+.Result of <<ex-right>>
+include::example$align-cell.adoc[tag=right]
+
+[#vertical-operators]
+== Vertical alignment operators
+
+Content can be vertically aligned to the top or bottom of a cell as well as the center of a cell.
+Vertical alignment operators always begin with a dot (`.`).
+
+Flush top operator (.<):: The dot and less-than sign (`.<`) aligns the content to the top of the cell.
+This is the default vertical alignment.
+Flush bottom operator (.>):: The dot and greater-than sign (`.>`) aligns the content to the bottom of the cell.
+Center operator (.^):: The dot and caret (`+.^+`) centers the content vertically.
+
+A vertical alignment operator is entered after a <<horizontal-operators,horizontal alignment operator>> (if present) and in front of a style operator (if present).
+
+====
+<factor><span or duplication operator><horizontal alignment operator><**vertical alignment operator**><style operator>|<cell's content>
+====
+
+=== Align content to the bottom of a cell
+
+To align the content to the bottom of a cell, place the `+.>+` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any blank spaces between the `|` and the operator.
+
+.Align content to the bottom of a cell
+[source#ex-bottom]
+----
+include::example$align-cell.adoc[tag=bottom]
+----
+
+The table from <<ex-bottom>> is rendered below.
+
+.Result of <<ex-bottom>>
+include::example$align-cell.adoc[tag=bottom]
+
+If the cell specifier includes a span (`<n>+`) or duplication (`+<n>*+`), place the `.>` after the span or duplication operator.
+
+.Align content to the bottom of a cell that spans rows
+[source#ex-span-vertical]
+----
+include::example$align-cell.adoc[tag=vspan]
+----
+
+The table from <<ex-span-vertical>> is rendered below.
+
+.Result of <<ex-span-vertical>>
+include::example$align-cell.adoc[tag=vspan]
+
+=== Center content vertically in a cell
+
+To vertically center the content in a cell, place the `+.^+` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any blank spaces between the `|` and the operator.
+
+.Center the content of a cell vertically
+[source#ex-vcenter]
+----
+include::example$align-cell.adoc[tag=vcenter]
+----
+
+The table from <<ex-vcenter>> is rendered below.
+
+.Result of <<ex-vcenter>>
+include::example$align-cell.adoc[tag=vcenter]
+
+== Apply horizontal and vertical alignment operators to the same cell
+
+A cell can have a vertical and horizontal alignment operator included in its cell specifier.
+The <<horizontal-operators,horizontal operator>> always precedes the <<vertical-operators,vertical operator>>.
+
+.Align cells horizontally and vertically
+[source#ex-combine]
+----
+include::example$align-cell.adoc[tag=combine]
+----
+
+The table from <<ex-combine>> is rendered below.
+
+.Result <<ex-combine>>
+include::example$align-cell.adoc[tag=combine]

@@ -1,0 +1,87 @@
+= Images
+
+There are two AsciiDoc image macro types, block and inline.
+
+== Block image macro
+
+A [.term]*block image* is displayed as a discrete element, i.e., on its own line, in a document.
+A block image is designated by `image` macro name and followed by two colons (`::`)
+It's preceded by a blank line, entered on a line by itself, and then followed by blank line.
+
+.Block image macro
+[source#ex-block]
+----
+Content in document.
+
+image::sunset.jpg[] <.> <.>
+
+Content in document
+----
+<.> To insert a block image, type the `image` macro name directly followed by two colons (`::`).
+<.> After the colons, enter the image file target.
+Type a set of square brackets (`+[]+`) directly after the target to complete the macro.
+
+The result of <<ex-block>> is displayed below.
+
+image::sunset.jpg[]
+
+You can specify a comma-separated list of optional attributes inside the square brackets or leave them empty.
+If you want to specify alt text, enter it inside the square brackets.
+
+.Block image macro with alt text
+[source#ex-alt]
+----
+image::sunset.jpg[Sunset]
+----
+
+You can also give the image an id, title, set its dimensions and make it a link.
+
+.Block image macro with attribute list
+[source#ex-attributes]
+----
+include::example$image.adoc[tag=attr-co]
+----
+<.> Assigns an ID to the block.
+<.> Defines the title of the block image, which gets displayed underneath the image when rendered.
+<.> `link` makes the image a link (this can also be defined inside the attribute list of the block macro)
+<.> The first positional attribute, _Sunset_, is the image's alt text.
+<.> The second and third positional attributes define the width and height, respectively.
+
+The result of <<ex-attributes>> is displayed below.
+
+include::example$image.adoc[tag=attr]
+
+=== Figure caption label
+
+When a title is defined on a block image, the image title will be prefixed by a caption label (Figure) and numbered automatically.
+To turn off figure caption labels and numbers, unset the `figure-caption` attribute in the document header.
+
+[source]
+----
+= Document Title
+:figure-caption!:
+----
+
+== Inline image macro
+
+An [.term]*inline image* is displayed in the flow of another element, such as a paragraph or sidebar block.
+The inline image macro is almost identical to the block image macro, except its macro name is followed by a single colon (`:`).
+
+.Inline image macro
+[source#ex-inline]
+----
+Click image:play.png[] to get the party started. <.>
+
+Click image:pause.png[title="Pause"] when you need a break. <.>
+----
+<.> In the flow of an element, enter the macro name and a single colon (`+image:+`), followed by the image target.
+Complete the macro with a set of square brackets (`+[]+`).
+<.> You can specify a comma-separated list of attributes inside the square brackets or leave them empty.
+
+The result of <<ex-inline>> is displayed below.
+
+Click image:play.png[] to get the party started.
+
+Click image:pause.png[title="Pause"] when you need a break.
+
+For inline images, the optional title is displayed as a tooltip.

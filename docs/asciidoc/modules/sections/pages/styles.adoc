@@ -1,0 +1,48 @@
+= Section Styles for Articles and Books
+
+AsciiDoc provides built-in styles for the specialized front matter and back matter sections found in journal articles, academic papers, and books.
+These styled sections are referred to as [.term]*special sections*.
+The document type, `article` or `book`, determines which section styles are available for use.
+
+== Book section styles
+
+The following section styles are permitted in the `book` document type:
+
+// front matter
+* colophon
+* dedication
+* acknowledgments
+//(translated into a chapter)
+* preface
+// matter
+* part
+// part introduction style???
+* chapter
+// back matter
+* appendix
+* glossary
+* bibliography
+* index
+//(placeholder only)
+
+== Article section styles
+
+The following section styles are permitted in the `article` document type:
+
+* abstract
+* appendix
+* glossary
+* bibliography
+* index
+//(placeholder only)
+
+////
+Only these section styles can have subsections:
+
+// front matter
+* abstract
+//(translated into a chapter)
+* preface
+// back matter
+* appendix
+////

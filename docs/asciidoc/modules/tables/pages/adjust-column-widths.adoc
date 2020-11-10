@@ -1,0 +1,131 @@
+= Adjust Column Widths
+// Check "proportional" usage
+
+== Column width
+
+The width of a column is assigned by its xref:add-columns.adoc#col-specifier[column specifier].
+The value of a column's width is either an integer or a percentage.
+The default column width is `1`.
+The integer or percentage represents the width of the column in proportion to the other columns within the total width of the table.
+The total width of a table is backend dependent.
+When using the HTML5 backend with the default Asciidoctor stylesheet, tables stretch the width of the page body unless the xref:width.adoc[table width attribute] is explicitly set.
+
+== Assign column widths using integers
+
+To assign widths to the columns in a table, set the `cols` attribute and assign it a list of comma-separated column specifiers using integers.
+
+.Assign column widths using integers
+[source#ex-int]
+----
+[cols="2,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 2
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
+----
+
+As seen below, the columns stretch across the width of the page according to their proportional widths.
+
+.Result of <<ex-int>>
+[cols="2,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 2
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
+
+=== Increase or decrease the width of a column
+
+To increase the width of a column, use a bigger integer in the column's specifier.
+Let's make column 1 from <<ex-int>> the largest column in the table by increasing its width from `2` to `6` in <<ex-increase>>.
+
+.Increase the width of a column
+[source#ex-increase]
+----
+[cols="6,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
+----
+
+Below, the result of <<ex-increase>> shows that column 1 is now much wider than column 3.
+
+.Result of <<ex-increase>>
+[cols="6,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
+
+To decrease the width of a column, use a smaller integer in its specifier.
+In <<ex-decrease>>, let's make the width of column 3 smaller, but not quite as small as column 2, by decreasing its width from `3` to `2`.
+
+.Decrease the width of a column
+[source#ex-decrease]
+----
+[cols="6,1,2"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 2
+|===
+----
+
+The columns, displayed in the table below, have adjusted across the width of the page according to their proportional widths.
+
+.Result of <<ex-decrease>>
+[cols="6,1,2"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 2
+|===
+
+== Change column widths using percentage values
+
+Column widths can be assigned using a percentage between `1%` and `100%`.
+Like with integer values, set `cols` and assign it a list of comma-separated column specifiers using percentages.
+
+.Assign column widths using percentages
+[source#ex-percent]
+----
+[cols="15%,30%,55%"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a width of 15%
+|This column has a width of 30%
+|This column has a width of 55%
+|===
+----
+
+As seen in the table below, the columns stretch across the width of the page according to the percentage assigned via their column specifiers.
+
+.Result of <<ex-percent>>
+[cols="15%,30%,55%"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a width of 15%
+|This column has a width of 30%
+|This column has a width of 55%
+|===
+
+When assigning percentages to `cols`, you don't have to include the percent sign (`%`).
+For instance, both `[cols="15%,30%,55%"]` and `[cols="15,30,55"]` are valid.

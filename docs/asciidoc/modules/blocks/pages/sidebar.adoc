@@ -1,0 +1,64 @@
+= Sidebars
+// Moved upstream from the Antora documentation at docs.antora.org
+
+On this page, you'll learn:
+
+* [x] How to mark up a sidebar with AsciiDoc.
+
+A sidebar can contain any type of content, such as quotes, equations, and images.
+Normal substitutions are applied to sidebar content.
+
+== Sidebar style syntax
+
+If the sidebar content is contiguous, the block style `sidebar` can be placed directly on top of the text in an attribute list (`[]`).
+
+.Assign sidebar block style to paragraph
+[source#ex-style]
+----
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
+----
+
+The result of <<ex-style>> is displayed below.
+
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+
+== Delimited sidebar syntax
+
+A delimited sidebar block is delimited by a set of four consecutive asterisks (`pass:[****]`).
+You don't need to set the style name when you use the sidebar's delimiters.
+
+.Sidebar block delimiter syntax
+[source#ex-block]
+....
+.Optional Title
+****
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
+
+TIP: They can contain any type of content.
+
+.Source code block in a sidebar
+[source,js]
+----
+const { expect, expectCalledWith, heredoc } = require('../test/test-utils')
+----
+****
+....
+
+The result of <<ex-block>> is displayed below.
+
+.Optional Title
+****
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+
+TIP: They can contain any type of content.
+
+.Source code block in a sidebar
+[source,js]
+----
+const { expect, expectCalledWith, heredoc } = require('../test/test-utils')
+----
+****

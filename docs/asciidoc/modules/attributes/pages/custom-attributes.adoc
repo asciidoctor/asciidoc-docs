@@ -1,0 +1,42 @@
+= Set and Define Custom Document Attributes
+// [#set-user-defined]
+
+//If you're familiar with writing in XML, you might recognize a document attribute as a user-defined entity.
+When you find yourself typing the same text repeatedly, or text that often needs to be updated, consider creating your own attribute.
+
+[#user-defined-names]
+== User-defined attribute names and values
+
+A user-defined attributes must have a name and explicitly assigned value.
+
+The attribute's name must:
+
+* be at least one character long,
+* begin with a word character (A-Z, a-z, 0-9, or _), and
+* only contain word characters and hyphens.
+
+The name cannot contain dots or spaces.
+
+Although uppercase characters are permitted in an attribute name, the name is converted to lowercase before being stored.
+For example, `URL` and `Url` are treated as `url`.
+A best practice is to only use lowercase letters in the name and avoid starting the name with a number.
+
+[[user-values]]Attribute values can:
+
+* be any inline content, and
+* contain line breaks, but only if an xref:wrap-values.adoc#hard[explicit line continuation] (`+`) is used.
+
+== Create a custom attribute and value
+
+A prime use case for attribute entries is to promote frequently used text and URLs to the top of the document.
+
+.Create a user-defined attribute and value
+[source#ex-user-set]
+----
+:disclaimer: Don't pet the wild Wolpertingers. If you let them into your system, we're \ <.>
+not responsible for any loss of hair, chocolate, or purple socks.
+:url-repo: https://github.com/asciidoctor/asciidoctor
+----
+<.> Long values can be xref:wrap-values.adoc[soft wrapped] using a backslash (`\`).
+
+Now, you can xref:reference-custom-attributes.adoc[reference these attributes] throughout the document.

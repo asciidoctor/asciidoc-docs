@@ -1,0 +1,227 @@
+////
+Examples for table sections, cell specifiers
+////
+
+// tag::styles[]
+|===
+|Column 1 |Column 2
+
+2*>m|This content is duplicated across two columns (2*) and aligned to the right side of the cell (>).
+
+It's rendered using a monospace font (m).
+
+.3+^.>s|This cell spans 3 rows (`3+`).
+The content is centered horizontally (`+^+`), vertically aligned to the bottom of the cell (`.>`), and styled as strong (`s`).
+e|This content is italicized (`e`).
+
+m|This content is rendered using a monospace font (m).
+
+s|This content is bold (`s`).
+|===
+// end::styles[]
+
+// tag::adoc[]
+|===
+|Column 1 |Column 2
+
+a|This cell is prefixed with an `a`, so the processor interprets the following lines as an AsciiDoc list.
+
+* List item 1
+* List item 2
+* List item 3
+
+|This cell isn't prefixed with an `a`, so the processor doesn't interpret the following lines as an AsciiDoc list.
+
+* List item 1
+* List item 2
+* List item 3
+
+|This cell isn't prefixed with an `a`, so the processor doesn't interpret the listing block delimiters or the `source` style.
+
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
+
+a|This cell is prefixed with an `a`, so the listing block is processed and rendered according to the `source` style rules.
+
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+
+|===
+// end::adoc[]
+
+// tag::span-cols[]
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row |Column 4, header row
+
+3+|This cell spans columns 1, 2, and 3 because its specifier contains a span of `3+`
+|Cell in column 4, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|Cell in column 3, row 3
+|Cell in column 4, row 3
+|===
+// end::span-cols[]
+
+// tag::span-rows[]
+|===
+|Column 1, header row |Column 2, header row
+
+.2+|This cell spans rows 2 and 3 because its specifier contains a span of `.2+`
+|Cell in column 2, row 2
+
+|Cell in column 2, row 3
+
+|Cell in column 1, row 4
+|Cell in column 2, row 4
+|===
+// end::span-rows[]
+
+// tag::span-block[]
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row |Column 4, header row
+
+|Cell in column 1, row 2
+2.3+|This cell spans columns 2 and 3 and rows 2, 3, and 4 because its specifier contains a span of `2.3+`
+|Cell in column 4, row 2
+
+|Cell in column 1, row 3
+|Cell in column 4, row 3
+
+|Cell in column 1, row 4
+|Cell in column 4, row 4
+|===
+// end::span-block[]
+
+// tag::clone[]
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row
+
+2*|This cell is duplicated in columns 1 and 2 because its specifier contains a duplication of `2*`
+|Cell in column 3, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+3*e|This cell specifier contains the duplication `3*` and style operator `e`.
+
+The cell's text is italicized and duplicated in column 3, row 3 and columns 1 and 2 on row 4.
+
+|Cell in column 3, row 4
+|===
+// end::clone[]
+
+== THESE ARE THE LEGACY EXAMPLES THAT MAY NO LONGER BE IN USE
+
+// tag::3dup[]
+|===
+
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+
+3*|Same cell content in columns 1, 2, and 3
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|Cell in column 3, row 3
+
+|===
+// end::3dup[]
+
+// tag::3span[]
+|===
+
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+
+3+|Content in a single cell that spans columns 1, 2, and 3
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|Cell in column 3, row 3
+
+|===
+// end::3span[]
+
+// tag::2span-r[]
+|===
+
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+
+.2+|Content in a single cell that spans rows 2 and 3
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+
+|Cell in column 2, row 3
+|Cell in column 3, row 3
+
+|===
+// end::2span-r[]
+
+// tag::span-cr[]
+|===
+
+|Column 1, row 1 |Column 2, row 1 |Column 3, row 1 |Column 4, row 1
+
+|Column 1, row 2
+2.3+|Content in a single cell that spans over rows and columns
+|Column 4, row 2
+
+|Column 1, row 3
+|Column 4, row 3
+
+|Column 1, row 4
+|Column 4, row 4
+|===
+// end::span-cr[]
+
+// tag::cell-align[]
+[cols="3"]
+|===
+^|Prefix the `{vbar}` with `{caret}` to center content horizontally
+<|Prefix the `{vbar}` with `<` to align the content to the left horizontally
+>|Prefix the `{vbar}` with `>` to align the content to the right horizontally
+
+.^|Prefix the `{vbar}` with a `.` and `{caret}` to center the content in the cell vertically
+.<|Prefix the `{vbar}` with a `.` and `<` to align the content to the top of the cell
+.>|Prefix the `{vbar}` with a `.` and `>` to align the content to the bottom of the cell
+
+3+^.^|This content spans three columns (`3{plus}`) and is centered horizontally (`{caret}`) and vertically (`.{caret}`) within the cell.
+
+|===
+// end::cell-align[]
+
+
+
+// tag::b-spec[]
+[cols="e,m,^,>s", width="25%"]
+|===
+|1 >s|2 |3 |4
+^|5 2.2+^.^|6 .3+<.>m|7
+^|8
+|9 2+>|10
+|===
+// end::b-spec[]
+
+// tag::cell-src[]
+|===
+|Source Code 1 |Source Code 2
+
+a|
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+
+a|
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
+|===
+// end::cell-src[]

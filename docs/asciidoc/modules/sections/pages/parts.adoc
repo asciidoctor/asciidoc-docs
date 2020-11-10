@@ -1,0 +1,21 @@
+= Book Parts
+
+Parts can only be used when the document type is `book`.
+There is no dedicated `doctype` for a multi-part book to distinguish it from a regular book.
+That distinction is made by the section levels you use.
+
+== Part section level syntax
+
+Parts are specified by a level 0 section (`=`).
+Each part must contain at least one section.
+You can insert optional introduction content beneath in the part section prior to the first section.
+Additionally, there are attributes devoted especially to xref:part-numbers-and-labels.adoc[numbering and labeling parts].
+
+== Special sections for parts
+
+A part can have its own xref:preface.adoc[preface], xref:bibliography.adoc[bibliography], xref:glossary.adoc[glossary] and xref:index.adoc[index].
+
+[source]
+----
+include::example$multi-special.adoc[tag=part]
+----

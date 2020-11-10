@@ -1,0 +1,33 @@
+= Add a Title to a Table
+:navtitle: Add a Title
+// TODO/FIX: When soft unset is used from the Antora playbook, and then the attribute is reset in the document, it doesn't use the default value, so "Table" has to be explicitly assigned. Otherwise the label is simply the incremented number (i.e., "1.").
+:table-caption: Table
+
+A table can have an optional title.
+To add a title to a table, use the block title syntax.
+
+.Add an optional title to a table
+[source#ex-title]
+----
+.A table with a title <.>
+|===
+|Column 1, header row |Column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+----
+<.> On the line directly above the table's opening delimiter (or its attribute list), enter a dot (`.`) directly followed by the text of the title.
+
+The table from <<ex-title>> is displayed below.
+
+.A table with a title
+|===
+|Column 1, header row |Column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+
+You'll notice in the above result, that the processor automatically added _Table 1._ in front of the table's title.
+This title label can be xref:customize-title-label.adoc[customized] or xref:turn-off-title-label.adoc[deactivated].

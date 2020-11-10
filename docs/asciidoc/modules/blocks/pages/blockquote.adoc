@@ -1,0 +1,99 @@
+= Blockquotes
+
+Prose excerpts, quotes and verses share the same syntax structure, including:
+
+* block name, either `quote` or `verse`
+* name of who the content is attributed to
+* bibliographical information of the book, speech, play, poem, etc., where the content was drawn from
+* excerpt text
+
+== Basic quote syntax
+
+// tag::basic[]
+For content that doesn't require the preservation of line breaks, set the `quote` attribute in the first position of the attribute list.
+Next, set the attribution and relevant citation information.
+However, these positional attributes are optional.
+
+.Anatomy of a basic quote
+[#ex-basic]
+----
+[quote, attribution, citation title and information]
+Quote or excerpt text
+----
+
+If the quote is a single line or paragraph, you can place the attribute list directly on top of the text.
+
+.Quote paragraph syntax
+[source#ex-style]
+----
+include::example$quote.adoc[tag=para2-c]
+----
+<.> Mark lead-in text explaining the context or setting of the quote using a period (`.`). (optional)
+<.> For content that doesn't require the preservation of line breaks, set `quote` in the first position of the attribute list.
+<.> The second position contains who the excerpt is attributed to. (optional)
+<.> Enter additional citation information in the third position. (optional)
+<.> Enter the excerpt or quote text on the line immediately following the attribute list.
+
+The result of <<ex-style>> is displayed below.
+
+include::example$quote.adoc[tag=para2]
+
+== Quoted block
+
+If the quote or excerpt is more than one paragraph, place the text between delimiter lines consisting of four underscores (`+____+`).
+
+.Quote block syntax
+[source#ex-block]
+----
+include::example$quote.adoc[tag=comp]
+----
+
+The result of <<ex-block>> is displayed below.
+
+include::example$quote.adoc[tag=comp]
+
+Asciidoctor also provides three alternative ways to markup quotes and prose excerpts.
+// end::basic[]
+
+== Quoted paragraph
+
+You can turn a single paragraph into a blockquote by:
+
+. surrounding it with double quotes
+. adding an optional attribution (prefixed with two dashes) below the quoted text
+
+.Quoted paragraph syntax
+[source#ex-quoted]
+----
+include::example$quote.adoc[tag=abbr]
+----
+
+The result of <<ex-quoted>> is displayed below.
+
+include::example$quote.adoc[tag=abbr]
+
+=== Markdown-style blockquotes
+
+Asciidoctor supports Markdown-style blockquotes.
+
+.Markdown-style blockquote syntax
+[source#ex-md,markdown]
+----
+include::example$quote.adoc[tag=md]
+----
+
+The result of <<ex-md>> is displayed below.
+
+include::example$quote.adoc[tag=md]
+
+Like Markdown, Asciidoctor supports block content inside the blockquote, including nested blockquotes.
+
+.Markdown-style blockquote containing block content
+[source#ex-md-block,markdown]
+....
+include::example$quote.adoc[tag=md-alt]
+....
+
+Here's how the conversation from <<ex-md-block>> is rendered.
+
+include::example$quote.adoc[tag=md-alt]

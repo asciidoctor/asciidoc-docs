@@ -1,0 +1,27 @@
+= Reference Built-in Attributes
+
+You'll likely use the values of certain built-in attributes in specific locations throughout a document.
+To reference and use the value of a document attribute, you enclose the attribute's name in curly brackets (`+{name-of-an-attribute}+`).
+This inline element is called an *attribute reference*.
+
+== Reference an explicitly set and defined built-in document attribute
+
+TBA
+
+== Reference an automatically set and defined built-in document attribute
+
+An automatically set document attribute is referenced the same way as an explicitly set document attribute.
+For instance, Asciidoctor automatically sets all of the character replacement attributes.
+That means that you can reference them throughout your document without having to create an attribute entry in its header.
+
+[source]
+----
+TIP: Wolpertingers don't like temperatures above 100{deg}C. <.>
+Our servers don't like them either.
+----
+<.> Reference the character replacement attribute `deg` by enclosing its name in a set of curly brackets (`+{ }+`).
+
+As you can see below, the attribute reference is replaced with the attribute's value when the document is processed.
+
+TIP: Wolpertingers don't like temperatures above 100{deg}C.
+Our servers don't like them either.

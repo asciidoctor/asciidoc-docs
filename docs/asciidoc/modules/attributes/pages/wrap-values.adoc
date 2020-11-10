@@ -1,0 +1,33 @@
+= Wrap Attribute Entry Values
+
+== Soft wrap attribute values
+
+When a document attribute value is long, it's possible to split it across multiple lines.
+Let's assume we are working with a very long attribute.
+You can split the value over multiple lines to make it more readable by inserting a space followed by a backslash (`\`) at the end of each continuing line.
+
+[source]
+----
+:long-value: If you have a very long line of text \
+that you need to substitute regularly in a document, \
+you may find it easier to split it neatly in the header \
+so it remains readable to folks reading your docs code.
+----
+
+The backslash and newline that follows will be removed from the attribute value when the attribute is parsed.
+The space before the backslash is preserved, so you have to use this technique at a natural break point in the content.
+
+[#hard]
+== Hard wrap attribute values
+
+You can force an attribute value to hard wrap by adding a plus (`+`) surrounded by spaces before a backslash.
+
+.An attribute value with hard line breaks
+[source]
+----
+:haiku: Write your docs in text, + \
+AsciiDoc makes it easy, + \
+Now get back to work!
+----
+
+This syntax ensures that the newlines are preserved in the output as hard line breaks.

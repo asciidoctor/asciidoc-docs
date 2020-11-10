@@ -1,0 +1,62 @@
+= Manage Document Attribute Assignment Precedence
+:navtitle: Attribute Assignment Precedence
+
+== Default attribute value precedence
+
+The attribute assignment precedence, listed from highest to lowest, is:
+
+. An attribute defined using the API or CLI
+. An attribute defined in the document
+. The default value of the attribute, if applicable
+
+Let's use the `imagesdir` attribute to show how precedence works.
+
+The default value for the `imagesdir` attribute is an empty string.
+Therefore, if the `imagesdir` attribute is not assigned a value (either in the document, API, or CLI), the processor will assign it the default value of empty string.
+If the `imagesdir` attribute is set in the document (meaning assigned a new value, such as `images`), that value will override the default value.
+Finally, if a value is assigned to the `imagesdir` attribute via the API or CLI, that value will override both the default value and the value assigned in the document.
+
+It's possible to alter this order of precedence using a modifier, covered in the next section.
+
+== Altering the assignment precedence
+
+You can allow the document to reassign an attribute that is defined via the API or CLI by adding the `@` precedence modifier to the end of the attribute value or the end of the attribute name.
+Adding this modifier lowers the precedence so that an assignment in the document still wins out.
+We sometimes refer to this as "`soft setting`" the attribute.
+This feature can be useful for assigning default values for attribute, but still letting the document control its own fate.
+
+NOTE: The `@` modifier is removed before the assignment is made.
+
+Here's an example that shows how to set the `imagesdir` from the CLI with a lower precedence:
+
+ $ asciidoctor -a imagesdir=images@ doc.adoc
+
+Alternately, you can place the modifier at the end of the attribute name:
+
+ $ asciidoctor -a imagesdir@=images doc.adoc
+
+It's now possible to override the value of the `imagesdir` attribute from within the document:
+
+[source]
+----
+= Document Title
+:imagesdir: new/path/to/images
+----
+
+To soft unset an attribute from the CLI or API, you can use the following syntax:
+
+ !name=@
+
+The leading `!` unsets the attribute while the `@` lowers the precedence of the assignment.
+This assignment is almost always used to unset a default value while still allowing the document to assign a new one.
+One such example is `sectids`, which is enabled by default.
+`!sectids=@` switches the setting off.
+
+Let's update the attribute assignment precedence list defined earlier to reflect this additional rule:
+
+. An attribute passed to the API or CLI whose value does not end in `@`
+. An attribute defined in the document
+. An attribute passed to the API or CLI whose value or name ends in `@`
+. The default value of the attribute, if applicable
+
+Regardless of whether the precedence modifier is applied, an attribute assignment always overrides the default value.

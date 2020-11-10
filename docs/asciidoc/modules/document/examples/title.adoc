@@ -1,0 +1,24 @@
+// tag::b-base[]
+= My Document's Title
+
+My document provides...
+// end::b-base[]
+
+// tag::sub-1[]
+= The Intrepid Chronicles: A Tale of Caffeine and Words
+
+It began on a bleary Monday morning.
+// end::sub-1[]
+
+// tag::sub-2[]
+= A Cautionary Tale: The Intrepid Chronicles: A Tale of Caffeine and Words
+
+It began on a bleary Monday morning.
+// end::sub-2[]
+
+// tag::sub-3[]
+:title-separator: {sp}|
+= The Intrepid Chronicles | A Tale of Caffeine and Words
+
+It began on a bleary Monday morning.
+// end::sub-3[]

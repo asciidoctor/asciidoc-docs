@@ -1,0 +1,132 @@
+= Format Content by Column
+
+A column style operator is applied to a column specifier and xref:add-columns.adoc#cols-attribute[assigned to the cols attribute].
+
+[#cols-style]
+== Column styles and their operators
+
+You can style all of the content in a column by adding a style operator to a column's specifier.
+
+include::partial$style-operators.adoc[]
+
+When a style operator isn't explicitly applied to a column specifier, the `d` style is assigned automatically and the column is processed as paragraph text.
+
+== Apply a style operator to a column
+
+A style operator is always placed in the last position on a column's specifier or multiplier.
+
+* `[cols=">pass:q[#e#],.^3pass:q[#s#]"]` A style operator is placed directly after any other operators and the column width in the column's specifier.
+* `[cols="pass:q[#h#],pass:q[#e#]"]` When a column width isn't specified, the style operator can represent both the column and the column's content style.
+* `[cols="3*.>pass:q[#m#]"]` When a multiplier is present, the style operator is placed after any horizontal and vertical alignment operators.
+
+Let's apply a different style to each column in <<ex-style>>.
+
+.Add a style operator to each column
+[source#ex-style]
+----
+[cols="h,m,s,e"]
+|===
+|Column 1 |Column 2 |Column 3 |Column 4
+
+|This column's content and borders are rendered using the table header (`h`) styles.
+|This column's content is rendered using a monospace font (m).
+|This column's content is bold (`s`).
+|This column's content is italicized (`e`).
+
+|This column's content and borders are rendered using the table header (`h`) styles.
+|This column's content is rendered using a monospace font (m).
+|This column's content is bold (`s`).
+|This column's content is italicized (`e`).
+|===
+----
+
+The table from <<ex-style>> is displayed below.
+Note that the style applied to each column doesn't affect the xref:add-header-row.adoc[header row] or override any inline formatting.
+
+.Result of <<ex-style>>
+[cols="h,m,s,e"]
+|===
+|Column 1 |Column 2 |Column 3 |Column 4
+
+|This column's content and borders are rendered using the table header (`h`) styles.
+|This column's content is rendered using a monospace font (m).
+|This column's content is bold (`s`).
+|This column's content is italicized (`e`).
+
+|This column's content and borders are rendered using the table header (`h`) styles.
+|This column's content is rendered using a monospace font (m).
+|This column's content is bold (`s`).
+|This column's content is italicized (`e`).
+|===
+
+Additionally, if a xref:format-cell-content.adoc#override-column-style[cell specifier contains a style operator], that style will override a column's style operator.
+
+== Use AsciiDoc block elements in a column
+
+To use AsciiDoc block elements, such as delimited source blocks and lists, in a column, place the lowercase letter `a` on the column specifier.
+
+.Apply the AsciiDoc block style operator to the first column
+[source#ex-asciidoc]
+....
+[cols="2a,2"]
+|===
+|Column with the `a` style operator applied to its specifier |Column using the default style
+
+|
+* List item 1
+* List item 2
+* List item 3
+|
+* List item 1
+* List item 2
+* List item 3
+
+|
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+|
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
+|===
+....
+
+The AsciiDoc block style effectively creates a nested, standalone AsciiDoc document in each cell in the column.
+The parent document's implicit attributes, such as `doctitle`, are shadowed and custom attributes are inherited.
+// what does "shadowed" actually mean???
+
+.Result of <<ex-asciidoc>>
+[cols="2a,2"]
+|===
+|Column with the `a` style operator applied to its specifier |Column using the default style
+
+|
+* List item 1
+* List item 2
+* List item 3
+|
+* List item 1
+* List item 2
+* List item 3
+
+|
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+
+|
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
+|===
+
+You can also apply the xref:format-cell-content.adoc#a-operator[AsciiDoc block style operator to individual cells].

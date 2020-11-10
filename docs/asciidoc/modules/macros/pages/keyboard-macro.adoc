@@ -1,0 +1,19 @@
+= Keyboard Macro
+
+IMPORTANT: You must set the `experimental` attribute to enable the UI macros.
+
+== Keyboard macro syntax
+
+The keyboard macro helps communicate what keys on a keyboard should be pressed.
+The macro uses the syntax `+kbd:[key(+key)*]+`.
+
+.Using the keyboard macro syntax
+[source#ex-kbd]
+----
+include::example$ui.adoc[tag=key]
+----
+
+The result of <<ex-kbd>> is displayed below.
+
+[%autowidth]
+include::example$ui.adoc[tag=key]

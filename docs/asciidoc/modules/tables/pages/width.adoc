@@ -1,0 +1,75 @@
+= Table Width
+
+By default, a table will span the width of the content area.
+
+== Fixed width
+
+To constrain the width of the table to a fixed value, set the `width` attribute in the table's attribute list.
+The width is an integer percentage value ranging from 1 to 100.
+The `%` sign is optional.
+
+.Table with width set to 75%
+[source#ex-fixed]
+----
+[width=75%]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-fixed>>
+[width=75%]
+include::example$row.adoc[tag=base-h]
+
+== Autowidth
+
+Alternately, you can make the width fit the content by setting the `autowidth` option.
+The columns inherit this setting, so individual columns will also be sized according to the content.
+
+.Table using autowidth
+[source#ex-auto]
+----
+[%autowidth]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-auto>>
+[%autowidth]
+include::example$row.adoc[tag=base-h]
+
+If you want each column to have an automatic width, but want the table to span the width of the content area, add the `stretch` role to the table.
+(Alternatively, you can set the `width` attribute to `100%`.)
+
+.Full-width table with autowidth columns
+[source#ex-stretch]
+----
+[%autowidth.stretch]
+include::example$row.adoc[tag=base-h]
+----
+
+The table from <<ex-stetch>> is rendered below.
+The columns are sized to the content, but the table spans the width of the page.
+
+.Result of <<ex-stretch>>
+[%autowidth.stretch]
+include::example$row.adoc[tag=base-h]
+
+WARNING: The `autowidth` option is not recognized by the DocBook converter.
+
+== Mix fixed and autowidth columns
+
+If you want to apply `autowidth` only to certain columns, use the special value `~` as the width of the column.
+In this case, width values are assumed to be a percentage value (i.e., 100-based).
+
+.Table with fixed and autowidth columns
+[source#ex-mix]
+----
+[cols="25h,~,~"]
+|===
+|small |as big as the column needs to be |the rest
+|===
+----
+
+.Result of <<ex-mix>>
+[cols="25h,~,~"]
+|===
+|small |as big as the column needs to be |the rest
+|===

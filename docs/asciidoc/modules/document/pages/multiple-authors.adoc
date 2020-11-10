@@ -1,0 +1,35 @@
+= Add Multiple Authors to a Document
+
+The xref:author-line.adoc[author line] is the only way to assign more than one author to a document for display in the byline.
+Additionally, only the HTML 5 and Docbook converters can convert documents with multiple authors.
+
+== Multi-author syntax
+
+The information for each author is concluded with a semicolon (`;`).
+
+.Author line structure for multiple authors
+[source]
+----
+= Document Title
+firstname middlename lastname <email>; firstname middlename lastname <email>
+----
+
+Directly after each author's last name or optional email, enter a semicolon (`;`) followed by a blank space, and then enter the next author's information.
+
+== List multiple authors on the author line
+
+The author line in <<ex-line-multiple>> lists the information for three authors.
+Each author's information is separated by a semicolon (`;`).
+Notice that the author _B. Steppenwolf_ doesn't have an email, so the semicolon is placed at the end of their name.
+
+.An author line with three authors and two email addresses
+[source#ex-line-multiple]
+----
+include::example$multiple-authors.adoc[tag=header]
+----
+
+The result of <<ex-line-multiple>> is displayed below.
+
+image::author-line-with-multiple-authors.png[Multiple authors and their emails displayed on the byline,role=screenshot]
+
+The information for each author can also be xref:reference-author-attributes.adoc#reference-multiple-authors[referenced in the document] using their respective built-in attribute.

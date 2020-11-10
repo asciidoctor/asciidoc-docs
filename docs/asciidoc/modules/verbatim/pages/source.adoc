@@ -1,0 +1,46 @@
+= Source Code Blocks
+:table-caption: Table
+:url-coderay: http://coderay.rubychan.de/
+:url-highlightjs: https://highlightjs.org/
+:url-pygments: https://pygments.org
+:url-rouge: http://rouge.jneen.net
+////
+From user manual:
+NOTE we really want this ID on the section, but there are problems w/ multiple IDs per section
+[#source-code-blocks]
+[#syntax-highlighting]
+////
+
+Developers are accustomed to seeing source code colorized to emphasize the code's structure (i.e., keywords, types, delimiters, etc.).
+This technique is known as [.term]*syntax highlighting*.
+Since this technique is so prevalent, Asciidoctor integrates with a number of libraries to syntax highlight the source code blocks in your document.
+The list of integrated libraries includes Rouge, CodeRay, Pygments, and highlight.js.
+
+<<ex-source>> shows a listing block with the `source` style and language `ruby` applied to its content.
+
+.Source block syntax
+[source#ex-source]
+....
+include::example$source.adoc[tag=src-base]
+....
+
+The result of <<ex-source>> is rendered below.
+
+include::example$source.adoc[tag=src-base]
+
+== Using include directives in source blocks
+
+You can use an xref:directives:include.adoc[include directive] to insert source code into an AsciiDoc document directly from a file.
+
+.Code inserted from another file
+[listing#ex-include]
+....
+include::example$source.adoc[tag=src-inc]
+....
+
+//TODO mention the use of AsciiDoc tags to include code snippets and the indent flag to reset indentation
+
+TIP: If you specify custom substitutions on the source block using the `subs` attribute, make sure to include the `specialcharacters` substitution if you want to preserve syntax highlighting.
+However, if you do plan to modify the substitutions, we recommend using xref:subs:apply-subs-to-blocks.adoc#incremental[incremental substitutions] instead.
+
+// Highlight PHP sidebar was taken from end of page and made its own page

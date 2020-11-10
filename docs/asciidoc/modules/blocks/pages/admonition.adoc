@@ -1,0 +1,82 @@
+= Admonitions
+
+// tag::intro[]
+There are certain statements you may want to draw attention to by taking them out of the content's flow and labeling them with a priority.
+These are called admonitions.
+It's rendered style is determined by the assigned label (i.e., value).
+Asciidoctor provides five admonition style labels:
+
+* `NOTE`
+* `TIP`
+* `IMPORTANT`
+* `CAUTION`
+* `WARNING`
+
+.Caution vs. Warning
+[#caution-vs-warning]
+****
+When choosing the admonition type, you may find yourself getting confused between "caution" and "warning" as these words are often used interchangeably.
+Here's a simple rule to help you differentiate the two:
+
+* Use *CAUTION* to advise the reader to _act_ carefully (i.e., exercise care).
+* Use *WARNING* to inform the reader of danger, harm, or consequences that exist.
+
+To find a deeper analysis, see https://www.differencebetween.com/difference-between-caution-and-vs-warning/.
+****
+
+When you want to call attention to a single paragraph, start the first line of the paragraph with the label you want to use.
+The label must be uppercase and followed by a colon (`:`).
+
+.Admonition paragraph syntax
+[source#ex-label]
+----
+include::example$admonition.adoc[tag=para-c]
+----
+. The label must be uppercase and immediately followed by a colon (`:`).
+. Separate the first line of the paragraph from the label by a single space.
+// end::intro[]
+
+The result of <<ex-label>> is displayed below.
+
+:icons!:
+include::example$admonition.adoc[tag=para]
+:icons: font
+
+When you want to apply an admonition to complex content, set the label as a style attribute on a block.
+As seen in the next example, admonition labels are commonly set on example blocks.
+This behavior is referred to as *masquerading*.
+The label must be uppercase when set as an attribute on a block.
+
+.Admonition block syntax
+[source#ex-block]
+----
+include::example$admonition.adoc[tag=bl-c]
+----
+. Set the label in an attribute list on a delimited block.
+The label must be uppercase.
+. Admonition styles are commonly set on example blocks.
+Example blocks are delimited by four equal signs (`====`).
+
+The result of <<ex-block>> is displayed below.
+
+:icons!:
+include::example$admonition.adoc[tag=bl-nest]
+:icons: font
+
+In the examples above, the admonition is rendered in a callout box with the style label in the gutter.
+You can replace the textual labels with icons by setting the `icons` attribute on the document.
+This is how the WARNING admonition paragraph renders when icons is set and assigned the `font` value.
+
+.Admonition paragraph with icons set
+[source#ex-icon]
+----
+:icons: font
+
+include::example$admonition.adoc[tag=para]
+----
+
+The result of <<ex-icon>> is displayed below.
+
+include::example$admonition.adoc[tag=para]
+
+Learn more about using Font Awesome or custom icons with admonitions in xref:macros:icons.adoc[].

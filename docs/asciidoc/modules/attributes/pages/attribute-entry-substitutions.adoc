@@ -1,0 +1,80 @@
+= Customize Attribute Entry Substitutions
+
+The AsciiDoc processor automatically applies substitutions from the header substitution group to the value of an attribute entry prior to the assignment, regardless of where the attribute entry is declared in the document.
+The header substitution group, which replaces xref:subs:special-characters.adoc[special characters] and xref:subs:attributes.adoc[attribute references] in text, is applied to the values of attribute entries, regardless of whether the entries are defined in the header or in the document body.
+This is the same group that gets applied to metadata lines (author and revision information) in the document header.
+
+That means that any inline formatting in an attribute value isn't interpreted because:
+
+. inline formatting is not applied when Asciidoctor sets an attribute, and
+. inline formatting is not applied when an attribute is referenced since the relevant substitutions come before attributes are resolved.
+
+[#pass-macro]
+== Change substitutions when assigning a value
+
+If you want the value of an attribute entry to be used *as is* (not subject to substitutions), or you want to alter the substitutions that are applied, you can enclose the value in the xref:pass:pass-macro.adoc[inline pass macro] (i.e., `\pass:[]`).
+The inline pass macro accepts a list of zero or more substitutions in the target slot, which can be used to control which substitutions are applied to the value.
+If no substitutions are specified, no substitutions will be applied.
+
+In order for the inline macro to work in this context, it must completely surround the attribute value.
+If it's used anywhere else in the value, it will be ignored.
+
+Here's how to prevent substitutions from being applied to the value of an attribute entry:
+
+[source]
+----
+:cols: pass:[.>2,.>4]
+----
+
+This might be useful if you're referencing the attribute in a place that depends on the unaltered text, such as the value of the `cols` attribute on a table.
+
+Here's how we can apply the xref:subs:quotes.adoc[quotes substitution] to the value of an attribute entry:
+
+[source]
+----
+:app-name: pass:quotes[MyApp^2^]
+----
+
+Internally, the value is stored as `MyApp<sup>2</sup>`.
+You can inspect the value stored in an attribute using this trick:
+
+[source]
+----
+[subs=attributes+]
+------
+{app-name}
+------
+----
+
+You can also specify the substitution using the single-character alias, `q`.
+
+[source]
+----
+:app-name: pass:q[MyApp^2^]
+----
+
+The inline pass macro kind of works like an attribute value preprocessor.
+If the processor detects that an inline pass macro completely surrounds the attribute value, it:
+
+. reads the list of substitutions from the target slot of the macro
+. unwraps the value from the macro
+. applies the substitutions to the value
+
+If the macro is absent, the value is processed with the header substitution group.
+
+== Change substitutions when referencing an attribute
+
+You can also change the substitutions that are applied to an attribute at the time it is resolved.
+This is done by manipulating the substitutions applied to the text where it is referenced.
+For example, here's how we could get the processor to apply quote substitutions to the value of an attribute:
+
+[source]
+----
+:app-name: MyApp^2^
+
+[subs="specialchars,attributes,quotes,replacements,macros,post_replacements"]
+The application is called {app-name}.
+----
+
+Notice that we've swapped the order of the `attributes` and `quotes` substitutions.
+This strategy is akin to post-processing the attribute value.

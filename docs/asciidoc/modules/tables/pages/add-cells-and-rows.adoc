@@ -1,0 +1,167 @@
+= Add Cells and Rows to a Table
+//let's add a tip or xref to something about the "default" cell separator and data format and the alternatives that's not too invasive to the flow
+
+== Table cells
+
+[[cell-separator]]Each new cell in a table is declared with a cell separator.
+The default [.term]*cell separator* is a vertical bar (`|`).
+All of the content entered after a cell separator is included in that cell until the processor encounters a blank space followed by another vertical bar (`|`) or a new line that begins with a `|`.
+
+.Creating table cells with the default cell separator
+[source#ex-separator]
+----
+[cols="3,2,3"]
+|===
+|This content is placed in the first cell of column 1
+|This line starts with a vertical bar so this content is placed in a new cell in column 2 |When the processor encounters a whitespace followed by a vertical bar it ends the previous cell and starts a new cell
+|===
+----
+
+When the processor encounters another `|`, it creates a new cell in the next consecutive column.
+Once the processor reaches the xref:add-columns.adoc[last column assigned to the table], the next cell it encounters is placed in a new row.
+Taking into account any xref:span-cells.adoc[spans], which are applied via a <<specifiers,cell specifier>>, each row consists of the same number of cells.
+
+[#specifiers]
+=== Cell specifiers and operators
+
+A [.term]*cell specifier* is a positional attribute placed directly in front of a cell separator that represents the position and style properties assigned to a cell's content.
+In the example below, a vertical alignment operator and style operator have been assigned to the first cell's specifier.
+
+.Using cell specifiers
+[source#ex-specifier]
+----
+[cols="2*"]
+|===
+>s|This cell's specifier indicates that this cell's content is right-aligned and bold.
+|The cell specifier on this cell hasn't been set explicitly, so the  default properties are applied.
+|===
+----
+
+AsciiDoc provides operators to control the following cell properties:
+
+* xref:span-cells.adoc[span]
+* xref:duplicate-cells.adoc[duplication]
+* xref:align-by-cell.adoc#horizontal-operators[horizontal alignment]
+* xref:align-by-cell.adoc#vertical-operators[vertical alignment]
+* xref:format-cell-content.adoc[content style]
+
+A cell specifier only applies to the cell it's placed on, not to all of the cells in the same row.
+Also, the operator in a cell specifier will override the operator in a xref:add-columns.adoc#col-specifier.adoc[column specifier] if they belong to the same property.
+
+== Create a table cell
+
+In this section, we'll set up a table and add two rows of cells to it.
+First, let's create two cells in <<ex-cells>> and see how they get arranged into a row.
+
+.Add two cells to a table
+[source#ex-cells]
+----
+[cols="1,1"] <.>
+|===
+|This cell is in column 1, row 1 <.>
+|This cell is in column 2, row 1 <.>
+|===
+----
+<.> The table has two columns because two column specifiers are assigned to the `cols` attribute.
+<.> The processor places this cell in the first column and row of the table because the vertical bar (`|`) at the beginning of this cell is the first cell separator the processor encounters after the opening table delimiter (`|===`).
+<.> This is the second `|` the processor encounters, so this cell is placed in the second column of the first row.
+
+Though the two cells in <<ex-cells>> were entered on separate lines, the processor places them in the same row.
+
+.Result of <<ex-cells>>
+[cols="1,1"]
+|===
+|This cell is in column 1, row 1
+|This cell is in column 2, row 1
+|===
+
+Since the number of columns in <<ex-cells>> is set to two by the `cols` attribute, and there are two cells entered in the table, the first row is complete.
+Now, let's add two more cells to the table.
+
+.Add two more cells to a table
+[source#ex-more-cells]
+----
+[cols="1,1"]
+|===
+|This cell is in column 1, row 1
+|This cell is in column 2, row 1
+<.>
+|This cell is in column 1, row 2 <.>
+|    This cell is in column 2, row 2 <.>
+|===
+----
+<.> Separate rows by one or more blank lines.
+<.> The processor places this cell on the second row because the table has two columns and this is the third cell separator (`|`) it encounters.
+<.> Any leading or trailing spaces around the cell content is stripped by the processor.
+
+The table from <<ex-more-cells>> now has four cells arranged into two consecutive rows.
+
+.Result of <<ex-more-cells>>
+[cols="1,1"]
+|===
+|This cell is in column 1, row 1
+|This cell is in column 2, row 1
+
+|This cell is in column 1, row 2
+|    This cell is in column 2, row 2
+|===
+
+The cells in a row can be entered on the same line or consecutive lines because the row a cell in placed on is determined by the number of columns in a table and the order in which the processor encounters the cell's separator (`|`).
+
+[#same]
+== Enter a row's cells on a single line
+
+You can enter a row's cells on a single line.
+//This method is how the number or columns in a table are implicitly assigned and implicitly assign the `header` option to the table's first row.
+When entering cells on a single line, *at least one blank space must be entered between the last character of the previous cell's content and the cell separator (`|`) of the next cell*.
+
+.Cells entered on the same line
+[source#ex-single-line]
+----
+|===
+|Column 1 |Column 2 |Column 3 <.> <.>
+
+|Cell in column 1, row 2 |Cell in column 2, row 2 |Cell in column 3, row 2 <.>
+
+|Cell in column 1, row 3 <.>
+|Cell in column 2, row 3 |Cell in column 3, row 3
+|===
+----
+<.> Since `cols` is not set, the first row in this table must have the cells entered on a single line in order to implicitly assign three columns to the table.
+<.> The first row is entered on the line directly after the opening table delimiter (`|===`) and followed by a blank line.
+This automatically assigns the `header` option to it.
+<.> When multiple cells are entered on a single line, enter at least one space between the last character of the previous cell's content and the cell separator (`|`) of the next cell.
+<.> A row's cells can be entered on a combination of lines as long as the lines are consecutive.
+
+The table created in <<ex-single-line>> contains three columns and three rows.
+
+.Result of <<ex-single-line>>
+|===
+|Column 1 |Column 2 |Column 3
+
+|Cell in column 1, row 2 |Cell in column 2, row 2 |Cell in column 3, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3 |Cell in column 3, row 3
+|===
+
+Any leading and trailing spaces around the cell content are stripped and don't affect the table's layout when rendered.
+
+[#consecutive]
+== Enter a row's cells on consecutive lines
+
+The cells in a row can be entered on consecutive, individual lines.
+When using this method, remember to either xref:add-columns.adoc[set the cols attribute] or xref:add-columns.adoc#implicit-cols[enter the first row's cells on a single line].
+
+.Cells on consecutive, individual lines
+[source#ex-consecutive-lines]
+----
+include::example$row.adoc[tag=indv]
+----
+
+The `cols` attribute in <<ex-consecutive-lines>> is assigned a xref:add-columns.adoc#column-multiplier[multiplier] of `+3*+`, indicating that this table has three columns.
+
+.Result of <<ex-consecutive-lines>>
+include::example$row.adoc[tag=indv]
+
+Entering cells on consecutive lines can improve the readability (and debugging) of your raw AsciiDoc content when you're applying <<specifiers,specifiers to the cells>>, using xref:format-cell-content.adoc#a-operator[AsciiDoc block elements in the cells], or entering a lot of content into the cells.

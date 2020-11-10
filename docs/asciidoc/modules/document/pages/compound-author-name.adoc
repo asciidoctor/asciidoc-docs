@@ -1,0 +1,79 @@
+= Compound Author Names
+
+When a name consists of multiple parts, such as a compound or composite surname, or a double middle name, the processor needs to be explicitly told which words should be assigned to a specific attribute.
+
+== Connecting compound author names
+
+If the parts of an author's name aren't assigned to the correct built-in attributes, they may output the wrong information if they're referenced in the body of the document.
+For instance, if the name _Ann Marie Jenson_ was entered on the author line or assigned to the attribute `author`, the processor would assign _Ann_ to `firstname`, _Marie_ to `middlename`, and _Jenson_ to `lastname` based on the location and order of each word.
+This assignment would be incorrect because the author's first name is _Ann Marie_.
+
+When part of an author's name consists of more than one word, use an underscore (`+_+`) between the words to connect them.
+
+.Compound name syntax
+[source]
+----
+= Document Title
+firstname_firstname lastname; firstname middlename_middlename lastname
+----
+
+== Compound names in the author line
+
+In <<ex-line-compound>>, the first author has a compound first name and the second author has a compound surname.
+
+.Assign compound names in the author line
+[source#ex-line-compound]
+----
+= Drum and Bass Breakbeats
+Ann_Marie Jenson; Tomás López_del_Toro <.> <.>
+----
+<.> To signal to the processor that _Ann Marie_ is the author's first name (instead of their first and middle names), type an underscore (`+_+`) between each part of the author's first name.
+<.> The second author's last name consists of three words.
+Type an underscore (`+_+`) between each word of the author's last name.
+
+The result of <<ex-line-compound>> is displayed below.
+Notice that the underscores (`+_+`) aren't displayed when the document is rendered.
+
+image::author-line-with-compound-names.png[Compound author names displayed in the byline,role=screenshot]
+
+The underscore between each word in a compound name ensures that the parts of an author's name are assigned correctly to the corresponding built-in attributes.
+If you were to reference the first author's first name or the second author's last name in the document body, as shown in <<ex-reference-compound>>, the correct values would be displayed.
+
+.Reference authors with compound names
+[source#ex-reference-compound]
+----
+= Drum and Bass Breakbeats
+Ann_Marie Jenson; Tomás López_del_Toro
+
+The first author's first name is {firstname}.
+
+The second author's last name is {lastname_2}.
+----
+
+Like in the byline, the underscores (`+_+`) aren't displayed when the document is rendered.
+
+image::reference-compound-names.png[Compound author names displayed in the document body when referenced,role=screenshot]
+
+== Compound names in the author attribute
+
+An underscore (`+_+`) should also be placed between each part of a compound name when the author is assigned using the `author` attribute.
+
+.Assign a compound name using the author attribute
+[source#ex-compound]
+----
+= Quantum Networks
+:author: Mara_Moss Wirribi <.>
+
+== About {author}
+
+{firstname} lives on the Bellarine Peninsula near Geelong, Australia. <.>
+----
+<.> Assign the author's name to the `author` attribute.
+Enter an underscore (`+_+`) between each part of the author's first name.
+This ensures that their full first name is correct when it's automatically assigned to `firstname` by the processor.
+<.> The built-in attribute `firstname` is referenced in the document's body.
+The author's first name is automatically extracted from the value of `author` and assigned to `firstname`.
+
+The result of <<ex-compound>>, displayed below, shows that the processor assigned the correct words to the built-in attribute `firstname` since the author's full first name, _Mara Moss_, is displayed where `firstname` was referenced.
+
+image::author-attribute-with-compound-name.png[Compound author name displayed in the byline using the author attribute,role=screenshot]

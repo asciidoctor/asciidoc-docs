@@ -1,0 +1,109 @@
+= Text Formatting and Punctuation
+
+Just as we emphasize certain words and phrases when we speak, we emphasize them in text with formatting and punctuation.
+AsciiDoc provides six inline text styles and one punctuation style that are applied solely with formatting marks and two built-in styles that are applied with an additional role.
+You can also create custom inline formatting roles.
+
+== Formatting terms and concepts
+
+=== Formatting marks and sets
+
+A [#def-format-mark.term]*formatting mark* is a character, such as `+*+`, `_`, or `~`, that indicates the inline style you want Asciidoctor to apply to the text.
+Formatting marks come in sets.
+
+A [#def-format-set.term]*formatting set* consists of an identical opening mark and closing mark.
+
+The [#def-open-mark.term]*opening mark* indicates where you want the style to start, and the [#def-close-mark.term]*closing mark* indicates where you want the style to end.
+Depending on where the formatting marks of a set are placed, a formatting set is either constrained or unconstrained.
+
+[#constrained-set]
+=== Constrained set
+
+When a blank space directly precedes the formatting set's opening mark and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`) directly follows the set's closing mark, the formatting set is referred to as a [.term]*constrained set*.
+A constrained set uses a single opening mark and a single closing mark to enclose the text that will be styled.
+
+For example, you use this form to format a word that stands alone,
+
+[source]
+----
+That is *strong* stuff!
+----
+
+to format a sequence of words,
+
+[source]
+----
+That is *really strong* stuff!
+----
+
+or to format a word adjacent to punctuation, like an exclamation mark.
+
+[source]
+----
+This stuff is *strong*!
+----
+
+[#unconstrained-set]
+=== Unconstrained set
+
+A double set of formatting marks is required to enclose text when the opening mark isn't directly preceded by a blank space or the closing mark isn't directly followed by a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`).
+In this context, a formatting set is an [.term]*unconstrained set*.
+You use the unconstrained syntax to format just one or a few letters in a word.
+
+[source]
+----
+She spells her name with an "`h`", as in Sara**h**.
+----
+
+See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained set?] and xref:escape-unconstrained-formatting.adoc[] for more examples and information.
+
+== Inline text and punctuation styles
+
+AsciiDoc provides six inline text styles and one punctuation style that are applied solely with formatting marks.
+
+xref:bold.adoc[Bold]::
+Text that is bold will stand out against the regular, surrounding text due to the application of a thicker and/or darker font.
+Bold is useful when the text needs to catch the attention of a person visually scanning a page.
+The formatting mark for bold is an asterisk (`*`).
+
+xref:italic.adoc[Italic]::
+Text is often italicized in order to stress a word or phrase, quote a speaker, or introduce a term.
+Italic type slants slightly to the right, and depending on the font, may have cursive swashes and flourishes.
+The formatting mark for italic is an underscore (`+_+`).
+
+xref:monospace.adoc[Monospace]::
+Technical content often requires text to be styled in a way that indicates a command or source code.
+Such text is usually emphasized using a fixed-width (i.e., monospace) font.
+The formatting mark for monospace is a backtick (`++`++`).
+
+xref:highlight.adoc[Highlight]::
+Another way to draw attention to text is to highlight it.
+This semantic style is used for reference or notation purposes, or to mark the importance of a key subject or point.
+The formatting mark for highlight is a hash (`+#+`).
+
+xref:subscript-and-superscript.adoc[Subscript and superscript]::
+Subscript and superscript text is common in mathematical expressions and chemical formulas.
+The formatting mark for subscript is a tilde (`{tilde}`).
+The formatting mark for superscript is a caret (`{caret}`).
+
+////
+AsciiDoc also provides two built-in styles that are applied with an additional role.
+
+Strike through::
+
+Underline::
+////
+
+xref:quotation-marks-and-apostrophes.adoc[Curved quotation marks and apostrophes]::
+By default, Asciidoctor uses straight quotation marks and apostrophes.
+They can be changed to curved using the backtick (`++`++`) formatting mark.
+
+== Quotes substitutions
+
+When Asciidoctor processes text enclosed by inline formatting syntax, the marks are replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution step].
+You can control when inline formatting is applied to inline text, macros, or blocks with the xref:subs:quotes.adoc#quotes-value[quotes substitution value].
+
+////
+CAUTION: You may not always want these symbols to indicate text formatting.
+In those cases, you'll need to use additional markup to xref:subs:prevent.adoc[escape the text formatting markup].
+////

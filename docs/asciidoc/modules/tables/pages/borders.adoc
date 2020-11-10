@@ -1,0 +1,120 @@
+= Table Borders
+
+The borders on a table are controlled using the `frame` and `grid` block attributes.
+You can combine these two attributes to achieve a variety of border styles for your tables.
+
+== Frame
+
+The border around a table is controlled using the `frame` attribute.
+By default, the frame attribute is assigned the `all` value, which draws a border on each side of the table.
+If you set the frame attribute, you can override the default value with the values `topbot`, `sides` or `none`.
+
+The `topbot` value draws a border on the top and bottom of the table.
+
+.Table with frame=topbot
+[source#ex-topbot]
+----
+[frame=topbot]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-topbot>>
+[frame=topbot]
+include::example$row.adoc[tag=base-h]
+
+The `sides` value draws a border on the right and left side of the table.
+
+.Table with frame=sides
+[source#ex-sides]
+----
+[frame=sides]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-sides>>
+[frame=sides]
+include::example$row.adoc[tag=base-h]
+
+The `none` value removes the borders around the table.
+
+.Table with frame=none
+[source#ex-noframe]
+----
+[frame=none]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-noframe>>
+[frame=none]
+include::example$row.adoc[tag=base-h]
+
+== Grid
+
+The borders between the cells in a table are controlled using the `grid` attribute.
+By default, the grid attribute is assigned the `all` value, which draws a border between all cells.
+If you set the `grid` attribute, you can override the default value with the values `rows`, `cols` or `none`.
+
+The `rows` value draws a border between the rows of the table.
+
+.Table with grid=rows
+[source#ex-rows]
+----
+[grid=rows]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-rows>>
+[grid=rows]
+include::example$row.adoc[tag=base-h]
+
+The `cols` value draws borders between the columns.
+
+.Table with grid=cols
+[source#ex-cols]
+----
+[grid=cols]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-cols>>
+[grid=cols]
+include::example$row.adoc[tag=base-h]
+
+The `none` value removes all borders between the cells.
+
+.Table with grid=none
+[source#ex-nogrid]
+----
+[grid=none]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result of <<ex-nogrid>>
+[grid=none]
+include::example$row.adoc[tag=base-h]
+
+== Interaction with row and column spans
+
+Using row and column spans may interfere with the placement of borders on a table.
+This is a limitation of styling HTML using CSS.
+
+When a cell extends into other rows or columns, that cell is not represented in the HTML for the rows or columns it extends into.
+This is a problem if the cell reaches the boundary of the table.
+The CSS selector only matches the cell where it starts and thus does not detect when it is touching the table boundary.
+It therefore cannot add or remove the border as it would for a 1x1 cell (i.e., a cell confined to a single row and column).
+
+The interference with border placement caused by row and column spans does not always happen.
+Borders on a table with a rowspan or colspan that reaches the table boundary will always work correctly when the frame and grid are congruent.
+In this context, congruent means the frame and grid are contributing borders to the same edges.
+
+Here are those scenarios in which the frame and grid are congruent:
+
+* frame=all, grid=all
+* frame=all, grid=none
+* frame=all, grid=rows
+* frame=all, grid=cols
+* frame=ends, grid=rows
+* frame=sides, grid=cols
+* frame=none, grid=none
+
+If you use row and column spans in a table, you are strongly encouraged to use one of these frame and grid combinations.

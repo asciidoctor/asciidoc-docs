@@ -1,0 +1,39 @@
+= Include Content by Line Ranges
+
+The include directive supports selecting portions of the document to include.
+Using the `lines` attribute, you can include ranges of line numbers.
+
+When including multiple line ranges, each entry in the list must be separated by either a comma or a semicolon.
+If commas are used, the entire value must be enclosed in quotes.
+Using the semicolon as the data separator eliminates this requirement.
+
+== Specifying line ranges
+
+To include content by line range, assign a starting line number and an ending line number separated by a pair of dots (e.g., `lines=1..5`) to the `lines` attribute.
+
+[source]
+----
+include::example$include.adoc[tag=line]
+----
+
+You can specify multiple ranges by separating each range by a comma.
+Since commas are normally used to separate individual attributes, you must quote the comma-separated list of ranges.
+
+[source]
+----
+include::example$include.adoc[tag=m-line-comma]
+----
+
+To avoid having to quote the list of ranges, you can instead separate them using semicolons.
+
+[source]
+----
+include::example$include.adoc[tag=m-line]
+----
+
+If you don't know the number of lines in the document, or you don't want to couple the range to the length of the file, you can refer to the last line of the document using the value -1.
+
+[source]
+----
+include::example$include.adoc[tag=last]
+----

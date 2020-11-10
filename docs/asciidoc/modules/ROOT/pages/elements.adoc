@@ -1,0 +1,25 @@
+= AsciiDoc Elements
+
+There are two kinds of elements in AsciiDoc, block elements and inline elements.
+
+[#block-element]
+== Block elements
+
+A [.term]*block element* is one or more contiguous lines of content in an AsciiDoc document.
+Block elements are typically referred to simply as [.term]*blocks*.
+
+Examples of blocks include tables, lists, paragraphs, section titles, delimited blocks, and block macros like the block image macro (`image::[]`).
+These types of blocks are easy to identify because they're separated from other blocks by a blank line.
+However, not all blocks may be separated by a blank line from an adjacent block.
+For instance, block titles and block attribute lists are individual block elements that are placed on adjacent, contiguous lines.
+An attribute entry is also a block, that when defined in a document header is often directly adjacent to other blocks.
+
+Blocks can be nested within other blocks.
+An attribute entry in a header is also an example of a block nested within another block.
+That's because the attribute entry is a block and the entire document header is a block.
+
+[#inline-element]
+== Inline elements
+
+An [.term]*inline element* performs an operation on a subset of content within a <<block-element,block element>>.
+Inline elements include inline macros such as the icon macro (`icon:[]`) and xref macro (`<< >>`, `xref:[]`), attribute references, and text marked up by inline formatting (italic, bold, etc.).

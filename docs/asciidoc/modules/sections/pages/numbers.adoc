@@ -1,0 +1,68 @@
+= Section Numbers
+// New page, content taken from sections.adoc
+
+== Turn on section numbers
+
+Sections aren't numbered by default.
+However, you can enable this feature by setting the attribute `sectnums`.
+
+[source]
+----
+= Title
+:sectnums:
+----
+
+When `sectnums` is set, level 1 (`==`) through level 3 (`====`) section titles are prefixed with arabic numbers in the form of _1._, _1.1._, etc.
+Section numbers can be set and unset via the document header, CLI, and API.
+Once you've set `sectnums`, you can reduce or increase the section levels that get numbered in the whole document with the <<numlevels,sectnumlevels attribute>>.
+You can also control whether a section is numbered on a section by section basis.
+
+=== Toggle section numbers on or off per section
+
+The `sectnums` attribute is a unique attribute.
+It's a [.term]*flexible attribute*, which means it can be set and unset midstream in a document, even if it is enabled through the API or CLI.
+This allows you to toggle numbering on and off throughout a document.
+
+//You can also use `sectnums` above any section title in the document to toggle the auto-numbering setting.
+To turn off numbering for one or more sections, insert the attribute above the section where you want numbering to cease and unset it by adding an exclamation point to the end of its name.
+To turn section numbering back on midstream, reset the attribute above the section where numbering should resume.
+
+[source]
+----
+include::example$section.adoc[tag=num-off]
+----
+
+For regions of the document where section numbering is turned off, the section numbering will not be incremented.
+Given the above example, the sections will be numbered as follows:
+
+....
+include::example$section.adoc[tag=num-out]
+....
+
+The section number does not increment in regions of the document where section numbers are turned off.
+
+=== sectnums order of precedence
+
+If `sectnums` is set on the command line or API, it overrides the value set in the document header, but it does not prevent the document from toggling the value for regions of the document.
+
+If it is unset (`sectnums!`) on the command line or API, then the numbers are disabled regardless of the setting within the document.
+
+[#numlevels]
+== Specify the section levels that are numbered
+
+When `sectnums` is set, level 1 (`==`) through level 3 (`====`) section titles are numbered by default.
+You can increase or reduce the section level limit be setting the `sectnumlevels` attribute and assigning it the section level you want it to number.
+The `sectnumlevels` attribute accepts a value of 0 through 5, and it can only be set in the document header.
+
+[source]
+----
+include::example$section.adoc[tag=sectnuml]
+----
+<.> When the `sectnumlevels` attribute is assigned a value of `2`, level 3 through 5 section titles are not numbered.
+// (i.e., not prefixed with a number).
+
+When the `doctype` is `book`, level-1 sections become xref:chapters.adoc[chapters].
+Therefore, a `sectnumlevels` of `4` translates to 3 levels of numbered sections inside each chapter.
+
+Assigning `sectnumlevels` a value of `0` is effectively the same as disabling section numbering (`sectnums!`).
+However, if your document is a xref:parts.adoc[multi-part book] with xref:special-section-numbers.adoc#partnums[part numbering enabled], then you'd have to set `sectnumlevels` to `-1` to disable part numbering too (the equivalent of `partnums!`).

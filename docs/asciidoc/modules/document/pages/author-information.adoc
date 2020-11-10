@@ -1,0 +1,55 @@
+= Author Information
+
+Adding author information to your document is optional.
+A document's author information is assigned to multiple built-in attributes.
+These optional attributes can be set and assigned values xref:author-line.adoc[using the author line] or xref:author-attribute-entries.adoc[using attribute entries] in a document's header.
+
+== Author and email attributes
+
+author::
+The `author` attribute represents the sole or first author's entire name.
+The attributes `firstname`, `middlename`, `lastname`, and `authorinitials` are automatically derived from the value of the `author` attribute.
+When assigned implicitly via the author line, the value includes all of the characters and words prior to the semicolon (`;`), angle bracket (`<`), or the end of the line.
+
+email::
+The `email` attribute represents an email address or URL associated with the first author (`author`).
+When assigned via the author line, it's enclosed in a set of angle brackets (`< >`).
+
+=== Name and initials attributes
+
+firstname::
+The `firstname` attribute represents the first, forename, or given name of the author.
+The first word in the value of the `author` attribute is automatically assigned to `firstname`.
+
+lastname::
+The `lastname` attribute represents the last, surname, or family name of the author.
+The last word in the value of the `author` attribute is automatically assigned to `lastname`.
+
+middlename::
+If `author` contains values for `firstname` and `lastname`, any remaining words or characters found between these values are assigned to the `middlename` attribute.
+
+authorinitials::
+The first character of the `firstname`, `middlename`, and `lastname` attribute values are assigned to the `authorinitials` attribute.
+
+== Multiple author attributes
+
+author_<n>:: An `author_<n>` attribute represents each additional author's entire name, where `<n>` is the 1-based index of all of the authors listed on the author line (e.g., `author_2`, `author_3`).
+xref:multiple-authors.adoc[Additional authors can only be assigned via the author line].
+Each author's full name includes all of the characters and words directly after a semicolon (`;`) but prior to the angle bracket (`<`), next semicolon (`;`), or the end of the line.
+The attributes `firstname_<n>`, `middlename_<n>`, `lastname_<n>`, and `authorinitials_<n>` are automatically derived from `author_<n>`.
+
+email_<n>::
+The `email_<n>` attribute represents an email address or URL associated with xref:multiple-authors.adoc[each additional author] (`author_<n>`).
+It's enclosed in a set of angle brackets (`< >`) on the author line.
+
+firstname_<n>::
+The first word in the value of the `author_<n>` attribute is automatically assigned to `firstname_<n>`.
+
+lastname_<n>::
+The last word in the value of the `author_<n>` attribute is automatically assigned to `lastname_<n>`.
+
+middlename_<n>::
+If `author_<n>` contains a `firstname_<n>` and `lastname_<n>`, any remaining words or characters found between these two attributes are assigned to the `middlename_<n>` attribute.
+
+authorinitials_<n>::
+The first character of the `firstname_<n>`, `middlename_<n>`, and `lastname_<n>` attribute values.

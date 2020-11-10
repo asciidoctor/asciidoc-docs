@@ -1,0 +1,22 @@
+= Comment Lines and Blocks
+
+[#comment-lines]
+== Comment lines
+
+.Line comment syntax
+----
+// A single-line comment.
+----
+
+Single-line comments can be used to divide elements, such as two adjacent lists.
+
+== Comment blocks
+
+.Block comment syntax
+----
+////
+A block comment.
+
+Notice it's a delimited block.
+////
+----

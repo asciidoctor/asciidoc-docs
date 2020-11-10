@@ -1,0 +1,36 @@
+= Conditionals
+
+You can include or exclude lines of text in your document using one of the following conditional preprocessor directives:
+
+* xref:ifdef-ifndef.adoc#ifdef[ifdef]
+* xref:ifdef-ifndef.adoc#ifndef[ifndef]
+* xref:ifeval.adoc[ifeval]
+
+These directives tell the processor whether to include the enclosed content based on certain conditions.
+The conditions are based on the presence or value of document attributes.
+
+////
+For example, say you want to include a certain section of content only when converting to HTML.
+Conditional preprocessor directives make this possible.
+You simply check for the presence of the `basebackend-html` attribute using an `ifdef` directive.
+Details of this example and more `ifdef` and `ifndef` examples, are described in the following sections.
+See xref:ifeval.adoc[] for `ifeval` examples.
+////
+
+== Conditional processing
+
+Although a conditional preprocessor directive looks like a block macro, *it's not a macro and therefore isn't processed like one*.
+It's a preprocessor directive; it's important to understand the distinction.
+
+include::partial$preprocessor.adoc[]
+The conditional preprocessor directives determine which lines to add and which ones to take away based on the condition.
+
+== Escape a conditional directive
+
+If you don't want a conditional preprocessor directive to be processed, you must escape it using a backslash.
+
+----
+\ifdef::just-an-example[]
+----
+
+Escaping the directive is necessary _even if it appears in a verbatim block_ since it's not aware of the surrounding document structure.

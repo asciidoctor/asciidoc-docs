@@ -1,0 +1,32 @@
+= Verses
+
+When you need to preserve indents and line breaks, use a `verse` block.
+Verses are defined by setting `verse` on a paragraph or an excerpt block delimited by four underscores (`+____+`).
+
+== verse style syntax
+
+When verse content doesn't contain any blank lines, you can assign the `verse` style using the first position in an attribute list.
+
+.Verse style syntax
+[source#ex-style]
+----
+include::example$verse.adoc[tag=para]
+----
+
+The result of <<ex-style>> is displayed below.
+
+include::example$verse.adoc[tag=para]
+
+== Delimited verse block syntax
+
+When the verse content includes blank lines, enclose it in a delimited excerpt block.
+
+.Verse delimited block syntax
+[source#ex-block]
+----
+include::example$verse.adoc[tag=bl]
+----
+
+The delimited verse block from <<ex-block>> is rendered below.
+
+include::example$verse.adoc[tag=bl]

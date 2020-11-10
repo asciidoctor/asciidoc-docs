@@ -1,0 +1,1128 @@
+= Document Attributes Reference
+:y: Yes
+:n: No
+:en: &#8211;
+
+////
+Need to update the compatibility guide with:
+
+* numbered = sectnums
+* docinfo1 = docinfo
+* docinfo2 = docinfo
+* toc-class = use custom theme https://github.com/asciidoctor/asciidoctor.org/issues/379[issue #379]
+* toc-placement = toc
+* notitle = showtitle!
+* encoding = ignored always UTF-8
+////
+
+Built-in document attributes can be set and unset using an attribute entry.
+
+Automatically Set:: The attribute is set automatically by Asciidoctor and assigned its default value at processing time if you don't set it explicitly in the API, command line, or document.
+Automatically set attributes can be unset with the `!`.
+
+Values::
++
+* _empty_ value: The _empty_ value indicates the attribute doesn't have an explicit value.
+The attribute is simply turned on by being set.
+* *default* value: Attributes that have built-in values may have a default value which is indicated by the *bolded value*.
+If you set the attribute but leave the value empty, Asciidoctor will fall back to this default value at processing time.
+* If the attribute doesn't accept an _empty_ value or have a *default* value, than you must explicitly assign the attribute an accepted built-in or user-defined value.
+
+Header Set:: The attribute can be set and assigned a value (or unset) in the document's header.
+In almost all cases, these attributes can also be set, defined, or unset in the API or command line.
+If you set an attribute from the command line or API, it's defined for the whole document and can't be changed in the document header or body unless `@` is added to the end of the value.
+See xref:assignment-precedence.adoc[] for more information.
+The one exception to this rule is the `sectnums` attribute, which can always be changed.
+
+Body Set:: The attribute can be set, assigned a value, or unset in the document's body (anywhere below the document header).
+When you set an attribute in the body, it's visible from the point it's set until it's unset (unless it's overridden by the xref:assignment-precedence.adoc[assignment precedence]).
+
+== Compliance attributes
+
+[%autowidth,cols="m,^,,^,^,"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set  |Notes
+
+|attribute-missing
+|{n}
+|`*skip*` +
+`drop` +
+`drop-line` +
+`warn`
+|{y}
+|{y}
+|Controls how xref:unresolved-references.adoc#missing[missing attribute references] are handled.
+
+|attribute-undefined
+|{n}
+|`*drop-line*` +
+`drop`
+|{y}
+|{y}
+|Controls how xref:unresolved-references.adoc#undefined[undefined attributes] are handled.
+
+|compat-mode
+|{n}
+e|empty
+|{y}
+|{y}
+|Controls when the legacy parser is used to parse the document.
+
+|experimental
+|{n}
+e|empty
+|{y}
+|{n}
+|Enables xref:macros:ui-macros.adoc[] and xref:macros:keyboard-macro.adoc[].
+
+|reproducible
+|{n}
+e|empty
+|{y}
+|{n}
+|Prevents last-updated date from being added to HTML footer or DocBook info element.
+Useful for storing the output in a source code control system as it prevents spurious changes every time you convert the document.
+//Alternatively, you can use the SOURCE_DATE_EPOCH environment variable to fix the value.
+|===
+
+[#builtin-attributes-i18n]
+== Internationalization and numbering
+
+[%autowidth,cols="m,^,,^,^,"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|appendix-caption
+|Only when section assigned `Appendix` style
+|`*Appendix*` +
+_user-defined_
+|{y}
+|{y}
+|Label added before an xref:sections:appendix.adoc[appendix title].
+
+|appendix-number
+|Only when section assigned `Appendix` style
+|`*A*` +
+_letter or number_
+|{y}
+|{y}
+|Stores appendix letter or number sequence start.
+
+|appendix-refsig
+|
+|`*Appendix*` +
+_any_
+|{y}
+|{y}
+|Signifier added to Appendix title cross references.
+
+|caution-caption
+|{y}
+|`*Caution*` +
+_any_
+|{y}
+|{y}
+|Text used to label CAUTION admonitions when icons aren't enabled.
+
+|chapter-number
+|Only when `doctype` is `book`
+|`*1*` +
+_number_
+|
+|
+|Stores chapter number sequence start.
+
+|chapter-refsig
+|
+|`*Chapter*` +
+_any_
+|{y}
+|{y}
+|Signifier added to Chapter titles in cross references.
+
+|chapter-label
+|Only when `doctype` is `book`
+|`*Chapter*` +
+_any_
+|{y}
+|{y}
+|xref:sections:chapters.adoc[Label added to level-1 section titles (chapters)].
+_PDF converter only_.
+_Book doctype only_.
+
+|example-caption
+|{y}
+|`*Example*` +
+_any_
+|{y}
+|{y}
+|Text used to label example blocks.
+
+|example-number
+|{y}
+|`*1*` +
+_number_
+|
+|
+|Stores example number sequence start.
+
+|figure-caption
+|{y}
+|`*Figure*` +
+_any_
+|{y}
+|{y}
+|Text used to label images and figures.
+
+|figure-number
+|{y}
+|`*1*` +
+_number_
+|
+|
+|Stores figure number sequence start.
+
+|important-caption
+|{y}
+|`*Important*` +
+_any_
+|{y}
+|{y}
+|Text used to label IMPORTANT admonitions when icons are not enabled.
+
+|lang
+|
+|`*en*` +
+valid XML country code
+|{y}
+|
+|Language used on root element of the output document
+
+|last-update-label
+|
+|`*Last updated*`, _any_
+|{y}
+|
+|Text used for “Last updated” label in footer.
+
+|listing-caption
+|{n}
+|_any_
+|{y}
+|{y}
+|Text used to label listing blocks.
+
+|listing-number
+|
+|`*1*`, _number_
+|
+|
+|Stores listing number sequence start.
+
+|manname-title
+|
+|`*NAME*`, _any_
+|{y}
+|
+|Label for program name section in the man page.
+
+|nolang
+|{n}
+|_empty_
+|{y}
+|
+|Prevents `lang` attribute from being added to root element of the output document.
+
+|note-caption
+|{y}
+|`*Note*`, _any_
+|{y}
+|{y}
+|Text used to label NOTE admonitions when icons aren't enabled.
+
+|preface-title
+|{n}
+|_any_
+|{y}
+|{y}
+|Title text for an anonymous preface when `doctype` is `book`.
+
+|section-refsig
+|
+|`*Section*` +
+_any_
+|{y}
+|{y}
+|Signifier added to title of numbered sections in cross reference text.
+
+|table-caption
+|{y}
+|`*Table*` +
+_any_
+|{y}
+|{y}
+|Text of label prefixed to table titles.
+
+|table-number
+|{y}
+|`*1*` +
+_number_
+|{y}
+|{y}
+|Stores table number sequence start.
+
+|tip-caption
+|{y}
+|`*Tip*` +
+_any_
+|{y}
+|{y}
+|Text used to label TIP admonitions when icons aren't enabled.
+
+|toc-title
+|Only if `toc` is set
+|`*Table of Contents*` +
+_any_
+|{y}
+|
+|xref:toc:title.adoc[Title for table of contents].
+
+|untitled-label
+|
+|`*Untitled*` +
+_any_
+|{y}
+|
+|Default document title if document doesn't have a document title.
+
+|warning-caption
+|{y}
+|`*Warning*` +
+_any_
+|{y}
+|{y}
+|Text used to label TIP admonitions when icons aren't enabled.
+|===
+
+== Header and metadata attributes
+
+[cols="10,^15,15,^5,^5,30"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|app-name
+|{n}
+|_any_
+|{y}
+|
+|Adds `application-name` meta element for mobile devices inside HTML document head.
+
+|author
+|Only if present in author info line
+|_any_
+|{y}
+|{n}
+|Can be set automatically via the author info line or explicitly.
+See xref:document:author-information.adoc[].
+
+|authorinitials
+|Only if present in author info line or `author`
+|_any_
+|{y}
+|{n}
+|Derived from the author attribute by default.
+See xref:document:author-information.adoc[].
+
+|authors
+|Only if present in author info line
+|_any_
+|{y}
+|{n}
+|Can be set automatically via the author info line or explicitly as a comma-separated value list.
+See xref:document:author-information.adoc[].
+
+|copyright
+|{n}
+|_any_
+|{y}
+|{n}
+|Adds `copyright` meta element in HTML document head.
+
+|doctitle
+|Only if document has a title (`=`)
+|_any_
+|{y}
+|{n}
+|See xref:document:title.adoc#reference-doctitle[doctitle attribute].
+
+|description
+|{n}
+|_any_
+|{y}
+|{n}
+|Adds xref:document:metadata.adoc#description[description] meta element in HTML document head.
+
+|email
+|Only if present in author info line
+|_any_
+|{y}
+|{n}
+|Can be any inline macro, such as a URL.
+See xref:document:author-information.adoc[].
+
+|firstname
+|Only if present in author info line
+|_any_
+|{y}
+|{n}
+|See xref:document:author-information.adoc[].
+
+|front-matter
+|If front matter is captured
+|_any_
+|n/a
+|n/a
+|If `skip-front-matter` is set via the API or CLI, any YAML-style frontmatter skimmed from the top of the document is stored in this attribute.
+
+|keywords
+|{n}
+|_any_
+|{y}
+|{n}
+|Adds xref:document:metadata.adoc#keywords[keywords] meta element in HTML document head.
+
+|lastname
+|Only if present in author info line
+|_any_
+|{y}
+|{n}
+|See xref:document:author-information.adoc[].
+
+|middlename
+|Only if present in author info line
+|_any_
+|{y}
+|{n}
+|See xref:document:author-information.adoc[].
+
+|orgname
+|{n}
+|_any_
+|{y}
+|{n}
+|Adds `<orgname>` element value to DocBook info element.
+
+|revdate
+|Only if present in version info line
+|_any_
+|{y}
+|{n}
+|See xref:document:revision-information.adoc[].
+
+|revremark
+|Only if present in version info line
+|_any_
+|{y}
+|{n}
+|See xref:document:revision-information.adoc[].
+
+|revnumber
+|Only if present in version info line
+|_any_
+|{y}
+|{n}
+|See xref:document:revision-information.adoc[].
+
+|title
+|{n}
+|_any_
+|{y}
+|{n}
+|Value of `<title>` element in HTML `<head>` or main DocBook `<info>` of output document.
+Used as a fallback when the document title is not specified.
+See xref:document:title.adoc#title-attr[title attribute].
+
+|version-label
+|Only if `revnumber` is set
+|*Version*, _any_
+|{y}
+|
+|See xref:document:version-label.adoc[].
+|===
+
+== Section titles and table of contents attributes
+
+[cols="10,^15,15,^5,^5,30"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|idprefix
+|{y}
+|*_*, valid XML ID start character
+|{y}
+|{n}
+|Prefix of auto-generated section IDs.
+See xref:sections:id-prefix-and-separator.adoc#prefix[Change the ID prefix].
+
+|idseparator
+|{y}
+|*_*, valid XML ID character
+|{y}
+|{n}
+|Word separator used in auto-generated section IDs.
+See xref:sections:id-prefix-and-separator.adoc#separator[Change the ID word separator].
+
+|leveloffset
+|{n}
+|*0*, (+/-)0{en}5 (a leading + or - makes it relative)
+|{y}
+|{y}
+|Increases or decreases level of headings in include files.
+//<<include-partitioning>>
+
+|partnums
+|{n}
+|*_empty_*
+|{y}
+|{n}
+|See xref:sections:part-numbers-and-labels.adoc#partnums[Part numbers].
+_Book doctype only_.
+
+|sectanchors
+|{n}
+|_empty_
+|{y}
+|{n}
+|xref:sections:title-links.adoc#anchor[Adds anchor in front of section title] on mouse cursor hover.
+
+|sectids
+|{y}
+|*_empty_*
+|{y}
+|{n}
+|Generates and assigns an ID to any section that does not have an ID.
+See xref:sections:ids.adoc#disable[Disable ID generation].
+
+|sectlinks
+|{n}
+|_empty_
+|{y}
+|{n}
+|xref:sections:title-links.adoc[Turns section titles into self-referencing links].
+
+|sectnums
+|{n}
+|*_empty_*, all
+|{y}
+|{n}
+|xref:sections:numbers.adoc[Numbers sections] to depth specified by `sectnumlevels`.
+
+|sectnumlevels
+|Only if `sectnums` is set
+|*3*, 0{en}5
+|{y}
+|{n}
+|xref:sections:numbers.adoc#numlevels[Controls depth of section numbering].
+
+|title-separator
+|{y}
+|*:*, _any_
+|{y}
+|{n}
+|Character used to xref:document:subtitle.adoc[separate document title and subtitle].
+
+|toc
+|{n}
+|*auto*, left, right, macro or preamble
+|{y}
+|{n}
+|Turns on xref:toc:index.adoc[table of contents] and specifies xref:toc:position.adoc[its location].
+
+|toclevels
+|Only if `toc` is set
+|*2*, 1{en}5
+|{y}
+|{n}
+|xref:toc:section-depth.adoc[Maximum section level to display].
+
+// NOTE toc-placement moved to deprecated table in migration guide
+//|toc-placement
+//|Location where table of contents is inserted.
+//Should be treated as read-only.
+//|Based on value of `toc` attribute.
+//|auto, preamble, macro
+//|{y}
+//|
+
+|fragment
+|{n}
+|_empty_
+|
+|
+|Informs parser that document is a fragment and that it shouldn't enforce proper section nesting.
+|===
+
+== General content and formatting attributes
+
+[cols="10,^15,15,^5,^5,30"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|asset-uri-scheme
+|{n}
+|https, _empty_
+|{y}
+|{n}
+|Controls protocol used for assets hosted on a CDN.
+
+|cache-uri
+|{n}
+|_empty_
+|{y}
+|{n}
+|Cache content read from URIs.
+//<<caching-uri-content>>
+
+|data-uri
+|{n}
+|_empty_
+|{y}
+|
+|Embed graphics as data-uri elements in HTML elements so file is completely self-contained.
+//<<managing-images>>
+
+|docinfo
+|{n}
+|shared, private, shared-head, private-head, shared-footer, private-footer
+|{y}
+|
+|Read input from one or more DocBook info files.
+//<<naming-docinfo-files>>
+
+|docinfodir
+|
+|*base directory*, _directory_
+|{y}
+|
+|Location of docinfo files.
+//<<locating-docinfo-files>>
+
+|docinfosubs
+|
+|*attributes*, _comma-separated list of substitution names_, none
+|{y}
+|
+|AsciiDoc substitutions that are applied to docinfo content.
+//<<attribute-substitution-in-docinfo-files>>
+
+|doctype
+|{y}
+|*article*, book, inline, manpage
+|{y}
+|{n}
+|Output document type.
+//<<document-types>>
+
+|eqnums
+|{n}
+|*AMS*, all, none
+|{y}
+|
+|Controls automatic equation numbering on LaTeX blocks in HTML output (MathJax).
+If the value is AMS, only LaTeX content enclosed in an `+\begin{equation}...\end{equation}+` container will be numbered.
+If the value is all, then all LaTeX blocks will be numbered.
+See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numbering[equation numbering in MathJax].
+
+|hardbreaks
+|{n}
+|*_empty_*
+|{y}
+|{y}
+|xref:blocks:paragraph.adoc#hardbreaks[Preserve hard line breaks].
+
+|hide-uri-scheme
+|{n}
+|_empty_
+|{y}
+|
+|xref:macros:link.adoc#hide-uri-schemes[Hides URI scheme] for raw links.
+
+|linkattrs
+|{n}
+|_empty_
+|{y}
+|
+|xref:macros:link.adoc#link-macro-attributes[Parse attributes inside link macros].
+Removed in Asciidoctor 1.5.7.
+Attributes are now parsed automatically if an equal sign is found after a comma (e.g., `[link text,window=_blank]`).
+
+|media
+|{n}
+|*screen*, print
+|{y}
+|
+|Specifies media type of output and enables behavior specific to that media type.
+
+|nofooter
+|{n}
+|_empty_
+|{y}
+|
+|Turns off footer.
+//<<footer-docinfo-files>>
+
+|nofootnotes
+|{n}
+|_empty_
+|{y}
+|
+|Turns off footnotes.
+//<<user-footnotes>>
+
+|noheader
+|{n}
+|_empty_
+|{y}
+|
+|Turns off header.
+//<<doc-header>>
+
+|outfilesuffix
+|
+|_File extension_
+|{y}
+|
+|File extension of output file, including dot (`.`), such as `.html`.
+// <<navigating-between-source-files>>
+
+|pagewidth
+|{n}
+|*425*, _integer_
+|{y}
+|
+|Page width used to calculate the absolute width of tables in the DocBook output.
+
+|relfileprefix
+|
+|_empty_, _path segment_
+|
+|
+|The path prefix to add to relative xrefs.
+//<<navigating-between-source-files>>
+
+|relfilesuffix
+|{y} _value of outfilesuffix_
+|Path segment
+|{y}
+|
+|The path suffix (e.g., file extension) to add to relative xrefs.
+(Preferred over modifying outfilesuffix).
+//|<<navigating-between-source-files>>
+
+|show-link-uri
+|{n}
+|_empty_
+|{y}
+|
+|Prints the URI of a link after the linked text.
+_PDF converter only_.
+
+|showtitle
+|{n}
+|_empty_
+|{y}
+|{n}
+|xref:document:title.adoc#hide-or-show[Displays an embedded document's title].
+Mutually exclusive with the `notitle` attribute.
+
+|stem
+|{n}
+|*asciimath*, latexmath
+|{y}
+|
+|Enables xref:stem:stem.adoc[mathematics processing and interpreter].
+
+|tabsize
+|{n}
+|0 or more
+|{y}
+|{y}
+|Converts tabs to spaces in verbatim content blocks (e.g., listing, literal).
+
+|webfonts
+|{n}
+|_empty_ (use default fonts), Google Fonts collection spec
+|{y}
+|{n}
+|Control whether webfonts are loaded, and which ones, when using the default stylesheet.
+The value populates the `family` query string parameter in the Google Fonts URL.
+//<<applying-a-theme>> and {url-org}/asciidoctor.org/issues/410[issue #410^]
+
+|xrefstyle
+|{n}
+|full, short, basic
+|{y}
+|{n}
+|xref:macros:xref-text-and-style.adoc#cross-reference-styles[Formatting style to apply to cross reference text].
+//_Introduced in 1.5.6._
+|===
+
+== Image and icon attributes
+
+[cols="10,^15,15,^5,^5,30"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|iconfont-cdn
+|Only when `icons` attribute is set to `font`
+|*cdnjs*, _url_
+|{y}
+|{n}
+|Overrides CDN used to resolve the Font Awesome stylesheet.
+
+|iconfont-name
+|Only when `icons` attribute is set to `font`
+|*font-awesome*, _any_
+|{y}
+|
+|Overrides the name of the icon font stylesheet.
+//<<icons>>
+
+|iconfont-remote
+|{n}
+|_empty_
+|{y}
+|{n}
+|Allows use of a CDN for resolving the icon font.
+Only used when `icons` attribute is set to `font`.
+
+|icons
+|{n}
+|*image*, font
+|{y}
+|{y}
+|Chooses xref:macros:icons.adoc[images or font icons] instead of text for admonitions.
+
+|iconsdir
+|Only used when `icons` attribute is set to `image`
+|*./images/icons* or *\{imagesdir}/icons*, _Directory_
+|{y}
+|{n}
+|Location of non-font-based image icons.
+
+|icontype
+|Only used when `icons` attribute is set to `image`
+|*png*, jpg, svg, tiff
+|{y}
+|{n}
+|File type for image icons.
+
+|imagesdir
+|{y}
+|*Same directory as document*, _Directory_
+|{y}
+|{n}
+|Location of image files.
+|===
+
+== Code highlighting and formatting attributes
+
+[cols="10,^15,15,^5,^5,30"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|coderay-css
+|
+|*class*, style
+|{y}
+|{n}
+|Controls whether CodeRay uses CSS classes or inline styles.
+
+|coderay-linenums-mode
+|
+|*table*, inline
+|{y}
+|{n}
+|Sets how CodeRay inserts line numbers into source listings.
+
+|coderay-unavailable
+|
+|_empty_
+|{y}
+|{n}
+|Tells processor not to load CodeRay.
+
+|highlightjsdir
+|{n}
+|_Directory_
+|{y}
+|{n}
+|Location of the highlight.js source code highlighter library.
+
+|highlightjs-theme
+|
+|*github*, _highlight.js style name_
+|{y}
+|{n}
+|Name of theme used by highlight.js.
+
+|prettifydir
+|{n}
+|_Directory_
+|{y}
+|{n}
+|Location of non-CDN prettify source code highlighter library.
+
+|prettify-theme
+|
+|*prettify*, _prettify style name_
+|{y}
+|{n}
+|Name of theme used by prettify.
+
+|prewrap
+|{n}
+|_empty_
+|{y}
+|{y}
+|xref:asciidoctor:backends:html/wrap.adoc[Wrap wide code listings].
+
+|pygments-css
+|
+|*class*, style
+|{y}
+|{n}
+|Controls whether Pygments uses CSS classes or inline styles.
+
+|pygments-linenums-mode
+|
+|*table*, inline
+|{y}
+|{n}
+|Sets how Pygments inserts line numbers into source listings.
+
+|pygments-style
+|
+|_Pygments style name_
+|{y}
+|{n}
+|Name of style used by Pygments.
+
+|pygments-unavailable
+|{n}
+|_empty_
+|{y}
+|{n}
+|Tells the processor not to load Pygments.
+
+|source-highlighter
+|{n}
+|coderay, highlight.js, pygments, rouge
+|{y}
+|{n}
+|xref:verbatim:source-highlighter.adoc[Specifies source code highlighter].
+
+|source-indent
+|{n}
+|_Integer_
+|{y}
+|{y}
+|Normalize block indentation in source code listings.
+//<<normalize-block-indentation>>
+
+|source-language
+|{n}
+|_Source code language name_
+|{y}
+|{y}
+|xref:verbatim:source-highlighter.adoc[Default language for source code blocks].
+
+|source-linenums-option
+|{n}
+|_empty_
+|{y}
+|{y}
+|Turns on line numbers for source code listings.
+//_Introduced in 1.5.6._
+|===
+
+== HTML styling attributes
+
+[cols="10,^15,15,^5,^5,30"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|copycss
+|Only when `linkcss` is set
+|_empty_, location of the custom stylesheet (if used)
+|{y}
+|{n}
+|Copy CSS files to output.
+//<<applying-a-theme>>
+
+|css-signature
+|{n}
+|_Valid XML ID_
+|{y}
+|{n}
+|Assign value to `id` attribute of HTML `<body>` element.
+*Preferred approach is to assign an ID to document title*.
+
+|linkcss
+|Only when safe mode is SECURE
+|_empty_
+|{y}
+|{n}
+|Links to stylesheet instead of embedding it.
+Can't be unset in SECURE mode.
+//<<styling-the-html-with-css>>
+
+|max-width
+|{n}
+|CSS length (e.g. 55em, 12cm, etc)
+|{y}
+|{n}
+|Constrains maximum width of document body.
+*Not recommended.
+Use CSS stylesheet instead.*
+
+|stylesdir
+|{y}
+|*. (Same directory as document)*, _directory_
+|{y}
+|{n}
+|Location of CSS stylesheets.
+//<<creating-a-theme>>
+
+|stylesheet
+|{y}
+|*default stylesheet*, _file name_
+|{y}
+|{n}
+|CSS stylesheet file name.
+//<<applying-a-theme>>
+
+|toc-class
+|
+|*toc*, valid CSS class name
+|{y}
+|{n}
+|CSS class on the table of contents container.
+//<<user-toc>>
+|===
+
+== Manpage attributes
+
+(relevant only when using the manpage doctype and/or converter)
+
+[cols="10,^15,15,^5,^5,30"]
+|===
+|Name |Automatically Set |Values |Header Set |Body Set |Notes
+
+|mantitle
+|Based on content.
+|_any_
+|{y}
+|{n}
+|Metadata for man page output.
+//<<man-pages>>
+
+|manvolnum
+|Based on content.
+|_any_
+|{y}
+|{n}
+|Metadata for man page output.
+//<<man-pages>>
+
+|manname
+|Based on content.
+|_any_
+|{y}
+|{n}
+|Metadata for man page output.
+//<<man-pages>>
+
+|manpurpose
+|Based on content
+|_any_
+|{y}
+|{n}
+|Metadata for man page output.
+//<<man-pages>>
+
+|man-linkstyle
+|
+|*blue R <>*, _link format sequence_
+|{y}
+|{n}
+|Link style in man page output.
+//<<man-pages>>
+
+|mansource
+|{n}
+|_any_
+|{y}
+|{n}
+|Source (e.g., application and version) the man page describes.
+//<<man-pages>>
+
+|manmanual
+|{n}
+|_any_
+|{y}
+|{n}
+|Manual name displayed in the man page footer.
+//<<man-pages>>
+|===
+
+== Security attributes
+
+Most of the following attributes can only be set from the API or command line.
+
+[cols="20,^15,15,^5,^5,25"]
+|===
+|Name |Automatically Set |Values |CLI |API |Notes
+
+|allow-uri-read
+|{n}
+|_empty_
+|{y}
+|{y}
+|Allows data to be read from URLs.
+//<<include-uri>>
+
+|max-attribute-value-size
+|
+|*4096* (SECURE mode only), 0 or greater
+|{y}
+|{y}
+|Limits maximum size (in bytes) of a resolved attribute value.
+Since attributes can reference attributes, it's possible to create an output document disproportionately larger than the input document without this limit in place.
+
+|max-include-depth
+|
+|*64*, 0 or greater
+|{y}
+|{y}
+|Curtail infinite include loops and to limit the opportunity to exploit nested includes to compound the size of the output document.
+//<<include-directive>>
+
+|skip-front-matter
+|{n}
+|_empty_
+|{y}
+|{y}
+|Consume YAML-style frontmatter at top of document and store it in `front-matter` attribute.
+//<<front-matter-added-for-static-site-generators>>
+|===
+
+^[1]^ The default value isn't necessarily the value you will get by entering `\{name}`.
+It may be the fallback value which Asciidoctor uses if the attribute is not defined.
+The effect is the same either way.
+
+[[note_blocknum]]^[2]^ The `-number` attributes are created and managed automatically by Asciidoctor for numbered blocks.
+They are only used if the corresponding `-caption` attribute is set (e.g., `listing-caption`) and the block has a title.
+In the current version of Asciidoctor, setting the `-number` attributes will influence the number used for subsequent numbered blocks of that type.
+However, you should not rely on this behavior as it may change in future versions.
+// end::table[]

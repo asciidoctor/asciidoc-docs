@@ -1,0 +1,90 @@
+// tag::hcenter[]
+|===
+|Column Name |Column Name
+
+^|This content is horizontally centered because the cell specifier includes the `+^+` operator.
+|There isn't a horizontal alignment operator on this cell specifier, so the cell falls back to the default horizontal alignment.
+Content is aligned to the left side of the cell by default.
+|===
+// end::hcenter[]
+
+// tag::factor[]
+|===
+|Column Name |Column Name
+
+2+^|This cell spans two columns, and its content is horizontally centered because the cell specifier includes the `+^+` operator.
+2*^|This content is duplicated in two adjacent columns.
+Its content is horizontally centered because the cell specifier
+includes the `+^+` operator.
+|===
+// end::factor[]
+
+// tag::right[]
+|===
+|Column Name |Column Name
+
+>|This content is aligned to the right side of the cell because the cell specifier includes the `>` operator.
+|There isn't a horizontal alignment operator on this cell specifier, so the cell falls back to the default horizontal alignment.
+Content is aligned to the left side of the cell by default.
+
+2+>|This cell spans two columns.
+
+Its content is aligned to the right because the cell specifier includes the `>` operator.
+The `>` operator must be placed directly after the span operator (`+`).
+|===
+// end::right[]
+
+// tag::bottom[]
+[cols="2,1"]
+|===
+|Column Name |Column Name
+
+.>|This content is aligned to the bottom of the cell because the cell specifier includes the `.>` operator.
+|There isn't a vertical alignment operator on this cell specifier, so the cell falls back to the alignment assigned via the column specifier or the default vertical alignment.
+Content is aligned to the top of the cell by default.
+|===
+// end::bottom[]
+
+// tag::vspan[]
+|===
+|Column Name |Column Name
+
+|There isn't a vertical alignment operator on this cell specifier, so the content is aligned to the top of the cell by default.
+
+.2+.>|This cell spans two rows, and its content is aligned to the bottom because the cell specifier includes the `.>` operator.
+
+|This content is aligned to the top of the cell by default.
+|===
+// end::vspan[]
+
+// tag::vcenter[]
+|===
+|Column Name |Column Name
+
+.^|This content is vertically centered because the cell specifier includes the `+.^+` operator.
+|There isn't a vertical alignment operator on this cell specifier, so the cell falls back to the default vertical alignment.
+Content is aligned to the top of the cell by default.
+|===
+// end::vcenter[]
+
+// tag::combine[]
+|===
+|Column 1 |Column 2 |Column 3
+
+^.>|The specifier for this cell is `^.>`.
+The content is centered horizontally and aligned to the bottom of the cell.
+|There aren't any alignment operators on this cell's specifier, so the cell falls back to the default alignments.
+The default horizontal alignment is the left side of the cell.
+The default vertical alignment is the top of the cell.
+>.^|The specifier for this cell is `>.^`.
+The content is aligned to the right side of the cell and centered vertically.
+
+2.3+^.^|The specifier for this cell is `pass:[2.3+^.^]`.
+It spans two columns and three rows.
+
+Its content is centered horizontally and vertically.
+3*.>|The specifier for this cell is `3*.>`.
+The cell is duplicated in three consecutive rows in the same column.
+It's content is aligned to the bottom of the cell.
+|===
+// end::combine[]

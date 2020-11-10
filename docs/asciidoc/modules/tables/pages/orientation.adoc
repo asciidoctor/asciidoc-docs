@@ -1,0 +1,21 @@
+= Table Orientation
+
+== Landscape
+
+A table can be displayed in landscape (rotated 90 degrees counterclockwise) using the `rotate` option (preferred).
+
+[source]
+----
+[%rotate]
+include::example$table.adoc[tag=base]
+----
+
+A table can also be displayed in landscape using the `orientation` attribute.
+
+[source]
+----
+[orientation=landscape]
+include::example$table.adoc[tag=base]
+----
+
+Currently, this is only implemented by the DocBook backend (it sets the attribute `orient="land"`).

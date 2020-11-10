@@ -1,0 +1,22 @@
+= Paragraphs
+
+The bulk of the content in a document is paragraph text.
+This is why Asciidoctor doesn't require any special markup or attributes to specify paragraph content.
+You can just start typing.
+
+== Create a paragraph
+
+Adjacent or consecutive lines of text form a paragraph element.
+To start a new paragraph after another element, such as a section title or table, hit the kbd:[RETURN] key twice to insert a blank line, and then continue typing your content.
+
+.Two paragraphs in an AsciiDoc document
+[source#ex-paragraph]
+----
+include::example$paragraph.adoc[tag=para]
+----
+
+The result of <<ex-paragraph>> is displayed below.
+
+====
+include::example$paragraph.adoc[tag=para]
+====

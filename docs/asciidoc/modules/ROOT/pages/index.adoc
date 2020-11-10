@@ -1,0 +1,5 @@
+= AsciiDoc Language Documentation
+
+[caption="Migration in Progress"]
+TIP: This documentation is in migration.
+If you're looking for the current Asciidoctor and AsciiDoc documentation, visit https://asciidoctor.org/docs.

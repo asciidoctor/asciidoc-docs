@@ -1,0 +1,19 @@
+= Get Started with Blocks
+//Block Syntax and Features
+// I want this page to be focused on the block styles - yes, I know that there are more blocks, but that get's really in the weeds and I think those aspects can be addressed in other pages/modules
+
+== What is a block?
+
+CAUTION: This is the generic definition and a placeholder.
+
+In an AsciiDoc document, one or more continuous lines of text is defined as a block element.
+Examples of block elements are tables, callout lists, block macros such as `image::[]`, verse block titles, paragraphs, an attribute entry in the header, and the header as a whole.
+Block elements can be nested within block elements.
+
+== What is a built-in block style?
+
+TBA
+
+== What features can I apply to a block?
+
+TBA

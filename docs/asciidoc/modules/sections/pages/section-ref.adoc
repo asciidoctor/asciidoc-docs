@@ -1,0 +1,132 @@
+= Section Attributes and Styles Reference
+
+== Section attributes
+
+[%autowidth]
+|===
+|Feature |Attribute |Value(s) |Notes
+
+|xref:appendix.adoc#prefix[Appendix label]
+|`appendix-caption`
+|_Appendix_ (default) or user defined text
+|
+
+|xref:chapters.adoc#chapter-label[Chapter label]
+|`chapter-label`
+|_Chapter_ (default) or user defined text
+|`book` doctype only; Asciidoctor PDF only
+
+|xref:discrete-titles.adoc[Discrete title]
+|`discrete`
+|NA
+|
+
+|xref:id-prefix-and-separator.adoc#prefix[ID prefix]
+|`idprefix`
+|`_` (default) or user defined text
+|Set by default
+//Set to prepend string to generated section ID
+
+|xref:id-prefix-and-separator.adoc#separator[ID word separator]
+|`idseparator`
+|`_` (default) or user defined character
+|Set by default
+//Set to insert character between words in generated section ID
+
+|xref:part-numbers-and-labels.adoc#part-label[Part label]
+|`part-label`
+|_Part_ (default) or user defined text
+|`book` doctype only
+
+|xref:part-numbers-and-labels.adoc[Part numbers]
+|`partnums`
+|NA
+|`book` doctype only
+
+|xref:title-links.adoc#anchor[Section anchor]
+|`sectanchors`
+|NA
+|
+//Asciidoctor only
+
+|xref:ids.adoc[Section ID]
+|`sectids`
+|NA
+|Set by default
+//Autogenerates section IDs by default
+
+|xref:title-links.adoc#link[Section link]
+|`sectlinks`
+|NA
+|
+//Asciidoctor only
+
+|xref:numbers.adoc[Section numbers] and xref:special-section-numbers.adoc[special section numbers]
+|`sectnums`
+|empty (default) or `all`
+|Can be toggled on or off in the flow of the document
+// replaces numbered in AsciiDoc.py
+
+|xref:numbers.adoc#numlevels[Section numbers level depth]
+|`sectnumlevels`
+|`3` (default) when `sectnums` is set; 0 through 5
+|Value of `0` is the same as `sectnums!`
+
+|xref:special-section-titles.adoc[Hide special section title]
+|`options` or `%`
+|`untitled`
+|DocBook only; can only be set on special sections
+//Asciidoctor only
+|===
+
+== Section styles
+
+[%autowidth]
+|===
+|Feature |Style Name |Doctypes |Converters
+
+|xref:abstract.adoc[Abstract]
+|`abstract`
+|`article`
+|All
+
+|Acknowledgments
+|`acknowledgments`
+|`book`
+|All
+
+|xref:appendix.adoc[Appendix]
+|`appendix`
+|All
+|All
+
+|xref:bibliography.adoc[Bibliography]
+|`bibliography`
+|All
+|All
+
+|xref:colophon.adoc[Colophon]
+|`colophon`
+|`book`
+|All
+
+|xref:dedication.adoc[Dedication]
+|`dedication`
+|`book`
+|All
+
+|xref:glossary.adoc[Glossary]
+|`glossary`
+|All
+|All
+
+|xref:index.adoc[Index]
+|`index`
+|All
+|DocBook
+
+|xref:preface.adoc[Preface]
+|`preface`
+|`book`
+|All
+|===

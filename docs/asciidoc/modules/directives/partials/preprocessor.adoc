@@ -1,0 +1,3 @@
+A [#def-preprocessor.term]*preprocessor directive* is processed when the lines of a document are read, but before the document structure is parsed.
+Therefore, it's not aware of the surrounding document structure.
+A preprocessor directive merely adds lines to the reader or takes lines away.

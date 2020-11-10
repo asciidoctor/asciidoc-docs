@@ -1,0 +1,36 @@
+= Assign Revision Attributes with Attribute Entries
+
+The revision information attributes can be set and assigned values with attribute entries.
+
+== When should I set revision attributes explicitly?
+
+You should set the revision attributes explicitly when one of the following occurs:
+
+* the document doesn't have an author line,
+* the document doesn't have a revision number,
+* you want the full value of the revision number--including any letter and symbol prefixes--to be displayed, or
+* a revision attribute's value contains characters or elements that conflict with the revision line syntax.
+
+== Set the revision attributes
+
+The attributes `revdate`, `revnumber` and `revremark` are set and assigned values in <<ex-entries>>.
+The order of the attribute entries doesn't affect their order in the byline of a rendered document.
+
+.Set the revision attributes in the document header
+[source#ex-entries]
+----
+= The Intrepid Chronicles
+:revdate: April 4, 2022
+:revnumber: LPR55 <.>
+:revremark: The spring incarnation of {doctitle} <.>
+:version-label!: <.>
+----
+<.> Any non-numeric characters that precede the version number aren't dropped when `revnumber` is set using an attribute entry.
+<.> The value of `revremark` can contain attribute references.
+<.> The `version-label` attribute is unset so that the word _Version_ isn't displayed in the byline.
+
+The result of <<ex-entries>> is displayed below.
+
+image::revision-attributes.png["Byline containing revision information from the explicitly set revnumber, revdate and revremark attributes",role=screenshot]
+
+The word _Version_ is absent from the rendered document's byline because xref:version-label.adoc[the version-label attribute] was unset.
