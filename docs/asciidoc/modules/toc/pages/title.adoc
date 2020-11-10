@@ -1,0 +1,19 @@
+= Customize the TOC Title
+
+You can change the title of the table of contents with the `toc-title` attribute.
+
+== Set toc-title
+
+To generate a TOC with a custom title, set the `toc-title` attribute in the header and assign it your preferred title.
+
+.Define a custom TOC title
+[source#ex-title]
+----
+include::example$toc.adoc[tags=header;title]
+----
+<.> The `toc` attribute must be set in order to use `toc-title`.
+<.> The `toc-title` is set and assigned the value `Table of Adventures` in the document's header.
+
+The result of <<ex-title>> is displayed below.
+
+image::toc-title.png[Table of contents with a custom title,role=screenshot]

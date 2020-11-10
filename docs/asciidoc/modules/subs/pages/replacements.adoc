@@ -1,0 +1,101 @@
+= Character Replacement Substitutions
+:navtitle: Character Replacements
+:table-caption: Table
+:y: Yes
+//icon:check[role="green"]
+:n: No
+//icon:times[role="red"]
+:url-html-ref: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
+:url-unicode: https://en.wikipedia.org/wiki/List_of_Unicode_characters
+
+The character replacement substitution step processes textual characters such as marks, arrows and dashes and replaces them with the decimal format of their Unicode code point, i.e., their <<char-ref-sidebar,numeric character reference>>.
+The replacements step depends on the substitutions completed by the xref:special-characters.adoc[special characters step].
+
+// Table of Textual symbol replacements is inserted below
+include::partial$subs-symbol-repl.adoc[]
+
+This substitution step also recognizes {url-html-ref}[HTML and XML character references^] as well as {url-unicode}[decimal and hexadecimal Unicode code points^] and substitutes them for their corresponding decimal form Unicode code point.
+
+For example, to produce the `&sect;` symbol you could write `\&sect;`, `\&#x00A7;`, or `\&#167;`.
+When the document is processed, `replacements` will replace the section symbol reference, regardless of whether it is a named character reference or a numeric character reference, with `\&#167;`.
+In turn, `\&#167;` will display as &sect;.
+
+[#char-ref-sidebar]
+.Anatomy of a character reference
+****
+A character reference is a standard sequence of characters that is substituted for a single character when Asciidoctor processes a document.
+There are two types of character references: named character references and numeric character references.
+
+A named character reference (often called a _character entity reference_) is a short name that refers to a character (i.e., glyph).
+To make the reference, the name must be prefixed with an ampersand (`&`) and end with a semicolon (`;`).
+
+For example:
+
+* `\&dagger;` displays as &dagger;
+* `\&euro;` displays as &euro;
+* `\&loz;` displays as &loz;
+
+Numeric character references are the decimal or hexadecimal Universal Character Set/Unicode code points which refer to a character.
+
+* The decimal code point references are prefixed with an ampersand (`&`), followed by a hash (`&#35;`), and end with a semicolon (`;`).
+* Hexadecimal code point references are prefixed with an ampersand (`&`), followed by a hash (`&#35;`), followed by a lowercase `x`, and end with a semicolon (`;`).
+
+For example:
+
+* `\&#x2020;` or `\&#8224;` displays as &#8224;
+* `\&#x20AC;` or `\&#8364;` displays as &#8364;
+* `\&#x25CA;` or `\&#9674;` displays as &#x25CA;
+
+Developers may be more familiar with using *Unicode escape sequences* to perform text substitutions.
+For example, to produce an `&#64;` sign using a Unicode escape sequence, you would prefix the hexadecimal Unicode code point with a backslash (`\`) and an uppercase or lowercase `u`, i.e. `u0040`.
+However, Asciidoctor doesn't process and replace Unicode escape sequences at this time.
+****
+
+TIP: AsciiDoc also provides built-in attributes for representing some common symbols.
+These attributes and their corresponding output are listed in xref:attributes:ref-character-replacement.adoc[].
+
+== Default replacements substitution
+
+<<table-replace>> lists the specific blocks and inline elements the replacements substitution step applies to automatically.
+
+.Blocks and inline elements subject to the replacements substitution
+[#table-replace%autowidth,cols=",^"]
+|===
+|Blocks and elements |Substitution step applied by default
+
+|Attribute entry values |{n}
+
+|Comments |{n}
+
+|Examples |{y}
+
+|Headers |{n}
+
+|Literal, listings, and source |{n}
+
+|Macros |{y} +
+(except passthrough macros)
+
+|Open |{y}
+
+|Paragraphs |{y}
+
+|Passthrough blocks |{n}
+
+|Quotes and verses |{y}
+
+|Sidebars |{y}
+
+|Tables |Varies
+
+|Titles |{y}
+|===
+
+== replacements substitution value
+
+The replacements substitution step can be modified on blocks and inline elements.
+For blocks, the step's name, `replacements`, can be assigned to the xref:apply-subs-to-blocks.adoc[subs attribute].
+For inline elements, the built-in values `r` or `replacements` can be applied to xref:apply-subs-to-text.adoc[inline text] to add the replacements substitution step.
+
+WARNING: The replacements step depends on the substitutions completed by the xref:special-characters.adoc[special characters step].
+This is important to keep in mind when applying the `replacements` value to blocks and inline elements.

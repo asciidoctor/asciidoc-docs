@@ -1,0 +1,30 @@
+= Troubleshooting Blocks
+
+== Opening and closing delimiters
+
+The opening and closing delimiters of a delimited block must be the same length.
+For example, a sidebar is specified by an opening delimiter of four asterisks (`+****+`).
+Its closing delimiter must also be four asterisks (`+****+`).
+
+Here's a sidebar using valid delimiter lengths:
+
+[source]
+----
+****
+This is a valid delimited block.
+It will be styled as a sidebar.
+****
+----
+
+However, the delimiter lengths in the following delimited block are not equal in length and therefore invalid:
+
+[source]
+----
+********
+This is an invalid sidebar block because the delimiter lines are different lengths.
+****
+----
+
+When Asciidoctor encounters the previous example, it will put the remainder of the content in the document inside the delimited block.
+As far as the processor is concerned, the closing delimiter is just a line of content.
+If you want the closing delimiter to be matched, it must be the same length as the opening delimiter.

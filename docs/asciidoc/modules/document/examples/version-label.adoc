@@ -1,0 +1,13 @@
+// tag::set[]
+= The Intrepid Chronicles
+Kismet Lee
+v3: An icy winter incarnation
+:version-label: Edition
+// end::set[]
+
+// tag::unset[]
+= The Intrepid Chronicles
+Kismet Lee
+v3: An icy winter incarnation
+:!version-label:
+// end::unset[]

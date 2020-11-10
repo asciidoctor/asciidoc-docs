@@ -1,0 +1,107 @@
+= Listing Blocks
+:replace-me: I've been replaced!
+
+Blocks and paragraphs assigned the `listing` style display their rendered content exactly as you enter it.
+Listing content is converted to preformatted text (i.e., `<pre>`).
+The content is shown in a fixed-width font and endlines are preserved.
+It's only subject to xref:subs:special-characters.adoc[special character] and callout substitutions.
+
+The listing style can be applied to content using any of the following methods:
+
+* indenting the first line of a paragraph by one or more spaces,
+* setting the `listing` style on a block or paragraph using an attribute list, or
+* enclosing the content within a set of listing block delimiters (`----`).
+
+== Indent method
+
+When a line begins with one or more spaces it is displayed as a listing block.
+This method is an easy way to insert simple code snippets.
+
+.Indicate listing content using an indent
+[source#ex-indent]
+----
+include::example$listing.adoc[tag=indent]
+----
+
+The result of <<ex-indent>> is rendered below.
+
+include::example$listing.adoc[tag=indent]
+
+== Listing style syntax
+
+The block style `listing` can be applied to a block or paragraph, by setting the attribute `listing` using an attribute list.
+
+.Listing style syntax
+[source#ex-style]
+----
+include::example$listing.adoc[tag=style]
+----
+
+The result of <<ex-style>> is rendered below.
+
+include::example$listing.adoc[tag=style]
+
+== Delimited listing block
+
+A delimited listing block is surrounded by lines composed of four hyphens (`----`).
+This method is useful when the content contains blank lines.
+
+.Delimited listing block syntax
+[source#ex-block]
+....
+include::example$listing.adoc[tag=block]
+....
+
+Here's how the block in <<ex-block>> appears when rendered.
+
+include::example$listing.adoc[tag=block]
+
+You should notice a few things about how the content is processed.
+
+* The HTML tag `<pre>` is escaped, that is, it's displayed verbatim, not interpreted.
+* The endlines are preserved.
+* The phrase _delimited listing block_ isn't italicized, despite having the underscore formatting marks around it.
+
+Listing blocks are good for displaying snippets of raw source code, especially when used in tandem with the `source` style and `source-highlighter` attribute.
+See xref:source.adoc[] to learn more about `source` and `source-highlighter`.
+
+== Listing substitutions
+
+Content that is assigned the `listing` style, either via the explicit block style or the listing delimiters is subject to the xref:subs:substitutions.adoc#verbatim-group[verbatim substitution group].
+Only xref:subs:special-characters.adoc[special characters] and callouts are replaced automatically in listing content.
+
+You can control the substitutions applied to a listing block using the `subs` attribute.
+
+.Delimited listing block with custom substitutions syntax
+[#ex-subs]
+------
+[subs="+attributes"]
+----
+This is a _delimited listing block_
+with the `subs` attribute assigned
+the incremental value `+attributes`.
+This attribute reference:
+
+{replace-me}
+
+will be replaced with the attribute's
+value when rendered.
+----
+------
+
+The result of <<ex-subs>> is rendered below.
+
+[subs="+attributes"]
+----
+This is a _delimited listing block_
+with the `subs` attribute assigned
+the incremental value `+attributes`.
+This attribute reference:
+
+{replace-me}
+
+will be replaced with the attribute's
+value when rendered.
+----
+
+See xref:subs:apply-subs-to-blocks.adoc[] to learn more about the `subs` attribute and how to apply incremental substitutions to listing content.

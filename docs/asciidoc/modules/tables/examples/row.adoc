@@ -1,0 +1,102 @@
+*The table base-h (directly below) is used in A LOT of examples. Be very careful changing it.*
+
+// tag::base-h[]
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|Cell in column 3, row 3
+|===
+// end::base-h[]
+
+// tag::opt-h[]
+[cols="2*",options="header"]
+|===
+|Column 1, header row
+|Column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|===
+// end::opt-h[]
+
+// tag::impl-h[]
+|===
+|Column 1, header row |Column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|===
+// end::impl-h[]
+
+// tag::opt-f[]
+[options="footer"]
+|===
+|Column 1, header row |Column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+
+|Column 1, footer row
+|Column 2, footer row
+|===
+// end::opt-f[]
+
+// tag::same[]
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2 |Cell in column 3, row 2
+|===
+// end::same[]
+
+// tag::indv-co[]
+[cols="3*"] // <1>
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+// end::indv-co[]
+
+// tag::indv[]
+[cols="3*"]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+// end::indv[]
+
+// tag::same-indv[]
+[cols="3*"]
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2 |Cell in column 3, row 2
+|===
+// end::same-indv[]

@@ -1,0 +1,112 @@
+= The Role Attribute
+
+Blocks and many inline elements can be assigned one or more roles using the `role` attribute.
+The `role` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
+You can assign roles to blocks and inline elements using the shorthand dot (`.`) syntax or formal (`role=`) syntax for the `role` attribute.
+
+== Assign roles to blocks
+
+You can assign roles to blocks using the shorthand dot (`.`) syntax or formal (`role=`) syntax for the `role` attribute.
+
+=== Shorthand role syntax for blocks
+
+To assign a role to a block, prefix the value with a dot (`.`) in an attribute list.
+The dot implicitly set's the `role` attribute.
+
+.Sidebar block with a role assigned using the shorthand dot
+[source#ex-block]
+----
+[.value]
+****
+This is a sidebar with a role assigned to it.
+****
+----
+
+You can assign multiple roles to a block by prefixing each value with a dot (`.`).
+
+.Sidebar with two roles assigned using the shorthand dot
+[source#ex-two-roles]
+----
+[.value.value]
+****
+This is a sidebar with two roles assigned to it.
+****
+----
+
+////
+[source]
+----
+[.summary.incremental]
+* This is a list with two roles assigned to it.
+----
+////
+
+=== Formal role syntax for blocks
+
+Explicitly set `role`, followed by the equals sign (`=`), and then the value in an attribute list.
+
+.Sidebar block with a role assigned using the formal syntax
+[source#ex-block-formal]
+----
+[role="value"]
+****
+This is a sidebar with one role assigned to it.
+****
+----
+
+Separate multiple role values with commas (`,`).
+
+.Sidebar with two roles assigned using the formal syntax
+[source#ex-two-roles-formal]
+----
+[role="value,value"]
+****
+This is a sidebar with two roles assigned to it.
+****
+----
+
+////
+[source]
+----
+[role="summary,incremental"]
+* This is a list with two roles assigned to it.
+----
+////
+
+== Assign roles to formatted inline elements
+
+You can assign roles to inline elements that are enclosed in formatting syntax, such as bold (`+*+`), italic (`+_+`), and monospace (`++`++`).
+To assign a role to an inline element that's enclosed in formatting syntax block, prefix the value with a dot (`.`) in an attribute list.
+
+.Inline role assignments using shorthand syntax
+[source#ex-role-dot]
+----
+This sentence contains [.value]*bold inline content* that's assigned a role.
+
+This sentence contains [.value]`monospace text` that's assigned a role.
+----
+
+The HTML source code that is output from <<ex-role-dot>> is shown below.
+
+.HTML source code produced by <<ex-role-dot>>
+[source#ex-role-html,html]
+----
+<p>This sentence contains <strong class="value">bold inline content</strong> that&#8217;s assigned a role.</p>
+
+<p>This sentence contains <code class="value">monospace text</code> that&#8217;s assigned a role.</p>
+</div>
+----
+
+////
+Using the shorthand notation, an id can also be specified:
+
+```
+[#value.value]`monospace text`
+```
+
+which produces:
+
+```html
+<a id="value"></a><code class="value">monospace text</code>
+```
+////

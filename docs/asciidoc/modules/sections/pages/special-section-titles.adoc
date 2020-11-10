@@ -1,0 +1,15 @@
+= Hide Special Section Titles
+
+CAUTION: This feature is only available in the DocBook converter.
+
+The titles of xref:styles.adoc[special sections], such as the Dedication, can be turned off by assigning `untitled` to the section's options attribute (`%` or `options=untitled`).
+
+[source]
+----
+[dedication%untitled]
+== Dedication
+
+include::example$multi-special.adoc[tag=dedicate]
+----
+
+The section still needs a title in the source, otherwise you can't assign the special section style to it or link to the section with a cross reference.

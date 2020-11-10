@@ -1,0 +1,108 @@
+= Highlight Select Lines
+
+Not to be confused with xref:source-highlighter.adoc[source highlighting], you can highlight (i.e., emphasize) specific lines in a source block in order to call attention to them.
+
+== Usage criteria
+
+This feature can be applied to a source block if certain criteria are met.
+
+[%autowidth]
+|===
+|`source-highlighter` |Criteria for `highlight`
+
+|`coderay`
+a|
+* The `linenums` option is enabled.
+* The `highlight` attribute is defined.
+
+|`rouge`
+a|
+* The provided line highlighting CSS is applied using a docinfo file.
+* The `linenums` option is enabled.
+* The `highlight` attribute is defined.
+
+|`pygments`
+a|* The `highlight` attribute is defined.
+
+|`highlightjs`
+|Not applicable.
+*highlight isn't available for the highlight.js library*.
+|===
+
+== highlight attribute
+
+This feature is activated on a source block if the highlight attribute is defined and at least one of the line numbers falls in this range.
+The `highlight` attribute accepts a comma or semicolon delimited list of line ranges.
+A line range is represented by two numbers separated by a double period (e.g., `2..5`).
+These numbers correspond to the line numbers of the source block, inclusive, where the first line is 1.
+
+.Highlight select lines when source-highlighter is coderay
+[source#ex-coderay]
+....
+= Document Title
+:source-highlighter: coderay
+
+[source,ruby,linenums,highlight=2..5]
+----
+ORDERED_LIST_KEYWORDS = {
+  'loweralpha' => 'a',
+  'lowerroman' => 'i',
+  'upperalpha' => 'A',
+  'upperroman' => 'I',
+}
+----
+....
+
+When `rouge` is the specified source highlighter, you also need to store the provided line highlighting CSS as a docinfo file and set the `docinfo` document attribute.
+
+.Highlight select lines when source-highlighter is rouge
+[source#ex-rouge]
+....
+= Document Title
+:source-highlighter: rouge
+:docinfo: private
+
+[source,ruby,linenums,highlight=2..5]
+----
+ORDERED_LIST_KEYWORDS = {
+  'loweralpha' => 'a',
+  'lowerroman' => 'i',
+  'upperalpha' => 'A',
+  'upperroman' => 'I',
+}
+----
+....
+
+Notice in <<ex-pygments>> that when the source highlighter is `pygments`, the `linenums` option isn't required.
+
+.Highlight select lines when source-highlighter is pygments
+[source#ex-pygments]
+....
+= Document Title
+:source-highlighter: pygments
+
+[source,ruby,highlight=2..5]
+----
+ORDERED_LIST_KEYWORDS = {
+  'loweralpha' => 'a',
+  'lowerroman' => 'i',
+  'upperalpha' => 'A',
+  'upperroman' => 'I',
+}
+----
+....
+
+
+
+.Docinfo file to support line highlighting with Rouge
+[source,html]
+....
+<style>
+pre.rouge .hll {
+  background-color: #ffc;
+}
+pre.rouge .hll * {
+  background-color: initial;
+}
+</style>
+....

@@ -1,0 +1,36 @@
+= Get Started with Element Attributes
+
+Element attributes are a powerful means of controlling the built-in settings of individual block and inline elements.
+They're also used to apply user-defined behavior and supplemental information, such as citation information and fallback content, to certain elements.
+
+== What are element attributes?
+
+[.term]*Element attributes* define the built-in and user-defined styles, behavior, and metadata that are applied to an individual xref:ROOT:elements.adoc#block[block element] or xref:ROOT:elements.adoc#inline[inline element] in a document.
+
+Element attributes:
+
+* Declare the style and ID of an element
+* Turn on or turn off an individual element's built-in features
+* Configure the built-in features of an individual element
+* Apply user-defined information, such as citation metadata, fallback text, link text, and target content, to an individual element
+* Apply user-defined roles and behaviors to an individual element
+
+They're set and defined directly on the element they're modifying using an attribute list.
+
+Element attributes are classified as positional or named.
+
+Attributes can be assigned to individual elements in a document using an attribute list.
+
+[#attribute-list]
+== Attribute lists
+
+Attributes are assigned to block and inline elements using an [.term]*attribute list*.
+
+Attribute lists:
+
+* apply to blocks, macros, and inline elements
+* can contain xref:positional-and-named-attributes.adoc[positional and named attributes]
+* take precedence over xref:document-attributes.adoc[document attributes] (attribute entries)
+
+.Anatomy of an attribute list
+ [positional_attribute_1,positional_attribute_2,named_attribute="value"]

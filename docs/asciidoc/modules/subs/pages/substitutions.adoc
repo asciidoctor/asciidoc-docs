@@ -1,0 +1,81 @@
+= Substitutions
+:y: Yes
+//icon:check[role="green"]
+:n: No
+//icon:times[role="red"]
+
+////
+user manual anchor: subs
+
+This page needs to become a more user friendly overview of what substitutions can do, how to leverage them and how to escape them and/or prevent them with a pass through.
+
+The groups and individual substitution categories (and tables) needs to be reorganized into a more cohesive body (and then squashed into a single reference page maybe?).
+The apply, prevent, and control pages need to be organized into a logical flow with clear statements of ... I have this problem: I need to get this attribute reference in this block to be replaced by not have the other <whatever> replaced, what do I use?
+All the groups and subs need to be hooked up to clear use cases.
+The single plus macro has no explanation (at least not in this module).
+The deprecate syntax needs to be moved to the deprecated table and/or migration docs.
+////
+
+== Substitution types
+
+Each substitution type replace characters, markup, attribute references, and macros in text with the appropriate output for a given converter.
+When a document is processed, up to six substitution types may be carried out depending on the block or inline element's assigned substitution group.
+The processor runs the substitutions in the following order:
+
+. xref:special-characters.adoc[]
+. xref:quotes.adoc[] (i.e., inline formatting)
+. xref:attributes.adoc[]
+. xref:replacements.adoc[]
+. xref:macros.adoc[]
+. xref:post-replacements.adoc[]
+
+For convenience, these types are grouped and ordered into substitution groups.
+
+[#substitution-groups]
+== Substitution groups
+
+Each block and inline element has a default substitution group that is applied unless you customize the substitutions for a particular element.
+<<table-subs-groups>> shows the substitution types that are executed in each group.
+
+include::partial$subs-group-table.adoc[]
+
+[#normal-group]
+=== Normal substitution group
+
+The normal substitution group (`normal`) is applied to the majority of the AsciiDoc block and inline elements except for those specific elements listed under the groups described in the next sections.
+
+[#header-group]
+=== Header substitution group
+
+The header substitution group (`header`) is applied to metadata lines (author and revision information) in the document header.
+It's also applied to the values of attribute entries, regardless of whether those entries are defined in the document header or body.
+Only special characters, attribute references, and the inline pass macro are replaced in elements that fall under the header group.
+
+TIP: You can use the inline pass macro in attribute entries to xref:apply-subs-to-text.adoc[customize the substitution types applied to the attribute's value].
+
+[#verbatim-group]
+=== Verbatim substitution group
+
+Literal, listing, and source blocks are processed using the verbatim substitution group (`verbatim`).
+Only special characters are replaced in these blocks.
+
+[#pass-group]
+=== Pass substitution group
+
+No substitutions are applied to three of the elements in the pass substitution group (`pass`).
+These elements include the xref:pass:pass-block.adoc[passthrough block], xref:pass:pass-macro.adoc#inline-pass[inline pass macro], and xref:pass:pass-macro.adoc#triple-plus[triple plus macro].
+
+The xref:pass:pass-macro.adoc#def-plus[inline single plus and double plus macros] also belong to the pass group.
+Only the special characters substitution is applied to these elements.
+
+[#none-group]
+=== None substitution group
+
+The none substitution group (`none`) is applied to comment blocks.
+No substitutions are applied to comments.
+
+== Escaping substitutions
+
+Asciidoctor provides several approaches for preventing substitutions.
+When you want to prevent punctuation and symbols from being interpreted as formatting markup, xref:prevent.adoc[escaping the punctuation with a backslash] may be sufficient.
+For more comprehensive substitution prevention and control, you can use xref:pass:pass-macro.adoc[inline passthrough macros] or xref:pass:pass-block.adoc[passthrough blocks].

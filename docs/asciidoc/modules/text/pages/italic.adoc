@@ -1,0 +1,48 @@
+= Italic
+// content written and moved upstream from Antora by @graphitefriction
+
+Text is often italicized in order to stress a word or phrase, quote a speaker, or introduce a term.
+Italic type slants slightly to the right, and depending on the font, may have cursive swashes and flourishes.
+
+== Italic syntax
+
+You can emphasize (aka italicize) a word or phrase by enclosing it in a single set of underscores (e.g., `+_word_+`) (constrained).
+You can emphasize bounded characters (i.e., characters within a word) by enclosing them in a set of double underscores (e.g., `+char__act__ers+`) (unconstrained).
+
+.Italic inline formatting
+[source#ex-italic]
+----
+An italic _word_, and an italic _phrase of text_.
+
+Italic c__hara__cter__s__ within a word.
+----
+
+You don't need to use double underscores when an entire word or phrase marked as italic is directly followed by a common punctuation mark, such as `;`, `"`, and `!`.
+
+The result of <<ex-italic>> is rendered below.
+
+====
+An italic _word_, and an italic _phrase of text_.
+
+Italic c__hara__cter__s__ within a word.
+====
+
+== Mixing italic with other formatting
+
+You can add multiple emphasis styles to italic text as long as the syntax is placed in the correct order.
+
+.Order of inline formatting syntax
+[source#ex-mix]
+----
+`*_monospace bold italic phrase_*` & ``**__char__**``acter``**__s__**``
+----
+
+xref:monospace.adoc[Monospace syntax] (`++`++`) must be the outermost formatting set.
+xref:bold.adoc[Bold syntax] (`+*+`) must be outside the italics formatting set.
+Italic syntax is always the innermost formatting set.
+
+The result of <<ex-mix>> is rendered below.
+
+====
+`*_monospace bold italic phrase_*` & ``**__char__**``acter``**__s__**``
+====

@@ -1,0 +1,124 @@
+= Build a Basic Table
+
+A table is a delimited block that can have optional customizations, such as an ID and a title, as well as table-specific attributes, options, and roles.
+However, at its most basic, a table only needs columns and rows.
+
+On this page, you'll learn:
+
+* [x] How to set up an AsciiDoc table block and its attribute list.
+* [x] How to add columns to a table using the `cols` attribute.
+* [x] How to add cells to a table and arrange them into rows.
+* [x] How to designate a row as the table's header row.
+
+== Create a table with two columns and three rows
+
+In <<ex-cols>>, we'll assign the `cols` attribute a list of column specifiers.
+A column specifier represents a column.
+
+.Set up a table with two columns
+[source#ex-cols]
+----
+[cols="1,1"] <.> <.>
+|=== <.>
+----
+<.> On a new line, create an attribute list.
+Set the `cols` attribute, followed by an equals sign (`=`).
+<.> Assign a list of comma-separated column specifiers enclosed in double quotation marks (`"`) to `cols`.
+Each column specifier represents a column.
+<.> On the line directly after the attribute list, enter the opening table delimiter.
+A table delimiter is one vertical bar followed by three equals signs (`|===`).
+This delimiter starts the table block.
+
+The table in <<ex-cols>> will contain two columns because there are two comma-separated entries in the list assigned to `cols`.
+Each entry in the list is called a column specifier.
+A [.term]*column specifier* represents a column and the width, alignment, and style properties assigned to that column.
+When each column specifier is the same number, in this case the integer `1`, all of the columns`' widths will be identical.
+Each column in <<ex-cols>> will be the same width regardless of how much content they contain.
+
+Next, let's add three rows to the table.
+Each row has the same number of cells.
+Since the table in <<ex-rows>> has two columns, each row will contain two cells.
+A cell starts with a vertical bar (`|`).
+
+.Add three rows to the table
+[source#ex-rows]
+----
+[cols="1,1"]
+|===
+|Cell in column 1, row 1 <.>
+|Cell in column 2, row 1 <.>
+<.>
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3 <.>
+|=== <.>
+----
+<.> To create a new cell, press kbd:[Shift+|].
+After the vertical bar (`|`), enter the content you want displayed in that cell.
+<.> On a new line, start another cell with a `|`.
+Each consecutive cell is placed in a separate, consecutive column in a row.
+<.> Rows are separated by one or more blank lines.
+<.> When you finish adding cells to your table, press kbd:[Enter] to go to a new line.
+<.> Enter the closing delimiter (`|===`) to end the table block.
+
+TIP: You can enter xref:add-cells-and-rows.adoc[more that one cell or all of the cells in a row on the same line] since the processor creates a new cell each time it encounters a vertical bar (`|`).
+
+The table from <<ex-rows>> is displayed below.
+It contains two columns and three rows of text positioned and styled using the default alignment, style, border, and width attribute values.
+
+[cols="1,1"]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2
+|Cell in column 1, row 3 |Cell in column 2, row 3
+|===
+
+In addition to the xref:add-columns.adoc[cols attribute], you can identify the number of columns using a xref:add-columns.adoc#multiplier[column multiplier] or xref:add-columns.adoc#implicit-cols[the table's first row].
+However, the `cols` attribute is required to customize the xref:adjust-column-widths.adoc[width], xref:align-by-column.adoc[alignment], or xref:format-column-content.adoc[style] of a column.
+
+=== Add a header row to the table
+
+Let's add a header row to the table in <<ex-header>>.
+You can implicitly identify the first row of a table as a header row by entering all of the first row's cells on the line directly after the opening table delimiter.
+
+.Add a header row to the table
+[source#ex-header]
+----
+[cols="1,1"]
+|===
+|Cell in column 1, header row |Cell in column 2, header row <.>
+<.>
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+
+|Cell in column 1, row 4
+|Cell in column 2, row 4
+|===
+----
+<.> On the line directly after the opening delimiter (`|===`), enter all of the first row's cells on a single line.
+<.> Leave the line directly after the header row blank.
+
+The table from <<ex-header>> is displayed below.
+
+[cols="1,1"]
+|===
+|Cell in column 1, header row |Cell in column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+
+|Cell in column 1, row 4
+|Cell in column 2, row 4
+|===
+
+A header row can also be identified by assigning xref:add-header-row.adoc[header to the options attribute].

@@ -1,0 +1,18 @@
+// tag::header[]
+= The Intrepid Chronicles
+Kismet R. Lee <kismet@asciidoctor.org>; B. Steppenwolf; Pax Draeke <pax@asciidoctor.org>
+// end::header[]
+
+// tag::doc[]
+= The Intrepid Chronicles
+Kismet R. Lee <kismet@asciidoctor.org>; B. Steppenwolf; Pax Draeke <pax@asciidoctor.org>
+
+.About {author_2}
+Mr. {lastname_2} lives in the Rocky Mountains.
+
+.About {author_3}
+{firstname_3}, also known as {authorinitials_3}, loves to surf.
+
+.About {author}
+You can contact {firstname} at {email}.
+// end::doc[]

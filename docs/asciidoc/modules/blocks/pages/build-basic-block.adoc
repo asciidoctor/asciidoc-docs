@@ -1,0 +1,93 @@
+= Build a Basic Block
+:y: Yes
+:n: No
+
+== Delimited blocks
+
+Block content can be styled by enclosing it in a set of delimiters.
+A *delimited block* has an *opening delimiter* and a *closing delimiter*.
+The opening and closing delimiters must be the same length.
+The style and substitutions applied to the delimited block's content is indicated by the characters in the delimiters.
+
+=== Build a block using delimiters
+
+In this section, we'll create a delimited sidebar block.
+The delimiter for the sidebar style is four asterisks (`+****+`).
+
+. Enter the opening delimiter at the beginning of a new line and then press kbd:[Enter].
++
+[source]
+----
+Text in your document.
+
+****
+
+----
+
+. On the new line, enter your content, such as paragraphs, delimited blocks, directives, and macros.
+The delimited block's style will be applied to all of this content until the closing delimiter.
++
+[source]
+----
+Text in your document.
+
+****
+This is content in a sidebar block.
+
+image::name.png[]
+
+This is more content in the sidebar block.
+----
+
+. To end the delimited block, press kbd:[Enter] at the end of your last line of content.
+On the new line, type the closing delimiter.
++
+[source]
+----
+Text in your document.
+
+****
+This is content in a sidebar block.
+
+image::name.png[]
+
+This is more content in the sidebar block.
+****
+----
+
+That's it.
+You've built a delimited block.
+
+== Build a block using a block style attribute
+
+In some cases, you can style a block using the style's name.
+If the content is contiguous (not interrupted by blank lines), you can assign the block style's name in an attribute list placed above the content.
+This format is often used for single-line listings:
+
+[source]
+....
+include::example$block.adoc[tag=opt-listing]
+....
+
+or single-line quotes:
+
+[source]
+----
+include::example$block.adoc[tag=quote-name]
+----
+
+== Built-in block styles summary
+// This section is just hanging here for the moment, it's not its final destination, I just didn't want to comment it out.
+
+The following table identifies the built-in block styles, their delimiter syntax, purposes, and the substitutions performed on their contents.
+
+include::partial$block-name-table.adoc[]
+
+////
+This table shows the substitutions performed by each substitution group referenced in the previous table.
+
+include::partial$subs-group-table.adoc[]
+
+OMG. What does this random tip apply to????
+TIP: Surround an attribute value with single quotes in order to apply normal substitutions.
+////

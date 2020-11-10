@@ -1,0 +1,98 @@
+= Inline Passthroughs
+//um anchor: pass-macros
+
+Asciidoctor supports several inline passthrough macros.
+
+== Inline passthrough macros
+
+[[def-plus]]single and double plus:: A special syntax for preventing inline text from being formatted.
+Only xref:subs:special-characters.adoc[special characters] are replaced in the output format.
+The substitutions can't be modified for this type of passthrough.
+
+triple plus:: A special inline syntax for designating passthrough content.
+No substitutions are applied nor can they be added using the step and group substitution values.
+
+inline pass macro:: An inline macro named `pass` that can be used to passthrough content.
+You can apply specific substitutions to the macro's target using substitution types and groups.
++
+[source]
+----
+pass:[content like #{variable} passed directly to the output] followed by normal content.
+
+content with only select substitutions applied: pass:c,a[__<{email}>__]
+----
+
+TIP: When you need to prevent or control the substitutions on one or more blocks of content, use a xref:pass-block.adoc[delimited passthrough block or the pass block style].
+
+[#triple-plus]
+== Triple plus macro
+
+The triple plus passthrough excludes content enclosed in a set of triple pluses (pass:[+++]) from all substitutions.
+
+ +++content passed directly to the output+++ followed by normal content.
+
+The triple plus macro is often used to output custom HTML or XML.
+
+[source]
+----
+include::example$pass.adoc[tag=3p]
+----
+
+====
+include::example$pass.adoc[tag=3p]
+====
+
+[#inline-pass]
+== Inline pass macro
+
+To exclude inline content from all of the substitutions, enclose it in the inline pass macro.
+For example, here's one way to format text as underline when generating HTML from AsciiDoc:
+
+[source]
+----
+include::example$pass.adoc[tag=in-macro]
+----
+
+====
+include::example$pass.adoc[tag=in-macro]
+====
+
+WARNING: Using passthroughs to pass content (without substitutions) can couple your content to a specific output format, such as HTML.
+In these cases, you should use conditional preprocessor directives to route passthrough content for different output formats based on the current backend.
+
+The inline pass macro is the only macro that is processed in the document header as part of the xref:subs:substitutions.adoc#header-group[header substitution group].
+
+== Nesting blocks and passthroughs
+
+When you're using passthroughs inside literal and listing blocks, it can be easy to forget that the single plus and triple plus passthroughs are xref:subs:macros.adoc[macros substitutions].
+To enable the passthroughs, assign the `macros` value to the `subs` attribute.
+
+....
+[source,java,subs="+quotes,+macros"]
+----
+protected void configure(HttpSecurity http) throws Exception {
+    http
+        .authorizeRequests()
+            **.antMatchers("/resources/+++**+++").permitAll()**
+            .anyRequest().authenticated()
+            .and()
+        .formLogin()
+            .loginPage("/login")
+            .permitAll();
+----
+....
+
+To learn more about applying substitutions to blocks, see xref:subs:apply-subs-to-blocks.adoc[].
+
+[source,java,subs="+quotes,+macros"]
+----
+protected void configure(HttpSecurity http) throws Exception {
+    http
+        .authorizeRequests()
+            **.antMatchers("/resources/+++**+++").permitAll()**
+            .anyRequest().authenticated()
+            .and()
+        .formLogin()
+            .loginPage("/login")
+            .permitAll();
+----

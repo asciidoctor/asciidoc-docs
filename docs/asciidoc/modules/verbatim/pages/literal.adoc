@@ -1,0 +1,58 @@
+= Literal Blocks
+
+Literal blocks display the text you write exactly as you enter it.
+Literal text is treated as preformatted text.
+The text is shown in a fixed-width font and endlines are preserved.
+Only xref:subs:special-characters.adoc[special characters] and callouts are replaced when the document is converted.
+
+The literal style can be applied to content using any of the following methods:
+
+* indenting the first line of a paragraph by one or more spaces,
+* setting the `literal` style on a block using an attribute list, or
+* enclosing the content within a set of literal block delimiters (`\....` ).
+
+== Indent method
+
+When a line begins with one or more spaces it is displayed as a literal block.
+This method is an easy way to insert simple code snippets.
+
+.Indicate literal text using an indent
+[source#ex-indent]
+----
+include::example$literal.adoc[tag=indent]
+----
+
+The result of <<ex-indent>> is rendered below.
+
+include::example$literal.adoc[tag=indent]
+
+=== literal style syntax
+
+The literal style can be applied to a block, such as a paragraph, by setting the style attribute `literal` on the block using an attribute list.
+
+.Literal style syntax
+[source#ex-style]
+----
+include::example$literal.adoc[tag=style]
+----
+
+The result of <<ex-style>> is rendered below.
+
+include::example$literal.adoc[tag=style]
+
+=== Delimited literal block
+
+Finally, you can surround the content you want rendered as literal by enclosing it in a set of literal block delimiters (`\....`).
+This method is useful when the content contains blank lines.
+
+.Delimited literal block syntax
+[source#ex-block]
+----
+include::example$literal.adoc[tag=block]
+----
+
+The result of <<ex-block>> is rendered below.
+
+include::example$literal.adoc[tag=block]
+
+Notice in the output that the bold text formatting is not applied to the text nor are the three consecutive periods replaced by the ellipsis Unicode character.

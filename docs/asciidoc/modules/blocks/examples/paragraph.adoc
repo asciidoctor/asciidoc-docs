@@ -1,0 +1,58 @@
+// tag::para[]
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line from the previous paragraph or block.
+// end::para[]
+
+// tag::hb-all[]
+Rubies are red, +
+Topazes are blue.
+
+[%hardbreaks]
+Ruby is red.
+Java is beige.
+// end::hb-all[]
+
+// tag::hb[]
+Rubies are red, +
+Topazes are blue.
+// end::hb[]
+
+// tag::hb-p[]
+[%hardbreaks]
+Ruby is red.
+Java is beige.
+// end::hb-p[]
+
+// tag::b-hb[]
+To preserve a line break, end the line in a space followed by a plus sign. +
+This results in a visible line break (e.g., `<br>`) between the lines.
+// end::b-hb[]
+
+// tag::hb-attr[]
+= Line Break Doc Title
+:hardbreaks:
+
+Rubies are red,
+Topazes are blue.
+// end::hb-attr[]
+
+// tag::lead[]
+== Section title
+
+This is a regular paragraph.
+
+[.lead]
+This is a paragraph styled as a lead paragraph.
+// end::lead[]
+
+// tag::no-lead[]
+[.normal]
+This is a normal paragraph, regardless of its position in the document.
+// end::no-lead[]
+
+// tag::b-lead[]
+[.lead]
+This text is styled as a lead paragraph (i.e., larger font).
+// end::b-lead[]

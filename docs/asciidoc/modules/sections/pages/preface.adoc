@@ -1,0 +1,48 @@
+= Preface
+:keywords: front matter, forward, introduction, proem, pref
+// anchor from um: user-preface
+
+A preface is a special section that precedes the first chapter of a book or a book part.
+
+== Preface for a book
+
+The `preface` section style can only be used when the doctype is `book`.
+A preface can contain subsections.
+When a book doesn't contain parts, the preface must be defined as a level 1 section (`==`) and any preface subsections must start at level 2 (`===`).
+
+[source]
+----
+include::example$preface.adoc[tag=book]
+----
+
+== Preface for a book part
+
+To create a preface for a book part, the preface must be defined as a level 1 section (`==`) and any subsections must start at level 2 (`===`).
+The preface must be the first section in the part.
+
+[source]
+----
+include::example$preface.adoc[tag=part]
+----
+
+////
+As an alternative to a special section, Asciidoctor will automatically promote the preamble to a preface.
+The title of the preface is set using the `preface-title` document attribute.
+When defined this way, the preface may not contain subsections.
+
+[source]
+----
+= Book Title
+:doctype: book
+:preface-title: Documentation Preface
+
+The basis for this documentation germinated when I awoke one morning and was confronted by the dark and stormy eyes of the chinchilla.
+She had conquered the mountain of government reports that, over the course of six months, had eroded into several minor foothills and a creeping alluvial plain of loose papers.
+
+== Chapter 1
+
+...
+----
+
+The special section is the preferred way of defining a preface.
+////

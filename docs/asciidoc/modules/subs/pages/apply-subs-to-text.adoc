@@ -1,0 +1,61 @@
+= Customize the Substitutions Applied to Text
+
+The inline pass macro (`++pass:[]++`) accepts the shorthand values in addition to the longhand values for specifying substitution types.
+
+* `c` or `specialchars`
+* `q` or `quotes`
+* `a` or `attributes`
+* `r` or `replacements`
+* `m` or `macros`
+* `p` or `post_replacements`
+
+== Apply substitutions to inline text
+
+Custom substitutions can also be applied to inline text with the xref:pass:pass-macro.adoc[pass macro].
+For instance, let's assume you need to underline a snippet of text using HTML tags in your AsciiDoc document.
+You'd do this with the inline pass macro.
+
+.Inline pass macro syntax
+[source#ex-pass]
+----
+include::pass:example$pass.adoc[tag=in-macro]
+----
+
+The result of <<ex-pass>> is rendered below.
+
+====
+include::pass:example$pass.adoc[tag=in-macro]
+====
+
+However, you also need to bold the text and want to use the AsciiDoc markup for that formatting.
+In this case, you'd assign the `quotes` substitution to the inline pass macro.
+
+.Assign quotes to inline pass macro
+[source#ex-sub-quotes]
+----
+include::pass:example$pass.adoc[tag=s-macro]
+----
+
+The result of <<ex-sub-quotes>> is rendered below.
+
+====
+include::pass:example$pass.adoc[tag=s-macro]
+====
+
+You can also assign custom substitutions to inline text that's in a block.
+In the listing block below, we want to process the inline formatting on the second line.
+
+.Listing block with inline formatting
+[source#ex-listing]
+....
+include::pass:example$pass.adoc[tag=sub-in]
+....
+<.> `macros` is assigned to `subs`, which allows the `pass` macro within the block to be processed.
+<.> The `pass` macro is assigned the `quotes` value.
+Text within the square brackets will be formatted.
+
+The result of <<ex-listing>> is rendered below.
+
+====
+include::pass:example$pass.adoc[tag=sub-out]
+====

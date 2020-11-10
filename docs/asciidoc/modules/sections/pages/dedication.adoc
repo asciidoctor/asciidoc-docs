@@ -1,0 +1,28 @@
+= Dedication
+:keywords: respect, homage, front matter
+// anchor from um: user-dedication
+
+A dedication page is used to express gratitude.
+
+== Dedication section syntax
+
+To use the `dedication` section style, the document type must be `book`.
+The dedication section must be a level 1 section (`==`), unless the book has parts.
+
+[source]
+----
+[dedication]
+== Dedication
+
+include::example$multi-special.adoc[tag=dedicate]
+----
+
+If the book has parts, the dedication section must be a level 0 section (`=`).
+
+[source]
+----
+[dedication]
+= Dedication
+
+include::example$multi-special.adoc[tag=dedicate]
+----

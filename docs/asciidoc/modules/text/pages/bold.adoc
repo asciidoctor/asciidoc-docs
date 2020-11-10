@@ -1,0 +1,47 @@
+= Bold
+// content written and moved upstream from Antora by @graphitefriction
+
+Text that is marked up as bold will stand out against the regular, surrounding text due to the application of a thicker and/or darker font.
+Bold is useful when the text needs to catch the attention of a site visitor quickly scanning a page.
+
+== Bold syntax
+
+You can mark a word or phrase as bold by enclosing it in a single set of asterisks (e.g., `+*word*+`) (constrained).
+You can mark bounded characters (i.e., characters within a word) as bold by enclosing them in a set of double asterisks (e.g., `+char**act**ers+`) (unconstrained).
+
+.Bold inline formatting
+[source#ex-bold]
+----
+A bold *word*, and a bold *phrase of text*.
+
+Bold c**hara**cter**s** within a word.
+----
+
+You don't need to use double asterisks when an entire word or phrase marked as bold is directly followed by a common punctuation mark, such as `;`, `"`, and `!`.
+
+The results of <<ex-bold>> are displayed below.
+
+====
+A bold *word*, and a bold *phrase of text*.
+
+Bold c**hara**cter**s** within a word.
+====
+
+== Mixing bold with other formatting
+
+You can add multiple emphasis styles to bold text as long as the syntax is placed in the correct order.
+
+.Order of inline formatting syntax
+[source#ex-mix]
+----
+`*_monospace bold italic phrase_*` & ``**__char__**``acter``**__s__**``
+----
+
+xref:monospace.adoc[Monospace syntax] (`++`++`) must be the outermost formatting set (i.e., outside the bold formatting set).
+xref:italic.adoc[Italic syntax] (`+_+`) is always the innermost formatting set.
+
+The results of <<ex-mix>> are displayed below.
+
+====
+`*_monospace bold italic phrase_*` & ``**__char__**``acter``**__s__**``
+====

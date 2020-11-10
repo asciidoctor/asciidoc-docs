@@ -1,0 +1,59 @@
+// tag::indent[]
+ $ cd secure/vault/defops
+// end::indent[]
+
+// tag::style[]
+[listing]
+This is an example of a paragraph assigned
+the `listing` style in an attribute list.
+Notice that the monospace marks are
+preserved in the output.
+// end::style[]
+
+// tag::block[]
+----
+This is a _delimited listing block_.
+
+The content inside is displayed as <pre> text.
+----
+// end::block[]
+
+// tag::b-base[]
+.Gemfile.lock
+----
+GEM
+  remote: https://rubygems.org/
+  specs:
+    asciidoctor (1.5.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  asciidoctor (~> 1.5.7)
+----
+// end::b-base[]
+
+// tag::subs[]
+:version: 1.5.7
+
+[source,xml,subs="verbatim,attributes"]
+----
+<dependency>
+  <groupId>org.asciidoctor</groupId>
+  <artifactId>asciidoctor-java-integration</artifactId>
+  <version>{version}</version>
+</dependency>
+----
+// end::subs[]
+
+// tag::subs-out[]
+[source,xml]
+----
+<dependency>
+  <groupId>org.asciidoctor</groupId>
+  <artifactId>asciidoctor-java-integration</artifactId>
+  <version>1.5.7</version>
+</dependency>
+----
+// end::subs-out[]

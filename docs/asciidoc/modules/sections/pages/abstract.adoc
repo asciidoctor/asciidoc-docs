@@ -1,0 +1,41 @@
+= Abstract
+// anchor um: user-abstract
+
+An abstract is a concise overview of an article.
+The abstract section style can be used in the `article` document type.
+
+== Abstract section syntax
+
+The `abstract` section style must be set on the first section of the article, as seen in the example below:
+
+[source]
+----
+include::example$abstract.adoc[]
+----
+
+If you want to style a paragraph or an open block as an abstract, instead of a whole section, see the xref:blocks:abstract.adoc[abstract block style] documentation.
+
+////
+There's some sort of funkiness with book and abstract so we're putting this section on hold.
+
+== Book abstract syntax
+
+When the document type is book, the `abstract` section style must be placed on the first section _inside_ the chapter section.
+The section must be one section level below the chapter, that is, the chapter is marked up as level 1 (`==`) so its abstract must be marked up as level 2 (`===`).
+An abstract may not be used _before_ a part or chapter in a book.
+
+[source]
+----
+= Book Title
+:doctype: book
+
+== Chapter Title
+
+[abstract]
+=== Summary
+
+Documentation is a distillation of many long adventures.
+
+=== Section
+----
+////

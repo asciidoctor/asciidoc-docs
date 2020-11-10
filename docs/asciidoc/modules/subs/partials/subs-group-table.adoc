@@ -1,0 +1,47 @@
+:table-caption: Table
+.Substitution types used by each substitution group
+[#table-subs-groups,cols="1,6*^"]
+|===
+|Group |Special characters |Quotes |Attributes |Replacements |Macros |Post replacements
+
+s|xref:subs:substitutions.adoc#header-group[Header]
+|{y}
+|{n}
+|{y}
+|{n}
+|{n}
+|{n}
+
+s|xref:subs:substitutions.adoc#none-group[None]
+|{n}
+|{n}
+|{n}
+|{n}
+|{n}
+|{n}
+
+s|xref:subs:substitutions.adoc#normal-group[Normal]
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+
+s|xref:subs:substitutions.adoc#pass-group[Pass]
+|{n}
+|{n}
+|{n}
+|{n}
+|{n}
+|{n}
+
+s|xref:subs:substitutions.adoc#verbatim-group[Verbatim]
+|{y}
+|{n}
+|{n}
+|{n}
+|{n}
+|{n}
+|===
+:!table-caption:

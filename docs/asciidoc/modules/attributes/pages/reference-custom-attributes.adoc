@@ -1,0 +1,79 @@
+= Reference Custom Attributes
+:disclaimer: Don't pet the wild Wolpertingers. We're not responsible for any loss \
+of hair, chocolate, or purple socks.
+:url-repo: https://github.com/asciidoctor/asciidoctor
+// [#attribute-reference]
+
+You'll likely use the value of a user-defined attribute entry or certain built-in attributes in specific locations throughout a document.
+To reference and use the value of a document attribute, you enclose the attribute's name in curly brackets (`+{name-of-an-attribute}+`).
+This inline element is called an *attribute reference*.
+
+== Reference user-defined attributes
+
+Before you can reference an attribute in a document it must be declare using an attribute entry in the document header.
+Let's reference the two user-defined attributes set and assigned values in <<ex-user-attrs>>.
+
+.User-defined document attributes set in the document header
+[source#ex-user-attrs]
+----
+= Ops Manual
+:disclaimer: Don't pet the wild Wolpertingers. We're not responsible for any loss \
+of hair, chocolate, or purple socks.
+:url-repo: https://github.com/asciidoctor/asciidoctor
+----
+
+Once you've set and assigned a value to the attribute, you can reference that attribute throughout your document.
+In <<ex-reference>>, the attribute `url-repo` is referenced twice and `disclaimer` is referenced once.
+
+.User-defined attribute referenced in the document body
+[source#ex-reference]
+----
+Asciidoctor is {url-repo}[open source]. <.>
+
+WARNING: {disclaimer} <.>
+If you're missing a lime colored sock, file a ticket in
+the {url-repo}/issues[Asciidoctor issue tracker]. <.>
+----
+<.> Attribute references can be used in macros.
+<.> Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.
+Since there isn't a blank line between the `disclaimer` reference and the next sentence, the sentence will be directly appended to the end of the attribute's value when it's processed.
+<.> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:link.adoc[URL macro].
+
+As you can see below, the attribute references are replaced with the corresponding attribute value when the document is processed.
+
+====
+Asciidoctor is {url-repo}[open source].
+
+WARNING: {disclaimer}
+If you're missing a lime colored sock, file a ticket in the {url-repo}/issues[Asciidoctor issue tracker].
+====
+
+////
+To save even more typing, you can store the whole link in an attribute value.
+
+.Link attribute entry
+[source]
+----
+:link-fedpkg: https://apps.fedoraproject.org/packages/rubygem-asciidoctor[Asciidoctor package for Fedora]
+----
+
+Now you insert this link anywhere in the document using an attribute reference.
+
+.link-fedpkg attribute usage example
+[source]
+----
+Did you know there's an {link-fedpkg}?
+----
+
+Note that the link substitution occurs _after_ the attribute reference is resolved.
+This works thanks to the default order of substitutions on a paragraph.
+If you want the URL macro to be resolved eagerly at the time the attribute is assigned, you need to enclose it in a pass macro.
+
+.Link attribute entry resolved eagerly
+[source]
+----
+:link-fedpkg: pass:m[https://apps.fedoraproject.org/packages/rubygem-asciidoctor[Asciidoctor package for Fedora]]
+----
+
+Now you can use this link in a section title (where the order of substitutions is different).
+////

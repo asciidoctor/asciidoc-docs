@@ -1,0 +1,110 @@
+= Customize the Substitutions Applied to Blocks
+
+== The subs attribute
+
+Substitution steps or groups can be applied to any block and certain inline elements by setting the `subs` attribute and assigning it a comma-separated list of one or more of the substitution group or step values.
+
+// tag::group[]
+`none`:: Substitution group that disables all substitutions.
+
+`normal`:: Substitution group that performs all substitution types except callouts.
+
+`verbatim`:: Substitution group that replaces special characters and processes callouts.
+
+`specialchars`:: Substitution step that replaces `<`, `>`, and `&` with their corresponding entities.
+
+`callouts`:: Substitution step that processes callouts in literal, listing, and source blocks.
+
+`quotes`:: Substitution step that applies inline text formatting.
+
+`attributes`:: Substitution step that replaces attribute references.
+
+`replacements`:: Substitution step that replaces hexadecimal Unicode code points and entity, HTML, and XML character references with the characters' decimal Unicode code point.
+The output of `replacements` may depend on whether the `specialcharacters` substitution was previously applied.
+
+`macros`:: Substitution step that processes inline and block macros.
+
+`post_replacements`:: Substitution step that processes the line break character (`{plus}`).
+// end::group[]
+
+== Set the subs attribute on a block
+
+Let's look at an example where you only want to process special characters, inline formatting markup, and callouts in a literal block.
+By default, literal blocks are only subject to special characters substitution.
+But you can change this behavior by setting the `subs` attribute in the block's attribute list.
+
+....
+include::example$subs.adoc[tag=subs-in]
+....
+<.> The `subs` attribute is set in the attribute list and assigned the `verbatim` and `quotes` values.
+<.> The formatting markup in this line will be replaced when the `quotes` step runs.
+
+====
+include::example$subs.adoc[tag=subs-out]
+====
+<.> The `verbatim` value enables any special characters and callouts to be processed.
+<.> The `quotes` value enables the bold text formatting to be processed.
+
+You may be wondering why `verbatim` is specified in the previous example since it's applied to literal blocks by default.
+It's added because the `subs` attribute removes all of a block or inline elements default substitutions when it is set.
+The next section explains this concept in more detail.
+
+[#incremental]
+== Add and remove substitution types from a default substitution group
+
+When you set the `subs` attribute on a block, you automatically remove all of its default substitutions.
+For example, if you set `subs` on a literal block, and assign it a value of `attributes`, only attribute references are substituted.
+The `verbatim` substitution group will not be applied.
+To remedy this situation, Asciidoctor provides a syntax to append or remove substitutions instead of replacing them outright.
+
+You can add or remove a substitution type from the default substitution group using the plus (`+`) and minus (`-`) modifiers.
+These are known as [.term]*incremental substitutions*.
+
+`<substitution>+`::
+Prepends the substitution to the default list.
+
+`+<substitution>`::
+Appends the substitution to the default list.
+
+`-<substitution>`::
+Removes the substitution from the default list.
+
+For example, you can add the `attributes` substitution to the beginning of a listing block's default substitution group by placing the plus (`+`) modifier at the end of the `attributes` value.
+
+.Add attributes substitution to default substitution group
+[source]
+....
+include::example$subs.adoc[tag=subs-add]
+....
+
+Similarly, you can remove the `callouts` substitution from a block's default substitution group by placing the minus (`-`) modifier in front of the `callouts` value.
+
+.Remove callouts substitution from default substitution group
+[source,subs=-callouts]
+....
+include::example$subs.adoc[tag=subs-sub]
+....
+
+You can also specify whether the substitution type is added to the end of the substitution group.
+If a `+` comes before the name of the substitution, then it's added to the end of the existing list, whereas if a `+` comes after the name, it's added to the beginning of the list.
+
+[source,subs=-callouts]
+....
+include::example$subs.adoc[tag=subs-multi]
+....
+
+In the above example, the `attributes` substitution step is added to the beginning of the default substitution group, the `replacements` step is added to the end of the group, and the `callouts` step is removed from the group.
+
+// NOTE: More examples are pending. Information about the callouts substitution also needs to be included here.
+
+[TIP]
+====
+If you are applying the same set of substitutions to numerous blocks, you should consider making them an attribute entry to ensure consistency.
+
+[source]
+....
+include::example$subs.adoc[tag=subs-attr]
+....
+
+Another way to ensure consistency and keep your documents clean and simple is to use the xref:asciidoctor:extensions:tree-processor.adoc[tree Processor extension].
+====

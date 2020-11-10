@@ -1,0 +1,10 @@
+= The Intrepid Chronicles
+:author: Kismet R. Lee
+:email: kismet@asciidoctor.org
+
+== About {author}
+
+You can contact {firstname} at {email}.
+
+P.S. Don't ask what the {middlename} stands for; it's a secret.
+{authorinitials}

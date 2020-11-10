@@ -1,0 +1,62 @@
+= Footnotes
+
+You can add footnotes to your document using the footnote macro (`+footnote:[]+`).
+If you plan to reference a footnote more than once, use the footnote macro with a target (`+footnote:id[]+`).
+
+.Footnote syntax
+[source#ex-footnote]
+----
+include::example$footnote.adoc[tag=base-c]
+----
+<.> Insert the footnote macro directly after any punctuation. Note that the footnote macro only uses a single colon (`:`).
+<.> Insert the footnote's content within the square brackets (`+[]+`). The text may span several lines.
+<.> If you plan to reuse a footnote, specify a unique ID in the target position.
+<.> To reference an existing footnote, you only need to insert the ID in the target slot (leaving the text in the square brackets empty).
+
+The footnotes will be numbered consecutively throughout the article.
+
+The results of <<ex-footnote>> are displayed below
+
+[.unstyled]
+|===
+a|
+include::example$footnote.adoc[tag=base-x]
+|===
+
+== Externalizing a footnote
+
+Since footnotes are defined using an inline macro, the footnote content ends up right alongside the text it's annotating, making that text harder to read.
+You can solve this probably by externalizing your footnotes using document attributes.
+
+Here's the previous example with the footnotes defined in document attributes and inserted using attribute references.
+Notice you still get the benefit of seeing where the footnote is placed without all the noise.
+
+.Externalized footnote
+[source]
+----
+include::example$footnote.adoc[tag=externalized]
+----
+
+This approach works since attribute references are expanded before footnotes are parsed.
+The redundant text in the second disclaimer footnote is simply ignored.
+
+You could even simplify the attribute names to fn-1, fn-2, etc. if brevity is your main concern.
+And once in document attributes, these defintions could even be moved to an included file.
+
+== Footnotes in Headings
+
+If you use a footnote in a heading, you'll likely find that the footnote sequence is wrong.
+That's because headings (section titles and discrete headings) get converted out of document order for the purpose of generating IDs and setting up cross references.
+
+To resolve this problem, you must assign an explicit ID and reftext to any heading that contains a footnote.
+For example:
+
+[source]
+----
+See <<heading>>.
+
+[[heading,Heading]]
+== Headingfootnote:[This is a heading with a footnote]
+----
+
+Not only will this prevent the footnote from being processed out of document order (and thus assigned the wrong number in the sequence), it will also prevent the footnote number from reappearing in the text of an xref.

@@ -1,0 +1,52 @@
+= Attribute References Substitutions
+:navtitle: Attribute References
+:table-caption: Table
+:y: Yes
+//icon:check[role="green"]
+:n: No
+//icon:times[role="red"]
+
+Attribute references are replaced with their values when they're processed by the attributes substitution step.
+
+== Default attributes substitution
+
+<<table-attributes>> lists the specific blocks and inline elements the attributes substitution step applies to automatically.
+
+.Blocks and inline elements subject to the attributes substitution
+[#table-attributes%autowidth,cols=",^"]
+|===
+|Blocks and elements |Substitution step applied by default
+
+|Attribute entry values |{y}
+
+|Comments |{n}
+
+|Examples |{y}
+
+|Headers |{y}
+
+|Literal, listings, and source |{n}
+
+|Macros |{y} +
+(except passthrough macros)
+
+|Open |{y}
+
+|Paragraphs |{y}
+
+|Passthrough blocks |{n}
+
+|Quotes and verses |{y}
+
+|Sidebars |{y}
+
+|Tables |Varies
+
+|Titles |{y}
+|===
+
+== attributes substitution value
+
+The attributes substitution step can be modified on blocks and inline elements.
+For blocks, the step's name, `attributes`, can be assigned to the xref:apply-subs-to-blocks.adoc[subs attribute].
+For inline elements, the built-in values `a` or `attributes` can be applied to xref:apply-subs-to-text.adoc[inline text] to add the attributes substitution step.

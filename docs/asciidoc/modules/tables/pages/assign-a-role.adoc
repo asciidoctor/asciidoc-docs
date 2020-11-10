@@ -1,0 +1,11 @@
+= Assign a Role to a Table
+
+Like with all blocks, you can add a role to a table using the `role` attribute.
+The role attribute becomes a CSS class when converted to HTML.
+The preferred shorthand for assigning the role attribute is to put the role name in the first position of the block attribute list prefixed with a `.` character, as shown here:
+
+[source]
+----
+[.name-of-role]
+include::example$table.adoc[tag=base]
+----

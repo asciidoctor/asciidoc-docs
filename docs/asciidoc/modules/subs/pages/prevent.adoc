@@ -1,0 +1,44 @@
+= Escape and Prevent Substitutions
+
+Asciidoctor provides several approaches for preventing substitutions.
+
+== Escape with backslashes
+
+To prevent a punctuation character from being interpreted as formatting syntax (e.g., +_+, +^+) in normal content, prepend the character with a backslash (`\`).
+
+.Prevent unintended substitutions with a backslash in normal content
+[source#ex-backslash]
+----
+include::example$subs.adoc[tag=backslash]
+----
+
+The backslash can also prevent character replacements, macros, and attribute replacements.
+The results of <<ex-backslash>> are below.
+
+====
+include::example$subs.adoc[tag=backslash]
+====
+
+Notice that the backslash is removed so it doesn't display in your output.
+
+To prevent two adjacent characters (e.g., +__+, pass:[##]), from being interpreted as AsciiDoc syntax you need to precede it with two backslashes (`+\\+`).
+
+.Prevent unintended substitutions with two backslashes in normal content
+[source#ex-double-slash]
+----
+include::example$subs.adoc[tag=double-slash]
+----
+
+The results of <<ex-double-slash>> are below.
+
+====
+include::example$subs.adoc[tag=double-slash]
+====
+
+== Passthroughs
+
+A passthrough is the primary mechanism by which to escape content in AsciiDoc.
+They're far more comprehensive and consistent than using a backslash.
+As the name implies, a passthrough passes content directly through to the output document without applying any substitutions.
+
+You can control and prevent substitutions in inline text with the xref:pass:pass-macro.adoc[inline passthrough macros] and for entire blocks of content with the xref:pass:pass-block.adoc[block passthrough].

@@ -1,0 +1,41 @@
+= Glossary
+// anchor from um: user-glossary
+
+You can include a glossary in an article, book, and book part by setting the `glossary` style on a section.
+
+== Glossary section syntax
+
+The glossary section is defined as a level 1 section (`==`) when:
+
+* the doctype is `article`
+* the doctype is `book` and the book doesn't contain any parts
+* the glossary is for a book part
+
+[source]
+----
+[glossary]
+== Terminology
+----
+
+If the book has parts, and the glossary is for the whole book, the section is defined as a level 0 section (`=`).
+
+[source]
+----
+[glossary]
+= Glossary
+----
+
+== Glossary description list style syntax
+
+In addition to setting `glossary` on the section, the block style `glossary` must be set on the description list in the section.
+
+[source]
+----
+[glossary]
+== Glossary
+
+[glossary]
+mud:: wet, cold dirt
+rain::
+	water falling from the sky
+----

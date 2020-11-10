@@ -1,0 +1,34 @@
+= Discrete Titles
+// um anchor: discrete-headings
+// um section title: Discrete Headings (aka Floating Titles)
+
+A discrete heading is styled in a manner similar to a section title, but:
+
+* it's not part of the section hierarchy,
+* it's excluded from section nesting requirements,
+* it doesn't enclose subsequent blocks, and
+* it's not included in the table of contents.
+
+The `discrete` style effectively demotes the section title to a normal heading.
+
+To make a discrete heading, add the `discrete` attribute to any section title.
+Here's an example of a discrete heading in use.
+
+[source]
+----
+**** <.>
+Discrete headings are useful for making headings inside of other blocks, like this sidebar.
+
+[discrete] <.>
+== Discrete Heading <.>
+
+Discrete headings can be used where sections are not permitted.
+****
+----
+<.> A delimiter line that indicates the start of a sidebar block.
+<.> Set the `discrete` attribute above the section title to demote it to a discrete heading.
+<.> The discrete heading is designated by one to six equal signs, just like a regular section title.
+
+Alternately, you may use the `float` attribute to identify a discrete heading.
+In this context, the term "`float`" does not imply layout, meaning it does not float to the left or right of other content blocks.
+It just means it's not anchored to the section hierarchy.

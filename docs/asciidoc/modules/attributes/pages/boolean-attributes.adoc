@@ -1,0 +1,56 @@
+= Set and Unset a Boolean Attribute
+// [#boolean-attribute]
+
+A boolean attribute is a built-in attribute that acts like a toggle.
+Its sole function is to turn on a feature or behavior.
+
+== Constructing an attribute entry for a boolean attribute
+
+A boolean attribute is set with an attribute entry in the header or body of a document.
+Its value is always left blank because boolean attributes only accept an _empty string_ value, which Asciidoctor automatically assigns at processing time.
+
+[source]
+----
+:name-of-a-boolean-attribute: <.>
+----
+<.> On a new line, type a colon (`:`), directly followed by the attribute's name and then another colon (`:`).
+After the closing colon, press kbd:[Enter].
+The attribute is now set and its behavior will be applied to the document.
+
+== Setting a boolean attribute
+
+Let's use an attribute entry to turn on the built-in boolean attribute named `sectanchors`.
+When `sectanchors` is set, it xref:sections:title-links.adoc#anchor[activates an anchor in front of a section title] when a cursor hovers over it.
+
+[source]
+----
+= Document Title
+:sectanchors: <.>
+----
+<.> The value of `sectanchors` is always left empty because it's a boolean attribute.
+
+== Unsetting a boolean attribute
+
+Boolean document attributes can be unset by adding a bang symbol (`!`) directly in front of or after the attribute's name in an attribute entry.
+The attribute entry must be on its own line.
+
+[source]
+----
+:!name-of-a-boolean-attribute:
+----
+
+Let's use an attribute entry to turn off the built-in boolean attribute named `sectids`.
+Asciidoctor automatically sets `sectids` at processing time unless you unset it.
+The `sectids` attribute xref:sections:ids.adoc[generates an ID for each section] from the section's title.
+
+[source]
+----
+= Document Title
+:!sectids: <.>
+----
+<.> On a new line, type a colon (`:`), directly followed by a bang symbol (`!`), the attribute's name, and then another colon (`:`).
+After the closing colon, press kbd:[Enter].
+The attribute is now unset and its behavior won't be applied to the document.
+
+Once an attribute is unset, its behavior is deactivated.
+When `sectids` is unset, Asciidoctor will not generate IDs from section titles at processing time.

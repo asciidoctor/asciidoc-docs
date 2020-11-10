@@ -1,0 +1,72 @@
+// tag::appx-article[]
+= Article Title
+:appendix-caption: Exhibit
+:sectnums:
+:toc:
+
+== Section
+
+=== Subsection
+
+[appendix]
+== First Appendix
+
+=== First Subsection
+
+=== Second Subsection
+
+[appendix]
+== Second Appendix
+// end::appx-article[]
+
+....
+// tag::appx-article-out[]
+1. Section
+  1.1. Subsection
+Exhibit A: First Appendix
+  A.1. First Subsection
+  A.2. Second Subsection
+Exhibit B: Second Appendix
+// end::appx-article-out[]
+....
+
+// tag::appx-book[]
+= Book Title
+:doctype: book
+:sectnums:
+:toc:
+
+= First Part
+
+== Chapter
+
+=== Subsection
+
+== Second Part
+
+== Chapter
+
+[appendix]
+= First Appendix
+
+=== First Subsection
+
+=== Second Subsection
+
+[appendix]
+= Second Appendix
+// end::appx-book[]
+
+....
+// tag::appx-book-out[]
+First Part
+1. Chapter
+  1.1. Subsection
+Second Part
+2. Chapter
+Appendix A: First Appendix
+  A.1. First Subsection
+  A.2. Second Subsection
+Appendix B: Second Appendix
+// end::appx-book-out[]
+....

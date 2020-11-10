@@ -1,0 +1,11 @@
+= Question and Answer Lists
+:keywords: Q&A, Q and A
+
+== Question and answer list syntax
+
+[source]
+----
+include::example$description.adoc[tag=qa]
+----
+
+include::example$description.adoc[tag=qa]

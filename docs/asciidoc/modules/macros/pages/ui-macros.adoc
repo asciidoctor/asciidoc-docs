@@ -1,0 +1,35 @@
+= Button and Menu UI Macros
+
+IMPORTANT: You must set the `experimental` attribute to enable the UI macros.
+
+== Button macro syntax
+
+It can be difficult to communicate to the reader that they need to press a button.
+They can't tell if you are saying "`OK`" or they are supposed to look for a button labeled *OK*.
+It's all about getting the semantics right.
+The `btn` macro to the rescue!
+
+.Using the button macro syntax
+[source#ex-btn]
+----
+include::example$ui.adoc[tag=button]
+----
+
+The result of <<ex-btn>> is displayed below.
+
+include::example$ui.adoc[tag=button]
+
+== Menu macro syntax
+
+Trying to explain how to select a menu item can be a pain.
+With the `menu` macro, the symbols do the work.
+
+.Using the menu macro syntax
+[source#ex-menu]
+----
+include::example$ui.adoc[tag=menu]
+----
+
+The instructions in <<ex-menu>> appear below.
+
+include::example$ui.adoc[tag=menu]

@@ -1,0 +1,60 @@
+// tag::header[]
+= The Intrepid Chronicles
+Kismet Lee; B. Steppenwolf; Pax Draeke
+// end::header[]
+// tag::body[]
+
+== Certain Peril
+
+Daylight trickles across the cobblestones...
+
+=== A Recipe for Potion
+
+We have to harvest the leaves by the light of the teal moons...
+
+==== Searching for Ginseng
+
+Crawling through the twisted understory...
+
+== Dawn on the Plateau
+
+Hanging from...
+// end::body[]
+
+// tag::title[]
+:toc: <.>
+:toc-title: Table of Adventures <.>
+
+== Certain Peril
+
+Daylight trickles across the cobblestones...
+// end::title[]
+
+// tag::preamble[]
+:toc: preamble
+
+This adventure begins on a frigid morning.
+We've run out of coffee beans, but leaving our office means venturing into certain peril.
+
+== Certain Peril
+
+Daylight trickles across the cobblestones...
+
+== Dawn on the Plateau
+
+Hanging from...
+// end::preamble[]
+
+// tag::macro[]
+:toc: macro <.>
+
+== Certain Peril
+
+toc::[] <.>
+
+Daylight trickles across the cobblestones...
+
+== Dawn on the Plateau
+
+Hanging from...
+// end::macro[]

@@ -1,0 +1,36 @@
+|===
+|Style |Operator |Description
+
+|AsciiDoc
+|`a`
+|Supports block elements (lists, delimited blocks, and block macros).
+This style effectively creates a nested, standalone AsciiDoc document.
+The parent document's implicit attributes, such as `doctitle`, are shadowed and custom attributes are inherited.
+// what does "shadowed" actually mean???
+
+|Default
+|`d`
+|All of the markup that is permitted in a paragraph (i.e., inline formatting, inline macros) is supported.
+
+|Emphasis
+|`e`
+|Text is italicized.
+
+|Header
+|`h`
+|Applies the header semantics and styles to the text and cell borders.
+
+|Literal
+|`l`
+|Content is treated as if it were inside a literal block.
+
+|Monospace
+|`m`
+|Text is rendered using a monospace font.
+
+|Strong
+|`s`
+|Text is bold.
+|===
+
+// the verse operator `v` has been deprecated

@@ -1,0 +1,63 @@
+= Create a Footer Row
+
+The last row of a table is promoted to a footer row if the `footer` value is assigned to the table's `options` attribute.
+
+== Assign footer to the last row
+
+The footer row semantics and styles are applied to the last row in a table by assigning `footer` to the `options` attribute.
+The `options` attribute is set in the table's attribute list using the shorthand (`%value`) or formal syntax (`options="value"`).
+
+The `options` attribute is represented by the percent sign (`%`) when it's set using the shorthand syntax.
+In <<ex-short>>, `footer` is assigned using the shorthand syntax for `options`.
+
+.Table with footer assigned using the shorthand syntax
+[source#ex-short]
+----
+[%header%footer,cols="2,2,1"] <.>
+|===
+|Column 1, header row
+|Column 2, header row
+|Column 3, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+
+|Column 1, footer row
+|Column 2, footer row
+|Column 3, footer row
+|===
+----
+<.> Values assigned using the shorthand syntax must be entered before the `cols` attribute (or any other named attributes) in a table's attribute list, otherwise the processor will ignore them.
+
+The table from <<ex-short>> is displayed below.
+
+.Result of <<ex-short>>
+[%header%footer,cols="2,2,1"]
+|===
+|Column 1, header row
+|Column 2, header row
+|Column 3, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+
+|Column 1, footer row
+|Column 2, footer row
+|Column 3, footer row
+|===
+
+In <<ex-formal>>, the `options` attribute is set and assigned the `footer` value using the formal syntax.
+The `options` attribute accepts a comma-separated list of values.
+
+.Table with footer assigned to the options attribute
+[source#ex-formal]
+----
+include::example$row.adoc[tag=opt-f]
+----
+
+The last row of the table in <<ex-formal>> is rendered using the corresponding footer styles.
+
+.Result of <<ex-formal>>
+include::example$row.adoc[tag=opt-f]

@@ -1,0 +1,52 @@
+= Post Replacement Substitutions
+:navtitle: Post Replacements
+:table-caption: Table
+:y: Yes
+//icon:check[role="green"]
+:n: No
+//icon:times[role="red"]
+
+The line break character, `{plus}`, is replaced when the `post_replacements` substitution step runs.
+
+== Default post replacements substitution
+
+<<table-post>> lists the specific blocks and inline elements the post replacements substitution step applies to automatically.
+
+.Blocks and inline elements subject to the post replacements substitution
+[#table-post%autowidth,cols=",^"]
+|===
+|Blocks and elements |Substitution step applied by default
+
+|Attribute entry values |{n}
+
+|Comments |{n}
+
+|Examples |{y}
+
+|Headers |{n}
+
+|Literal, listings, and source |{n}
+
+|Macros |{y} +
+(except passthrough macros)
+
+|Open |{y}
+
+|Paragraphs |{y}
+
+|Passthrough blocks |{n}
+
+|Quotes and verses |{y}
+
+|Sidebars |{y}
+
+|Tables |Varies
+
+|Titles |{y}
+|===
+
+== post_replacements substitution value
+
+The post replacements substitution step can be modified on blocks and inline elements.
+For blocks, the step's name, `post_replacements`, can be assigned to the xref:apply-subs-to-blocks.adoc[subs attribute].
+For inline elements, the built-in values `p` or `post_replacements` can be applied to xref:apply-subs-to-text.adoc[inline text] to add the post replacements substitution step.

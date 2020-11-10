@@ -1,0 +1,56 @@
+= Reference the Author Information
+
+[#reference-author]
+== Referencing the author attributes
+
+You can reference the built-in author attributes in your document regardless of whether they're set via the author line or attribute entries.
+In <<ex-reference>>, the `author` and `email` attributes are assigned using attribute entries.
+
+.Reference the author attributes
+[source#ex-reference]
+----
+include::example$reference-author.adoc[]
+----
+
+The result of <<ex-reference>> is displayed below.
+
+image::reference-author.png[Reference the built-in attributes for an author,role=screenshot]
+
+[#reference-multiple-authors]
+== Referencing information for multiple authors
+
+The first author in an author line is assigned to the built-in attributes `author`, `email`, `firstname`, etc.
+Subsequent authors are assigned to the built-in author attributes, but the attribute names are appended with an underscore (`+_+`) and the numeric position of the author in the author line.
+For instance, the author _B. Steppenwolf_ in <<ex-reference-multiple>> is the second author in the author line.
+The built-in attributes used to reference their information are appended with the number _2_, e.g., `author_2`, `email_2`, `lastname_2`, etc.
+
+.Reference the built-in attributes for multiple authors
+[source#ex-reference-multiple]
+----
+include::example$multiple-authors.adoc[tag=doc]
+----
+
+The result of <<ex-reference-multiple>> is displayed below.
+
+image::reference-multiple-authors.png[Reference the built-in attributes for multiple author,role=screenshot]
+
+////
+.Set the author and email attributes in the document header
+[source]
+----
+= The Intrepid Chronicles
+:author: Kismet R. Lee <1>
+:email: kismet@asciidoctor.org <2>
+:author_2: Mara_Moss Wirribi <3>
+:email_2: mmw@asciidoctor.org <4>
+:author_3: B. Steppenwolf <5>
+:email_3: https://twitter.com/asciidoctor[@asciidoctor] <6>
+----
+<1> The first author is assigned to the built-in attribute `author`.
+<2> The first author's email is assigned to the built-in attribute `email`.
+<3> The second author is assigned to the built-in attribute `author_2`.
+The underscore (`+_+`) between _Mara_ and _Moss_ tells the processor that the xref:compound-author-name.adoc[author has a double first name].
+<4> The second author's email is assigned to the built-in attribute `email_2`.
+<5> The third author is assigned to the built-in attribute `author_3`.
+<6> The value of an author's email attribute, such as `email_3`, can contain an active URL and link text.
+////

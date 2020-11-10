@@ -1,0 +1,59 @@
+= Example Blocks
+// Moved upstream from the Antora documentation at docs.antora.org
+:example-caption!:
+
+On this page, you'll learn:
+
+* [x] How to mark up an example block with AsciiDoc.
+
+An example block is useful for visually delineating content that illustrates a concept or showing the result of an operation.
+
+An example can contain any type of content and AsciiDoc syntax.
+Normal substitutions are applied to example content.
+
+== Example style syntax
+
+If the example content is contiguous, i.e., not interrupted by blank lines, the block style name `example` can be placed directly on top of the text in an attribute list (`[]`).
+
+.Assign example block style to paragraph
+[source#ex-style]
+----
+.Optional title
+[example]
+This is an example of an example block.
+----
+
+The result of <<ex-style>> is displayed below.
+
+.Optional title
+[example]
+This is an example of an example block.
+
+[#delimited]
+== Delimited example syntax
+
+If the example content includes multiple blocks or content separated by blank lines, place the content between delimiter lines consisting of four equals signs (`pass:[====]`).
+
+You don't need to set the block style name when you use the example delimiters.
+
+.Example block delimiter syntax
+[source#ex-block]
+----
+.Onomatopoeia
+====
+The book hit the floor with a *thud*.
+
+He could hear doves *cooing* in the pine trees`' branches.
+====
+----
+
+The result of <<ex-block>> is displayed below.
+
+.Onomatopoeia
+====
+The book hit the floor with a *thud*.
+
+He could hear doves *cooing* in the pine trees`' branches.
+====
+
+TIP: xref:admonition.adoc[Complex admonitions] use the delimited example syntax.

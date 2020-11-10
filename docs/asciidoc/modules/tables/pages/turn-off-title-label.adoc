@@ -1,0 +1,61 @@
+= Turn off the Title Label
+:table-caption!:
+
+== Disable the label using table-caption
+
+You can disable the title label for all of the tables in a document by unsetting the `table-caption` document attribute.
+
+[source]
+----
+= Title of Document
+:table-caption!: <.>
+
+.A table with a title but no label
+|===
+|Value |Result |Notes
+
+|Null |A mystery |See Appendix R
+|===
+----
+<.> In an attribute entry, enter the name of the attribute, `table-caption`, and append a bang (`!`) to the end of the name.
+This unsets the attribute.
+
+When `table-caption` is unset, table titles aren't preceded by a label and label number.
+
+.A table with a title but no label
+|===
+|Value |Result |Notes
+
+|Null |A mystery |See Appendix R
+|===
+
+== Disable the label using caption
+
+To remove the label on an individual table, assign an empty value to the `caption` attribute.
+
+[source]
+----
+[caption=] <.>
+.A table with a title but no label
+[cols="2,1"]
+|===
+|Lots and lots of data |A little data
+
+|834,734 |3
+|3,999,271.5601 |5
+|===
+----
+<.> Enter the attribute's name, `caption`, in an attribute list directly above the table title, followed by an equals sign (`=`).
+Don't enter a value after the `=`.
+
+The table from the previous example is displayed below.
+
+[caption=]
+.A table with a title but no label
+[cols="2,1"]
+|===
+|Lots and lots of data |A little data
+
+|834,734 |3
+|3,999,271.5601 |5
+|===

@@ -1,0 +1,28 @@
+= Colophon
+:keywords: edition notice, impressum, masthead, imprint, disclosure, imprint
+
+Book colophons list information such as the ISBN, publishing house, edition and copyright dates, legal notices and disclaimers, cover art, book layout credits, and any significant production notes.
+The colophon, sometimes referred to as a copyright page, is displayed on the verso side of the title page; however, it can also be located in the book's back matter.
+
+== Colophon section syntax
+
+To use the `colophon` section style, the document type must be `book`.
+The section must be a level 1 section (`==`), unless the book has parts.
+
+[source]
+----
+[colophon]
+== Colophon
+
+include::example$multi-special.adoc[tag=colophon]
+----
+
+If the book has parts, the section must be a level 0 section (`=`).
+
+[source]
+----
+[colophon]
+= Colophon
+
+include::example$multi-special.adoc[tag=colophon]
+----

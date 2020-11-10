@@ -1,0 +1,244 @@
+= Header Reference
+//Attributes and Values
+
+[%autowidth]
+|===
+|Attribute |Values |Converters |Notes
+
+|`author`, `author_<n>`
+|_user-defined_
+|all
+|
+
+|`authorinitials`, `authorinitials_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`description`
+|_user-defined_
+|html
+|
+
+|`docinfo`, `docinfo1`, `docinfo2`
+|
+|html, docbook
+|
+
+|`doctitle`
+|*Derived from level-0 section title*, _user-defined_
+|all
+|
+
+|`email`, `email_<n>`
+|_user-defined_
+|all
+|
+
+|`firstname`, `firstname_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`keywords`
+|_user-defined_
+|html
+|
+
+|`lastname`, `lastname_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`middlename`, `middlename_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`no-header-footer`, `-s`
+|_empty_
+|all
+|
+
+|`noheader`
+|_empty_
+|all
+|
+
+|`nofooter`
+|_empty_
+|all
+|
+
+|`notitle`
+|_empty_
+|all
+|
+
+|`revdate`
+|_user-defined_
+|all
+|
+
+|`revnumber`
+|_user-defined_
+|all
+|
+
+|`revremark`
+|_user-defined_
+|all
+|
+
+|`showtitle`
+|_empty_
+|all
+|
+
+|`title`
+|*Derived from level-0 section title or `doctitle`*, _user-defined_
+|html, docbook
+|
+
+|`version-label`
+|*Version*, _user-defined_
+|html
+|
+|===
+
+////
+From @graphitefriction: Old table with descriptions that can probably be deleted.
+
+[cols="1,1,2,2,1"]
+|===
+|Attribute |Values |Description |Notes |Converters
+
+|`author`
+|_user-defined_
+|Author's full name
+|
+|all
+
+|`authorinitials`
+|*Derived from `author`*, _user-defined_
+|First character of each word in the `author` attribute
+|
+|all
+
+|`description`
+|_user-defined_
+|Text describing the document
+|
+|html
+
+|`docinfo`, `docinfo1`, `docinfo2`
+|
+|Adds content from a docinfo file to header
+|
+|html, docbook
+
+|`doctitle`
+|*Document title (`=`)*, _user-defined_
+|Title of document
+|Identical to the value returned by `Document#doctitle`
+|all
+
+|`email`
+|_user-defined_
+|Author email address
+|
+|all
+
+|favicon
+|Adds a link to a favicon to the HTML `<head>`.
+|_not set_
+|_any_
+|html
+
+|`firstname`
+|*Derived from `author`*, _user-defined_
+|First word of `author` attribute
+|
+|all
+
+|`keywords`
+|_user-defined_
+|A list of comma-separated values that describe the document
+|
+|html
+
+
+|`lastname`
+|*Derived from `author`*, _user-defined_
+|Last word of `author` attribute
+|
+|all
+
+|`middlename`
+|*Derived from `author`*, _user-defined_
+|Middle word of `author` attribute
+|
+|all
+
+|`no-header-footer`, `-s`
+|_empty_
+|Generate an embeddable document; exclude the document frame
+|
+|all
+
+|`noheader`
+|_empty_
+|Suppresses the output of the header
+|
+|all
+
+|`nofooter`
+|_empty_
+|Suppresses the output of the footer
+|
+|all
+
+|`notitle`
+|_empty_
+|Toggles the display of a document's title
+|
+|all
+
+|`revdate`
+|_user-defined_
+|Date of document version
+|
+|all
+
+|`revnumber`
+|_user-defined_
+|Version number of the document
+|
+|all
+
+|`revremark`
+|_user-defined_
+|Version comments
+|
+|all
+
+|`showtitle`
+|_empty_
+|Toggles the display of an embedded document's title
+|
+|all
+
+|`title`
+|
+|Value of `<title>` element in HTML `<head>` or main DocBook `<info>` of output document.
+Used as a fallback when the document title is not specified.
+|
+|html, docbook
+
+|`version-label`
+|*Version*, _user-defined_
+|Label preceding `revnumber` in a output's byline
+|
+|html
+|===
+////

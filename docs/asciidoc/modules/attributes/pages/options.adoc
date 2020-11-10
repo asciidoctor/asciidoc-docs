@@ -1,0 +1,117 @@
+= The Options Attribute
+
+The `options` attribute is a versatile xref:positional-and-named-attributes.adoc#named[named attribute] that can be assigned one or more values.
+It can be defined globally as document attribute as well as a block attribute on an individual block.
+
+== Assign options to blocks
+
+You can assign one or more options to a block using the shorthand or formal syntax for the `options` attribute.
+
+=== Shorthand options syntax for blocks
+
+To assign an option to a block, prefix the value with a percent sign (`%`) in an attribute list.
+The percent sign implicitly sets the `options` attribute.
+
+.Sidebar block with an option assigned using the shorthand dot
+[source#ex-block]
+----
+[%value]
+****
+This is a sidebar with an option assigned to it.
+****
+----
+
+You can assign multiple options to a block by prefixing each value with a percent sign (`%`).
+
+.Sidebar with two options assigned using the shorthand dot
+[source#ex-two-options]
+----
+[%value%value]
+****
+This is a sidebar with two options assigned to it.
+****
+----
+
+For instance, consider a table with the three built-in option values, `header`, `footer`, and `autowidth`, assigned to it.
+<<ex-table-short>> shows how the values are assigned using the shorthand notation.
+
+.Table assigned three options using the shorthand syntax
+[source#ex-table-short]
+----
+[%header%footer%autowidth,cols="2*"]
+|===
+|Cell A1 |Cell B1
+
+|Cell A2 |Cell B2
+
+|Cell A3 |Cell B3
+|===
+----
+
+=== Formal options syntax for blocks
+
+Explicitly set `options` or `opts`, followed by the equals sign (`=`), and then the value in an attribute list.
+
+.Sidebar block with an option assigned using the formal syntax
+[source#ex-block-formal]
+----
+[options="value"]
+****
+This is a sidebar with an option assigned to it.
+****
+----
+
+Separate multiple option values with commas (`,`).
+
+.Sidebar with three options assigned using the formal syntax
+[source#ex-three-roles-formal]
+----
+[options="value,value,value"]
+****
+This is a sidebar with three options assigned to it.
+****
+----
+
+Let's revisit the table in <<ex-table-short>> that has the three built-in option values, `header`, `footer`, and `autowidth`, assigned to it using the shorthand notation (`%`).
+Instead of using the shorthand notation, <<ex-table-formal>> shows how the values are assigned using the formal syntax.
+
+.Table assigned three options using the formal syntax
+[source#ex-table-formal]
+----
+[cols="2*",options="header,footer,autowidth"]
+|===
+|Cell A1 |Cell B1
+
+|Cell A2 |Cell B2
+
+|Cell A3 |Cell B3
+|===
+----
+
+== Using options with other attributes
+
+Let's consider `options` when combined with other attributes.
+The following example show how to structure an attribute list when you have style, role, and options attributes.
+
+.Shorthand
+[source]
+----
+[horizontal.properties%step] <.> <.> <.>
+property 1:: does stuff
+property 2:: does different stuff
+----
+<.> xref:styles.adoc[Style is a positional attribute] and its value, in this case `horizontal`, is placed at the start of the attribute list.
+<.> `properties` is prefixed with a dot (`.`), signifying that it's assigned to the xref:roles.adoc[role attribute].
+The role and options attributes can be set in either order, i.e., `[horizontal%step.properties]`.
+<.> The percent sign (`%`) sets the `options` attribute and assigns the `step` value to it.
+
+When you use the formal syntax, the positional and named attributes are separated by commas (`,`).
+
+.Formal
+[source]
+----
+[horizontal,role="properties", options="step"] <.>
+property 1:: does stuff
+property 2:: does different stuff
+----
+<.> Like in the shorthand example, named attributes such as `role` and `options` can be set in any order in the attribute list once any xref:positional-and-named-attributes.adoc#positional[positional attributes] are set.

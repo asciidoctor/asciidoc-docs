@@ -1,0 +1,34 @@
+= Reference the Revision Attributes
+
+You can reference the revision information attributes in your document regardless of whether they're set via the revision line or attribute entries.
+
+[#reference-revnumber]
+== Reference revnumber
+
+Remember, when `revnumber` is assigned via the revision line, any characters preceding the version number are dropped.
+For instance, the revision number in <<ex-line-references>> is prefixed with a _v_.
+
+.Revision line and revision attribute references
+[source#ex-line-references]
+----
+include::example$reference-revision-line.adoc[]
+----
+
+The result of <<ex-line-references>> below shows that the _v_ in the version number has been removed when it's rendered in the byline and referenced in the document.
+
+image::reference-revision-line.png["Revision line and rendered revision references to revnumber, revdate and revremark",role=screenshot]
+
+To display the entire value of `revnumber` when it's referenced in the document, you must set and assign it a value using an attribute entry.
+
+.Revision attribute entries and references
+[source#ex-references]
+----
+include::example$reference-revision-attributes.adoc[]
+----
+
+The entire value of the `revnumber` from <<ex-references>> is displayed in the byline, including the default `version-label` value _Version_.
+When referenced in the document, the entire value of `revnumber` is displayed because it was set with an attribute entry.
+
+image::reference-revision-attributes.png["Revision attribute entries and rendered revision references to revnumber, revdate and revremark",role=screenshot]
+
+If you don't want the default version label to be displayed in the byline, xref:version-label.adoc#unset[unset the version-label attribute].

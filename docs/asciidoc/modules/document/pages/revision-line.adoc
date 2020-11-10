@@ -1,0 +1,77 @@
+= Using the Revision Line
+
+The revision attributes can be set and assigned values using the revision line.
+
+[#revision-line]
+== What's the revision line?
+
+The [.term]*revision line* is the line directly after the author line in the document header.
+When the content on this line is structured correctly, the processor assigns the content to the built-in `revnumber`, `revdate` and `revremark` attributes.
+
+== When can I use the revision line?
+
+In order for the processor to properly detect the revision line and assign the content to the correct attributes, all of the following criteria must be met:
+
+. The document header must contain a xref:title.adoc[document title] and an author line.
+. The revision information must be entered on the line directly beneath the xref:author-line.adoc[author line].
+. The revision line must start with the revision number.
+. The revision number must contain at least one number, but a number doesn't have to be the first character in the version.
+. The values in the revision line must be placed in a specific order and separated with the correct syntax.
+
+.Revision line structure
+[source]
+----
+= Document Title
+author <email>
+revision number, revision date: revision remark
+----
+
+When using the revision line, the revision date and remark are optional.
+
+* `pass:q[#v#]7.5` When the revision line only contains a revision number, prefix the number with a `v`.
+* `7.5pass:q[#,#] 1-29-2020` When the revision line contains a version and a date, separate the version number from the date with a comma (`,`).
+A `v` prefix before the version number is optional.
+* `7.5pass:q[#:#] A new analysis` When the revision line contains a version and a remark, separate the version number from the remark with a colon (`:`).
+A `v` prefix before the version number is optional.
+* `7.5pass:q[#,#] 1-29-2020pass:q[#:#] A new analysis` When the revision line contains a version, date, and a remark, separate the version number from the date with a comma (`,`) and separate the date from the remark with a colon (`:`).
+A `v` prefix before the version number is optional.
+
+== Assign revision information using the revision line
+
+The revision line in <<ex-line>> contains a revision number, date, and remark.
+
+.Revision line with a version, date and remark
+[source#ex-line]
+----
+= The Intrepid Chronicles
+Kismet Lee <.>
+2.9, October 31, 2021: Fall incarnation <.> <.> <.>
+----
+<.> The author line must be directly above the revision line.
+<.> The revision line must begin with the revision number.
+<.> The date is separated from the version by a comma (`,`).
+The date can contain letters, numbers, symbols, and attribute references.
+<.> The remark is separated from the date by a colon (`:`).
+
+When the default stylesheet is applied, the revision information is displayed on the same line as the author information.
+Note that the revision number is preceded with the word _Version_.
+This label is automatically added by the processor.
+It can be xref:version-label.adoc[changed or turned off with the version-label attribute].
+
+image::revision-line.png["Byline with a version number, revision date, and revision remark",role=screenshot]
+
+Let's look at another revision line.
+In <<ex-prefix>>, the version starts with a letter, the date is a reference to the attribute `docdate`, and there's a Unicode glyph in the remark.
+
+.Revision line with a version prefix, attribute reference and Unicode glyph
+[source#ex-prefix]
+----
+include::example$revision-line-with-version-prefix.adoc[]
+----
+
+The result of <<ex-prefix>> is displayed below.
+
+image::revision-line-with-version-prefix.png["Byline with the date derived from docdate and a remark with a Unicode glyph",role=screenshot]
+
+_LPR_ was removed from the version because any letters or symbols that precede the revision number in the revision line are dropped.
+To display the letters or symbols in front of a revision number, xref:revision-attribute-entries.adoc[set revnumber using an attribute entry].
