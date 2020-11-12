@@ -5,21 +5,19 @@ There are two kinds of elements in AsciiDoc, block elements and inline elements.
 [#block-element]
 == Block elements
 
-A [.term]*block element* is one or more contiguous lines of content in an AsciiDoc document.
+A [.term]*block element* is stacked vertically (by line) above or below other block elements.
 Block elements are typically referred to simply as [.term]*blocks*.
 
-Examples of blocks include tables, lists, paragraphs, section titles, delimited blocks, and block macros like the block image macro (`image::[]`).
-These types of blocks are easy to identify because they're separated from other blocks by a blank line.
-However, not all blocks may be separated by a blank line from an adjacent block.
-For instance, block titles and block attribute lists are individual block elements that are placed on adjacent, contiguous lines.
-An attribute entry is also a block, that when defined in a document header is often directly adjacent to other blocks.
+Examples of blocks include sections, paragraphs, lists delimited blocks, tables, and block macros.
+Blocks are easy to identify because they're usually separated from other blocks by a blank line (though not always required).
+Some blocks, such as sections and delimited blocks, can nest other blocks inside of them.
 
-Blocks can be nested within other blocks.
-An attribute entry in a header is also an example of a block nested within another block.
-That's because the attribute entry is a block and the entire document header is a block.
+Every block can have one or more lines of block metadata.
+This metadata can be in the form of block attributes, a block anchor, or a block title.
+These metadata lines should be directly adjacent to the block itself.
 
 [#inline-element]
 == Inline elements
 
-An [.term]*inline element* performs an operation on a subset of content within a <<block-element,block element>>.
+An [.term]*inline element* performs an operation on a span of content within a <<block-element,block element>>.
 Inline elements include inline macros such as the icon macro (`icon:[]`) and xref macro (`<< >>`, `xref:[]`), attribute references, and text marked up by inline formatting (italic, bold, etc.).

@@ -3,6 +3,8 @@
 Article (`article`)::
 The default doctype.
 In DocBook, includes the appendix, abstract, bibliography, glossary, and index sections.
+Unless you are making a book or a man page, you don't need to worry about the doctype.
+The default will suffice.
 
 Book (`book`)::
 Builds on the article doctype with the additional ability to use a top-level title as part titles, includes the appendix, dedication, preface, bibliography, glossary, index, and colophon.
