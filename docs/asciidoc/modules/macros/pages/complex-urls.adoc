@@ -1,0 +1,4 @@
+= Troubleshooting Complex URLs
+
+A URL may not display correctly when it contains characters such as underscores (`+_+`) or carets (`+^`).
+include::partial$ts-url-format.adoc[tag=sb]

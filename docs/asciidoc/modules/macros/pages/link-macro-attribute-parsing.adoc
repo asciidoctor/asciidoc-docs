@@ -1,0 +1,114 @@
+= Link Macro Attribute Parsing
+
+If named attributes are detected between the square brackets of a link macro (including URL macros), that text is parsed as an attribute list.
+This page explains the conditions when this occurs and how to write the linked text so it does not get caught up in this parsing.
+
+== Linked text alongside named attributes
+
+Normally, the whole text between the square brackets of a link macro is treated as the linked text.
+
+[source]
+----
+https://discuss.asciidoctor.org[Discuss Asciidoctor]
+----
+
+However, if the text contains both an equals sign (`=`) and a comma (`,`), and the comma comes after the equals sign, the text is parsed as an attribute list.
+In this case, the linked text is the first positional attribute.
+
+The following example shows a URL macro with custom linked text alongside named attributes.
+
+[source]
+----
+https://discuss.asciidoctor.org[Discuss Asciidoctor,role=resource,window=_blank]
+----
+
+If you want to define a single named attribute, but leave the linked text empty (so it falls back to the URL), then you need to start the attribute list with a comma.
+In other words, you need to leave a slot for the linked text so that the parser knows where it ends.
+Otherwise, the parser will treat the named attribute as the linked text.
+
+[source]
+----
+https://discuss.asciidoctor.org[,role=resource]
+----
+
+When attribute parsing is enabled, the link macro recognizes all the common attributes (id, role, and opts).
+It also recognizes a handful of attributes that are specific to the link macro.
+
+Let's consider a case when the linked text contains a comma and macro also has named attributes.
+In this case, you must enclose the linked text in double quotes so that it gets preserved by the parser.
+
+[source]
+----
+https://example.org["Google, Yahoo, Bing",role=teal]
+----
+
+== Target a separate window
+
+By default, the link produced by a link macro will target the current window.
+In other words, clicking on it will replace the current page.
+
+You can configure the link to open in a separate window (or tab) using the `window` attribute.
+
+[source]
+----
+https://asciidoctor.org[Asciidoctor,window=read-later]
+----
+
+=== Target a blank window
+
+Since the behavior of browsers is so widely varied, most of the time, you'll use the `window` attribute to target a blank window.
+Configuring a link that points to a location outside the current site is common practice to avoid disrupting the reader's flow.
+To enable this behavior, you set the `window` attribute to the special value `_blank`.
+
+[source]
+----
+https://asciidoctor.org[Asciidoctor,window=_blank]
+----
+
+=== noopener and nofollow
+
+When the value of the `window` attribute is `_blank`, the AsciiDoc processor should also add the `rel="noopener"` attribute to the link tag in the HTML output.
+Doing so is considered a security best pratice.
+
+If the window is not `_blank`, you need to enable this behavior explicitly by setting the `noopener` option on the macro:
+
+[source]
+----
+https://asciidoctor.org[Asciidoctor,window=read-later,opts=noopener]
+----
+
+If you don't want the search indexer to follow the link, you can add the `nofollow` option to the macro.
+This option only works if the `noopener` option is set either implicitly or explicitly.
+
+[source]
+----
+https://asciidoctor.org[Asciidoctor,window=_blank,opts=nofollow]
+----
+
+or
+
+[source]
+----
+https://asciidoctor.org[Asciidoctor,window=read-later,opts="noopener,nofollow"]
+----
+
+To fine tune indexing within the site, you can specify the nofollow option even when the link does not target a separate window.
+
+=== Blank window shorthand
+
+Since configuring an external link to target a blank window is a common practice, AsciiDoc provides a shorthand for it.
+Instead of having to include `window=_blank` in the attribute list, you can add a caret (`+^+`) to the end of the linked text.
+
+[source]
+----
+include::example$url.adoc[tag=linkattrs-s]
+----
+
+CAUTION: If you use the caret syntax more than once in a single paragraph, you may need to escape the first occurrence with a backslash.
+
+If the attribute list has both linked text and named attributes, the caret should fall at the end of the linked text, but inside the double quotes if present.
+
+[source]
+----
+https://example.org["Google, Yahoo, Bing^",role=teal]
+----

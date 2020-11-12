@@ -1,0 +1,68 @@
+= URL Macro(s)
+// The term URL is now preferred over the term URI. See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#URLs_and_URNs
+
+If you're familiar with the AsciiDoc syntax, you may notice that a URL almost looks like an inline macro.
+All that's missing is the set of the trailing square brackets.
+In fact, if you add them, then a URL is treated an an inline macro.
+We call this a URL macro.
+
+This page introduces the URL macro, when you would want to use it, and how it differs from the link macro.
+
+== From URL to macro
+
+To transform a URL into a macro, add a set of square brackets to the end of the URL.
+For example:
+
+[source]
+----
+https://asciidoctor.org[]
+----
+
+Since no text is specified, this macro behaves the same as an autolink.
+In this case, the link automatically gets assigned the "bare" role.
+
+When the URL is followed by a pair of square brackets, the URL scheme dually serves as the macro name.
+AsciiDoc recognizes all the xref:autolinks.adoc#schemes[URL schemes] for autolinks as macro names.
+That's why we say "URL macros" and not just "URL macro".
+It's a family of macros.
+With the exception of the xref:email-macro.adoc[mailto macro], all the URL macros behave the same, and also behave the same as the xref:link-macro.adoc[link macro].
+
+So why might you upgrade from a URL to a URL macro?
+One reason is to force the URL to be parsed when it would not normally be recognized, such as if it's enclosed in double quotes:
+
+[source]
+----
+Type "https://asciidoctor.org[]" into the location bar of your browser.
+----
+
+The more typical reason, however, is to specify custom link text.
+
+== Custom linked text
+
+Instead of displaying the URL, you can configure the link to display custom text.
+When the reader clicks on the text, they are directed to the target of the link, the URL.
+
+To customize the text of the link, insert that text between the square brackets of the URL macro.
+
+[source]
+----
+include::example$url.adoc[tag=irc]
+----
+
+Since the text is subject to normal substitutions, you can apply formatting to it.
+
+[source]
+----
+include::example$url.adoc[tag=text]
+----
+
+== Link attributes
+
+You can use the attribute list to further customize the link, such as to make it target a new window and apply a role to it.
+
+[source]
+----
+include::example$url.adoc[tag=css]
+----
+
+To understand how the text between the square brackets of a URL macro is parsed, see xref:link-macro-attribute-parsing.adoc[attribute parsing].
