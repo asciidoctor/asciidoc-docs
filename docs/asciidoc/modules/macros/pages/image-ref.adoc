@@ -29,6 +29,11 @@ Default is empty value.
 (or `.A mountain sunset` above block macro)
 |Blocks: title displayed below image; Inline: title displayed as tooltip
 
+|`format`
+|The format of the image, specified as file extension (without the leading dot).
+|`format=svg`
+|Only necessary when the converter needs to know the format of the image and the target does not end in a file extension (or otherwise cannot be detected).
+
 |`caption`
 |User defined text
 |`caption="Figure 8: "`
