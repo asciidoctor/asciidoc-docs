@@ -1,5 +1,4 @@
-* Key Concepts
-//* xref:get-started.adoc[]
-** xref:doctypes.adoc[]
-** xref:elements.adoc[]
-** xref:attributes:types.adoc[]
+* Introduction
+** xref:document-structure.adoc[]
+** xref:key-concepts.adoc[]
+** xref:document-processing.adoc[]

@@ -24,6 +24,8 @@ header attribute:: a document attribute defined in the document header; visible 
 
 list continuation:: a plus sign (`+`) on a line by itself that connects adjacent lines of text to a list item.
 
+macro:: a syntax for representing non-text elements or that expands into text using the provided metadata.
+
 macro attribute:: an attribute associated with a block or inline macro; these attributes can affect processing of the macro, and are available to macro processors, but cannot be referenced using an attribute reference.
 
 predefined attribute:: a document attribute defined for convenience; often used for inserting special content characters.
