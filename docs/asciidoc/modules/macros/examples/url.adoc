@@ -66,6 +66,10 @@ https://asciidoctor.org[Asciidoctor]
 https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
 // end::b-base[]
 
+// tag::bare-email[]
+Email us at hello@example.com to say hello.
+// end::bare-email[]
+
 // tag::b-scheme[]
 devel@discuss.arquillian.org
 

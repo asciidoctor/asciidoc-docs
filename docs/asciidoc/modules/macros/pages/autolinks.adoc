@@ -1,0 +1,64 @@
+= Autolinks
+
+The AsciiDoc processor will detect common URLs (unless escaped) wherever the macro substitution step is applied and automatically convert them into links.
+This page documents the recognized URL schemes and how to disable this behavior on a case-by-case basis.
+
+== URL schemes for autolinks
+
+AsciiDoc recognizes the following common URL schemes without the help of any markup:
+
+[#schemes]
+* http
+* https
+* ftp
+* irc
+* mailto
+
+The URL in the following example begins with a recognized protocol (i.e., https), so the AsciiDoc processor will automatically turn it into a hyperlink.
+
+[source]
+----
+include::example$url.adoc[tag=base-co]
+----
+<.> The trailing period will not get caught up in the link.
+
+The URL is also used as the linked text.
+If you want to custom the linked text, you can use the xref:url-macro.adoc[URL macro].
+
+In plain text documents, a bare URL is often enclosed in angle brackets.
+
+[source]
+----
+You'll often see <https://example.org> used in examples.
+----
+
+To accommodate this convention, the AsciiDoc processor will still recognize the URL as an autolink, but will discard the angle brackets in the output (as they are not deemed significant).
+
+Any link created from a bare URL (i.e., an autolink) automatically gets assigned the "bare" role.
+This allows the theming system (e.g., CSS) to recognize autolinks (and other bare URLs) and style them distinctly.
+
+== Email autolinks
+
+AsciiDoc also detects and autolinks most email addresses.
+
+[source]
+----
+include::example$url.adoc[tag=bare-email]
+----
+
+In order for this to work, the domain suffix must be between 2 and 5 characters (e.g., .com) and only common symbols like period (`.`), hyphen (`-`), and plus (`+`) are permitted.
+For email address which do not conform to these restriction, you can use the xref:email-macro.adoc[email macro].
+
+== Escaping URLs and email addresses
+
+To prevent automatic linking of an URL or email address, add a single backslash (`\`) in front of it.
+
+[source]
+----
+Once launched, the site will be available at \https://example.org.
+
+If you cannot access the site, email \help@example.org for assistance.
+----
+
+The backslash in front of the URL and email address will not appear in the output.
+The URL and email address will both be shown in plain text.

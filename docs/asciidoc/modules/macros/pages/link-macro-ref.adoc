@@ -1,0 +1,39 @@
+= Link Macro Attributes Reference
+
+These attributes apply to the link, URL, and email macros.
+
+[%autowidth]
+|===
+|Attribute |Value(s) |Example Syntax |Comments
+
+|`id`
+|Unique identifier for element in output
+|++https://asciidoctor.org[Home,id=home]++
+|
+
+|`role`
+|CSS classes available to inline elements
+|++https://discuss.asciidoctor.org[Discuss Asciidoctor,role=teal]++
+|
+
+|`title`
+|Description of link, often show as tooltip.
+|++https://asciidoctor.org[Home,title=Project home page]++
+|
+
+|`window`
+|any
+|++https://discuss.asciidoctor.org[Discuss Asciidoctor,window=_blank]++
+|The blank window target can also be specified using `^` at the end of the link text.
+
+|`window` +
+(shorthand)
+|`^`
+|++https://example.org["Google, Yahoo, Bing^"]++ and ++https://discuss.asciidoctor.org[Discuss Asciidoctor^]++
+|
+
+|`opts`
+|Additional options for link creation.
+|++https://asciidoctor.org[Home,id=home]++
+|Option names include: `nofollow`, `noopener`
+|===

@@ -1,0 +1,106 @@
+= Link Macro
+
+The link macro is the most explicit method of making a link in AsciiDoc.
+It's only necessary when the behavior of autolinks and URL macros proves insufficient.
+This page covers the anatomy of the link macro, when it's required, and how to use it.
+
+== Anatomy
+
+The link macro is an inline macro.
+Like other inline macros, its syntax follows the familiar pattern of the macro name and target separated by a colon followed by an attribute list enclosed in square brackets.
+
+[source]
+----
+link:<target>[<attrlist>]
+----
+
+The `<target>` becomes the target of the link.
+the `<attrlist>` is the linked text unless a named attribute is detected.
+See xref:link-macro-attribute-parsing.adoc[link macro attribute list] to learn how the `<attrlist>` is parsed.
+
+Like all inline macros, the link macro can be escaped using a leading backslash (`\`).
+
+Here's an example that demonstrates how to use the link macro to link to a relative path:
+
+[source]
+----
+link:report.pdf[Get Report]
+----
+
+The AsciiDoc processor will create a link to _report.pdf_ with the text "Get Report", even though the target is not a URL.
+
+// FIXME: this feels like it needs subsections
+== When to use the link macro
+
+Since AsciiDoc provides autolinks and URL macros, the link macro is not often needed.
+Here are the few cases when the link macro is necessary:
+
+* The target is not a URL (e.g., a relative path)
+* The target must be enclosed in a passthrough to escape characters with special meaning
+* The target contains spaces
+* The URL macro is not bounded by spaces, brackets, or quotes.
+* The target is a URL that does not start with a scheme recognized by AsciiDoc
+
+The most common situation is when the target is not a URL.
+For example, you would use the link macro to create a link to a relative path.
+
+[source]
+----
+link:report.pdf[Get Report]
+----
+
+TIP: If the relative path is another AsciiDoc file, you should use the xref:inter-document-xref.adoc[xref macro] instead.
+
+You may also discover that spaces are not permitted in the target, at least not as written in AsciiDoc.
+The raw space character in the target prevents the parser from recognizing the macro.
+So it's necessary to escape or encode it.
+Here are three ways to do it:
+
+.Escape a space using a passthrough
+[source]
+----
+link:pass:[My Documents/report.pdf][Get Report]
+----
+
+.Encode a space using URL encoding (%20)
+[source]
+----
+link:My%20Documents/report.pdf[Get Report]
+----
+
+.Encode a space using a character reference (&#32;)
+[source]
+----
+link:My&#32;Documents/report.pdf[Get Report]
+----
+
+Escaping or encoding the space ensures that the space does not disrupt the link macro.
+
+Another common case is when you need to use a passthrough to escape characters with special meaning.
+In this case, the AsciiDoc processor will not recognize the target as a URL, and thus the link macro is necessary.
+An example is when the URL contains repeating underscore characters.
+
+[source]
+----
+link:++https://example.org/now_this__link_works.html++[]
+----
+
+A similar situation is when the URL macro is not bounded by spaces, brackets, or quotes.
+In this case, the link macro prefix is required to increase the precedence so that the macro can be recognized.
+
+[source]
+----
+|link:https://asciidoctor.org[]|
+----
+
+Finally, if the target is not recognized as a URL by AsciiDoc, the link macro is necessary.
+For example, you might use the link macro to make a file link.
+
+[source]
+----
+link:file:///home/username[Your files]
+----
+
+== Final word
+
+The general rule of thumb is that you should only use the link macro if it becomes necessary because, otherwise, it just adds verbosity.

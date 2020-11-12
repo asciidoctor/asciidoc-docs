@@ -1,0 +1,36 @@
+= Email (mailto) Macro
+
+The email (i.e., mailto) macro is a specialization of the URL macro that adds support for augmenting the email link with additional metadata, namely a subject and body.
+
+== Subject and body
+
+Like with other URL macros, the first positional attribute of the email macro is the linked text.
+If a comma is present in the text, and the text is not enclosed in quotes, or the comma comes after the closing quote, the next positional attribute is treated as subject line.
+
+For example, you can configure the email link to prepopulate the subject line when the reader clicks the link using the following syntax:
+
+[source]
+----
+mailto:join@discuss.example.org[Subscribe,Subscribe me]
+----
+
+When the reader clicks the link, a conforming email client will fill in the subject line with "Subscribe me".
+
+If you also want the body of the email to be prepopulated, specify that text in the third positional argument.
+
+[source]
+----
+mailto:join@discuss.example.org[Subscribe,Subscribe me,I want to join]
+----
+
+When the reader clicks the link, a conforming email client will fill in the body with "I want to join".
+
+If you want to leave the linked text blank (so it falls back to the email address), start the attribute list with a comma so as to leave a blank slot for it.
+
+[source]
+----
+mailto:join@discuss.example.org[,Subscribe me,I want to join]
+----
+
+If either the linked text, subject, or body contains a comma, that value must be enclosed in double quotes.
+To learn more about how the attributes are parsed, refer to xref:link-macro-attribute-parsing.adoc[attribute parsing].

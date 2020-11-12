@@ -645,16 +645,7 @@ See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numberin
 |_empty_
 |{y}
 |
-|xref:macros:link.adoc#hide-uri-schemes[Hides URI scheme] for raw links.
-
-|linkattrs
-|{n}
-|_empty_
-|{y}
-|
-|xref:macros:link.adoc#link-macro-attributes[Parse attributes inside link macros].
-Removed in Asciidoctor 1.5.7.
-Attributes are now parsed automatically if an equal sign is found after a comma (e.g., `[link text,window=_blank]`).
+|xref:macros:links.adoc#hide-the-uri-scheme[Hides URI scheme] for raw links.
 
 |media
 |{n}
