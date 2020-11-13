@@ -1,4 +1,5 @@
-= Get Started with Blocks
+= Blocks
+//Get Started with Blocks
 //Block Syntax and Features
 // I want this page to be focused on the block styles - yes, I know that there are more blocks, but that get's really in the weeds and I think those aspects can be addressed in other pages/modules
 

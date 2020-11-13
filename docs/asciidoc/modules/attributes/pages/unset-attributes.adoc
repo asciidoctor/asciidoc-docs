@@ -1,0 +1,75 @@
+= Unset Document Attributes
+:navtitle: Unset Attributes
+
+Document attributes--built-in, boolean, and custom--can be unset in the document header and document body.
+
+== Unset a document attribute in the header
+
+Document attributes are unset by adding a bang symbol (`!`) directly in front of or after the attribute's name.
+Like when setting an attribute in a document header, the attribute entry must be on its own line.
+Don't add a value to the entry.
+
+[source]
+----
+= Title
+:!name: <.>
+:name!: <.>
+----
+<.> An attribute is unset when a `!` is prefixed to its name.
+<.> An attribute is unset when a `!` is appended to its name.
+
+Let's use an attribute entry to turn off the built-in boolean attribute named `sectids`.
+Asciidoctor automatically sets `sectids` at processing time unless you unset it.
+The `sectids` attribute xref:sections:ids.adoc[generates an ID for each section] from the section's title.
+
+.Unset a boolean attribute
+[source#ex-unset-boolean]
+----
+= Document Title
+:!sectids: <.>
+----
+<.> On a new line, type a colon (`:`), directly followed by a bang symbol (`!`), the attribute's name, and then another colon (`:`).
+After the closing colon, press kbd:[Enter].
+The attribute is now unset and its behavior won't be applied to the document.
+
+Once an attribute is unset, its behavior is deactivated.
+When `sectids` is unset, Asciidoctor will not generate IDs from section titles at processing time.
+
+Let's unset the built-in attribute `example-caption`.
+This is an attribute that is set and assigned a default value of `Example` automatically by Asciidoctor when you use an example block.
+
+.Unset an automatically declared attribute
+[source#ex-unset-built-in]
+----
+= Title
+:!example-caption: <.>
+----
+<.> Example blocks won't be labeled and numbered, e.g., Example 1, because the attribute controlling that behavior is unset with the leading `!`.
+
+== Unset a document attribute in the body
+
+Custom document attributes and some built-in document attributes can be turned off in the body of the document using an attribute entry and the bang symbol (`!`) as described in the previous section.
+For example, let's say you set the section numbering attribute in the header of your document; however, you don't want the two sections midway through the document to be numbered.
+To disable the numbering on these two sections, you'd unset `sectnums` before the first section you didn't want numbered and then reset it when you wanted the numbering to start again.
+
+[source]
+----
+= Title
+:sectnums: <.>
+
+== Section Title
+
+:!sectnums: <.>
+== Section Title
+
+=== Section Title
+
+:sectnums: <.>
+== Section Title
+----
+<.> The `sectnums` attribute is set in the header to activate section numbering throughout the document.
+<.> `sectnums` is unset by adding a `!` to it's name.
+The `!` can be placed either before or after the attribute's name.
+The attribute entry must be placed on its own line.
+All of the sections below where the attribute is unset will not be numbered.
+<.> `sectnums` is set and all subsequent sections will be numbered.

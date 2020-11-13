@@ -1,4 +1,4 @@
-= Get Started with Element Attributes
+= Element Attributes
 
 Element attributes are a powerful means of controlling the built-in settings of individual block and inline elements.
 They're also used to apply user-defined behavior and supplemental information, such as citation information and fallback content, to certain elements.
@@ -9,17 +9,14 @@ They're also used to apply user-defined behavior and supplemental information, s
 
 Element attributes:
 
-* Declare the style and ID of an element
+* Declare the ID of an element
 * Turn on or turn off an individual element's built-in features
 * Configure the built-in features of an individual element
 * Apply user-defined information, such as citation metadata, fallback text, link text, and target content, to an individual element
 * Apply user-defined roles and behaviors to an individual element
 
-They're set and defined directly on the element they're modifying using an attribute list.
-
 Element attributes are classified as positional or named.
-
-Attributes can be assigned to individual elements in a document using an attribute list.
+They're set and defined directly on the element they're modifying using an attribute list.
 
 [#attribute-list]
 == Attribute lists

@@ -1,0 +1,25 @@
+= Block Style Attribute
+
+The block style attribute is a xref:attributes:positional-and-named-attributes.adoc#named[first positional attribute] in an attribute list.
+It specifies a predefined set of characteristics to apply to a block.
+
+For example, a paragraph can be assigned one of the following built-in style attributes:
+
+* normal (default, so does not need to be set)
+* literal
+* verse
+* quote
+* listing
+* TIP
+* NOTE
+* IMPORTANT
+* WARNING
+* CAUTION
+* abstract
+* partintro
+* comment
+* example
+* sidebar
+* source
+
+// Needs examples!

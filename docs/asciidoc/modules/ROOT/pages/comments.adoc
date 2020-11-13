@@ -1,4 +1,4 @@
-= Comment Lines and Blocks
+= Comments
 
 [#comment-lines]
 == Comment lines

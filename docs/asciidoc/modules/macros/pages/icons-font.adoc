@@ -103,9 +103,9 @@ Here's an example that shows how to change the icon for the note admonition to s
 ----
 ////
 
-== Callout numbers
+== Callout numbers and font icon mode
 
-In the font icon mode, callout numbers are displayed as enclosed numbers.
+In the font icon mode, xref:verbatim:callouts.adoc[callout numbers] are displayed as enclosed numbers.
 However, the icon font is not used to render these glyphs.
 Instead, they are styled this way using CSS.
 This is done to allow the range of callout numbers to be open-ended.

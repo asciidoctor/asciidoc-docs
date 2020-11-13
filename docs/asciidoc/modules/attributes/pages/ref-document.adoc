@@ -638,14 +638,14 @@ See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numberin
 |*_empty_*
 |{y}
 |{y}
-|xref:blocks:paragraph.adoc#hardbreaks[Preserve hard line breaks].
+|xref:blocks:breaks.adoc#hardbreaks-attribute[Preserve hard line breaks].
 
 |hide-uri-scheme
 |{n}
 |_empty_
 |{y}
 |
-|xref:macros:links.adoc#hide-the-uri-scheme[Hides URI scheme] for raw links.
+|xref:macros:links.adoc#hide-uri-scheme[Hides URI scheme] for raw links.
 
 |media
 |{n}
@@ -792,7 +792,7 @@ Only used when `icons` attribute is set to `font`.
 |*image*, font
 |{y}
 |{y}
-|Chooses xref:macros:icons.adoc#enable-icons[images or font icons] instead of text for admonitions.
+|Chooses xref:macros:icons.adoc#icons-attribute[images or font icons] instead of text for admonitions.
 
 |iconsdir
 |Only used when `icons` attribute is set to `image`

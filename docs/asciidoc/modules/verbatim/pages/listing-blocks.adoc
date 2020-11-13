@@ -63,7 +63,7 @@ You should notice a few things about how the content is processed.
 * The phrase _delimited listing block_ isn't italicized, despite having the underscore formatting marks around it.
 
 Listing blocks are good for displaying snippets of raw source code, especially when used in tandem with the `source` style and `source-highlighter` attribute.
-See xref:source.adoc[] to learn more about `source` and `source-highlighter`.
+See xref:source-blocks.adoc[] to learn more about `source` and `source-highlighter`.
 
 == Listing substitutions
 

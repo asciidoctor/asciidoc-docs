@@ -1,0 +1,7 @@
+== Page breaks
+
+.Page break syntax
+[source#ex-page-break]
+----
+<<<
+----

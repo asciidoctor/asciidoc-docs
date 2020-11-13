@@ -1,29 +1,28 @@
-.Tables
-* Getting Started with Tables
+* Tables
 ** xref:build-a-basic-table.adoc[]
 ** xref:add-title.adoc[]
 *** xref:customize-title-label.adoc[]
 *** xref:turn-off-title-label.adoc[]
 //** Assign IDs and Attributes
-* Working with Columns
+//* Working with Columns
 ** xref:add-columns.adoc[]
-** xref:adjust-column-widths.adoc[]
-** xref:align-by-column.adoc[]
-** xref:format-column-content.adoc[]
-* Working with Rows and Cells
+*** xref:adjust-column-widths.adoc[]
+*** xref:align-by-column.adoc[]
+*** xref:format-column-content.adoc[]
+//* Working with Rows and Cells
 ** xref:add-cells-and-rows.adoc[]
 *** xref:add-header-row.adoc[]
 *** xref:add-footer-row.adoc[]
-** xref:align-by-cell.adoc[]
-** xref:format-cell-content.adoc[]
-** xref:span-cells.adoc[]
-** xref:duplicate-cells.adoc[]
-* Layout and Styles
+*** xref:align-by-cell.adoc[]
+*** xref:format-cell-content.adoc[]
+*** xref:span-cells.adoc[]
+*** xref:duplicate-cells.adoc[]
+//* Layout and Styles
 ** xref:width.adoc[]
 ** xref:borders.adoc[]
 ** xref:striping.adoc[]
 ** xref:orientation.adoc[]
 ** xref:assign-a-role.adoc[]
 ** xref:nested.adoc[]
-* xref:data-format.adoc[]
-* xref:table-ref.adoc[]
+** xref:data-format.adoc[]
+** xref:table-ref.adoc[]

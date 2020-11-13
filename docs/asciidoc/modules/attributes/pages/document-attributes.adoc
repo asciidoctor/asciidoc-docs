@@ -1,4 +1,4 @@
-= Get Started with Document Attributes
+= Document Attributes
 
 You can think of a document attribute as a global variable for the AsciiDoc language.
 

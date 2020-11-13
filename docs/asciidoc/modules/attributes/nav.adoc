@@ -1,28 +1,18 @@
-.Document Attributes
 * xref:document-attributes.adoc[]
-* xref:attribute-entries.adoc[]
-** xref:names-and-values.adoc[]
-** xref:wrap-values.adoc[]
-** xref:attribute-entry-substitutions.adoc[]
-** xref:inline-attribute-entries.adoc[]
-* Built-in Document Attributes
+** xref:attribute-entries.adoc[]
+*** xref:names-and-values.adoc[]
+*** xref:wrap-values.adoc[]
+*** xref:attribute-entry-substitutions.adoc[]
+*** xref:inline-attribute-entries.adoc[]
 ** xref:built-in-attributes.adoc[]
-** xref:reference-built-in-attributes.adoc[]
-** xref:boolean-attributes.adoc[]
-** xref:unset-built-in-attributes.adoc[]
-* Custom Document Attributes
+*** xref:boolean-attributes.adoc[]
 ** xref:custom-attributes.adoc[]
-** xref:reference-custom-attributes.adoc[]
-** xref:unresolved-references.adoc[]
-// ** Unset Custom Attributes
-* xref:assignment-precedence.adoc[]
-//** Using Document Attributes from the CLI
-//** Using Document Attributes from the API
-
-.Element Attributes
+** xref:unset-attributes.adoc[]
+** xref:reference-attributes.adoc[]
+*** xref:unresolved-references.adoc[]
+** xref:assignment-precedence.adoc[]
 * xref:element-attributes.adoc[]
 ** xref:positional-and-named-attributes.adoc[]
-* xref:styles.adoc[]
-* xref:ids.adoc[]
-* xref:options.adoc[]
-* xref:roles.adoc[]
+** xref:ids.adoc[]
+** xref:options.adoc[]
+** xref:roles.adoc[]

@@ -59,7 +59,7 @@ When the image for an icon can't be located in the icons directory, the AsciiDoc
 == How the icon is resolved
 
 The target of the icon macro is an icon name (or path).
-How that target is resolved depends on the xref:icons.adoc#enable-icons[icon mode].
+How that target is resolved depends on the icon mode assigned to the xref:icons.adoc#icons-attribute[icons attribute].
 
 text::
 The icon name will be enclosed in square brackets (e.g., `[heart]`).

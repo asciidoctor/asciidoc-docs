@@ -1,4 +1,4 @@
-= Header Overview
+= Document Header
 
 The document header is a set of contiguous lines at the start of the document that encapsulates the document title, author and revision information, metadata, and document-wide attributes.
 
@@ -16,7 +16,7 @@ Additionally, the header can contain the following elements as long as there are
 
 * optional document-wide attributes (built-in and user-defined) that are declared using xref:attributes:attribute-entries.adoc[attribute entries],
 * optional xref:metadata.adoc[metadata], such as a description or keywords, and
-* optional xref:ROOT:comment.adoc#comment-lines[comment lines].
+* optional xref:ROOT:comments.adoc#comment-lines[comment lines].
 
 Notice in <<ex-basic-header>> that there are no blank lines between any of the entries; the lines are contiguous.
 

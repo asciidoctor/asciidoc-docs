@@ -1,7 +1,7 @@
-= Set and Define Custom Document Attributes
+= Declare Custom Document Attributes
+:navtitle: Declare Custom Attributes
 // [#set-user-defined]
 
-//If you're familiar with writing in XML, you might recognize a document attribute as a user-defined entity.
 When you find yourself typing the same text repeatedly, or text that often needs to be updated, consider creating your own attribute.
 
 [#user-defined-names]
@@ -39,4 +39,4 @@ not responsible for any loss of hair, chocolate, or purple socks.
 ----
 <.> Long values can be xref:wrap-values.adoc[soft wrapped] using a backslash (`\`).
 
-Now, you can xref:reference-custom-attributes.adoc[reference these attributes] throughout the document.
+Now, you can xref:reference-attributes.adoc#reference-custom[reference these attributes] throughout the document.

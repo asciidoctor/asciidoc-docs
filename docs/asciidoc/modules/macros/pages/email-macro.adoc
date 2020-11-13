@@ -1,6 +1,6 @@
-= Email (mailto) Macro
+= Mailto Macro
 
-The email (i.e., mailto) macro is a specialization of the URL macro that adds support for augmenting the email link with additional metadata, namely a subject and body.
+The mailto macro is a specialization of the URL macro that adds support for augmenting the email link with additional metadata, namely a subject and body.
 
 == Subject and body
 

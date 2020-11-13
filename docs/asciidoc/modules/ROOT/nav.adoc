@@ -2,4 +2,4 @@
 //* xref:get-started.adoc[]
 ** xref:doctypes.adoc[]
 ** xref:elements.adoc[]
-** xref:attributes:get-started.adoc[]
+** xref:attributes:types.adoc[]
