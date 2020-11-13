@@ -63,6 +63,8 @@ The result of <<ex-block>> is displayed below.
 include::example$admonition.adoc[tag=bl-nest]
 :icons: font
 
+== Enable admonition icons
+
 In the examples above, the admonition is rendered in a callout box with the style label in the gutter.
 You can replace the textual labels with icons by setting the `icons` attribute on the document.
 This is how the WARNING admonition paragraph renders when icons is set and assigned the `font` value.
@@ -79,4 +81,59 @@ The result of <<ex-icon>> is displayed below.
 
 include::example$admonition.adoc[tag=para]
 
-Learn more about using Font Awesome or custom icons with admonitions in xref:macros:icons.adoc[].
+Learn more about using Font Awesome or custom icons with admonitions in xref:macros:icons-font.adoc[].
+
+=== Using emoji for admonition icons
+
+If image-based or font-based icons are not available, you can leverage the admonition caption to display an emoji (or any symbol from Unicode) in the place of the admonition label, thus giving you an alternative way to make admonition icons.
+
+If the `icons` attribute is not set on the document, the admonition label is shown as text (e.g., CAUTION).
+The text for this label comes from an AsciiDoc attribute.
+The name of the attribute is `<type>-caption`, where `<type>` is the admonition type in lowercase.
+For example, the attribute for a tip admonition is `tip-caption`.
+
+Instead of a word, you can assign a Unicode glyph to this attribute:
+
+[source]
+----
+:tip-caption: 💡
+
+[TIP]
+It's possible to use Unicode glyphs as admonition icons.
+----
+
+Here's the result you get in the HTML:
+
+[source,html]
+----
+<td class="icon">
+<div class="title">💡</div>
+</td>
+----
+
+Instead of entering the glyph directly, you can enter a character reference instead.
+However, since you're defining the character reference in an attribute entry, you (currently) have to disable substitutions on the value.
+
+[source]
+----
+:tip-caption: pass:[&#128161;]
+
+[TIP]
+It's possible to use Unicode glyphs as admonition icons.
+----
+
+On GitHub, the HTML output from the AsciiDoc processor is run through a postprocessing filter that substitutes emoji shortcodes with emoji symbols.
+That means you can use these shortcodes instead in the value of the attribute:
+
+[source]
+----
+\ifdef::env-github[]
+:tip-caption: :bulb:
+\endif::[]
+
+[TIP]
+It's possible to use emojis as admonition icons on GitHub.
+----
+
+When the document is processed through the GitHub interface, the shortcodes get replaced with real emojis.
+This is the only known way to get admonition icons to work on GitHub.
