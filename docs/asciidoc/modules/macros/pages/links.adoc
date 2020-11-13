@@ -4,7 +4,7 @@
 AsciiDoc offers a variety of ways of creating links (aka hyperlinks) to addressable resources.
 The pages in this section document how to add and customize links in an AsciiDoc document.
 
-== URLs and Links
+== URLs and links
 
 The target of a link is a {url-url-def}[Uniform Resource Locator^] (URL), otherwise known as a web address.
 The text you click to be navigate to that target is referred to as the linked text.
@@ -15,7 +15,7 @@ Although the URI is more technically correct in some cases, URL is the accepted 
 A URL consists of a scheme, an authority (i.e., domain name), a path with optional file extension, and metadata in the form of a query string and fragment.
 You may recognize the URL as what you type in the location bar of a web browser (such as the one for this page).
 
-Since a URL has a distinct, recognizable syntax, an AsciiDoc processor will detect them (unless escaped) whereever the macro substitution step is applied and automatically convert them into links.
+Since a URL has a distinct, recognizable syntax, an AsciiDoc processor will detect them (unless escaped) wherever the macro substitution step is applied and automatically convert them into links.
 This also works for bare email addresses.
 You can learn more about this behavior in xref:autolinks.adoc[].
 
@@ -29,6 +29,7 @@ You can also use the xref:link-macro.adoc[link macro] to make a link to a target
 
 When linking to an email address, you can use the specialized xref:email-macro.adoc[email macro] to enhance the link with prepopulated subject and body text.
 
+[#hide-uri-scheme]
 == Hide the URL scheme
 
 If the linked text is a bare URL (aka URI), whether that link was created automatically or using a link-related macro, you can configure the AsciiDoc processor to hide the scheme (e.g., _https://_).
@@ -39,11 +40,11 @@ To configure the AsciiDoc processor to display the linked URL without the scheme
 [source]
 ----
 = Document Title
-:hide-uri-scheme: <1>
+:hide-uri-scheme: <.>
 
 https://asciidoctor.org
 ----
-<1> Note the use of `uri` instead of `url` in the attribute name.
+<.> Note the use of `uri` instead of `url` in the attribute name.
 
 When the `hide-uri-scheme` attribute is set, the above URL will be displayed to the reader as follows:
 

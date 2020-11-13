@@ -1,4 +1,4 @@
-= The ID Attribute
+= ID Attribute
 
 The `id` attribute specifies a unique name for an element.
 That name can only be used once in a document.

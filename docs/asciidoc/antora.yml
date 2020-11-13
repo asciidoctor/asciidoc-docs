@@ -8,17 +8,22 @@ asciidoc:
     listing-caption: Example@
 nav:
 - modules/ROOT/nav.adoc
-- modules/document/nav.adoc
+- modules/blocks/nav-basics.adoc
 - modules/attributes/nav.adoc
-- modules/toc/nav.adoc
+- modules/document/nav.adoc
 - modules/sections/nav.adoc
+- modules/blocks/nav-paragraph.adoc
 - modules/text/nav.adoc
-- modules/blocks/nav.adoc
-- modules/macros/nav.adoc
 - modules/lists/nav.adoc
-- modules/tables/nav.adoc
+- modules/macros/nav.adoc
+- modules/blocks/nav-styles.adoc
 - modules/verbatim/nav.adoc
+- modules/tables/nav.adoc
 - modules/stem/nav.adoc
+- modules/attributes/nav-counter.adoc
+- modules/blocks/nav-open.adoc
+- modules/ROOT/nav-comment.adoc
+- modules/toc/nav.adoc
 - modules/directives/nav.adoc
 - modules/subs/nav.adoc
 - modules/pass/nav.adoc

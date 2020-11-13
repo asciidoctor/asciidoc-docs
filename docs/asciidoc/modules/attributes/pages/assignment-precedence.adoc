@@ -1,4 +1,4 @@
-= Manage Document Attribute Assignment Precedence
+= Document Attribute Assignment Precedence
 :navtitle: Attribute Assignment Precedence
 
 == Default attribute value precedence

@@ -56,4 +56,4 @@ The book hit the floor with a *thud*.
 He could hear doves *cooing* in the pine trees`' branches.
 ====
 
-TIP: xref:admonition.adoc[Complex admonitions] use the delimited example syntax.
+TIP: xref:admonitions.adoc[Complex admonitions] use the delimited example syntax.

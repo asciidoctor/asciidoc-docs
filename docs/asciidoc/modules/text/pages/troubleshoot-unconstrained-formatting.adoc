@@ -1,15 +1,15 @@
 = Troubleshoot Unconstrained Formatting Sets
 
-An xref:index.adoc#unconstrained-set[unconstrained set] is often used to format just one or a few characters in a word.
+An xref:index.adoc#unconstrained-set[unconstrained formatting set] is often used to format just one or a few characters in a word.
 
 [#use-unconstrained-set]
 == When should I use an unconstrained set?
 
 Consider the following questions:
 
-. Is there a letter, number, or underscore directly outside the formatting marks (on either side)?
-. Is there a colon, semicolon, or closing curly bracket directly before the starting formatting mark?
-. Is there a space directly inside of the formatting mark?
+. Is there a letter, number, or underscore directly outside the opening or closing formatting marks?
+. Is there a colon, semicolon, or closing curly bracket directly before the opening formatting mark?
+. Is there a space directly inside of a formatting mark?
 
 If you answered "`yes`" to any of these questions, you need to use an unconstrained set.
 
@@ -119,3 +119,59 @@ The `class`’ static methods make it easy to operate on files and directories.
 
 This situation is expected to improve in the future when Asciidoctor switches to using a parsing expression grammar for inline formatting instead of the current regular expression-based strategy.
 For details, follow https://github.com/asciidoctor/asciidoctor/issues/61[issue #61].
+
+[#escape-unconstrained]
+== Escape unconstrained formatting marks
+
+Since unconstrained formatting marks are meant to match anywhere in the text, context free, that means you may catch them formatting text that you don't want styled sometimes.
+Admittedly, these symbols are a bit tricky to type literally when the content calls for it.
+But being able to do so is just a matter of knowing the tricks, which this section will cover.
+
+Let's assume you are typing the following two lines:
+
+----
+The __kernel qualifier can be used with the __attribute__ keyword...
+
+#`CB###2`# and #`CB###3`#
+----
+
+In the first sentence, you aren't looking for any text formatting, but you're certainly going to get it.
+The processor will interpret the double underscore in front of _++__kernel++_ as an unconstrained formatting mark.
+In the second sentence, you might expect _++CB###2++_ and _++CB###3++_ to be highlighted and displayed using a monospace font.
+However, what you get is a scrambled mess.
+The mix of constrained and unconstrained formatting marks in the line is ambiguous.
+
+There are two reliable solutions for escaping unconstrained formatting marks:
+
+* use an attribute reference to insert the unconstrained formatting mark verbatim, or
+* wrap the text you don't want formatted in an inline passthrough.
+
+The attribute reference is preferred because it's the easiest to read:
+
+----
+:scores: __
+:hash3: ###
+
+The {scores}kernel qualifier can be used with the {scores}attribute{scores} keyword...
+
+#`CB{hash3}2`# and #`CB{hash3}3`#
+----
+
+This works because xref:subs:attributes.adoc[attribute expansion] is performed after text formatting (i.e., xref:subs:quotes.adoc[quotes substitution]) in the normal substitution order.
+
+Here's how you'd write these lines using the xref:pass:pass-macro.adoc[inline single plus macro] to escape the unconstrained formatting marks instead:
+
+----
+The +__kernel+ qualifier can be used with the +__attribute__+ keyword...
+
+#`+CB###2+`# and #`+CB###3+`#
+----
+
+Notice the addition of the plus symbols.
+Everything between the plus symbols is escaped from interpolation (attribute references, text formatting, etc.).
+However, the text still receives proper output escaping for xref:subs:special-characters.adoc[HTML special characters] (e.g., `<` becomes `\&lt;`).
+
+The enclosure `pass:[`+TEXT+`]` (text enclosed in pluses surrounded by backticks) is a special formatting combination in Asciidoctor.
+It means to format TEXT as monospace, but don't interpolate formatting marks or attribute references in TEXT.
+It's roughly equivalent to Markdown's backticks.
+Since AsciiDoc offers more advanced formatting, the double enclosure is necessary.

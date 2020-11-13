@@ -5,4 +5,3 @@
 ** xref:continuation.adoc[]
 * xref:description.adoc[]
 ** xref:qanda.adoc[]
-* xref:attributes:counter.adoc[]

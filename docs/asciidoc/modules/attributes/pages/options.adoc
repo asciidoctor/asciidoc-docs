@@ -1,4 +1,4 @@
-= The Options Attribute
+= Options Attribute
 
 The `options` attribute is a versatile xref:positional-and-named-attributes.adoc#named[named attribute] that can be assigned one or more values.
 It can be defined globally as document attribute as well as a block attribute on an individual block.
@@ -100,7 +100,8 @@ The following example show how to structure an attribute list when you have styl
 property 1:: does stuff
 property 2:: does different stuff
 ----
-<.> xref:styles.adoc[Style is a positional attribute] and its value, in this case `horizontal`, is placed at the start of the attribute list.
+<.> xref:blocks:styles.adoc[The block style attribute], declared as `horizontal` in this example, is a positional attribute.
+A block style value is always placed at the start of the attribute list.
 <.> `properties` is prefixed with a dot (`.`), signifying that it's assigned to the xref:roles.adoc[role attribute].
 The role and options attributes can be set in either order, i.e., `[horizontal%step.properties]`.
 <.> The percent sign (`%`) sets the `options` attribute and assigns the `step` value to it.

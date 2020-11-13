@@ -1,0 +1,34 @@
+== Thematic breaks
+
+A thematic break is created by entering three single quotation marks (`++'''++`) on a line.
+
+.Thematic break syntax
+[source#ex-rule]
+----
+'''
+----
+
+The result of <<ex-rule>> is displayed below.
+
+'''
+
+=== Markdown-style thematic breaks
+
+Asciidoctor recognizes Markdown thematic breakes.
+The motivation here is to ease migration of Markdown documents to AsciiDoc documents.
+
+To avoid conflicts with AsciiDoc's block delimiter syntax, only 3 repeating characters (`-` or `+*+`) are recognized.
+As with Markdown, whitespace between the characters is optional.
+
+.Markdown-style thematic break syntax
+----
+---
+
+- - -
+
+***
+
+* * *
+----
+
+A macro definition for the Markdown thematic breaks is included in the AsciiDoc compatibility file so they can be recognized by the `asciidoc` command as well.

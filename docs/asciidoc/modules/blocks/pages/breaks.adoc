@@ -1,0 +1,60 @@
+= Breaks
+
+== Hard line breaks
+
+Since adjacent lines of text are combined into a single paragraph when Asciidoctor converts a document, that means you can wrap paragraph text or put each sentence or phrase on a separate line.
+The line breaks won't appear in the output.
+
+However, if you want the line breaks in a paragraph to be preserved, you can use a space followed by a plus sign (`{plus}`) or set the `hardbreaks` option on the paragraph.
+All of the line breaks in an entire document can be preserved with the `hardbreaks` document attribute.
+
+TIP: Hard line breaks are automatically retained in xref:verbatim:literal-blocks.adoc[literal], xref:verbatim:listing-blocks.adoc[listing], xref:verbatim:source-blocks.adoc[source], and xref:verses.adoc[verse] blocks and paragraphs.
+
+=== Inline line break syntax
+
+To preserve a line break in a paragraph, type a blank space followed by a plus sign (`{plus}`) at the end of the line.
+This results in a visible line break (e.g., `<br>`) following the line.
+
+.Line breaks preserved using a space followed by the plus sign ({plus})
+[source#ex-plus]
+----
+include::example$paragraph.adoc[tag=hb]
+----
+
+The result of <<ex-plus>> is displayed below.
+
+====
+include::example$paragraph.adoc[tag=hb]
+====
+
+[#hardbreaks-option]
+=== hardbreaks option
+
+To retain all of the line breaks in an entire paragraph, assign the `hardbreaks` option to the paragraph using an attribute list.
+
+.Line breaks preserved using the hardbreaks option
+[source#ex-option]
+----
+include::example$paragraph.adoc[tag=hb-p]
+----
+
+The result of <<ex-option>> is displayed below.
+
+====
+include::example$paragraph.adoc[tag=hb-p]
+====
+
+[#hardbreaks-attribute]
+=== hardbreaks attribute
+
+To preserve line breaks throughout your entire document, set the `hardbreaks` document attribute in the document header.
+
+.Line breaks preserved throughout the document using the hardbreaks attribute
+[source#ex-attribute]
+----
+include::example$paragraph.adoc[tag=hb-attr]
+----
+
+include::partial$thematic-breaks.adoc[]
+
+include::partial$page-breaks.adoc[]

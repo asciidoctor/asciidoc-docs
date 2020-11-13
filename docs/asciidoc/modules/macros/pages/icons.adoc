@@ -9,6 +9,7 @@ You can also add icons directly to the content using special markup.
 
 This section shows you how to enable icons, covers the various icon modes, and introduces you to the icon macro for adding custom icons to your content.
 
+[#icons-attribute]
 == Enable icons
 
 There are three icon modes: text, image, and font.

@@ -27,15 +27,18 @@ Hello, {name}!
 
 Here's how the line is handled in each case, assuming the `name` attribute is not defined:
 
-[horizontal]
-`skip`:: Hello, \{name}!
-`drop`:: Hello, !
-`drop-line`:: {empty}
-`warn`::
-+
-----
-asciidoctor: WARNING: skipping reference to missing attribute: XYZ
-----
+[%autowidth]
+|===
+|`attribute-missing` value |Result
+
+|`skip` |Hello, \{name}!
+
+|`drop` |Hello, !
+
+|`drop-line` |{empty}
+
+|`warn` |`asciidoctor: WARNING: skipping reference to missing attribute: XYZ`
+|===
 
 .History
 NOTE: AsciiDoc.py always drops the line that contains a reference to a missing attribute (effectively `attribute-missing=drop-line`).

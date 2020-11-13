@@ -55,7 +55,7 @@ You use the unconstrained syntax to format just one or a few letters in a word.
 She spells her name with an "`h`", as in Sara**h**.
 ----
 
-See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained set?] and xref:escape-unconstrained-formatting.adoc[] for more examples and information.
+See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained set?] for more examples and information.
 
 == Inline text and punctuation styles
 

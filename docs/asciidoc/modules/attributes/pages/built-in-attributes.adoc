@@ -1,5 +1,5 @@
-= Set and Define Built-In Document Attributes
-// [#set-built-in]
+= Declare Built-In Document Attributes
+:navtitle: Declare Built-In Attributes
 
 Asciidoctor has numerous attributes reserved for special purposes.
 *Built-in attributes* add, configure, and control common features in a document.
@@ -44,7 +44,7 @@ To override an attribute's default value, you have to explicitly assign a value 
 The value assigned to an attribute in the document header replaces the default value (assuming the attribute is not locked via the CLI or API).
 
 //Change to override a default value with a user-defined value
-=== Override a default asset directory value with a user-defined value
+=== Override a default asset directory value
 
 You can also use the built-in asset directory attributes to customize the base path to images (default: `_empty_`), icons (default: `./images/icons`), stylesheets (default: `./stylesheets`) and JavaScript files (default: `./javascripts`).
 
