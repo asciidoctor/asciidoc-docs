@@ -1,0 +1,176 @@
+= Icon Macro
+
+In addition to built-in icons, you can add icons anywhere in your content where macros are substituted using the icon macro.
+This page covers the anatomy of the icon macro, how the target is resolved, and what features it support (subject to the icon mode).
+
+== Anatomy
+
+The icon macro is an inline macro.
+Like other inline macros, its syntax follows the familiar pattern of the macro name and target separated by a colon followed by an attribute list enclosed in square brackets.
+
+[source]
+----
+icon:<target>[<attrlist>]
+----
+
+The `<target>` is the icon name or path.
+The `<attrlist>` specifies various named attributes to configure how the icon is displayed.
+
+For example:
+
+[source]
+----
+icon:heart[2x,role=red]
+----
+
+== Example
+
+Here's an example that shows how to inserts an icon named _tags_ in front of a list of tag names.
+
+[source]
+----
+icon:tags[] ruby, asciidoctor
+----
+
+Here's how the HTML converter converts an icon macro when the `icons` attribute is not set or empty.
+
+.Result: HTML output
+[source,html]
+----
+<div class="paragraph">
+  <p><span class="image"><img src="./images/icons/tags.png" alt="tags"></span> ruby, asciidoctor</p>
+</div>
+----
+
+Here's how the DocBook converter converts an icon macro.
+
+[source,xml]
+----
+<inlinemediaobject>
+  <imageobject>
+    <imagedata fileref="./images/icons/tags.png"/>
+  </imageobject>
+  <textobject><phrase>tags</phrase></textobject>
+</inlinemediaobject> ruby, asciidoctor
+----
+
+When the image for an icon can't be located in the icons directory, the AsciiDoc processor displays the icon macro's alt (i.e. fallback) text.
+
+== How the icon is resolved
+
+The target of the icon macro is an icon name (or path).
+How that target is resolved depends on the xref:icons.adoc#enable-icons[icon mode].
+
+text::
+The icon name will be enclosed in square brackets (e.g., `[heart]`).
+
+image::
+The icon name will be resolved to a file in the `iconsdir` with the file extension specified by `icontype` (e.g., [.path]_./images/icons/heart.png_).
+
+font::
+The icon name will be resolved to a glyph in an icon font (as mapped by a CSS class) (e.g., `fa fa-heart`).
+
+WARNING: If you include a file extension in the image target, the icon macro will not work correctly when using the font icon mode (i.e., `icons=font`).
+
+== Icon macro attributes (shared)
+
+The following attributes of the icon macro are shared for all icon modes.
+
+`role`::
+The role applied to the element that surrounds the icon.
+
+`title`::
+The title of the image displayed when the mouse hovers over it.
+
+`link`::
+The URI target used for the icon, which will wrap the converted icon in a link.
+
+`window`::
+The target window of the link (when the `link` attribute is specified).
+
+=== Role
+
+Here's an example of an icon that uses a role to specify the color.
+
+[source]
+----
+icon:tags[role=blue] ruby, asciidoctor
+----
+
+=== Link and window
+
+Here's an example of an icon with a link that targets a separate window:
+
+[source]
+----
+icon:download[link=https://rubygems.org/downloads/whizbang-1.0.0.gem, window=_blank]
+----
+
+== Icon macro attributes (image mode only)
+
+The attributes listed below only apply when using the image icon mode.
+
+`alt`::
+The alternative text on the `<img>` tag (HTML output) or text for `<inlinemediaobject>` (DocBook output)
+
+`width`::
+The width applied to the image.
+
+For example, here's how to control the icon alt text and width when using the image icon mode:
+
+[source]
+----
+icon:tags[Tags,width=16] ruby, asciidoctor
+----
+
+The icon macro doesn't support any options to change its physical position (such as alignment).
+
+== Icon macro attributes (font mode only)
+
+The icon macro has a few attributes that modify the size and orientation of a font-based icon.
+These attributes are only recognized in the font icon mode.
+
+`size`::
+First positional attribute; scales the icon; values: `1x` (default), `2x`, `3x`, `4x`, `5x`, `lg`, `fw`
+
+`rotate`::
+Rotates the icon; values: `90`, `180`, `270`
+
+`flip`::
+Flips the icon; values: `horizontal`, `vertical`
+
+=== Size
+
+To make the icon twice the size as the default, enter `2x` inside the square brackets.
+
+[source]
+----
+icon:heart[2x]
+----
+
+or
+
+[source]
+----
+icon:heart[size=2x]
+----
+
+[TIP]
+====
+If you want to line up icons so that you can use them as bullets in a list, use the `fw` size as follows:
+
+----
+[%hardbreaks]
+icon:bolt[fw] bolt
+icon:heart[fw] heart
+----
+====
+
+=== Rotate and flip
+
+To rotate and flip an icon, specify these options using named attributes:
+
+[source]
+----
+icon:shield[rotate=90, flip=vertical]
+----

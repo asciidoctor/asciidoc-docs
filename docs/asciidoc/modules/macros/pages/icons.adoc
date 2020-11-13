@@ -1,73 +1,46 @@
-= Icons and the Icon Macro
+= Icons
 
-Asciidoctor can display icons as text, images, or characters selected from an icon font.
+Icons are a useful way to communicate information visually while at the same time eliminating text that can distract from the primary text.
+Icons also have the benefit of adding some flair to your document.
+In AsciiDoc, there are numerous ways to embellish the output of your document with icons (for backends that support this feature).
 
-== icons attribute syntax
+For some elements, icons are added automatically by the processor when enabled, such as the admonition icons.
+You can also add icons directly to the content using special markup.
 
-How an icon is displayed is based on the value assigned to the document attribute `icons`.
+This section shows you how to enable icons, covers the various icon modes, and introduces you to the icon macro for adding custom icons to your content.
 
-By default, the document attribute `icons` is not set.
-If `icons` isn't set, features that use built-in icons, such as callout numbers and admonition blocks, use their fallback text.
-Admonitions are displayed with their label (e.g., CAUTION) and callout numbers are displayed as plain text.
-However, Asciidoctor will still process any icon macros and look for icon files in the icons directory (`iconsdir`).
-By default, `iconsdir` is set to [.path]_./images/icons/_.
-//The icon file extension is set using the `icontype` attribute, which defaults to PNG (`.png`).
+== Enable icons
 
-When the `icons` attribute is set, its value can be left blank or be `font`.
+There are three icon modes: text, image, and font.
 
-_empty_:: When `icons` is set and its value field is empty, Asciidoctor looks for icon images in the icons directory (`iconsdir`).
-Additionally, the DocBook converter provides built-in images for the admonition and callout icons.
-+
+The inclusion of icons in the output is controlled using the `icons` document attribute.
+By default, this attribute is not set.
+As a result, all icons are displayed as text.
+In the text icon mode, icons are effectively disabled.
+
+To enable icons, set the `icons` attribute in the document header.
+
 [source]
 ----
 = Document Title
 :icons:
 ----
 
-`font`:: When `icons` is set and its value field is assigned `font`, the Asciidoctor HTML converter uses the Font Awesome icon set for admonition labels, callout numbers, and inline symbols.
-DocBook does not support font-based icons, so the DocBook output is not affected if the value `font` is assigned to the `icons` attribute.
-+
-[source]
-----
-= Document Title
-:icons: font
-----
+Valid values for the `icons` attribute are as follows:
 
-When an image or font-based icon isn't available, Asciidoctor displays the icon macro's fallback text.
+image (or empty)::
+Icons resolve to image files in the directory specified by the `iconsdir` attribute.
 
-== Icon macro syntax
+font::
+Icons are loaded from an icon font (like Font Awesome).
+Not all backends support this mode, such as DocBook.
 
-An icon can be inserted at an arbitrary place in your content with the icon macro.
+== Where icons are used
 
-[source]
-----
-icon:file-name[]
-----
+Setting the `icon` attribute turns on icons in the following locations:
 
-Enter the file name of the icon in the target field of the icon macro, followed by a set of square brackets (`[]`).
-Depending on the value of `icons` and the converter, Asciidoctor will look for the icon file (e.g., [.path]_file-name_) in the icons directory (`iconsdir`) or in the font icon set.
-The file extension (e.g., _.png_) doesn't have to be specified as long as it matches the value of the `icontype` attribute.
-`icontype` is set to `.png` by default.
+* The admonition label is replaced with an icon (i.e., admonition icons)
+* The icon macro
+* Callout numbers
 
-You can also assign one or more attributes to an icon.
-
-[source]
-----
-icon:file-name[optional-attribute=value, optional-attribute=value]
-----
-
-Attributes are assigned inside the macro's square brackets (`[]`) in a comma-separated list.
-The available attributes depend on the value assigned to the `icons` attribute.
-
-////
-.Relationship to the inline image macro
---
-The inline icon macro is similar to the inline image macro with a few exceptions:
-
-* If the icons attribute has the value font, the macro will translate to a font-based icon in the HTML converter (e.g., `<i class="icon-tags"></i>`)
-* If the icons attribute does not have the value font, or the converter is DocBook, the macro will insert an image into the document that resolves to a file in the iconsdir directory (e.g., `<img src="./images/icons/tags.png">`)
-
-The file resolution strategy when using image-based icons is the same used to locate images for the admonition icons.
-The file extension is set using the `icontype` attribute, which defaults to PNG (`png`).
---
-////
+The following pages will cover these icon modes in more depth.

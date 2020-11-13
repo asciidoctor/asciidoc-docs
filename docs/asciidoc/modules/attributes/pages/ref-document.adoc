@@ -801,7 +801,7 @@ Only used when `icons` attribute is set to `font`.
 |*image*, font
 |{y}
 |{y}
-|Chooses xref:macros:icons.adoc[images or font icons] instead of text for admonitions.
+|Chooses xref:macros:icons.adoc#enable-icons[images or font icons] instead of text for admonitions.
 
 |iconsdir
 |Only used when `icons` attribute is set to `image`
