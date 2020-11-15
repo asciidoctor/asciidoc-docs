@@ -306,7 +306,7 @@ _any_
 
 == Header and metadata attributes
 
-[cols="10,^15,15,^5,^5,30"]
+[cols="10m,^15,15,^5,^5,30"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
@@ -452,7 +452,7 @@ See xref:document:title.adoc#title-attr[title attribute].
 
 == Section titles and table of contents attributes
 
-[cols="10,^15,15,^5,^5,30"]
+[cols="10m,^15,15,^5,^5,30"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
@@ -533,7 +533,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |toc
 |{n}
-|*auto*, left, right, macro or preamble
+|`*auto*`, `left`, `right`, `macro` or `preamble`
 |{y}
 |{n}
 |Turns on xref:toc:index.adoc[table of contents] and specifies xref:toc:position.adoc[its location].
@@ -564,13 +564,13 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 == General content and formatting attributes
 
-[cols="10,^15,15,^5,^5,30"]
+[cols="10m,^15,15,^5,^5,30"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
 |asset-uri-scheme
 |{n}
-|https, _empty_
+|`https`, _empty_
 |{y}
 |{n}
 |Controls protocol used for assets hosted on a CDN.
@@ -593,7 +593,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |docinfo
 |{n}
-|shared, private, shared-head, private-head, shared-footer, private-footer
+|`shared`, `private`, `shared-head`, `private-head`, `shared-footer`, `private-footer`
 |{y}
 |
 |Read input from one or more DocBook info files.
@@ -601,7 +601,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |docinfodir
 |
-|*base directory*, _directory_
+|*base directory*, _Directory_
 |{y}
 |
 |Location of docinfo files.
@@ -609,7 +609,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |docinfosubs
 |
-|*attributes*, _comma-separated list of substitution names_, none
+|*attributes*, _comma-separated list of substitution names_
 |{y}
 |
 |AsciiDoc substitutions that are applied to docinfo content.
@@ -617,7 +617,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |doctype
 |{y}
-|*article*, book, inline, manpage
+|`*article*`, `book`, `inline`, `manpage`
 |{y}
 |{n}
 |Output document type.
@@ -625,7 +625,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |eqnums
 |{n}
-|*AMS*, all, none
+|`*AMS*`, `all`, `none`
 |{y}
 |
 |Controls automatic equation numbering on LaTeX blocks in HTML output (MathJax).
@@ -649,10 +649,11 @@ See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numberin
 
 |media
 |{n}
-|*screen*, print
+|`*screen*`, `prepress`, `print`
 |{y}
 |
 |Specifies media type of output and enables behavior specific to that media type.
+_PDF converter only_.
 
 |nofooter
 |{n}
@@ -728,7 +729,7 @@ Mutually exclusive with the `notitle` attribute.
 
 |stem
 |{n}
-|*asciimath*, latexmath
+|`*asciimath*`, `latexmath`
 |{y}
 |
 |Enables xref:stem:stem.adoc[mathematics processing and interpreter].
@@ -751,7 +752,7 @@ The value populates the `family` query string parameter in the Google Fonts URL.
 
 |xrefstyle
 |{n}
-|full, short, basic
+|`full`, `short`, `basic`
 |{y}
 |{n}
 |xref:macros:xref-text-and-style.adoc#cross-reference-styles[Formatting style to apply to cross reference text].
@@ -760,23 +761,25 @@ The value populates the `family` query string parameter in the Google Fonts URL.
 
 == Image and icon attributes
 
-[cols="10,^15,15,^5,^5,30"]
+[cols="10m,^15,15,^5,^5,30"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
 |iconfont-cdn
 |Only when `icons` attribute is set to `font`
-|*cdnjs*, _url_
+|_url_
 |{y}
 |{n}
-|Overrides CDN used to resolve the Font Awesome stylesheet.
+|If not specified, uses the cdnjs.com service.
+Overrides CDN used to link to the Font Awesome stylesheet.
 
 |iconfont-name
 |Only when `icons` attribute is set to `font`
-|*font-awesome*, _any_
+|_any_
 |{y}
 |
 |Overrides the name of the icon font stylesheet.
+By default, this value is *font-awesome*.
 //<<icons>>
 
 |iconfont-remote
@@ -789,28 +792,29 @@ Only used when `icons` attribute is set to `font`.
 
 |icons
 |{n}
-|*image*, font
+|`*image*`, `font`
 |{y}
 |{y}
 |Chooses xref:macros:icons.adoc#icons-attribute[images or font icons] instead of text for admonitions.
 
 |iconsdir
 |Only used when `icons` attribute is set to `image`
-|*./images/icons* or *\{imagesdir}/icons*, _Directory_
+|_Directory_
 |{y}
 |{n}
 |Location of non-font-based image icons.
+Points to the _icons_ folder under `imagesdir` by default.
 
 |icontype
 |Only used when `icons` attribute is set to `image`
-|*png*, jpg, svg, tiff
+|`*png*`, `jpg`, `svg`, `gif`
 |{y}
 |{n}
 |File type for image icons.
 
 |imagesdir
 |{y}
-|*Same directory as document*, _Directory_
+|*_empty_*, _Directory_
 |{y}
 |{n}
 |Location of image files.
@@ -818,20 +822,20 @@ Only used when `icons` attribute is set to `font`.
 
 == Code highlighting and formatting attributes
 
-[cols="10,^15,15,^5,^5,30"]
+[cols="10m,^15,15,^5,^5,30"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
 |coderay-css
 |
-|*class*, style
+|`*class*`, `style`
 |{y}
 |{n}
 |Controls whether CodeRay uses CSS classes or inline styles.
 
 |coderay-linenums-mode
 |
-|*table*, inline
+|`*table*`, `inline`
 |{y}
 |{n}
 |Sets how CodeRay inserts line numbers into source listings.
@@ -880,14 +884,14 @@ Only used when `icons` attribute is set to `font`.
 
 |pygments-css
 |
-|*class*, style
+|`*class*`, `style`
 |{y}
 |{n}
 |Controls whether Pygments uses CSS classes or inline styles.
 
 |pygments-linenums-mode
 |
-|*table*, inline
+|`*table*`, `inline`
 |{y}
 |{n}
 |Sets how Pygments inserts line numbers into source listings.
@@ -908,10 +912,11 @@ Only used when `icons` attribute is set to `font`.
 
 |source-highlighter
 |{n}
-|coderay, highlight.js, pygments, rouge
+|`coderay`, `highlight.js`, `pygments`, `rouge`
 |{y}
 |{n}
 |xref:verbatim:source-highlighter.adoc[Specifies source code highlighter].
+Any other value is permitted, but must be supported by a custom syntax highlighter adapter.
 
 |source-indent
 |{n}
@@ -939,7 +944,7 @@ Only used when `icons` attribute is set to `font`.
 
 == HTML styling attributes
 
-[cols="10,^15,15,^5,^5,30"]
+[cols="10m,^15,15,^5,^5,30"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
@@ -979,7 +984,7 @@ Use CSS stylesheet instead.*
 
 |stylesdir
 |{y}
-|*. (Same directory as document)*, _directory_
+|*. (Same directory as document)*, _Directory_
 |{y}
 |{n}
 |Location of CSS stylesheets.
@@ -995,7 +1000,7 @@ Use CSS stylesheet instead.*
 
 |toc-class
 |
-|*toc*, valid CSS class name
+|`*toc*`, valid CSS class name
 |{y}
 |{n}
 |CSS class on the table of contents container.
@@ -1006,7 +1011,7 @@ Use CSS stylesheet instead.*
 
 (relevant only when using the manpage doctype and/or converter)
 
-[cols="10,^15,15,^5,^5,30"]
+[cols="10m,^15,15,^5,^5,30"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
@@ -1071,7 +1076,7 @@ Use CSS stylesheet instead.*
 
 Most of the following attributes can only be set from the API or command line.
 
-[cols="20,^15,15,^5,^5,25"]
+[cols="20m,^15,15,^5,^5,25"]
 |===
 |Name |Automatically Set |Values |CLI |API |Notes
 
