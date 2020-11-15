@@ -29,10 +29,13 @@ The result of <<ex-left>> is displayed below.
 image::toc-left.png[Display the table of contents as a side column,role=screenshot]
 
 This positioning is achieved using CSS and depends on support from the stylesheet.
-It's only honored if there's sufficient room on the screen for a sidebar column.
-If there isn't sufficient room available (i.e., the screen width falls below a certain breakpoint), the TOC will automatically shift back to the center, appearing directly below the document title.
 
-IMPORTANT: The TOC is always placed in the center in an embeddable HTML document, regardless of the value of the `toc` attribute.
+[#min-width-requirement]
+WARNING: The side positions (left and right) have a width requirement.
+These positions are only honored if there's sufficient room on the screen to fit the sidebar column (typically at least 768px).
+If sufficient room available is not available (i.e., the screen width falls below the breakpoint), the TOC *automatically shifts back to the center*, appearing directly below the document title.
+
+NOTE: The TOC is always placed in the center in an embeddable HTML document, regardless of the value of the `toc` attribute.
 
 [#preamble]
 == Display the TOC beneath the preamble
