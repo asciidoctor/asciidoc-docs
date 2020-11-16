@@ -7,7 +7,7 @@ Attribute value:: An attribute value is the built-in or user-defined replacement
 Once assigned to an attribute, a value is applied to a document, either as a whole or wherever the attribute is referenced.
 The value may be empty, an integer, or a string of characters.
 Most built-in attributes have a restricted range of allowable values while user-defined attributes only accept strings.
-See the built-in xref:ref-environment.adoc[environment attributes] and xref:ref-document.adoc[document attributes] reference tables for more information.
+See the built-in xref:ref-intrinsic.adoc[intrinsic attributes] and xref:ref-document.adoc[document attributes] reference tables for more information.
 Also see <<default-def,default attribute value>>.
 
 [[built-in-def]]Built-in attribute:: Built-in attributes are predefined and their names reserved.

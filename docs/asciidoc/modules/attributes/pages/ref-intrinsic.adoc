@@ -1,23 +1,23 @@
-= Environment Attributes Reference
+= Intrinsic Attributes Reference
 :url-epoch: https://reproducible-builds.org/specs/source-date-epoch
 
-Asciidoctor automatically assigns values to various attributes whenever a document is loaded or converted.
-These _environment attributes_ provide information about the runtime environment, such as how, where and when the document is being processed.
-Like document attributes, environment attributes can be referenced wherever attribute references are permitted.
-It's recommended that you treat these attributes as read only.
+The AsciiDoc processor automatically assigns values to various document attributes whenever a document is loaded or converted.
+These _intrinsic attributes_ provide information about the document being processed (e.g., `docfile`), the security mode under which the processor is running (e.g., `safe-mode-name`), and some information about the user's environment (e.g., `user-home`).
+Like all document attributes, the value of an intrinsic attributes can be accessed using an attribute reference.
+Many of these attributes are intended to be read only.
 
 // tag::table[]
 [#env-attributes-table%autowidth,cols="m,,m"]
 |===
 |Attribute |Description |Example Value
 
-|asciidoctor
-|Set if the current processor is Asciidoctor.
-|{asciidoctor}
-
-|asciidoctor-version
-|Asciidoctor version.
-|{asciidoctor-version}
+//|asciidoctor
+//|Set if the current processor is Asciidoctor.
+//|{asciidoctor}
+//
+//|asciidoctor-version
+//|Asciidoctor version.
+//|{asciidoctor-version}
 
 |backend
 |The backend used to select and activate the converter that creates the output file.
@@ -69,7 +69,7 @@ Truncated to the basename if the safe mode is SERVER or SECURE (to conceal the f
 |{docyear}
 
 |embedded
-|Set if content is being converted to an embeddable document (body only).
+|Set if content is being converted to an embedded document (i.e., body of document only).
 |
 
 |filetype
@@ -141,7 +141,7 @@ _Safe to modify._
 
 |user-home
 |Full path of the home directory for the current user.
-Truncated to `.` if the safe mode is SERVER or SECURE.
+Masked as `.` if the safe mode is SERVER or SECURE.
 |/home/user
 |===
 

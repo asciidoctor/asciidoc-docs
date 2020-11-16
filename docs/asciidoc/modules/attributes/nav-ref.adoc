@@ -1,5 +1,5 @@
 * Reference
-** xref:ref-environment.adoc[]
+** xref:ref-intrinsic.adoc[]
 ** xref:ref-document.adoc[]
 ** xref:ref-character-replacement.adoc[]
 ** xref:ROOT:glossary.adoc[]
