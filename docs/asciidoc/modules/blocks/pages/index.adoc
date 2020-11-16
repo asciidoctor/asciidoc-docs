@@ -5,16 +5,119 @@
 
 == What is a block?
 
-CAUTION: This is the generic definition and a placeholder.
+A block (or block element) is a line-oriented, discrete chunk of content in an AsciiDoc document.
+Some blocks may contain other blocks.
 
-In an AsciiDoc document, one or more continuous lines of text is defined as a block element.
-Examples of block elements are tables, callout lists, block macros such as `image::[]`, verse block titles, paragraphs, an attribute entry in the header, and the header as a whole.
-Block elements can be nested within block elements.
+A block is defined as one or more contiguous lines of text or optionally contiguous lines enclosed in block delimiters (aka fences).
+A block (including its metadata lines) should be surrounded by a blank line or document boundary on either side.
 
-== What is a built-in block style?
+Examples of a block include a paragraph, a section, a list, a delimited block, a table, a block macro, and the document itself.
 
-TBA
+Blocks form the backbone of the structure in an AsciiDoc document.
 
-== What features can I apply to a block?
+== Block context, style, and content model
 
-TBA
+Each block has a primary type, known as its context.
+The context is typically inferred by the AsciiDoc syntax.
+
+For example, consider the following normal section:
+
+[source]
+----
+== Section Title
+----
+
+The context of this block is `section`.
+The writer does not have to do anything to specify the context in this case as it's implied by the syntax.
+We often just say that this is section block, using the context as an adjective to describe the block.
+
+The context dictates the content model.
+The content model determines how the content inside of the block is processed.
+The content models are as follows:
+
+compound:: a block that only contains other blocks (e.g., a section block)
+simple:: a block that is treated as contiguous lines of paragraph text (and subject to normal substitutions) (e.g., a paragraph blokc)
+verbatim:: a block holds verbatim text (displayed "as is") (and subject to verbatim substitutions) (e.g., a listing block)
+raw:: a block that holds unprocessed content passed directly through to the output with no sustitutions applied (e.g., a passthrough block)
+empty:: a block block that has no content (e.g., an image block)
+
+All sections have the compound content model because they can only contain other blocks.
+
+For some blocks, you may notice a name enclosed in square brackets above the block (e.g., `[source]`).
+In this case, the the first positional (unnamed) attribute in the block attribute list is being used to specify the block style.
+
+The block style elaborates the block's context.
+The style is almost always be specified by the writer.
+
+Consider the following example of a source block:
+
+[source]
+....
+[source]
+----
+puts "Hello, World!"
+----
+....
+
+The context of a source block is `listing` (inferred from the listing block delimiters) and the style is `source` (as specified by the writer).
+We say that the style specialized the block.
+
+The first positional attribute may also be used to change the context of a block.
+In these cases, the name between the square brackets is interpreted not as the block style, but rather as the block context.
+
+Consider the case of this alternate syntax for a listing block, known a block masquerading.
+
+[source]
+----
+[listing]
+....
+a > b
+....
+----
+
+Since the first positional attribute matches the name of a context, the context of the block becomes `listing` (and the block does not have a block style).
+
+To get a complete picture of the block's type, you must consider both the context and the style.
+The context is always set and is often inferred from the syntax.
+The style extends the context to give it special behavior.
+
+NOTE: The context is what the converter uses to dispatch to a convert method.
+The style is used by the converter to apply special behavior to blocks of the same type.
+
+== Block commonalities
+
+//Every block can have one or more lines of block metadata.
+//This metadata can be in the form of block attributes, a block anchor, or a block title.
+//These metadata lines should be directly adjacent to the block itself.
+
+All blocks can accomodate zero or more lines of metadata stacked directly on top of the block.
+These lines populate the properties of the block, such as the ID, title, and options.
+These metadata lines are as follows:
+
+* Zero or more block attribute lines (which populate the block's attributes)
+* An optional block anchor line
+* An optional block title line (many blocks also support a corresponding caption)
+* An optional ID
+* An optional set of roles
+* An optional set of options
+
+For example, consider a sidebar block with a title and ID:
+
+[source]
+----
+[#music-styles]
+.Styles of music
+****
+Describes what a style of music is.
+****
+----
+
+When it comes to processing content, blocks split off into different groups.
+These groups are primarily associated with the block's content model.
+
+All delimited blocks are enclosed in a matching pair of delimiter lines.
+
+All paragraph blocks must be contiguous lines.
+
+Paragraph blocks and verbatim blocks have an implicit and modifiable set of substitutions.
+Substitutions do not apply to compound blocks (i.e., blocks that may contain nested blocks).
