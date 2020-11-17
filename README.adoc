@@ -1,0 +1,30 @@
+= AsciiDoc Language Documentation
+:url-prototype: https://github.com/git/git-scm.com/commits/master/lib/asciidoc.rb
+:url-org: https://github.com/asciidoctor
+:url-asciidoc-lang: https://projects.eclipse.org/projects/technology.asciidoc
+
+This repository contains the user-facing documentation for the AsciiDoc language as it's implemented in {url-org}/asciidoctor[Asciidoctor].
+This documentation has been submitted as the initial contribution for the {url-asciidoc-lang}[AsciiDoc Language project at Eclipse].
+
+== Documentation Structure
+
+This repository is a registered content source in the {url-org}/docs.asciidoctor.org/blob/main/antora-playbook.yml[playbook file for docs.asciidoctor.org].
+The source files are organized into a documentation component as described by the _antora.yml_ file.
+To learn how to build this documentation using the playbook and Antora, see the https://docs.antora.org/antora/2.3/install-and-run-quickstart/[Install and Run Antora Quickstart].
+
+== Copyright and License
+
+Copyright (C) 2012-2020 Sarah White, Dan Allen, and the individual contributors to {url-org}/asciidoctor/graphs/contributors[Asciidoctor] and {url-org}/asciidoctor.org/graphs/contributors[asciidoctor.org].
+Except where otherwise noted, the content of the AsciiDoc documentation and websites is licensed under a https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 International License].
+The use of the {url-org}[Asciidoctor projects] is granted under the terms of each software project's license.
+
+== Authors
+
+*Asciidoctor* is led by https://github.com/mojavelinux[Dan Allen] and https://github.com/graphitefriction[Sarah White] and has received contributions from many individuals in Asciidoctor's awesome community.
+The project was initiated in 2012 by https://github.com/erebor[Ryan Waldron] and based on {url-prototype}[a prototype] written by https://github.com/nickh[Nick Hengeveld].
+
+*AsciiDoc* was started and maintained by Stuart Rackham from https://github.com/asciidoc/asciidoc/blob/master/CHANGELOG.txt[2002 to 2013] and has received contributions from many individuals in the https://github.com/asciidoc/asciidoc/graphs/contributors[AsciiDoc community].
+
+== Trademarks
+
+AsciiDoc is a Trademark of the Eclipse Foundation, Inc.
