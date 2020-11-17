@@ -25,6 +25,8 @@ The project was initiated in 2012 by https://github.com/erebor[Ryan Waldron] and
 
 *AsciiDoc* was started and maintained by Stuart Rackham from https://github.com/asciidoc/asciidoc/blob/master/CHANGELOG.txt[2002 to 2013] and has received contributions from many individuals in the https://github.com/asciidoc/asciidoc/graphs/contributors[AsciiDoc community].
 
+This documentation for the AsciiDoc language was extracted from the tip of the https://github.com/asciidoctor/asciidoctor.org/tree/docs-archive[docs-archive branch] in the https://github.com/asciidoctor/asciidoctor.org repository.
+
 == Trademarks
 
 AsciiDoc is a Trademark of the Eclipse Foundation, Inc.
