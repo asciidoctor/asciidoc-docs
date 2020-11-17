@@ -10,7 +10,7 @@ This documentation has been submitted as the initial contribution for the {url-a
 
 This repository is a registered content source in the {url-org}/docs.asciidoctor.org/blob/main/antora-playbook.yml[playbook file for docs.asciidoctor.org].
 The source files are organized into a documentation component as described by the [.path]_antora.yml_ file.
-To learn how to build this documentation using the playbook file [.path]_local-antora-playbook.yml_ with Antora, see the https://docs.antora.org/antora/2.3/install-and-run-quickstart/[Install and Run Antora Quickstart].
+To learn how to build this documentation using the playbook and Antora, see the https://docs.antora.org/antora/2.3/install-and-run-quickstart/[Install and Run Antora Quickstart].
 
 == Copyright and License
 
