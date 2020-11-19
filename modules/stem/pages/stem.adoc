@@ -5,7 +5,7 @@
 :url-latexmath: https://docs.mathjax.org/en/latest/input/tex/index.html
 :url-mathjax-docs: https://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 
-If you need to display Science, Technology, Engineering and Math (STEM) expressions in your output, the HTML backend integrates with xref:asciidoctor:integrations:mathjax.adoc[MathJax] and Docbook backend integrates with the xref:asciidoctor:integrations:asciimath-gem.adoc[AsciiMath RubyGem].
+If you need to display Science, Technology, Engineering and Math (STEM) expressions in your output, the HTML backend integrates with xref:asciidoctor:stem:mathjax.adoc[MathJax] and Docbook backend integrates with the xref:asciidoctor:stem:asciimath-gem.adoc[AsciiMath RubyGem].
 
 == Activating STEM support
 
