@@ -66,7 +66,7 @@ Any attributes defined below the first blank line are not part of the document h
 
 The header is optional when the `doctype` is `article` or `book`.
 A header is required when the document type is `manpage`.
-See the xref:asciidoctor:backends:manpage/convert-to-man-page.adoc#man-page-doctype[man page doctype] section for manual page (man page) requirements.
+See the xref:asciidoctor:manpage-backend:index.adoc[manpage doctype] section for manual page (man page) requirements.
 
 == Header processing
 
@@ -78,4 +78,4 @@ If you don't want the header of a document to be displayed, set the `noheader` a
 
 Many static site generators, such as Jekyll and Middleman, rely on front matter added to the top of the document to determine how to convert the content.
 Asciidoctor has a number of attributes available to correctly handle front matter.
-See xref:asciidoctor:backends:html/front-matter.adoc[] to learn more.
+See xref:asciidoctor:html-backend:skip-front-matter.adoc[] to learn more.
