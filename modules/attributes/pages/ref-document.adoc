@@ -880,7 +880,7 @@ Points to the _icons_ folder under `imagesdir` by default.
 |_empty_
 |{y}
 |{y}
-|xref:asciidoctor:backends:html/wrap.adoc[Wrap wide code listings].
+|xref:asciidoctor:html-backend:verbatim-line-wrap.adoc[Wrap wide code listings].
 
 |pygments-css
 |
