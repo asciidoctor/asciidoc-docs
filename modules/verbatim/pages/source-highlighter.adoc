@@ -54,9 +54,9 @@ You can also declare this attribute using the CLI or API.
 |===
 
 To use Rouge, CodeRay, or Pygments, you must have the appropriate library installed on your system.
-See xref:asciidoctor:source-highlighters:rouge.adoc[], xref:asciidoctor:source-highlighters:coderay.adoc[], or xref:asciidoctor:source-highlighters:pygments.adoc[] for installation instructions.
+See xref:asciidoctor:syntax-highlighting:rouge.adoc[], xref:asciidoctor:syntax-highlighting:coderay.adoc[], or xref:asciidoctor:syntax-highlighting:pygments.adoc[] for installation instructions.
 
-If you're using the client-side library xref:asciidoctor:source-highlighters:highlightjs.adoc[], there's no need to install additional libraries.
+If you're using the client-side library xref:asciidoctor:syntax-highlighting:highlightjs.adoc[], there's no need to install additional libraries.
 The generated HTML will load the required source files from a CDN, custom URL, or file path.
 
 .Source Highlighter vs. Syntax Highlighter
