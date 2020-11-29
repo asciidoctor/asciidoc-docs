@@ -1,4 +1,5 @@
 = AsciiDoc Language Documentation
+:navtitle: Introduction
 :url-asciidoc-lang: https://projects.eclipse.org/projects/technology.asciidoc
 
 [caption=Migration in Progress]
