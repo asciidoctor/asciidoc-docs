@@ -1,4 +1,6 @@
 = Table Borders
+:!table-frame:
+:!table-grid:
 
 The borders on a table are controlled using the `frame` and `grid` block attributes.
 You can combine these two attributes to achieve a variety of border styles for your tables.
