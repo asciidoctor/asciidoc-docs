@@ -1,23 +1,15 @@
-////
-Included in:
-
-- user-manual: Example
-- quick-ref
-////
-
+// in qr
 // tag::base[]
-.Sample document
 ====
 Here's a sample AsciiDoc document:
 
-[listing]
-....
+----
 = Title of Document
 Doc Writer
 :toc:
 
 This guide provides...
-....
+----
 
 The document header is useful, but not required.
 ====

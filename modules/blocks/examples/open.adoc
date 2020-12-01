@@ -1,10 +1,4 @@
-////
-Included in:
-
-- user-manual: Open Block
-- quick-ref
-////
-
+// in qr
 // tag::base[]
 --
 An open block can be an anonymous container,
@@ -12,6 +6,7 @@ or it can masquerade as any other block.
 --
 // end::base[]
 
+// in qr
 // tag::src[]
 [source]
 --

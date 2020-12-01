@@ -1,9 +1,4 @@
-////
-Included in:
-- user-manual: Sections
-- quick-ref
-////
-
+// in qr
 // tag::base[]
 = Document Title (Level 0)
 
@@ -68,20 +63,25 @@ Content of nested section
 Content of second section
 // end::content[]
 
+// in qr
 // tag::book[]
 = Document Title (Level 0)
 
-== Section Level 1
+== Level 1 Section Title
 
-=== Section Level 2
+= Level 0 Section Title (Part)
 
-==== Section Level 3
+== Level 1 Section Title
 
-===== Section Level 4
+=== Level 2 Section Title
 
-====== Section Level 5
+==== Level 3 Section Title
 
-= Section Level 0
+===== Level 4 Section Title
+
+====== Level 5 Section Title
+
+= Another Level 0 Section Title (Part)
 // end::book[]
 
 // tag::b-book[]
@@ -180,6 +180,7 @@ Unnumbered Section
 :sectnumlevels: 2 <.>
 // end::sectnuml[]
 
+// in qr
 // tag::md[]
 # Document Title (Level 0)
 
@@ -194,6 +195,7 @@ Unnumbered Section
 ###### Section Level 5
 // end::md[]
 
+//in qr
 // tag::b-md[]
 [float]
 # Document Title (Level 0)

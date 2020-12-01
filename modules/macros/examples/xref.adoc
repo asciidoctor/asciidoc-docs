@@ -32,12 +32,14 @@ Refer to <<document-b.adoc#section-b,Section B>> for more information.
 Refer to <<document-b.adoc#,Document B>> for more information.
 // end::base-inter-top[]
 
+// used in qr
 // tag::b-base[]
 See <<paragraphs>> to learn how to write paragraphs.
 
 Learn how to organize the document into <<section-titles,sections>>.
 // end::b-base[]
 
+// used in qr
 // tag::b-inter[]
 Refer to <<document-b.adoc#section-b,Section B>> for more information.
 

@@ -33,28 +33,6 @@ It won't be italicized.
 \{two-semicolons} will appear {two-semicolons}, not resolved as ;;.
 // end::slash[]
 
-// tag::b-slash[]
-\*Stars* is not rendered as bold text.
-The asterisks around the word are preserved.
-
-\{author} is not resolved to the author name.
-The curly brackets around the word are preserved.
-
-`A\--Z` connects A to Z in monospace using two dashes.
-The dashes are not replaced by an em dash.
-
-\=> is an equal sign followed by a greater than sign.
-The two characters are not combined to form a double arrow.
-
-\[[Word]] is not interpreted as an anchor.
-The double brackets around the word are preserved.
-
-[\[[Word]]] is not interpreted as a bibliography anchor.
-The triple brackets around the word are preserved.
-
-In these cases, the backslash character is automatically removed.
-// end::b-slash[]
-
 // tag::subs-in[]
 [source,java,subs="verbatim,quotes"] // <.>
 ----

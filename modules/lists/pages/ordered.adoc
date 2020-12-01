@@ -115,6 +115,7 @@ include::example$ordered.adoc[tag=mix-alt]
 
 The description list page demonstrates how to xref:description.adoc#three-hybrid[combine all three list types].
 
+[#styles]
 == Number styles
 
 For ordered lists, Asciidoctor supports the numeration styles such as lowergreek and decimal-leading-zero.

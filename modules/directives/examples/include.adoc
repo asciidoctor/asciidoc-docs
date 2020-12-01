@@ -4,6 +4,7 @@ Included in:
 - quick-ref
 ////
 
+// used in qr
 // tag::base[]
 = Reference Documentation
 Lead Developer
@@ -90,6 +91,7 @@ class Bar {
 --
 // end::out[]
 
+// used in qr
 // tag::uri[]
 \include::https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/README.adoc[]
 // end::uri[]

@@ -52,7 +52,7 @@ However, Asciidoctor doesn't process and replace Unicode escape sequences at thi
 ****
 
 TIP: AsciiDoc also provides built-in attributes for representing some common symbols.
-These attributes and their corresponding output are listed in xref:attributes:ref-character-replacement.adoc[].
+These attributes and their corresponding output are listed in xref:attributes:character-replacement-reference.adoc[].
 
 == Default replacements substitution
 

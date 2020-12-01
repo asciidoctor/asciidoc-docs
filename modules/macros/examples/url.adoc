@@ -1,9 +1,3 @@
-////
-Included in:
-- user-manual: URL
-- quick-ref
-////
-
 // tag::base[]
 The homepage for the Asciidoctor Project is https://asciidoctor.org.
 
@@ -58,42 +52,41 @@ link:protocol.json[Open the JSON file]
 link:external.html#livereload[LiveReload]
 // end::hash[]
 
+// used in qr
 // tag::b-base[]
 https://asciidoctor.org - automatic!
 
 https://asciidoctor.org[Asciidoctor]
-
-https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
 // end::b-base[]
 
 // tag::bare-email[]
 Email us at hello@example.com to say hello.
 // end::bare-email[]
 
+// used in qr
 // tag::b-scheme[]
-devel@discuss.arquillian.org
+devel@discuss.example.org
 
-mailto:devel@discuss.arquillian.org[Discuss Arquillian]
+mailto:devel@discuss.example.org[Discuss]
 
-mailto:devel-join@discuss.arquillian.org[Subscribe,Subscribe me,I want to join!]
-
-irc://irc.freenode.org/#fedora
+mailto:join@discuss.example.org[Subscribe,Subscribe me,I want to join!]
 // end::b-scheme[]
 
+// used in qr
 // tag::b-linkattrs[]
 https://discuss.asciidoctor.org[Discuss Asciidoctor,role=external,window=_blank]
 
 https://discuss.asciidoctor.org[Discuss Asciidoctor^]
-
-https://example.org["Google, Yahoo, Bing^",role=teal]
 // end::b-linkattrs[]
 
+// used in qr
 // tag::b-spaces[]
 link:++https://example.org/?q=[a b]++[URL with special characters]
 
 link:https://example.org/?q=%5Ba%20b%5D[URL with special characters]
 // end::b-spaces[]
 
+// used in qr
 // tag::b-windows[]
 link:\\server\share\whitepaper.pdf[Whitepaper]
 // end::b-windows[]

@@ -1,3 +1,4 @@
+//in qr
 // tag::src-base[]
 [source,ruby]
 ----
@@ -40,6 +41,7 @@ end
 This is normal content.
 // end::src-para-co[]
 
+// in qr
 // tag::src-para[]
 [source,xml]
 <meta name="viewport"
@@ -70,6 +72,7 @@ public void setAttributes(Attributes attributes) {
 require 'sinatra'
 // end::override[]
 
+// in qr
 // tag::src-inc[]
 [source,ruby]
 ----
@@ -77,6 +80,7 @@ require 'sinatra'
 ----
 // end::src-inc[]
 
+// in qr
 // tag::rel[]
 :sourcedir: src/main/java
 
@@ -86,6 +90,7 @@ require 'sinatra'
 ----
 // end::rel[]
 
+// in qr
 // tag::ind[]
 [source,ruby,indent=0]
 ----
@@ -93,6 +98,7 @@ require 'sinatra'
 ----
 // end::ind[]
 
+// in qr
 // tag::fence[]
 ```ruby
 require 'sinatra'

@@ -13,7 +13,7 @@ It's preceded by a blank line, entered on a line by itself, and then followed by
 ----
 Content in document.
 
-image::sunset.jpg[] <.> <.>
+include::example$image.adoc[tag=base] <.> <.>
 
 Content in document
 ----
@@ -23,7 +23,7 @@ Type a set of square brackets (`+[]+`) directly after the target to complete the
 
 The result of <<ex-block>> is displayed below.
 
-image::sunset.jpg[]
+include::example$image.adoc[tag=base]
 
 You can specify a comma-separated list of optional attributes inside the square brackets or leave them empty.
 If you want to specify alt text, enter it inside the square brackets.
@@ -31,7 +31,7 @@ If you want to specify alt text, enter it inside the square brackets.
 .Block image macro with alt text
 [source#ex-alt]
 ----
-image::sunset.jpg[Sunset]
+include::example$image.adoc[tag=alt]
 ----
 
 You can also give the image an id, title, set its dimensions and make it a link.
@@ -80,8 +80,6 @@ Complete the macro with a set of square brackets (`+[]+`).
 
 The result of <<ex-inline>> is displayed below.
 
-Click image:play.png[] to get the party started.
-
-Click image:pause.png[title="Pause"] when you need a break.
+include::example$image.adoc[tag=inline]
 
 For inline images, the optional title is displayed as a tooltip.
