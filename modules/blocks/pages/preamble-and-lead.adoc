@@ -12,16 +12,16 @@ A preamble is optional.
 include::example$preamble.adoc[]
 ----
 
-When using the default Asciidoctor stylesheet, the <<lead-style,lead style>> is automatically applied to the first paragraph of the preamble.
+When using the default Asciidoctor stylesheet, if the first paragraph does not have an explicit role, it is styled as if it has the <<lead-role,lead role>>.
 The result of <<ex-preamble>> is displayed below.
 
 image::preamble.png[The preamble of a document,role=screenshot]
 
-[#lead-style]
-== Lead style
+[#lead-role]
+== Lead role
 
-Apply the `lead` style to any paragraph, and it will render using a larger font size.
-The lead style is assigned to the xref:attributes:roles.adoc[role attribute].
+Apply the `lead` role to any paragraph, and it will render using a larger font size.
+The lead role is assigned to the xref:attributes:roles.adoc[role attribute].
 You can set `role` using the classic or shorthand method.
 
 .Setting role to lead using the shorthand syntax
