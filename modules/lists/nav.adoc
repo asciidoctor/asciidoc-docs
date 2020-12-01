@@ -1,6 +1,6 @@
 * Lists
-** xref:ordered.adoc[]
 ** xref:unordered.adoc[]
+** xref:ordered.adoc[]
 ** xref:checklist.adoc[]
 ** xref:continuation.adoc[]
 * xref:description.adoc[]
