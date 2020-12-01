@@ -38,7 +38,7 @@ For instance, consider a table with the three built-in option values, `header`, 
 .Table assigned three options using the shorthand syntax
 [source#ex-table-short]
 ----
-[%header%footer%autowidth,cols="2*"]
+[%header%footer%autowidth,cols=2*~]
 |===
 |Cell A1 |Cell B1
 
@@ -78,7 +78,7 @@ Instead of using the shorthand notation, <<ex-table-formal>> shows how the value
 .Table assigned three options using the formal syntax
 [source#ex-table-formal]
 ----
-[cols="2*",options="header,footer,autowidth"]
+[cols=2*~,options="header,footer,autowidth"]
 |===
 |Cell A1 |Cell B1
 

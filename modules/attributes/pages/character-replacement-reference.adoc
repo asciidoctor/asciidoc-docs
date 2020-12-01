@@ -1,7 +1,7 @@
 = Character Replacement Attributes Reference
 
 // tag::table[]
-[%autowidth,cols="^m,^l,^"]
+[%autowidth,cols="^~m,^~l,^~"]
 |===
 |Attribute name |Replacement text |Appearance
 

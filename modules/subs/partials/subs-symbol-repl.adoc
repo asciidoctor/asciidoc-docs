@@ -1,4 +1,4 @@
-[%autowidth,cols=",^,^,^,"]
+[%autowidth,cols="~,^~,^~,^~,~"]
 .Textual symbol replacements
 |===
 |Name |Syntax |Unicode Replacement |Rendered |Notes
