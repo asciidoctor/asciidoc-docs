@@ -633,12 +633,12 @@ If the value is AMS, only LaTeX content enclosed in an `+\begin{equation}...\end
 If the value is all, then all LaTeX blocks will be numbered.
 See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numbering[equation numbering in MathJax].
 
-|hardbreaks
+|hardbreaks-option
 |{n}
 |*_empty_*
 |{y}
 |{y}
-|xref:blocks:breaks.adoc#hardbreaks-attribute[Preserve hard line breaks].
+|xref:blocks:hard-line-breaks.adoc#per-document[Preserve hard line breaks].
 
 |hide-uri-scheme
 |{n}

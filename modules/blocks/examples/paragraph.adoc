@@ -32,7 +32,7 @@ This results in a visible line break (e.g., `<br>`) between the lines.
 
 // tag::hb-attr[]
 = Line Break Doc Title
-:hardbreaks:
+:hardbreaks-option:
 
 Rubies are red,
 Topazes are blue.
