@@ -149,9 +149,10 @@ Since we're swapping behavior between two existing formatting marks, we had to i
 
 **IMPORTANT:** I want to reiterate that you have the option of enabling legacy mode if you don't want to deal with migration. Legacy mode will be supported for the foreseeable future to avoid unnecessary disruption. If that's the option you want to take, simply add the following document attribute at the start of your document, or wherever you want to enable legacy mode.
 
-```
+[source]
+----
 :compat-mode:
-```
+----
 
 If you want to begin migration to the modern syntax, read on.
 
