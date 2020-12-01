@@ -37,7 +37,7 @@ If sufficient room available is not available (i.e., the screen width falls belo
 
 NOTE: The TOC is always placed in the center in an embeddable HTML document, regardless of the value of the `toc` attribute.
 
-[#preamble]
+[#beneath-preamble]
 == Display the TOC beneath the preamble
 
 When `toc` is assigned the built-in value `preamble`, the TOC is placed immediately below the xref:blocks:preamble-and-lead.adoc[preamble].
@@ -55,6 +55,7 @@ image::toc-preamble.png[Display the table of contents below the preamble,role=sc
 CAUTION: When using the `preamble` value, the TOC will not appear if your document does not have a preamble.
 To fix this problem, set the `toc` attribute to an empty value (i.e., leave the value blank) or assign it the value `auto`.
 
+[#at-macro]
 == Use the TOC macro to position the TOC
 
 To place the TOC in specific location in the document, assign the `macro` value to the `toc` attribute.
@@ -75,6 +76,7 @@ The result of <<ex-macro>> is displayed below.
 
 image::toc-macro.png[Display the table of contents using the TOC macro,role=screenshot]
 
+[#limitations]
 == Embeddable HTML, editor and previewer limitations
 
 When AsciiDoc is converted to embeddable HTML (i.e., the `header_footer` option is `false`), there are only three valid values for the `toc` attribute:

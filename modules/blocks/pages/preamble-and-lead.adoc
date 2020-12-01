@@ -1,6 +1,6 @@
 = Preamble and Lead Style
 
-[#preamble]
+[#preamble-style]
 == Preamble
 
 Content between the end of the xref:document:header.adoc[document header] and the first section title in the document body is called the preamble.
