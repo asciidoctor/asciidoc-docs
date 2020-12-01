@@ -79,9 +79,10 @@ The option `skip` doesn't make sense here since the statement is not intended to
 
 Consider the following declaration:
 
-```
+[source]
+----
 {set:name!}
-```
+----
 
 Depending on whether `attribute-undefined` is `drop` or `drop-line`, either the statement or the line that contains it will be discarded.
 It's reasonable to stick with the compliant behavior, drop-line, in this case.

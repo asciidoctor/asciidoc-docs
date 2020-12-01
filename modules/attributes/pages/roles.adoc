@@ -100,13 +100,15 @@ The HTML source code that is output from <<ex-role-dot>> is shown below.
 ////
 Using the shorthand notation, an id can also be specified:
 
-```
+[source]
+----
 [#value.value]`monospace text`
-```
+----
 
 which produces:
 
-```html
+[source,html]
+----
 <a id="value"></a><code class="value">monospace text</code>
-```
+----
 ////
