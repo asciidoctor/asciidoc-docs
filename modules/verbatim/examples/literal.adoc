@@ -8,7 +8,8 @@ A normal paragraph.
 
  A paragraph indented by at least one space becomes a
  literal paragraph.
- It's displayed as preformatted text.
+
+ A literal paragraph is displayed as preformatted text.
  The text is shown in a fixed-width font.
  Spaces and newlines,
  like the ones in this sentence,

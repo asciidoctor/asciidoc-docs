@@ -1,12 +1,13 @@
 = AsciiDoc Syntax Quick Reference
-:navtitle: AsciiDoc Syntax Reference
+:navtitle: Syntax Quick Reference
 :description: The quick reference for common AsciiDoc document and text formatting markup.
+:collapsible:
 :url-char-xml: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
 :url-data-uri: https://developer.mozilla.org/en-US/docs/data_URIs
 
 [IMPORTANT]
 The examples on this page focus on the output produced for the html backend.
-AsciiDoc is expected to complementary output when generating PDF, EPUB, and DocBook.
+An AsciiDoc converter is expected to produce complementary output when generating other output formats, such as PDF, EPUB, and DocBook.
 
 == Paragraphs
 
@@ -37,8 +38,14 @@ include::verbatim:example$literal.adoc[tag=qr-para]
 .Lead paragraph
 [#ex-lead]
 ----
-include::text:example$text.adoc[tag=b-lead]
+include::text:example$text.adoc[tag=qr-lead]
 ----
+
+.View result of <<ex-lead>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=qr-lead]
+====
 
 The default Asciidoctor stylesheet automatically styles the first paragraph of the preamble as a xref:blocks:preamble-and-lead.adoc[lead paragraph] if no role is specified on that paragraph.
 
@@ -167,13 +174,13 @@ This feature enables a reader to easily bookmark the section.
 include::directives:example$include.adoc[tag=base]
 ----
 
-.Include content from a URI
+.Include content from a URL
 ----
 include::directives:example$include.adoc[tag=uri]
 ----
 
-NOTE: Including content from a URI is potentially dangerous, so it's disabled if the safe mode is SECURE or greater.
-Assuming the safe mode is less than SECURE, you must also set the `allow-uri-read` attribute to permit Asciidoctor to read content from a URI.
+NOTE: Including content from a URL is potentially dangerous, so it's disabled if the safe mode is SECURE or greater.
+Assuming the safe mode is less than SECURE, you must also set the `allow-uri-read` attribute to permit Asciidoctor to read content from a URL.
 
 == Breaks
 
@@ -229,8 +236,8 @@ include::lists:example$unordered.adoc[tag=qr-base]
 ====
 
 TIP: A blank line is required before and after a list to separated it from other blocks.
-You can force two adjacent lists apart by inserting a blank line followed by a line comment after the first list.
-The convention is to use `//-` as the line comment to provide a hint to other authors that it's a list divider.
+You can force two adjacent lists apart by adding a blank attribute list (i.e., `[]`) above the second list or by inserting a blank line followed by a line comment after the first list.
+If you use a line comment, the convention is to use `//-` to provide a hint to other authors that it's serving as a list divider.
 
 .Unordered list max level nesting
 [#ex-ul-max]
@@ -244,7 +251,7 @@ include::lists:example$unordered.adoc[tag=max]
 include::lists:example$unordered.adoc[tag=max]
 ====
 
-The xref:lists:unordered.adoc#markers[unordered list marker] can be changed.
+The xref:lists:unordered.adoc#markers[unordered list marker] can be changed using a list style (e.g., `square`).
 
 .Ordered list
 [#ex-ol]
@@ -283,8 +290,6 @@ include::lists:example$checklist.adoc[tag=check]
 ====
 include::lists:example$checklist.adoc[tag=check]
 ====
-
-Checklists can use xref:lists:checklist.adoc[font-based icons and be interactive].
 
 .Description list
 [#ex-dlist]
@@ -514,7 +519,7 @@ include::text:example$text.adoc[tag=b-mono-code]
 include::text:example$text.adoc[tag=b-mono-code]
 ====
 
-.Inline as monospace and literal
+.Inline as monospace and literal (i.e., literal monospace)
 [#ex-inline-literal]
 ----
 include::pass:example$pass.adoc[tag=backtick-plus]
@@ -629,8 +634,9 @@ include::verbatim:example$source.adoc[tag=ind]
 
 [NOTE]
 ====
-* When `indent` is 0, the leading block indent is stripped (tabs are replaced with 4 spaces).
-* When `indent` is > 0, the leading block indent is first stripped (tabs are replaced with 4 spaces), then a block is indented by the number of columns equal to this value.
+When indent is 0, the leading block indent is stripped (tabs are replaced with 4 spaces).
+
+When indent is > 0, the leading block indent is first stripped (tabs are replaced with 4 spaces), then a block is indented by the number of columns equal to this value.
 ====
 
 .Source paragraph (no blank lines)
@@ -733,15 +739,23 @@ include::blocks:example$quote.adoc[tag=abbr]
 [#ex-open]
 ----
 include::blocks:example$open.adoc[tag=base]
-
-include::blocks:example$open.adoc[tag=src]
 ----
 
 .View result of <<ex-open>>
 [%collapsible.result]
 ====
 include::blocks:example$open.adoc[tag=base]
+====
 
+.Masquerading open block
+[#ex-masquerade]
+----
+include::blocks:example$open.adoc[tag=src]
+----
+
+.View result of <<ex-masquerade>>
+[%collapsible.result]
+====
 include::blocks:example$open.adoc[tag=src]
 ====
 

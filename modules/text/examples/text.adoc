@@ -53,11 +53,17 @@ Topazes are blue.
 This is the ultimate paragraph.
 // end::lead[]
 
-//in qr
 // tag::b-lead[]
 [.lead]
 This text will be styled as a lead paragraph (i.e., larger font).
 // end::b-lead[]
+
+// tag::qr-lead[]
+[.lead]
+This text will be styled as a lead paragraph (i.e., larger font).
+
+This paragraph will not be.
+// end::qr-lead[]
 
 // tag::b-i[]
 _To tame_ the wild wolpertingers we needed to build a *charm*.
@@ -120,6 +126,8 @@ but these could be normal groceries for werewolves.`"
 '`single curved quotes`'
 
 Olaf's desk was a mess.
+
+A ``std::vector```'s size is the number of items it contains.
 
 All of the werewolves`' desks were a mess.
 

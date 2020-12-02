@@ -132,11 +132,9 @@
 // in qr
 // tag::b-col-indv-co[]
 .Applications
-[cols="1,1,2",options="header"] // <.>
+[cols="1,1,2"] // <.>
 |===
-|Name
-|Category
-|Description
+|Name |Category |Description
 
 |Firefox
 |Browser
@@ -153,11 +151,9 @@ Empowers developers to easily create real, automated tests.
 
 // tag::b-col-indv[]
 .Applications
-[cols="1,1,2",options="header"]
+[cols="1,1,2"]
 |===
-|Name
-|Category
-|Description
+|Name |Category |Description
 
 |Firefox
 |Browser

@@ -88,8 +88,8 @@ Cloud Providers::
 // in qr
 // tag::qa[]
 [qanda]
-This is a question?::
-This is its answer.
+What is the answer?::
+This is the answer.
 
 Have you seen my duck?:: No.
 // end::qa[]
