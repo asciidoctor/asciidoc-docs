@@ -164,14 +164,16 @@ The presence of at least one part implicitly makes the document a multi-part boo
 include::sections:example$section.adoc[tag=book]
 ----
 
+////
+xref:sections:title-links.adoc#link[sectlinks]::
+When the document attribute `sectlinks` is set, section titles become self-links.
+This feature allows a reader to easily bookmark the section.
+
 xref:sections:title-links.adoc#anchor[sectanchors]::
 When the document attribute `sectanchors` is set, a floating section icon anchor appears in front of the section title on hover.
-This feature enables a reader to easily bookmark the section.
+This feature provides an alternate way for the reader to easily bookmark the section.
 Section title anchors depend on support from the stylesheet to render properly.
-
-xref:sections:title-links.adoc#link[sectlinks]::
-When the document attribute `sectlinks` is set, the section titles become self-links.
-This feature enables a reader to easily bookmark the section.
+////
 
 .Explicit section ID (aka anchor)
 ----
