@@ -62,12 +62,12 @@ Click image:macros:pause.png[title="Pause"] when you need a break.
 
 // in qr as syntax
 // tag::in-role[]
-image:sunset.jpg[Sunset,150,150,role="right"] What a beautiful sunset!
+image:sunset.jpg[Sunset,150,150,role=right] What a beautiful sunset!
 // end::in-role[]
 
 // in qr as result
 // tag::qr-role[]
-image:macros:sunset.jpg[Sunset,150,150,role="right"] What a beautiful sunset!
+image:macros:sunset.jpg[Sunset,150,150,role=right] What a beautiful sunset!
 // end::qr-role[]
 
 // tag::role[]

@@ -466,9 +466,6 @@ include::macros:example$image.adoc[tag=inline]
 include::macros:example$image.adoc[tag=qr-inline]
 ====
 
-////
-from @graphitefriction: This example doesn't work (image isn't displayed, just its alt text). Need to fix.
-
 .Inline image macro with positioning role
 [#ex-image-role]
 ----
@@ -478,9 +475,8 @@ include::macros:example$image.adoc[tag=in-role]
 .View result of <<ex-image-role>>
 [%collapsible.result]
 ====
-include::macros:example$image.adoc[tag=in-role]
+include::macros:example$image.adoc[tag=qr-role]
 ====
-////
 
 .Embedded
 ----
