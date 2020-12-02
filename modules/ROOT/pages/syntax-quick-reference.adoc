@@ -35,6 +35,18 @@ include::verbatim:example$literal.adoc[tag=qr-para]
 include::verbatim:example$literal.adoc[tag=qr-para]
 ====
 
+.Hard line breaks
+[#ex-hardbreaks]
+----
+include::text:example$text.adoc[tag=hb-all]
+----
+
+.View result of <<ex-hardbreaks>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=hb-all]
+====
+
 .Lead paragraph
 [#ex-lead]
 ----
@@ -47,9 +59,9 @@ include::text:example$text.adoc[tag=qr-lead]
 include::text:example$text.adoc[tag=qr-lead]
 ====
 
-The default Asciidoctor stylesheet automatically styles the first paragraph of the preamble as a xref:blocks:preamble-and-lead.adoc[lead paragraph] if no role is specified on that paragraph.
+TIP: The default Asciidoctor stylesheet automatically styles the first paragraph of the preamble as a xref:blocks:preamble-and-lead.adoc[lead paragraph] if no role is specified on that paragraph.
 
-== Formatted text
+== Text formatting
 
 .Bold, italic, and monospace
 [#ex-format]
@@ -132,7 +144,7 @@ include::document:example$header.adoc[tag=qr-attributes]
 When the document type is `article` (the default), the document can only have one level-0 section title (`=`).
 This level-0 section title (i.e., the document title) must be in the document header.
 
-.Article doctype section levels
+.Article section levels
 [#ex-article]
 ----
 include::sections:example$section.adoc[tag=base]
@@ -145,9 +157,9 @@ include::sections:example$section.adoc[tag=b-base]
 ====
 
 The `book` document type can have additional level-0 section titles, which are interpreted as xref:sections:parts.adoc[parts].
-The presense of at least one part implicitly makes the document a multi-part book.
+The presence of at least one part implicitly makes the document a multi-part book.
 
-.Book doctype section levels
+.Book section levels
 ----
 include::sections:example$section.adoc[tag=book]
 ----
@@ -161,15 +173,21 @@ xref:sections:title-links.adoc#link[sectlinks]::
 When the document attribute `sectlinks` is set, the section titles become self-links.
 This feature enables a reader to easily bookmark the section.
 
-.Explicit section id (anchor)
+.Explicit section ID (aka anchor)
 ----
 [#null-values]
 == Primitive types and null values
 ----
 
+.Discrete heading (not a section)
+----
+[discrete]
+=== I'm an independent heading!
+----
+
 == Include files
 
-.Document parts
+.Include document parts
 ----
 include::directives:example$include.adoc[tag=base]
 ----
@@ -179,24 +197,12 @@ include::directives:example$include.adoc[tag=base]
 include::directives:example$include.adoc[tag=uri]
 ----
 
-NOTE: Including content from a URL is potentially dangerous, so it's disabled if the safe mode is SECURE or greater.
+WARNING: Including content from a URL is potentially dangerous, so it's disabled if the safe mode is SECURE or greater.
 Assuming the safe mode is less than SECURE, you must also set the `allow-uri-read` attribute to permit Asciidoctor to read content from a URL.
 
 == Breaks
 
-.Hard line break
-[#ex-hardline]
-----
-include::text:example$text.adoc[tag=hb-all]
-----
-
-.View result of <<ex-hardline>>
-[%collapsible.result]
-====
-include::text:example$text.adoc[tag=hb-all]
-====
-
-.Thematic break (horizontal rule)
+.Thematic break (aka horizontal rule)
 [#ex-thematic]
 ----
 before
@@ -583,12 +589,15 @@ include::verbatim:example$source.adoc[tag=src-base]
 include::verbatim:example$source.adoc[tag=src-base]
 ====
 
+.Enable source highlighting
 [IMPORTANT]
-.Enabling the source highlighter
 ====
 xref:verbatim:source-highlighter.adoc[Source highlighting] is enabled by setting the `source-highlighter` attribute in the document header or passed as an argument.
 
- :source-highlighter: rouge
+[source]
+----
+:source-highlighter: rouge
+----
 
 The built-in values are `coderay`, `highlightjs`, `rouge`, and `pygments`.
 ====
@@ -636,7 +645,7 @@ include::verbatim:example$source.adoc[tag=ind]
 ====
 When indent is 0, the leading block indent is stripped (tabs are replaced with 4 spaces).
 
-When indent is > 0, the leading block indent is first stripped (tabs are replaced with 4 spaces), then a block is indented by the number of columns equal to this value.
+When indent is greater than 0, the leading block indent is first stripped (tabs are replaced with 4 spaces), then a block is indented by the number of columns equal to this value.
 ====
 
 .Source paragraph (no blank lines)
@@ -739,23 +748,15 @@ include::blocks:example$quote.adoc[tag=abbr]
 [#ex-open]
 ----
 include::blocks:example$open.adoc[tag=base]
+
+include::blocks:example$open.adoc[tag=src]
 ----
 
 .View result of <<ex-open>>
 [%collapsible.result]
 ====
 include::blocks:example$open.adoc[tag=base]
-====
 
-.Masquerading open block
-[#ex-masquerade]
-----
-include::blocks:example$open.adoc[tag=src]
-----
-
-.View result of <<ex-masquerade>>
-[%collapsible.result]
-====
 include::blocks:example$open.adoc[tag=src]
 ====
 
@@ -1072,13 +1073,13 @@ include::attributes:example$counter.adoc[tag=base]
 include::attributes:example$counter.adoc[tag=base]
 ====
 
-== Text replacement
+== Text replacements
 
 include::subs:partial$subs-symbol-repl.adoc[]
 
 Any named, numeric or hexadecimal {url-char-xml}[XML character reference] is supported.
 
-== Escaping text
+== Escaping substitutions
 
 .Backslash
 [#ex-slash]
@@ -1116,13 +1117,12 @@ include::pass:example$pass.adoc[tag=b-3p-macro]
 include::pass:example$pass.adoc[tag=b-3p-macro]
 ====
 
-== Table of Contents
+== Automatic TOC
 
 .Activate Table of Contents for a document
 ----
 = Document Title
 Doc Writer <doc.writer@email.org>
-v1.0, 2022-08-01
 :toc:
 ----
 

@@ -9,7 +9,7 @@ This document provides...
 // tag::qr-rev[]
 = Document Title
 Author Name <author@email.org>
-v1.0, 2023-01-01
+v2.0, 2019-03-22
 
 This document provides...
 // end::qr-rev[]
@@ -17,7 +17,7 @@ This document provides...
 // tag::qr-attributes[]
 = Document Title
 Author Name <author@email.org>
-v2.0, 2023-04-11
+v2.0, 2019-03-22
 :toc:
 :homepage: https://example.org
 
