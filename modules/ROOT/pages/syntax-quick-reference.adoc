@@ -75,7 +75,7 @@ include::text:example$text.adoc[tag=b-bold-italic-mono]
 include::text:example$text.adoc[tag=b-bold-italic-mono]
 ====
 
-.Highlight, underline, and strikethrough
+.Highlight, underline, strikethrough, and custom role
 [#ex-lines]
 ----
 include::text:example$text.adoc[tag=qr-all]

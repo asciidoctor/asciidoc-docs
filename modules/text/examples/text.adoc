@@ -205,6 +205,8 @@ Werewolves are #allergic to cinnamon#.
 Where did all the [.underline]#cores# go?
 
 We need [.line-through]#ten# twenty VMs.
+
+A [.myrole]#custom role# must be fulfilled by the theme.
 // end::qr-all[]
 
 // tag::css-custom[]
