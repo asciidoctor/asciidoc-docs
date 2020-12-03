@@ -36,8 +36,7 @@ you can write it as `+SQL{pp}+`.
 
 // in qr
 // tag::backtick-plus[]
-Output literal monospace text such as `+{backtick}+`
-by enclosing the text in pluses, then in backticks.
+Output literal monospace text such as `+{backtick}+` or `+http://localhost:8080+` by enclosing the text in a pair of pluses surrounded by a pair backticks.
 // end::backtick-plus[]
 
 // tag::sub-in[]

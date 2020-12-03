@@ -92,9 +92,9 @@ require 'sinatra'
 
 // in qr
 // tag::ind[]
-[source,ruby,indent=0]
+[source,ruby]
 ----
-\include::lib/document.rb[lines=5..10]
+\include::lib/app.rb[tag=main,indent=0]
 ----
 // end::ind[]
 
