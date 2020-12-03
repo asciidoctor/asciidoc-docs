@@ -55,8 +55,8 @@ _Ideally a pattern not found in the cell content._
 |border on all sides (default)
 .4+|
 
-|topbot
-|border on top and bottom
+|ends
+|border on top and bottom ends
 
 |none
 |no borders
