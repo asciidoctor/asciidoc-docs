@@ -9,19 +9,19 @@ You can combine these two attributes to achieve a variety of border styles for y
 
 The border around a table is controlled using the `frame` attribute.
 By default, the frame attribute is assigned the `all` value, which draws a border on each side of the table.
-If you set the frame attribute, you can override the default value with the values `topbot`, `sides` or `none`.
+You can override the default value by setting the frame attribute on the table to the value `ends`, `sides` or `none`.
 
-The `topbot` value draws a border on the top and bottom of the table.
+The `ends` value draws a border on the top and bottom of the table.
 
-.Table with frame=topbot
-[source#ex-topbot]
+.Table with frame=ends
+[source#ex-ends]
 ----
-[frame=topbot]
+[frame=ends]
 include::example$row.adoc[tag=base-h]
 ----
 
-.Result of <<ex-topbot>>
-[frame=topbot]
+.Result of <<ex-ends>>
+[frame=ends]
 include::example$row.adoc[tag=base-h]
 
 The `sides` value draws a border on the right and left side of the table.
