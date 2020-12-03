@@ -7,7 +7,7 @@ The size and precise placement of the text depends on the font and other stylesh
 
 == Subscript and superscript syntax
 
-Text is subscripted when you enclose it in a set of tildes (`{tilde}`) and superscripted with a set of carets (`{caret}`)
+Text is subscripted when you enclose it in a pair of tildes (`{tilde}`) and superscripted with a pair of carets (`{caret}`)
 
 Subscript:: One tilde (`{tilde}`) on either side of a word or phrase makes it subscript.
 Superscript:: One caret (`{caret}`) on either side of a word or phrase makes it superscript.

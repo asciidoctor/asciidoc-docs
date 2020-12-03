@@ -1,9 +1,9 @@
-= Troubleshoot Unconstrained Formatting Sets
+= Troubleshoot Unconstrained Formatting Pairs
 
-An xref:index.adoc#unconstrained-set[unconstrained formatting set] is often used to format just one or a few characters in a word.
+An xref:index.adoc#unconstrained[unconstrained formatting pair] is often used to format just one or a few characters in a word.
 
-[#use-unconstrained-set]
-== When should I use an unconstrained set?
+[#use-unconstrained]
+== When should I use unconstrained formatting?
 
 Consider the following questions:
 
@@ -11,14 +11,14 @@ Consider the following questions:
 . Is there a colon, semicolon, or closing curly bracket directly before the opening formatting mark?
 . Is there a space directly inside of a formatting mark?
 
-If you answered "`yes`" to any of these questions, you need to use an unconstrained set.
+If you answered "`yes`" to any of these questions, you need to use an unconstrained pair.
 
-To help you determine whether a particular syntax pattern requires an unconstrained set versus a xref:index.adoc#constrained-set[constrained set], consider the following scenarios:
+To help you determine whether a particular syntax pattern requires an unconstrained pair versus a xref:index.adoc#constrained[constrained pair], consider the following scenarios:
 
 .Constrained or Unconstrained?
 [#constrained-or-unconstrained]
 |===
-|AsciiDoc |Result |Formatting Set |Reason
+|AsciiDoc |Result |Formatting Pair |Reason
 
 |`+Sara__h__+`
 |Sara__h__
@@ -52,9 +52,9 @@ To help you determine whether a particular syntax pattern requires an unconstrai
 |===
 
 [#unconstrained-edge-cases]
-=== Unconstrained set edge cases
+=== Unconstrained pair edge cases
 
-There are cases when it might seem logical to use a constrained set, but an unconstrained set is required.
+There are cases when it might seem logical to use a constrained pair, but an unconstrained pair is required.
 xref:subs:substitutions.adoc[Substitutions] may be applied by the parser before getting to the formatting marks, in which case the characters adjacent to those marks may not be what you see in the original source.
 
 One such example is enclosing a xref:monospace.adoc[monospace phrase] inside xref:quotation-marks-and-apostrophes.adoc[curved quotation marks], such as "```end points```".
@@ -69,17 +69,17 @@ You might start with the following syntax:
 That only gives you "`end points`".
 The backticks contribute to making the curved quotation marks, but the word isn't rendered in monospace.
 
-Adding another set of backticks isn't enough either.
+Adding another pair of backticks isn't enough either.
 
 [source]
 ----
 "``end points``"
 ----
 
-The parser ignores the inner set of backticks and interprets them as literal characters, rendering the phrase as "``end points``".
+The parser ignores the inner pair of backticks and interprets them as literal characters, rendering the phrase as "``end points``".
 
-You have to use an unconstrained set of monospace formatting marks to render the phrase in monospace and a constrained set of backticks to render the quotation marks as curved.
-That's three sets of backticks in total.
+You have to use an unconstrained pair of monospace formatting marks to render the phrase in monospace and a constrained pair of backticks to render the quotation marks as curved.
+That's three pairs of backticks in total.
 
 .A monospace phrase inside curved quotation marks
 [source]

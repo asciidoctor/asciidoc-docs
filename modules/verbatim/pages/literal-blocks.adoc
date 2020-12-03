@@ -9,7 +9,7 @@ The literal style can be applied to content using any of the following methods:
 
 * indenting the first line of a paragraph by one or more spaces,
 * setting the `literal` style on a block using an attribute list, or
-* enclosing the content within a set of literal block delimiters (`\....` ).
+* enclosing the content within a pair of literal block delimiters (`\....` ).
 
 == Indent method
 
@@ -42,7 +42,7 @@ include::example$literal.adoc[tag=style]
 
 === Delimited literal block
 
-Finally, you can surround the content you want rendered as literal by enclosing it in a set of literal block delimiters (`\....`).
+Finally, you can surround the content you want rendered as literal by enclosing it in a pair of literal block delimiters (`\....`).
 This method is useful when the content contains blank lines.
 
 .Delimited literal block syntax

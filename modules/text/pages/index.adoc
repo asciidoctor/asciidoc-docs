@@ -1,26 +1,30 @@
 = Text Formatting and Punctuation
 
-Just as we emphasize certain words and phrases when we speak, we emphasize them in text with formatting and punctuation.
-AsciiDoc provides six inline text styles and one punctuation style that are applied solely with formatting marks and two built-in styles that are applied with an additional role.
-You can also create custom inline formatting roles.
+Just as we emphasize certain words and phrases when we speak, we emphasize words and phrases in text using formatting and punctuation.
+AsciiDoc provides an assortment of formatting marks for applying visual emphasis and typographic punctuation to your document.
+You can build on these basic formatting marks using built-in and user-defined roles.
+This page covers the formatting marks that AsciiDoc provides and the rules for applying and customizing them.
 
 == Formatting terms and concepts
 
-=== Formatting marks and sets
+=== Formatting marks and pairs
 
-A [#def-format-mark.term]*formatting mark* is a character, such as `+*+`, `_`, or `~`, that indicates the inline style you want Asciidoctor to apply to the text.
-Formatting marks come in sets.
+A [#def-format-mark.term]*formatting mark* is a symbolic character, such as `+*+`, `_`, or `~`, that indicates the inline style you want Asciidoctor to apply to the text.
+Formatting marks come in pairs.
 
-A [#def-format-set.term]*formatting set* consists of an identical opening mark and closing mark.
+A [#def-format-pair.term]*formatting pair* consists of an identical opening mark and closing mark that encloses the text you want to style.
 
-The [#def-open-mark.term]*opening mark* indicates where you want the style to start, and the [#def-close-mark.term]*closing mark* indicates where you want the style to end.
-Depending on where the formatting marks of a set are placed, a formatting set is either constrained or unconstrained.
+The [#def-open-mark.term]*opening mark* specifies where you want the style to start.
+The [#def-close-mark.term]*closing mark* specifies where you want the style to end.
 
-[#constrained-set]
-=== Constrained set
+A formatting pair is defined as either constrained or unconstrained, depending on where it's allowed to be applied.
+An unconstrained pair can be applied anywhere, whereas the application of a constrained pair is more limited.
 
-When a blank space directly precedes the formatting set's opening mark and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`) directly follows the set's closing mark, the formatting set is referred to as a [.term]*constrained set*.
-A constrained set uses a single opening mark and a single closing mark to enclose the text that will be styled.
+[#constrained]
+=== Constrained formatting pair
+
+When a blank space directly precedes the text to format, and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, or `!`) directly follows the text, a [.term]*constrained formatting pair* can be used.
+A constrained pair uses a single opening mark and a single closing mark to enclose the text to be styled (e.g., `+*strong*+`).
 
 For example, you use this form to format a word that stands alone,
 
@@ -43,19 +47,26 @@ or to format a word adjacent to punctuation, like an exclamation mark.
 This stuff is *strong*!
 ----
 
-[#unconstrained-set]
-=== Unconstrained set
+As you can see, the constrained pair offers a more succinct markup at the tradeoff of having more limited (constrained) use.
+However, it should suffice in most cases, so the abbreviated markup is a benefit.
+You can think of a constrained pair as being a weaker markup than an unconstrained pair.
 
-A double set of formatting marks is required to enclose text when the opening mark isn't directly preceded by a blank space or the closing mark isn't directly followed by a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`).
-In this context, a formatting set is an [.term]*unconstrained set*.
-You use the unconstrained syntax to format just one or a few letters in a word.
+[#unconstrained]
+=== Unconstrained formatting pair
+
+When a blank space does not precede the text to format, or a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, or `!`) does not directly follow the text, or the text does not start or end with a word character, a [.term]*unconstrained formatting pair* must be used.
+An unconstrained pair uses a double opening mark and a double closing mark to enclose the text to be styled (e.g., `+Sara**h**+`).
+
+For example, you'd use an unconstrained pair to format just one or a few letters in a word.
 
 [source]
 ----
 She spells her name with an "`h`", as in Sara**h**.
 ----
 
-See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained set?] for more examples and information.
+The unconstrained pair provides a more brute force approach to formatting at the tradeoff of being more verbose.
+You'll typically switch to an unconstrained pair when a constrained pair doesn't do the trick.
+See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained pair?] for more examples of when to use an unconstrained pair.
 
 == Inline text and punctuation styles
 
@@ -98,7 +109,7 @@ xref:quotation-marks-and-apostrophes.adoc[Curved quotation marks and apostrophes
 By default, Asciidoctor uses straight quotation marks and apostrophes.
 They can be changed to curved using the backtick (`++`++`) formatting mark.
 
-== Quotes substitutions
+== Quotes substitution
 
 When Asciidoctor processes text enclosed by inline formatting syntax, the marks are replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution step].
 You can control when inline formatting is applied to inline text, macros, or blocks with the xref:subs:quotes.adoc#quotes-value[quotes substitution value].

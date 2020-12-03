@@ -6,8 +6,8 @@ Bold is useful when the text needs to catch the attention of a site visitor quic
 
 == Bold syntax
 
-You can mark a word or phrase as bold by enclosing it in a single set of asterisks (e.g., `+*word*+`) (constrained).
-You can mark bounded characters (i.e., characters within a word) as bold by enclosing them in a set of double asterisks (e.g., `+char**act**ers+`) (unconstrained).
+You can mark a word or phrase as bold by enclosing it in a single pair of asterisks (e.g., `+*word*+`) (constrained).
+You can mark bounded characters (i.e., characters within a word) as bold by enclosing them in a pair of double asterisks (e.g., `+char**act**ers+`) (unconstrained).
 
 .Bold inline formatting
 [source#ex-bold]
@@ -37,8 +37,8 @@ You can add multiple emphasis styles to bold text as long as the syntax is place
 `*_monospace bold italic phrase_*` & ``**__char__**``acter``**__s__**``
 ----
 
-xref:monospace.adoc[Monospace syntax] (`++`++`) must be the outermost formatting set (i.e., outside the bold formatting set).
-xref:italic.adoc[Italic syntax] (`+_+`) is always the innermost formatting set.
+xref:monospace.adoc[Monospace syntax] (`++`++`) must be the outermost formatting pair (i.e., outside the bold formatting pair).
+xref:italic.adoc[Italic syntax] (`+_+`) is always the innermost formatting pair.
 
 The results of <<ex-mix>> are displayed below.
 
