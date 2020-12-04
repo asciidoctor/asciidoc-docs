@@ -1,14 +1,22 @@
-////
-Included in:
-- user-manual: User Interface Macros
-- quick-ref
-////
-
+// in qr
 // tag::button[]
 Press the btn:[OK] button when you are finished.
 
 Select a file in the file navigator and click btn:[Open].
 // end::button[]
+
+// in qr
+// tag::qr-key[]
+|===
+|Shortcut |Purpose
+
+|kbd:[F11]
+|Toggle fullscreen
+
+|kbd:[Ctrl+T]
+|Open a new tab
+|===
+// end::qr-key[]
 
 // tag::key[]
 |===
@@ -34,6 +42,7 @@ Select a file in the file navigator and click btn:[Open].
 |===
 // end::key[]
 
+// in qr
 // tag::menu[]
 To save the file, select menu:File[Save].
 

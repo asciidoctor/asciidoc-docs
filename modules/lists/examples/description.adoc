@@ -1,8 +1,4 @@
 ////
-Included in:
-- user-manual: Description list
-- quick-ref
-
 .Description list
 [source]
 ----
@@ -34,17 +30,13 @@ Hard drive:: Permanent storage for operating system and/or user files.
 RAM:: Temporarily stores information the CPU uses during operation.
 // end::base-horz[]
 
-// tag::b-base[]
-first term:: definition of first term
-second term:: definition of second term
-// end::b-base[]
-
-// tag::b-base-multi[]
-first term::
-definition of first term
-second term::
-definition of second term
-// end::b-base-multi[]
+// tag::qr-base[]
+First term:: The description can be placed on the same line
+as the term.
+Second term::
+Description of the second term.
+The description can also start on its own line.
+// end::qr-base[]
 
 // tag::base-mix[]
 Dairy::
@@ -71,6 +63,7 @@ Produce::
   * Bananas
 // end::base-mix-alt[]
 
+// in qr
 // tag::3-mix[]
 Operating Systems::
   Linux:::
@@ -92,9 +85,11 @@ Cloud Providers::
     . Rackspace
 // end::3-mix[]
 
+// in qr
 // tag::qa[]
 [qanda]
-What is Asciidoctor?::
-  An implementation of the AsciiDoc processor in Ruby.
-What is the answer to the Ultimate Question?:: 42
+What is the answer?::
+This is the answer.
+
+Have you seen my duck?:: No.
 // end::qa[]

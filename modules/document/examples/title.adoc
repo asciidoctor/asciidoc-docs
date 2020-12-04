@@ -1,8 +1,9 @@
-// tag::b-base[]
-= My Document's Title
+// used in qr
+// tag::qr-title[]
+= Document Title
 
-My document provides...
-// end::b-base[]
+This document provides...
+// end::qr-title[]
 
 // tag::sub-1[]
 = The Intrepid Chronicles: A Tale of Caffeine and Words

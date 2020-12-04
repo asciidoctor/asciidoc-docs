@@ -39,7 +39,7 @@ When you set an attribute in the body, it's visible from the point it's set unti
 
 == Compliance attributes
 
-[%autowidth,cols="m,^,,^,^,"]
+[%autowidth,cols="~m,^~,~,^~,^~,~"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set  |Notes
 
@@ -88,7 +88,7 @@ Useful for storing the output in a source code control system as it prevents spu
 [#builtin-attributes-i18n]
 == Internationalization and numbering
 
-[%autowidth,cols="m,^,,^,^,"]
+[%autowidth,cols="~m,^~,~,^~,^~,~"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 

@@ -4,31 +4,34 @@ This journey begins one late Monday afternoon in Antwerp.
 Our team desperately needs coffee, but none of us dare open the office door.
 // end::para[]
 
+// used in qr
+// FIXME this should be in the blocks module
 // tag::b-para[]
-Paragraphs don't require any special markup in AsciiDoc.
-A paragraph is just one or more lines of consecutive text.
-
-To begin a new paragraph, separate it by at least one blank line.
+Paragraphs don't require special markup in AsciiDoc.
+A paragraph is defined by one or more consecutive lines of text.
 Newlines within a paragraph are not displayed.
+
+Leave at least one blank line to begin a new paragraph.
 // end::b-para[]
 
+//used in qr
 // tag::hb-all[]
-Rubies are red, +
-Topazes are blue.
+Roses are red, +
+violets are blue.
 
 [%hardbreaks]
-Ruby is red.
+A ruby is red.
 Java is black.
 // end::hb-all[]
 
 // tag::hb[]
-Rubies are red, +
-Topazes are blue.
+Roses are red, +
+violets are blue.
 // end::hb[]
 
 // tag::hb-p[]
 [%hardbreaks]
-Ruby is red.
+A ruby is red.
 Java is black.
 // end::hb-p[]
 
@@ -41,8 +44,8 @@ This results in a visible line break (e.g., `<br>`) between the lines.
 = Line Break Doc Title
 :hardbreaks-option:
 
-Rubies are red,
-Topazes are blue.
+Roses are red,
+violets are blue.
 // end::hb-attr[]
 
 // tag::lead[]
@@ -54,6 +57,13 @@ This is the ultimate paragraph.
 [.lead]
 This text will be styled as a lead paragraph (i.e., larger font).
 // end::b-lead[]
+
+// tag::qr-lead[]
+[.lead]
+This text will be styled as a lead paragraph (i.e., larger font).
+
+This paragraph will not be.
+// end::qr-lead[]
 
 // tag::b-i[]
 _To tame_ the wild wolpertingers we needed to build a *charm*.
@@ -67,6 +77,7 @@ But **u**ltimate victory could only be won if we divined the
 *_true name_* of the __war__lock.
 // end::b-i-n[]
 
+// used in qr
 // tag::b-bold-italic-mono[]
 bold *constrained* & **un**constrained
 
@@ -83,6 +94,29 @@ monospace italic `_constrained_` & ``__un__``constrained
 monospace bold italic `*_constrained_*` & ``**__un__**``constrained
 // end::b-bold-italic-mono[]
 
+// tag::constrained-bold-italic-mono[]
+It has *strong* significance to me.
+
+I _cannot_ stress this enough.
+
+Type `OK` to accept.
+
+That *_really_* has to go.
+
+Can't pick one? Let's use them `*_all_*`.
+// end::constrained-bold-italic-mono[]
+
+// tag::unconstrained-bold-italic-mono[]
+**C**reate, **R**ead, **U**pdate, and **D**elete (CRUD)
+
+That's fan__freakin__tastic!
+
+Don't pass generic ``Object``s to methods that accept ``String``s!
+
+It was Beatle**__mania__**!
+// end::unconstrained-bold-italic-mono[]
+
+// used in qr
 // tag::monospace-vs-codespan[]
 `{cpp}` is valid syntax in the programming language by the same name.
 
@@ -107,12 +141,15 @@ Kizmet shrugged.
 but these could be normal groceries for werewolves.`"
 // end::c-quote[]
 
+// used in qr
 // tag::b-c-quote[]
 "`double curved quotes`"
 
 '`single curved quotes`'
 
 Olaf's desk was a mess.
+
+A ``std::vector```'s size is the number of items it contains.
 
 All of the werewolves`' desks were a mess.
 
@@ -133,6 +170,7 @@ of a shopping list, but I don't think the local bodega sells
 E=mc^2^,`" Lazarus replied.
 // end::sub-sup[]
 
+//used in qr
 // tag::b-sub-sup[]
 ^super^script phrase
 
@@ -147,13 +185,15 @@ but also pure _genius!_
 // end::mono[]
 
 // tag::literal-mono[]
-You can reference the value of a document attribute using the syntax `+{name}+`, where `name` is the attribute name.
+You can reference the value of a document attribute using
+the syntax `+{name}+`, where `name` is the attribute name.
 // end::literal-mono[]
 
 // tag::literal-mono-with-plus[]
 `pass:[++]` is the increment operator in C.
 // end::literal-mono-with-plus[]
 
+// used in qr
 // tag::b-mono-code[]
 Reference code like `types` or `methods` inline.
 
@@ -180,17 +220,18 @@ Do werewolves believe in [.small]#small print#?
 [big]##O##nce upon an infinite loop.
 // end::css[]
 
-// tag::css-all[]
-Werewolves are allergic to #cassia cinnamon#.
+// used in qr
+// tag::qr-all[]
+Werewolves are allergic to #cinnamon#.
 
-Did the werewolves read the [.small]#small print#?
+##Mark##up refers to text that contains formatting ##mark##s.
 
-Where did all the [.underline]#cores# run off to?
+Where did all the [.underline]#cores# go?
 
-We need [.line-through]#ten# make that twenty VMs.
+We need [.line-through]#ten# twenty VMs.
 
-[.big]##O##nce upon an infinite loop.
-// end::css-all[]
+A [.myrole]#custom role# must be fulfilled by the theme.
+// end::qr-all[]
 
 // tag::css-custom[]
 Type the word [.userinput]#asciidoctor# into the search bar.

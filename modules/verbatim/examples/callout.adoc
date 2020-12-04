@@ -1,3 +1,4 @@
+// in qr
 // tag::b-nonselect[]
 ----
 line of code // <1>
@@ -11,6 +12,7 @@ line of code <!--4-->
 <4> A callout behind a line comment for XML or SGML languages like HTML.
 // end::b-nonselect[]
 
+// in qr
 // tag::source-xml[]
 [source,xml]
 ----
@@ -35,6 +37,7 @@ end
 <3> Response block
 // end::basic[]
 
+// in qr
 // tag::b-src[]
 [source,ruby]
 ----

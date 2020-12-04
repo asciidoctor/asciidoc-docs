@@ -1,7 +1,4 @@
-////
-Examples for table data format section
-////
-
+// all tags are in qr
 // tag::csv[]
 [%header,format=csv]
 |===

@@ -20,6 +20,22 @@
 |=== // <1>
 // end::base-co[]
 
+// in qr
+// tag::b-col-h-co[]
+[%header,cols=2*] <.>
+|===
+|Name of Column 1
+|Name of Column 2
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+// end::b-col-h-co[]
+
+// in qr
 // tag::b-col-h[]
 [%header,cols=2*]
 |===
@@ -85,63 +101,44 @@
 |===
 // end::indv[]
 
+// in qr
 // tag::b-base-h-co[]
 .Table Title
 |===
-|Name of Column 1 |Name of Column 2 |Name of Column 3 // <1>
-// <2>
+|Column 1, Header Row |Column 2, Header Row <.>
+<.>
 |Cell in column 1, row 1
 |Cell in column 2, row 1
-|Cell in column 3, row 1
 
 |Cell in column 1, row 2
 |Cell in column 2, row 2
-|Cell in column 3, row 2
 |===
 // end::b-base-h-co[]
 
+// in qr
 // tag::b-base-h[]
 .Table Title
 |===
-|Name of Column 1 |Name of Column 2 |Name of Column 3
+|Column 1, Header Row |Column 2, Header Row
 
 |Cell in column 1, row 1
 |Cell in column 2, row 1
-|Cell in column 3, row 1
 
 |Cell in column 1, row 2
 |Cell in column 2, row 2
-|Cell in column 3, row 2
 |===
 // end::b-base-h[]
 
-// tag::b-col-h-co[]
-[%header,cols=2*] // <1>
-|===
-|Name of Column 1
-|Name of Column 2
-
-|Cell in column 1, row 1
-|Cell in column 2, row 1
-
-|Cell in column 1, row 2
-|Cell in column 2, row 2
-|===
-// end::b-col-h-co[]
-
-
-
+// in qr
 // tag::b-col-indv-co[]
-[cols="1,1,2", options="header"] // <1>
 .Applications
+[cols="1,1,2"] // <.>
 |===
-|Name
-|Category
-|Description
+|Name |Category |Description
 
 |Firefox
 |Browser
-|Mozilla Firefox is an open-source web browser.
+|Mozilla Firefox is an open source web browser.
 It's designed for standards compliance,
 performance, portability.
 
@@ -153,16 +150,14 @@ Empowers developers to easily create real, automated tests.
 // end::b-col-indv-co[]
 
 // tag::b-col-indv[]
-[cols="1,1,2", options="header"]
 .Applications
+[cols="1,1,2"]
 |===
-|Name
-|Category
-|Description
+|Name |Category |Description
 
 |Firefox
 |Browser
-|Mozilla Firefox is an open-source web browser.
+|Mozilla Firefox is an open source web browser.
 It's designed for standards compliance,
 performance, portability.
 
@@ -173,12 +168,13 @@ Empowers developers to easily create real, automated tests.
 |===
 // end::b-col-indv[]
 
+// in qr
 // tag::b-col-a[]
 [cols="2,2,5a"]
 |===
 |Firefox
 |Browser
-|Mozilla Firefox is an open-source web browser.
+|Mozilla Firefox is an open source web browser.
 
 It's designed for:
 

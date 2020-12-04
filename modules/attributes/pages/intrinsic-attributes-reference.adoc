@@ -7,7 +7,7 @@ Like all document attributes, the value of an intrinsic attributes can be access
 Many of these attributes are intended to be read only.
 
 // tag::table[]
-[#env-attributes-table%autowidth,cols="m,,m"]
+[#env-attributes-table%autowidth,cols="~m,~,~m"]
 |===
 |Attribute |Description |Example Value
 
