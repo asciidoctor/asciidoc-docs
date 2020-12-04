@@ -5,9 +5,10 @@ Our team desperately needs coffee, but none of us dare open the office door.
 // end::para[]
 
 // used in qr
+// FIXME this should be in the blocks module
 // tag::b-para[]
 Paragraphs don't require special markup in AsciiDoc.
-A paragraph is one or more lines of consecutive text.
+A paragraph is defined by one or more consecutive lines of text.
 Newlines within a paragraph are not displayed.
 
 Leave at least one blank line to begin a new paragraph.
@@ -15,23 +16,23 @@ Leave at least one blank line to begin a new paragraph.
 
 //used in qr
 // tag::hb-all[]
-Rubies are red, +
-Topazes are blue.
+Roses are red, +
+violets are blue.
 
 [%hardbreaks]
-Ruby is red.
-Java is brown.
+A ruby is red.
+Java is black.
 // end::hb-all[]
 
 // tag::hb[]
-Rubies are red, +
-Topazes are blue.
+Roses are red, +
+violets are blue.
 // end::hb[]
 
 // tag::hb-p[]
 [%hardbreaks]
-Ruby is red.
-Java is brown.
+A ruby is red.
+Java is black.
 // end::hb-p[]
 
 // tag::b-hb[]
@@ -43,8 +44,8 @@ This results in a visible line break (e.g., `<br>`) between the lines.
 = Line Break Doc Title
 :hardbreaks-option:
 
-Rubies are red,
-Topazes are blue.
+Roses are red,
+violets are blue.
 // end::hb-attr[]
 
 // tag::lead[]

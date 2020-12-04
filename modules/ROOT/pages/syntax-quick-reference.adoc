@@ -4,6 +4,8 @@
 :collapsible:
 :url-char-xml: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
 :url-data-uri: https://developer.mozilla.org/en-US/docs/data_URIs
+:!table-frame:
+:!table-grid:
 
 ////
 This document is not meant to be a replacement for the documentation of the AsciiDoc language itself.
@@ -13,7 +15,7 @@ It should not go into any depth about AsciiDoc processing or the options you can
 ////
 
 [IMPORTANT]
-The examples on this page focus on the output produced for the html backend.
+The examples on this page demonstrate the output produced for the html backend.
 An AsciiDoc converter is expected to produce complementary output when generating other output formats, such as PDF, EPUB, and DocBook.
 
 == Paragraphs
@@ -160,6 +162,9 @@ include::macros:example$url.adoc[tag=b-linkattrs]
 include::macros:example$url.adoc[tag=b-linkattrs]
 ====
 
+IMPORTANT: The `link:` macro prefix is _not_ required when the target starts with a URL scheme like `https:`.
+The URL scheme acts as an implicit macro prefix.
+
 CAUTION: If the linked text contains a comma and the text is followed by one or more named attributes, you must enclose the text in double quotes.
 Otherwise, the text will be cut off at the comma (and the remaining text will get pulled into the attribute parsing).
 
@@ -168,12 +173,12 @@ Otherwise, the text will be cut off at the comma (and the remaining text will ge
 include::macros:example$url.adoc[tag=b-spaces]
 ----
 
-.Link to relative page
+.Link to relative file
 ----
 link:index.html[Docs]
 ----
 
-.Link using a Windows path
+.Link using a Windows UNC path
 ----
 include::macros:example$url.adoc[tag=b-windows]
 ----
@@ -202,7 +207,7 @@ include::macros:example$xref.adoc[tag=b-inter]
 
 == Document header
 
-A xref:document:header.adoc[document header] is optional.
+The xref:document:header.adoc[document header] is optional.
 The header may not contain blank lines and must be separated from the content by at least one blank line.
 
 .Title
@@ -222,7 +227,7 @@ include::document:example$header.adoc[tag=qr-rev]
 
 IMPORTANT: You cannot have a xref:document:revision-line.adoc[revision line] without an xref:document:author-line.adoc[author line].
 
-.Document header with attributes
+.Document header with attribute entries
 ----
 include::document:example$header.adoc[tag=qr-attributes]
 ----
@@ -230,8 +235,7 @@ include::document:example$header.adoc[tag=qr-attributes]
 [#section-titles]
 == Section titles
 
-When the document type is `article` (the default), the document can only have one level-0 section title (`=`).
-This level-0 section title (i.e., the document title) must be in the document header.
+When the document type is `article` (the default), the document can only have one level-0 section title (`=`), which is the document title (i.e., doctitle).
 
 .Article section levels
 [#ex-article]
@@ -263,12 +267,6 @@ When the document attribute `sectanchors` is set, a floating section icon anchor
 This feature provides an alternate way for the reader to easily bookmark the section.
 Section title anchors depend on support from the stylesheet to render properly.
 ////
-
-.Explicit section ID (aka anchor)
-----
-[#null-values]
-== Primitive types and null values
-----
 
 .Discrete heading (not a section)
 ----
@@ -507,7 +505,7 @@ include::macros:example$video.adoc[tag=base]
 include::macros:example$video.adoc[tag=attr]
 ----
 
-.Embedded Youtube video
+.Embedded YouTube video
 ----
 include::macros:example$video.adoc[tag=you]
 ----
@@ -952,7 +950,7 @@ include::tables:example$cell.adoc[tag=b-spec]
 
 == IDs, roles, and options
 
-.Shorthand method for assigning block id and role
+.Shorthand method for assigning block ID (anchor) and role
 ----
 [#goals.incremental]
 * Goal 1
@@ -965,14 +963,20 @@ include::tables:example$cell.adoc[tag=b-spec]
 * The order of `id` and `role` values in the shorthand syntax does not matter.
 ====
 
-.Formal method for assigning block id (anchor) and role
+.Formal method for assigning block ID (anchor) and role
 ----
 [id="goals",role="incremental"]
 * Goal 1
 * Goal 2
 ----
 
-.Assigning id (anchor) and role to inline formatted text
+.Explicit section ID (aka anchor)
+----
+[#null-values]
+== Primitive types and null values
+----
+
+.Assigning ID (anchor) and role to inline formatted text
 ----
 [#id-name.role-name]`monospace text`
 
@@ -983,7 +987,8 @@ include::tables:example$cell.adoc[tag=b-spec]
 ----
 [%header%footer%autowidth]
 |===
-|Cell A |Cell B
+|Header A |Header B
+|Footer A |Footer B
 |===
 ----
 
@@ -991,7 +996,15 @@ include::tables:example$cell.adoc[tag=b-spec]
 ----
 [options="header,footer,autowidth"]
 |===
-|Cell A |Cell B
+|Header A |Header B
+|Footer A |Footer B
+|===
+
+// options can be shorted to opts
+[opts="header,footer,autowidth"]
+|===
+|Header A |Header B
+|Footer A |Footer B
 |===
 ----
 
@@ -1116,6 +1129,7 @@ include::attributes:example$counter.adoc[tag=base]
 
 == Text replacements
 
+[frame=none,grid=rows]
 include::subs:partial$subs-symbol-repl.adoc[]
 
 Any named, numeric or hexadecimal {url-char-xml}[XML character reference] is supported.

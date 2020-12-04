@@ -118,7 +118,7 @@ The cell's text is italicized and duplicated in column 3, row 3 and columns 1 an
 
 // in qr
 // tag::b-spec[]
-[cols="e,m,^,>s", width="25%"]
+[cols="e,m,^,>s",width="25%"]
 |===
 |1 >s|2 |3 |4
 ^|5 2.2+^.^|6 .3+<.>m|7

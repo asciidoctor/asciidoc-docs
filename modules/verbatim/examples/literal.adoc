@@ -6,10 +6,11 @@
 // tag::qr-para[]
 A normal paragraph.
 
- A literal paragraph, consecutive lines indented by at least a space.
+ A literal paragraph.
+ One or more consecutive lines indented by at least one space.
 
- A literal paragraph is displayed as preformatted text.
  The text is shown in a fixed-width (typically monospace) font.
+ The lines are preformatted (i.e., as formatted in the source).
  Spaces and newlines,
  like the ones in this sentence,
  are preserved.
@@ -19,7 +20,7 @@ A normal paragraph.
 // tag::b-imp-code[]
 Normal line.
 
- Indent line by one space to create a literal line
+ Indent line by one space to create a literal line.
 
 Normal line.
 // end::b-imp-code[]
