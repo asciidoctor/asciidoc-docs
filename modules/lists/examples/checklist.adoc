@@ -2,7 +2,7 @@
 * [*] checked
 * [x] also checked
 * [ ] not checked
-*     normal list item
+* normal list item
 // end::check[]
 
 // tag::check-int[]
@@ -10,12 +10,12 @@
 * [*] checked
 * [x] also checked
 * [ ] not checked
-*     normal list item
+* normal list item
 // end::check-int[]
 
 // tag::check-icon[]
 * [*] checked
 * [x] also checked
 * [ ] not checked
-*     normal list item
+* normal list item
 // end::check-icon[]

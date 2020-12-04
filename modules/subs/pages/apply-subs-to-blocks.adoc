@@ -4,7 +4,7 @@
 
 Substitution steps or groups can be applied to any block and certain inline elements by setting the `subs` attribute and assigning it a comma-separated list of one or more of the substitution group or step values.
 
-// tag::group[]
+[#subs-groups]
 `none`:: Substitution group that disables all substitutions.
 
 `normal`:: Substitution group that performs all substitution types except callouts.
@@ -25,7 +25,6 @@ The output of `replacements` may depend on whether the `specialcharacters` subst
 `macros`:: Substitution step that processes inline and block macros.
 
 `post_replacements`:: Substitution step that processes the line break character (`{plus}`).
-// end::group[]
 
 == Set the subs attribute on a block
 

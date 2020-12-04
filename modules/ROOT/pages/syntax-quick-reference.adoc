@@ -1,0 +1,1326 @@
+= AsciiDoc Syntax Quick Reference
+:navtitle: Syntax Quick Reference
+:description: The quick reference for common AsciiDoc document and text formatting markup.
+:collapsible:
+:url-char-xml: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
+:url-data-uri: https://developer.mozilla.org/en-US/docs/data_URIs
+:!table-frame:
+:!table-grid:
+
+////
+This document is not meant to be a replacement for the documentation of the AsciiDoc language itself.
+It's meant to be a helpful guide you can give to a writer to refer to while in the thick of writing.
+Think of it a quick reminder of the most common syntax and scenarios.
+It should not go into any depth about AsciiDoc processing or the options you can use when converting to an output format.
+////
+
+[IMPORTANT]
+The examples on this page demonstrate the output produced by the built-in HTML converter.
+An AsciiDoc converter is expected to produce complementary output when generating other output formats, such as PDF, EPUB, and DocBook.
+
+== Paragraphs
+
+.Paragraph
+[#ex-normal]
+----
+include::text:example$text.adoc[tag=b-para]
+----
+
+.View result of <<ex-normal>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=b-para]
+====
+
+.Literal paragraph
+[#ex-literal]
+----
+include::verbatim:example$literal.adoc[tag=qr-para]
+----
+
+.View result of <<ex-literal>>
+[%collapsible.result]
+====
+include::verbatim:example$literal.adoc[tag=qr-para]
+====
+
+.Hard line breaks
+[#ex-hardbreaks]
+----
+include::text:example$text.adoc[tag=hb-all]
+----
+
+.View result of <<ex-hardbreaks>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=hb-all]
+====
+
+.Lead paragraph
+[#ex-lead]
+----
+include::text:example$text.adoc[tag=qr-lead]
+----
+
+.View result of <<ex-lead>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=qr-lead]
+====
+
+TIP: The default Asciidoctor stylesheet automatically styles the first paragraph of the preamble as a xref:blocks:preamble-and-lead.adoc[lead paragraph] if no role is specified on that paragraph.
+
+== Text formatting
+
+.Constrained bold, italic, and monospace
+[#ex-constrained]
+----
+include::text:example$text.adoc[tag=constrained-bold-italic-mono]
+----
+
+.View result of <<ex-constrained>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=constrained-bold-italic-mono]
+====
+
+.Unconstrained bold, italic, and monospace
+[#ex-unconstrained]
+----
+include::text:example$text.adoc[tag=unconstrained-bold-italic-mono]
+----
+
+.View result of <<ex-unconstrained>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=unconstrained-bold-italic-mono]
+====
+
+.Highlight, underline, strikethrough, and custom role
+[#ex-lines]
+----
+include::text:example$text.adoc[tag=qr-all]
+----
+
+.View result of <<ex-lines>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=qr-all]
+====
+
+.Superscript and subscript
+[#ex-sub-sup]
+----
+include::text:example$text.adoc[tag=b-sub-sup]
+----
+
+.View result of <<ex-sub-sup>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=b-sub-sup]
+====
+
+.Smart quotes and apostrophes
+[#ex-curved]
+----
+include::text:example$text.adoc[tag=b-c-quote]
+----
+
+.View result of <<ex-curved>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=b-c-quote]
+====
+
+== Links
+
+.Autolinks, URL macro, and mailto macro
+[#ex-urls]
+----
+include::macros:example$url.adoc[tag=b-base]
+
+include::macros:example$url.adoc[tag=b-scheme]
+----
+
+.View result of <<ex-urls>>
+[%collapsible.result]
+====
+include::macros:example$url.adoc[tag=b-base]
+
+include::macros:example$url.adoc[tag=b-scheme]
+====
+
+.URL macros with attributes
+[#ex-linkattrs]
+----
+include::macros:example$url.adoc[tag=b-linkattrs]
+----
+
+.View result of <<ex-linkattrs>>
+[%collapsible.result]
+====
+include::macros:example$url.adoc[tag=b-linkattrs]
+====
+
+IMPORTANT: The `link:` macro prefix is _not_ required when the target starts with a URL scheme like `https:`.
+The URL scheme acts as an implicit macro prefix.
+
+CAUTION: If the linked text contains a comma and the text is followed by one or more named attributes, you must enclose the text in double quotes.
+Otherwise, the text will be cut off at the comma (and the remaining text will get pulled into the attribute parsing).
+
+.URLs with spaces and special characters
+----
+include::macros:example$url.adoc[tag=b-spaces]
+----
+
+.Link to relative file
+----
+link:index.html[Docs]
+----
+
+.Link using a Windows UNC path
+----
+include::macros:example$url.adoc[tag=b-windows]
+----
+
+.Inline anchors
+----
+include::attributes:example$id.adoc[tag=anchor]
+----
+
+.Cross references
+[#ex-xrefs]
+----
+include::macros:example$xref.adoc[tag=b-base]
+----
+
+.View result of <<ex-xrefs>>
+[%collapsible.result]
+====
+include::macros:example$xref.adoc[tag=b-base]
+====
+
+.Inter-document cross references
+----
+include::macros:example$xref.adoc[tag=b-inter]
+----
+
+== Document header
+
+The xref:document:header.adoc[document header] is optional.
+The header may not contain blank lines and must be separated from the content by at least one blank line.
+
+.Title
+----
+include::document:example$title.adoc[tag=qr-title]
+----
+
+.Title and author line
+----
+include::document:example$header.adoc[tag=qr-author]
+----
+
+.Title, author line, and revision line
+----
+include::document:example$header.adoc[tag=qr-rev]
+----
+
+IMPORTANT: You cannot have a xref:document:revision-line.adoc[revision line] without an xref:document:author-line.adoc[author line].
+
+.Document header with attribute entries
+----
+include::document:example$header.adoc[tag=qr-attributes]
+----
+
+[#section-titles]
+== Section titles
+
+When the document type is `article` (the default), the document can only have one level-0 section title (`=`), which is the document title (i.e., doctitle).
+
+.Article section levels
+[#ex-article]
+----
+include::sections:example$section.adoc[tag=base]
+----
+
+.View result of <<ex-article>>
+[%collapsible.result]
+====
+include::sections:example$section.adoc[tag=b-base]
+====
+
+The `book` document type can have additional level-0 section titles, which are interpreted as xref:sections:parts.adoc[parts].
+The presence of at least one part implicitly makes the document a multi-part book.
+
+.Book section levels
+----
+include::sections:example$section.adoc[tag=book]
+----
+
+////
+xref:sections:title-links.adoc#link[sectlinks]::
+When the document attribute `sectlinks` is set, section titles become self-links.
+This feature allows a reader to easily bookmark the section.
+
+xref:sections:title-links.adoc#anchor[sectanchors]::
+When the document attribute `sectanchors` is set, a floating section icon anchor appears in front of the section title on hover.
+This feature provides an alternate way for the reader to easily bookmark the section.
+Section title anchors depend on support from the stylesheet to render properly.
+////
+
+.Discrete heading (not a section)
+----
+[discrete]
+=== I'm an independent heading!
+----
+
+== Automatic TOC
+
+.Activate Table of Contents for a document
+----
+= Document Title
+Doc Writer <doc.writer@email.org>
+:toc:
+----
+
+The Table of Content's xref:toc:title.adoc[title], xref:toc:section-depth.adoc[displayed section depth], and xref:toc:position.adoc[position] can be customized.
+
+== Include files
+
+.Include document parts
+----
+include::directives:example$include.adoc[tag=base]
+----
+
+.Include content by tagged regions or lines
+----
+include::directives:example$include.adoc[tag=include-with-tag]
+
+include::directives:example$include.adoc[tag=line]
+----
+
+.Include content from a URL
+----
+include::directives:example$include.adoc[tag=uri]
+----
+
+WARNING: Including content from a URL is potentially dangerous, so it's disabled if the safe mode is SECURE or greater.
+Assuming the safe mode is less than SECURE, you must also set the `allow-uri-read` attribute to permit Asciidoctor to read content from a URL.
+
+== Lists
+
+.Unordered list
+[#ex-ul]
+----
+include::lists:example$unordered.adoc[tag=qr-base]
+----
+
+.View result of <<ex-ul>>
+[%collapsible.result]
+====
+include::lists:example$unordered.adoc[tag=qr-base]
+====
+
+TIP: A blank line is required before and after a list to separated it from other blocks.
+You can force two adjacent lists apart by adding a blank attribute list (i.e., `[]`) above the second list or by inserting a blank line followed by a line comment after the first list.
+If you use a line comment, the convention is to use `//-` to provide a hint to other authors that it's serving as a list divider.
+
+.Unordered list max level nesting
+[#ex-ul-max]
+----
+include::lists:example$unordered.adoc[tag=max]
+----
+
+.View result of <<ex-ul-max>>
+[%collapsible.result]
+====
+include::lists:example$unordered.adoc[tag=max]
+====
+
+The xref:lists:unordered.adoc#markers[unordered list marker] can be changed using a list style (e.g., `square`).
+
+.Ordered list
+[#ex-ol]
+----
+include::lists:example$ordered.adoc[tag=nest]
+----
+
+.View result of <<ex-ol>>
+[%collapsible.result]
+====
+include::lists:example$ordered.adoc[tag=nest]
+====
+
+.Ordered list max level nesting
+[#ex-ol-max]
+----
+include::lists:example$ordered.adoc[tag=max]
+----
+
+.View result of <<ex-ol-max>>
+[%collapsible.result]
+====
+include::lists:example$ordered.adoc[tag=max]
+====
+
+Ordered lists support xref:lists:ordered.adoc#styles[numeration styles] such as `lowergreek` and `decimal-leading-zero`.
+
+.Checklist
+[#ex-check]
+----
+include::lists:example$checklist.adoc[tag=check]
+----
+
+.View result of <<ex-check>>
+[%collapsible.result]
+====
+include::lists:example$checklist.adoc[tag=check]
+====
+
+.Description list
+[#ex-dlist]
+----
+include::lists:example$description.adoc[tag=qr-base]
+----
+
+.View result of <<ex-dlist>>
+[%collapsible.result]
+====
+include::lists:example$description.adoc[tag=qr-base]
+====
+
+.Question and answer list
+[#ex-qa]
+----
+include::lists:example$description.adoc[tag=qa]
+----
+
+.View result of <<ex-qa>>
+[%collapsible.result]
+====
+include::lists:example$description.adoc[tag=qa]
+====
+
+.Mixed
+[#ex-mixed]
+----
+include::lists:example$description.adoc[tag=3-mix]
+----
+
+.View result of <<ex-mixed>>
+[%collapsible.result]
+====
+include::lists:example$description.adoc[tag=3-mix]
+====
+
+TIP: Lists can be indented.
+Leading whitespace is not significant.
+
+.Complex content in outline lists
+[#ex-complex]
+----
+include::lists:example$complex.adoc[tag=b-complex]
+----
+
+.View result of <<ex-complex>>
+[%collapsible.result]
+====
+include::lists:example$complex.adoc[tag=b-complex]
+====
+
+== Images
+
+You can use the xref:macros:images-directory.adoc[imagesdir attribute] to avoid hard coding the common path to your images in every image macro.
+The value of this attribute can be an absolute path, relative path, or base URL.
+If the image target is a relative path, the attribute's value is prepended (i.e., it's resolved relative to the value of the `imagesdir` attribute).
+If the image target is a URL or absolute path, the attribute's value is _not_ prepended.
+
+.Block image macro
+[#ex-image-blocks]
+----
+include::macros:example$image.adoc[tag=base]
+
+include::macros:example$image.adoc[tag=alt]
+
+include::macros:example$image.adoc[tag=attr]
+
+include::macros:example$image.adoc[tag=ab-url]
+----
+
+.View result of <<ex-image-blocks>>
+[%collapsible.result]
+====
+include::macros:example$image.adoc[tag=qr-base]
+
+include::macros:example$image.adoc[tag=qr-alt]
+
+include::macros:example$image.adoc[tag=qr-attr]
+
+include::macros:example$image.adoc[tag=ab-url]
+====
+
+Two colons following the image keyword in the macro (i.e., `image::`) indicates a block image (aka figure), whereas one colon following the image keyword (i.e., `image:`) indicates an inline image.
+(All macros follow this pattern).
+You use an inline image when you need to place the image in a line of text.
+Otherwise, you should prefer the block form.
+
+.Inline image macro
+[#ex-image-inline]
+----
+include::macros:example$image.adoc[tag=inline]
+----
+
+.View result of <<ex-image-inline>>
+[%collapsible.result]
+====
+include::macros:example$image.adoc[tag=qr-inline]
+====
+
+.Inline image macro with positioning role
+[#ex-image-role]
+----
+include::macros:example$image.adoc[tag=in-role]
+----
+
+.View result of <<ex-image-role>>
+[%collapsible.result]
+====
+include::macros:example$image.adoc[tag=qr-role]
+====
+
+.Embedded
+----
+include::macros:example$image.adoc[tag=data]
+----
+
+When the `data-uri` attribute is set, all images in the document--including admonition icons--are embedded into the document as {url-data-uri}[data URIs].
+You can also pass it as a command line argument using `-a data-uri`.
+
+== Videos
+
+.Block video macro
+----
+include::macros:example$video.adoc[tag=base]
+
+include::macros:example$video.adoc[tag=attr]
+----
+
+.Embedded YouTube video
+----
+include::macros:example$video.adoc[tag=you]
+----
+
+.Embedded Vimeo video
+----
+include::macros:example$video.adoc[tag=vim]
+----
+
+You can control the video settings using xref:macros:audio-and-video.adoc[additional attributes and options] on the macro.
+
+== Keyboard, button, and menu macros
+
+IMPORTANT: You must set the `experimental` attribute in the document header to enable these macros.
+
+.Keyboard macro
+[#ex-kbd]
+----
+include::macros:example$ui.adoc[tag=qr-key]
+----
+
+.View result of <<ex-kbd>>
+[%collapsible.result]
+====
+include::macros:example$ui.adoc[tag=qr-key]
+====
+
+.Menu macro
+[#ex-menu]
+----
+include::macros:example$ui.adoc[tag=menu]
+----
+
+.View result of <<ex-menu>>
+[%collapsible.result]
+====
+include::macros:example$ui.adoc[tag=menu]
+====
+
+.Button macro
+[#ex-button]
+----
+include::macros:example$ui.adoc[tag=button]
+----
+
+.View result of <<ex-button>>
+[%collapsible.result]
+====
+include::macros:example$ui.adoc[tag=button]
+====
+
+== Literals and Source Code
+
+////
+.Inline monospace only
+[#ex-inline-code]
+----
+include::text:example$text.adoc[tag=b-mono-code]
+----
+
+.View result of <<ex-inline-code>>
+[%collapsible.result]
+====
+include::text:example$text.adoc[tag=b-mono-code]
+====
+////
+
+.Inline literal monospace
+[#ex-inline-literal]
+----
+include::pass:example$pass.adoc[tag=backtick-plus]
+----
+
+.View result of <<ex-inline-literal>>
+[%collapsible.result]
+====
+include::pass:example$pass.adoc[tag=backtick-plus]
+====
+
+.Literal paragraph
+[#ex-literal-line]
+----
+include::verbatim:example$literal.adoc[tag=b-imp-code]
+----
+
+.View result of <<ex-literal-line>>
+[%collapsible.result]
+====
+include::verbatim:example$literal.adoc[tag=b-imp-code]
+====
+
+.Literal block
+[#ex-literal-block]
+----
+include::verbatim:example$literal.adoc[tag=b-block]
+----
+
+.View result of <<ex-literal-block>>
+[%collapsible.result]
+====
+include::verbatim:example$literal.adoc[tag=b-block]
+====
+
+.Listing block with title
+[#ex-listing]
+------
+include::verbatim:example$listing.adoc[tag=qr-listing]
+------
+
+.View result of <<ex-listing>>
+[%collapsible.result]
+====
+[caption="Listing 1. "]
+include::verbatim:example$listing.adoc[tag=qr-listing]
+====
+
+.Source block with title and syntax highlighting
+[#ex-highlight]
+------
+.Some Ruby code
+include::verbatim:example$source.adoc[tag=src-base]
+------
+
+.View result of <<ex-highlight>>
+[%collapsible.result]
+====
+[caption="Listing 1. "]
+.Some Ruby code
+include::verbatim:example$source.adoc[tag=src-base]
+====
+
+[IMPORTANT]
+====
+You must enable xref:verbatim:source-highlighter.adoc[source highlighting] by setting the `source-highlighter` attribute in the document header, CLI, or API.
+
+[source]
+----
+:source-highlighter: rouge
+----
+
+See xref:asciidoctor:syntax-highlighting:index.adoc[] to learn which values are accepted when using Asciidoctor.
+====
+
+.Source block with callouts
+[#ex-callouts,subs=-callouts]
+------
+include::verbatim:example$callout.adoc[tag=b-src]
+------
+
+.View result of <<ex-callouts>>
+[%collapsible.result]
+====
+include::verbatim:example$callout.adoc[tag=b-src]
+====
+
+.Make callouts non-selectable
+[#ex-hide-callouts,subs=-callouts]
+------
+include::verbatim:example$callout.adoc[tag=b-nonselect]
+------
+
+.View result of <<ex-hide-callouts>>
+[%collapsible.result]
+====
+include::verbatim:example$callout.adoc[tag=b-nonselect]
+====
+
+.Source block content included from a file
+------
+include::verbatim:example$source.adoc[tag=src-inc]
+------
+
+.Source block content included from file relative to source directory
+------
+include::verbatim:example$source.adoc[tag=rel]
+------
+
+.Strip leading indentation from partial file content
+------
+include::verbatim:example$source.adoc[tag=ind]
+------
+
+[NOTE]
+====
+The xref:directives:include-with-indent.adoc[indent attribute] is frequently used when including source code by xref:directives:include-tagged-regions.adoc[tagged region] or xref:directives:include-lines.adoc[lines].
+It can be specified on the include directive itself or the enclosing literal, listing, or source block.
+
+When indent is 0, the leading block indent is stripped.
+
+When indent is greater than 0, the leading block indent is first stripped, then a block is indented by the number of columns equal to this value.
+====
+
+.Source paragraph (no blank lines)
+[#ex-source-para]
+----
+include::verbatim:example$source.adoc[tag=src-para]
+----
+
+.View result of <<ex-source-para>>
+[%collapsible.result]
+====
+include::verbatim:example$source.adoc[tag=src-para]
+====
+
+== Admonitions
+
+.Admonition paragraph
+[#ex-admon-para]
+----
+include::blocks:example$admonition.adoc[tag=b-para]
+----
+
+.View result of <<ex-admon-para>>
+[%collapsible.result]
+====
+include::blocks:example$admonition.adoc[tag=b-para]
+====
+
+.Admonition block
+[#ex-admon-block]
+----
+include::blocks:example$admonition.adoc[tag=b-bl]
+----
+
+.View result of <<ex-admon-block>>
+[%collapsible.result]
+=====
+include::blocks:example$admonition.adoc[tag=b-bl]
+=====
+
+== More delimited blocks
+
+Any block can have a title, positioned above the block.
+A block title is a line of text that starts with a dot.
+The dot cannot be followed by a space.
+
+.Sidebar block
+[#ex-sidebar]
+----
+include::blocks:example$sidebar.adoc[tag=delimited]
+----
+
+.View result of <<ex-sidebar>>
+[%collapsible.result]
+====
+include::blocks:example$sidebar.adoc[tag=delimited]
+====
+
+.Example block
+[#ex-example]
+------
+include::blocks:example$example.adoc[tag=base]
+------
+
+.View result of <<ex-example>>
+[example%collapsible.result]
+--
+include::blocks:example$example.adoc[tag=base]
+--
+
+.Blockquotes
+[#ex-quotes]
+----
+include::blocks:example$quote.adoc[tag=bl]
+
+include::blocks:example$quote.adoc[tag=para]
+
+include::blocks:example$quote.adoc[tag=no-cite]
+
+include::blocks:example$quote.adoc[tag=link-text]
+
+include::blocks:example$quote.adoc[tag=abbr]
+----
+
+.View result of <<ex-quotes>>
+[%collapsible.result]
+====
+include::blocks:example$quote.adoc[tag=bl]
+
+include::blocks:example$quote.adoc[tag=para]
+
+include::blocks:example$quote.adoc[tag=no-cite]
+
+include::blocks:example$quote.adoc[tag=link-text]
+
+include::blocks:example$quote.adoc[tag=abbr]
+====
+
+.Open blocks
+[#ex-open]
+----
+include::blocks:example$open.adoc[tag=base]
+
+include::blocks:example$open.adoc[tag=src]
+----
+
+.View result of <<ex-open>>
+[%collapsible.result]
+====
+include::blocks:example$open.adoc[tag=base]
+
+include::blocks:example$open.adoc[tag=src]
+====
+
+.Passthrough block
+[#ex-pass-block]
+----
+include::pass:example$pass.adoc[tag=b-bl]
+----
+
+.View result of <<ex-pass-block>>
+[%collapsible.result]
+====
+include::pass:example$pass.adoc[tag=b-bl]
+====
+
+.Customize block substitutions
+[#ex-block-subs,subs=+macros]
+------
+include::verbatim:example$listing.adoc[tag=subs]
+------
+
+.View result of <<ex-block-subs>>
+[%collapsible.result]
+====
+include::verbatim:example$listing.adoc[tag=subs-out]
+====
+
+== Tables
+
+.Table with a title, two columns, a header row, and two rows of content
+[#ex-header-row]
+----
+include::tables:example$table.adoc[tag=b-base-h-co]
+----
+<.> Unless the `cols` attribute is specified, the number of columns is equal to the number of cell separators on the first (non-blank) line.
+<.> When a blank line follows the first non-blank line, the cells in the first line get promoted to the table header.
+
+.View result of <<ex-header-row>>
+[%collapsible.result]
+====
+[caption="Table 1. "]
+include::tables:example$table.adoc[tag=b-base-h]
+====
+
+.Table with two columns, a header row, and two rows of content
+[#ex-cols]
+----
+include::tables:example$table.adoc[tag=b-col-h-co]
+----
+<.> The `+*+` in the `cols` attribute is the repeat operator.
+It means repeat the column specification across the remaining columns.
+In this case, we are repeating the default formatting across 2 columns.
+When the cells in the header are not defined on a single line, you must use the `cols` attribute to set the number of columns in the table and the `%header` option (or `options=header` attribute) to promote the first row to the table header.
+
+.View result of <<ex-cols>>
+[%collapsible.result]
+====
+include::tables:example$table.adoc[tag=b-col-h]
+====
+
+.Table with three columns, a header row, and two rows of content
+[#ex-cols-widths]
+----
+include::tables:example$table.adoc[tag=b-col-indv-co]
+----
+<.> In this example, the `cols` attribute has two functions.
+It specifies that this table has three columns, and it sets their relative widths.
+
+.View result of <<ex-cols-widths>>
+[%collapsible.result]
+====
+[caption="Table 1. "]
+include::tables:example$table.adoc[tag=b-col-indv]
+====
+
+.Table with column containing AsciiDoc content
+[#ex-table-adoc]
+----
+include::tables:example$table.adoc[tag=b-col-a]
+----
+
+.View result of <<ex-table-adoc>>
+[%collapsible.result]
+====
+include::tables:example$table.adoc[tag=b-col-a]
+====
+
+.Table from CSV data using shorthand
+[#ex-csv]
+----
+include::tables:example$data.adoc[tag=s-csv]
+----
+
+.View result of <<ex-csv>>
+[%collapsible.result]
+====
+include::tables:example$data.adoc[tag=s-csv]
+====
+
+.Table from CSV data
+[#ex-csv-formal]
+----
+include::tables:example$data.adoc[tag=csv]
+----
+
+.View result of <<ex-csv-formal>>
+[%collapsible.result]
+====
+include::tables:example$data.adoc[tag=csv]
+====
+
+.Table from CSV data in file
+[#ex-csv-include]
+----
+include::tables:example$data.adoc[tag=i-csv]
+----
+
+.Table from DSV data using shorthand
+[#ex-dsv]
+----
+include::tables:example$data.adoc[tag=s-dsv]
+----
+
+.View result of <<ex-dsv>>
+[%collapsible.result]
+====
+include::tables:example$data.adoc[tag=s-dsv]
+====
+
+.Table with formatted, aligned and merged cells
+[#ex-cell-format]
+----
+include::tables:example$cell.adoc[tag=b-spec]
+----
+
+.View result of <<ex-cell-format>>
+[%collapsible.result]
+====
+include::tables:example$cell.adoc[tag=b-spec]
+====
+
+== IDs, roles, and options
+
+.Shorthand method for assigning block ID (anchor) and role
+----
+[#goals.incremental]
+* Goal 1
+* Goal 2
+----
+
+[TIP]
+====
+* To specify multiple roles using the shorthand syntax, delimit them by dots.
+* The order of `id` and `role` values in the shorthand syntax does not matter.
+====
+
+.Formal method for assigning block ID (anchor) and role
+----
+[id="goals",role="incremental"]
+* Goal 1
+* Goal 2
+----
+
+.Explicit section ID (anchor)
+----
+[#null-values]
+== Primitive types and null values
+----
+
+.Assign ID (anchor) and role to inline formatted text
+----
+[#id-name.role-name]`monospace text`
+
+[#free-world.goals]*free the world*
+----
+
+.Shorthand method for assigning block options
+----
+[%header%footer%autowidth]
+|===
+|Header A |Header B
+|Footer A |Footer B
+|===
+----
+
+.Formal method for assigning block options
+----
+[options="header,footer,autowidth"]
+|===
+|Header A |Header B
+|Footer A |Footer B
+|===
+
+// options can be shorted to opts
+[opts="header,footer,autowidth"]
+|===
+|Header A |Header B
+|Footer A |Footer B
+|===
+----
+
+== Comments
+
+.Line and block comments
+----
+// A single-line comment
+
+////
+A multi-line comment.
+
+Notice it's a delimited block.
+////
+----
+
+== Breaks
+
+.Thematic break (aka horizontal rule)
+[#ex-thematic]
+----
+before
+
+'''
+
+after
+----
+
+.View result of <<ex-thematic>>
+[%collapsible.result]
+====
+before
+
+'''
+
+after
+====
+
+.Page break
+----
+<<<
+----
+
+== Attributes and substitutions
+
+.Attribute declaration and usage
+[#ex-attributes]
+----
+:url-home: https://asciidoctor.org
+:link-docs: https://asciidoctor.org/docs[documentation]
+:summary: Asciidoctor is a mature, plain-text document format for \
+       writing notes, articles, documentation, books, and more. \
+       It's also a text processor & toolchain for translating \
+       documents into various output formats (i.e., backends), \
+       including HTML, DocBook, PDF and ePub.
+:checkedbox: pass:normal[{startsb}&#10004;{endsb}]
+
+Check out {url-home}[Asciidoctor]!
+
+{summary}
+
+Be sure to read the {link-docs} too!
+
+{checkedbox} That's done!
+----
+
+.View result of <<ex-attributes>>
+[%collapsible.result]
+====
+// I have to use a nested doc hack here, otherwise the attributes won't resolve
+[.unstyled]
+|===
+a|
+:url-home: https://asciidoctor.org
+:link-docs: https://asciidoctor.org/docs[documentation]
+:summary: Asciidoctor is a mature, plain-text document format for \
+       writing notes, articles, documentation, books, and more. \
+       It's also a text processor & toolchain for translating \
+       documents into various output formats (i.e., backends), \
+       including HTML, DocBook, PDF and ePub.
+:checkedbox: pass:normal[{startsb}&#10004;{endsb}]
+
+Check out {url-home}[Asciidoctor]!
+
+{summary}
+
+Be sure to read the {link-docs} too!
+
+{checkedbox} That's done!
+|===
+====
+
+To learn more about the available attributes and substitution groups see:
+
+* xref:attributes:document-attributes-reference.adoc[]
+* xref:attributes:character-replacement-reference.adoc[]
+* xref:attributes:intrinsic-attributes-reference.adoc[]
+* xref:subs:apply-subs-to-blocks.adoc#subs-groups[Substitution Groups]
+
+.Counter attributes
+[#ex-counter]
+----
+include::attributes:example$counter.adoc[tag=base]
+----
+
+.View result of <<ex-counter>>
+[%collapsible.result]
+====
+[caption="Table 1. "]
+include::attributes:example$counter.adoc[tag=base]
+====
+
+== Text replacements
+
+[frame=none,grid=rows]
+include::subs:partial$subs-symbol-repl.adoc[]
+
+Any named, numeric or hexadecimal {url-char-xml}[XML character reference^] is supported.
+
+== Escaping substitutions
+
+.Backslash
+[#ex-slash]
+----
+include::subs:example$subs.adoc[tag=backslash]
+----
+
+.View result of <<ex-slash>>
+[%collapsible.result]
+====
+include::subs:example$subs.adoc[tag=backslash]
+====
+
+.Single and double plus inline macros
+[#ex-single-plus]
+----
+include::pass:example$pass.adoc[tag=plus]
+----
+
+.View result of <<ex-single-plus>>
+[%collapsible.result]
+====
+include::pass:example$pass.adoc[tag=plus]
+====
+
+.Triple plus inline macro and inline pass macro
+[#ex-inline-pass]
+----
+include::pass:example$pass.adoc[tag=b-3p-macro]
+----
+
+.View result of <<ex-inline-pass>>
+[%collapsible.result]
+====
+include::pass:example$pass.adoc[tag=b-3p-macro]
+====
+
+== Bibliography
+
+.Bibliography with inbound references
+[#ex-biblio]
+----
+include::sections:example$bibliography.adoc[tag=base]
+----
+
+.View result of <<ex-biblio>>
+[%collapsible.result]
+====
+|===
+a|
+include::sections:example$bibliography.adoc[tag=base]
+|===
+====
+
+[#section-footnotes]
+== Footnotes
+
+.Normal and reusable footnotes
+[#ex-footnotes]
+----
+include::macros:example$footnote.adoc[tag=base]
+----
+
+.View result of <<ex-footnotes>>
+[%collapsible.result]
+====
+[.unstyled]
+|===
+a|
+include::macros:example$footnote.adoc[tag=base]
+|===
+====
+
+[#markdown-compatibility]
+== Markdown compatibility
+
+Markdown compatible syntax is only available when using Asciidoctor.
+
+.Markdown-style headings
+[#ex-md-headings]
+----
+include::sections:example$section.adoc[tag=md]
+----
+
+.View result of <<ex-md-headings>>
+[%collapsible.result]
+====
+include::sections:example$section.adoc[tag=b-md]
+====
+
+.Fenced code block with syntax highlighting
+[#ex-fenced]
+----
+include::verbatim:example$source.adoc[tag=fence]
+----
+
+.View result of <<ex-fenced>>
+[%collapsible.result]
+====
+include::verbatim:example$source.adoc[tag=fence]
+====
+
+.Markdown-style blockquote
+[#ex-md-quote]
+----
+include::blocks:example$quote.adoc[tag=md]
+----
+
+.View result of <<ex-md-quote>>
+[%collapsible.result]
+====
+include::blocks:example$quote.adoc[tag=md]
+====
+
+.Markdown-style blockquote with block content
+[#ex-md-blockquote]
+----
+include::blocks:example$quote.adoc[tag=md-alt]
+----
+
+.View result of <<ex-md-blockquote>>
+[%collapsible.result]
+====
+include::blocks:example$quote.adoc[tag=md-alt]
+====
+
+.Markdown-style thematic breaks
+[#ex-md-breaks]
+----
+---
+
+- - -
+
+***
+
+* * *
+----
+
+.View result of <<ex-md-breaks>>
+[%collapsible.result]
+====
+---
+
+- - -
+
+***
+
+* * *
+====
+
+
+////
+Possible change for future to `%collapsible` blocks
+
+.Normal
+----
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line.
+Newlines within a paragraph are not displayed.
+----
+
+.View Result (Normal)
+[%collapsible.result]
+====
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line.
+Newlines within a paragraph are not displayed.
+====
+
+'''
+
+.Normal
+[tabs]
+====
+Source::
++
+----
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line.
+Newlines within a paragraph are not displayed.
+----
+
+Output::
++
+--
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line.
+Newlines within a paragraph are not displayed.
+--
+====
+////

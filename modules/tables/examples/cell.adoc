@@ -116,6 +116,17 @@ The cell's text is italicized and duplicated in column 3, row 3 and columns 1 an
 |===
 // end::clone[]
 
+// in qr
+// tag::b-spec[]
+[cols="e,m,^,>s",width="25%"]
+|===
+|1 >s|2 |3 |4
+^|5 2.2+^.^|6 .3+<.>m|7
+^|8
+|9 2+>|10
+|===
+// end::b-spec[]
+
 == THESE ARE THE LEGACY EXAMPLES THAT MAY NO LONGER BE IN USE
 
 // tag::3dup[]
@@ -196,15 +207,7 @@ The cell's text is italicized and duplicated in column 3, row 3 and columns 1 an
 
 
 
-// tag::b-spec[]
-[cols="e,m,^,>s", width="25%"]
-|===
-|1 >s|2 |3 |4
-^|5 2.2+^.^|6 .3+<.>m|7
-^|8
-|9 2+>|10
-|===
-// end::b-spec[]
+
 
 // tag::cell-src[]
 |===

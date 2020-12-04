@@ -18,42 +18,45 @@ The content inside is displayed as <pre> text.
 ----
 // end::block[]
 
-// tag::b-base[]
+// in qr
+// tag::qr-listing[]
 .Gemfile.lock
 ----
 GEM
   remote: https://rubygems.org/
   specs:
-    asciidoctor (1.5.7)
+    asciidoctor (2.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  asciidoctor (~> 1.5.7)
+  asciidoctor (~> 2.0.12)
 ----
-// end::b-base[]
+// end::qr-listing[]
 
+// in qr
 // tag::subs[]
-:version: 1.5.7
+:release-version: pass:a[{release-version}]
 
-[source,xml,subs="verbatim,attributes"]
+[source,xml,subs="attributes+"]
 ----
 <dependency>
   <groupId>org.asciidoctor</groupId>
   <artifactId>asciidoctor-java-integration</artifactId>
-  <version>{version}</version>
+  <version>{release-version}</version>
 </dependency>
 ----
 // end::subs[]
 
+// in qr
 // tag::subs-out[]
-[source,xml]
+[source,xml,subs="attributes+"]
 ----
 <dependency>
   <groupId>org.asciidoctor</groupId>
   <artifactId>asciidoctor-java-integration</artifactId>
-  <version>1.5.7</version>
+  <version>{release-version}</version>
 </dependency>
 ----
 // end::subs-out[]

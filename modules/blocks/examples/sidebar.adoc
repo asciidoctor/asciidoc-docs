@@ -1,24 +1,8 @@
-////
-Included in:
-
-- user-manual: Sidebar
-- quick-ref
-////
-
-// tag::base-c[]
-.AsciiDoc history // <1>
-**** // <2>
-AsciiDoc was first released in Nov 2002 by Stuart Rackham.
-It was designed from the start to be a shorthand syntax
-for producing professional documents like DocBook and LaTeX.
+// in qr
+// tag::delimited[]
+.Optional Title
 ****
-// end::base-c[]
-
-// tag::base[]
-.AsciiDoc history
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
 ****
-AsciiDoc was first released in Nov 2002 by Stuart Rackham.
-It was designed from the start to be a shorthand syntax
-for producing professional documents like DocBook and LaTeX.
-****
-// end::base[]
+// end::delimited[]

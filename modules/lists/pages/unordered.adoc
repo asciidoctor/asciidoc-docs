@@ -93,6 +93,7 @@ A new level is created for each unique marker encountered.
 However, it's much more intuitive to follow the convention that the number of asterisks equals the level of nesting.
 After all, we're shooting for plain text markup that is readable _as is_.
 
+[#markers]
 == Custom markers
 
 Asciidoctor offers numerous bullet styles for lists.
