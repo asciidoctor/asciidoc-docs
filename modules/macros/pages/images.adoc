@@ -19,7 +19,7 @@ Content in document
 ----
 <.> To insert a block image, type the `image` macro name directly followed by two colons (`::`).
 <.> After the colons, enter the image file target.
-Type a set of square brackets (`+[]+`) directly after the target to complete the macro.
+Type a pair of square brackets (`+[]+`) directly after the target to complete the macro.
 
 The result of <<ex-block>> is displayed below.
 
@@ -75,7 +75,7 @@ Click image:play.png[] to get the party started. <.>
 Click image:pause.png[title="Pause"] when you need a break. <.>
 ----
 <.> In the flow of an element, enter the macro name and a single colon (`+image:+`), followed by the image target.
-Complete the macro with a set of square brackets (`+[]+`).
+Complete the macro with a pair of square brackets (`+[]+`).
 <.> You can specify a comma-separated list of attributes inside the square brackets or leave them empty.
 
 The result of <<ex-inline>> is displayed below.

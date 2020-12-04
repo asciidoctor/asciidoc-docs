@@ -1,10 +1,10 @@
 = Document Header
 
-The document header is a set of contiguous lines at the start of the document that encapsulates the document title, author and revision information, metadata, and document-wide attributes.
+The document header is a series of contiguous lines at the start of the document that encapsulates the document title, author and revision information, metadata, and document-wide attributes.
 
 == Document header structure
 
-The document header is a set of contiguous lines that starts on the first line of the file.
+The document header is a series of contiguous lines that starts on the first line of the file.
 
 WARNING: The document header can't contain blank lines or block content.
 The first blank line that the processor encounters is interpreted as the end of the document header and the beginning of the document body.

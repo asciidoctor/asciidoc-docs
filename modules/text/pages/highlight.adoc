@@ -3,7 +3,7 @@
 
 == Highlight syntax
 
-When text is enclosed in a set of single or double hash symbols (`#`), and no style is assigned to it, the text will be rendered as highlighted text (text wrapped in `<mark>`).
+When text is enclosed in a pair of single or double hash symbols (`#`), and no style is assigned to it, the text will be rendered as highlighted text (text wrapped in `<mark>`).
 
 .Highlighted style syntax
 [source#ex-highlight]

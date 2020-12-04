@@ -62,7 +62,7 @@ That means that you can reference them throughout your document without having t
 TIP: Wolpertingers don't like temperatures above 100{deg}C. <.>
 Our servers don't like them either.
 ----
-<.> Reference the character replacement attribute `deg` by enclosing its name in a set of curly brackets (`+{ }+`).
+<.> Reference the character replacement attribute `deg` by enclosing its name in a pair of curly brackets (`+{ }+`).
 
 As you can see below, the attribute reference is replaced with the attribute's value when the document is processed.
 

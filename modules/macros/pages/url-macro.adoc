@@ -2,7 +2,7 @@
 // The term URL is now preferred over the term URI. See https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#URLs_and_URNs
 
 If you're familiar with the AsciiDoc syntax, you may notice that a URL almost looks like an inline macro.
-All that's missing is the set of the trailing square brackets.
+All that's missing is the pair of the trailing square brackets.
 In fact, if you add them, then a URL is treated an an inline macro.
 We call this a URL macro.
 
@@ -10,7 +10,7 @@ This page introduces the URL macro, when you would want to use it, and how it di
 
 == From URL to macro
 
-To transform a URL into a macro, add a set of square brackets to the end of the URL.
+To transform a URL into a macro, add a pair of square brackets to the end of the URL.
 For example:
 
 [source]

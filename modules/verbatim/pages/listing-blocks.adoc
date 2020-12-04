@@ -10,7 +10,7 @@ The listing style can be applied to content using any of the following methods:
 
 * indenting the first line of a paragraph by one or more spaces,
 * setting the `listing` style on a block or paragraph using an attribute list, or
-* enclosing the content within a set of listing block delimiters (`----`).
+* enclosing the content within a pair of listing block delimiters (`----`).
 
 == Indent method
 

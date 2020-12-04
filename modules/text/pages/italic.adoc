@@ -6,8 +6,8 @@ Italic type slants slightly to the right, and depending on the font, may have cu
 
 == Italic syntax
 
-You can emphasize (aka italicize) a word or phrase by enclosing it in a single set of underscores (e.g., `+_word_+`) (constrained).
-You can emphasize bounded characters (i.e., characters within a word) by enclosing them in a set of double underscores (e.g., `+char__act__ers+`) (unconstrained).
+You can emphasize (aka italicize) a word or phrase by enclosing it in a single pair of underscores (e.g., `+_word_+`) (constrained).
+You can emphasize bounded characters (i.e., characters within a word) by enclosing them in a pair of double underscores (e.g., `+char__act__ers+`) (unconstrained).
 
 .Italic inline formatting
 [source#ex-italic]
@@ -37,9 +37,9 @@ You can add multiple emphasis styles to italic text as long as the syntax is pla
 `*_monospace bold italic phrase_*` & ``**__char__**``acter``**__s__**``
 ----
 
-xref:monospace.adoc[Monospace syntax] (`++`++`) must be the outermost formatting set.
-xref:bold.adoc[Bold syntax] (`+*+`) must be outside the italics formatting set.
-Italic syntax is always the innermost formatting set.
+xref:monospace.adoc[Monospace syntax] (`++`++`) must be the outermost formatting pair.
+xref:bold.adoc[Bold syntax] (`+*+`) must be outside the italics formatting pair.
+Italic syntax is always the innermost formatting pair.
 
 The result of <<ex-mix>> is rendered below.
 
