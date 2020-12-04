@@ -5,15 +5,15 @@
 Single and double quotation marks are *not* rendered as curved quotation marks (also known as smart, curly, typographic or book quotation marks).
 When entered using the kbd:[{apos}] and kbd:[{quot}] key, Asciidoctor outputs straight (dumb, vertical, typewriter)
 quotation marks.
-However, by creating a set of backticks (`{backtick}`) contained within a set of single quotes (`{apos}`) or double quotes (`{quot}`), you can tell Asciidoctor where to output curved quotation marks.
+However, by creating a pair of backticks (`{backtick}`) contained within a pair of single quotes (`{apos}`) or double quotes (`{quot}`), you can tell Asciidoctor where to output curved quotation marks.
 
 .Single and double curved quotation marks syntax
 [source#ex-quote-marks]
 ----
 include::example$text.adoc[tag=c-quote-co]
 ----
-<.> To output double curved quotes, enclose a word or phrase in a set of double quotes (`{quot}`) and a set of backticks (`{backtick}`).
-<.> To output single curved quotes, enclose a word or phrase in a set of single quotes (`{apos}`) and a set of backticks (`{backtick}`). In this example, the phrase _wormwood and licorice_ should be enclosed in curved single quotes when the document is rendered.
+<.> To output double curved quotes, enclose a word or phrase in a pair of double quotes (`{quot}`) and a pair of backticks (`{backtick}`).
+<.> To output single curved quotes, enclose a word or phrase in a pair of single quotes (`{apos}`) and a pair of backticks (`{backtick}`). In this example, the phrase _wormwood and licorice_ should be enclosed in curved single quotes when the document is rendered.
 
 The result of <<ex-quote-marks>> is rendered below.
 

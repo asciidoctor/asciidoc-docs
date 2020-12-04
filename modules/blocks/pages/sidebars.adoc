@@ -27,7 +27,7 @@ Sidebars are used to visually separate auxiliary bits of content that supplement
 
 == Delimited sidebar syntax
 
-A delimited sidebar block is delimited by a set of four consecutive asterisks (`pass:[****]`).
+A delimited sidebar block is delimited by a pair of four consecutive asterisks (`pass:[****]`).
 You don't need to set the style name when you use the sidebar's delimiters.
 
 .Sidebar block delimiter syntax

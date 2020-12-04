@@ -4,7 +4,7 @@
 
 == Delimited blocks
 
-Block content can be styled by enclosing it in a set of delimiters.
+Block content can be styled by enclosing it in a pair of delimiters (i.e., delimiter lines).
 A *delimited block* has an *opening delimiter* and a *closing delimiter*.
 The opening and closing delimiters must be the same length.
 The style and substitutions applied to the delimited block's content is indicated by the characters in the delimiters.

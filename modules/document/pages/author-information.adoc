@@ -13,7 +13,7 @@ When assigned implicitly via the author line, the value includes all of the char
 
 email::
 The `email` attribute represents an email address or URL associated with the first author (`author`).
-When assigned via the author line, it's enclosed in a set of angle brackets (`< >`).
+When assigned via the author line, it's enclosed in a pair of angle brackets (`< >`).
 
 === Name and initials attributes
 
@@ -40,7 +40,7 @@ The attributes `firstname_<n>`, `middlename_<n>`, `lastname_<n>`, and `authorini
 
 email_<n>::
 The `email_<n>` attribute represents an email address or URL associated with xref:multiple-authors.adoc[each additional author] (`author_<n>`).
-It's enclosed in a set of angle brackets (`< >`) on the author line.
+It's enclosed in a pair of angle brackets (`< >`) on the author line.
 
 firstname_<n>::
 The first word in the value of the `author_<n>` attribute is automatically assigned to `firstname_<n>`.

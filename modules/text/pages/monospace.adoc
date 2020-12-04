@@ -1,6 +1,6 @@
 = Monospace
 
-In AsciiDoc, a span of text enclosed in a single set of backticks (`{backtick}`) is displayed using a fixed-width (i.e., monospaced) font.
+In AsciiDoc, a span of text enclosed in a single pair of backticks (`{backtick}`) is displayed using a fixed-width (i.e., monospaced) font.
 Monospace text formatting is typically used to represent text shown in computer terminals or code editors (often referred to as a codespan).
 
 == Constrained
@@ -21,7 +21,7 @@ include::example$text.adoc[tag=mono]
 
 == Unconstrained
 
-As with other types of text formatting, if the text is bounded by word characters on either side, it must be enclosed in a double set of backtick characters (`{backtick}{backtick}`) in order for the formatting to be applied.
+As with other types of text formatting, if the text is bounded by word characters on either side, it must be enclosed in a double pair of backtick characters (`{backtick}{backtick}`) in order for the formatting to be applied.
 
 Here's an example:
 
@@ -32,7 +32,7 @@ The command will re``link`` all packages.
 
 == Mixed Formatting
 
-Monospaced text can also be formatted in bold or italic or both, as long as the markup sets are entered in the right order.
+Monospaced text can also be formatted in bold or italic or both, as long as the markup pairs are entered in the right order.
 The monospace markup must be the outermost formatting mark, then the bold marks, then the italic marks.
 
 .Order of inline formatting syntax
@@ -63,7 +63,7 @@ However, escaping individual occurrences that way can be tedious.
 That's why AsciiDoc offers a special type of monospace formatting called the literal monospace.
 
 To make a true literal codespan in AsciiDoc, you must enclose the monospaced text in a passthrough.
-Rather than using a single set of backtick characters, you'll use the combination of the backtick and plus characters, where the plus characters fall on the inside of the backtick characters (e.g., `pass:[`+text+`]`).
+Rather than using a single pair of backtick characters, you'll use the combination of the backtick and plus characters, where the plus characters fall on the inside of the backtick characters (e.g., `pass:[`+text+`]`).
 The plus characters are a shorthand for the `\pass:c[]` enclosure.
 
 <<ex-literal>> contains literal, monospaced text.
@@ -121,7 +121,7 @@ Double plus (`++`) is an unconstrained match (can be used anywhere inline, just 
 TIP: You may recognize that `++` is now equivalent to `$$` (and perhaps easier to read).
 
 Notice that the text is not formatted as monospace.
-To apply monospace formatting to content marked by `+` or `++`, surround it with a set of backticks.
+To apply monospace formatting to content marked by `+` or `++`, surround it with a pair of backticks.
 
 [source]
 ----
@@ -194,16 +194,16 @@ If you aren't worried about how the document renders on services like GitHub, yo
 
 ////
 Monospace text formatting is often used to emulate how source code appears in computer terminals, simple text editors, and integrated development environments (IDEs).
-A word or phrase is rendered using a fixed-width font, i.e. monospaced font, when it is enclosed in a single set of plus signs (+{plus}+).
-A character contained within a string of characters must be enclosed in a double set of plus signs (+{plus}{plus}+).
+A word or phrase is rendered using a fixed-width font, i.e. monospaced font, when it is enclosed in a single pair of plus signs (+{plus}+).
+A character contained within a string of characters must be enclosed in a double pair of plus signs (+{plus}{plus}+).
 
 [source]
 ----
 include::ex-text.adoc[tag=mono]
 ----
 
-Monospaced text can be bold and italicized, as long as the markup sets are entered in the right order.
-The monospace markup must be the outermost set, then the bold set, and the italic markup must always be the innermost set.
+Monospaced text can be bold and italicized, as long as the markup pairs are entered in the right order.
+The monospace markup must be the outermost pair, then the bold pair, and the italic markup must always be the innermost pair.
 
 .Rendered monospace formatted text
 ====

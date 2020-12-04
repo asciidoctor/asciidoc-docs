@@ -27,7 +27,7 @@ TIP: When you need to prevent or control the substitutions on one or more blocks
 [#triple-plus]
 == Triple plus macro
 
-The triple plus passthrough excludes content enclosed in a set of triple pluses (pass:[+++]) from all substitutions.
+The triple plus passthrough excludes content enclosed in a pair of triple pluses (pass:[+++]) from all substitutions.
 
  +++content passed directly to the output+++ followed by normal content.
 

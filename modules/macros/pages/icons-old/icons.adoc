@@ -44,7 +44,7 @@ An icon can be inserted at an arbitrary place in your content with the icon macr
 icon:file-name[]
 ----
 
-Enter the file name of the icon in the target field of the icon macro, followed by a set of square brackets (`[]`).
+Enter the file name of the icon in the target field of the icon macro, followed by a pair of square brackets (`[]`).
 Depending on the value of `icons` and the converter, Asciidoctor will look for the icon file (e.g., [.path]_file-name_) in the icons directory (`iconsdir`) or in the font icon set.
 The file extension (e.g., _.png_) doesn't have to be specified as long as it matches the value of the `icontype` attribute.
 `icontype` is set to `.png` by default.

@@ -8,7 +8,7 @@
 A block (or block element) is a line-oriented, discrete chunk of content in an AsciiDoc document.
 Some blocks may contain other blocks.
 
-A block is defined as one or more contiguous lines of text or optionally contiguous lines enclosed in block delimiters (aka fences).
+A block is defined as one or more contiguous lines of text or optionally contiguous lines enclosed in block delimiters.
 A block (including its metadata lines) should be surrounded by a blank line or document boundary on either side.
 
 Examples of a block include a paragraph, a section, a list, a delimited block, a table, a block macro, and the document itself.
