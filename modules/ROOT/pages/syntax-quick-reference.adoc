@@ -130,6 +130,76 @@ include::text:example$text.adoc[tag=b-c-quote]
 include::text:example$text.adoc[tag=b-c-quote]
 ====
 
+== Links
+
+.Autolinks, URL macro, and mailto macro
+[#ex-urls]
+----
+include::macros:example$url.adoc[tag=b-base]
+
+include::macros:example$url.adoc[tag=b-scheme]
+----
+
+.View result of <<ex-urls>>
+[%collapsible.result]
+====
+include::macros:example$url.adoc[tag=b-base]
+
+include::macros:example$url.adoc[tag=b-scheme]
+====
+
+.URL macros with attributes
+[#ex-linkattrs]
+----
+include::macros:example$url.adoc[tag=b-linkattrs]
+----
+
+.View result of <<ex-linkattrs>>
+[%collapsible.result]
+====
+include::macros:example$url.adoc[tag=b-linkattrs]
+====
+
+CAUTION: If the linked text contains a comma and the text is followed by one or more named attributes, you must enclose the text in double quotes.
+Otherwise, the text will be cut off at the comma (and the remaining text will get pulled into the attribute parsing).
+
+.URLs with spaces and special characters
+----
+include::macros:example$url.adoc[tag=b-spaces]
+----
+
+.Link to relative page
+----
+link:index.html[Docs]
+----
+
+.Link using a Windows path
+----
+include::macros:example$url.adoc[tag=b-windows]
+----
+
+.Inline anchors
+----
+include::attributes:example$id.adoc[tag=anchor]
+----
+
+.Cross references
+[#ex-xrefs]
+----
+include::macros:example$xref.adoc[tag=b-base]
+----
+
+.View result of <<ex-xrefs>>
+[%collapsible.result]
+====
+include::macros:example$xref.adoc[tag=b-base]
+====
+
+.Inter-document cross references
+----
+include::macros:example$xref.adoc[tag=b-inter]
+----
+
 == Document header
 
 A xref:document:header.adoc[document header] is optional.
@@ -206,6 +276,17 @@ Section title anchors depend on support from the stylesheet to render properly.
 === I'm an independent heading!
 ----
 
+== Automatic TOC
+
+.Activate Table of Contents for a document
+----
+= Document Title
+Doc Writer <doc.writer@email.org>
+:toc:
+----
+
+The Table of Content's xref:toc:title.adoc[title], xref:toc:section-depth.adoc[displayed section depth], and xref:toc:position.adoc[position] can be customized.
+
 == Include files
 
 .Include document parts
@@ -227,33 +308,6 @@ include::directives:example$include.adoc[tag=uri]
 
 WARNING: Including content from a URL is potentially dangerous, so it's disabled if the safe mode is SECURE or greater.
 Assuming the safe mode is less than SECURE, you must also set the `allow-uri-read` attribute to permit Asciidoctor to read content from a URL.
-
-== Breaks
-
-.Thematic break (aka horizontal rule)
-[#ex-thematic]
-----
-before
-
-'''
-
-after
-----
-
-.View result of <<ex-thematic>>
-[%collapsible.result]
-====
-before
-
-'''
-
-after
-====
-
-.Page break
-----
-<<<
-----
 
 == Lists
 
@@ -376,76 +430,6 @@ include::lists:example$complex.adoc[tag=b-complex]
 include::lists:example$complex.adoc[tag=b-complex]
 ====
 
-== Links
-
-.Autolinks, URL macro, and mailto macro
-[#ex-urls]
-----
-include::macros:example$url.adoc[tag=b-base]
-
-include::macros:example$url.adoc[tag=b-scheme]
-----
-
-.View result of <<ex-urls>>
-[%collapsible.result]
-====
-include::macros:example$url.adoc[tag=b-base]
-
-include::macros:example$url.adoc[tag=b-scheme]
-====
-
-.URL macros with attributes
-[#ex-linkattrs]
-----
-include::macros:example$url.adoc[tag=b-linkattrs]
-----
-
-.View result of <<ex-linkattrs>>
-[%collapsible.result]
-====
-include::macros:example$url.adoc[tag=b-linkattrs]
-====
-
-CAUTION: If the linked text contains a comma and the text is followed by one or more named attributes, you must enclose the text in double quotes.
-Otherwise, the text will be cut off at the comma (and the remaining text will get pulled into the attribute parsing).
-
-.URLs with spaces and special characters
-----
-include::macros:example$url.adoc[tag=b-spaces]
-----
-
-.Link to relative page
-----
-link:index.html[Docs]
-----
-
-.Link using a Windows path
-----
-include::macros:example$url.adoc[tag=b-windows]
-----
-
-.Inline anchors
-----
-include::attributes:example$id.adoc[tag=anchor]
-----
-
-.Cross references
-[#ex-xrefs]
-----
-include::macros:example$xref.adoc[tag=b-base]
-----
-
-.View result of <<ex-xrefs>>
-[%collapsible.result]
-====
-include::macros:example$xref.adoc[tag=b-base]
-====
-
-.Inter-document cross references
-----
-include::macros:example$xref.adoc[tag=b-inter]
-----
-
 == Images
 
 You can use the xref:macros:images-directory.adoc[imagesdir] attribute to avoid hard coding the common path to your images in every image macro.
@@ -534,6 +518,46 @@ include::macros:example$video.adoc[tag=vim]
 ----
 
 You can control the video settings using xref:macros:audio-and-video.adoc[additional attributes and options] on the macro.
+
+== Keyboard, button, and menu macros
+
+IMPORTANT: You must set the `experimental` attribute in the document header to enable these macros.
+
+.Keyboard macro
+[#ex-kbd]
+----
+include::macros:example$ui.adoc[tag=qr-key]
+----
+
+.View result of <<ex-kbd>>
+[%collapsible.result]
+====
+include::macros:example$ui.adoc[tag=qr-key]
+====
+
+.Menu macro
+[#ex-menu]
+----
+include::macros:example$ui.adoc[tag=menu]
+----
+
+.View result of <<ex-menu>>
+[%collapsible.result]
+====
+include::macros:example$ui.adoc[tag=menu]
+====
+
+.Button macro
+[#ex-button]
+----
+include::macros:example$ui.adoc[tag=button]
+----
+
+.View result of <<ex-button>>
+[%collapsible.result]
+====
+include::macros:example$ui.adoc[tag=button]
+====
 
 == Literals and Source Code
 
@@ -812,64 +836,6 @@ include::verbatim:example$listing.adoc[tag=subs]
 include::verbatim:example$listing.adoc[tag=subs-out]
 ====
 
-== IDs, roles, and options
-
-.Shorthand method for assigning block id and role
-----
-[#goals.incremental]
-* Goal 1
-* Goal 2
-----
-
-[TIP]
-====
-* To specify multiple roles using the shorthand syntax, delimit them by dots.
-* The order of `id` and `role` values in the shorthand syntax does not matter.
-====
-
-.Formal method for assigning block id (anchor) and role
-----
-[id="goals",role="incremental"]
-* Goal 1
-* Goal 2
-----
-
-.Assigning id (anchor) and role to inline formatted text
-----
-[#id-name.role-name]`monospace text`
-
-[#free-world.goals]*free the world*
-----
-
-.Shorthand method for assigning block options
-----
-[%header%footer%autowidth]
-|===
-|Cell A |Cell B
-|===
-----
-
-.Formal method for assigning block options
-----
-[options="header,footer,autowidth"]
-|===
-|Cell A |Cell B
-|===
-----
-
-== Comments
-
-.Line and block comments
-----
-// A single-line comment
-
-////
-A multi-line comment.
-
-Notice it's a delimited block.
-////
-----
-
 == Tables
 
 .Table with a title, two columns, a header row, and two rows of content
@@ -984,45 +950,90 @@ include::tables:example$cell.adoc[tag=b-spec]
 include::tables:example$cell.adoc[tag=b-spec]
 ====
 
-== Keyboard, button, and menu macros
+== IDs, roles, and options
 
-IMPORTANT: You must set the `experimental` attribute in the document header to enable these macros.
-
-.Keyboard macro
-[#ex-kbd]
+.Shorthand method for assigning block id and role
 ----
-include::macros:example$ui.adoc[tag=qr-key]
+[#goals.incremental]
+* Goal 1
+* Goal 2
 ----
 
-.View result of <<ex-kbd>>
+[TIP]
+====
+* To specify multiple roles using the shorthand syntax, delimit them by dots.
+* The order of `id` and `role` values in the shorthand syntax does not matter.
+====
+
+.Formal method for assigning block id (anchor) and role
+----
+[id="goals",role="incremental"]
+* Goal 1
+* Goal 2
+----
+
+.Assigning id (anchor) and role to inline formatted text
+----
+[#id-name.role-name]`monospace text`
+
+[#free-world.goals]*free the world*
+----
+
+.Shorthand method for assigning block options
+----
+[%header%footer%autowidth]
+|===
+|Cell A |Cell B
+|===
+----
+
+.Formal method for assigning block options
+----
+[options="header,footer,autowidth"]
+|===
+|Cell A |Cell B
+|===
+----
+
+== Comments
+
+.Line and block comments
+----
+// A single-line comment
+
+////
+A multi-line comment.
+
+Notice it's a delimited block.
+////
+----
+
+== Breaks
+
+.Thematic break (aka horizontal rule)
+[#ex-thematic]
+----
+before
+
+'''
+
+after
+----
+
+.View result of <<ex-thematic>>
 [%collapsible.result]
 ====
-include::macros:example$ui.adoc[tag=qr-key]
+before
+
+'''
+
+after
 ====
 
-.Menu macro
-[#ex-menu]
+.Page break
 ----
-include::macros:example$ui.adoc[tag=menu]
+<<<
 ----
-
-.View result of <<ex-menu>>
-[%collapsible.result]
-====
-include::macros:example$ui.adoc[tag=menu]
-====
-
-.Button macro
-[#ex-button]
-----
-include::macros:example$ui.adoc[tag=button]
-----
-
-.View result of <<ex-button>>
-[%collapsible.result]
-====
-include::macros:example$ui.adoc[tag=button]
-====
 
 == Attributes and substitutions
 
@@ -1146,17 +1157,6 @@ include::pass:example$pass.adoc[tag=b-3p-macro]
 ====
 include::pass:example$pass.adoc[tag=b-3p-macro]
 ====
-
-== Automatic TOC
-
-.Activate Table of Contents for a document
-----
-= Document Title
-Doc Writer <doc.writer@email.org>
-:toc:
-----
-
-The Table of Content's xref:toc:title.adoc[title], xref:toc:section-depth.adoc[displayed section depth], and xref:toc:position.adoc[position] can be customized.
 
 == Bibliography
 

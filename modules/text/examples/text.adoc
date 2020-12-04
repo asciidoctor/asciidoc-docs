@@ -7,11 +7,10 @@ Our team desperately needs coffee, but none of us dare open the office door.
 // used in qr
 // tag::b-para[]
 Paragraphs don't require special markup in AsciiDoc.
-A paragraph is just one or more lines of consecutive text.
-
-To begin a new paragraph, separate it by at least one blank
-line from the previous element or block.
+A paragraph is one or more lines of consecutive text.
 Newlines within a paragraph are not displayed.
+
+Leave at least one blank line to begin a new paragraph.
 // end::b-para[]
 
 //used in qr

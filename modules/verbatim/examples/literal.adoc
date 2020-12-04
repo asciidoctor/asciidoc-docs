@@ -6,11 +6,10 @@
 // tag::qr-para[]
 A normal paragraph.
 
- A paragraph indented by at least one space becomes a
- literal paragraph.
+ A literal paragraph, consecutive lines indented by at least a space.
 
  A literal paragraph is displayed as preformatted text.
- The text is shown in a fixed-width font.
+ The text is shown in a fixed-width (typically monospace) font.
  Spaces and newlines,
  like the ones in this sentence,
  are preserved.
