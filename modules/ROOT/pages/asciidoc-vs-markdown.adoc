@@ -1,10 +1,10 @@
-= AsciiDoc Versus Markdown
+= Compare AsciiDoc and Markdown
 :description: A brief comparison of AsciiDoc and Markdown.
 
 The most compelling reason to choose a lightweight markup language for writing is to minimize the number of technical concepts an author must grasp in order to be immediately productive.
 In other words, the goal is to be able to _write without friction_.
 
-== Getting your start with Markdown
+== Starting with Markdown
 
 The defacto lightweight markup language is Markdown.
 (At least, Markdown is what you call it at first).
@@ -460,8 +460,8 @@ NOTE: Certain Markdown flavors, such as Markdown Extra, support additional featu
 However, since these features don't appear in "`plain`" Markdown, they're not included in the comparison table.
 But they're supported natively by AsciiDoc.
 
-Asciidoctor, which is used for converting AsciiDoc on GitHub and GitLab, emulates "`the good parts`" of the Markdown syntax, like headings, blockquotes and fenced code blocks, making migration from Markdown to AsciiDoc fairly simple.
-For details about migration, see #url-home/docs/asciidoc-syntax-quick-reference/#markdown-compatibility[Markdown Compatibility#.
+Asciidoctor, which is used for converting AsciiDoc on GitHub and GitLab, emulates some of the common parts of the Markdown syntax, like headings, blockquotes and fenced code blocks, simplifying the migration from Markdown to AsciiDoc.
+For details, see xref:syntax-quick-reference.adoc#markdown-compatibility[Markdown compatibility].
 
 ////
 ===== Description Lists in AsciiDoc
