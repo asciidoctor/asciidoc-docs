@@ -1,8 +1,8 @@
-.Verbatim and Source Blocks
-* xref:source-blocks.adoc[]
-** xref:source-highlighter.adoc[]
-** xref:highlight-lines.adoc[]
-** xref:highlight-php.adoc[]
-* xref:listing-blocks.adoc[]
-* xref:literal-blocks.adoc[]
-* xref:callouts.adoc[]
+* Verbatim and Source Blocks
+** xref:source-blocks.adoc[]
+*** xref:source-highlighter.adoc[]
+*** xref:highlight-lines.adoc[]
+*** xref:highlight-php.adoc[]
+** xref:listing-blocks.adoc[]
+** xref:literal-blocks.adoc[]
+** xref:callouts.adoc[]

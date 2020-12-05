@@ -14,4 +14,6 @@
 *** xref:reference-revision-attributes.adoc[]
 ** xref:metadata.adoc[]
 ** xref:header-ref.adoc[]
+
+[]
 * xref:doctypes.adoc[]

@@ -8,12 +8,14 @@ asciidoc:
     listing-caption: Example@
     release-version: '2.0.12'
 nav:
-- modules/ROOT/nav.adoc
+- modules/ROOT/nav-top.adoc
 - modules/blocks/nav-basics.adoc
-- modules/attributes/nav.adoc
+- modules/attributes/nav-document.adoc
+- modules/attributes/nav-element.adoc
 - modules/document/nav.adoc
 - modules/sections/nav.adoc
 - modules/blocks/nav-paragraph.adoc
+- modules/blocks/nav-breaks.adoc
 - modules/text/nav.adoc
 - modules/lists/nav.adoc
 - modules/macros/nav.adoc
