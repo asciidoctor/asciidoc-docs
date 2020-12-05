@@ -11,8 +11,3 @@
 ** xref:reference-attributes.adoc[]
 *** xref:unresolved-references.adoc[]
 ** xref:assignment-precedence.adoc[]
-* xref:element-attributes.adoc[]
-** xref:positional-and-named-attributes.adoc[]
-** xref:ids.adoc[]
-** xref:options.adoc[]
-** xref:roles.adoc[]

@@ -6,6 +6,8 @@
 ** xref:include-tagged-regions.adoc[]
 ** xref:include-lines.adoc[]
 ** xref:include-uri.adoc[]
+
+[]
 * xref:conditionals.adoc[]
 ** xref:ifdef-ifndef.adoc[]
 ** xref:ifeval.adoc[]
