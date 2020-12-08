@@ -39,7 +39,7 @@ DEPENDENCIES
 // tag::subs[]
 :release-version: pass:a[{release-version}]
 
-[source,xml,subs="attributes+"]
+[source,xml,subs=attributes+]
 ----
 <dependency>
   <groupId>org.asciidoctor</groupId>
@@ -51,7 +51,7 @@ DEPENDENCIES
 
 // in qr
 // tag::subs-out[]
-[source,xml,subs="attributes+"]
+[source,xml,subs=attributes+]
 ----
 <dependency>
   <groupId>org.asciidoctor</groupId>
