@@ -46,7 +46,7 @@ AsciiDoc provides operators to control the following cell properties:
 * xref:format-cell-content.adoc[content style]
 
 A cell specifier only applies to the cell it's placed on, not to all of the cells in the same row.
-Also, the operator in a cell specifier will override the operator in a xref:add-columns.adoc#col-specifier.adoc[column specifier] if they belong to the same property.
+Also, the operator in a cell specifier will override the operator in a xref:add-columns.adoc#col-specifier[column specifier] if they belong to the same property.
 
 == Create a table cell
 

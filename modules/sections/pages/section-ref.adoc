@@ -6,7 +6,7 @@
 |===
 |Feature |Attribute |Value(s) |Notes
 
-|xref:appendix.adoc#prefix[Appendix label]
+|xref:appendix.adoc#caption[Appendix label]
 |`appendix-caption`
 |_Appendix_ (default) or user defined text
 |

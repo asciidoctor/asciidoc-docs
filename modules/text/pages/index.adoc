@@ -66,7 +66,7 @@ She spells her name with an "`h`", as in Sara**h**.
 
 The unconstrained pair provides a more brute force approach to formatting at the tradeoff of being more verbose.
 You'll typically switch to an unconstrained pair when a constrained pair doesn't do the trick.
-See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained pair?] for more examples of when to use an unconstrained pair.
+See xref:troubleshoot-unconstrained-formatting.adoc#use-unconstrained[When should I use an unconstrained pair?] for more examples of when to use an unconstrained pair.
 
 == Inline text and punctuation styles
 

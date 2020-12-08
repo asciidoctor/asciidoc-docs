@@ -38,8 +38,8 @@ User-defined attributes:: #TBA#
 * have a value that xref:wrap-values.adoc[spans multiple, contiguous lines]
 * have a value that includes basic inline AsciiDoc syntax, such as:
 ** attribute references
-** text formatting (if wrapped in a xref:pass:pass-macro.adoc#pass-subs[pass macro])
-** inline macros (if wrapped in a xref:pass:pass-macro.adoc#pass-subs[pass macro])
+** text formatting (if wrapped in a xref:pass:pass-macro.adoc#inline-pass[pass macro])
+** inline macros (if wrapped in a xref:pass:pass-macro.adoc#inline-pass[pass macro])
 
 But there are certain limitations to be aware of.
 Document attributes cannot:
