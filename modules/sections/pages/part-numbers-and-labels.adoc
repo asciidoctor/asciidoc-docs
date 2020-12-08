@@ -6,7 +6,6 @@
 Book part numbers are controlled by the `partnums` attribute, not `sectnums`.
 To autogenerate part numbers, set `partnums` in the book header.
 
-
 [source]
 ----
 = The Secret Manual
