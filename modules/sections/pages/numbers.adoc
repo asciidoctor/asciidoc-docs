@@ -65,4 +65,4 @@ When the `doctype` is `book`, level-1 sections become xref:chapters.adoc[chapter
 Therefore, a `sectnumlevels` of `4` translates to 3 levels of numbered sections inside each chapter.
 
 Assigning `sectnumlevels` a value of `0` is effectively the same as disabling section numbering (`sectnums!`).
-However, if your document is a xref:parts.adoc[multi-part book] with xref:special-section-numbers.adoc#partnums[part numbering enabled], then you'd have to set `sectnumlevels` to `-1` to disable part numbering too (the equivalent of `partnums!`).
+However, if your document is a xref:parts.adoc[multi-part book] with xref:part-numbers-and-labels.adoc#partnums[part numbering enabled], then you'd have to set `sectnumlevels` to `-1` to disable part numbering too (the equivalent of `partnums!`).

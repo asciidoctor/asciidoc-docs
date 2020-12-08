@@ -77,7 +77,7 @@ It contains two columns and three rows of text positioned and styled using the d
 |Cell in column 1, row 3 |Cell in column 2, row 3
 |===
 
-In addition to the xref:add-columns.adoc[cols attribute], you can identify the number of columns using a xref:add-columns.adoc#multiplier[column multiplier] or xref:add-columns.adoc#implicit-cols[the table's first row].
+In addition to the xref:add-columns.adoc[cols attribute], you can identify the number of columns using a xref:add-columns.adoc#column-multiplier[column multiplier] or xref:add-columns.adoc#implicit-cols[the table's first row].
 However, the `cols` attribute is required to customize the xref:adjust-column-widths.adoc[width], xref:align-by-column.adoc[alignment], or xref:format-column-content.adoc[style] of a column.
 
 === Add a header row to the table

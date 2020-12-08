@@ -69,10 +69,10 @@ Since four consecutive cells are entered on the first line directly after the de
 |===
 
 As specified, the table includes four columns of equal width, a header row, and a regular row.
-Since all of the columns in <<ex-cols-table>> are assigned the same width via their column specifiers (i.e., `3`), the number of columns could be specified with a <<multiplier,column multiplier>>.
+Since all of the columns in <<ex-cols-table>> are assigned the same width via their column specifiers (i.e., `3`), the number of columns could be specified with a <<column-multiplier,column multiplier>>.
 Or, you could adjust the width of an individual column by xref:adjust-column-widths.adoc[increasing the numerical value of its specifier].
 
-[#multiplier]
+[#column-multiplier]
 === Using a column multiplier
 
 A [.term]*column multiplier* allows you to apply the same width, horizontal alignment, vertical alignment, and content style to multiple, consecutive columns in a table.
