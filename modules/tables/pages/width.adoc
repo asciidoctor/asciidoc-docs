@@ -45,7 +45,7 @@ If you want each column to have an automatic width, but want the table to span t
 include::example$row.adoc[tag=base-h]
 ----
 
-The table from <<ex-stetch>> is rendered below.
+The table from <<ex-stretch>> is rendered below.
 The columns are sized to the content, but the table spans the width of the page.
 
 .Result of <<ex-stretch>>
