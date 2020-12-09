@@ -114,7 +114,7 @@ The anchors in the text get replaced with invisible anchor points in the output.
 
 For example, you would not put an anchor in front of a list item:
 
-.Wrong position for an anchor ID in front of a list item.
+.Incorrect position for an anchor ID in front of a list item
 [source]
 ----
 include::example$id.adoc[tag=anchor-wrong]
@@ -125,7 +125,15 @@ Instead, you would put it at the very start of the text of the list item:
 .Define an inline anchor on a list item
 [source]
 ----
-include::example$id.adoc[tag=anchor-list]
+include::example$id.adoc[tag=anchor-list-item]
+----
+
+For a description list, the anchor must be placed at the start of the term:
+
+.Define an inline anchor on a description list item
+[source]
+----
+include::example$id.adoc[tag=anchor-dlist-item]
 ----
 
 Here's how you can define the ID for a section using an inline anchor:
