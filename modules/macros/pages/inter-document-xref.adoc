@@ -71,7 +71,7 @@ The following example demonstrates how to use the `relfilesuffix` attribute to c
 = Document Title
 \ifdef::env-github,env-browser[:relfilesuffix: .adoc]
 
-See the <<README#,README>>.
+See the xref:README.adoc[README].
 
 We could also write the link as link:README{relfilesuffix}[README].
 ----

@@ -20,14 +20,29 @@ See xref:link-macro-attribute-parsing.adoc[link macro attribute list] to learn h
 
 Like all inline macros, the link macro can be escaped using a leading backslash (`\`).
 
-Here's an example that demonstrates how to use the link macro to link to a relative path:
+== Link to a relative file
+
+If you want to link to a non-AsciiDoc file that is relative to the current document, use the `link` macro in front of the file name.
+
+TIP: To link to a relative AsciiDoc file, use the xref:inter-document-xref.adoc[xref macro] instead.
+
+Here's an example that demonstrates how to use the link macro to link to a relative file path:
 
 [source]
 ----
-link:report.pdf[Get Report]
+include::example$url.adoc[tag=link]
 ----
 
 The AsciiDoc processor will create a link to _report.pdf_ with the text "Get Report", even though the target is not a URL.
+
+If the target file is an HTML file, and you want to link directly to an anchor within that document, append a hash (`#`) followed by the name of the anchor after the file name:
+
+[source]
+----
+include::example$url.adoc[tag=hash]
+----
+
+Note that when linking to a relative file, even if it's an HTML file, the linked text is required.
 
 // FIXME: this feels like it needs subsections
 == When to use the link macro
