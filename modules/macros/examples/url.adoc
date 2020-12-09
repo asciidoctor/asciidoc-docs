@@ -45,11 +45,11 @@ Chat with other Asciidoctor users on the https://discuss.asciidoctor.org/[*maili
 // end::css[]
 
 // tag::link[]
-link:protocol.json[Open the JSON file]
+link:downloads/report.pdf[Get Report]
 // end::link[]
 
 // tag::hash[]
-link:external.html#livereload[LiveReload]
+link:tools.html#editors[]
 // end::hash[]
 
 // used in qr
