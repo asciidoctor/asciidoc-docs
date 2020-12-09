@@ -1,4 +1,5 @@
-= Abstract Block Style
+// REVIEW we may want to rethink where this page is located
+= Abstract (Block)
 
 An abstract is a concise overview of a document.
 The `abstract` block style can be placed on an open block or paragraph.

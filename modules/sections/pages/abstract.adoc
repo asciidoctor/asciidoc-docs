@@ -1,4 +1,4 @@
-= Abstract
+= Abstract (Section)
 // anchor um: user-abstract
 
 An abstract is a concise overview of an article.
