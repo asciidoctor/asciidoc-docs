@@ -35,4 +35,4 @@ Your journey begins here.
 
 TIP: To include a quote at the beginning of a chapter in a book, wrap a quote block inside an abstract block.
 
-There's also an xref:sections:abstract.adoc[abstract section style].
+There's also an xref:abstract.adoc[abstract section style].
