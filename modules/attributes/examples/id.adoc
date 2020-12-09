@@ -27,11 +27,19 @@ anchor:bookmark-c[]Use a cross reference to link to this location.
 [[anchor-point]]* list item text
 // end::anchor-wrong[]
 
-// tag::anchor-list[]
+// tag::anchor-list-item[]
 * First item
 * [[step2]]Second item
 * Third item
-// end::anchor-list[]
+// end::anchor-list-item[]
+
+// tag::anchor-dlist-item[]
+[[cpu,CPU]]Central Processing Unit (CPU)::
+The brain of the computer.
+
+[[hard-drive]]Hard drive::
+Permanent storage for operating system and/or user files.
+// end::anchor-dlist-item[]
 
 // tag::anchor-header[]
 === Version 4.9 [[version-4_9]]
