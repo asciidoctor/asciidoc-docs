@@ -13,7 +13,7 @@ The `abstract` section style must be set on the first section of the article, as
 include::example$abstract.adoc[]
 ----
 
-If you want to style a paragraph or an open block as an abstract, instead of a whole section, see the xref:blocks:abstract.adoc[abstract block style] documentation.
+If you want to style a paragraph or an open block as an abstract, instead of a whole section, see the xref:abstract-block.adoc[abstract block style] documentation.
 
 ////
 There's some sort of funkiness with book and abstract so we're putting this section on hold.
