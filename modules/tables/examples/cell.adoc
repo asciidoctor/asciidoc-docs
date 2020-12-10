@@ -22,15 +22,15 @@ s|This content is bold (`s`).
 
 // tag::adoc[]
 |===
-|Column 1 |Column 2
+|Normal Style |AsciiDoc Style
 
-a|This cell is prefixed with an `a`, so the processor interprets the following lines as an AsciiDoc list.
+|This cell isn't prefixed with an `a`, so the processor doesn't interpret the following lines as an AsciiDoc list.
 
 * List item 1
 * List item 2
 * List item 3
 
-|This cell isn't prefixed with an `a`, so the processor doesn't interpret the following lines as an AsciiDoc list.
+a|This cell is prefixed with an `a`, so the processor interprets the following lines as an AsciiDoc list.
 
 * List item 1
 * List item 2
