@@ -3,6 +3,7 @@
 :y: Yes
 :n: No
 :endash: &#8211;
+:url-epoch: https://reproducible-builds.org/specs/source-date-epoch/
 
 Document attributes are used either to configure behavior in the processor or to relay information about the document and its environment.
 This page catalogs all the built-in (i.e., reserved) document attributes in AsciiDoc.
@@ -38,7 +39,7 @@ However, changing an attribute only affects behavior for content that follows th
 
 == Intrinsic attributes
 
-All intrinsic attributes are set automatically by the processor.
+Intrinsic attributes are set automatically by the processor.
 These attributes provide information about the document being processed (e.g., `docfile`), the security mode under which the processor is running (e.g., `safe-mode-name`), and information about the user's environment (e.g., `user-home`).
 
 Many of these attributes are read only, which means they can't be modified (with some exceptions).
@@ -48,17 +49,19 @@ All other attributes marked as modifiable must be set by the end of the header (
 
 [cols="30m,20,^10,^10,30"]
 |===
-.>|Name .>|Example Value .>|Modifiable .>|API/CLI Only .>|Notes
+.>|Name .>|Allowable Values .>|Modifiable .>|API/CLI Only .>|Notes
 
 |backend
-|html5
+|_any_ +
+_ex._ html5
 |{y}
 |{n}
 |The backend used to select and activate the converter that creates the output file.
 Usually named according to the output format (e.g., `html5`)
 
 |basebackend
-|html
+|_any_ +
+_ex._ html
 |{n}
 |n/a
 |The generic backend on which the backend is based.
@@ -66,51 +69,59 @@ Typically derived from the backend value minus trailing numbers (e.g., the baseb
 May also indicate the internal backend employed by the converter (e.g., the basebackend for `pdf` is `html`).
 
 |docdate
-|2019-01-04
+|_date (ISO)_ +
+_ex._ 2019-01-04
 |{y}
 |{n}
 |Last modified date of the source document.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
 
 |docdatetime
-|2019-01-04 19:26:06 UTC
+|_datetime (ISO)_ +
+_ex._ 2019-01-04 19:26:06 UTC
 |{y}
 |{n}
 |Last modified date and time of the source document.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
 
 |docdir
-|/home/user/docs
+|_directory path_ +
+_ex._ /home/user/docs
 |If input is a string
 |{y}
 |Full path of the directory that contains the source document.
 Empty if the safe mode is SERVER or SECURE (to conceal the file's location).
 
 |docfile
-|/home/user/docs/userguide.adoc
+|_file path_ +
+_ex._ /home/user/docs/userguide.adoc
 |If input is a string
 |{y}
 |Full path of the source document.
 Truncated to the basename if the safe mode is SERVER or SECURE (to conceal the file's location).
 
 |docfilesuffix
-|.adoc
+|_file extension_ +
+_ex._ .adoc
 |If input is a string
 |{y}
 |File extension of the source document, including the leading period.
 
 |docname
-|userguide
+|_file stem basename_ +
+_ex._ userguide
 |If input is a string
 |{y}
 |Root name of the source document (no leading path or file extension).
 
 |doctime
-|19:26:06 UTC
+|_time (ISO)_ +
+_ex._ 19:26:06 UTC
 |{y}
 |{n}
 |Last modified time of the source document.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
 
 |docyear
-|{docyear}
+|_integer_ +
+_ex._ {docyear}
 |{y}
 |{n}
 |Year that the document was last modified.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
@@ -122,44 +133,51 @@ Truncated to the basename if the safe mode is SERVER or SECURE (to conceal the f
 |Only set if content is being converted to an embedded document (i.e., body of document only).
 
 |filetype
-|html
+|_any_ +
+_ex._ html
 |If input is a string
 |{y}
 |File extension of the output file name (without leading period).
 
 |htmlsyntax
-|html
+|`html` +
+`xml`
 |{n}
 |n/a
 |Syntax used when generating the HTML output.
 Controlled by and derived from the backend name (html=html or xhtml=html).
 
 |localdate
-|2019-02-17
+|_date (ISO)_ +
+_ex._ 2019-02-17
 |{y}
 |{n}
 |Date when the document was converted.^[<<note-sourcedateepoch,2>>]^
 
 |localdatetime
-|2019-02-17 19:31:05 UTC
+|_datetime (ISO)_ +
+_ex._ 2019-02-17 19:31:05 UTC
 |{y}
 |{n}
 |Date and time when the document was converted.^[<<note-sourcedateepoch,2>>]^
 
 |localtime
-|19:31:05 UTC
+|_time (ISO)_ +
+_ex._ 19:31:05 UTC
 |{y}
 |{n}
 |Time when the document was converted.^[<<note-sourcedateepoch,2>>]^
 
 |localyear
-|{localyear}
+|_integer_ +
+_ex._ {localyear}
 |{y}
 |{n}
 |Year when the document was converted.^[<<note-sourcedateepoch,2>>]^
 
 |outdir
-|/home/user/docs/dist
+|_directory path_ +
+_ex._ /home/user/docs/dist
 |{n}
 |n/a
 |Full path of the output directory.
@@ -167,7 +185,8 @@ Controlled by and derived from the backend name (html=html or xhtml=html).
 Only available to the API once the document is converted).
 
 |outfile
-|/home/user/docs/dist/userguide.html
+|_file path_ +
+_ex._ /home/user/docs/dist/userguide.html
 |{n}
 |n/a
 |Full path of the output file.
@@ -175,24 +194,30 @@ Only available to the API once the document is converted).
 Only available to the API once the document is converted).
 
 |outfilesuffix
-|.html
+|_file extension_ +
+_ex._ .html
 |{y}
 |{n}
 |File extension of the output file (starting with a period) as determined by the backend (`.html` for `html`, `.xml` for `docbook`, etc.).
 
 |safe-mode-level
-|20
+|`0` +
+`10` +
+`20` +
+`30`
 |{n}
 |n/a
 |Numeric value of the safe mode setting.
-(UNSAFE=0, SAFE=10, SERVER=10, SECURE=20).
+(0=UNSAFE, 1=SAFE, 10=SERVER, 20=SECURE).
 
 |safe-mode-name
-|SERVER
+|`UNSAFE` +
+`SAFE` +
+`SERVER` +
+`SECURE`
 |{n}
 |n/a
 |Textual value of the safe mode setting.
-(UNSAFE, SAFE, SERVER, or SECURE).
 
 |safe-mode-unsafe
 |_empty_
@@ -219,7 +244,8 @@ Only available to the API once the document is converted).
 |Set if the safe mode is SECURE.
 
 |user-home
-|/home/user
+|_directory path_ +
+_ex._ /home/user
 |{n}
 |n/a
 |Full path of the home directory for the current user.
@@ -321,7 +347,7 @@ Useful for storing the output in a source code control system as it prevents spu
 
 |chapter-number
 |_number_ +
-(0)
+(`0`)
 |{n}
 |{n}
 |Sets the seed value for the chapter number sequence.^[<<note-number,1>>]^
@@ -351,7 +377,7 @@ _Book doctype only_.
 
 |example-number
 |_number_ +
-(0)
+(`0`)
 |{n}
 |{n}
 |Sets the seed value for the example number sequence.^[<<note-number,1>>]^
@@ -365,7 +391,7 @@ _Book doctype only_.
 
 |figure-number
 |_number_ +
-(0)
+(`0`)
 |{n}
 |{n}
 |Sets the seed value for the figure number sequence.^[<<note-number,1>>]^
@@ -399,7 +425,7 @@ _Book doctype only_.
 
 |listing-number
 |_number_ +
-(0)
+(`0`)
 |{n}
 |{n}
 |Sets the seed value for the listing number sequence.^[<<note-number,1>>]^
@@ -461,7 +487,7 @@ _Book doctype only_.
 
 |table-number
 |_number_ +
-(0)
+(`0`)
 |{n}
 |{n}
 |Sets the seed value for the table number sequence.^[<<note-number,1>>]^
@@ -649,7 +675,7 @@ See xref:sections:id-prefix-and-separator.adoc#separator[Change the ID word sepa
 |{startsb}+-{endsb}0{endash}5
 |{n}
 |{n}
-|Increases or decreases level of headings in include files.
+|Increases or decreases level of headings below assignment.
 A leading + or - makes the value relative.
 //<<include-partitioning>>
 
@@ -657,7 +683,8 @@ A leading + or - makes the value relative.
 |_empty_
 |{n}
 |{n}
-|See xref:sections:part-numbers-and-labels.adoc#partnums[Part numbers].
+|Enables numbering of parts.
+See xref:sections:part-numbers-and-labels.adoc#partnums[Number book parts].
 _Book doctype only_.
 
 |sectanchors
@@ -688,7 +715,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |sectnumlevels
 |0{endash}5 +
-(3)
+(`3`)
 |{n}
 |{n}
 |xref:sections:numbers.adoc#numlevels[Controls depth of section numbering].
@@ -712,7 +739,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |toclevels
 |1{endash}5 +
-(2)
+(`2`)
 |{n}
 |{y}
 |xref:toc:section-depth.adoc[Maximum section level to display].
@@ -766,11 +793,11 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 //<<naming-docinfo-files>>
 
 |docinfodir
-|_directory_ +
-(base directory)
+|_directory path_
 |{n}
 |{y}
 |Location of docinfo files.
+Defaults to directory of source file if not specified.
 //<<locating-docinfo-files>>
 
 |docinfosubs
@@ -853,7 +880,8 @@ _PDF converter only_.
 Mutually exclusive with the `showtitle` attribute.
 
 |outfilesuffix
-|*_file extension_*
+|*_file extension_* +
+_ex._ .html
 |{y}
 |{y}
 |File extension of output file, including dot (`.`), such as `.html`.
@@ -861,7 +889,7 @@ Mutually exclusive with the `showtitle` attribute.
 
 |pagewidth
 |_integer_ +
-(425)
+(`425`)
 |{n}
 |{y}
 |Page width used to calculate the absolute width of tables in the DocBook output.
@@ -876,7 +904,8 @@ _path segment_
 
 |relfilesuffix
 |*_file extension_* +
-_path segment_
+_path segment_ +
+_ex._ .html
 |{y}
 |{n}
 |The path suffix (e.g., file extension) to add to relative xrefs.
@@ -916,7 +945,7 @@ Mutually exclusive with the `notitle` attribute.
 |*_empty_*
 |{y}
 |{y}
-|Control whether webfonts are loaded, and which ones, when using the default stylesheet.
+|Control whether webfonts are loaded when using the default stylesheet.
 When set to empty, uses the default font collection from Google Fonts.
 A non-empty value replaces the `family` query string parameter in the Google Fonts URL.
 //<<applying-a-theme>> and {url-org}/asciidoctor.org/issues/410[issue #410^]
@@ -970,12 +999,13 @@ Only relevant used when value of `icons` attribute is `font`.
 Any other value is assumed to be an icontype and sets the value to empty (image-based icons).
 
 |iconsdir
-|_directory_ +
-_url_
+|_directory path_ +
+_url_ +
+_ex._ ./images/icons
 |{y}
 |{n}
 |Location of non-font-based image icons.
-Points to the _icons_ folder under `imagesdir` by default.
+Defaults to the _icons_ folder under `imagesdir` if `imagesdir` is specified and `iconsdir` is not specified.
 
 |icontype
 |`jpg` +
@@ -988,9 +1018,9 @@ Points to the _icons_ folder under `imagesdir` by default.
 Only relevant when using image-based icons.
 
 |imagesdir
-|_directory_ +
-_url_ +
-*_empty_*
+|*_empty_* +
+_directory path_ +
+_url_
 |{y}
 |{n}
 |Location of image files.
@@ -1023,7 +1053,7 @@ _url_ +
 |Tells processor not to load CodeRay.
 
 |highlightjsdir
-|_directory_ +
+|_directory path_ +
 _url_ +
 (default CDN URL)
 |{n}
@@ -1038,7 +1068,7 @@ _url_ +
 |Name of theme used by highlight.js.
 
 |prettifydir
-|_directory_ +
+|_directory path_ +
 _url_ +
 (default CDN URL)
 |{n}
@@ -1103,7 +1133,7 @@ Any other value is permitted, but must be supported by a custom syntax highlight
 //<<normalize-block-indentation>>
 
 |source-language
-|_Source code language name_
+|_source code language name_
 |{n}
 |{n}
 |xref:verbatim:source-highlighter.adoc[Default language for source code blocks].
@@ -1124,7 +1154,7 @@ Any other value is permitted, but must be supported by a custom syntax highlight
 
 |copycss
 |*_empty_* +
-_path_
+_file path_
 |{y}
 |{y}
 |Copy CSS files to output.
@@ -1155,9 +1185,9 @@ Can't be unset in SECURE mode.
 Use CSS stylesheet instead.*
 
 |stylesdir
-|`*.*` +
-_directory_ +
-_url_
+|_directory path_ +
+_url_ +
+`*.*`
 |{y}
 |{y}
 |Location of CSS stylesheets.
@@ -1257,7 +1287,7 @@ Since these attributes deal with security, they can only be set from the API or 
 
 |max-attribute-value-size
 |_integer_ (≥ 0) +
-*4096*
+`*4096*`
 |If safe mode is SECURE
 |{y}
 |Limits maximum size (in bytes) of a resolved attribute value.
@@ -1266,8 +1296,8 @@ Since attributes can reference attributes, it's possible to create an output doc
 
 |max-include-depth
 |_integer_ (≥ 0) +
-*64*
-|{n}
+`*64*`
+|{y}
 |{y}
 |Curtail infinite include loops and to limit the opportunity to exploit nested includes to compound the size of the output document.
 //<<include-directive>>
