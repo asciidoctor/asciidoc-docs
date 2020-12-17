@@ -26,7 +26,7 @@ This effective value is prefixed with an equals sign and enclosed in square brac
 The effective value will not be visible to an attribute reference.
 * (`implied`) -- Built-in attributes that are not set may have an implied value.
 The implied value is enclosed in parentheses (e.g., (`attributes`)).
-An implied value cannot be resolved using an attribute reference.
+An implied value can't be resolved using an attribute reference.
 
 +
 If the attribute doesn't accept _any_ or _empty_, than you must only assign one of the allowable values or specified value type.
@@ -35,6 +35,204 @@ Header Only:: The attribute must be set or unset by the end of the document head
 Otherwise, the assignment won't have any effect on the document.
 If an attribute is not marked as _Header Only_, it can be set anywhere in the document, assuming the attribute is not locked by the API or CLI.
 However, changing an attribute only affects behavior for content that follows the assignment (in document order).
+
+== Intrinsic attributes
+
+All intrinsic attributes are set automatically by the processor.
+These attributes provide information about the document being processed (e.g., `docfile`), the security mode under which the processor is running (e.g., `safe-mode-name`), and information about the user's environment (e.g., `user-home`).
+
+Many of these attributes are read only, which means they can't be modified (with some exceptions).
+Attributes which are not are marked as modifiable.
+Attributes marked as both modifiable and API/CLI Only can only be set from the API or CLI.
+All other attributes marked as modifiable must be set by the end of the header (i.e., Header Only).
+
+[cols="30m,20,^10,^10,30"]
+|===
+.>|Name .>|Example Value .>|Modifiable .>|API/CLI Only .>|Notes
+
+|backend
+|html5
+|{y}
+|{n}
+|The backend used to select and activate the converter that creates the output file.
+Usually named according to the output format (e.g., `html5`)
+
+|basebackend
+|html
+|{n}
+|n/a
+|The generic backend on which the backend is based.
+Typically derived from the backend value minus trailing numbers (e.g., the basebackend for `docbook5` is `docbook`).
+May also indicate the internal backend employed by the converter (e.g., the basebackend for `pdf` is `html`).
+
+|docdate
+|2019-01-04
+|{y}
+|{n}
+|Last modified date of the source document.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
+
+|docdatetime
+|2019-01-04 19:26:06 UTC
+|{y}
+|{n}
+|Last modified date and time of the source document.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
+
+|docdir
+|/home/user/docs
+|If input is a string
+|{y}
+|Full path of the directory that contains the source document.
+Empty if the safe mode is SERVER or SECURE (to conceal the file's location).
+
+|docfile
+|/home/user/docs/userguide.adoc
+|If input is a string
+|{y}
+|Full path of the source document.
+Truncated to the basename if the safe mode is SERVER or SECURE (to conceal the file's location).
+
+|docfilesuffix
+|.adoc
+|If input is a string
+|{y}
+|File extension of the source document, including the leading period.
+
+|docname
+|userguide
+|If input is a string
+|{y}
+|Root name of the source document (no leading path or file extension).
+
+|doctime
+|19:26:06 UTC
+|{y}
+|{n}
+|Last modified time of the source document.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
+
+|docyear
+|{docyear}
+|{y}
+|{n}
+|Year that the document was last modified.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
+
+|embedded
+|_empty_
+|{n}
+|n/a
+|Only set if content is being converted to an embedded document (i.e., body of document only).
+
+|filetype
+|html
+|If input is a string
+|{y}
+|File extension of the output file name (without leading period).
+
+|htmlsyntax
+|html
+|{n}
+|n/a
+|Syntax used when generating the HTML output.
+Controlled by and derived from the backend name (html=html or xhtml=html).
+
+|localdate
+|2019-02-17
+|{y}
+|{n}
+|Date when the document was converted.^[<<note-sourcedateepoch,2>>]^
+
+|localdatetime
+|2019-02-17 19:31:05 UTC
+|{y}
+|{n}
+|Date and time when the document was converted.^[<<note-sourcedateepoch,2>>]^
+
+|localtime
+|19:31:05 UTC
+|{y}
+|{n}
+|Time when the document was converted.^[<<note-sourcedateepoch,2>>]^
+
+|localyear
+|{localyear}
+|{y}
+|{n}
+|Year when the document was converted.^[<<note-sourcedateepoch,2>>]^
+
+|outdir
+|/home/user/docs/dist
+|{n}
+|n/a
+|Full path of the output directory.
+(Cannot be referenced in the content.
+Only available to the API once the document is converted).
+
+|outfile
+|/home/user/docs/dist/userguide.html
+|{n}
+|n/a
+|Full path of the output file.
+(Cannot be referenced in the content.
+Only available to the API once the document is converted).
+
+|outfilesuffix
+|.html
+|{y}
+|{n}
+|File extension of the output file (starting with a period) as determined by the backend (`.html` for `html`, `.xml` for `docbook`, etc.).
+
+|safe-mode-level
+|20
+|{n}
+|n/a
+|Numeric value of the safe mode setting.
+(UNSAFE=0, SAFE=10, SERVER=10, SECURE=20).
+
+|safe-mode-name
+|SERVER
+|{n}
+|n/a
+|Textual value of the safe mode setting.
+(UNSAFE, SAFE, SERVER, or SECURE).
+
+|safe-mode-unsafe
+|_empty_
+|{n}
+|n/a
+|Set if the safe mode is UNSAFE.
+
+|safe-mode-safe
+|_empty_
+|{n}
+|n/a
+|Set if the safe mode is SAFE.
+
+|safe-mode-server
+|_empty_
+|{n}
+|n/a
+|Set if the safe mode is SERVER.
+
+|safe-mode-secure
+|_empty_
+|{n}
+|n/a
+|Set if the safe mode is SECURE.
+
+|user-home
+|/home/user
+|{n}
+|n/a
+|Full path of the home directory for the current user.
+Masked as `.` if the safe mode is SERVER or SECURE.
+|===
+[[note-docdatetime]]^[1]^ Only reflects the last modified time of the source document file.
+It does not consider the last modified time of files which are included.
+
+[[note-sourcedateepoch]]^[2]^ If the SOURCE_DATE_EPOCH environment variable is set, the value assigned to this attribute is built from a UTC date object that corresponds to the timestamp (as an integer) stored in that environment variable.
+This override offers one way to make the conversion reproducible.
+See the {url-epoch}[source date epoch specification] for more information about the SOURCE_DATE_EPOCH environment variable.
+Otherwise, the date is expressed in the local time zone, which is reported as a time zone offset (e.g., `-0600`) or UTC if the time zone offset is 0).
+To force the use of UTC, set the `TZ=UTC` environment variable when invoking Asciidoctor.
 
 == Compliance attributes
 
@@ -105,7 +303,7 @@ Useful for storing the output in a source code control system as it prevents spu
 (`@`)
 |{n}
 |{n}
-|Sets the seed value for the appendix number sequence.^[<<fn-number,1>>]^
+|Sets the seed value for the appendix number sequence.^[<<note-number,1>>]^
 
 |appendix-refsig
 |_any_ +
@@ -126,7 +324,7 @@ Useful for storing the output in a source code control system as it prevents spu
 (0)
 |{n}
 |{n}
-|Sets the seed value for the chapter number sequence.^[<<fn-number,1>>]^
+|Sets the seed value for the chapter number sequence.^[<<note-number,1>>]^
 _Book doctype only_.
 
 |chapter-refsig
@@ -156,7 +354,7 @@ _Book doctype only_.
 (0)
 |{n}
 |{n}
-|Sets the seed value for the example number sequence.^[<<fn-number,1>>]^
+|Sets the seed value for the example number sequence.^[<<note-number,1>>]^
 
 |figure-caption
 |_any_ +
@@ -170,7 +368,7 @@ _Book doctype only_.
 (0)
 |{n}
 |{n}
-|Sets the seed value for the figure number sequence.^[<<fn-number,1>>]^
+|Sets the seed value for the figure number sequence.^[<<note-number,1>>]^
 
 |important-caption
 |_any_ +
@@ -204,7 +402,7 @@ _Book doctype only_.
 (0)
 |{n}
 |{n}
-|Sets the seed value for the listing number sequence.^[<<fn-number,1>>]^
+|Sets the seed value for the listing number sequence.^[<<note-number,1>>]^
 
 |manname-title
 |_any_ +
@@ -266,7 +464,7 @@ _Book doctype only_.
 (0)
 |{n}
 |{n}
-|Sets the seed value for the table number sequence.^[<<fn-number,1>>]^
+|Sets the seed value for the table number sequence.^[<<note-number,1>>]^
 
 |tip-caption
 |_any_ +
@@ -1075,7 +1273,7 @@ Since attributes can reference attributes, it's possible to create an output doc
 //<<include-directive>>
 |===
 
-[[fn-number]]^[1]^ The `-number` attributes are created and managed automatically by the AsciiDoc processor for numbered blocks.
+[[note-number]]^[1]^ The `-number` attributes are created and managed automatically by the AsciiDoc processor for numbered blocks.
 They are only used if the corresponding `-caption` attribute is set (e.g., `listing-caption`) and the block has a title.
 In Asciidoctor, setting the `-number` attributes will influence the number used for subsequent numbered blocks of that type.
 However, you should not rely on this behavior as it may change in future versions.
