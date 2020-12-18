@@ -24,7 +24,7 @@ Numeric values and values shown in _italic_ are instructional and indicate a val
 The attribute is simply turned on by being set.
 * _empty_[=`effective`] -- In some cases, an empty value is interpreted by the processor as one of the allowable non-empty values.
 This effective value is prefixed with an equals sign and enclosed in square brackets (e.g., [=`auto`]).
-The effective value will not be visible to an attribute reference.
+An attribute reference will resolve to an empty value rather than the effective value.
 * (`implied`) -- Built-in attributes that are not set may have an implied value.
 The implied value is enclosed in parentheses (e.g., (`attributes`)).
 An implied value can't be resolved using an attribute reference.
@@ -202,9 +202,9 @@ _ex._ .html
 
 |safe-mode-level
 |`0` +
+`1` +
 `10` +
-`20` +
-`30`
+`20`
 |{n}
 |n/a
 |Numeric value of the safe mode setting.
