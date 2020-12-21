@@ -127,7 +127,7 @@ Let's consider an example.
 [caption="Example: "]
 ====
 Assume you want to put italics inside of monospaced text.
-If you want the syntax to work in both Asciidoctor and AsciiDoc Python, you need to do one of the following:
+If you want the syntax to work in both Asciidoctor and AsciiDoc.py, you need to do one of the following:
 
 [loweralpha]
 . Enable the `compat-mode` attribute on the document and enter the text as:
