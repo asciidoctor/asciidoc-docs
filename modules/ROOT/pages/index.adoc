@@ -2,10 +2,6 @@
 :navtitle: Introduction
 :url-asciidoc-lang: https://projects.eclipse.org/projects/technology.asciidoc
 
-[caption=Migration in Progress]
-CAUTION: This documentation is in migration.
-If you're looking for the current Asciidoctor and AsciiDoc documentation, visit https://asciidoctor.org/docs.
-
 == About AsciiDoc
 
 AsciiDoc is a lightweight and semantic markup language primarily designed for writing technical documentation.
