@@ -1,0 +1,45 @@
+= AsciiDoc Language Documentation Changelog
+
+This document summarizes the changes introduced to the AsciiDoc Language Documentation by quarter.
+For a detailed view of what's changed, refer to the repository's
+https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
+
+== Published Q4 2020
+
+These changes were committed and merged into the main branch starting on November 24, 2020.
+
+Fixed::
+* Replace the phrase _lead style_ with the phrase _lead role_
+* Replace the table frame value `topbot` with `ends` (#9)
+* Fix conflict with the built-in preamble ID
+* Replace the document attribute `hardbreaks` with `hardbreaks-option` (#3)
+* Fix links to page fragments (aka deep links)
+* Fix grouping in navigation files
+* Update xrefs to reflect module name change in asciidoctor component
+
+Added::
+* Import the AsciiDoc syntax quick reference content (#14)
+* Add page about abstract block style to navigation and distinguish from abstract section
+* Integrate the relative link documentation into the link macro page
+* Document where an anchor must be placed for a list item in a description list (#21)
+
+Changed::
+* Rework the reference table for built-in attributes by fixing incorrect values and descriptions, clarifying difference between effective value and implied value, and consolidating column for Header Only (#24)
+* Fold intrinsic attributes reference into document attributes reference (#26)
+* Use the term *pair* instead of *set* when referring to formatting mark complements (#6)
+* Replace the phrase _set of brackets_ with the phrase _pair of brackets_ to align with updated terminology (#6)
+* Replace the phrase _set of delimited lines_ with the phrase _pair of delimited lines_ (#6)
+* Revise the overview page for text formatting and punctuation (#6)
+* Move the hard line breaks section to a dedicated page under the Paragraphs section (#3)
+* Move unordered lists before ordered lists in navigation file
+* Replace fenced code blocks with AsciiDoc source blocks
+* Drop unnecessary quotes in value of `subs` attribute
+* Swap columns in AsciiDoc table cell example
+* Use xref macro for inter-document xrefs
+* Replace the name AsciiDoc Python with AsciiDoc.py
+* Define `navtitle` attribute on start page
+* Rename version from current to latest
+
+Removed::
+* Remove migration in progress notice
+* Remove disabled pages
