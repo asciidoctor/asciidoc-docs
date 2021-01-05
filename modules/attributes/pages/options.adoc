@@ -35,7 +35,7 @@ This is a sidebar with two options assigned to it.
 For instance, consider a table with the three built-in option values, `header`, `footer`, and `autowidth`, assigned to it.
 <<ex-table-short>> shows how the values are assigned using the shorthand notation.
 
-.Table assigned three options using the shorthand syntax
+.Table with three options assigned using the shorthand syntax
 [source#ex-table-short]
 ----
 [%header%footer%autowidth,cols=2*~]
@@ -75,7 +75,7 @@ This is a sidebar with three options assigned to it.
 Let's revisit the table in <<ex-table-short>> that has the three built-in option values, `header`, `footer`, and `autowidth`, assigned to it using the shorthand notation (`%`).
 Instead of using the shorthand notation, <<ex-table-formal>> shows how the values are assigned using the formal syntax.
 
-.Table assigned three options using the formal syntax
+.Table with three options assigned using the formal syntax
 [source#ex-table-formal]
 ----
 [cols=2*~,options="header,footer,autowidth"]
@@ -91,7 +91,7 @@ Instead of using the shorthand notation, <<ex-table-formal>> shows how the value
 == Using options with other attributes
 
 Let's consider `options` when combined with other attributes.
-The following example show how to structure an attribute list when you have style, role, and options attributes.
+The following example shows how to structure an attribute list when you have style, role, and options attributes.
 
 .Shorthand
 [source]
