@@ -36,18 +36,18 @@ The content model determines how the content inside of the block is processed.
 The content models are as follows:
 
 compound:: a block that only contains other blocks (e.g., a section block)
-simple:: a block that is treated as contiguous lines of paragraph text (and subject to normal substitutions) (e.g., a paragraph block)
-verbatim:: a block that holds verbatim text (displayed "as is") (and subject to verbatim substitutions) (e.g., a listing block)
-raw:: a block that holds unprocessed content passed directly through to the output with no substitutions applied (e.g., a passthrough block)
-empty:: a block that has no content (e.g., an image block)
+simple:: a block that is treated as contiguous lines of paragraph text (and subject to normal substitutions) (e.g., a paragraph blokc)
+verbatim:: a block holds verbatim text (displayed "as is") (and subject to verbatim substitutions) (e.g., a listing block)
+raw:: a block that holds unprocessed content passed directly through to the output with no sustitutions applied (e.g., a passthrough block)
+empty:: a block block that has no content (e.g., an image block)
 
 All sections have the compound content model because they can only contain other blocks.
 
 For some blocks, you may notice a name enclosed in square brackets above the block (e.g., `[source]`).
-In this case, the first positional (unnamed) attribute in the block attribute list is being used to specify the block style.
+In this case, the the first positional (unnamed) attribute in the block attribute list is being used to specify the block style.
 
 The block style elaborates the block's context.
-The style is almost always to be specified by the writer.
+The style is almost always be specified by the writer.
 
 Consider the following example of a source block:
 

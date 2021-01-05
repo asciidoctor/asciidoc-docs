@@ -19,7 +19,7 @@ Since a URL has a distinct, recognizable syntax, an AsciiDoc processor will dete
 This also works for bare email addresses.
 You can learn more about this behavior in xref:autolinks.adoc[].
 
-== Link-related macros
+== Link-related Macros
 
 Instead of showing the bare URL or email address as the linked text, you may want to customize that text.
 Or perhaps you want to apply attributes to the link, such as a role.
