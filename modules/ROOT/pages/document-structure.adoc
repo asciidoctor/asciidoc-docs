@@ -2,12 +2,12 @@
 
 On this page, you'll learn about the overall structure of an AsciiDoc document.
 Don't worry about the details of the syntax at this point as it will be covered thoroughly later in the documentation.
-Right now, we're just aiming for a sense of what makes up an AsciiDoc document.
+Right now, we're just aiming to get a sense of what makes up an AsciiDoc document.
 
 == Documents
 
 AsciiDoc is a plain text writing format with no boilerplate enclosure or prologue.
-An AsciiDoc document may consist of only a single sentence (or a single character, if you want to be academic).
+An AsciiDoc document may consist of only a single sentence (or a single character, to be academic).
 The following example is a valid AsciiDoc document with a single paragraph containing a single sentence:
 
 [source]
