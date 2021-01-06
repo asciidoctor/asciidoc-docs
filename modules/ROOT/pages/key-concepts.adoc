@@ -57,7 +57,7 @@ The name can either be a string (i.e., a named attribute) or a numerical index (
 
 Element attributes are not accessible at all from the content, so they cannot be referenced like document attributes.
 Element attributes enrich or configure the behavior of an element, such as to apply a role or set the width of an image.
-An element attribute is defined using an attribute list on an element, or an avaiable shorthand like a block title line.
+An element attribute is defined using an attribute list on an element, or an available shorthand like a block title line.
 
 == Macros
 
