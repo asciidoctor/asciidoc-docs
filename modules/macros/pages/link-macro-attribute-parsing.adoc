@@ -12,8 +12,8 @@ Normally, the whole text between the square brackets of a link macro is treated 
 https://discuss.asciidoctor.org[Discuss Asciidoctor]
 ----
 
-However, if the text contains both an equals sign (`=`) and a comma (`,`), and the comma comes after the equals sign, the text is parsed as an attribute list.
-In this case, the linked text is the first positional attribute.
+However, if the text contains an equals sign (`=`), the text is parsed as an xref:attributes:element-attributes.adoc#attribute-list[attribute list].
+If the first attribute is enclosed in double quotes (`"`) or contains no equals sign, it forms the linked text.
 
 The following example shows a URL macro with custom linked text alongside named attributes.
 
@@ -22,25 +22,30 @@ The following example shows a URL macro with custom linked text alongside named 
 https://discuss.asciidoctor.org[Discuss Asciidoctor,role=resource,window=_blank]
 ----
 
-If you want to define a single named attribute, but leave the linked text empty (so it falls back to the URL), then you need to start the attribute list with a comma.
-In other words, you need to leave a slot for the linked text so that the parser knows where it ends.
-Otherwise, the parser will treat the named attribute as the linked text.
-
-[source]
-----
-https://discuss.asciidoctor.org[,role=resource]
-----
-
-When attribute parsing is enabled, the link macro recognizes all the common attributes (id, role, and opts).
-It also recognizes a handful of attributes that are specific to the link macro.
-
-Let's consider a case when the linked text contains a comma and macro also has named attributes.
-In this case, you must enclose the linked text in double quotes so that it gets preserved by the parser.
+Let's consider a case where the linked text contains a comma and the macro also has named attributes.
+In this case, you must enclose the linked text in double quotes so that it is recognized as a single (positional) attribute.
 
 [source]
 ----
 https://example.org["Google, Yahoo, Bing",role=teal]
 ----
+
+Similarly, if the linked text contains an equals sign, the text must be enclosed in double quotes.
+
+[source]
+----
+https://example.org["The problem of inequality: does 1=2?"]
+----
+
+Finally, for automatic linked text and named attributes, you simply specify the named attributes.
+
+[source]
+----
+https://discuss.asciidoctor.org[role=bagel,window=_blank,opts=nofollow]
+----
+
+The link macro recognizes all the common attributes (id, role, and opts).
+It also recognizes a handful of attributes that are specific to the link macro.
 
 == Target a separate window
 
@@ -67,8 +72,8 @@ https://asciidoctor.org[Asciidoctor,window=_blank]
 
 === noopener and nofollow
 
-When the value of the `window` attribute is `_blank`, the AsciiDoc processor should also add the `rel="noopener"` attribute to the link tag in the HTML output.
-Doing so is considered a security best pratice.
+When the value of the `window` attribute is `_blank`, the AsciiDoc processor will also add the `rel="noopener"` attribute to the link tag in the HTML output.
+Doing so is considered a security best practice.
 
 If the window is not `_blank`, you need to enable this behavior explicitly by setting the `noopener` option on the macro:
 
