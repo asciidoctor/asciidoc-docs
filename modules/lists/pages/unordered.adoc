@@ -76,7 +76,7 @@ include::example$unordered.adoc[tag=nest]
 ====
 
 You can nest unordered lists to any depth.
-Keep in mind, however, that some interfaces will begin flatting lists after a certain depth.
+Keep in mind, however, that some interfaces will begin flattening lists after a certain depth.
 For instance, GitHub starts flattening list after 10 levels of nesting.
 
 [source]
