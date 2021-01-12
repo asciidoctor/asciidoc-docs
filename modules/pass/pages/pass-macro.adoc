@@ -45,22 +45,94 @@ include::example$pass.adoc[tag=3p]
 [#inline-pass]
 == Inline pass macro
 
+Like other inline passthroughs, the inline pass macro can be used to control the substitutions applied to a run of text.
 To exclude inline content from all of the substitutions, enclose it in the inline pass macro.
-For example, here's one way to format text as underline when generating HTML from AsciiDoc:
+
+Here's one way to format text as underline when generating HTML from AsciiDoc:
 
 [source]
 ----
 include::example$pass.adoc[tag=in-macro]
 ----
 
+And here's the result.
+
 ====
 include::example$pass.adoc[tag=in-macro]
 ====
 
-WARNING: Using passthroughs to pass content (without substitutions) can couple your content to a specific output format, such as HTML.
-In these cases, you should use conditional preprocessor directives to route passthrough content for different output formats based on the current backend.
+WARNING: Using passthroughs to send content directly to the output can couple your content to a specific output format, such as HTML.
+To avoid this risk, you should consider using conditional preprocessor directives to select content for different output formats based on the current backend.
 
-The inline pass macro is the only macro that is processed in the document header as part of the xref:subs:substitutions.adoc#header-group[header substitution group].
+What sets the inline pass macro apart from the alternatives is that it allows the substitutions to be customized.
+The inline pass macro also plays a critical role in the document header.
+In fact, it's the only macro that is processed in the document header by default as part of the xref:subs:substitutions.adoc#header-group[header substitution group] (though it can be used to enable other substitutions, as demonstrated in this section).
+
+Let's look at how to use the inline pass macro to hand select substitutions.
+
+=== Custom substitutions
+
+You can customize the substitutions applied to the content of an inline pass macro by specifying one or more substitution values in the target of the macro.
+Multiple values must be separated by commas and may not contain any spaces.
+The substitution value is either the formal name of a substitution type or group, or its shorthand.
+
+The following table lists the allowable substitution values:
+
+.Substitution values accepted by the inline pass macro
+[cols="1m,3m",width=50%]
+|===
+|Shorthand | Substitution Type
+
+|c
+|specialchars
+
+|a
+|attributes
+
+|r
+|replacements
+
+|m
+|macros
+
+|p
+|post replacements
+
+h|Shorthand
+h| Substitution Group
+
+|n
+|normal
+
+|v
+|verbatim
+|===
+
+For example, the quotes substitution (i.e., `q` or `quotes`) is enabled on the inline passthrough macro as follows:
+
+[source]
+----
+include::example$pass.adoc[tag=in-macro-sub]
+----
+
+Here's the result.
+
+====
+include::example$pass.adoc[tag=in-macro-sub]
+====
+
+To enable multiple substitution groups, separate each value in the macro target by a comma:
+
+[source]
+----
+include::example$pass.adoc[tag=in-macro-subs]
+----
+
+Here's the result.
+
+====
+include::example$pass.adoc[tag=in-macro-subs]
+====
 
 == Nesting blocks and passthroughs
 

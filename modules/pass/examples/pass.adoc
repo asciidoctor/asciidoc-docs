@@ -2,6 +2,14 @@
 The text pass:[<u>underline me</u>] is underlined.
 // end::in-macro[]
 
+// tag::in-macro-sub[]
+The text pass:q[<u>underline *me*</u>] is underlined.
+// end::in-macro-sub[]
+
+// tag::in-macro-subs[]
+The text pass:q,a[<u>underline _{docname}_</u>] is underlined.
+// end::in-macro-subs[]
+
 // tag::s-macro[]
 The text pass:q[<u>underline *me*</u>] is underlined and the word "`me`" is bold.
 // end::s-macro[]
