@@ -26,7 +26,7 @@ include::example$footnote.adoc[tag=base-x]
 == Externalizing a footnote
 
 Since footnotes are defined using an inline macro, the footnote content ends up right alongside the text it's annotating, making that text harder to read.
-You can solve this probably by externalizing your footnotes using document attributes.
+You can solve this problem by externalizing your footnotes using document attributes.
 
 Here's the previous example with the footnotes defined in document attributes and inserted using attribute references.
 Notice you still get the benefit of seeing where the footnote is placed without all the noise.
