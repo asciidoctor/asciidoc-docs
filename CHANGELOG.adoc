@@ -16,6 +16,7 @@ Fixed::
 * Fix links to page fragments (aka deep links)
 * Fix grouping in navigation files
 * Update xrefs to reflect module name change in asciidoctor component
+* Document the substitution values that the inline pass macro accepts; clarify the purpose of this macro (#37)
 
 Added::
 * Import the AsciiDoc syntax quick reference content (#14)
