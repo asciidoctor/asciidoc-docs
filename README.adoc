@@ -2,9 +2,18 @@
 :url-prototype: https://github.com/git/git-scm.com/commits/master/lib/asciidoc.rb
 :url-org: https://github.com/asciidoctor
 :url-asciidoc-lang: https://projects.eclipse.org/projects/technology.asciidoc
+:url-docs: https://docs.asciidoctor.org/asciidoc/latest
 
 This repository contains the user-facing documentation for the AsciiDoc language as it's implemented in {url-org}/asciidoctor[Asciidoctor].
+You can view the {url-docs}[published version] online.
 This documentation has been submitted as the initial contribution for the {url-asciidoc-lang}[AsciiDoc Language project at Eclipse].
+
+== Publishing
+
+This repository only contains the documentation source files and assets.
+The documentation is published {url-docs}[online] for reading.
+Although you can view a preview of the files through the GitHub interface, it's not an official rendering and you should not expect all content to display properly.
+To view it properly, you should read it {url-docs}[on the site where it is published].
 
 == Documentation Structure
 
