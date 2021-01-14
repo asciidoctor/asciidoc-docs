@@ -13,7 +13,7 @@ It's preceded by a blank line, entered on a line by itself, and then followed by
 ----
 Content in document.
 
-include::example$image.adoc[tag=base] <.> <.>
+include::example$image.adoc[tag=base-co]
 
 Content in document
 ----

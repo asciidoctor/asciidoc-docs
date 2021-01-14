@@ -3,6 +3,10 @@
 image::sunset.jpg[]
 // end::base[]
 
+// tag::base-co[]
+image::sunset.jpg[] <.> <.>
+// end::base-co[]
+
 // in qr as result
 // tag::qr-base[]
 image::macros:sunset.jpg[]
