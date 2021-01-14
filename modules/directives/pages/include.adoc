@@ -128,7 +128,7 @@ If the file is recognized as an AsciiDoc file (i.e., it has one of the following
 * preprocessor conditionals (e.g., `ifdef`)
 //* front matter (if enabled)
 
-This allows includes to be nested, and provides lot of flexibility in constructing radically different documents with a single master document and a few command line attributes.
+This allows includes to be nested, and provides lot of flexibility in constructing radically different documents with a single main document and a few command line attributes.
 
 Including non-AsciiDoc files is normally done to merge output from other programs or populate table data:
 
