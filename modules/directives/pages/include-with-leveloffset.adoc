@@ -21,7 +21,7 @@ This practice is recommended whenever including AsciiDoc content to avoid unexpe
 == Manipulate heading levels with leveloffset
 
 The `leveloffset` attribute can help here by pushing all headings in the included document down by the specified number of levels.
-This allows you to publish each chapter as a standalone document (complete with a document title), but still be able to include the chapters into a main document (which has its own document title).
+This allows you to publish each chapter as a standalone document (complete with a document title), but still be able to include the chapters into a primary document (which has its own document title).
 
 You can easily assemble your book so that the chapter document titles become level 1 headings using:
 
