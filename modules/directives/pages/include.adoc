@@ -74,8 +74,8 @@ The path used in an include directive can be relative or absolute.
 
 If the path is relative, the processor resolves the path using the following rules:
 
-* If the include directive is used in the main (top-level) document, relative paths are resolved relative to the base directory.
-(The base directory defaults to the directory of the main document and can be overridden from the CLI or API).
+* If the include directive is used in the primary (top-level) document, relative paths are resolved relative to the base directory.
+(The base directory defaults to the directory of the primary document and can be overridden from the CLI or API).
 * If the include directive is used in a file that has itself been included, the path is resolved relative to the including (i.e., current) file.
 
 //TODO show examples to contrast a relative vs an absolute include
@@ -128,7 +128,7 @@ If the file is recognized as an AsciiDoc file (i.e., it has one of the following
 * preprocessor conditionals (e.g., `ifdef`)
 //* front matter (if enabled)
 
-This allows includes to be nested, and provides lot of flexibility in constructing radically different documents with a single main document and a few command line attributes.
+This allows includes to be nested, and provides lot of flexibility in constructing radically different documents with a single primary document and a few command line attributes.
 
 Including non-AsciiDoc files is normally done to merge output from other programs or populate table data:
 
