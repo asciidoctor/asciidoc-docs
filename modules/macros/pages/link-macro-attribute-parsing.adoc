@@ -1,7 +1,7 @@
 = Link Macro Attribute Parsing
 
 If named attributes are detected between the square brackets of a link macro (including URL macros), that text is parsed as an attribute list.
-This page explains the conditions when this occurs and how to write the linked text so it does not get caught up in this parsing.
+This page explains the conditions when this occurs and how to write the linked text so it is recognized as a single positional attribute.
 
 == Linked text alongside named attributes
 
@@ -13,7 +13,13 @@ https://discuss.asciidoctor.org[Discuss Asciidoctor]
 ----
 
 However, if the text contains an equals sign (`=`), the text is parsed as an xref:attributes:element-attributes.adoc#attribute-list[attribute list].
-If the first attribute is enclosed in double quotes (`"`) or contains no equals sign, it forms the linked text.
+The exact rules for attribute list parsing and positional attributes are rather complex, and discussed on xref:attributes:positional-and-named-attributes.adoc[].
+As a simplified rule, to be sure that the linked text is recognized properly, it can either:
+
+* contain no comma (`,`) or equals sign (`=`)
+* or be enclosed in double quotes (`"`).
+
+There are several other situations in which text before the first comma may be recognized as the linked text.
 
 The following example shows a URL macro with custom linked text alongside named attributes.
 
@@ -30,11 +36,11 @@ In this case, you must enclose the linked text in double quotes so that it is re
 https://example.org["Google, Yahoo, Bing",role=teal]
 ----
 
-Similarly, if the linked text contains an equals sign, the text must be enclosed in double quotes.
+Similarly, if the linked text contains an equals sign, the text may be enclosed in double quotes to assure recognition as a positional attribute.
 
 [source]
 ----
-https://example.org["The problem of inequality: does 1=2?"]
+https://example.org["1=2 posits the problem of inequality"]
 ----
 
 Finally, for automatic linked text and named attributes, you simply specify the named attributes.
