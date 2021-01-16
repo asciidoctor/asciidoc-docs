@@ -39,6 +39,7 @@ Changed::
 * Swap columns in AsciiDoc table cell example
 * Use xref macro for inter-document xrefs
 * Replace the name AsciiDoc Python with AsciiDoc.py
+* Replace the term "master document" with "primary document"
 * Define `navtitle` attribute on start page
 * Rename version from current to latest
 
