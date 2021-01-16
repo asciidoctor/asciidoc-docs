@@ -115,7 +115,7 @@ CAUTION: If you want a space between the label and the title, you must add a tra
 |See Appendix R
 |===
 ----
-<.> Create an attribute list directly directly above the table's title and set the named attribute `caption`, followed by an equals sign (`=`), and then a value.
+<.> Create an attribute list directly above the table's title and set the named attribute `caption`, followed by an equals sign (`=`), and then a value.
 <.> Enclose the value in double quotation marks (`"`).
 Otherwise the processor will remove any trailing whitespaces, and the title text will start directly after the last character of the label.
 
