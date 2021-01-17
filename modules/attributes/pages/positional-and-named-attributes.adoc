@@ -13,6 +13,8 @@ The attribute that the value is assigned to depends on the type of the element:
 * `image:` and `image::` (1) alt text, (2) width, (3) height
 * Delimited blocks: (1) block name (aka style)
 * Other inline quoted text: (1) role
+* `link:` and `xref:` (1) reftext (linked text)
+* Syntax processor extensions can specify positional attributes
 
 For example, the following two image macros are equivalent.
 
@@ -56,3 +58,22 @@ No special processing is performed, except for attribute reference expansion, if
 
 If the attribute value contains the same quote character being used to enclose the value, escape the quote character in the value by prefixing it with a backslash (e.g., `title="\"Dark Horse\" is a song by George Harrison"`).
 // end::subs[]
+
+== Attribute parsing
+
+The exact rules for determining the boundaries of attributes and whether an attribute is positional or named are somewhat complicated.
+
+A `name` consists of a word character (letter or numeral) followed by any number of word characters, `.` charactes, or `-` characters, followed by something else (including the end of the string)
+
+* Parsing an attribute proceeds from the beginning of the attribute list string or after a previously recognized delimiter (`,`).
+* Blank space is skipped.
+* If there is a name, followed by optional blank space, followed by `=`, then a named attribute is recognized, with the just-read name.
+Parsing the value proceeds after skipping blank space after the `=`.
+* Otherwise this is a positional attribute with value starting after the skipped blank space and ending before (optional) blank space preceding the first delimiter (`,`).
+
+* Attribute value parsing, after skipping initial blank space:
+** If the first character is `"` then the string is read until the next unescaped quote or, if there is no closing quote, the next delimiter.
+If there is a closing quote, the quotes are removed; if not, the initial quote is retained.
+* If the next character is `'` then the string is read until the next unescaped `'`, or if there is no closing `'`, the next delimiter.
+If there is a closing `'`, the enclosing `'` characters are removed; if not, the initial `'` is retained.
+If there is a closing `'` and the first character is not an escaped `'` substitutions are performed as described above.
