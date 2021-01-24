@@ -3,7 +3,6 @@
 :disclaimer: Don't pet the wild Wolpertingers. We're not responsible for any loss \
 of hair, chocolate, or purple socks.
 :url-repo: https://github.com/asciidoctor/asciidoctor
-// [#attribute-reference]
 
 You'll likely use the value of a user-defined attribute entry or certain built-in attributes in specific locations throughout a document.
 To reference and use the value of a document attribute, you enclose the attribute's name in curly brackets (`+{name-of-an-attribute}+`).
@@ -12,16 +11,15 @@ This inline element is called an *attribute reference*.
 [#reference-custom]
 == Reference custom attributes
 
-Before you can reference an attribute in a document it must be declare using an attribute entry in the document header.
+Before you can reference an attribute in a document it must be declared using an attribute entry in the document header.
 Let's reference the two user-defined attributes set and assigned values in <<ex-set-custom>>.
 
 .Custom attributes set in the document header
-[source#ex-set-custom]
+[source#ex-set-custom,subs=+attributes]
 ----
 = Ops Manual
-:disclaimer: Don't pet the wild Wolpertingers. We're not responsible for any loss \
-of hair, chocolate, or purple socks.
-:url-repo: https://github.com/asciidoctor/asciidoctor
+:disclaimer: {disclaimer}
+:url-repo: {url-repo}
 ----
 
 Once you've set and assigned a value to the attribute, you can reference that attribute throughout your document.
@@ -54,7 +52,7 @@ If you're missing a lime colored sock, file a ticket in the {url-repo}/issues[As
 == Reference an automatically declared attribute
 
 An automatically set document attribute is referenced the same way as an explicitly set document attribute.
-For instance, Asciidoctor automatically sets all of the character replacement attributes.
+For instance, an AsciiDoc processor automatically sets these supported xref:character-replacement-reference.adoc[character replacement attributes].
 That means that you can reference them throughout your document without having to create an attribute entry in its header.
 
 [source]
