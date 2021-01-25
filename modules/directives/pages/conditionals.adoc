@@ -29,10 +29,10 @@ The conditional preprocessor directives determine which lines to add and which o
 
 If you don't want a conditional preprocessor directive to be processed, you must escape it using a backslash.
 
-// the following listing uses attributes to avoid the backslash to be removed before rendering it in HTML
-[source,subs=attributes+]
+// NOTE: the following listing uses indentation to prevent the directive from being processed
+[source,indent=0]
 ----
-{backslash}ifdef::just-an-example[]
+ \ifdef::just-an-example[]
 ----
 
 Escaping the directive is necessary _even if it appears in a verbatim block_ since it's not aware of the surrounding document structure.
