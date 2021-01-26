@@ -61,8 +61,9 @@ See xref:asciidoctor::safe-modes.adoc[] to learn more.
 
 If you don't want the include directive to be processed, you must escape it using a backslash.
 
+[indent=0]
 ----
-\include::just-an-example.ext[]
+ \include::just-an-example.ext[]
 ----
 
 Escaping the directive is necessary _even if it appears in a verbatim block_ since it's not aware of the surrounding document structure.
