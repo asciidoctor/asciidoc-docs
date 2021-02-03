@@ -129,5 +129,6 @@ Here are some of the permutations that you can use:
 
 There are also some shorthands if only exclusions are specified:
 
-`!foo`:: Equivalent to `**;!foo`; an exclusion without an inclusion implicitly starts by selecting all the lines.
+`!foo`:: Equivalent to `**;!foo`; an exclusion without an inclusion implicitly starts by selecting all the lines that do not contain a tag directive.
+
 `!*`:: Equivalent to `+**;!*+`; only selects regions that are not tagged.
