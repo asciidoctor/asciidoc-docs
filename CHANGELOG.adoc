@@ -4,6 +4,11 @@ This document summarizes the changes introduced to the AsciiDoc Language Documen
 For a detailed view of what's changed, refer to the repository's
 https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
+== Published Q1 2021
+
+Fixed::
+* Rewrite much of link-macro-attribute-parsing.adoc to reflect the simplified parsing behavior implemented in https://github.com/asciidoctor/asciidoctor/issues/2059.
+
 == Published Q4 2020
 
 These changes were committed and merged into the main branch starting on November 24, 2020.
