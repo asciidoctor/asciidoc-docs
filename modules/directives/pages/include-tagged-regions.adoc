@@ -127,6 +127,8 @@ Here are some of the permutations that you can use:
 
 `+**;!*+`:: Selects only the regions of the document outside of tags (i.e., non-tagged regions).
 
+`+**;!*;foo+`:: Selects the regions of the document outside of tags (i.e., non-tagged regions) and the lines in the regions tagged _foo_.
+
 There are also some shorthands if only exclusions are specified:
 
 `!foo`:: Equivalent to `**;!foo`; an exclusion without an inclusion implicitly starts by selecting all the lines that do not contain a tag directive.
