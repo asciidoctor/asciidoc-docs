@@ -13,6 +13,9 @@ Fixed::
 Added::
 * Add example of how to select all lines outside of tagged regions and lines inside a specific tagged region
 
+Changed::
+* Clarify the rules for include tag filtering; emphasize that the wildcards can only be used once
+
 == Published Q4 2020
 
 These changes were committed and merged into the main branch starting on November 24, 2020.
