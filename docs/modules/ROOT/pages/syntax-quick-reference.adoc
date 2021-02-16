@@ -822,6 +822,8 @@ include::pass:example$pass.adoc[tag=b-bl]
 include::pass:example$pass.adoc[tag=b-bl]
 ====
 
+:release-version: 2.4.3
+
 .Customize block substitutions
 [#ex-block-subs,subs=+macros]
 ------
