@@ -165,7 +165,7 @@ include::macros:example$url.adoc[tag=b-linkattrs]
 IMPORTANT: The `link:` macro prefix is _not_ required when the target starts with a URL scheme like `https:`.
 The URL scheme acts as an implicit macro prefix.
 
-CAUTION: If the linked text contains a comma and the text is followed by one or more named attributes, you must enclose the text in double quotes.
+CAUTION: If the link text contains a comma and the text is followed by one or more named attributes, you must enclose the text in double quotes.
 Otherwise, the text will be cut off at the comma (and the remaining text will get pulled into the attribute parsing).
 
 .URLs with spaces and special characters

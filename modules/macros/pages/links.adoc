@@ -7,7 +7,7 @@ The pages in this section document how to add and customize links in an AsciiDoc
 == URLs and links
 
 The target of a link is a {url-url-def}[Uniform Resource Locator^] (URL), otherwise known as a web address.
-The text you click to be navigate to that target is referred to as the linked text.
+The text you click to be navigate to that target is referred to as the link text.
 
 NOTE: You may sometimes see the term URI used in place of a URL.
 Although the URI is more technically correct in some cases, URL is the accepted term.
@@ -21,7 +21,7 @@ You can learn more about this behavior in xref:autolinks.adoc[].
 
 == Link-related macros
 
-Instead of showing the bare URL or email address as the linked text, you may want to customize that text.
+Instead of showing the bare URL or email address as the link text, you may want to customize that text.
 Or perhaps you want to apply attributes to the link, such as a role.
 To do so, you'd use either the xref:url-macro.adoc[URL macro] or, if you're linking to xref:complex-urls.adoc[a complex URL], the more explicit xref:link-macro.adoc[link macro].
 
@@ -32,7 +32,7 @@ When linking to an email address, you can use the specialized xref:email-macro.a
 [#hide-uri-scheme]
 == Hide the URL scheme
 
-If the linked text is a bare URL (aka URI), whether that link was created automatically or using a link-related macro, you can configure the AsciiDoc processor to hide the scheme (e.g., _https://_).
+If the link text is a bare URL (aka URI), whether that link was created automatically or using a link-related macro, you can configure the AsciiDoc processor to hide the scheme (e.g., _https://_).
 Hiding the scheme can make the URL more readable--perhaps even recognizable--to a person less familiar with technical nomenclature.
 
 To configure the AsciiDoc processor to display the linked URL without the scheme part, set the `hide-uri-scheme` attribute in the header of the AsciiDoc document.
@@ -102,7 +102,7 @@ include::example$url.adoc[tag=irc]
 ----
 // end::basic[]
 
-Additionally, you can format the linked text.
+Additionally, you can format the link text.
 
 [source]
 ----

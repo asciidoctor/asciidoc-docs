@@ -17,6 +17,7 @@ Added::
 
 Changed::
 * Clarify the rules for include tag filtering; emphasize that the wildcards can only be used once
+* Standardize on the "link text" term instead of "linked text" (#50)
 
 == Published Q4 2020
 

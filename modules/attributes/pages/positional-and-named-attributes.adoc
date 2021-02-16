@@ -14,7 +14,7 @@ Here are some examples:
 * `image:` and `image::` (1) alt text, (2) width, (3) height
 * Delimited blocks: (1) block name (aka style)
 * Other inline quoted text: (1) role and ID shorthand
-* `link:` and `xref:` (1) linked text
+* `link:` and `xref:` (1) link text
 * Custom blocks and macros can specify positional attributes
 
 For example, the following two image macros are equivalent.
