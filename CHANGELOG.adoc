@@ -12,6 +12,7 @@ Fixed::
 
 Added::
 * Add example of how to select all lines outside of tagged regions and lines inside a specific tagged region
+* Document attribute list parsing in detail (#43)
 
 Changed::
 * Clarify the rules for include tag filtering; emphasize that the wildcards can only be used once
