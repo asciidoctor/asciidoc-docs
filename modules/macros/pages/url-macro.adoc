@@ -37,7 +37,8 @@ Type "https://asciidoctor.org[]" into the location bar of your browser.
 
 The more typical reason, however, is to specify custom link text.
 
-== Custom linked text
+[#link-text]
+== Custom link text
 
 Instead of displaying the URL, you can configure the link to display custom text.
 When the reader clicks on the text, they are directed to the target of the link, the URL.

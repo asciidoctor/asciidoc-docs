@@ -22,8 +22,8 @@ include::example$url.adoc[tag=base-co]
 ----
 <.> The trailing period will not get caught up in the link.
 
-The URL is also used as the linked text.
-If you want to custom the linked text, you can use the xref:url-macro.adoc[URL macro].
+The URL is also used as the link text.
+If you want to use xref:url-macro.adoc#link-text[custom link text], you must use the xref:url-macro.adoc[URL macro].
 
 In plain text documents, a bare URL is often enclosed in angle brackets.
 

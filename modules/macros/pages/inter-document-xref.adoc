@@ -98,5 +98,5 @@ To solve this problem, you can define the following two attributes:
 :relfilesuffix: /
 ----
 
-Now, the cross reference `+<<filename.adoc,linked text>>+` will resolve to [.path]_../filename_ instead of [.path]_filename.html_.
+Now, the cross reference `+<<filename.adoc,link text>>+` will resolve to [.path]_../filename_ instead of [.path]_filename.html_.
 Since this change is specific to the website architecture described, you want to be sure to only set these attributes in that particular environment (either using an ifdef directive or via the API).

@@ -15,7 +15,7 @@ link:<target>[<attrlist>]
 ----
 
 The `<target>` becomes the target of the link.
-the `<attrlist>` is the linked text unless a named attribute is detected.
+the `<attrlist>` is the link text unless a named attribute is detected.
 See xref:link-macro-attribute-parsing.adoc[link macro attribute list] to learn how the `<attrlist>` is parsed.
 
 Like all inline macros, the link macro can be escaped using a leading backslash (`\`).
@@ -42,7 +42,7 @@ If the target file is an HTML file, and you want to link directly to an anchor w
 include::example$url.adoc[tag=hash]
 ----
 
-Note that when linking to a relative file, even if it's an HTML file, the linked text is required.
+Note that when linking to a relative file, even if it's an HTML file, the link text is required.
 
 // FIXME: this feels like it needs subsections
 == When to use the link macro

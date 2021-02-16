@@ -1,11 +1,11 @@
 = Link Macro Attribute Parsing
 
 If named attributes are detected between the square brackets of a link macro (including URL macros), that text is parsed as an attribute list.
-This page explains the conditions when this occurs and how to write the linked text so it is recognized as a single positional attribute.
+This page explains the conditions when this occurs and how to write the link text so it is recognized as a single positional attribute.
 
 == Linked text alongside named attributes
 
-Normally, the whole text between the square brackets of a link macro is treated as the linked text (i.e., the first positional attribute).
+Normally, the whole text between the square brackets of a link macro is treated as the link text (i.e., the first positional attribute).
 
 [source]
 ----
@@ -14,42 +14,42 @@ https://discuss.asciidoctor.org[Discuss Asciidoctor]
 
 However, if the text contains an equals sign (`=`), the text is parsed as an xref:attributes:element-attributes.adoc#attribute-list[attribute list].
 The exact rules for attribute list parsing and positional attributes are rather complex, and discussed on xref:attributes:positional-and-named-attributes.adoc[].
-As a simplified rule, to be sure that the linked text is recognized properly, it can either:
+As a simplified rule, to be sure that the link text is recognized properly, it can either:
 
 * contain no comma (`,`) or equals sign (`=`)
 * or be enclosed in double quotes (`"`).
 
-There are several other situations in which text before the first comma may be recognized as the linked text.
+There are several other situations in which text before the first comma may be recognized as the link text.
 Let's consider some examples.
 
-The following example shows a URL macro with custom linked text alongside named attributes.
+The following example shows a URL macro with custom link text alongside named attributes.
 
 [source]
 ----
 https://discuss.asciidoctor.org[Discuss Asciidoctor,role=resource,window=_blank]
 ----
 
-Let's consider a case where the linked text contains a comma and the macro also has named attributes.
-In this case, you must enclose the linked text in double quotes so that it is capture in its entirety as the first positional attribute.
+Let's consider a case where the link text contains a comma and the macro also has named attributes.
+In this case, you must enclose the link text in double quotes so that it is capture in its entirety as the first positional attribute.
 
 [source]
 ----
 https://example.org["Google, DuckDuckGo, Bing",role=teal]
 ----
 
-Similarly, if the linked text contains an equals sign, you can enclose the linked text in double quotes to ensure the parser recognizes it as the first positional attribute.
+Similarly, if the link text contains an equals sign, you can enclose the link text in double quotes to ensure the parser recognizes it as the first positional attribute.
 
 [source]
 ----
 https://example.org["1=2 posits the problem of inequality"]
 ----
 
-The double quote enclosure is not required in all cases when the linked text contains an equals sign.
+The double quote enclosure is not required in all cases when the link text contains an equals sign.
 Strictly speaking, the enclosure is only required when the text preceding the equals sign matches a valid attribute name.
 However, it's best to use the double quotes just to be safe.
 
-Finally, to use named attributes without specifying linked text, you simply specify the named attributes.
-(In other words, you leave the first positional attribute empty, in which case the target will be used as the linked text).
+Finally, to use named attributes without specifying link text, you simply specify the named attributes.
+(In other words, you leave the first positional attribute empty, in which case the target will be used as the link text).
 
 [source]
 ----
@@ -114,7 +114,7 @@ To fine tune indexing within the site, you can specify the nofollow option even 
 === Blank window shorthand
 
 Since configuring an external link to target a blank window is a common practice, AsciiDoc provides a shorthand for it.
-Instead of having to include `window=_blank` in the attribute list, you can add a caret (`+^+`) to the end of the linked text.
+Instead of having to include `window=_blank` in the attribute list, you can add a caret (`+^+`) to the end of the link text.
 
 [source]
 ----
@@ -123,7 +123,7 @@ include::example$url.adoc[tag=linkattrs-s]
 
 CAUTION: If you use the caret syntax more than once in a single paragraph, you may need to escape the first occurrence with a backslash.
 
-If the attribute list has both linked text and named attributes, the caret should fall at the end of the linked text, but inside the double quotes if present.
+If the attribute list has both link text and named attributes, the caret should fall at the end of the link text, but inside the double quotes if present.
 
 [source]
 ----

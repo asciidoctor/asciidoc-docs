@@ -917,7 +917,7 @@ Defaults to the value of the `outfilesuffix` attribute.
 |_empty_
 |{n}
 |{n}
-|Prints the URI of a link after the linked text.
+|Prints the URI of a link after the link text.
 _PDF converter only_.
 
 |showtitle
