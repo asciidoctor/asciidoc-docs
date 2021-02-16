@@ -12,7 +12,7 @@ From there, you can customize the text of the reference in various ways.
 It's important to understand that many anchors are already defined for you.
 Using default settings, Asciidoctor automatically creates an anchor for every section and discrete heading.
 It does so by generating an ID for that section (or discrete heading) and registering that ID in the references catalog.
-You can then use that ID as the target of an cross reference.
+You can then use that ID as the target of a cross reference.
 
 For example, considering the following section.
 

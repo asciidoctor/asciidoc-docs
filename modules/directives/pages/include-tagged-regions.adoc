@@ -28,7 +28,7 @@ include::example$include.adoc[tag=tag-co]
 <.> Assign a unique name to the `tag` directive. In this example the tag is called _timings_.
 <.> Insert another comment line where you want the tagged region to end.
 <.> Assign the name of the region you want to terminate to the `end` directive.
-<.> This is the start a tagged snippet named _parse_.
+<.> This is the start of a tagged snippet named _parse_.
 <.> This is the end of the tagged snippet named _parse_.
 
 IMPORTANT: The `tag::[]` and `end::[]` directives should be placed after a line comment as defined by the language of the source file.
