@@ -18,6 +18,7 @@ content:
     branches: HEAD
   # ...or use this content source instead to pull the content directly from the repository
   #- url: https://gitlab.eclipse.org/eclipse/asciidoc/asciidoc-lang.git
+  #  start_path: docs
   #  branches: HEAD
 asciidoc:
   attributes:
