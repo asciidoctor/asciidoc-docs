@@ -13,6 +13,7 @@ Fixed::
 Added::
 * Add example of how to select all lines outside of tagged regions and lines inside a specific tagged region
 * Document attribute list parsing in detail (#43)
+* Document the normalization applied to the AsciiDoc source and AsciiDoc include files (#51)
 
 Changed::
 * Clarify the rules for include tag filtering; emphasize that the wildcards can only be used once
