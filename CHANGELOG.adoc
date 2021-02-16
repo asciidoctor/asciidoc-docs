@@ -9,6 +9,7 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 Fixed::
 * Rewrite much of link-macro-attribute-parsing.adoc to reflect the simplified parsing behavior implemented in https://github.com/asciidoctor/asciidoctor/issues/2059.
 * Clarify that a negated tag selects all lines except for those lines containing a tag directive (not simply all lines as it previously suggested)
+* Correct the term "STEM interpreter" to "STEM notation" (#8)
 
 Added::
 * Add example of how to select all lines outside of tagged regions and lines inside a specific tagged region
