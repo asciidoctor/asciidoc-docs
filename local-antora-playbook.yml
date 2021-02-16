@@ -1,0 +1,38 @@
+# This is a configuration file for Antora.
+# You can pass it to Antora to build this content as an HTML site for previewing offline.
+#
+#  $ antora --clean local-antora-playbook.yml
+#
+# A copy of this documentation is also available online at https://docs.asciidoctor.org/asciidoc/latest/
+runtime:
+  cache_dir: ./.cache/antora
+site:
+  title: AsciiDoc
+  start_page: docs::index.adoc
+git:
+  ensure_git_suffix: false
+content:
+  sources:
+  - url: .
+    start_path: docs
+    branches: HEAD
+  # ...or use this content source instead to pull the content directly from the repository
+  #- url: https://gitlab.eclipse.org/eclipse/asciidoc/asciidoc-lang.git
+  #  branches: HEAD
+asciidoc:
+  attributes:
+    page-pagination: ''
+    experimental: ''
+    idprefix: '@'
+    idseparator: '-@'
+    table-caption: false
+    example-caption: false
+    listing-caption: false
+    hide-uri-scheme: '@'
+    url-org: https://github.com/asciidoctor
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+output:
+  dir: ./public

@@ -1,3 +1,0 @@
-= AsciiDoc Language Documentation Changelog
-
-See link:docs/CHANGELOG.adoc[CHANGELOG].

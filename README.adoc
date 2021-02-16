@@ -1,40 +1,12 @@
-= AsciiDoc Language Documentation
-:url-prototype: https://github.com/git/git-scm.com/commits/master/lib/asciidoc.rb
-:url-org: https://github.com/asciidoctor
-:url-asciidoc-lang: https://projects.eclipse.org/projects/technology.asciidoc
-:url-docs: https://docs.asciidoctor.org/asciidoc/latest
+= AsciiDoc Language
 
-This repository contains the user-facing documentation for the AsciiDoc language as it's implemented in {url-org}/asciidoctor[Asciidoctor].
-You can view the {url-docs}[published version] online.
-This documentation has been submitted as the initial contribution for the {url-asciidoc-lang}[AsciiDoc Language project at Eclipse].
+This project maintains the specification, Technology Compatiblity Kit (TCK), and documentation for the AsciiDoc language and its APIs.
+The AsciiDoc Language Specification describes the syntax, grammar, and APIs for the AsciiDoc Language.
 
-== Publishing
+== Build the Documentation
 
-This repository only contains the documentation source files and assets.
-The documentation is published {url-docs}[online] for reading.
-Although you can view a preview of the files through the GitHub interface, it's not an official rendering and you should not expect all content to display properly.
-To view it properly, you should read it {url-docs}[on the site where it is published].
-
-== Documentation Structure
-
-This repository is a registered content source in the {url-org}/docs.asciidoctor.org/blob/main/antora-playbook.yml[playbook file for docs.asciidoctor.org].
-The source files are organized into a documentation component as described by the [.path]_antora.yml_ file.
-To learn how to build this documentation using the playbook and Antora, see the https://docs.antora.org/antora/2.3/install-and-run-quickstart/[Install and Run Antora Quickstart].
-
-== Copyright and License
-
-Copyright (C) 2012-2020 Sarah White, Dan Allen, and the individual contributors to {url-org}/asciidoctor/graphs/contributors[Asciidoctor] and {url-org}/asciidoctor.org/graphs/contributors[asciidoctor.org].
-Except where otherwise noted, the content of the AsciiDoc documentation and websites is licensed under a https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 International License].
-The use of the {url-org}[Asciidoctor projects] is granted under the terms of each software project's license.
-
-== Authors
-
-*Asciidoctor* is led by https://github.com/mojavelinux[Dan Allen] and https://github.com/graphitefriction[Sarah White] and has received contributions from many individuals in Asciidoctor's awesome community.
-The project was initiated in 2012 by https://github.com/erebor[Ryan Waldron] and based on {url-prototype}[a prototype] written by https://github.com/nickh[Nick Hengeveld].
-
-*AsciiDoc* was started and maintained by Stuart Rackham from https://github.com/asciidoc/asciidoc/blob/master/CHANGELOG.txt[2002 to 2013] and has received contributions from many individuals in the https://github.com/asciidoc/asciidoc/graphs/contributors[AsciiDoc community].
-
-This documentation for the AsciiDoc language was extracted from the tip of the https://github.com/asciidoctor/asciidoctor.org/tree/docs-archive[docs-archive branch] in the https://github.com/asciidoctor/asciidoctor.org repository.
+The source files under [.path]_docs/_ are organized into a documentation component as identified by the [.path]_antora.yml_ file.
+To learn how to build this documentation using the playbook file [.path]_local-antora-playbook.yml_ with Antora, see the https://docs.antora.org/antora/latest/install-and-run-quickstart/[Install and Run Antora Quickstart].
 
 == Trademarks
 
