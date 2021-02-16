@@ -6,6 +6,8 @@
 :url-data-uri: https://developer.mozilla.org/en-US/docs/data_URIs
 :!table-frame:
 :!table-grid:
+// release-version is used for an example; it's not the release version for this document
+:release-version: 2.4.3
 
 ////
 This document is not meant to be a replacement for the documentation of the AsciiDoc language itself.
@@ -821,8 +823,6 @@ include::pass:example$pass.adoc[tag=b-bl]
 ====
 include::pass:example$pass.adoc[tag=b-bl]
 ====
-
-:release-version: 2.4.3
 
 .Customize block substitutions
 [#ex-block-subs,subs=+macros]
