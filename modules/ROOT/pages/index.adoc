@@ -7,7 +7,7 @@
 AsciiDoc is a lightweight and semantic markup language primarily designed for writing technical documentation.
 The language can be used to produce a variety of presentation-rich output formats, all from content encoded in a concise, human-readable, plain text format.
 
-The AsciiDoc syntax is intuitive because it recognizes well-established, plain text conventions for marking up and structuring text.
+The AsciiDoc syntax is intuitive because it builds on well-established, plain text conventions for marking up and structuring text.
 Someone unfamiliar with AsciiDoc can probably guess the purpose of many of its syntax elements just by looking at them.
 That's because the elements of the syntax were carefully chosen to look like what they mean (a practice long employed by the tech industry).
 
