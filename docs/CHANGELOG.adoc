@@ -1,0 +1,66 @@
+= AsciiDoc Language Documentation Changelog
+
+This document summarizes the changes introduced to the AsciiDoc Language Documentation by quarter.
+For a detailed view of what's changed, refer to the repository's
+https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
+
+== Published Q1 2021
+
+Fixed::
+* Rewrite much of link-macro-attribute-parsing.adoc to reflect the simplified parsing behavior implemented in https://github.com/asciidoctor/asciidoctor/issues/2059.
+* Clarify that a negated tag selects all lines except for those lines containing a tag directive (not simply all lines as it previously suggested)
+* Correct the term "STEM interpreter" to "STEM notation" (#8)
+
+Added::
+* Add example of how to select all lines outside of tagged regions and lines inside a specific tagged region
+* Document attribute list parsing in detail (#43)
+* Document the normalization applied to the AsciiDoc source and AsciiDoc include files (#51)
+
+Changed::
+* Moved content into docs folder (#55)
+* Clarify the rules for include tag filtering; emphasize that the wildcards can only be used once
+* Standardize on the "link text" term instead of "linked text" (#50)
+
+== Published Q4 2020
+
+These changes were committed and merged into the main branch starting on November 24, 2020.
+
+Fixed::
+* Replace the phrase _lead style_ with the phrase _lead role_
+* Replace the table frame value `topbot` with `ends` (#9)
+* Fix conflict with the built-in preamble ID
+* Replace the document attribute `hardbreaks` with `hardbreaks-option` (#3)
+* Fix links to page fragments (aka deep links)
+* Fix grouping in navigation files
+* Update xrefs to reflect module name change in asciidoctor component
+* Document the substitution values that the inline pass macro accepts; clarify the purpose of this macro (#37)
+* Move callouts for block image example to included line (#39)
+* Added missing leading backslash in examples that shows how to escape an include directive
+
+Added::
+* Import the AsciiDoc syntax quick reference content (#14)
+* Add page about abstract block style to navigation and distinguish from abstract section
+* Integrate the relative link documentation into the link macro page
+* Document where an anchor must be placed for a list item in a description list (#21)
+
+Changed::
+* Rework the reference table for built-in attributes by fixing incorrect values and descriptions, clarifying difference between effective value and implied value, and consolidating column for Header Only (#24)
+* Fold intrinsic attributes reference into document attributes reference (#26)
+* Use the term *pair* instead of *set* when referring to formatting mark complements (#6)
+* Replace the phrase _set of brackets_ with the phrase _pair of brackets_ to align with updated terminology (#6)
+* Replace the phrase _set of delimited lines_ with the phrase _pair of delimited lines_ (#6)
+* Revise the overview page for text formatting and punctuation (#6)
+* Move the hard line breaks section to a dedicated page under the Paragraphs section (#3)
+* Move unordered lists before ordered lists in navigation file
+* Replace fenced code blocks with AsciiDoc source blocks
+* Drop unnecessary quotes in value of `subs` attribute
+* Swap columns in AsciiDoc table cell example
+* Use xref macro for inter-document xrefs
+* Replace the name AsciiDoc Python with AsciiDoc.py
+* Replace the term "master document" with "primary document"
+* Define `navtitle` attribute on start page
+* Rename version from current to latest
+
+Removed::
+* Remove migration in progress notice
+* Remove disabled pages
