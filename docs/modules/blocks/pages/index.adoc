@@ -29,7 +29,7 @@ For example, consider the following normal section:
 
 The context of this block is `section`.
 The writer does not have to do anything to specify the context in this case as it's implied by the syntax.
-We often just say that this is section block, using the context as an adjective to describe the block.
+We often just say that this is a section block, using the context as an adjective to describe the block.
 
 The context dictates the content model.
 The content model determines how the content inside of the block is processed.
