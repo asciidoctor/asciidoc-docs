@@ -323,7 +323,7 @@ include::lists:example$unordered.adoc[tag=qr-base]
 include::lists:example$unordered.adoc[tag=qr-base]
 ====
 
-TIP: A blank line is required before and after a list to separated it from other blocks.
+TIP: A blank line is required before and after a list to separate it from other blocks.
 You can force two adjacent lists apart by adding a blank attribute list (i.e., `[]`) above the second list or by inserting a blank line followed by a line comment after the first list.
 If you use a line comment, the convention is to use `//-` to provide a hint to other authors that it's serving as a list divider.
 

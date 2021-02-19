@@ -46,7 +46,7 @@ If you set a built-in attribute and leave its value blank, Asciidoctor assigns t
 == Where can I use an attribute entry?
 
 An attribute entry is typically defined in the document header.
-When set it the document header, the attribute is available to the entire document until it is reset or unset.
+When set in the document header, the attribute is available to the entire document until it is reset or unset.
 The attribute's value can be reassigned or the attribute unset at any subsequent point in the document, unless the attribute is locked (typically by defining it using the CLI or API).
 
 Many, but not all, document attributes can be set, assigned a value, or unset in the document's body (anywhere below the document header).

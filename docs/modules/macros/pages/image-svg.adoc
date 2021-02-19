@@ -3,7 +3,7 @@
 :url-svgo: https://github.com/svg/svgo
 
 Both block and inline image macros have built-in support for scalable vector graphics (SVGs).
-But there's more than one way to include an SVG into a web page, and the strategy used can effect how the SVG behaves (or misbehaves).
+But there's more than one way to include an SVG into a web page, and the strategy used can affect how the SVG behaves (or misbehaves).
 Therefore, these macros provide additional options to control how the SVG is included (i.e., referenced).
 
 == Options for SVG images

@@ -22,7 +22,7 @@ For example, a sidebar block is a block element, so it shares the traits of all 
 
 Elements include the document itself, sections, blocks, block macros, breaks, and inline phrases and macros.
 
-A [.term]*block element* that is stacked vertically (by line) above or below other block elements.
+A [.term]*block element* is stacked vertically (by line) above or below other block elements.
 Block elements are typically referred to simply as [.term]*blocks*.
 Blocks form the main tree structure of the document.
 
@@ -33,7 +33,7 @@ Inline elements are less structured than block elements as they are more geared 
 
 == Attributes
 
-An attribute is a name/value pairs used for storing metadata in the AsciiDoc language.
+An attribute is a name/value pair used for storing metadata in the AsciiDoc language.
 Attributes can be used to influence the syntax, control behavior, customize styles, activate or configure integrations, or store replacement content.
 Attributes truly set AsciiDoc apart from other lightweight markup languages.
 
@@ -43,7 +43,7 @@ There are two concrete classifications of attributes: document attributes and el
 === Document attributes
 
 Document attributes, as the name implies, are associated directly with the document.
-They are used to export information about the document and runtime, control behavior of the processor, and to store reusable values or phrases.
+They are used to export information about the document at runtime, control behavior of the processor, and to store reusable values or phrases.
 Thus, they are a sort of two-way communication channel with the processor.
 
 Document attributes can be referenced in the content using an attribute reference (whereever the attribute substitution is enabled).
