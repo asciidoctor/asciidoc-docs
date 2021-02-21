@@ -23,4 +23,4 @@ If you run Asciidoctor in verbose/pedantic mode on this document, it will send t
 asciidoctor: WARNING: invalid reference: foobar
 ....
 
-Asciidoctor only validates references within the same document (after includes are resolved).
+An AsciiDoc processor only validates references within the same document (after includes are resolved).

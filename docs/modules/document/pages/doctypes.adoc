@@ -17,7 +17,6 @@ This doctype instructs the parser to recognize a special document header and sec
 See xref:asciidoctor:manpage-backend:index.adoc[] for details on how structure a man page using AsciiDoc and generate it with Asciidoctor.
 
 Inline (`inline`)::
-Asciidoctor only.
 There may be cases when you only want to apply inline AsciiDoc formatting to input text without wrapping it in a block element.
 For example, in the Asciidoclet project (AsciiDoc in Javadoc), only the inline formatting is needed for the text in Javadoc tags.
 // {asciidoclet-ref}[Asciidoclet project]

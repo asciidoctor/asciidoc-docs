@@ -47,7 +47,6 @@
 |`sectanchors`
 |NA
 |
-//Asciidoctor only
 
 |xref:ids.adoc[Section ID]
 |`sectids`
@@ -59,7 +58,6 @@
 |`sectlinks`
 |NA
 |
-//Asciidoctor only
 
 |xref:numbers.adoc[Section numbers] and xref:special-section-numbers.adoc[special section numbers]
 |`sectnums`
@@ -76,7 +74,6 @@
 |`options` or `%`
 |`untitled`
 |DocBook only; can only be set on special sections
-//Asciidoctor only
 |===
 
 == Section styles
