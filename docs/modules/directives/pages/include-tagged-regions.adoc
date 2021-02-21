@@ -14,6 +14,9 @@ You can eliminate this requirement by using the semi-colon as the data separator
 Tags are useful when you want to identify specific regions of a file to include.
 You can then select the lines between the boundaries of the include tag/end directives to include using the `tags` attribute.
 
+Including by tag includes all regions marked with that tag.
+This makes it possible to include a group of lines from different regions of the document using a single tag.
+
 TIP: If the target file has tagged lines, and you just want to ignore those lines, use the `tags` attribute to filter them out.
 See <<tag-filtering>> for details.
 
@@ -25,7 +28,7 @@ The example below shows how you tag a region of content inside a file containing
 include::example$include.adoc[tag=tag-co]
 ----
 <.> To indicate the start of a tagged region, insert a comment line in the code.
-<.> Assign a unique name to the `tag` directive. In this example the tag is called _timings_.
+<.> Assign a name to the `tag` directive. In this example, the tag is named _timings_.
 <.> Insert another comment line where you want the tagged region to end.
 <.> Assign the name of the region you want to terminate to the `end` directive.
 <.> This is the start of a tagged snippet named _parse_.

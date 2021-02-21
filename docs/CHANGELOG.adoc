@@ -19,6 +19,7 @@ Added::
 Changed::
 * Moved content into docs folder (#55)
 * Clarify the rules for include tag filtering; emphasize that the wildcards can only be used once
+* Clarify that including by tag includes all regions marked with that same tag.
 * Standardize on the "link text" term instead of "linked text" (#50)
 
 == Published Q4 2020
