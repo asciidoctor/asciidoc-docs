@@ -14,19 +14,19 @@ image::macros:sunset.jpg[]
 
 // in qr as syntax
 // tag::alt[]
-image::sunset.jpg[Sunset]
+image::sunset.jpg['Mesa Verde Sunset | by JAVH']
 // end::alt[]
 
 // in qr as result
 // tag::qr-alt[]
-image::macros:sunset.jpg[Sunset]
+image::macros:sunset.jpg['Mesa Verde Sunset | by JAVH']
 // end::qr-alt[]
 
 // tag::attr-co[]
 [#img-sunset] <.>
 .A mountain sunset <.>
 [link=https://www.flickr.com/photos/javh/5448336655] <.>
-image::sunset.jpg[Sunset,200,100] <.> <.>
+image::sunset.jpg['Mesa Verde Sunset | by JAVH',200,100] <.> <.>
 // end::attr-co[]
 
 // in qr as syntax
@@ -34,7 +34,7 @@ image::sunset.jpg[Sunset,200,100] <.> <.>
 .A mountain sunset
 [#img-sunset]
 [caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
-image::sunset.jpg[Sunset,200,100]
+image::sunset.jpg['Mesa Verde Sunset | by JAVH',200,100]
 // end::attr[]
 
 // in qr as result
@@ -42,7 +42,7 @@ image::sunset.jpg[Sunset,200,100]
 .A mountain sunset
 [#img-sunset]
 [caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
-image::macros:sunset.jpg[Sunset,200,100]
+image::macros:sunset.jpg['Mesa Verde Sunset | by JAVH',200,100]
 // end::qr-attr[]
 
 // in qr as syntax and result
@@ -66,12 +66,12 @@ Click image:macros:pause.png[title="Pause"] when you need a break.
 
 // in qr as syntax
 // tag::in-role[]
-image:sunset.jpg[Sunset,150,150,role=right] What a beautiful sunset!
+image:sunset.jpg['Mesa Verde Sunset | by JAVH',150,150,role=right] What a beautiful sunset!
 // end::in-role[]
 
 // in qr as result
 // tag::qr-role[]
-image:macros:sunset.jpg[Sunset,150,150,role=right] What a beautiful sunset!
+image:macros:sunset.jpg['Mesa Verde Sunset | by JAVH',150,150,role=right] What a beautiful sunset!
 // end::qr-role[]
 
 // tag::role[]
