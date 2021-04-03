@@ -52,7 +52,7 @@ include::example$doctitle.adoc[]
 
 image::doctitle.png[The document title is displayed wherever the doctitle attribute is referenced]
 
-The `doctitle` attribute can also be explicitly set the and assigned a value using an attribute entry in the header.
+The `doctitle` attribute can also be explicitly set and assigned a value using an attribute entry in the header.
 //Its value is identical to the value returned by `Document#doctitle`.
 
 [#title-attr]
