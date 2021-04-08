@@ -67,6 +67,7 @@ When the reftext is displayed, additional reftext substitutions are applied to t
 
 You can override the reftext of the target by specifying alternative text at the location of the cross reference.
 After the ID, add a comma and then enter the custom text you want the cross reference to display.
+(Note that in XML output, this will result in a `<link>` tag rather than an `<xref>` tag.)
 
 .Cross reference with custom xreflabel text
 [source#ex-custom]
