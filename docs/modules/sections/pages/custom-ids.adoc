@@ -69,3 +69,4 @@ These additional anchor points don't interfere with the declaration of the prima
 IMPORTANT: These additional IDs are not registered with the referencing system.
 That means they cannot be used for referencing the section title within the document.
 They are only intended for assigning additional fragment identifiers to the section title so it can be referenced the from the URL using a URL fragment (aka deep linking).
+Only the primary ID can be used for referencing the section title within the document.
