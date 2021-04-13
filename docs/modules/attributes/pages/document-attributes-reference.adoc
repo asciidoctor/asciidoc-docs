@@ -1305,6 +1305,7 @@ Since attributes can reference attributes, it's possible to create an output doc
 
 [[note-number]]^[1]^ The `-number` attributes are created and managed automatically by the AsciiDoc processor for numbered blocks.
 They are only used if the corresponding `-caption` attribute is set (e.g., `listing-caption`) and the block has a title.
-In Asciidoctor, setting the `-number` attributes will influence the number used for subsequent numbered blocks of that type.
-However, you should not rely on this behavior as it may change in future versions.
+In Asciidoctor, setting the `-number` attributes will influence the next number used for subsequent numbered blocks of that type.
+However, you should not rely on this behavior as it is subject to change in future revisions of the language.
+For the chapter and appendix number, you currently have to register the value using the counter directive to the number prior to the number you want to start with (e.g., `+:appendix-number: {counter:appendix-number:@}+`).
 // end::table[]
