@@ -4,6 +4,18 @@ This document summarizes the changes introduced to the AsciiDoc Language Documen
 For a detailed view of what's changed, refer to the repository's
 https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
+== Published Q2 2021
+
+Fixed::
+* update trademarks attribution in README (PR #62)
+* change part-label to part-signifier (PR #64)
+
+Changed::
+* provide clearer example for escaping single quotes in a single-quoted attribute value (PR #60)
+* switch attribute substitution example to autolink to avoid naunce about whether closing square bracket needs to be escaped
+* clarify that additional IDs assigned to section title cannot be used for referencing within the document
+* clarify that only primary ID can be used for referencing section title within the document
+
 == Published Q1 2021
 
 Fixed::
