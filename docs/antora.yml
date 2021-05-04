@@ -1,7 +1,7 @@
 name: asciidoc
 title: AsciiDoc
 version: latest
-display_version: current
+display_version: default
 asciidoc:
   attributes:
     source-language: asciidoc@
