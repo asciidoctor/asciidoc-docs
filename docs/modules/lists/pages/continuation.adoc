@@ -22,7 +22,7 @@ Blank lines do reset numbering to 1 when something, such as a figure or a suppor
 To keep numbering continuous in those cases—for example, if you're documenting steps in a procedure—use the list continuation symbol (`{plus}`) instead of a blank line. 
 
 A list item may contain any type of AsciiDoc content, including paragraphs, delimited blocks, and block macros.
-You just need to attach that content to the list item by using the list continuation symbol.
+You just need to attach that content to the list item by using a list continuation: a `{plus}` symbol instead of a blank line.
 
 == List continuation
 
