@@ -22,7 +22,7 @@ include::example$ordered.adoc[tag=base]
 include::example$ordered.adoc[tag=base]
 ====
 
-If you decide to manually number your ordered list, you have to keep them sequential.
+If you decide to manually number your ordered list, you have to keep the items sequential.
 This differs from other lightweight markup languages.
 It's one way to adjust the numbering offset of a list.
 For instance, you can type:
@@ -32,12 +32,19 @@ For instance, you can type:
 include::example$ordered.adoc[tag=base-num-start]
 ----
 
-However, in general the best practice is to use the `start` attribute to configure this sort of thing:
+In general, though, rather than typing numbers, if you need to interrupt the default sequence, use the `start` attribute:
 
 [source]
 ----
 include::example$ordered.adoc[tag=base-start]
 ----
+
+If your ordered list includes figures or independent chunks of text, as is often the case when documenting steps in a procedure, you may find your steps resetting to "1" when you don't want them to. 
+You may see this behavior after figures or after multiparagraph steps. 
+In these cases, don't use the `start` attribute to continue the numbering.
+You don't want to have to manually update `start` numbers—or risk having the `start` numbers become wrong—every time you add or remove a step.
+Instead, use the list continuation symbol (`{plus}`) between the numbered list items and all other content elements in your list.
+For details, see the https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[List Continuation^] section.
 
 To present the items in reverse order, add the `reversed` option:
 
