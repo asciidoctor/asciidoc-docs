@@ -4,7 +4,7 @@ A "list continuation"
 
 == Indented lines
 
-As with regular paragraph text, the text in a list item can wrap across any number of lines as long as all the lines are adjacent (no blank lines between them).
+As with regular paragraph text, the text in a list item can wrap across any number of lines as long as all the lines are adjacent.
 The lines wrap as normal paragraph text even if they're indented, as shown in the third bullet in this example:
 
 [source]
