@@ -3,7 +3,7 @@
 == Indented lines
 
 Aside from nested lists, all of the list items you've seen only have one line of text.
-But like with regular paragraph text, the text in a list item can wrap across any number of lines, as long as all the lines are adjacent.
+But as with regular paragraph text, the text in a list item can wrap across any number of lines, as long as all the lines are adjacent.
 The wrapped lines can be indented, and they will still be treated as normal paragraph text.
 For example:
 
@@ -16,14 +16,17 @@ include::example$complex.adoc[tag=indent]
 include::example$complex.adoc[tag=indent]
 ====
 
-TIP: When items contain more than one line of text, leave a blank line before the next item to make the list easier to read.
+TIP: When items contain more than one line of text, leave a blank line before the next item to make the list easier to read while working in the code.
+In ordered lists, blank lines between list items do not reset numbering to 1.
+Numbering remains continuous unless something, such as a diagram or note, comes between the numbered items.
+In that case, 
 
 A list item may contain any type of AsciiDoc content, including paragraphs, delimited blocks, and block macros.
 You just need to attach them to the list item.
 
 == List continuation
 
-To add additional paragraphs or other block elements to a list item, you must "`attach`" them (in a series) using a list continuation.
+To add paragraphs or other block elements to a list item, you must "`attach`" them (in a series) using a list continuation.
 A [.term]*list continuation* is a `{plus}` symbol on a line by itself, immediately adjacent to the block being attached.
 
 Here's an example:
