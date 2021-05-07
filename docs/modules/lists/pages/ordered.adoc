@@ -39,7 +39,7 @@ In general, though, rather than typing numbers, if you need to interrupt the def
 include::example$ordered.adoc[tag=base-start]
 ----
 
-If your ordered list includes figures or independent chunks of text, as is often the case when documenting steps in a procedure, you may find your steps resetting to "1" when you don't want them to. 
+If your ordered list includes figures or independent chunks of text, as is often the case when documenting steps in a procedure, you may find your steps resetting to 1 when you don't want them to. 
 This may happen, for example, after figures or multiparagraph steps. 
 In these cases, don't use the `start` attribute to continue the numbering.
 You don't want to have to manually update `start` numbers—or risk having the `start` numbers become wrong—every time you add or remove a step.
