@@ -1,6 +1,6 @@
 = List Continuation
 
-A "list continuation" 
+"List continuation" applies to ordered and unordered lists that you want to keep continuous. For simple lists (those with only one line of text per item), continuation is not an issue. For more complex lists, you need to know a few tricks. 
 
 == Indented lines
 
