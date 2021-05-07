@@ -1,6 +1,6 @@
 = List Continuation
 
-This section applies to complex lists—ordered or unordered lists that have multiple lines of text per item or that contain of mix of content types—that you want to keep continuous. 
+This section applies to complex lists—ordered or unordered lists that have multiple lines of text per item or that contain a mix of content types—that you want to keep continuous. 
 
 == Indented lines
 
