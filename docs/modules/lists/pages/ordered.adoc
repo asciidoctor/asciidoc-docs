@@ -43,7 +43,7 @@ If your ordered list includes figures or independent chunks of text, as is often
 This may happen, for example, after figures or multiparagraph steps. 
 In these cases, don't use the `start` attribute to continue the numbering.
 You don't want to have to manually update `start` numbers—or risk having the `start` numbers become wrong—every time you add or remove a step.
-Instead, use a list continuation—a `{plus}` symbol—between the numbered list items and all other content elements in your list.
+Instead, use a list continuation—a `{plus}` symbol on its own line—between the numbered list items and all other content elements in your list.
 For details, see the https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[List Continuation^] section.
 
 To present the items in reverse order, add the `reversed` option:
