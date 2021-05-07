@@ -4,8 +4,8 @@ This section applies to complex lists—ordered or unordered lists that have mul
 
 == Indented lines
 
-As with regular paragraph text, the text in a list item can wrap across any number of lines as long as all the lines are adjacent.
-The lines wrap as normal paragraph text even if they're indented, as shown in the third bullet in this example:
+As with regular paragraph text, the text in a list item can wrap across any number of lines as long as all the lines are adjacent. 
+Multiple lines are combined into a paragraph and wrap as normal paragraph text even if they're indented, as shown in the third bullet in this example:
 
 [source]
 ----
@@ -19,17 +19,19 @@ include::example$complex.adoc[tag=indent]
 TIP: When list items contain more than one line of text, leave a blank line between items to make the list easier to read while working in the code.
 Blank lines between items in an ordered list do not reset numbering to 1 as long as each adjacent line starts with a period. 
 Blank lines do reset numbering to 1 when something, such as a figure or a supporting paragraph, comes between two lines that start with a period.
-To keep numbering continuous in those cases—for example, if you're documenting steps in a procedure—use the list continuation—a `{plus}` symbol—instead of a blank line. 
+To keep numbering continuous in those cases—for example, if you're documenting steps in a procedure—use the list continuation—a `{plus}` symbol—in the otherwise blank line. 
 
 A list item may contain any type of AsciiDoc content, including paragraphs, delimited blocks, and block macros.
-You just need to attach that content to the list item by using a list continuation—a `{plus}` symbol.
+You just need to attach that content to the list item by using a list continuation—a `{plus}` symbol on its own line.
 
 == List continuation
 
 To add paragraphs or other block elements to a list item, you must "`attach`" them (in a series) using a list continuation.
 A [.term]*list continuation* is a `{plus}` symbol on a line by itself, immediately adjacent to the block being attached.
 
-Here's an example:
+NOTE: A `{plus}` symbol at the end of a line is not a list continuation. In that case, the `{plus}` simply creates a line break. 
+
+Example list continuation:
 
 [source]
 ----
