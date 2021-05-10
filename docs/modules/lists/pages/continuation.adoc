@@ -17,9 +17,10 @@ include::example$complex.adoc[tag=indent]
 ====
 
 TIP: When list items contain more than one line of text, leave a blank line between items to make the list easier to read while working in the code.
+
 Blank lines between items in an ordered list do not reset numbering to 1 as long as each adjacent line starts with a period. 
 Blank lines do reset numbering to 1 when something, such as a figure or a supporting paragraph, comes between two lines that start with a period.
-To keep numbering continuous in those cases—for example, if you're documenting steps in a procedure—put a `{plus}` symbol in the otherwise blank line. A `{plus}` used in this way is called a list continuation.
+To keep numbering continuous in those cases—for example, if you're documenting steps in a procedure—put a `{plus}` symbol in the otherwise blank line. A `{plus}` used in this way is called a list continuation. For details on continuous numbering in an ordered list, see the https://docs.asciidoctor.org/asciidoc/latest/lists/ordered/[Ordered Lists^] section of this documentation. 
 
 A list item may contain any type of AsciiDoc content, including paragraphs, delimited blocks, and block macros.
 You just need to attach that content to the list item by using a list continuation.

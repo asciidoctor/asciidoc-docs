@@ -44,9 +44,12 @@ This may happen, for example, after figures or multiparagraph steps.
 In these cases, don't use the `start` attribute to continue the numbering.
 You don't want to have to manually update `start` numbers—or risk having the `start` numbers become wrong—every time you add or remove a step.
 Instead, use a list continuation—a `{plus}` symbol on its own line—between the numbered list items and all other content elements in your list.
-For details, see the https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[List Continuation^] section.
 
-To present the items in reverse order, add the `reversed` option:
+* For how-to details, see the https://docs.asciidoctor.org/asciidoc/latest/lists/continuation/[List Continuation^] section of this documentation. 
+* For an example of the list continuation used in a complex ordered list, see the launch steps in https://github.com/aws-quickstart/quickstart-microsoft-sql-fci-fsx/edit/main/docs/partner_editable/deploy_steps.adoc[this .adoc file in GitHub^].
+* To see how those launch steps look in the final output, see the https://aws-quickstart.github.io/quickstart-microsoft-sql-fci-fsx/#_launch_the_quick_start[Launch the Quick Start^] section of the generated deployment guide. The list continuations prevent step 2 from resetting to 1. They also prevent step 5, which is pulled in from a separate .adoc file, from resetting to 1. 
+
+To present list items in reverse order, add the `reversed` option:
 
 [source]
 ----
