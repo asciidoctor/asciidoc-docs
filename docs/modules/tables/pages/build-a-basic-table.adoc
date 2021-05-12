@@ -63,7 +63,8 @@ Each consecutive cell is placed in a separate, consecutive column in a row.
 <.> When you finish adding cells to your table, press kbd:[Enter] to go to a new line.
 <.> Enter the closing delimiter (`|===`) to end the table block.
 
-TIP: You can enter xref:add-cells-and-rows.adoc[more than one cell or all of the cells in a row on the same line] since the processor creates a new cell each time it encounters a vertical bar (`|`).
+TIP: The suggestion to start each cell on its own line and to separate rows by empty lines is merely a stylisic choice.
+You can enter xref:add-cells-and-rows.adoc[more than one cell or all of the cells in a row on the same line] since the processor creates a new cell each time it encounters a vertical bar (`|`).
 
 The table from <<ex-rows>> is displayed below.
 It contains two columns and three rows of text positioned and styled using the default alignment, style, border, and width attribute values.
