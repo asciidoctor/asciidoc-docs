@@ -11,18 +11,27 @@ If the `sectnumlevels` attribute has the value 3, this sentence is included.
 ----
 
 The `ifeval` directive does not have a single-line or long-form variant like `ifdef` and `ifndef`.
-[NOTE]
-====
-Unlike `ifdef` and `ifndef`, you cannot explicitly terminate an `ifeval` directive. You can only terminate it with `endif::[]`. For example, the following `ifeval` block is not valid:
 
+Unlike `ifdef` and `ifndef`, you cannot explicitly terminate an `ifeval` directive.
+For example, the following `ifeval` block is not valid:
+
+.Invalid ifeval terminator
 [source]
 ----
 \ifeval::[<condition>]
-...
+conditional content
 \endif::[<condition>]
 ----
 
-====
+You can only terminate an `ifeval` directive with an anonymous `endif::[]` directive, as shown here:
+
+.Valid ineval terminator
+[source]
+----
+\ifeval::[<condition>]
+conditional content
+\endif::[]
+----
 
 == Anatomy
 
