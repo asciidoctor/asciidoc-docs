@@ -12,6 +12,29 @@ If the `sectnumlevels` attribute has the value 3, this sentence is included.
 
 The `ifeval` directive does not have a single-line or long-form variant like `ifdef` and `ifndef`.
 
+Unlike `ifdef` and `ifndef`, you cannot terminate a specific `ifeval` directive using its complement.
+For example, the following `ifeval` block is not valid:
+
+.Invalid ifeval terminator
+[source]
+----
+\ifeval::[<condition>]
+conditional content
+\endif::[<condition>]
+----
+
+You can only terminate the previous `ifeval` directive using an anonymous `endif::[]` directive, as shown here:
+
+.Valid ineval terminator
+[source]
+----
+\ifeval::[<condition>]
+conditional content
+\endif::[]
+----
+
+If you're mixing `ifeval` directives with `ifdef` or `ifndef` directives, you should always terminate the `ifdef` and `ifndef` directives by name (`endif::attribute-name[]`) so the `ifeval` directive does not get terminately prematurely.
+
 == Anatomy
 
 The expression consists of a left-hand value and a right-hand value with an operator in between.
@@ -44,7 +67,18 @@ Each expression value can reference the name of zero or more AsciiDoc attribute 
 Attribute references are resolved (substituted) first.
 Once attributes references have been resolved, each value is coerced to a recognized type.
 
-When the expected value is a string (i.e., a string of characters), we recommend that you enclose the expression in quotes.
+When you expect the attribute reference to resolve to a string, that is, a sequence of characters, enclose that side of the expression in quotes.
+For example:
+
+.ifeval that compares two string expressions
+[source]
+----
+ifeval::["{backend}" == "html5"]
+----
+
+Whereas if you expect the attribute to resolve to a number, you do not need to enclose the expression in quotes.
+In this case, the values will be compared as numbers.
+The same rule applies to boolean values.
 
 The following values types are recognized:
 
