@@ -67,7 +67,7 @@ Each expression value can reference the name of zero or more AsciiDoc attribute 
 Attribute references are resolved (substituted) first.
 Once attributes references have been resolved, each value is coerced to a recognized type.
 
-When the attribute reference should resolve to a string, that is, a sequence of characters, enclose the expression in quotes.
+When you expect the attribute reference to resolve to a string, that is, a sequence of characters, enclose that side of the expression in quotes.
 For example:
 
 .ifeval that compares two string expressions
