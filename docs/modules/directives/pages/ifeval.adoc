@@ -65,11 +65,18 @@ Each expression value can reference the name of zero or more AsciiDoc attribute 
 Attribute references are resolved (substituted) first.
 Once attributes references have been resolved, each value is coerced to a recognized type.
 
-When the attribute should resolve to a string, that is, a string of characters, enclose the expression in quotes. For example:
+When the attribute reference should resolve to a string, that is, a sequence of characters, enclose the expression in quotes.
+For example:
 
-`ifeval::["{backend}" == "html5"]`
+.ifeval that compares two string expressions
+[source]
+----
+ifeval::["{backend}" == "html5"]
+----
 
-Whereas if you expect the attribute to resolve to a number, do not enclose the expression in quotes.
+Whereas if you expect the attribute to resolve to a number, you do not need to enclose the expression in quotes.
+In this case, the values will be compared as numbers.
+The same rule applies to boolean values.
 
 The following values types are recognized:
 
