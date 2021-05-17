@@ -22,7 +22,7 @@ include::example$ordered.adoc[tag=base]
 include::example$ordered.adoc[tag=base]
 ====
 
-If you decide to manually number your ordered list, you have to keep them sequential.
+If you decide to manually number your ordered list, you have to keep the items sequential.
 This differs from other lightweight markup languages.
 It's one way to adjust the numbering offset of a list.
 For instance, you can type:
@@ -32,14 +32,24 @@ For instance, you can type:
 include::example$ordered.adoc[tag=base-num-start]
 ----
 
-However, in general the best practice is to use the `start` attribute to configure this sort of thing:
+In general, though, rather than typing numbers, if you need to interrupt the default sequence, use the `start` attribute:
 
 [source]
 ----
 include::example$ordered.adoc[tag=base-start]
 ----
 
-To present the items in reverse order, add the `reversed` option:
+If your ordered list includes figures or independent chunks of text, as is often the case when documenting steps in a procedure, you may find your steps resetting to 1 when you don't want them to. 
+This may happen, for example, after figures or multiparagraph steps. 
+In these cases, don't use the `start` attribute to continue the numbering.
+You don't want to have to manually update `start` numbers—or risk having the `start` numbers become wrong—every time you add or remove a step.
+Instead, use a list continuation—a `{plus}` symbol on its own line—between the numbered list items and all other content elements in your list.
+
+* For how-to details, see the xref:continuation.adoc[] section of this documentation.
+* For an example of the list continuation used in a complex ordered list, see the launch steps in https://github.com/aws-quickstart/quickstart-microsoft-sql-fci-fsx/edit/main/docs/partner_editable/deploy_steps.adoc[this .adoc file in GitHub^].
+* To see how those launch steps look in the final output, see the https://aws-quickstart.github.io/quickstart-microsoft-sql-fci-fsx/#_launch_the_quick_start[Launch the Quick Start^] section of the generated deployment guide. The list continuations prevent step 2 from resetting to 1. They also prevent step 5, which is pulled in from a separate .adoc file, from resetting to 1. 
+
+To present list items in reverse order, add the `reversed` option:
 
 [source]
 ----
