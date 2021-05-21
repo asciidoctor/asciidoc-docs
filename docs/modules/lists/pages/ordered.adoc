@@ -22,7 +22,7 @@ include::example$ordered.adoc[tag=base]
 include::example$ordered.adoc[tag=base]
 ====
 
-If you decide to manually number your ordered list, you have to keep the items sequential.
+If you manually number your ordered list, you have to keep the items sequential.
 This differs from other lightweight markup languages.
 It's one way to adjust the numbering offset of a list.
 For instance, you can type:
@@ -39,11 +39,10 @@ In general, though, rather than typing numbers, if you need to interrupt the def
 include::example$ordered.adoc[tag=base-start]
 ----
 
-If your ordered list includes figures or independent chunks of text, as is often the case when documenting steps in a procedure, you may find your steps resetting to 1 when you don't want them to. 
-This may happen, for example, after figures or multiparagraph steps. 
+When your ordered list includes block elements—images, captions, code, tables, multiple paragraphs, source blocks, etc., as is often the case when you document steps in a procedure—your steps may reset to 1 when you don't want them to. 
 In these cases, don't use the `start` attribute to continue the numbering.
-You don't want to have to manually update `start` numbers—or risk having the `start` numbers become wrong—every time you add or remove a step.
-Instead, use a list continuation—a `{plus}` symbol on its own line—between block elements (multiple paragraphs, images, tables, source blocks, etc.) that are separated by blank lines within a list item, as shown here:
+You don't want to have to manually update `start` numbers or risk having the `start` numbers become wrong every time you add or remove a step.
+Instead, use a list continuation—a `{plus}` symbol on its own line—between block elements. The list continuation glues the content elements together within a given step. If a step includes any blank lines between content elements, the next step goes back to 1. (A blank line directly before a step has no effect on step numbering.) The list continuation also keeps the block elements aligned at the same level of indent, as shown here:
 
 image::step-numbers-list-continuation.png[Example of continuous step numbering with mixed content elements]
 
