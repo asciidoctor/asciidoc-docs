@@ -1,6 +1,5 @@
-= Discrete Titles
-// um anchor: discrete-headings
-// um section title: Discrete Headings (aka Floating Titles)
+= Discrete Headings
+:page-alias: discrete-titles.adoc
 
 A discrete heading is styled in a manner similar to a section title, but:
 
