@@ -16,7 +16,7 @@
 |_Chapter_ (default) or user defined text
 |`book` doctype only; Asciidoctor PDF only
 
-|xref:discrete-titles.adoc[Discrete title]
+|xref:discrete-headings.adoc[Discrete heading]
 |`discrete`
 |NA
 |

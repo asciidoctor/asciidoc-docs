@@ -1,5 +1,5 @@
 = Discrete Headings
-:page-alias: discrete-titles.adoc
+:page-aliases: discrete-titles.adoc
 
 A discrete heading is styled in a manner similar to a section title, but:
 
