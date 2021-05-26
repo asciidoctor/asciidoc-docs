@@ -12,7 +12,7 @@ end
 
 // tag::src-base-co[]
 [source#hello,ruby] <.> <.> <.>
----- <.>
+---- // <.>
 require 'sinatra'
 
 get '/hi' do
