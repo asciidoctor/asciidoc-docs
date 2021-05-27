@@ -75,7 +75,7 @@ In other words, the `source-highlighter` attribute means "`use this syntax highl
 To apply highlighting to source code, you must add the `source` style to a listing block, literal block, or paragraph and specify a source language.
 
 .Source block with title and source highlighting
-[listing#ex-code]
+[listing#ex-code,line-comment=]
 ....
 include::example$source.adoc[tag=src-base-co]
 ....
