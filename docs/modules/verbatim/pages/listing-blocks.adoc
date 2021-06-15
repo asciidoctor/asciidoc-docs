@@ -18,7 +18,7 @@ When a line begins with one or more spaces it is displayed as a listing block.
 This method is an easy way to insert simple code snippets.
 
 .Indicate listing content using an indent
-[source#ex-indent]
+[#ex-indent]
 ----
 include::example$listing.adoc[tag=indent]
 ----
@@ -32,7 +32,7 @@ include::example$listing.adoc[tag=indent]
 The block style `listing` can be applied to a block or paragraph, by setting the attribute `listing` using an attribute list.
 
 .Listing style syntax
-[source#ex-style]
+[#ex-style]
 ----
 include::example$listing.adoc[tag=style]
 ----
@@ -47,13 +47,15 @@ A delimited listing block is surrounded by lines composed of four hyphens (`----
 This method is useful when the content contains blank lines.
 
 .Delimited listing block syntax
-[source#ex-block]
-....
+[#ex-block]
+------
 include::example$listing.adoc[tag=block]
-....
+------
 
 Here's how the block in <<ex-block>> appears when rendered.
 
+// The listing style must be added above the rendered block so it is rendered correctly because we're setting `source-language` in the component descriptor which automatically promotes unstyled listing blocks to source blocks.
+[listing]
 include::example$listing.adoc[tag=block]
 
 You should notice a few things about how the content is processed.
@@ -91,7 +93,8 @@ value when rendered.
 
 The result of <<ex-subs>> is rendered below.
 
-[subs="+attributes"]
+// The listing style must be added above the rendered block so it is rendered correctly because we're setting `source-language` in the component descriptor which automatically promotes unstyled listing blocks to source blocks.
+[listing,subs="+attributes"]
 ----
 This is a _delimited listing block_
 with the `subs` attribute assigned

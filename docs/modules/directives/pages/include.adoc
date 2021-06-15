@@ -29,14 +29,13 @@ The include directive is useful when you want to:
 
 An include directive must be placed on a line by itself with the following syntax:
 
-[source,subs=+quotes]
+[listing,subs=+quotes]
 ----
 \include::path[leveloffset=__offset__,lines=__ranges__,tag(s)=__name(s)__,indent=__depth__,opts=optional]
 ----
 
 The leveloffset, lines, tag(s), indent, and opts attributes are optional, making the simplest case look like:
 
-[source]
 ----
 \include::content.adoc[]
 ----
@@ -99,7 +98,6 @@ If you don't want Asciidoctor to trigger a warning, and instead drop the include
 If you store your AsciiDoc files in nested folders at different levels, relative file paths can quickly become awkward and inflexible.
 A common pattern to help here is to define the paths in attributes defined in the header, then prefix all include paths with a reference to one of these attributes:
 
-[source]
 ------
 :includedir: _includes
 :sourcedir: ../src/main/java
@@ -134,7 +132,6 @@ This allows includes to be nested, and provides lot of flexibility in constructi
 
 Including non-AsciiDoc files is normally done to merge output from other programs or populate table data:
 
-[source]
 ----
 .2016 Sales Results
 ,===

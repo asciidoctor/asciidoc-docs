@@ -5,7 +5,7 @@
 Text marked with hash symbols can be assigned built-in styles, such as `big` or `underline`.
 
 .Built-in CSS class syntax
-[source#ex-css]
+[#ex-css]
 ----
 include::example$text.adoc[tag=css-co]
 ----
@@ -21,7 +21,7 @@ include::example$text.adoc[tag=css]
 You can format text with custom styles that you define as well.
 
 .Custom CSS class syntax
-[source#ex-custom]
+[#ex-custom]
 ----
 include::example$text.adoc[tag=css-custom]
 ----
@@ -29,7 +29,7 @@ include::example$text.adoc[tag=css-custom]
 When <<ex-custom>> is converted to HTML, the word _asciidoctor_ is wrapped in `<span>` tags and the role `userinput` is used as the element's CSS class.
 
 .HTML output
-[source,html]
+[,html]
 ----
 include::example$text.adoc[tag=css-custom-html]
 ----

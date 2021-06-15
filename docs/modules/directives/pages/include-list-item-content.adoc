@@ -8,7 +8,6 @@ We can solve this by using the built-in `blank` attribute to initiate the list i
 
 Here's an example of how to use the `blank` attribute and the include directive to define a list item, then include the primary text from another file:
 
-[source]
 ----
 * {blank}
 \include::item-text.adoc[]
@@ -24,7 +23,6 @@ You then attach this block to the list item using a list continuation (i.e., `+`
 
 Here's an example of how to include complex content from another file into a list item:
 
-[source]
 ----
 * {blank}
 +

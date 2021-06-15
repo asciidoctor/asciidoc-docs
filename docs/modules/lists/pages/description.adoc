@@ -12,7 +12,6 @@ Each item in a description list consists of a term or phrase followed by:
 
 Here's an example of a description list that identifies parts of a computer:
 
-[source]
 ----
 include::example$description.adoc[tag=base]
 ----
@@ -27,7 +26,6 @@ include::example$description.adoc[tag=base]
 
 If you want the label and content to appear on the same line, add the horizontal style to the list.
 
-[source]
 ----
 include::example$description.adoc[tag=base-horz]
 ----
@@ -39,7 +37,6 @@ include::example$description.adoc[tag=base-horz]
 The content of a description list can be any AsciiDoc element.
 For instance, we could rewrite the grocery list from above so that each aisle is a label rather than a parent outline list item.
 
-[source]
 ----
 include::example$description.adoc[tag=base-mix]
 ----
@@ -50,7 +47,6 @@ include::example$description.adoc[tag=base-mix]
 
 Description lists are quite lenient about whitespace, so you can spread the items out and even indent the content if that makes it more readable for you:
 
-[source]
 ----
 include::example$description.adoc[tag=base-mix-alt]
 ----
@@ -63,7 +59,6 @@ Asciidoctor works hard to infer the relationships between the items that are mos
 
 Here's a list that mixes description, ordered, and unordered list items:
 
-[source]
 ----
 include::example$description.adoc[tag=3-mix]
 ----

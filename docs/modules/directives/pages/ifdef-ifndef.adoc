@@ -6,7 +6,6 @@
 Content between the `ifdef` and `endif` directives gets included if the specified attribute is set:
 
 .ifdef example
-[source]
 ----
 \ifdef::env-github[]
 This content is for GitHub only.
@@ -21,7 +20,6 @@ You can have any amount of content between the `ifdef` and `endif` directives.
 If you have a large amount of content inside the `ifdef` directive, you may find it more readable to use the long-form version of the directive, in which the attribute (aka condition) is referenced again in the `endif` directive.
 
 .ifdef long-form example
-[source]
 ----
 \ifdef::env-github[]
 This content is for GitHub only.
@@ -37,14 +35,12 @@ Other readers reviewing your docs source code may go cross-eyed when reading you
 If you're only dealing with a single line of text, you can put the content directly inside the square brackets and drop the `endif` directive.
 
 .ifdef single line example
-[source]
 ----
 \ifdef::revnumber[This document has a version number of {revnumber}.]
 ----
 
 The single-line block above is equivalent to this formal `ifdef` directive:
 
-[source]
 ----
 \ifdef::revnumber[]
 This document has a version number of {revnumber}.
@@ -58,7 +54,6 @@ This document has a version number of {revnumber}.
 Content between `ifndef` and `endif` gets included only if the specified attribute is _not_ set:
 
 .ifndef example
-[source]
 ----
 \ifndef::env-github[]
 This content is not shown on GitHub.
@@ -79,7 +74,6 @@ Multiple comma-separated (`,`) directive names evaluate to true, allowing the co
 Otherwise the content is not included.
 +
 .Any attribute example
-[source]
 ----
 \ifdef::backend-html5,backend-docbook5[Only shown when converting to HTML5 or DocBook 5.]
 ----
@@ -89,7 +83,6 @@ Multiple plus-separated (`+`) directive names evaluate to true, allowing the con
 Otherwise the content is not included.
 +
 .All attributes example
-[source]
 ----
 \ifdef::env-github+backend-html5[Only shown when converting to HTML5 on GitHub.]
 ----

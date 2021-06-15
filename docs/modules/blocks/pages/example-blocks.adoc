@@ -1,6 +1,6 @@
 = Example Blocks
 // Moved upstream from the Antora documentation at docs.antora.org
-:example-caption!:
+:!example-caption:
 
 On this page, you'll learn:
 
@@ -16,7 +16,7 @@ Normal substitutions are applied to example content.
 If the example content is contiguous, i.e., not interrupted by blank lines, the block style name `example` can be placed directly on top of the text in an attribute list (`[]`).
 
 .Assign example block style to paragraph
-[source#ex-style]
+[#ex-style]
 ----
 .Optional title
 [example]
@@ -37,7 +37,7 @@ If the example content includes multiple blocks or content separated by blank li
 You don't need to set the block style name when you use the example delimiters.
 
 .Example block delimiter syntax
-[source#ex-block]
+[#ex-block]
 ----
 .Onomatopoeia
 ====

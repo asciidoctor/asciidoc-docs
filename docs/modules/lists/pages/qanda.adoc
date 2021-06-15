@@ -3,7 +3,6 @@
 
 == Question and answer list syntax
 
-[source]
 ----
 include::example$description.adoc[tag=qa]
 ----

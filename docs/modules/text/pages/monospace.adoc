@@ -8,7 +8,7 @@ Monospace text formatting is typically used to represent text shown in computer 
 Here's an example:
 
 .Constrained monospace syntax
-[source#ex-constrain]
+[#ex-constrain]
 ----
 include::example$text.adoc[tag=mono]
 ----
@@ -25,7 +25,6 @@ As with other types of text formatting, if the text is bounded by word character
 
 Here's an example:
 
-[source]
 ----
 The command will re``link`` all packages.
 ----
@@ -36,7 +35,7 @@ Monospaced text can also be formatted in bold or italic or both, as long as the 
 The monospace markup must be the outermost formatting mark, then the bold marks, then the italic marks.
 
 .Order of inline formatting syntax
-[source#ex-mix]
+[#ex-mix]
 ----
 `*_monospaced bold italic_*`
 ----
@@ -69,7 +68,7 @@ The plus characters are a shorthand for the `\pass:c[]` enclosure.
 <<ex-literal>> contains literal, monospaced text.
 
 .Literal monospace syntax
-[source#ex-literal]
+[#ex-literal]
 ----
 include::example$text.adoc[tag=literal-mono]
 ----
@@ -81,7 +80,7 @@ To avoid confusing the processor, you'll need to switch to using the more formal
 <<ex-plus>> shows literal, monospaced text that contains plus characters.
 
 .Literal monospace syntax with + characters
-[source#ex-plus]
+[#ex-plus]
 ----
 include::example$text.adoc[tag=literal-mono-with-plus]
 ----
@@ -95,14 +94,12 @@ You can learn about the various passthrough options in xref:pass:pass-macro.adoc
 In Asciidoctor 1.5, the backtick replaces the single and double plus sign for indicating monospace formatting and normal substitutions.
 However, you can forgo this change to the syntax by setting the `compat-mode` attribute either in the document header:
 
-[source]
 ----
 :compat-mode:
 ----
 
 or by passing the attribute to the API:
 
-[source]
 ----
 -a compat-mode
 ----
@@ -123,10 +120,6 @@ TIP: You may recognize that `++` is now equivalent to `$$` (and perhaps easier t
 Notice that the text is not formatted as monospace.
 To apply monospace formatting to content marked by `+` or `++`, surround it with a pair of backticks.
 
-[source]
-----
-
-----
 
 The backtick characters around text only mean that the text should be formatted as monospace. The backtick characters *do not add* passthrough semantics. In most cases, the passthrough semantics aren't necessary, so using the backticks for monospaced formatting is all that's necessary.
 
@@ -149,7 +142,6 @@ Since we're swapping behavior between two existing formatting marks, we had to i
 
 **IMPORTANT:** I want to reiterate that you have the option of enabling legacy mode if you don't want to deal with migration. Legacy mode will be supported for the foreseeable future to avoid unnecessary disruption. If that's the option you want to take, simply add the following document attribute at the start of your document, or wherever you want to enable legacy mode.
 
-[source]
 ----
 :compat-mode:
 ----
@@ -197,7 +189,6 @@ Monospace text formatting is often used to emulate how source code appears in co
 A word or phrase is rendered using a fixed-width font, i.e. monospaced font, when it is enclosed in a single pair of plus signs (+{plus}+).
 A character contained within a string of characters must be enclosed in a double pair of plus signs (+{plus}{plus}+).
 
-[source]
 ----
 include::ex-text.adoc[tag=mono]
 ----

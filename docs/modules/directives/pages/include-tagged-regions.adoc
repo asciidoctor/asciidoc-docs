@@ -62,7 +62,6 @@ It is also possible to have fine-grained tagged regions inside larger tagged reg
 
 For example, if your include file has the following content:
 
-[source]
 ----
 // tag::snippets[]
 // tag::snippet-a[]
@@ -77,7 +76,6 @@ snippet b
 
 And you include this file using the following include directive:
 
-[source]
 ----
 \include::file-with-snippets.adoc[tag=snippets]
 ----

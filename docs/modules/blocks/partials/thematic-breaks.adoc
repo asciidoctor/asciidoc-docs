@@ -3,7 +3,7 @@
 A thematic break is created by entering three single quotation marks (`++'''++`) on a line.
 
 .Thematic break syntax
-[source#ex-rule]
+[#ex-rule]
 ----
 '''
 ----

@@ -10,7 +10,7 @@ It's all about getting the semantics right.
 The `btn` macro to the rescue!
 
 .Using the button macro syntax
-[source#ex-btn]
+[#ex-btn]
 ----
 include::example$ui.adoc[tag=button]
 ----
@@ -25,7 +25,7 @@ Trying to explain how to select a menu item can be a pain.
 With the `menu` macro, the symbols do the work.
 
 .Using the menu macro syntax
-[source#ex-menu]
+[#ex-menu]
 ----
 include::example$ui.adoc[tag=menu]
 ----

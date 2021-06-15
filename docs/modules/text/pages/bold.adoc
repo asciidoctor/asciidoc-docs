@@ -10,7 +10,7 @@ You can mark a word or phrase as bold by enclosing it in a single pair of asteri
 You can mark bounded characters (i.e., characters within a word) as bold by enclosing them in a pair of double asterisks (e.g., `+char**act**ers+`) (unconstrained).
 
 .Bold inline formatting
-[source#ex-bold]
+[#ex-bold]
 ----
 A bold *word*, and a bold *phrase of text*.
 
@@ -32,7 +32,7 @@ Bold c**hara**cter**s** within a word.
 You can add multiple emphasis styles to bold text as long as the syntax is placed in the correct order.
 
 .Order of inline formatting syntax
-[source#ex-mix]
+[#ex-mix]
 ----
 `*_monospace bold italic phrase_*` & ``**__char__**``acter``**__s__**``
 ----

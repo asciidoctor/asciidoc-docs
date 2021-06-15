@@ -10,7 +10,6 @@ To fix this, you can reference a dynamic variable from the primary document in t
 
 For example, let's say you want to include the same subsection describing a bike chain in both the operation and maintenance chapters:
 
-[source]
 ----
 = Bike Manual
 

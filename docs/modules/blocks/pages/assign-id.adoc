@@ -7,7 +7,6 @@ Once you've assigned an ID to a block, you can use that ID to link to it using a
 
 An ID is assigned to a block by prefixing the ID value with a hash (`#`) and placing it in the block's attribute list.
 
-[source]
 ----
 [#the-id-of-this-block]
 ====
@@ -31,7 +30,7 @@ The blockquote with an assigned style and ID in <<ex-style-id>> shows this order
 
 
 .Assign a style and ID to a block
-[source#ex-style-id]
+[#ex-style-id]
 ----
 [quote#roads]
 Roads? Where we're going, we don't need roads.
@@ -40,9 +39,8 @@ Roads? Where we're going, we don't need roads.
 Since <<ex-style-id>> is a blockquote it should have some attribution and citation information.
 In <<ex-cite>>, let's attribute this quote to its speaker and original context using the positional attribution attributes that are built into the `quote` style.
 
-
 .Assign a style, ID, and positional attributes to a block
-[source#ex-cite]
+[#ex-cite]
 ----
 [quote#roads,Dr. Emmett Brown,Back to the Future]
 Roads? Where we're going, we don't need roads.
@@ -60,7 +58,6 @@ In addition to a title, a block can be assigned additional metadata including:
 
 Here's an example of a quote block with metadata:
 
-[source]
 ----
 include::example$block.adoc[tag=meta-co]
 ----
