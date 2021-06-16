@@ -9,7 +9,6 @@
 The include directive recognizes when the target is a URI and can include the content referenced by that URI.
 This example demonstrates how to include an AsciiDoc file from a GitHub repository directly into your document.
 
-[source]
 ----
 include::example$include.adoc[tag=uri]
 ----

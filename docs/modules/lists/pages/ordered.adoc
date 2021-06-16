@@ -6,14 +6,12 @@
 Sometimes, we need to number the items in a list.
 Instinct might tell you to prefix each item with a number, like in this next list:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-num]
 ----
 
 The above works, but since the numbering is obvious, the AsciiDoc processor will insert the numbers for you if you omit them:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base]
 ----
@@ -27,21 +25,18 @@ This differs from other lightweight markup languages.
 It's one way to adjust the numbering offset of a list.
 For instance, you can type:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-num-start]
 ----
 
 However, in general the best practice is to use the `start` attribute to configure this sort of thing:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-start]
 ----
 
 To present the items in reverse order, add the `reversed` option:
 
-[source]
 ----
 include::example$ordered.adoc[tag=reversed]
 ----
@@ -54,7 +49,6 @@ You can give a list a title by prefixing the line with a dot immediately followe
 
 Here's an example of a list with a title:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-t]
 ----
@@ -68,7 +62,6 @@ include::example$ordered.adoc[tag=base-t]
 // tag::basic[]
 You create a nested item by using one or more dots in front of each the item.
 
-[source]
 ----
 include::example$ordered.adoc[tag=nest]
 ----
@@ -97,7 +90,6 @@ Asciidoctor works hard to infer the relationships between the items that are mos
 
 Here's an example of nesting an unordered list inside of an ordered list:
 
-[source]
 ----
 include::example$ordered.adoc[tag=mix]
 ----
@@ -108,7 +100,6 @@ include::example$ordered.adoc[tag=mix]
 
 You can spread the items out and indent the nested lists if that makes it more readable for you:
 
-[source]
 ----
 include::example$ordered.adoc[tag=mix-alt]
 ----
@@ -119,7 +110,6 @@ The description list page demonstrates how to xref:description.adoc#three-hybrid
 == Number styles
 
 For ordered lists, Asciidoctor supports the numeration styles such as lowergreek and decimal-leading-zero.
-
 The full list of numeration styles that can be applied to an ordered list are as follows:
 
 [%autowidth]
@@ -189,7 +179,6 @@ When the role shorthand (`.custom`) is used on an ordered list, the numeration s
 You can override the number scheme for any level by setting its style (the first positional entry in a block attribute list).
 You can also set the starting number using the `start` attribute:
 
-[source]
 ----
 include::example$ordered.adoc[tag=num]
 ----

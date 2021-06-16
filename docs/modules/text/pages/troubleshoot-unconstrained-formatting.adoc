@@ -61,7 +61,6 @@ One such example is enclosing a xref:monospace.adoc[monospace phrase] inside xre
 
 You might start with the following syntax:
 
-[source]
 ----
 "`end points`"
 ----
@@ -71,7 +70,6 @@ The backticks contribute to making the curved quotation marks, but the word isn'
 
 Adding another pair of backticks isn't enough either.
 
-[source]
 ----
 "``end points``"
 ----
@@ -82,7 +80,6 @@ You have to use an unconstrained pair of monospace formatting marks to render th
 That's three pairs of backticks in total.
 
 .A monospace phrase inside curved quotation marks
-[source]
 ----
 "```end points```"
 ----
@@ -91,7 +88,6 @@ If, instead, you wanted to surround the monospace phrase with typewriter quotati
 For example:
 
 .A monospace phrase inside typewriter quotation marks
-[source]
 ----
 "[.code]``end points``" or \"``end points``"
 ----
@@ -99,7 +95,6 @@ For example:
 Another example is a possessive, monospace phrase that ends in an "`s`".
 In this case, you must switch the monospace phrase to unconstrained formatting.
 
-[source]
 ----
 The ``class```' static methods make it easy to operate
 on files and directories.
@@ -112,7 +107,6 @@ The ``class```' static methods make it easy to operate on files and directories.
 
 Alternately, you could encode the curved apostrophe directly in the AsciiDoc source to get the same result.
 
-[source]
 ----
 The `class`’ static methods make it easy to operate on files and directories.
 ----

@@ -16,7 +16,6 @@ The delimiter for the sidebar style is four asterisks (`+****+`).
 
 . Enter the opening delimiter at the beginning of a new line and then press kbd:[Enter].
 +
-[source]
 ----
 Text in your document.
 
@@ -27,7 +26,6 @@ Text in your document.
 . On the new line, enter your content, such as paragraphs, delimited blocks, directives, and macros.
 The delimited block's style will be applied to all of this content until the closing delimiter.
 +
-[source]
 ----
 Text in your document.
 
@@ -42,7 +40,6 @@ This is more content in the sidebar block.
 . To end the delimited block, press kbd:[Enter] at the end of your last line of content.
 On the new line, type the closing delimiter.
 +
-[source]
 ----
 Text in your document.
 
@@ -71,7 +68,6 @@ include::example$block.adoc[tag=opt-listing]
 
 or single-line quotes:
 
-[source]
 ----
 include::example$block.adoc[tag=quote-name]
 ----

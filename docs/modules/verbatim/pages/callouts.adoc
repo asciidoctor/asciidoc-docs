@@ -47,6 +47,8 @@ include::example$callout.adoc[tag=b-nonselect]
 
 The result of <<ex-prevent>> is rendered below.
 
+// The listing style must be added above the rendered block so it is rendered correctly because we're setting `source-language` in the component descriptor which automatically promotes unstyled listing blocks to source blocks.
+[listing]
 include::example$callout.adoc[tag=b-nonselect]
 
 === XML callouts
@@ -74,7 +76,6 @@ Now both you and the reader can copy and paste XML source code containing callou
 
 The font icons setting also enables callout icons drawn using CSS.
 
-[source]
 ----
 include::example$callout.adoc[tag=co-icon]
 ----

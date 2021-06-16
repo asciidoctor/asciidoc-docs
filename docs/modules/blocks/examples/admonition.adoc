@@ -1,5 +1,5 @@
 // tag::para-c[]
-WARNING: Wolpertingers are known to nest in server racks. // <1> <2>
+WARNING: Wolpertingers are known to nest in server racks. <.> <.>
 Enter at your own risk.
 // end::para-c[]
 
@@ -21,9 +21,9 @@ While werewolves are hardy community members, keep in mind the following dietary
 // end::bl[]
 
 // tag::bl-c[]
-[IMPORTANT] // <1>
+[IMPORTANT] <.>
 .Feeding the Werewolves
-==== // <2>
+==== <.>
 While werewolves are hardy community members, keep in mind the following dietary concerns:
 
 . They are allergic to cinnamon.

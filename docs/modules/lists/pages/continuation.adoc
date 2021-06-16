@@ -7,7 +7,6 @@ But like with regular paragraph text, the text in a list item can wrap across an
 The wrapped lines can be indented, and they will still be treated as normal paragraph text.
 For example:
 
-[source]
 ----
 include::example$complex.adoc[tag=indent]
 ----
@@ -28,7 +27,6 @@ A [.term]*list continuation* is a `{plus}` symbol on a line by itself, immediate
 
 Here's an example:
 
-[source]
 ----
 include::example$complex.adoc[tag=cont]
 ----
@@ -75,7 +73,6 @@ include::example$complex.adoc[tag=complex-o]
 The open block wrapper is also useful if you're including content from a shared file into a list item.
 For example:
 
-[source]
 ----
 * list item
 +

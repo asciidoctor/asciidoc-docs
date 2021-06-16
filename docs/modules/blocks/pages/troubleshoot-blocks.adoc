@@ -8,7 +8,6 @@ Its closing delimiter must also be four asterisks (`+****+`).
 
 Here's a sidebar using valid delimiter lengths:
 
-[source]
 ----
 ****
 This is a valid delimited block.
@@ -18,7 +17,6 @@ It will be styled as a sidebar.
 
 However, the delimiter lengths in the following delimited block are not equal in length and therefore invalid:
 
-[source]
 ----
 ********
 This is an invalid sidebar block because the delimiter lines are different lengths.
