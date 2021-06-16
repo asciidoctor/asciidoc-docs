@@ -37,8 +37,9 @@ end
 
 This AsciiDoc source:
 
+[source]
 ....
-[indent=2]
+[source,ruby,indent=2]
 ----
     def names
       @name.split ' '

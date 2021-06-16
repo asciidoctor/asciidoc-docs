@@ -28,21 +28,18 @@ A constrained pair uses a single opening mark and a single closing mark to enclo
 
 For example, you use this form to format a word that stands alone,
 
-[source]
 ----
 That is *strong* stuff!
 ----
 
 to format a sequence of words,
 
-[source]
 ----
 That is *really strong* stuff!
 ----
 
 or to format a word adjacent to punctuation, like an exclamation mark.
 
-[source]
 ----
 This stuff is *strong*!
 ----
@@ -59,7 +56,6 @@ An unconstrained pair uses a double opening mark and a double closing mark to en
 
 For example, you'd use an unconstrained pair to format just one or a few letters in a word.
 
-[source]
 ----
 She spells her name with an "`h`", as in Sara**h**.
 ----

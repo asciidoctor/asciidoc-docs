@@ -3,7 +3,6 @@
 Content between `ifeval` and `endif` gets included if the expression inside the square brackets evaluates to true.
 
 .ifeval example
-[source]
 ----
 \ifeval::[{sectnumlevels} == 3]
 If the `sectnumlevels` attribute has the value 3, this sentence is included.
@@ -16,7 +15,6 @@ Unlike `ifdef` and `ifndef`, you cannot terminate a specific `ifeval` directive 
 For example, the following `ifeval` block is not valid:
 
 .Invalid ifeval terminator
-[source]
 ----
 \ifeval::[<condition>]
 conditional content
@@ -26,7 +24,6 @@ conditional content
 You can only terminate the previous `ifeval` directive using an anonymous `endif::[]` directive, as shown here:
 
 .Valid ineval terminator
-[source]
 ----
 \ifeval::[<condition>]
 conditional content
@@ -40,7 +37,6 @@ If you're mixing `ifeval` directives with `ifdef` or `ifndef` directives, you sh
 The expression consists of a left-hand value and a right-hand value with an operator in between.
 
 .ifeval expression examples
-[source]
 ----
 \ifeval::[2 > 1]
 ...
@@ -71,7 +67,6 @@ When you expect the attribute reference to resolve to a string, that is, a seque
 For example:
 
 .ifeval that compares two string expressions
-[source]
 ----
 ifeval::["{backend}" == "html5"]
 ----

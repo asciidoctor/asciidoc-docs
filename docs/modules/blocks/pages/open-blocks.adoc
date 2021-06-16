@@ -5,7 +5,7 @@ The most versatile block of all is the open block.
 == Open block syntax
 
 .Open block syntax
-[source#ex-open]
+[#ex-open]
 ----
 include::example$open.adoc[tag=base]
 ----
@@ -18,7 +18,7 @@ An open block can act as any other block, with the exception of _pass_ and _tabl
 For instance, in <<ex-open-sidebar>> an open block is acting as a sidebar.
 
 .Open block masquerading as a sidebar
-[source#ex-open-sidebar]
+[#ex-open-sidebar]
 ----
 include::example$open.adoc[tag=sb]
 ----
@@ -30,7 +30,7 @@ include::example$open.adoc[tag=sb]
 <<ex-open-source>> is an open block acting as a source block.
 
 .Open block masquerading as a source block
-[source#ex-open-source]
+[#ex-open-source]
 ----
 include::example$open.adoc[tag=src]
 ----

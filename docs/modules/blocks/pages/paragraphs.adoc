@@ -10,7 +10,7 @@ Adjacent or consecutive lines of text form a paragraph element.
 To start a new paragraph after another element, such as a section title or table, hit the kbd:[RETURN] key twice to insert a blank line, and then continue typing your content.
 
 .Two paragraphs in an AsciiDoc document
-[source#ex-paragraph]
+[#ex-paragraph]
 ----
 include::example$paragraph.adoc[tag=para]
 ----

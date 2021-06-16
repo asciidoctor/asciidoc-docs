@@ -28,19 +28,17 @@ When you want to call attention to a single paragraph, start the first line of t
 The label must be uppercase and followed by a colon (`:`).
 
 .Admonition paragraph syntax
-[source#ex-label]
+[#ex-label]
 ----
 include::example$admonition.adoc[tag=para-c]
 ----
-. The label must be uppercase and immediately followed by a colon (`:`).
-. Separate the first line of the paragraph from the label by a single space.
+<.> The label must be uppercase and immediately followed by a colon (`:`).
+<.> Separate the first line of the paragraph from the label by a single space.
 // end::intro[]
 
 The result of <<ex-label>> is displayed below.
 
-:icons!:
 include::example$admonition.adoc[tag=para]
-:icons: font
 
 When you want to apply an admonition to complex content, set the label as a style attribute on a block.
 As seen in the next example, admonition labels are commonly set on example blocks.
@@ -48,42 +46,36 @@ This behavior is referred to as *masquerading*.
 The label must be uppercase when set as an attribute on a block.
 
 .Admonition block syntax
-[source#ex-block]
+[#ex-block]
 ----
 include::example$admonition.adoc[tag=bl-c]
 ----
-. Set the label in an attribute list on a delimited block.
+<.> Set the label in an attribute list on a delimited block.
 The label must be uppercase.
-. Admonition styles are commonly set on example blocks.
+<.> Admonition styles are commonly set on example blocks.
 Example blocks are delimited by four equal signs (`====`).
 
 The result of <<ex-block>> is displayed below.
 
-:icons!:
 include::example$admonition.adoc[tag=bl-nest]
-:icons: font
 
 == Enable admonition icons
 
 In the examples above, the admonition is rendered in a callout box with the style label in the gutter.
-You can replace the textual labels with icons by setting the `icons` attribute on the document.
-This is how the WARNING admonition paragraph renders when icons is set and assigned the `font` value.
+You can replace the textual labels with font icons by setting the `icons` attribute on the document and assigning it the value `font`.
 
 .Admonition paragraph with icons set
-[source#ex-icon]
+[#ex-icon]
 ----
+= Document Title
 :icons: font
 
 include::example$admonition.adoc[tag=para]
 ----
 
-The result of <<ex-icon>> is displayed below.
-
-include::example$admonition.adoc[tag=para]
-
 Learn more about using Font Awesome or custom icons with admonitions in xref:macros:icons-font.adoc[].
 
-=== Using emoji for admonition icons
+== Using emoji for admonition icons
 
 If image-based or font-based icons are not available, you can leverage the admonition caption to display an emoji (or any symbol from Unicode) in the place of the admonition label, thus giving you an alternative way to make admonition icons.
 
@@ -94,7 +86,6 @@ For example, the attribute for a tip admonition is `tip-caption`.
 
 Instead of a word, you can assign a Unicode glyph to this attribute:
 
-[source]
 ----
 :tip-caption: 💡
 
@@ -104,7 +95,7 @@ It's possible to use Unicode glyphs as admonition icons.
 
 Here's the result you get in the HTML:
 
-[source,html]
+[,html]
 ----
 <td class="icon">
 <div class="title">💡</div>
@@ -114,7 +105,6 @@ Here's the result you get in the HTML:
 Instead of entering the glyph directly, you can enter a character reference instead.
 However, since you're defining the character reference in an attribute entry, you (currently) have to disable substitutions on the value.
 
-[source]
 ----
 :tip-caption: pass:[&#128161;]
 
@@ -125,7 +115,6 @@ It's possible to use Unicode glyphs as admonition icons.
 On GitHub, the HTML output from the AsciiDoc processor is run through a postprocessing filter that substitutes emoji shortcodes with emoji symbols.
 That means you can use these shortcodes instead in the value of the attribute:
 
-[source]
 ----
 \ifdef::env-github[]
 :tip-caption: :bulb:

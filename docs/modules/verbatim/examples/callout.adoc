@@ -56,6 +56,6 @@ end
 = Document Title
 :icons: font <1>
 
-NOTE: Asciidoctor now supports font-based admonition
+NOTE: Asciidoctor supports font-based admonition
 icons, powered by Font Awesome! <2>
 // end::co-icon[]

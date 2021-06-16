@@ -39,7 +39,6 @@ Because the leveloffset is _relative_ (it begins with + or -), this works even i
 
 If you have lots of chapters to include and want them all to have the same offset, you can save some typing by setting `leveloffset` around the includes:
 
-[source]
 ----
 = My book
 
@@ -58,7 +57,6 @@ The final line returns the level offset to 0.
 
 Alternatively, you could use absolute levels:
 
-[source]
 ----
 :leveloffset: 1
 

@@ -8,7 +8,7 @@ A block title is defined on its own line directly above the block's attribute li
 As shown in <<ex-basic>>, the line must begin with a dot (`.`) and immediately be followed by the text of the title.
 
 .Block title syntax
-[source#ex-basic]
+[#ex-basic]
 ----
 .This is the title of a sidebar block
 ****
@@ -25,12 +25,12 @@ If the block doesn't have an attribute list, enter the title on a new line direc
 The delimited literal block in <<ex-title>> is titled _Terminal Output_.
 
 .Add a title to a delimited block
-[source#ex-title]
+[#ex-title]
 ----
 .Terminal Output <.>
 .... <.>
 From github.com:asciidoctor/asciidoctor
- * branch        master   -> FETCH_HEAD
+ * branch        main   -> FETCH_HEAD
 Already up to date.
 ....
 ----
@@ -44,7 +44,7 @@ The result of <<ex-title>> is displayed below.
 .Terminal Output
 ....
 From github.com:asciidoctor/asciidoctor
- * branch        master   -> FETCH_HEAD
+ * branch        main   -> FETCH_HEAD
 Already up to date.
 ....
 
@@ -61,7 +61,7 @@ When you're applying attributes to a block, the title is placed on the line abov
 .Specify GitLab CI stages <.>
 [source,yaml] <.>
 ----
-image: node:10.16.3-buster
+image: node:16-buster
 stages: [ init, verify, deploy ]
 ----
 ....
@@ -74,14 +74,14 @@ The result of <<ex-title-list>> is displayed below.
 .Specify GitLab CI stages
 [source,yaml]
 ----
-image: node:10.16.3-buster
+image: node:16-buster
 stages: [ init, verify, deploy ]
 ----
 
 As shown in <<ex-title-style>>, a block's title is placed above the attribute list when a block isn't delimited.
 
 .Add a title to a non-delimited block
-[source#ex-title-style]
+[#ex-title-style]
 ----
 .Mint
 [sidebar]

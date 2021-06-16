@@ -8,7 +8,6 @@ Chances are, you'd mark list items using the same characters that Asciidoctor us
 
 In the example below, each list item is marked using an asterisk (`+*+`), the AsciiDoc syntax specifying an unordered list item.
 
-[source]
 ----
 include::example$unordered.adoc[tag=base]
 ----
@@ -25,7 +24,6 @@ include::example$unordered.adoc[tag=base]
 
 You can add a title to a list by prefixing the title with a period (`.`).
 
-[source]
 ----
 include::example$unordered.adoc[tag=base-t]
 ----
@@ -39,7 +37,6 @@ Was your instinct to use a hyphen (`-`) instead of an asterisk to mark list item
 Guess what?
 That works too!
 
-[source]
 ----
 include::example$unordered.adoc[tag=base-alt]
 ----
@@ -54,7 +51,6 @@ If you have adjacent lists, they have the tendency to want to fuse together.
 To force lists apart, insert a line comment (`//`) surrounded by blank lines between the two lists.
 Here's an example, where the `-` text in the line comment indicates the line serves as an "`end of list`" marker:
 
-[source]
 ----
 include::example$unordered.adoc[tag=divide]
 ----
@@ -65,7 +61,6 @@ include::example$unordered.adoc[tag=divide]
 To nest an item, just add another asterisk (`+*+`) to the marker.
 Continue doing this for each subsequent level.
 
-[source]
 ----
 include::example$unordered.adoc[tag=nest]
 ----
@@ -79,7 +74,6 @@ You can nest unordered lists to any depth.
 Keep in mind, however, that some interfaces will begin flattening lists after a certain depth.
 For instance, GitHub starts flattening list after 10 levels of nesting.
 
-[source]
 ----
 include::example$unordered.adoc[tag=max]
 ----
@@ -117,7 +111,6 @@ For DocBook:: the style name is assigned to the `mark` attribute on the `<itemiz
 
 Here's an unordered list that has square bullets:
 
-[source]
 ----
 include::example$unordered.adoc[tag=square]
 ----

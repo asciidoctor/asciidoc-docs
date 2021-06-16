@@ -621,6 +621,7 @@ include::verbatim:example$listing.adoc[tag=qr-listing]
 [%collapsible.result]
 ====
 [caption="Listing 1. "]
+[listing]
 include::verbatim:example$listing.adoc[tag=qr-listing]
 ====
 
@@ -643,7 +644,6 @@ include::verbatim:example$source.adoc[tag=src-base]
 ====
 You must enable xref:verbatim:source-highlighter.adoc[source highlighting] by setting the `source-highlighter` attribute in the document header, CLI, or API.
 
-[source]
 ----
 :source-highlighter: rouge
 ----

@@ -13,7 +13,7 @@ Subscript:: One tilde (`{tilde}`) on either side of a word or phrase makes it su
 Superscript:: One caret (`{caret}`) on either side of a word or phrase makes it superscript.
 
 .Subscript and superscript syntax
-[source#ex-basic]
+[#ex-basic]
 ----
 include::example$text.adoc[tag=sub-sup]
 ----

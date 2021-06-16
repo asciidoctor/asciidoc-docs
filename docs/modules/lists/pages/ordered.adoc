@@ -6,14 +6,12 @@
 Sometimes, we need to number the items in a list.
 Instinct might tell you to prefix each item with a number, like in this next list:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-num]
 ----
 
 The above works, but since the numbering is obvious, the AsciiDoc processor will insert the numbers for you if you omit them:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base]
 ----
@@ -27,36 +25,33 @@ This differs from other lightweight markup languages.
 It's one way to adjust the numbering offset of a list.
 For instance, you can type:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-num-start]
 ----
 
 In general, though, rather than typing numbers, if you need to interrupt the default sequence, use the `start` attribute:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-start]
 ----
 
-When your ordered-list items include multiple block elements—images, captions, code, tables, paragraphs, source blocks, etc., as is often the case when you document steps in a procedure—your steps may reset to 1 when you don't want them to. 
+When your ordered-list items include multiple block elements—images, captions, code, tables, paragraphs, source blocks, etc., as is often the case when you document steps in a procedure—your steps may reset to 1 when you don't want them to.
 In these cases, don't use the `start` attribute to continue the numbering.
 You don't want to have to manually update `start` numbers or risk having the `start` numbers become wrong every time you add or remove a step.
-Instead, use a list continuation—a `{plus}` symbol on its own line—between block elements. 
-The list continuation glues the elements together within a given step. 
-If a step includes any blank lines between elements, the next step goes back to 1. 
-(A blank line directly before a step has no effect on step numbering.) 
+Instead, use a list continuation—a `{plus}` symbol on its own line—between block elements.
+The list continuation glues the elements together within a given step.
+If a step includes any blank lines between elements, the next step goes back to 1.
+(A blank line directly before a step has no effect on step numbering.)
 The list continuation also keeps the elements aligned at the same level of indent, as shown here:
 
 image::step-numbers-list-continuation.png[Example of continuous step numbering with complex content]
 
 * For how-to details, see the xref:continuation.adoc[] section of this documentation.
 * For an example of the list continuation used in a complex ordered list, see the launch steps in https://github.com/aws-quickstart/quickstart-microsoft-sql-fci-fsx/edit/main/docs/partner_editable/deploy_steps.adoc[this .adoc file in GitHub^].
-* To see how those launch steps look in the final output, see the https://aws-quickstart.github.io/quickstart-microsoft-sql-fci-fsx/#_launch_the_quick_start[Launch the Quick Start^] section of the generated deployment guide. The list continuations prevent step 2 from resetting to 1. They also prevent step 5, which is pulled in from a separate .adoc file, from resetting to 1. 
+* To see how those launch steps look in the final output, see the https://aws-quickstart.github.io/quickstart-microsoft-sql-fci-fsx/#_launch_the_quick_start[Launch the Quick Start^] section of the generated deployment guide. The list continuations prevent step 2 from resetting to 1. They also prevent step 5, which is pulled in from a separate .adoc file, from resetting to 1.
 
 To present list items in reverse order, add the `reversed` option:
 
-[source]
 ----
 include::example$ordered.adoc[tag=reversed]
 ----
@@ -69,7 +64,6 @@ You can give a list a title by prefixing the line with a dot immediately followe
 
 Here's an example of a list with a title:
 
-[source]
 ----
 include::example$ordered.adoc[tag=base-t]
 ----
@@ -83,7 +77,6 @@ include::example$ordered.adoc[tag=base-t]
 // tag::basic[]
 You create a nested item by using one or more dots in front of each the item.
 
-[source]
 ----
 include::example$ordered.adoc[tag=nest]
 ----
@@ -112,7 +105,6 @@ Asciidoctor works hard to infer the relationships between the items that are mos
 
 Here's an example of nesting an unordered list inside of an ordered list:
 
-[source]
 ----
 include::example$ordered.adoc[tag=mix]
 ----
@@ -123,7 +115,6 @@ include::example$ordered.adoc[tag=mix]
 
 You can spread the items out and indent the nested lists if that makes it more readable for you:
 
-[source]
 ----
 include::example$ordered.adoc[tag=mix-alt]
 ----
@@ -134,7 +125,6 @@ The description list page demonstrates how to xref:description.adoc#three-hybrid
 == Number styles
 
 For ordered lists, Asciidoctor supports the numeration styles such as lowergreek and decimal-leading-zero.
-
 The full list of numeration styles that can be applied to an ordered list are as follows:
 
 [%autowidth]
@@ -204,7 +194,6 @@ When the role shorthand (`.custom`) is used on an ordered list, the numeration s
 You can override the number scheme for any level by setting its style (the first positional entry in a block attribute list).
 You can also set the starting number using the `start` attribute:
 
-[source]
 ----
 include::example$ordered.adoc[tag=num]
 ----

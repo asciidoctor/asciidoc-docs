@@ -22,7 +22,6 @@ The context is typically inferred by the AsciiDoc syntax.
 
 For example, consider the following normal section:
 
-[source]
 ----
 == Section Title
 ----
@@ -47,17 +46,16 @@ For some blocks, you may notice a name enclosed in square brackets above the blo
 In this case, the first positional (unnamed) attribute in the block attribute list is being used to specify the block style.
 
 The block style elaborates the block's context.
-The style is almost always to be specified by the writer.
+The style is almost always specified by the writer.
 
 Consider the following example of a source block:
 
-[source]
-....
-[source]
+------
+[source,ruby]
 ----
 puts "Hello, World!"
 ----
-....
+------
 
 The context of a source block is `listing` (inferred from the listing block delimiters) and the style is `source` (as specified by the writer).
 We say that the style specialized the block.
@@ -67,7 +65,6 @@ In these cases, the name between the square brackets is interpreted not as the b
 
 Consider the case of this alternate syntax for a listing block, known a block masquerading.
 
-[source]
 ----
 [listing]
 ....
@@ -103,7 +100,6 @@ These metadata lines are as follows:
 
 For example, consider a sidebar block with a title and ID:
 
-[source]
 ----
 [#music-styles]
 .Styles of music
