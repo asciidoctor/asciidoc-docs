@@ -57,10 +57,10 @@ include::example$callout.adoc[tag=b-nonselect]
 An AsciiDoc processor recognizes the most ubiquitous line comment prefixes as a convenience.
 If the source language you're embedding does not support one of these line comment prefixes, you can customize the prefix using the `line-comment` attribute on the block.
 
-Let's say we want to tuck a callout behind a line comment in erlang code.
+Let's say we want to tuck a callout behind a line comment in Erlang code.
 In this case, we would set the `line-comment` character to `%`, as shown in this example:
 
-.Customize the line comment prefix
+.Custom line comment prefix
 [source#ex-line-comment,subs=-callouts]
 ....
 include::example$callout.adoc[tag=line-comment]
@@ -73,6 +73,28 @@ The result of <<ex-line-comment>> is rendered below.
 include::example$callout.adoc[tag=line-comment]
 
 Even though it's not specified in the attribute, one space is still permitted immediately following the line comment prefix.
+
+=== Disable line comment processing
+
+If the source language you're embedding does not support trailing line comments, or the line comment prefix is being misinterpretted, you can disable this feature using the `line-comment` attribute.
+
+Let's say we want to put a callout at the end of a block delimiter for an open block in AsciiDoc.
+In this case, the processor will think the double hyphen is a line comment, when in fact it's the block delimiter.
+We can disable line comment processing by setting the `line-comment` character to an empty value, as shown in this example:
+
+.No line comment prefix
+[source#ex-disable-line-comment,subs=-callouts]
+....
+include::example$callout.adoc[tag=disable-line-comment]
+....
+
+The result of <<ex-disable-line-comment>> is rendered below.
+
+// The listing style must be added above the rendered block so it is rendered correctly because we're setting `source-language` in the component descriptor which automatically promotes unstyled listing blocks to source blocks.
+[listing]
+include::example$callout.adoc[tag=disable-line-comment]
+
+Since the language doesn't support trailing line comments, there's no way to hide the callout number in the raw source.
 
 === XML callouts
 

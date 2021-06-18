@@ -24,6 +24,16 @@ hello() ->
 <1> A callout behind a custom line comment prefix.
 // end::line-comment[]
 
+// tag::disable-line-comment[]
+[source,asciidoc,line-comment=]
+----
+-- <1>
+A paragraph in an open block.
+--
+----
+<1> An open block delimiter.
+// end::disable-line-comment[]
+
 // in qr
 // tag::source-xml[]
 [source,xml]
