@@ -51,6 +51,28 @@ The result of <<ex-prevent>> is rendered below.
 [listing]
 include::example$callout.adoc[tag=b-nonselect]
 
+=== Custom line comment prefix
+
+An AsciiDoc processor recognizes the most ubiquitous line comment prefixes as a convenience.
+If the source language you're embedding does not support one of these line comment prefixes, you can customize the prefix using the `line-comment` attribute on the block.
+
+Let's say we want to tuck a callout behind a line comment in erlang code.
+In this case, we would set the `line-comment` character to `%`, as shown in this example:
+
+.Customize the line comment prefix
+[source#ex-line-comment,subs=-callouts]
+....
+include::example$callout.adoc[tag=line-comment]
+....
+
+The result of <<ex-line-comment>> is rendered below.
+
+// The listing style must be added above the rendered block so it is rendered correctly because we're setting `source-language` in the component descriptor which automatically promotes unstyled listing blocks to source blocks.
+[listing]
+include::example$callout.adoc[tag=line-comment]
+
+Even though it's not specified in the attribute, one space is still permitted immediately following the line comment prefix.
+
 === XML callouts
 
 XML doesn't have line comments, so our "`tuck the callout behind a line comment`" trick doesn't work here.

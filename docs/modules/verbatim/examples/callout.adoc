@@ -12,6 +12,18 @@ line of code <!--4-->
 <4> A callout behind a line comment for XML or SGML languages like HTML.
 // end::b-nonselect[]
 
+// tag::line-comment[]
+[source,erlang,line-comment=%]
+----
+-module(hello_world).
+-compile(export_all).
+
+hello() ->
+    io:format("hello world~n"). % <1>
+----
+<1> A callout behind a custom line comment prefix.
+// end::line-comment[]
+
 // in qr
 // tag::source-xml[]
 [source,xml]
