@@ -40,7 +40,7 @@ Asciidoctor will recognize the line comments characters in front of a callout nu
 Here are the line comments that are supported:
 
 .Prevent callout copy and paste
-[source#ex-prevent,subs=specialcharacters]
+[source#ex-prevent,subs=-callouts]
 ....
 include::example$callout.adoc[tag=b-nonselect]
 ....
@@ -81,7 +81,7 @@ To use callouts in XML, you must place the callout's angled brackets around the 
 Here's how it appears in a listing:
 
 .XML callout syntax
-[source#ex-xml,subs=specialcharacters]
+[source#ex-xml,subs=-callouts]
 ....
 include::example$callout.adoc[tag=source-xml]
 ....
