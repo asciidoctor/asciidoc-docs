@@ -3,6 +3,7 @@
 ** xref:ordered.adoc[]
 ** xref:checklist.adoc[]
 ** xref:continuation.adoc[]
+** xref:separating.adoc[]
 
 []
 * xref:description.adoc[]

@@ -45,7 +45,7 @@ You should reserve the hyphen for lists that only have a single level because th
 Now that we've mentioned nested lists, let's go to the next section and learn how to create lists with multiple levels.
 
 [#separating-lists]
-.Separating Lists
+.Forcing lists apart
 ****
 If you have adjacent lists, they have the tendency to want to fuse together.
 To force lists apart, insert a line comment (`//`) surrounded by blank lines between the two lists.
@@ -54,6 +54,9 @@ Here's an example, where the `-` text in the line comment indicates the line ser
 ----
 include::example$unordered.adoc[tag=divide]
 ----
+
+This technique works for all list types.
+See xref:separating.adoc[] for more details.
 ****
 
 == Nested unordered list
