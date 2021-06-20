@@ -1,0 +1,39 @@
+= Separating Lists
+
+In AsciiDoc, lists items have natural affinity towards one another.
+If adjacent lines start with the same list marker, they are joined together into the same list, even if separated by empty lines.
+If the adacent line starts with a different list marker, even if offset by empty lines, it will be placed into a nested list.
+
+These rules make it easier to keep list items together in a single list.
+However, they can present a challenge if what you want is to create separate lists.
+Fortunately, there are ways to force a change to this behavior.
+The techniques described on this page work for all list types.
+
+== Using a line comment
+
+To force lists apart, you can insert a line comment (i.e., `//`) surrounded by empty lines on either side between the two lists.
+
+Here's an example that shows where to place the line comment to separate two adjacent unordered lists.
+The `-` following the line comment prefix is a hint to authors to indicate that the comment line serves as an "`end of list`" marker:
+
+----
+include::example$unordered.adoc[tag=divide]
+----
+
+This technique works for seperating any type of list.
+
+== Using an block attribute line
+
+Another way to start a new list is to place a block attribute line (even an empty one) above the second list, offset by an empty line.
+
+Here's an example that shows where to place the block attribute line to separate unordered and ordered lists that are adjacent.
+
+----
+include::example$unordered.adoc[tag=divide-alt]
+----
+
+The preceding empty line is important.
+If that were not present, the ordered list would still be nested inside the ordered list.
+If the second list requires block attributes, you can add them to the block attribute line.
+
+This technique works for seperating any type of list.

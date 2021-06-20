@@ -36,6 +36,15 @@
 * Almonds
 // end::divide[]
 
+// tag::divide-alt[]
+* Apples
+* Oranges
+
+[]
+. Wash
+. Slice
+// end::divide-alt[]
+
 // tag::nest[]
 .Possible DefOps manual locations
 * West wood maze
