@@ -95,49 +95,67 @@ Notice that none of the lines with the tag directives are displayed.
 
 The previous section showed how to select tagged regions explicitly, but you can also use wildcards and exclusions.
 These expressions give you the ability to include or exclude tags in bulk.
-When tag filtering is used, lines containing a tag directive are always dropped.
-So even if you're not including content by tags, you can specify the double wildcard (`**`) to filter out all lines that contain a tag directive.
+When tag filtering is used, lines that contain a tag directive _are always discarded_ (like a line comment).
+
+TIP: Even if you're not including content by tags, you can specify the double wildcard (`+**+`) to filter out all lines in the include file that contain a tag directive.
 
 The modifiers you can use for filtering are as follows:
 
 `*`::
+The single wildcard.
 Select all tagged regions.
-May only be specified once, whether it's negated or not.
-
-`!`::
-Negate the match.
-May be applied to the single wildcard or a specific tag name.
+May only be specified once, negated or not.
 
 `**`::
+The double wildcard.
 Select all the lines in the document *except for lines that contain a tag directive*.
-Use this symbol if you want to include a file that has tag/end directives, but you want to ignore all those lines.
-May only be specified once.
-Cannot be negated.
+Use this symbol if you want to include a file that has tag directives, but you want to discard the lines that contain a tag directive.
+May only be specified once, negated or not.
 
-Wildcards are always applied first, then the inclusions and exclusions are applied.
-Technically, the wildcards can be placed anywhere in the list, but it's customary to put them first.
-Each of the wildcards can only be used once.
+`!`::
+Negate the wildcard or tag.
 
-Here are some of the permutations you can use:
+The double wildcard is always applied first, regardless of where it appears in the list.
+If the double wildcard is not negated (i.e., `+**+`), it should only be combined with exclusions (e.g., `+**;!foo+`).
+A negated double wildcard (i.e., `+!**+`), which selects no lines, is usually implied as the starting point.
+A negated single wildcard has different meaning depending on whether it comes before tag names (e.g., `+!*;foo+`) or after at least one tag name (e.g., `+foo;!*+`).
 
-`*`:: Selects all tagged regions in the document.
+Let's assume we have a region tagged `foo` with a nested region tagged `bar`.
+Here are some of the permutations you can use (along with their implied long-hand forms):
 
-`**`:: Selects all the lines in the document except for lines containing a tag directive.
+`+**+`:: Selects all the lines in the document (except for lines that contain a tag directive).
+_(implies `+**;*+`)_
 
-`+**;*+`:: Selects all the lines in the document except for lines containing a tag directive.
+`+*+`:: Selects all tagged regions in the document.
+Does not select lines outside of tagged regions.
+_(implies `+!**;*+`)_
 
-`foo;!bar`:: Only selects regions tagged _foo_, but excludes any nested regions tagged _bar_.
+`+!*+`:: Selects only the regions in the document outside of tags (i.e., non-tagged regions).
+_(implies `+**;!*+`)_
 
-`*;!foo`:: Selects all tagged regions, but excludes any regions tagged _foo_ (nested or otherwise).
+`foo`:: Selects only regions tagged _foo_.
+_(implies `+!**;foo+`)_
 
-`**;!foo`:: Selects all the lines in the document except for lines containing a tag directive and regions tagged _foo_.
+`foo;!bar`:: Selects only regions tagged _foo_, but excludes any nested regions tagged _bar_.
+_(implies `+!**;foo;!bar+`)_
 
-`+**;!*+`:: Selects only the regions in the document outside of tags (i.e., non-tagged regions).
+`+foo;!*+`:: Selects only regions tagged _foo_, but excludes any nested tagged regions.
+_(implies `+!**;foo;!*+`)_
 
-`+**;!*;foo+`:: Selects the regions in the document outside of tags (i.e., non-tagged regions) and inside regions tagged _foo_.
+`+*;!foo+`:: Selects all tagged regions, but excludes any regions tagged _foo_ (nested or otherwise).
+_(implies `+!**;*;!foo+`)_
 
-There are also some shorthands if only exclusions are specified:
+`!foo`:: Selects all the lines in the document except for regions tagged _foo_.
+_(implies `+**;!foo+`)_
 
-`!foo`:: Equivalent to `**;!foo`; an exclusion without an inclusion implicitly starts by selecting all the lines that do not contain a tag directive.
+`!foo;!bar`:: Selects all the lines in the document except for regions tagged _foo_ or _bar_.
+_(implies `+**;!foo;!bar+`)_
 
-`!*`:: Equivalent to `+**;!*+`; only selects regions that are not tagged.
+`+!*;foo+`:: Selects the regions in the document outside of tags (i.e., non-tagged regions) and inside regions tagged _foo_, excluding any nested tagged regions.
+To include nested tagged regions, they each must be named explicitly.
+_(implies `+**;!*;foo+`)_
+
+If the filter begins with a negated tag or single wildcard, it implies that the pattern begins with `+**+`.
+An exclusion not preceded by an inclusion implicitly starts by selecting all the lines that do not contain a tag directive.
+Otherwise, it implies that the pattern begins with `+!**+`.
+A leading inclusion implicitly starts by selecting no lines.
