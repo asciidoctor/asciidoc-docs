@@ -96,3 +96,10 @@ The table from <<ex-asciidoc>> is rendered below.
 
 .Result of <<ex-asciidoc>>
 include::example$cell.adoc[tag=adoc]
+
+An AsciiDoc table cell effectively creates a nested document.
+As such, it inherits attributes from the parent document.
+If an attribute is set or explicitly unset in the parent document, it _cannot_ be modified in the AsciiDoc table cell.
+There are a handful of exceptions to this rule, which includes doctype, toc, notitle (and its complement, showtitle), and compat-mode.
+Any newly defined attributes in the AsciiDoc table do not impact the attributes in the parent document.
+Instead, these attributes are scoped to the table cell.
