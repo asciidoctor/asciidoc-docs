@@ -79,3 +79,8 @@ If there is a closing quote, the quotes are removed; if not, the initial quote i
 ** If the next character is `'` then the string is read until the next unescaped `'`, or if there is no closing `'`, the next delimiter.
 If there is a closing `'`, the enclosing `'` characters are removed; if not, the initial `'` is retained.
 If there is a closing `'` and the first character is not an escaped `'` substitutions are performed as described above.
+
+TIP: In line-oriented syntax such as a block attribute list, a block macro, and an include directive, you do not have to escape closing square brackets that appear in the attrlist itself.
+That's because the parser already knows to look for the closing square bracket at the end of the line.
+However, if a closing square bracket appears in the attrlist of an inline element, such as an inline macro, it usually has to be escaped using a backslash or by using the character reference `+&#93;+`.
+There are some exceptions to this rule, such as a link macro in a footnote, which are influenced by the substitution order.
