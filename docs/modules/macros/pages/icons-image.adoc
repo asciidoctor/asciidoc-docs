@@ -41,7 +41,7 @@ For example:
 
 [source]
 ----
-= Documemnt Title
+= Document Title
 :icons: image
 :iconsdir: icons
 ----
@@ -59,7 +59,7 @@ For example:
 
 [source]
 ----
-= Documemnt Title
+= Document Title
 :icons: image
 :icontype: svg
 ----
