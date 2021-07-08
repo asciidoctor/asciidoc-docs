@@ -14,7 +14,7 @@ The header is not a block itself, but contributes metadata to the document, such
 
 == Elements
 
-An element is an identifiable, addressable, and composible chunk of content in a document.
+An element is an identifiable, addressable, and composable chunk of content in a document.
 An AsciiDoc document is merely a composition of all the elements it contains.
 
 Elements are a hierarchy of types, where one element may be a specialization of a family of elements.
