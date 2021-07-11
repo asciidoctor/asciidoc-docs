@@ -44,7 +44,7 @@ include::example$image.adoc[tag=attr-co]
 <.> Assigns an ID to the block.
 <.> Defines the title of the block image, which gets displayed underneath the image when rendered.
 <.> `link` makes the image a link (this can also be defined inside the attribute list of the block macro)
-<.> The first positional attribute, _Sunset_, is the image's alt text.
+<.> The first positional attribute, _'Mesa Verde Sunset | by JAVH'_, is the image's alt text.
 <.> The second and third positional attributes define the width and height, respectively.
 
 The result of <<ex-attributes>> is displayed below.
