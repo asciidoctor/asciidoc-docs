@@ -10,6 +10,17 @@ end
 ----
 // end::src-base[]
 
+// tag::src-implied[]
+[,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+// end::src-implied[]
+
 // tag::src-base-co[]
 [source#hello,ruby] <.> <.> <.>
 ---- <.>
