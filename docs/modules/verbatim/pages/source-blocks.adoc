@@ -16,7 +16,7 @@ This technique is known as [.term]*syntax highlighting*.
 Since this technique is so prevalent, Asciidoctor integrates with a number of libraries to syntax highlight the source code blocks in your document.
 The list of integrated libraries includes Rouge, CodeRay, Pygments, and highlight.js.
 
-<<ex-source>> shows a listing block with the `source` style and language `ruby` applied to its content.
+<<ex-source>> shows a listing block with the `source` style and language `ruby` applied to its content, hence a source block.
 
 .Source block syntax
 [source#ex-source]
@@ -27,6 +27,20 @@ include::example$source.adoc[tag=src-base]
 The result of <<ex-source>> is rendered below.
 
 include::example$source.adoc[tag=src-base]
+
+Since a `source` block is most often used to designate a block with source code of a particular language, the `source` style itself is optional.
+The mere presence of the language on a listing block automatically promotes it to a source block.
+
+<<ex-implied-source>> shows a listing block implied to be a source block because a language is specified.
+
+.Implied source block
+[source#ex-implied-source]
+....
+include::example$source.adoc[tag=src-implied]
+....
+
+This shorthand also works if the `source-language` attribute is set on the document, which serves as the default language for source blocks.
+If the `source-language` attribute is set on the doucment and you want to make a regular listing block, add the `listing` style to the block.
 
 == Using include directives in source blocks
 
