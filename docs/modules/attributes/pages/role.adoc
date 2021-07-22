@@ -43,7 +43,7 @@ This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
 
-In this case, the role becomes a space separated list of values, `role1 role2`.
+In this case, the value of the role attribute becomes a space separated list of values, `role1 role2`.
 
 ////
 [source]
@@ -60,13 +60,14 @@ Explicitly set `role`, followed by the equals sign (`=`), and then the value in 
 .Sidebar block with a role assigned using the formal syntax
 [source#ex-block-formal]
 ----
-[role="rolename"]
+[role=rolename]
 ****
 This is a sidebar with one role assigned to it, rolename.
 ****
 ----
 
 Separate multiple role values with commas (`,`).
+Since the value contains a comma, the value must be enclosed in quotes.
 
 .Sidebar with two roles assigned using the formal syntax
 [source#ex-two-roles-formal]
@@ -77,7 +78,7 @@ This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
 
-In this case, the role becomes a space separated list of values, `role1 role2`.
+In this case, the value of the role attribute becomes a space separated list of values, `role1 role2`.
 
 ////
 [source]
