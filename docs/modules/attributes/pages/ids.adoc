@@ -22,14 +22,31 @@ NOTE: Section pending
 == Block assignment
 
 // tag::bl[]
-In an attribute list, there are two ways to assign the `id` attribute to a block.
+You can assign an ID to a block using the shorthand syntax, the longhand syntax, or a legacy block anchor.
 
-. Prefixing the name with a hash (`#`).
-. Specifying the name with `id=name`.
+In the shorthand syntax, you prefix the name with a hash (`#`) in the first position attribute.
 
 [source]
 ----
 [#goals]
+* Goal 1
+* Goal 2
+----
+
+In the longhand syntax, you use a standard named attribute.
+
+[source]
+----
+[id=goals]
+* Goal 1
+* Goal 2
+----
+
+In the legacy block anchor syntax, you surround the name with double square brackets:
+
+[source]
+----
+[[goals]]
 * Goal 1
 * Goal 2
 ----
