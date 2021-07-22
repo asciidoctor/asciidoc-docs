@@ -14,7 +14,7 @@ In other words, role names are HTML class names, and thus can be targeted using 
 
 == Assign roles to blocks
 
-You can assign roles to blocks using the shorthand dot (`.`) syntax or formal (`role=`) syntax for the `role` attribute.
+You can assign roles to blocks using the shorthand dot (`.`) syntax or the longhand (`role=`) syntax.
 
 === Shorthand role syntax for blocks
 
@@ -40,6 +40,8 @@ You can assign multiple roles to a block by prefixing each value with a dot (`.`
 This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
+
+In this case, the role becomes a space separated list of values, `role1 role2`.
 
 ////
 [source]
@@ -72,6 +74,8 @@ Separate multiple role values with commas (`,`).
 This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
+
+In this case, the role becomes a space separated list of values, `role1 role2`.
 
 ////
 [source]
