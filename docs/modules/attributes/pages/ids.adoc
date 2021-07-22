@@ -1,12 +1,17 @@
 = ID Attribute
 
-The `id` attribute specifies a unique name for an element.
-That name can only be used once in a document.
+You can assign an identifier (i.e., unique name) to a block or inline element using the `id` attribute.
+The `id` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
+Its purpose is to identify the element when linking, scripting, or styling.
+Thus, the identifier can only be used once in a document.
 
 An ID:
 
-. provides an internal link or cross reference anchor for an element, and
-. references an optional style or behavior used by the output processor.
+. provides an internal link or cross reference anchor for an element
+. can be used for adding additional styling to a specific elements (e.g., via a CSS ID selector)
+
+You can assign an ID to blocks using the shorthand hash (`+#+`) syntax, longhand (`id=`) syntax, or the legacy anchor (`[[]]`) syntax.
+You can assign an ID to inline elements using the shorthand hash (`+#+`) syntax or by adding an anchor adjacent to the inline element using the anchor (`[[]]`) syntax.
 
 ////
 BlockId

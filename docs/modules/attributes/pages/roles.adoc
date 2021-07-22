@@ -1,8 +1,16 @@
 = Role Attribute
 
-Blocks and many inline elements can be assigned one or more roles using the `role` attribute.
+You can assign one or more roles to blocks and most inline elements using the `role` attribute.
 The `role` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
-You can assign roles to blocks and inline elements using the shorthand dot (`.`) syntax or formal (`role=`) syntax for the `role` attribute.
+
+A role:
+
+. adds additional semantics to an element
+. can be used for adding additional styling to a group of elements (e.g., via a CSS class selector)
+. may activate additional behavior if supported by the converter
+
+TIP: The `role` attribute in AsciiDoc always get mapped to the `class` attribute in the HTML output.
+In other words, role names are HTML class names, and thus can be targeted using CSS class selectors.
 
 == Assign roles to blocks
 
