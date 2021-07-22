@@ -102,7 +102,7 @@ property 2:: does different stuff
 ----
 <.> xref:blocks:styles.adoc[The block style attribute], declared as `horizontal` in this example, is a positional attribute.
 A block style value is always placed at the start of the attribute list.
-<.> `properties` is prefixed with a dot (`.`), signifying that it's assigned to the xref:roles.adoc[role attribute].
+<.> `properties` is prefixed with a dot (`.`), signifying that it's assigned to the xref:role.adoc[role attribute].
 The role and options attributes can be set in either order, i.e., `[horizontal%step.properties]`.
 <.> The percent sign (`%`) sets the `options` attribute and assigns the `step` value to it.
 

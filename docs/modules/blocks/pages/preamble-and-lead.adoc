@@ -21,7 +21,7 @@ image::preamble.png[The preamble of a document,role=screenshot]
 == Lead role
 
 Apply the `lead` role to any paragraph, and it will render using a larger font size.
-The lead role is assigned to the xref:attributes:roles.adoc[role attribute].
+The lead role is assigned to the xref:attributes:role.adoc[role attribute].
 You can set `role` using the classic or shorthand method.
 
 .Setting role to lead using the shorthand syntax
