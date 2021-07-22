@@ -1,6 +1,6 @@
 = Options Attribute
 
-The `options` attribute is a versatile xref:positional-and-named-attributes.adoc#named[named attribute] that can be assigned one or more values.
+The `options` attribute (often abbreviated as `opts`) is a versatile xref:positional-and-named-attributes.adoc#named[named attribute] that can be assigned one or more values.
 It can be defined globally as document attribute as well as a block attribute on an individual block.
 
 == Assign options to blocks
@@ -15,9 +15,9 @@ The percent sign implicitly sets the `options` attribute.
 .Sidebar block with an option assigned using the shorthand dot
 [source#ex-block]
 ----
-[%value]
+[%option]
 ****
-This is a sidebar with an option assigned to it.
+This is a sidebar with an option assigned to it, named option.
 ****
 ----
 
@@ -26,9 +26,9 @@ You can assign multiple options to a block by prefixing each value with a percen
 .Sidebar with two options assigned using the shorthand dot
 [source#ex-two-options]
 ----
-[%value%value]
+[%option1%option2]
 ****
-This is a sidebar with two options assigned to it.
+This is a sidebar with two options assigned to it, named option1 and option2.
 ****
 ----
 
@@ -55,9 +55,9 @@ Explicitly set `options` or `opts`, followed by the equals sign (`=`), and then 
 .Sidebar block with an option assigned using the formal syntax
 [source#ex-block-formal]
 ----
-[options="value"]
+[opts=option]
 ****
-This is a sidebar with an option assigned to it.
+This is a sidebar with an option assigned to it, named option.
 ****
 ----
 
@@ -66,9 +66,9 @@ Separate multiple option values with commas (`,`).
 .Sidebar with three options assigned using the formal syntax
 [source#ex-three-roles-formal]
 ----
-[options="value,value,value"]
+[opts="option1,option2"]
 ****
-This is a sidebar with three options assigned to it.
+This is a sidebar with two options assigned to it, option1 and option2.
 ****
 ----
 
@@ -78,7 +78,7 @@ Instead of using the shorthand notation, <<ex-table-formal>> shows how the value
 .Table with three options assigned using the formal syntax
 [source#ex-table-formal]
 ----
-[cols=2*~,options="header,footer,autowidth"]
+[cols=2*~,opts="header,footer,autowidth"]
 |===
 |Cell A1 |Cell B1
 
@@ -111,7 +111,7 @@ When you use the formal syntax, the positional and named attributes are separate
 .Formal
 [source]
 ----
-[horizontal,role="properties", options="step"] <.>
+[horizontal,role=properties,opts=step] <.>
 property 1:: does stuff
 property 2:: does different stuff
 ----
