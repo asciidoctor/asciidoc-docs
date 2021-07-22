@@ -1,6 +1,8 @@
 = Role Attribute
+:page-aliases: roles.adoc
 
 You can assign one or more roles to blocks and most inline elements using the `role` attribute.
+Even though the attribute is singular, it may contain multiple roles.
 The `role` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
 
 A role:

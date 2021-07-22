@@ -2,4 +2,4 @@
 ** xref:positional-and-named-attributes.adoc[]
 ** xref:ids.adoc[]
 ** xref:options.adoc[]
-** xref:roles.adoc[]
+** xref:role.adoc[]
