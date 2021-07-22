@@ -100,6 +100,8 @@ The HTML source code that is output from <<ex-role-dot>> is shown below.
 As you can see from this output, roles in AsciiDoc are translated to CSS class names in HTML.
 Thus, roles are an ideal way to annotated elements in your document so you can use CSS to uniquely style them.
 
+Roles on phrases are also typically used to represent semantics you might have expressed using a dedicated tag in DocBook or DITA.
+
 ////
 Using the shorthand notation, an id can also be specified:
 
