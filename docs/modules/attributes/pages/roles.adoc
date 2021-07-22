@@ -11,14 +11,14 @@ You can assign roles to blocks using the shorthand dot (`.`) syntax or formal (`
 === Shorthand role syntax for blocks
 
 To assign a role to a block, prefix the value with a dot (`.`) in an attribute list.
-The dot implicitly set's the `role` attribute.
+The dot implicitly sets the `role` attribute.
 
 .Sidebar block with a role assigned using the shorthand dot
 [source#ex-block]
 ----
-[.value]
+[.rolename]
 ****
-This is a sidebar with a role assigned to it.
+This is a sidebar with a role assigned to it, rolename.
 ****
 ----
 
@@ -27,9 +27,9 @@ You can assign multiple roles to a block by prefixing each value with a dot (`.`
 .Sidebar with two roles assigned using the shorthand dot
 [source#ex-two-roles]
 ----
-[.value.value]
+[.role1.role2]
 ****
-This is a sidebar with two roles assigned to it.
+This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
 
@@ -48,9 +48,9 @@ Explicitly set `role`, followed by the equals sign (`=`), and then the value in 
 .Sidebar block with a role assigned using the formal syntax
 [source#ex-block-formal]
 ----
-[role="value"]
+[role="rolename"]
 ****
-This is a sidebar with one role assigned to it.
+This is a sidebar with one role assigned to it, rolename.
 ****
 ----
 
@@ -59,9 +59,9 @@ Separate multiple role values with commas (`,`).
 .Sidebar with two roles assigned using the formal syntax
 [source#ex-two-roles-formal]
 ----
-[role="value,value"]
+[role="role1,role2"]
 ****
-This is a sidebar with two roles assigned to it.
+This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
 
@@ -81,9 +81,9 @@ To assign a role to an inline element that's enclosed in formatting syntax block
 .Inline role assignments using shorthand syntax
 [source#ex-role-dot]
 ----
-This sentence contains [.value]*bold inline content* that's assigned a role.
+This sentence contains [.application]*bold inline content* that's assigned a role.
 
-This sentence contains [.value]`monospace text` that's assigned a role.
+This sentence contains [.varname]`monospace text` that's assigned a role.
 ----
 
 The HTML source code that is output from <<ex-role-dot>> is shown below.
@@ -91,24 +91,27 @@ The HTML source code that is output from <<ex-role-dot>> is shown below.
 .HTML source code produced by <<ex-role-dot>>
 [source#ex-role-html,html]
 ----
-<p>This sentence contains <strong class="value">bold inline content</strong> that&#8217;s assigned a role.</p>
+<p>This sentence contains <strong class="application">bold inline content</strong> that&#8217;s assigned a role.</p>
 
-<p>This sentence contains <code class="value">monospace text</code> that&#8217;s assigned a role.</p>
+<p>This sentence contains <code class="varname">monospace text</code> that&#8217;s assigned a role.</p>
 </div>
 ----
+
+As you can see from this output, roles in AsciiDoc are translated to CSS class names in HTML.
+Thus, roles are an ideal way to annotated elements in your document so you can use CSS to uniquely style them.
 
 ////
 Using the shorthand notation, an id can also be specified:
 
 [source]
 ----
-[#value.value]`monospace text`
+[#idname.rolename]`monospace text`
 ----
 
 which produces:
 
 [source,html]
 ----
-<a id="value"></a><code class="value">monospace text</code>
+<a id="idname"></a><code class="rolename">monospace text</code>
 ----
 ////
