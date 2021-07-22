@@ -51,12 +51,12 @@ In the legacy block anchor syntax, you surround the name with double square brac
 * Goal 2
 ----
 
-Let's say you want to create a blockquote from an open block and assign it an ID and role.
+Let's say you want to create a blockquote from an open block and assign it an ID and xref:role.adoc[role].
 You add `quote` (the block style) in front of the `#` (the ID) in the first attribute position, as this example shows:
 
 [source]
 ----
-[quote#roads, Dr. Emmett Brown]
+[quote.movie#roads, Dr. Emmett Brown]
 ____
 Roads? Where we're going, we don't need roads.
 ____
