@@ -1204,7 +1204,7 @@ An empty value tells the converter to use the default stylesheet.
 
 |toc-class
 |_valid CSS class name_ +
-`*toc2*` or (`toc`)
+(`*toc*`) or (`*toc2*`) if toc=left
 |{n}
 |{y}
 |CSS class on the table of contents container.
