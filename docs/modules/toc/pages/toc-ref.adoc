@@ -41,4 +41,10 @@ The placement and styling of the table of contents is determined by the DocBook 
 |`:toc-title: Contents`
 |Default value is _Table of Contents_.
 |html, pdf
+
+|`toc-class`
+|valid CSS class name
+|`:toc-class: floating-toc`
+|Default value is _toc_.
+|html
 |===
