@@ -2,12 +2,16 @@
 :keywords: labeled list, definition list
 
 // tag::label[]
-A description list (often abbreviated as dlist) is useful when you need to include a description, definition, or supporting text for one or more terms.
-Each item in a description list consists of a term or phrase followed by:
+A description list (often abbreviated as dlist in AsciiDoc) is an association list that consists of one or more pairs of terms that have attached text and/or blocks.
+This list type is useful when you need to provide a description, definition, or supporting text for a list of terms.
 
-* one or more terms
-* a separator following each term (typically a double colon, `::`)
-* at least one space or endline
+NOTE: You may know this list variation by its former term, _definition list_.
+The preferred term is now _description list_, which matches the terminology used by the https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element[HTML specification^].
+
+Each item in a description list consists of:
+
+* one or more terms, each followed by a separator (typically a double colon, `::`)
+* at least one space or newline character
 * the supporting content (i.e., description) (can be text, attached blocks, or both)
 
 Here's an example of a description list that identifies parts of a computer:
