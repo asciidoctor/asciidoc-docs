@@ -5,7 +5,7 @@
 A description list (often abbreviated as dlist in AsciiDoc) is an association list that consists of one or more pairs of terms that have attached text and/or blocks.
 This list type is useful when you need to provide a description, definition, or supporting text for a list of terms.
 
-NOTE: You may know this list variation by its former term, _definition list_.
+NOTE: You may know this list variation by the antiquated term _definition list_.
 The preferred term is now _description list_, which matches the terminology used by the https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element[HTML specification^].
 
 Each item in a description list consists of:
