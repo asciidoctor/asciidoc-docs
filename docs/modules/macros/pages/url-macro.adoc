@@ -25,7 +25,7 @@ When the URL is followed by a pair of square brackets, the URL scheme dually ser
 AsciiDoc recognizes all the xref:autolinks.adoc#schemes[URL schemes] for autolinks as macro names.
 That's why we say "URL macros" and not just "URL macro".
 It's a family of macros.
-With the exception of the xref:email-macro.adoc[mailto macro], all the URL macros behave the same, and also behave the same as the xref:link-macro.adoc[link macro].
+With the exception of the xref:mailto-macro.adoc[mailto macro], all the URL macros behave the same, and also behave the same as the xref:link-macro.adoc[link macro].
 
 So why might you upgrade from a URL to a URL macro?
 One reason is to force the URL to be parsed when it would not normally be recognized, such as if it's enclosed in double quotes:

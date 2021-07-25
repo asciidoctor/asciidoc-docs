@@ -8,6 +8,7 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
 Fixed::
 * clarify that the value of the lang attribute must be a BCP 47 language tag
+* fix textual references that refer to the mailto macro as the email macro
 
 == Published Q2 2021
 

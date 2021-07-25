@@ -27,7 +27,7 @@ To do so, you'd use either the xref:url-macro.adoc[URL macro] or, if you're link
 
 You can also use the xref:link-macro.adoc[link macro] to make a link to a target that is not recognized as a URL, such as a relative path.
 
-When linking to an email address, you can use the specialized xref:email-macro.adoc[email macro] to enhance the link with prepopulated subject and body text.
+When linking to an email address, you can use the specialized xref:mailto-macro.adoc[mailto macro] to enhance the link with prepopulated subject and body text.
 
 [#hide-uri-scheme]
 == Hide the URL scheme

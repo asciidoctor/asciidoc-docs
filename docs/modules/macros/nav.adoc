@@ -1,7 +1,7 @@
 * xref:links.adoc[]
 ** xref:autolinks.adoc[]
 ** xref:url-macro.adoc[]
-** xref:email-macro.adoc[]
+** xref:mailto-macro.adoc[]
 ** xref:link-macro.adoc[]
 ** xref:link-macro-attribute-parsing.adoc[]
 ** xref:complex-urls.adoc[]
