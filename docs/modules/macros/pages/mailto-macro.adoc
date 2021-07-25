@@ -1,6 +1,7 @@
 = Mailto Macro
+:page-aliases: email-macro.adoc
 
-The mailto macro is a specialization of the URL macro that adds support for augmenting the email link with additional metadata, namely a subject and body.
+The mailto macro is a specialization of the URL macro that adds support for defining an email link and augmenting it with additional metadata, such as a subject and body.
 
 == Subject and body
 

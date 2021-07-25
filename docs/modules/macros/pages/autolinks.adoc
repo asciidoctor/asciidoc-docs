@@ -47,7 +47,7 @@ include::example$url.adoc[tag=bare-email]
 ----
 
 In order for this to work, the domain suffix must be between 2 and 5 characters (e.g., .com) and only common symbols like period (`.`), hyphen (`-`), and plus (`+`) are permitted.
-For email address which do not conform to these restriction, you can use the xref:email-macro.adoc[email macro].
+For email address which do not conform to these restriction, you can use the xref:mailto-macro.adoc[email macro].
 
 == Escaping URLs and email addresses
 
