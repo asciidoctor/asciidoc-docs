@@ -404,11 +404,12 @@ _Book doctype only_.
 |Text used to label IMPORTANT admonitions when icons are not enabled.
 
 |lang
-|_valid XML language code_ +
+|_BCP 47 language tag_ +
 (`en`)
 |{n}
 |{y}
-|Language used on root element of the output document.
+|Language tag specified on document element of the output document.
+Refer to https://html.spec.whatwg.org/#the-lang-and-xml:lang-attributes[the lang and xml:lang attributes section^] of the HTML specification to learn about the acceptable values for this attribute.
 
 |last-update-label
 |_any_ +

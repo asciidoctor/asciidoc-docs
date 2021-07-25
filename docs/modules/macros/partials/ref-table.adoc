@@ -61,5 +61,5 @@ The `modest` option enables modest branding for a YouTube video.
 |`lang`
 |The language used in the YouTube frame.
 |`lang=fr`
-|A two-letter language code or fully specified locale.
+|A BCP 47 language tag (typically a two-letter language code, like `en`).
 |===

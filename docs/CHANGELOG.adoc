@@ -4,6 +4,11 @@ This document summarizes the changes introduced to the AsciiDoc Language Documen
 For a detailed view of what's changed, refer to the repository's
 https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
+== Published Q3 2021
+
+Fixed::
+* clarify that the value of the lang attribute must be a BCP 47 language tag
+
 == Published Q2 2021
 
 Fixed::
