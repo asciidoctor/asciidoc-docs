@@ -42,7 +42,7 @@ This document contains two paragraphs.
 It also has a header that specifies the document title.
 ----
 
-Almost any combination of blocks constitutes a valid AsciiDoc document (with some structural requirements dictated by the document type).
+Almost any combination of blocks constitutes a valid AsciiDoc document (with some structural requirements dictated by the xref:document:doctypes.adoc[document type]).
 Documents can range from a single sentence to a multi-part book.
 
 == Lines
