@@ -76,9 +76,9 @@ The same is true for an attribute entry, a block title, a block attribute list, 
 more value
 -----
 
-Blank lines can also be significant.
-A single blank line separates the header from the body.
-Many blocks are also separated by a blank line, as you saw in the two paragraph example earlier.
+Empty lines can also be significant.
+A single empty line separates the header from the body.
+Many blocks are also separated by an empty line, as you saw in the two paragraph example earlier.
 
 In contrast, lines within paragraph content are insignificant.
 Keep these points in mind as you're learning about the AsciiDoc syntax.
@@ -90,7 +90,7 @@ Some blocks may contain other blocks, so the document structure is inherently hi
 You can preview this section structure, for example, by enabling the automatic table of contents.
 Examples of blocks include paragraphs, sections, lists, delimited blocks, tables, and block macros.
 
-Blocks are easy to identify because they're usually offset from other blocks by a blank line (though not always required).
+Blocks are easy to identify because they're usually offset from other blocks by an empty line (though not always required).
 Blocks always start on a new line, terminate at the end of a line, and are aligned to the left margin.
 
 Every block can have one or more lines of block metadata.
