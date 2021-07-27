@@ -3,7 +3,7 @@
 
 == Highlight syntax
 
-When text is enclosed in a pair of single or double hash symbols (`#`), and no style is assigned to it, the text will be rendered as highlighted text (text wrapped in `<mark>`).
+When text is enclosed in a pair of single or double hash symbols (`#`), and no role is assigned to it, the text will be rendered as highlighted (aka marked) text for notation purposes.
 
 .Highlighted style syntax
 [#ex-highlight]
@@ -11,7 +11,7 @@ When text is enclosed in a pair of single or double hash symbols (`#`), and no s
 include::example$text.adoc[tag=highlight]
 ----
 
-When <<ex-highlight>> is converted, the following HTML is produced.
+When <<ex-highlight>> is converted to HTML, it translates into the following output.
 
 .Highlighted text HTML output
 [,html]

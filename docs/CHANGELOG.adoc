@@ -10,6 +10,7 @@ Fixed::
 * clarify that the value of the lang attribute must be a BCP 47 language tag
 * fix textual references that refer to the mailto macro as the email macro
 * fix the terminology pertaining to custom inline styles
+* fix the terminology pertaining to highlighted text
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
