@@ -1,27 +1,29 @@
 = Document Structure
 
 On this page, you'll learn about the overall structure of an AsciiDoc document.
-Don't worry about the details of the syntax at this point as it will be covered thoroughly later in the documentation.
+Don't worry about the details of the syntax at this point.
+That topic will be covered thoroughly later in the documentation.
 Right now, we're just aiming to get a sense of what makes up an AsciiDoc document.
 
 == Documents
 
 AsciiDoc is a plain text writing format with no boilerplate enclosure or prologue.
-An AsciiDoc document may consist of only a single sentence (or a single character, to be academic).
+An AsciiDoc document may consist of only a single sentence (or even a single character, to be academic).
+
 The following example is a valid AsciiDoc document with a single paragraph containing a single sentence:
 
-[source]
 ----
 This is a basic AsciiDoc document.
 ----
 
-Of course, you can have more content than this.
+Of course, you can have more content than a single sentence.
+What we want to emphasize here is that it's simple to get started.
+
 An AsciiDoc document is a series of blocks stacked on top of one another (by line).
-These blocks are typically offset from one another by blank lines (though not always required).
+These blocks are typically offset from one another by empty lines (though these may be optional in certain circumstances).
 
-To expand the previous document from one paragraph to two, you'd separate the two paragraphs by a blank line:
+To expand the previous document from one paragraph to two, you'd separate the two paragraphs by an empty line:
 
-[source]
 ----
 This is a basic AsciiDoc document.
 
@@ -29,7 +31,7 @@ This document contains two paragraphs.
 ----
 
 An AsciiDoc document may begin with a document header.
-Although the document header is optional, it's often used to specify the document title and define document-wide configuration and reusable text in the form of document attributes.
+Although the document header is optional, it's often used because it allows you to specify the document title and to set document-wide configuration and reusable text in the form of document attributes.
 
 [source]
 ----
