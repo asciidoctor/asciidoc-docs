@@ -2,25 +2,29 @@
 
 == Custom style syntax
 
-Text marked with hash symbols can be assigned built-in styles, such as `big` or `underline`.
+You can assign built-in roles (e.g., `big` or `underline`) or custom roles (e.g., `term` or `required`) to any formatted text.
+These roles, in turn, can be used to apply styles to the text.
+In HTML, this is done by mapping styles to the role in the stylesheet using a CSS class selector.
 
-.Built-in CSS class syntax
-[#ex-css]
+.Text with built-in role
+[#ex-built-in]
 ----
 include::example$text.adoc[tag=css-co]
 ----
 . The first positional attribute is treated as a role.
 You can assign it a custom or built-in CSS class.
 
-The results of <<ex-css>> are displayed below.
+The results of <<ex-built-in>> are displayed below.
 
 ====
 include::example$text.adoc[tag=css]
 ====
 
-You can format text with custom styles that you define as well.
+Although built-in roles such as `big` and `small` are supported by most AsciiDoc processors, it's really better to define your own semantic role names and map styles to them accordingly.
 
-.Custom CSS class syntax
+Here's how you can assign a custom role to text so you can apply your own styles to it.
+
+.Text with custom role
 [#ex-custom]
 ----
 include::example$text.adoc[tag=css-custom]
@@ -34,6 +38,13 @@ When <<ex-custom>> is converted to HTML, the word _asciidoctor_ is wrapped in `<
 include::example$text.adoc[tag=css-custom-html]
 ----
 
-////
-Add link to appendix of built-in CSS classes and how to create a custom class.
-////
+The following example shows how you can assign styles to elements that have this role using a CSS class selector.
+
+[,css]
+----
+.userinput {
+  font-family: monospace;
+  font-size: 1.1em;
+  line-height: calc(1 / 1.1);
+}
+----
