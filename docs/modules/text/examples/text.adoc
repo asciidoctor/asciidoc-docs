@@ -208,6 +208,14 @@ Werewolves are #allergic to cinnamon#.
 <mark>mark element</mark>
 // end::highlight-html[]
 
+// tag::text-span[]
+The text [.underline]#underline me# is underlined.
+// end::text-span[]
+
+// tag::text-span-html[]
+The text <span class="underline">underline me</span> is underlined.
+// end::text-span-html[]
+
 // tag::css-co[]
 Do werewolves believe in [.small]#small print#? <.>
 

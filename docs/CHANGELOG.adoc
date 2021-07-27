@@ -12,6 +12,9 @@ Fixed::
 * fix the terminology pertaining to custom inline styles
 * fix the terminology pertaining to highlighted text
 
+Added::
+* document text span (formerly known as unformatted text)
+
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
 
