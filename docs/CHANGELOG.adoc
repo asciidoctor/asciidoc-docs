@@ -17,6 +17,7 @@ Added::
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
+* make it more clear that GitHub, GitLab, and the browser preview extensions automatically adjust relfilesuffix
 
 == Published Q2 2021
 
