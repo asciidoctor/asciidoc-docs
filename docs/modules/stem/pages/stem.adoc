@@ -1,15 +1,17 @@
-= Equations and Formulas
+= Equations and Formulas (STEM)
 :stem: asciimath
 :url-mathjax: https://www.mathjax.org
 :url-asciimath: https://docs.mathjax.org/en/latest/input/asciimath.html
 :url-latexmath: https://docs.mathjax.org/en/latest/input/tex/index.html
 :url-mathjax-docs: https://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 
-If you need to display Science, Technology, Engineering and Math (STEM) expressions in your output, the HTML backend integrates with xref:asciidoctor:stem:mathjax.adoc[MathJax] and Docbook backend integrates with the xref:asciidoctor:stem:asciimath-gem.adoc[AsciiMath RubyGem].
+If you need to include Science, Technology, Engineering and Math (STEM) expressions in your document, the AsciiDoc language supports embedding math-mode macros from {url-latexmath}[LaTeX] and/or {url-asciimath}[AsciiMath] notation as block or inline elements.
+These elements act as passthroughs to preserve the expressions as entered.
+The expressions are then passed on to the converter to be processed and rendered for display using a STEM provider (e.g., MathJax).
 
 == Activating STEM support
 
-To activate equation and formula support, simply set the `stem` attribute in the document's header (or by passing the attribute to the command line or API).
+To activate equation and formula support, set the `stem` attribute in the document's header (or by passing the attribute to the command line or API).
 
 .Setting the stem attribute
 [source]
@@ -19,8 +21,8 @@ include::example$stem.adoc[tag=base-co]
 <.> The default notation value, `asciimath`, is assigned implicitly.
 
 By default, AsciiDoc's stem integration assumes all equations are AsciiMath if not specified explicitly.
-The HTML backend supports STEM content written in {url-asciimath}[Asciimath^] and {url-latexmath}[TeX and LaTeX^] math notation.
-The DocBook backend only supports AsciiMath notation.
+The HTML converter supports STEM content written in {url-asciimath}[Asciimath^] and {url-latexmath}[TeX and LaTeX^] math notation.
+The DocBook converter only processes AsciiMath notation, leaving LaTeX to be processed by a separate tool in the DocBook toolchain.
 
 If you want to use the LaTeX notation by default, assign `latexmath` to the stem attribute.
 
