@@ -307,7 +307,7 @@ include::directives:example$include.adoc[tag=uri]
 ----
 
 WARNING: Including content from a URL is potentially dangerous, so it's disabled if the safe mode is SECURE or greater.
-Assuming the safe mode is less than SECURE, you must also set the `allow-uri-read` attribute to permit Asciidoctor to read content from a URL.
+Assuming the safe mode is less than SECURE, you must also set the `allow-uri-read` attribute to permit the AsciiDoc processor to read content from a URL.
 
 == Lists
 
@@ -1057,7 +1057,7 @@ after
 ----
 :url-home: https://asciidoctor.org
 :link-docs: https://asciidoctor.org/docs[documentation]
-:summary: Asciidoctor is a mature, plain-text document format for \
+:summary: AsciiDoc is a mature, plain-text document format for \
        writing notes, articles, documentation, books, and more. \
        It's also a text processor & toolchain for translating \
        documents into various output formats (i.e., backends), \
@@ -1082,7 +1082,7 @@ Be sure to read the {link-docs} too!
 a|
 :url-home: https://asciidoctor.org
 :link-docs: https://asciidoctor.org/docs[documentation]
-:summary: Asciidoctor is a mature, plain-text document format for \
+:summary: AsciiDoc is a mature, plain-text document format for \
        writing notes, articles, documentation, books, and more. \
        It's also a text processor & toolchain for translating \
        documents into various output formats (i.e., backends), \
@@ -1202,7 +1202,7 @@ include::macros:example$footnote.adoc[tag=base]
 [#markdown-compatibility]
 == Markdown compatibility
 
-Markdown compatible syntax is only available when using Asciidoctor.
+Markdown compatible syntax is an optional feature of the AsciiDoc language and is currently only available when using Asciidoctor.
 
 .Markdown-style headings
 [#ex-md-headings]
