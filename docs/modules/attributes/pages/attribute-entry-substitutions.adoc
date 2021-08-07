@@ -6,7 +6,7 @@ This is the same group that gets applied to metadata lines (author and revision 
 
 That means that any inline formatting in an attribute value isn't interpreted because:
 
-. inline formatting is not applied when Asciidoctor sets an attribute, and
+. inline formatting is not applied when the AsciiDoc processor sets an attribute, and
 . inline formatting is not applied when an attribute is referenced since the relevant substitutions come before attributes are resolved.
 
 [#pass-macro]

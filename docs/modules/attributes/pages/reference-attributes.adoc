@@ -33,11 +33,12 @@ Asciidoctor is {url-repo}[open source]. <.>
 WARNING: {disclaimer} <.>
 If you're missing a lime colored sock, file a ticket in
 the {url-repo}/issues[Asciidoctor issue tracker]. <.>
+(Actually, please don't).
 ----
 <.> Attribute references can be used in macros.
 <.> Attribute references can be used in blocks, such as xref:blocks:admonitions.adoc[admonitions], and inline.
 Since there isn't a blank line between the `disclaimer` reference and the next sentence, the sentence will be directly appended to the end of the attribute's value when it's processed.
-<.> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:url-macro.adoc[URL macro].
+<.> The reference to the `url-repo` attribute is inserted to build the complete URL address, which is interpreted as a xref:macros:url-macro.adoc[URL macro].
 
 As you can see below, the attribute references are replaced with the corresponding attribute value when the document is processed.
 
@@ -46,6 +47,7 @@ Asciidoctor is {url-repo}[open source].
 
 WARNING: {disclaimer}
 If you're missing a lime colored sock, file a ticket in the {url-repo}/issues[Asciidoctor issue tracker].
+Actually, please don't.
 ====
 
 [#reference-built-in]

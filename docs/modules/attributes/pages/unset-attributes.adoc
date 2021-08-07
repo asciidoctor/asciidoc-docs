@@ -19,7 +19,7 @@ Don't add a value to the entry.
 <.> An attribute is unset when a `!` is appended to its name.
 
 Let's use an attribute entry to turn off the built-in boolean attribute named `sectids`.
-Asciidoctor automatically sets `sectids` at processing time unless you unset it.
+The AsciiDoc processor automatically sets `sectids` at processing time unless you unset it.
 The `sectids` attribute xref:sections:ids.adoc[generates an ID for each section] from the section's title.
 
 .Unset a boolean attribute
@@ -33,10 +33,10 @@ After the closing colon, press kbd:[Enter].
 The attribute is now unset and its behavior won't be applied to the document.
 
 Once an attribute is unset, its behavior is deactivated.
-When `sectids` is unset, Asciidoctor will not generate IDs from section titles at processing time.
+When `sectids` is unset, the AsciiDoc processor will not generate IDs from section titles at processing time.
 
 Let's unset the built-in attribute `example-caption`.
-This is an attribute that is set and assigned a default value of `Example` automatically by Asciidoctor when you use an example block.
+This is an attribute that is set and assigned a default value of `Example` automatically by the AsciiDoc processor when you use an example block.
 
 .Unset an automatically declared attribute
 [source#ex-unset-built-in]

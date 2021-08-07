@@ -1,7 +1,7 @@
 = Declare Built-In Document Attributes
 :navtitle: Declare Built-In Attributes
 
-Asciidoctor has numerous attributes reserved for special purposes.
+An AsciiDoc processor has numerous attributes reserved for special purposes.
 *Built-in attributes* add, configure, and control common features in a document.
 Many built-in attributes only take effect when defined in the document header with an attribute entry.
 
@@ -28,7 +28,7 @@ In the example above, the default value of `auto` will be assigned to `toc` sinc
 == Override an attribute's default value
 
 You may not want to use the default value of a built-in attribute.
-In the next example, we'll override the default value of an attribute that Asciidoctor sets automatically.
+In the next example, we'll override the default value of an attribute that the AsciiDoc processor sets automatically.
 The built-in attribute `doctype` is automatically set and assigned a value of `article` at processing time.
 However, if you want to use AsciiDoc's book features, the `doctype` attribute needs to be assigned the `book` value.
 

@@ -11,7 +11,7 @@ See the xref:document-attributes-reference.adoc[built-in document attributes] re
 Also see <<default-def,default attribute value>>.
 
 [[built-in-def]]Built-in attribute:: Built-in attributes are predefined and their names reserved.
-Asciidoctor automatically sets many built-in attributes and assigns default values when it processes a document.
+An AsciiDoc processor automatically sets many built-in attributes and assigns default values when it processes a document.
 However, these built-in attributes can be unset and/or their default values overridden.
 See xref:document.adoc#set-built-in[Set built-in document attributes] and xref:element.adoc#attribute-lists[Attribute lists] for more information about using built-in attributes.
 

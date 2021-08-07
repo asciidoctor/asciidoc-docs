@@ -79,5 +79,5 @@ TBA
 ////
 == Handling a missing attribute
 
-If you use an attribute that xref:handle-unresolved-ref.adoc[is not defined], you can specify how Asciidoctor handles attribute reference errors.
+If you use an attribute that xref:handle-unresolved-ref.adoc[is not defined], you can specify how an AsciiDoc processor handles attribute reference errors.
 ////
