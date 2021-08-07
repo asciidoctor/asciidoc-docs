@@ -1,7 +1,7 @@
 = Paragraphs
 
 The bulk of the content in a document is paragraph text.
-This is why Asciidoctor doesn't require any special markup or attributes to specify paragraph content.
+This is why the AsciiDoc language doesn't require any special markup or attributes to specify paragraph content.
 You can just start typing.
 
 == Create a paragraph

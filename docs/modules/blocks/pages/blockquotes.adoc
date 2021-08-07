@@ -51,8 +51,6 @@ include::example$quote.adoc[tag=comp]
 The result of <<ex-block>> is displayed below.
 
 include::example$quote.adoc[tag=comp]
-
-Asciidoctor also provides three alternative ways to markup quotes and prose excerpts.
 // end::basic[]
 
 == Quoted paragraph
@@ -72,7 +70,7 @@ The result of <<ex-quoted>> is displayed below.
 
 include::example$quote.adoc[tag=abbr]
 
-=== Markdown-style blockquotes
+== Markdown-style blockquotes
 
 Asciidoctor supports Markdown-style blockquotes.
 

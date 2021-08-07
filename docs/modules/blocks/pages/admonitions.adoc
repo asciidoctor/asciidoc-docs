@@ -4,7 +4,7 @@
 There are certain statements you may want to draw attention to by taking them out of the content's flow and labeling them with a priority.
 These are called admonitions.
 It's rendered style is determined by the assigned label (i.e., value).
-Asciidoctor provides five admonition style labels:
+The AsciiDoc language provides five admonition style labels:
 
 * `NOTE`
 * `TIP`
