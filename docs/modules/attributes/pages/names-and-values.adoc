@@ -32,16 +32,16 @@ The type of value an attribute accepts and whether it uses a default value, has 
 
 Many built-in attributes have one or more built-in values.
 One of these values may be designated as the attribute's default value.
-Asciidoctor will fall back to this default value if you set the attribute but leave the value blank.
-Additionally, Asciidoctor automatically sets numerous built-in attributes at processing time and assigns them their default values unless you explicitly unset the attribute or assign it another value.
-For instance, Asciidoctor automatically sets all of the xref:character-replacement-reference.adoc[character replacement attributes].
+The AsciiDoc processor will fall back to this default value if you set the attribute but leave the value blank.
+Additionally, the processor automatically sets numerous built-in attributes at processing time and assigns them their default values unless you explicitly unset the attribute or assign it another value.
+For instance, the processor automatically sets all of the xref:character-replacement-reference.adoc[character replacement attributes].
 
 If you want to use the non-default value of a built-in attribute, you need to set it and assign it an alternative value.
 
 === Empty string values
 
 The value for built-in boolean attributes is always left empty in an attribute entry since these attributes only turn on or turn off a feature.
-During processing, Asciidoctor assigns any activated boolean attributes an _empty string_ value.
+During processing, the AsciiDoc processor assigns any activated boolean attributes an _empty string_ value.
 
 === Explicit values
 

@@ -1,8 +1,8 @@
 = Handle Unresolved References
 
-When you reference a missing attribute (e.g., `+{does-not-exist}+`), Asciidoctor will leave the attribute reference behind.
-If you undefine an attribute on the same line as other text (e.g., `+{set:attribute-no-more!}+`), Asciidoctor will drop the whole line.
-You can tailor these behaviors in Asciidoctor using the `attribute-missing` and `attribute-undefined` attributes.
+When you reference a missing attribute (e.g., `+{does-not-exist}+`), the AsciiDoc processor will leave the attribute reference behind.
+If you undefine an attribute on the same line as other text (e.g., `+{set:attribute-no-more!}+`), the processor will drop the whole line.
+You can tailor these behaviors using the `attribute-missing` and `attribute-undefined` attributes.
 You'll want to think about how you want the processor to handle these situations and configure the processor accordingly.
 
 [#missing]
@@ -44,7 +44,7 @@ Here's how the line is handled in each case, assuming the `name` attribute is no
 NOTE: AsciiDoc.py always drops the line that contains a reference to a missing attribute (effectively `attribute-missing=drop-line`).
 This "`feature`" was a side effect of how the processor was implemented and not designed with the writer in mind.
 The behavior is frustrating for the writer because it's hard to detect where its occurring and can result in loss of important content.
-That's why Asciidoctor uses different default behavior and, further, allows the behavior to be customized.
+That's why Asciidoctor uses a different default behavior and, further, allows the behavior to be customized.
 
 There are a few cases where the `attribute-missing` attribute is not strictly honored.
 One of those cases is the include directive.
