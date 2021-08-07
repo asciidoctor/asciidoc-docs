@@ -21,7 +21,7 @@ include::example$stem.adoc[tag=base-co]
 <.> The default notation value, `asciimath`, is assigned implicitly.
 
 By default, AsciiDoc's stem integration assumes all equations are AsciiMath if not specified explicitly.
-The HTML converter supports STEM content written in {url-asciimath}[Asciimath^] and {url-latexmath}[TeX and LaTeX^] math notation.
+The HTML converter supports STEM content written in {url-asciimath}[AsciiMath^] and {url-latexmath}[TeX and LaTeX^] math notation.
 The DocBook converter only processes AsciiMath notation, leaving LaTeX to be processed by a separate tool in the DocBook toolchain.
 
 If you want to use the LaTeX notation by default, assign `latexmath` to the stem attribute.
