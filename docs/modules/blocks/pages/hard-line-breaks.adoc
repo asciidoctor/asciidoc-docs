@@ -1,6 +1,6 @@
 = Hard Line Breaks
 
-Since adjacent lines of text are combined into a single paragraph when Asciidoctor converts a document, that means you can wrap paragraph text or put each sentence or phrase on a separate line.
+Since adjacent lines of text in AsciiDoc are combined into a single paragraph when converted, it means you can wrap paragraph text or put each sentence or phrase on a separate line.
 The line breaks won't appear in the output.
 
 However, if you want the line breaks in a paragraph to be preserved, you can use a space followed by a plus sign (`{plus}`) or set the `hardbreaks` option on the paragraph.

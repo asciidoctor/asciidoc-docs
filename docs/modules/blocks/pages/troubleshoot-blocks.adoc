@@ -23,6 +23,6 @@ This is an invalid sidebar block because the delimiter lines are different lengt
 ****
 ----
 
-When Asciidoctor encounters the previous example, it will put the remainder of the content in the document inside the delimited block.
+When an AsciiDoc processor encounters the previous example, it will put the remainder of the content in the document inside the delimited block.
 As far as the processor is concerned, the closing delimiter is just a line of content.
 If you want the closing delimiter to be matched, it must be the same length as the opening delimiter.
