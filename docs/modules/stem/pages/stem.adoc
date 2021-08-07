@@ -157,6 +157,67 @@ y
 The first preserved newline splits the expression into two.
 Subsequent newlines get translated into a `<br>` element.
 
+=== Newlines in LaTeX blocks
+
+Newlines in a LaTeX block are only preserved in certain circumstances.
+The following examples illustrate how newlines are handled.
+
+[%collapsible]
+.Single newline not preserved
+====
+[listing]
+----
+x
+y
+----
+====
+
+[%collapsible]
+.Single newline preserved if escaped
+====
+[listing]
+----
+x\\
+y
+----
+====
+
+[%collapsible]
+.Sequential newlines preserved if escaped and prefixed by null character
+====
+[listing]
+----
+x\\
+~\\
+y
+----
+====
+
+[%collapsible]
+.Paragraph break not preserved
+====
+[listing]
+----
+x
+
+y
+----
+====
+
+[%collapsible]
+.Paragraph break preserved if separated by newline spacer
+====
+[listing]
+----
+x
+\\[1em]
+y
+----
+====
+
+The first preserved newline splits the expression into two.
+Subsequent newlines get translated into a `<br>` element.
+
 [#mixing-notations]
 == Mixing STEM notations
 
