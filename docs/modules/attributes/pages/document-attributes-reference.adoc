@@ -934,7 +934,7 @@ Mutually exclusive with the `notitle` attribute.
 `latexmath`
 |{n}
 |{y}
-|Enables xref:stem:stem.adoc[mathematics processing and interpreter].
+|Enables xref:stem:index.adoc[mathematics processing and interpreter].
 
 |tabsize
 |_integer_ (≥ 0)

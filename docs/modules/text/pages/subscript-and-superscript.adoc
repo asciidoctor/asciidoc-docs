@@ -24,4 +24,4 @@ The result of <<ex-basic>> is rendered below.
 include::example$text.adoc[tag=sub-sup]
 ====
 
-NOTE: You can write equations and formulas in xref:stem:stem.adoc[AsciiDoc documents using MathJax].
+NOTE: You can write equations and formulas in xref:stem:index.adoc[AsciiDoc documents using MathJax].
