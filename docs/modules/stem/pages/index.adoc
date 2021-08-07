@@ -1,4 +1,5 @@
 = Equations and Formulas (STEM)
+:page-aliases: stem.adoc
 :stem: asciimath
 :url-mathjax: https://www.mathjax.org
 :url-asciimath: https://docs.mathjax.org/en/latest/input/asciimath.html
