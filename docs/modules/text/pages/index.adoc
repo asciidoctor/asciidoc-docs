@@ -23,7 +23,7 @@ An unconstrained pair can be applied anywhere, whereas the application of a cons
 [#constrained]
 === Constrained formatting pair
 
-When a blank space directly precedes the text to format, and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, or `!`) directly follows the text, a [.term]*constrained formatting pair* can be used.
+When a space-like character directly precedes the text to format, and a space-like character or punctuation mark (`,`, `;`, `"`, `.`, `?`, or `!`) directly follows the text, and the text does not start or end with a space-like character, a [.term]*constrained formatting pair* can be used.
 A constrained pair uses a single opening mark and a single closing mark to enclose the text to be styled (e.g., `+*strong*+`).
 
 For example, you use this form to format a word that stands alone,
@@ -51,7 +51,8 @@ You can think of a constrained pair as being a weaker markup than an unconstrain
 [#unconstrained]
 === Unconstrained formatting pair
 
-When a blank space does not precede the text to format, or a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, or `!`) does not directly follow the text, or the text does not start or end with a word character, a [.term]*unconstrained formatting pair* must be used.
+An [.term]*unconstrained formatting pair* can be used anywhere in the text.
+When the conditions are not met for a constrained formatting pair, then an unconstrained formatting pair must be used instead.
 An unconstrained pair uses a double opening mark and a double closing mark to enclose the text to be styled (e.g., `+Sara**h**+`).
 
 For example, you'd use an unconstrained pair to format just one or a few letters in a word.
