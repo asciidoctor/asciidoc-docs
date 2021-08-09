@@ -11,6 +11,7 @@ Fixed::
 * fix textual references that refer to the mailto macro as the email macro
 * fix the terminology pertaining to custom inline styles
 * fix the terminology pertaining to highlighted text
+* slightly clarify the rules for a constrained formatting pair by emphasizing that the text cannot start or end with a space-like character
 
 Added::
 * document text span (formerly known as unformatted text)
