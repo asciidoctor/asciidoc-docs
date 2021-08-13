@@ -1051,7 +1051,8 @@ _url_
 |_empty_
 |{n}
 |{y}
-|Tells processor not to load CodeRay.
+|Instructs processor not to load CodeRay.
+Also set if processor fails to load CodeRay.
 
 |highlightjsdir
 |_directory path_ +
@@ -1114,7 +1115,38 @@ _url_ +
 |_empty_
 |{n}
 |{y}
-|Tells the processor not to load Pygments.
+|Instructs processor not to load Pygments.
+Also set if processor fails to load Pygments.
+
+|rouge-css
+|(`class`) +
+`style`
+|{n}
+|{y}
+|Controls whether Rouge uses CSS classes or inline styles.
+
+|rouge-linenums-mode
+|`inline` +
+(`table`)
+|{n}
+|{y}
+|Sets how Rouge inserts line numbers into source listings.
+_`inline` not yet supported by Asciidoctor._
+See https://github.com/asciidoctor/asciidoctor/issues/3641[asciidoctor#3641].
+
+|rouge-style
+|_Rouge style name_ +
+(`github`)
+|{n}
+|{y}
+|Name of style used by Rouge.
+
+|rouge-unavailable
+|_empty_
+|{n}
+|{y}
+|Instructs processor not to load Rouge.
+Also set if processor fails to load Rouge.
 
 |source-highlighter
 |`coderay` +
