@@ -300,7 +300,7 @@ To force the use of UTC, set the `TZ=UTC` environment variable when invoking Asc
 |{y}
 |Prevents last-updated date from being added to HTML footer or DocBook info element.
 Useful for storing the output in a source code control system as it prevents spurious changes every time you convert the document.
-//Alternatively, you can use the SOURCE_DATE_EPOCH environment variable to fix the value.
+Alternately, you can use the SOURCE_DATE_EPOCH environment variable, which sets the epoch of all source documents and the local datetime to a fixed value.
 
 |skip-front-matter
 |_empty_
