@@ -1043,7 +1043,7 @@ _url_
 |`inline` +
 (`table`)
 |{n}
-|{y}
+|{n}
 |Sets how CodeRay inserts line numbers into source listings.
 
 |coderay-unavailable
@@ -1100,7 +1100,7 @@ _url_ +
 |(`table`) +
 `inline`
 |{n}
-|{y}
+|{n}
 |Sets how Pygments inserts line numbers into source listings.
 
 |pygments-style
@@ -1128,7 +1128,7 @@ Also set if processor fails to load Pygments.
 |`inline` +
 (`table`)
 |{n}
-|{y}
+|{n}
 |Sets how Rouge inserts line numbers into source listings.
 _`inline` not yet supported by Asciidoctor._
 See https://github.com/asciidoctor/asciidoctor/issues/3641[asciidoctor#3641].
