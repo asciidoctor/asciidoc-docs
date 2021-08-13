@@ -958,7 +958,6 @@ A non-empty value replaces the `family` query string parameter in the Google Fon
 |{n}
 |{n}
 |xref:macros:xref-text-and-style.adoc#cross-reference-styles[Formatting style to apply to cross reference text].
-//_Introduced in 1.5.6._
 |===
 
 == Image and icon attributes
@@ -1176,7 +1175,6 @@ Any other value is permitted, but must be supported by a custom syntax highlight
 |{n}
 |{n}
 |Turns on line numbers for source code listings.
-//_Introduced in 1.5.6._
 |===
 
 == HTML styling attributes
