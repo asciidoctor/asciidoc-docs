@@ -3,8 +3,9 @@
 
 An optional subtitle can be appended to a xref:title.adoc[document title].
 
-NOTE: The HTML 5 converter does not distinguish the document title from the subtitle in its output.
-It's only distinguished from the document title when you use the Docbook, EPUB 3, and PDF converters.
+NOTE: The HTML 5 converter does not currently split the subtitle out from the document title when generating HTML from AsciiDoc.
+The document title is only partitioned into a main and subtitle in the output of the DocBook, EPUB 3, and PDF converters.
+However, the subtitle is still available via the API, so you could add support for it by extending the HTML 5 converter.
 
 == Subtitle syntax
 
