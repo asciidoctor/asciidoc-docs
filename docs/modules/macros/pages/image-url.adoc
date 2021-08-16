@@ -34,5 +34,3 @@ include::example$image.adoc[tag=base-url]
 ----
 
 This time, `imagesdir` is used since the image target is not a URL (the value of `imagesdir` just happens to be one).
-
-NOTE: This feature is included in the AsciiDoc compatibility file so that AsciiDoc.py gets it right, too.

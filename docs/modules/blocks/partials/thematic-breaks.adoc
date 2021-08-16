@@ -30,5 +30,3 @@ As with Markdown, whitespace between the characters is optional.
 
 * * *
 ----
-
-A macro definition for the Markdown thematic breaks is included in the AsciiDoc compatibility file so they can be recognized by the `asciidoc` command as well.
