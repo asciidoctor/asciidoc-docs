@@ -4,7 +4,7 @@
 CAUTION: This glossary is a work in progress.
 It does not include all the terms in AsciiDoc.
 
-attribute reference:: An expression for dereferencing the value of a document attribute.
+attribute reference:: an expression for dereferencing the value of a document attribute.
 
 admonition:: a callout paragraph or block that has a label or icon indicating its priority.
 
@@ -13,6 +13,9 @@ backend:: a moniker for the expected output format; used as a key to select whic
 block attribute:: an attribute associated with a delimited block or paragraph; these attributes can affect processing of the block, and are available to block processors, but cannot be referenced using an attribute reference.
 
 built-in attribute:: a document attribute that controls processing, integrations, styling, and localization.
+
+converter:: a software component that an AsciiDoc processor calls to convert a parsed AsciiDoc document to a given output format;
+the converter and output format are correlated using a backend identifier.
 
 cross reference:: a link from one location in the document to another location marked by an anchor.
 
