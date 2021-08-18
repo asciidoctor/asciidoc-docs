@@ -17,6 +17,7 @@ Added::
 * document text span (formerly known as unformatted text)
 * document how newlines in block AsciiMath notation are processed
 * document how newlines in block LaTeX notation are processed
+* document the format attribute on image macros
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro

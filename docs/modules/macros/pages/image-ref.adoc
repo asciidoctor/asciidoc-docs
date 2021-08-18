@@ -30,7 +30,7 @@ Default is empty value.
 |Blocks: title displayed below image; Inline: title displayed as tooltip
 
 |`format`
-|The format of the image, specified as file extension (without the leading dot).
+|The format of the image, specified as a sub-MIME type (except in the case of an SVG, which is specified as `svg`).
 |`format=svg`
 |Only necessary when the converter needs to know the format of the image and the target does not end in a file extension (or otherwise cannot be detected).
 
