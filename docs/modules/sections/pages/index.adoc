@@ -71,3 +71,42 @@ I, King Arthur.
 ----
 
 //Follow https://github.com/asciidoctor/asciidoctor/issues/450[issue #450] to track the progress of this feature.
+
+== Placement of hidden index terms
+
+Hidden index entries should be directly adjacent to the paragraph content to which they apply.
+<<ex-hidden-terms-correct>> shows where to place hidden index terms for a paragraph.
+
+.Correct
+[#ex-hidden-terms-correct]
+----
+=== Create a new Git repository
+
+(((Repository, create)))
+(((Create Git repository)))
+To create a new git repository,
+----
+
+If the terms are offset from the paragraph content by an empty line, it will cause an empty paragraph to be created in the parsed document, thus leaving extra space in the generated output.
+<<ex-hidden-terms-incorrect-1>> and <<ex-hidden-terms-incorrect-2>> show where you should not place hidden index terms for a paragraph.
+
+.Incorrect
+[#ex-hidden-terms-incorrect-1]
+----
+=== Create a new Git repository
+
+(((Repository, create)))
+(((Create Git repository)))
+
+To create a new git repository,
+----
+
+.Also incorrect
+[#ex-hidden-terms-incorrect-2]
+----
+=== Create a new Git repository
+(((Repository, create)))
+(((Create Git repository)))
+
+To create a new git repository,
+----
