@@ -39,4 +39,4 @@ Processing it with the options `doctype=inline` and `backend=html5` produces:
 [source,html]
 <a href="https://asciidoctor.org">AsciiDoc</a> is a <em>lightweight</em> markup language&#8230;
 
-The inline doctype allows the Asciidoctor processor to cover the full range of applications, from unstructured (inline) text to full, standalone documents!
+The inline doctype allows the AsciiDoc processor to cover the full range of applications, from unstructured (inline) text to full, standalone documents!
