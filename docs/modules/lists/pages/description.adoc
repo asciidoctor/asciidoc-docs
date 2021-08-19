@@ -59,7 +59,7 @@ include::example$description.adoc[tag=base-mix-alt]
 // tag::hybrid[]
 [#three-hybrid]
 Finally, you can mix and match the three list types within a single hybrid list.
-Asciidoctor works hard to infer the relationships between the items that are most intuitive to us humans.
+The AsciiDoc syntax tries hard to infer the relationships between the items that are most intuitive to us humans.
 
 Here's a list that mixes description, ordered, and unordered list items:
 

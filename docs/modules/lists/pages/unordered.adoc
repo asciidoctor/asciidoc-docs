@@ -2,7 +2,7 @@
 :keywords: bulleted list
 
 If you were to create a list in an e-mail, how would you do it?
-Chances are, you'd mark list items using the same characters that Asciidoctor uses to find list items.
+Chances are, you'd mark list items using the same characters that AsciiDoc reserves to identify list items.
 
 == Basic unordered list
 
@@ -93,7 +93,7 @@ After all, we're shooting for plain text markup that is readable _as is_.
 [#markers]
 == Custom markers
 
-Asciidoctor offers numerous bullet styles for lists.
+AsciiDoc offers numerous bullet styles for lists.
 The list marker (bullet) is set using the list's block style.
 
 The unordered list marker can be set using any of the following block styles:
