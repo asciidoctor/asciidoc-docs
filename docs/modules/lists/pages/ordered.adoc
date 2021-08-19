@@ -86,7 +86,7 @@ Again, we are shooting for plain text markup that is readable _as is_.
 ====
 
 You can mix and match the three list types, ordered, xref:unordered.adoc[unordered], and xref:description.adoc[description], within a single hybrid list.
-Asciidoctor works hard to infer the relationships between the items that are most intuitive to us humans.
+The AsciiDoc syntax tries hard to infer the relationships between the items that are most intuitive to us humans.
 
 Here's an example of nesting an unordered list inside of an ordered list:
 
@@ -109,7 +109,7 @@ The description list page demonstrates how to xref:description.adoc#three-hybrid
 [#styles]
 == Number styles
 
-For ordered lists, Asciidoctor supports the numeration styles such as lowergreek and decimal-leading-zero.
+For ordered lists, AsciiDoc supports the numeration styles such as lowergreek and decimal-leading-zero.
 The full list of numeration styles that can be applied to an ordered list are as follows:
 
 [%autowidth]
