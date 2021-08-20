@@ -1,6 +1,6 @@
 = Escape and Prevent Substitutions
 
-Asciidoctor provides several approaches for preventing substitutions.
+The AsciiDoc syntax offers several approaches for preventing substitutions from being applied.
 
 == Escape with backslashes
 
