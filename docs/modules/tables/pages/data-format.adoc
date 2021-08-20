@@ -224,7 +224,7 @@ If you set `format=dsv` and `separator=,`, the data will be processed using the 
 
 == Shorthand notation for data tables
 
-Asciidoctor provides shorthand notation for specifying the data format of a table.
+AsciiDoc provides shorthand notation for specifying the data format of a table.
 The first position of the table block delimiter (i.e., `|===`) can be replaced by a built-in delimiter to set the table format (e.g., `,===` for CSV).
 
 To make a CSV table, you can use `,===` as the table block delimiter:
