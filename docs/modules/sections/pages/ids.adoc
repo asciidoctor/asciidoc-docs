@@ -3,11 +3,11 @@
 // New page, content taken from sections.adoc
 // was [#auto-id]
 
-Unless you specify a custom ID for a section, Asciidoctor automatically generates an ID from the section's title and assigns it to the section.
+Unless you specify a custom ID for a section, the AsciiDoc processor will automatically generate an ID from the section's title and assign it to the section.
 
 == How a section ID is assembled
 
-Asciidoctor builds an ID from a section title using the following order of events and rules:
+The AsciiDoc processor builds an ID from a section title using the following order of events and rules:
 
 * Inline formatting is applied (in title substitution order).
 * All characters are converted to lowercase.
