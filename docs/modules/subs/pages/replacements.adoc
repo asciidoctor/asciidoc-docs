@@ -23,7 +23,7 @@ In turn, `\&#167;` will display as &sect;.
 [#char-ref-sidebar]
 .Anatomy of a character reference
 ****
-A character reference is a standard sequence of characters that is substituted for a single character when Asciidoctor processes a document.
+A character reference is a standard sequence of characters that is substituted for a single character by an AsciiDoc processor.
 There are two types of character references: named character references and numeric character references.
 
 A named character reference (often called a _character entity reference_) is a short name that refers to a character (i.e., glyph).
@@ -48,7 +48,7 @@ For example:
 
 Developers may be more familiar with using *Unicode escape sequences* to perform text substitutions.
 For example, to produce an `&#64;` sign using a Unicode escape sequence, you would prefix the hexadecimal Unicode code point with a backslash (`\`) and an uppercase or lowercase `u`, i.e. `u0040`.
-However, Asciidoctor doesn't process and replace Unicode escape sequences at this time.
+However, the AsciiDoc syntax doesn't recognize Unicode escape sequences at this time.
 ****
 
 TIP: AsciiDoc also provides built-in attributes for representing some common symbols.
