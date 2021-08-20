@@ -1,7 +1,7 @@
 = Inline Passthroughs
 //um anchor: pass-macros
 
-Asciidoctor supports several inline passthrough macros.
+AsciiDoc supports several inline passthrough macros.
 
 == Inline passthrough macros
 
