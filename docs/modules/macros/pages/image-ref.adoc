@@ -56,6 +56,11 @@ Default is empty value.
 |`link=https://www.flickr.com/photos/javh/5448336655`
 |
 
+|`window`
+|User defined window target for the `link` attribute
+|`window=_blank`
+|
+
 |`scale`
 |A scaling factor to apply to the intrinsic image dimensions
 |`scale=80`
