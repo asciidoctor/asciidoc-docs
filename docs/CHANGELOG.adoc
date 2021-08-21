@@ -12,6 +12,7 @@ Fixed::
 * fix the terminology pertaining to custom inline styles
 * fix the terminology pertaining to highlighted text
 * slightly clarify the rules for a constrained formatting pair by emphasizing that the text cannot start or end with a space-like character
+* change chapter-label to chapter-signifier
 
 Added::
 * document text span (formerly known as unformatted text)
