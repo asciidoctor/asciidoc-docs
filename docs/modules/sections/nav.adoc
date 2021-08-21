@@ -17,7 +17,7 @@
 *** xref:abstract-block.adoc[]
 *** xref:preface.adoc[]
 *** xref:parts.adoc[]
-**** xref:part-number-and-signifier.adoc[]
+**** xref:part-numbers-and-signifier.adoc[]
 *** xref:chapters.adoc[]
 // Back matter
 *** xref:appendix.adoc[]
