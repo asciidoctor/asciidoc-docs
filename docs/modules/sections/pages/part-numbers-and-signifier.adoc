@@ -1,10 +1,11 @@
-= Number and Label Parts
+= Part Numbers and Signifier
+:page-aliases: part-numbers-and-labels.adoc
 
 [#partnums]
 == Number book parts
 
 Book part numbers are controlled by the `partnums` attribute, not `sectnums`.
-To autogenerate part numbers, set `partnums` in the book header.
+To autogenerate part numbers, set the `partnums` attribute in the book header.
 
 [source]
 ----
