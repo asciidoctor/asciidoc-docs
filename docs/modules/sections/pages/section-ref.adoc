@@ -11,10 +11,10 @@
 |_Appendix_ (default) or user defined text
 |
 
-|xref:chapters.adoc#chapter-label[Chapter label]
-|`chapter-label`
+|xref:chapters.adoc#chapter-signifier[Chapter signifier]
+|`chapter-signifier`
 |_Chapter_ (default) or user defined text
-|`book` doctype only; Asciidoctor PDF only
+|`book` doctype only; default only set in Asciidoctor PDF
 
 |xref:discrete-headings.adoc[Discrete heading]
 |`discrete`
