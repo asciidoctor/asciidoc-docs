@@ -1,15 +1,22 @@
 = Images Reference
 
-.Block and inline image attributes and values
-[%autowidth]
+.Document attributes and values
+[cols=2;2;3;3]
 |===
 |Attribute |Value(s) |Example Syntax |Comments
 
 |`imagesdir`
 |empty, filesystem path, or base URL
-|`:imagesdir: media`
-|If the image target is a URL or an absolute path, the `imagesdir` value isn't added.
-Default is empty value.
+|`:imagesdir: images`
+|Added in front of a relative image target, joined using a file separator if needed.
+Not used if the image target is an absolute URL or path.
+Default value is empty.
+|===
+
+.Block and inline image attributes and values
+[cols=2;2;3;3]
+|===
+|Attribute |Value(s) |Example Syntax |Comments
 
 |`id`
 |User defined text
