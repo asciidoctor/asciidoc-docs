@@ -76,7 +76,7 @@ Default value is empty.
 |`scaledwidth`
 |User defined width for block images
 |`scaledwidth=25%`
-|DocBook only
+|DocBook and Asciidoctor PDF only
 
 |`pdfwidth`
 |User defined width for images in a PDF
