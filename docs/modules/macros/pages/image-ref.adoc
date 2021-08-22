@@ -97,7 +97,7 @@ Default value is empty.
 To scope the float, use a xref:image-position.adoc#control-float[float group].
 
 |`role`
-|`left`, `right`, `th`, `thumb`, `related`, `rel`
+|user-defined, `left`, `right`, `th`, `thumb`, `related`, `rel`
 |`role="thumb right"` +
 (or `[.thumb.right]` above block macro)
 |Inline images can use `role` to float images left and right.
