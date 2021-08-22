@@ -56,7 +56,7 @@ Default value is empty.
 |User defined size in pixels
 |`image::sunset.jpg[Sunset,300,200]` +
 (or `height=200`)
-|
+|The height should only be set if the width attribute is set and must respect the aspect ratio of the image.
 
 |`link`
 |User defined location of external URI
