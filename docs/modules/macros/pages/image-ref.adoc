@@ -100,8 +100,8 @@ To scope the float, use a xref:image-position.adoc#control-float[float group].
 |user-defined, `left`, `right`, `th`, `thumb`, `related`, `rel`
 |`role="thumb right"` +
 (or `[.thumb.right]` above block macro)
-|Inline images can use `role` to float images left and right.
-Role shorthand (`.`) can not be used on images.
+|The role is preferred to specify the float position for an image.
+Role shorthand (`.`) can only be used in block attribute list above a block image.
 
 |`opts`
 |Additional options for link creation and SVG targets.
