@@ -102,4 +102,11 @@ To scope the float, use a xref:image-position.adoc#control-float[float group].
 (or `[.thumb.right]` above block macro)
 |Inline images can use `role` to float images left and right.
 Role shorthand (`.`) can not be used on images.
+
+|`opts`
+|Additional options for link creation and SVG targets.
+|`image::sunset.jpg[Sunset, link=https://example.org, opts=nofollow]`
+
+`image::chart.svg[opts=inline]`
+|Option names include: `nofollow`, `noopener`, `inline` (SVG only), `interactive` (SVG only)
 |===
