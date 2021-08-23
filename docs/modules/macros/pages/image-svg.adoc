@@ -17,21 +17,20 @@ When the image target is an SVG, the `options` attribute (often abbreviated as `
 The following table demonstrates the impact these options have.
 
 .Demonstration of option values for SVG images
-[cols="l,a"]
+[cols=2*,frame=ends,grid=none]
 |===
-|image::sample.svg[Static,300]
-|image::sample.svg[Static,300]
+2+l|image::sample.svg[Static,300]
+a|image::sample.svg[Static,300]
+|Observe that the SVG does not respond to the hover event.
 
-|image::sample.svg[Interactive,300,opts=interactive]
-|image::sample.svg[Interactive,300,opts=interactive]
+2+l|image::sample.svg[Interactive,300,opts=interactive]
+a|image::sample.svg[Interactive,300,opts=interactive]
+|Observe that the color changes when hovering over the SVG.
 
-Observe that the color changes when hovering over the SVG.
-
-|image::sample.svg[Embedded,300,opts=inline]
-|image::sample.svg[Embedded,300,opts=interactive]
+2+l|image::sample.svg[Embedded,300,opts=inline]
+a|image::sample.svg[Embedded,300,opts=interactive]
 // the output uses the interactive version as the documentation doesn't currently support the `inline` option.
-
-Observe that the color changes when hovering over the SVG.
+|Observe that the color changes when hovering over the SVG.
 The SVG also inherits CSS from the document stylesheets.
 |===
 
