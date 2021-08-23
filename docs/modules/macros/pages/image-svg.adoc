@@ -8,7 +8,7 @@ Therefore, these macros provide additional options to control how the SVG is inc
 
 == Options for SVG images
 
-When the image target is an SVG, the `options` attribute on the macro accepts one of three values:
+When the image target is an SVG, the `options` attribute (often abbreviated as `opts`) on the macro accepts one of three values:
 
 * _none_ (default)
 * `interactive`
@@ -50,7 +50,7 @@ How the options value works and when it should be used is described below:
 |`interactive`
 |`<object>`
 |Image embedded as a live, interactive object
-|For using CSS animations, scripting, webfonts
+|For using CSS animations, scripting, webfonts, or when you want to specify a fallback image
 
 |`inline`
 |`<svg>`
@@ -59,6 +59,10 @@ How the options value works and when it should be used is described below:
 
 To allow SVG content reachable by JavaScript in the main DOM or to inherit styles from the main DOM
 |===
+
+When using the `interactive` option, you can specify a fallback image using the `fallback` attribute.
+The fallback image is used if the browser does not support the `<object>` tag.
+If the value of the fallback attribute is a relative path, it will be prefixed with the value of the `imagesdir` document attribute.
 
 When using the `inline` or `interactive` options, the `viewBox` attribute must be defined on the root `<svg>` element in order for scaling to work properly.
 
