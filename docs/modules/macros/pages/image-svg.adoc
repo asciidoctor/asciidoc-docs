@@ -8,7 +8,7 @@ Therefore, these macros provide additional options to control how the SVG is inc
 
 == Options for SVG images
 
-When the image target is an SVG, the `options` attribute (often abbreviated as `opts`) on the macro accepts one of three values:
+When the image target is an SVG, the `options` attribute (often abbreviated as `opts`) on the macro accepts one of the following values to control how the SVG is referenced:
 
 * _none_ (default)
 * `interactive`
@@ -34,9 +34,9 @@ a|image::sample.svg[Embedded,300,opts=interactive]
 The SVG also inherits CSS from the document stylesheets.
 |===
 
-How the options value works and when it should be used is described below:
+How these options values work and when each should be used is described below:
 
-.Option values for SVG images (HTML output)
+.Option values that control how an SVG image is referenced in the HTML output
 [%autowidth]
 |===
 |Option |HTML Element Used |Effect |When To Use
