@@ -19,6 +19,7 @@ Added::
 * document how newlines in block AsciiMath notation are processed
 * document how newlines in block LaTeX notation are processed
 * document the format attribute on image macros
+* document the fallback attribute on image macros when target is an SVG
 * add the window attribute to the reference table for image macros
 
 Changed::

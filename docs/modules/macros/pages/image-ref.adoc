@@ -30,6 +30,11 @@ Default value is empty.
 (or `alt=Sunset`)
 |
 
+|`fallback`
+|Image path relative to `imagesdir` or an absolute path or URL
+|`image::tiger.svg[fallback=tiger.png]`
+|Only applicable if target is an SVG and opts=interactive
+
 |`title`
 |User defined text
 |`title="A mountain sunset"` +
