@@ -526,7 +526,7 @@ _Book doctype only_.
 `*Warning*`
 |{y}
 |{n}
-|Text used to label TIP admonitions when icons aren't enabled.
+|Text used to label WARNING admonitions when icons aren't enabled.
 |===
 
 == Document metadata attributes
