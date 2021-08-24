@@ -30,7 +30,7 @@ conditional content
 \endif::[]
 ----
 
-If you're mixing `ifeval` directives with `ifdef` or `ifndef` directives, you should always terminate the `ifdef` and `ifndef` directives by name (`endif::attribute-name[]`) so the `ifeval` directive does not get terminately prematurely.
+If you're mixing `ifeval` directives with `ifdef` or `ifndef` directives, you should always terminate the `ifdef` and `ifndef` directives by name (`endif::attribute-name[]`) so the `ifeval` directive does not get terminated prematurely.
 
 == Anatomy
 
