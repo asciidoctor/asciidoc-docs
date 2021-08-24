@@ -39,7 +39,7 @@ If the values don't match the aspect ratio, the height is ignored by the browser
 
 == pdfwidth attribute
 
-Asciidoctor recognizes the following attributes to size images when converting to PDF using Asciidoctor PDF:
+AsciiDoc recognizes the following attributes to size images when converting to PDF using Asciidoctor PDF:
 
 * `pdfwidth` - The preferred width of the image in the PDF when converting using Asciidoctor PDF.
 
@@ -61,7 +61,7 @@ See {url-pdf-scaling}[image scaling in Asciidoctor PDF^] for more details.
 
 == scaledwidth attribute
 
-Asciidoctor recognizes the following attributes to size images when converting to PDF using the DocBook toolchain:
+AsciiDoc recognizes the following attributes to size images when converting to PDF using the DocBook toolchain:
 
 * `scaledwidth` - The preferred width of the image when converting to PDF using the DocBook toolchain. (mutually exclusive with scale)
 * `scale` - Scales the original image size by this amount when converting to PDF using the DocBook toolchain (mutually exclusive with scaledwidth).

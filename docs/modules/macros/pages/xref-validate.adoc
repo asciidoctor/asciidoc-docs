@@ -1,6 +1,6 @@
 = Validate Cross References
 
-Asciidoctor provides limited support for validating internal cross references.
+An AsciiDoc processor is only required to provide limited support for validating internal cross references.
 Validation occurs when a cross reference is first visited.
 Since there are still some references aren't stored in the parse tree (such as an anchor in the middle of a paragraph), which can lead to false positives, these validations are hidden behind a flag.
 
@@ -17,10 +17,10 @@ See <<foobar>>.
 == Foobaz
 ----
 
-If you run Asciidoctor in verbose/pedantic mode on this document, it will send the following warning message to the logger.
+If you run Asciidoctor in verbose/pedantic mode on this document (`-v`), it will send the following warning message to the logger.
 
 ....
 asciidoctor: WARNING: invalid reference: foobar
 ....
 
-An AsciiDoc processor only validates references within the same document (after includes are resolved).
+An AsciiDoc processor is only required to validate references within the same document (after any includes are resolved).

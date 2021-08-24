@@ -16,7 +16,7 @@ There are two approaches you can take when positioning your images:
 
 == Positioning attributes
 
-Asciidoctor supports the `align` attribute on block images to align the image within the block (e.g., left, right or center).
+AsciiDoc supports the `align` attribute on block images to align the image within the block (e.g., left, right or center).
 The named attribute `float` can be applied to both the block and inline image macros.
 Float pulls the image to one side of the page or the other and wraps block or inline content around it, respectively.
 

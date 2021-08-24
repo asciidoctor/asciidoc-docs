@@ -65,7 +65,7 @@ Typical URLs contain a scheme, domain name, file name, and extension.
 //image::url.png[]
 
 // tag::basic[]
-Asciidoctor recognizes the following common schemes without the help of any markup.
+AsciiDoc recognizes the following common schemes without the help of any markup.
 
 [#schemes]
 * http
@@ -76,7 +76,7 @@ Asciidoctor recognizes the following common schemes without the help of any mark
 * \email@email.com
 
 You can think of these schemas as implicit macro names (with the exception of a bare email address).
-Since the URL in the example below begins with a protocol (in this case _https_ followed by a colon), Asciidoctor will automatically turn it into a hyperlink when it is processed.
+Since the URL in the example below begins with a protocol (in this case _https_ followed by a colon), the AsciiDoc processor will automatically turn it into a hyperlink.
 We call this a URL macro.
 
 [source]
@@ -200,7 +200,7 @@ include::example$url.adoc[tag=css]
 include::example$url.adoc[tag=css]
 ====
 
-TIP: Links with attributes (including the subject and body segments on mailto links) are a feature unique to Asciidoctor.
-When they're enabled, you must surround the link text in double quotes if it contains a comma.
+TIP: Links with attributes (including the subject and body segments on mailto links) weren't always supported in AsciiDoc.
+Now that they are, you must surround the link text in double quotes if it contains a comma.
 // end::attr[]
 ////

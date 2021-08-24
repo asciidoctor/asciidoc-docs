@@ -7,8 +7,8 @@
 The block video macro enables you to embed videos into your documentation.
 You can embed self-hosted videos or videos shared on popular video hosting sites such as YouTube and Vimeo.
 
-The video formats Asciidoctor supports is dictated by the formats supported by the browser (and, in turn, the user's system).
-While this was once a precarious ordeal, HTML5 has brought sanity to video support in the browser by adding a dedicated {url-video-element}[`<video>`^] element and by introducing several standard video formats.
+The video formats AsciiDoc supports is dictated by the output format, such as the formats supported by the browser when generating HTML.
+While this was once a precarious ordeal, HTML 5 has brought sanity to video support in the browser by adding a dedicated {url-video-element}[`<video>`^] element and by introducing several standard video formats.
 Those formats are now widely supported across browsers and systems.
 
 For a canonical list of supported web video formats and their interaction with modern browsers, see the {url-video-browsers}[Mozilla Developer Supported Media Formats^] documentation.
@@ -49,7 +49,7 @@ include::example$video.adoc[tag=caption]
 === YouTube and Vimeo videos
 
 The video macro supports embedding videos from external video hosting services like YouTube and Vimeo.
-Asciidoctor automatically generates the correct code to embed the video in the HTML output.
+The AsciiDoc processor, specifically the converter, automatically generates the correct code to embed the video in the HTML output.
 
 To use this feature, put the video ID in the macro target and the name of the hosting service in the first positional attribute.
 
