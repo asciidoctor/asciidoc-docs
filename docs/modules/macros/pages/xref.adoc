@@ -10,7 +10,7 @@ From there, you can customize the text of the reference in various ways.
 == Automatic anchors
 
 It's important to understand that many anchors are already defined for you.
-Using default settings, Asciidoctor automatically creates an anchor for every section and discrete heading.
+Using default settings, the AsciiDoc processor automatically creates an anchor for every section and discrete heading.
 It does so by generating an ID for that section (or discrete heading) and registering that ID in the references catalog.
 You can then use that ID as the target of a cross reference.
 
@@ -21,15 +21,15 @@ For example, considering the following section.
 = Section Title
 ----
 
-Asciidoctor automatically assigns the ID `_section_title` to this section, which you can then use as the target of an xref to create a reference to this section.
+The AsciiDoc processor automatically assigns the ID `_section_title` to this section, which you can then use as the target of an xref to create a reference to this section.
 You can also customize how this ID is generated.
-Refer to xref:sections:ids.adoc[] for more information about how Asciidoctor generates these IDs.
+Refer to xref:sections:ids.adoc[] for more information about how an AsciiDoc processor generates these IDs.
 
 If you're referring to a content element other than a section, you'll need to define an anchor on that element explicitly.
 
 == Internal cross references
 
-In Asciidoctor, the inline xref macro is used to create cross references (also called in-text or page citations) to content elements (sections, blocks, or phrases) that have an ID (regardless of whether that ID is explicit or auto-generated).
+In AsciiDoc, the inline xref macro is used to create cross references (also called in-text or page citations) to content elements (sections, blocks, or phrases) that have an ID (regardless of whether that ID is explicit or auto-generated).
 
 You create a cross reference by enclosing the ID of the target block or section (or the path of another document with an optional anchor) in double angled brackets.
 
