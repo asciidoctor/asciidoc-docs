@@ -93,7 +93,7 @@ The following message will also be inserted into the output:
  Unresolved directive in my-document.adoc - include::content.adoc[]
 
 To fix the problem, edit the file path and run the converter again.
-If you don't want Asciidoctor to trigger a warning, and instead drop the include that cannot be found, add the `opts=optional` attribute to the include directive.
+If you don't want the AsciiDoc processor to emit a warning, but rather drop the include that cannot be found, add the `opts=optional` attribute to the include directive.
 
 If you store your AsciiDoc files in nested folders at different levels, relative file paths can quickly become awkward and inflexible.
 A common pattern to help here is to define the paths in attributes defined in the header, then prefix all include paths with a reference to one of these attributes:
@@ -120,9 +120,9 @@ The include directive performs a simple file merge, so it works with any text fi
 // NOTE this point about normalization should probably be moved to an earlier section
 The content of all included content is normalized.
 This means that the encoding is forced to UTF-8 (or converted from UTF-16 to UTF-8 if the file contains a BOM) and trailing whitespace and endlines are removed from each line and replaced with a Unix line feed.
-This normalization is important to how Asciidoctor works.
+This normalization is important to how an AsciiDoc processor works.
 
-If the file is recognized as an AsciiDoc file (i.e., it has one of the following extensions: `.asciidoc`, `.adoc`, `.ad`, `.asc`, or `.txt`), Asciidoctor runs the preprocessor on the lines, looking for and interpreting the following directives:
+If the file is recognized as an AsciiDoc file (i.e., it has one of the following extensions: `.asciidoc`, `.adoc`, `.ad`, `.asc`, or `.txt`), the AsciiDoc processor runs the preprocessor on the lines, looking for and interpreting the following directives:
 
 * includes
 * preprocessor conditionals (e.g., `ifdef`)

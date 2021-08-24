@@ -1,9 +1,9 @@
 = Paragraph Alignment
 
-Asciidoctor provides built-in roles to align the text of a paragraph.
+AsciiDoc provides built-in roles to align the text of a paragraph.
 The name of the role follows the pattern `text-<alignment>`, where `<alignment>` is one of left, center, right, or justify (e.g., `text-center`).
 
-In <<ex-center>> the paragraph is assigned the `text-center` role in an attribute list.
+In <<ex-center>>, the paragraph is assigned the `text-center` role in an attribute list.
 
 .Assign text-center to a paragraph
 [#ex-center]
@@ -12,4 +12,5 @@ In <<ex-center>> the paragraph is assigned the `text-center` role in an attribut
 This text is centered, so it must be important.
 ----
 
-These built-in text alignment roles are supported by the HTML5 and PDF converters.
+These built-in text alignment roles may not be honored by all converters.
+Though, you can expect them to be supported when the output format is either HTML or PDF.
