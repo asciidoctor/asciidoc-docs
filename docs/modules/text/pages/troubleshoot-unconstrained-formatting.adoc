@@ -111,7 +111,7 @@ Alternately, you could encode the curved apostrophe directly in the AsciiDoc sou
 The `class`’ static methods make it easy to operate on files and directories.
 ----
 
-This situation is expected to improve in the future when Asciidoctor switches to using a parsing expression grammar for inline formatting instead of the current regular expression-based strategy.
+This situation is expected to improve in the future when the AsciiDoc language switches to using a parsing expression grammar for inline formatting instead of the current regular expression-based strategy.
 For details, follow https://github.com/asciidoctor/asciidoctor/issues/61[issue #61].
 
 [#escape-unconstrained]
@@ -165,7 +165,7 @@ Notice the addition of the plus symbols.
 Everything between the plus symbols is escaped from interpolation (attribute references, text formatting, etc.).
 However, the text still receives proper output escaping for xref:subs:special-characters.adoc[HTML special characters] (e.g., `<` becomes `\&lt;`).
 
-The enclosure `pass:[`+TEXT+`]` (text enclosed in pluses surrounded by backticks) is a special formatting combination in Asciidoctor.
+The enclosure `pass:[`+TEXT+`]` (text enclosed in pluses surrounded by backticks) is a special formatting combination in AsciiDoc.
 It means to format TEXT as monospace, but don't interpolate formatting marks or attribute references in TEXT.
 It's roughly equivalent to Markdown's backticks.
 Since AsciiDoc offers more advanced formatting, the double enclosure is necessary.
