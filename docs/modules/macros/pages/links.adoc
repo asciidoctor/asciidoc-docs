@@ -129,8 +129,7 @@ The `link` macro is a stronger version of a URI macro, which you can think of li
 The URL is preceded by `link:` and followed by square brackets.
 The square brackets may include optional link text.
 The URL is used for the text of the link if link text is not specified.
-Prior to 1.5.7, if the `linkattrs` document attribute is set, the text in square brackets is parsed as attributes, which allows a window name or role to be specified.
-Since 1.5.7, attributes are parsed automatically if an equal sign is found after a comma (e.g., `[link text,window=_blank]`).
+Attributes inside the square brackets are parsed automatically if an equal sign is found after a comma (e.g., `[link text,window=_blank]`).
 
 .Anatomy of a link macro
 [source]
@@ -165,10 +164,11 @@ Next, we'll add a target and role to a link macro.
 [#link-macro-attributes]
 === Link macro attributes
 
-Prior to 1.5.7, Asciidoctor _does not_ parse attributes in the link macro by default.
-If you want attributes in the link macro to be parsed, you must set the `linkattrs` document attribute in the header.
-Since 1.5.7, this parsing is automatic (and the attribute is not required) if an equal sign is found after a comma.
-When attribute parsing is enabled, you can then specify the name of the target window using the `window` attribute.
+AsciiDoc didn't used to recognize attributes in the link macro by default.
+This is no longer the case.
+The AsciiDoc processor automatically parses attributes in the link macro, but only under certain contains (introduced in Asciidoctor 1.5.7).
+If the AsciiDoc processor detects an equal sign after the first comma, it must parse the attributes in the link macro.
+For example, when attribute parsing is enabled, you can specify the name of the target window using the `window` attribute.
 
 [source]
 ----
