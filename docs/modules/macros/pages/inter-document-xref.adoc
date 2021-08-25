@@ -33,7 +33,9 @@ include::example$xref.adoc[tag=base-inter]
 
 The ID of the target is now placed behind a hash symbol (`#`).
 Preceding the hash is the name of the reference document (the file extension is optional).
-We've also added a label since an AsciiDoc processor is not (yet) required to resolve the section title in a separate document.
+We've also added link text since an AsciiDoc processor is not (yet) required to resolve the section title in a separate document.
+
+TIP: While the link text for a local (i.e., intradocument) cross reference is optional, the link text for an interdocument cross reference is (currently) required.
 
 When the AsciiDoc processor generates the link for this cross reference, it first checks to see if [.path]_document-b.adoc_ is included in the same document as [.path]_document-a.doc_ (by comparing the xref target to the include targets relative to the outermost document).
 If not, it will generate a link to [.path]_document-b.html_, intelligently substituting the original file extension with the file extension of the output file.
