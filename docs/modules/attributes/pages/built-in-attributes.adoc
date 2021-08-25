@@ -70,7 +70,7 @@ If you set `idseparator` and leave the value empty, the default value will be as
 
 [source]
 ----
-:idseparator: // <1>
+:idseparator: <1>
 ----
 <1> The words in automatically generated IDs will be separated with an underscore (`_`), the attribute's default value, because the value is empty.
 
@@ -78,7 +78,7 @@ To override the default value of an attribute, you have to explicitly assign a n
 
 [source]
 ----
-:idseparator: - // <1>
+:idseparator: - <1>
 ----
 <1> The words in automatically generated IDs will be separated with a hyphen (`-`).
 The value must be offset from the attribute's name by a space.
