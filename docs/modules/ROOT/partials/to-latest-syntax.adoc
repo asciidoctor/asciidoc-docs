@@ -46,11 +46,11 @@ You can set `compat-mode` anywhere in the flow of a document.
 
 .Setting and unsetting compat-mode in a document
 -----
-:compat-mode: // <1>
+:compat-mode: <1>
 
 Sometimes you feel 'compat'.
 
-:compat-mode!: // <2>
+:compat-mode!: <2>
 
 Sometimes you _don't_.
 -----

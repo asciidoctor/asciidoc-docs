@@ -34,16 +34,16 @@ It won't be italicized.
 // end::slash[]
 
 // tag::subs-in[]
-[source,java,subs="verbatim,quotes"] // <.>
+[source,java,subs="verbatim,quotes"] <.>
 ----
-System.out.println("Hello *bold* text"). // <.>
+System.out.println("Hello *bold* text") <.>
 ----
 // end::subs-in[]
 
 // tag::subs-out[]
 [source,java,subs="verbatim,quotes"]
 ----
-System.out.println("Hello *bold* text"). // <.> <.>
+System.out.println("Hello *bold* text") // <.> <.>
 ----
 // end::subs-out[]
 
