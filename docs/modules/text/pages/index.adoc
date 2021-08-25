@@ -9,7 +9,7 @@ This page covers the formatting marks that AsciiDoc provides and the rules for a
 
 === Formatting marks and pairs
 
-A [#def-format-mark.term]*formatting mark* is a symbolic character, such as `+*+`, `_`, or `~`, that indicates the inline style you want Asciidoctor to apply to the text.
+A [#def-format-mark.term]*formatting mark* is a symbolic character, such as `+*+`, `_`, or `~`, that indicates the inline style you want the AsciiDoc converter to apply to the text.
 Formatting marks come in pairs.
 
 A [#def-format-pair.term]*formatting pair* consists of an identical opening mark and closing mark that encloses the text you want to style.
@@ -103,12 +103,12 @@ Underline::
 ////
 
 xref:quotation-marks-and-apostrophes.adoc[Curved quotation marks and apostrophes]::
-By default, Asciidoctor uses straight quotation marks and apostrophes.
-They can be changed to curved using the backtick (`++`++`) formatting mark.
+By default, the AsciiDoc processor outputs straight quotation marks and apostrophes.
+They can be changed to curved by adding backticks (`++`++`) as a formatting hint.
 
 == Quotes substitution
 
-When Asciidoctor processes text enclosed by inline formatting syntax, the marks are replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution step].
+When the AsciiDoc processor encounters text enclosed by designated formatting marks, those marks are replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution step].
 You can control when inline formatting is applied to inline text, macros, or blocks with the xref:subs:quotes.adoc#quotes-value[quotes substitution value].
 
 ////
