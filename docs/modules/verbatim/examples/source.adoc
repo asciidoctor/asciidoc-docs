@@ -119,3 +119,21 @@ get '/hi' do
 end
 ```
 // end::fence[]
+
+// tag::linenums-option[]
+[source%linenums,ruby]
+----
+puts 1
+puts 2
+puts 3
+----
+// end::linenums-option[]
+
+// tag::linenums-posattr[]
+[source,ruby,linenums]
+----
+puts 1
+puts 2
+puts 3
+----
+// end::linenums-posattr[]

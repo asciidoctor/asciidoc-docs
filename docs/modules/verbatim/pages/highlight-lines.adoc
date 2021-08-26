@@ -42,7 +42,7 @@ These numbers correspond to the line numbers of the source block, inclusive, whe
 = Document Title
 :source-highlighter: coderay
 
-[source,ruby,linenums,highlight=2..5]
+[source%linenums,ruby,highlight=2..5]
 ----
 ORDERED_LIST_KEYWORDS = {
   'loweralpha' => 'a',
@@ -62,7 +62,7 @@ When `rouge` is the specified source highlighter, you also need to store the pro
 :source-highlighter: rouge
 :docinfo: private
 
-[source,ruby,linenums,highlight=2..5]
+[source%linenums,ruby,highlight=2..5]
 ----
 ORDERED_LIST_KEYWORDS = {
   'loweralpha' => 'a',
@@ -73,7 +73,7 @@ ORDERED_LIST_KEYWORDS = {
 ----
 ....
 
-Notice in <<ex-pygments>> that when the source highlighter is `pygments`, the `linenums` option isn't required.
+When using Pygments as the source highlighter, the `linenums` option isn't required to use line highlighting.
 
 .Highlight select lines when source-highlighter is pygments
 [source#ex-pygments]
