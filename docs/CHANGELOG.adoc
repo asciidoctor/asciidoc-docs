@@ -27,6 +27,7 @@ Changed::
 * make it more clear that GitHub, GitLab, and the browser preview extensions automatically adjust relfilesuffix
 * rewrite page about multiline attribute values to describe line joiner as a line continuation
 * change mentions of Asciidoctor to AsciiDoc processor where applicable
+* clarify that formatting pairs cannot be overlapped
 
 == Published Q2 2021
 
