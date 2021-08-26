@@ -17,6 +17,9 @@ A [#def-format-pair.term]*formatting pair* consists of an identical opening mark
 The [#def-open-mark.term]*opening mark* specifies where you want the style to start.
 The [#def-close-mark.term]*closing mark* specifies where you want the style to end.
 
+Formatting pairs can be nested, but they cannot be overlapped.
+If the pairs are overlapped, the behavior is unspecified and the AsciiDoc processor may produce malformed output.
+
 A formatting pair is defined as either constrained or unconstrained, depending on where it's allowed to be applied.
 An unconstrained pair can be applied anywhere, whereas the application of a constrained pair is more limited.
 
