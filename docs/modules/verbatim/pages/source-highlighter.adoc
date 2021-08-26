@@ -98,6 +98,32 @@ The result of <<ex-style>> is displayed below.
 
 include::example$source.adoc[tag=src-para]
 
+== Enable line numbering
+
+Provide the feature is supported by the source highlighter, you can enable line numbering on a source block by setting the `linenums` option on the block.
+
+The `linenums` option can either be specified as a normal block option named `linenums`, or as the third positional attribute on the block.
+The value of the positional attribute doesn't matter, though it's customary to use `linenums`.
+
+.Enable line numbering using the `linenums` option
+[source#ex-linenums-option]
+....
+include::example$source.adoc[tag=linenums-option]
+....
+
+.Enable line numbering using the third positional attribute
+[source#ex-linenums-posattr]
+....
+include::example$source.adoc[tag=linenums-posattr]
+....
+
+// We can't show the output since the source highlighter used for the site (highlight.js) isn't configure to support line numbering.
+////
+The result of both <<ex-linenums-option>> and <<ex-linenums-posattr>> is displayed below:
+
+include::example$source.adoc[tag=linenums-option]
+////
+
 == Disable source highlighting
 
 To disable source highlighting for a given source block, specify the language as `text` or remove the `source` style.
