@@ -68,3 +68,62 @@ As you can see below, the attribute reference is replaced with the attribute's v
 
 TIP: Wolpertingers don't like temperatures above 100{deg}C.
 Our servers don't like them either.
+
+== Escape an attribute reference
+
+You may have a situation where a sequence of characters occurs in your content that matches the syntax of an AsciiDoc attribute reference, but is not, in fact, an AsciiDoc attribute reference.
+For example, if you're documenting path templating, you may need to reference a replaceable section of a URL path, which is also enclosed in curly braces (e.g., /items/\{id}).
+In this case, you need a way to escape the attribute reference so the AsciiDoc processor knows to skip over it.
+Otherwise, the processor could warn about a missing attribute reference or perform an unexpected replacement.
+AsciiDoc provides several ways to escape an attribute reference.
+
+=== Prefix with a backslash
+
+You can escape an attribute reference by prefixing it with a backslash.
+When the processor encounters this syntax, it will remove the backslash and pass through the remainder of what looks to be an attribute reference as written.
+
+In <<ex-backslash-escape>>, the attribute reference is escaped using a backslash.
+
+.An attribute reference escaped using a backslash
+[#ex-backslash-escape]
+----
+In the path /items/\{id}, id is a path parameter.
+----
+
+In the output of <<ex-backslash-escape>>, we can see that the `\{id}` expression in the path is preserved.
+
+====
+In the path /items/\{id}, id is a path parameter.
+====
+
+Keep in mind that the backslash will only be recognized if the text between the curly braces is a valid attribute name.
+If the syntax that follows the backslash does not match an attribute reference, the backslash will not be removed during processing.
+
+=== Enclose in a passthrough
+
+You can also escape an attribute reference by enclosing it in an inline passthrough.
+In this case, the processor uses the normal substitution rules for the passthrough type you have chosen.
+
+In <<ex-passthrough-escape>>, the attribute reference is escaped by enclosing it in an inline passthrough.
+
+.An attribute reference escaped by enclosing it in an inline passthrough
+[#ex-passthrough-escape]
+----
+In the path +/items/{id}+, id is a path parameter.
+----
+
+In the output of <<ex-passthorugh-escape>>, we can see that the `\{id}` expression in the path is preserved.
+
+====
+In the path +/items/{id}+, id is a path parameter.
+====
+
+When using an inline passthrough, you don't have to worry whether the curly braces form an attribute reference or not.
+All the text between the passthrough enclosure will get passed through to the output.
+
+=== Alternative escape mechanisms
+
+Attribute references are replaced by the xref:subs:attributes.adoc[attributes substitution].
+Therefore, wherever you can control substitutions, you can prevent attribute references from being replaced.
+This includes the inline pass macro as well as the subs attribute on a block.
+See xref:subs:prevent.adoc#passthroughs[using passthroughs to prevent substitutions] for more details.

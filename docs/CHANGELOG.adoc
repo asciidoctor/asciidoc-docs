@@ -15,6 +15,7 @@ Fixed::
 * change chapter-label to chapter-signifier
 
 Added::
+* document how to escape an attribute reference
 * document text span (formerly known as unformatted text)
 * document how newlines in block AsciiMath notation are processed
 * document how newlines in block LaTeX notation are processed

@@ -4,7 +4,7 @@ The AsciiDoc syntax offers several approaches for preventing substitutions from 
 
 == Escape with backslashes
 
-To prevent a punctuation character from being interpreted as formatting syntax (e.g., +_+, +^+) in normal content, prepend the character with a backslash (`\`).
+To prevent a punctuation character from being interpreted as an attribute reference or formatting syntax (e.g., +_+, +^+) in normal content, prepend the character with a backslash (`\`).
 
 .Prevent unintended substitutions with a backslash in normal content
 [source#ex-backslash]
