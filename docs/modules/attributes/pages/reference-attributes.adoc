@@ -9,10 +9,10 @@ To reference and use the value of a document attribute, you enclose the attribut
 This inline element is called an *attribute reference*.
 
 [#reference-custom]
-== Reference custom attributes
+== Reference a custom attribute
 
-Before you can reference an attribute in a document it must be declared using an attribute entry in the document header.
-Let's reference the two user-defined attributes set and assigned values in <<ex-set-custom>>.
+Before you can reference a custom (i.e., user-defined) attribute in a document, it must first be declared using an attribute entry in the document header.
+In <<ex-set-custom>>, we declare two user-defined attributes that we'll later be able to reference.
 
 .Custom attributes set in the document header
 [source#ex-set-custom,subs=+attributes]
@@ -22,7 +22,7 @@ Let's reference the two user-defined attributes set and assigned values in <<ex-
 :url-repo: {url-repo}
 ----
 
-Once you've set and assigned a value to the attribute, you can reference that attribute throughout your document.
+Once you've set and assigned a value to a document attribute, you can reference that attribute throughout your document.
 In <<ex-reference>>, the attribute `url-repo` is referenced twice and `disclaimer` is referenced once.
 
 .Custom attributes referenced in the document body
@@ -51,9 +51,9 @@ Actually, please don't.
 ====
 
 [#reference-built-in]
-== Reference an automatically declared attribute
+== Reference a built-in attribute
 
-An automatically set document attribute is referenced the same way as an explicitly set document attribute.
+A built-in document attribute (i.e., a document attribute which is automatically set by the processor) is referenced the same way as a custom (i.e., user-defined) document attribute.
 For instance, an AsciiDoc processor automatically sets these supported xref:character-replacement-reference.adoc[character replacement attributes].
 That means that you can reference them throughout your document without having to create an attribute entry in its header.
 
@@ -62,7 +62,7 @@ That means that you can reference them throughout your document without having t
 TIP: Wolpertingers don't like temperatures above 100{deg}C. <.>
 Our servers don't like them either.
 ----
-<.> Reference the character replacement attribute `deg` by enclosing its name in a pair of curly brackets (`+{ }+`).
+<.> Reference the character replacement attribute `deg` by enclosing its name in a pair of curly brackets (`{` and `}`).
 
 As you can see below, the attribute reference is replaced with the attribute's value when the document is processed.
 
