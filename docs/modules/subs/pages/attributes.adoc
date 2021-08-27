@@ -47,6 +47,7 @@ Attribute references are replaced with their values when they're processed by th
 
 == attributes substitution value
 
-The attributes substitution step can be modified on blocks and inline elements.
+The attributes substitution step can be modified on blocks and the inline passthrough.
 For blocks, the step's name, `attributes`, can be assigned to the xref:apply-subs-to-blocks.adoc[subs attribute].
-For inline elements, the built-in values `a` or `attributes` can be applied to xref:apply-subs-to-text.adoc[inline text] to add the attributes substitution step.
+For an inline passthrough, the built-in values `a` or `attributes` can be applied to xref:apply-subs-to-text.adoc[inline text] to add or remove the attributes substitution step.
+Single occurrances of an attribute reference can be escaped by prefixing the expression with a backslash.
