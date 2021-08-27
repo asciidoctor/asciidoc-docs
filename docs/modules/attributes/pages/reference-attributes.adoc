@@ -4,9 +4,11 @@
 of hair, chocolate, or purple socks.
 :url-repo: https://github.com/asciidoctor/asciidoctor
 
-You'll likely use the value of a user-defined attribute entry or certain built-in attributes in specific locations throughout a document.
-To reference and use the value of a document attribute, you enclose the attribute's name in curly brackets (`+{name-of-an-attribute}+`).
+You'll likely want to insert the value of a user-defined or built-in document attribute in various locations throughout a document.
+To reference a document attribute for insertion, enclose the attribute's name in curly brackets (e.g., `+{name-of-attribute}+`).
 This inline element is called an *attribute reference*.
+The AsciiDoc processor replaces the attribute reference with the value of the attribute.
+To prevent this replacement, you can prefix the element with a backslash (e.g., `+\{name-of-attribute}+`).
 
 [#reference-custom]
 == Reference a custom attribute
