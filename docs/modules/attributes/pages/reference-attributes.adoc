@@ -114,7 +114,7 @@ In <<ex-passthrough-escape>>, the attribute reference is escaped by enclosing it
 In the path +/items/{id}+, id is a path parameter.
 ----
 
-In the output of <<ex-passthorugh-escape>>, we can see that the `\{id}` expression in the path is preserved.
+In the output of <<ex-passthrough-escape>>, we can see that the `\{id}` expression in the path is preserved.
 
 ====
 In the path +/items/{id}+, id is a path parameter.
