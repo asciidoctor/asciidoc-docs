@@ -1,4 +1,7 @@
 // tag::backslash[]
+In /items/\{id}, the id attribute isn't replaced.
+The curly braces around it are preserved.
+
 \*Stars* isn't displayed as bold text.
 The asterisks around it are preserved.
 
