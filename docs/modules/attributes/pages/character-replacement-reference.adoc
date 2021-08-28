@@ -134,11 +134,6 @@ It's up to the converter to transform the reference into something the renderer 
 However, it's best to treat them as read-only unless the output format requires the use of a different encoding scheme.
 These attributes are an effective tool for decoupling content and presentation.
 
-^[3]^ An AsciiDoc processor allows you to use any of the named character references (aka named entities) defined in HTML (e.g., \&euro; resolves to &euro;).
-However, using named character references can cause problems when generating non-HTML output such as PDF because the lookup table needed to resolve these names may not be defined.
-Our recommendation is avoid using named character references--with the exception of those defined in XML (i.e., lt, gt, amp, quot and apos).
-Instead, use numeric character references (e.g., \&#8364;).
-
 ^[4]^ The Zero Width Space (ZWSP) is a code point in Unicode that shows where a long word can be split if necessary.
 
 ^[5]^ The word joiner (WJ) is a code point in Unicode that prevents a line break at its position.
