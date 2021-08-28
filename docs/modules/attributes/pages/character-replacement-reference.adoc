@@ -120,6 +120,10 @@ e|single space
 |cpp
 |C++
 |C++
+
+|pp
+|&#43;&#43;
+|&#43;&#43;
 |===
 
 ^[1]^ Some replacements are Unicode characters, whereas others are numeric character references (e.g., \&#34;).
