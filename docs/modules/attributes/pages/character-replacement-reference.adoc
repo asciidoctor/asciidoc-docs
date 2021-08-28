@@ -1,5 +1,13 @@
 = Character Replacement Attributes Reference
 
+This page identifies built-in document attributes provided by the AsciiDoc processor that can be used as character replacements.
+These attributes provide replacements for non-visible characters (e.g., empty and no break space), common typographical marks (e.g., smart quotes), and characters which have special meaning in AsciiDoc (e.g., plus and colons).
+
+The AsciiDoc processor does not prevent you from reassigning these predefined attributes.
+However, you are encouraged to treat them as read-only.
+Only a converter should override them when the output format requires the use of a different encoding scheme.
+
+.Built-in document attributes for character replacement
 // tag::table[]
 [%autowidth,cols="^~m,^~l,^~"]
 |===
@@ -14,18 +22,18 @@ e|nothing
 |{empty}
 
 |sp
-e|single space
+e|space
 |{sp}
 
 |nbsp
 |&#160;
 |{nbsp}
 
-|zwsp^[4]^
+d|``zwsp``^[1]^
 |&#8203;
 |{zwsp}
 
-|wj^[5]^
+d|``wj``^[2]^
 |&#8288;
 |{wj}
 
@@ -126,15 +134,15 @@ e|single space
 |&#43;&#43;
 |===
 
-^[1]^ Some replacements are Unicode characters, whereas others are numeric character references (e.g., \&#34;).
-These character references are used whenever the use of the Unicode character could interfere with the AsciiDoc syntax or confuse the renderer (i.e., the browser).
-It's up to the converter to transform the reference into something the renderer understands (something both the man page and PDF converter handle).
+^[1]^ The Zero Width Space (ZWSP) is a code point in Unicode that shows where a long word can be split if necessary.
 
-^[2]^ An AsciiDoc processor does not prevent you from reassigning predefined attributes.
-However, it's best to treat them as read-only unless the output format requires the use of a different encoding scheme.
-These attributes are an effective tool for decoupling content and presentation.
-
-^[4]^ The Zero Width Space (ZWSP) is a code point in Unicode that shows where a long word can be split if necessary.
-
-^[5]^ The word joiner (WJ) is a code point in Unicode that prevents a line break at its position.
+^[2]^ The word joiner (WJ) is a code point in Unicode that prevents a line break at its position.
 // end::table[]
+
+Notice that some replacement values are Unicode characters, whereas others are numeric character references (e.g., \&#34;).
+The numeric character reference is when the Unicode character could interfere with the AsciiDoc syntax.
+In this case, it's the responsiblity of the converter to transform that numeric character reference into a format that is compatibile with the output format.
+For example, in the man page converter, each character reference is replaced with a troff macro.
+
+Thus, the abstraction of using AsciiDoc attributes for character replacements not only gives the author control over how the document is interpreted, it also helps decouple content and presentation.
+In other words, it's more protable to use an attribute reference in the content rather than hardcode a nummeric character reference.
