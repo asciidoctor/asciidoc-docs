@@ -8,7 +8,6 @@ However, you are encouraged to treat them as read-only.
 Only a converter should override them when the output format requires the use of a different encoding scheme.
 
 .Built-in document attributes for character replacement
-// tag::table[]
 [%autowidth,cols="^~m,^~l,^~"]
 |===
 |Attribute name |Replacement text |Appearance
@@ -137,7 +136,6 @@ d|``wj``^[2]^
 ^[1]^ The Zero Width Space (ZWSP) is a code point in Unicode that shows where a long word can be split if necessary.
 
 ^[2]^ The word joiner (WJ) is a code point in Unicode that prevents a line break at its position.
-// end::table[]
 
 Notice that some replacement values are Unicode characters, whereas others are numeric character references (e.g., \&#34;).
 The numeric character reference is when the Unicode character could interfere with the AsciiDoc syntax.
