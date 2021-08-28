@@ -20,6 +20,11 @@ For example, to produce the `&sect;` symbol you could write `\&sect;`, `\&#x00A7
 When the document is processed, `replacements` will replace the section symbol reference, regardless of whether it is a named character reference or a numeric character reference, with `\&#167;`.
 In turn, `\&#167;` will display as &sect;.
 
+An AsciiDoc processor allows you to use any of the named character references (aka named entities) defined in HTML (e.g., \&euro; resolves to &euro;).
+However, using named character references can cause problems when generating non-HTML output such as PDF because the lookup table needed to resolve these names may not be defined.
+The recommendation is avoid using named character references, with the exception of the well-known ones defined in XML (i.e., lt, gt, amp, quot, apos).
+Instead, use numeric character references (e.g., \&#8364;).
+
 [#char-ref-sidebar]
 .Anatomy of a character reference
 ****
