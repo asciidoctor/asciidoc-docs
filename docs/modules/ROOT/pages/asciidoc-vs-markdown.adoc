@@ -379,7 +379,7 @@ a|
 [source]
 ----
 = Writing posts
-:awestruct-layout: base
+:page-layout: base
 :showtitle:
 :prev_section: defining-frontmatter
 :next_section: creating-pages
