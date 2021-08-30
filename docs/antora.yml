@@ -15,6 +15,7 @@ nav:
 - modules/document/nav.adoc
 - modules/sections/nav.adoc
 - modules/blocks/nav-paragraph.adoc
+- modules/blocks/nav-discrete-headings.adoc
 - modules/blocks/nav-breaks.adoc
 - modules/text/nav.adoc
 - modules/lists/nav.adoc
