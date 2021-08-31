@@ -31,6 +31,7 @@ Changed::
 * rewrite page about multiline attribute values to describe line joiner as a line continuation
 * change mentions of Asciidoctor to AsciiDoc processor where applicable
 * clarify that formatting pairs cannot be overlapped
+* move discrete headings page to blocks module and map to top-level entry in nav (#4)
 
 == Published Q2 2021
 
