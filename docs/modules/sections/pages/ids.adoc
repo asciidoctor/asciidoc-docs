@@ -3,7 +3,8 @@
 // New page, content taken from sections.adoc
 // was [#auto-id]
 
-Unless you specify a custom ID for a section, the AsciiDoc processor will automatically generate an ID from the section's title and assign it to the section.
+Unless you specify a custom ID for a section or discrete heading, the AsciiDoc processor will automatically generate an ID from the block's title and assign it to the block.
+This automatic ID generation is applied to both section titles and discrete headings.
 
 == How a section ID is assembled
 
