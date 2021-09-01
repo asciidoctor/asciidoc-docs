@@ -1,4 +1,5 @@
 = Document Structure
+:page-aliases: document.adoc
 
 On this page, you'll learn about the overall structure of an AsciiDoc document.
 Don't worry about the details of the syntax at this point.
