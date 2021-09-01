@@ -1,0 +1,13 @@
+// tag::basic[]
+= Book Title
+:doctype: book
+
+= Part I
+// end::basic[]
+
+// tag::style[]
+[partintro]
+// end::style[]
+This is the implicit partintro.
+
+== Chapter A
