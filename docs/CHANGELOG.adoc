@@ -24,6 +24,7 @@ Added::
 * add the window attribute to the reference table for image macros
 * document the linenums option on source blocks
 * add `pp` to the table of character replacement attributes
+* document the partintro block style (#84)
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
