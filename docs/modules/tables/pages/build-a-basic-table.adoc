@@ -1,4 +1,5 @@
 = Build a Basic Table
+:page-aliases: index.adoc
 
 A table is a delimited block that can have optional customizations, such as an ID and a title, as well as table-specific attributes, options, and roles.
 However, at its most basic, a table only needs columns and rows.
