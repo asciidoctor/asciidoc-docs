@@ -43,7 +43,7 @@ include::example$part.adoc[tags=**]
 
 == Special sections for parts
 
-A part can have its own xref:preface.adoc[preface], xref:bibliography.adoc[bibliography], xref:glossary.adoc[glossary] and xref:index.adoc[index].
+A part can have its own xref:preface.adoc[preface], xref:bibliography.adoc[bibliography], xref:glossary.adoc[glossary] and xref:user-index.adoc[index].
 
 [source]
 ----
