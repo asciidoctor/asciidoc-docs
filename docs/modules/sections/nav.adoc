@@ -22,5 +22,5 @@
 *** xref:appendix.adoc[]
 *** xref:glossary.adoc[]
 *** xref:bibliography.adoc[]
-*** xref:index.adoc[]
+*** xref:user-index.adoc[]
 ** xref:section-ref.adoc[]
