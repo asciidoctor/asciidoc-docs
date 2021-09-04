@@ -5,7 +5,6 @@
 //icon:check[role="green"]
 :n: No
 //icon:times[role="red"]
-// um anchor: subs-mac
 
 The content of inline and block macros, such as cross references, links, and block images, are processed by the macros substitution step.
 The macros step replaces a macro's content with the appropriate built-in and user-defined configuration.
