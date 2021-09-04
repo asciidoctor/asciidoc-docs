@@ -25,6 +25,7 @@ nav:
 - modules/tables/nav.adoc
 - modules/stem/nav.adoc
 - modules/blocks/nav-open.adoc
+- modules/blocks/nav-collapsible.adoc
 - modules/ROOT/nav-comment.adoc
 - modules/toc/nav.adoc
 - modules/directives/nav.adoc

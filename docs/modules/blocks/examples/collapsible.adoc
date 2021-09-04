@@ -1,0 +1,44 @@
+// tag::basic[]
+[%collapsible]
+====
+This content is only revealed when the user clicks the block title.
+====
+// end::basic[]
+
+// tag::paragraph[]
+[example%collapsible]
+This content is only revealed when the user clicks the block title.
+// end::paragraph[]
+
+// tag::title[]
+.Click to reveal the answer
+[%collapsible]
+====
+This is the answer.
+====
+// end::title[]
+
+// tag::open[]
+.Too much detail? Click here.
+[%collapsible%open]
+====
+This content is revealed by default.
+
+If it's taking up too much space, the reader can hide it.
+====
+// end::open[]
+
+// tag::nested[]
+.Show stacktrace
+[%collapsible]
+====
+....
+Error: Content repository not found (url: https://git.example.org/repo.git)
+    at transformGitCloneError
+    at git.clone.then.then.catch
+Caused by: HttpError: HTTP Error: 401 HTTP Basic: Access Denied
+    at GitCredentialManagerStore.rejected
+    at fill.then
+....
+====
+// end::nested[]
