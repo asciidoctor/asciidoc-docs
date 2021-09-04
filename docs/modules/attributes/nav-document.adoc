@@ -11,3 +11,4 @@
 ** xref:reference-attributes.adoc[]
 *** xref:unresolved-references.adoc[]
 ** xref:assignment-precedence.adoc[]
+** xref:counters.adoc[]
