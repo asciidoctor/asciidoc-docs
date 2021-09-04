@@ -81,6 +81,32 @@ The style extends the context to give it special behavior.
 NOTE: The context is what the converter uses to dispatch to a convert method.
 The style is used by the converter to apply special behavior to blocks of the same type.
 
+=== Valid block context names
+
+Asciidoctor's block types (or block contexts) include:
+
+* document
+* section
+* paragraph
+* image
+* dlist (description list)
+* ulist
+* olist
+* list_item
+* literal
+* listing
+* admonition
+* sidebar
+* example
+* open
+* pass (a passthrough block)
+* table
+* thematic_break (horizontal rule)
+* page_break
+
+NOTE: Links have the context 'paragraph'.
+
+
 == Block commonalities
 
 //Every block can have one or more lines of block metadata.
