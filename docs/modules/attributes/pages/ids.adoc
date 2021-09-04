@@ -89,7 +89,6 @@ The id (`#`) shorthand can be used on inline quoted text.
 [#anchor]
 == Use an ID as an anchor
 
-//um anchor: anchordef
 An anchor (aka ID) can be defined almost anywhere in the document, including on a section title, on a discrete heading, on a paragraph, on an image, on a delimited block, on an inline phrase, and so forth.
 The anchor is declared by enclosing a _valid_ XML Name in double square brackets (e.g., `+[[idname]]+`) or using the shorthand ID syntax (e.g., `[#idname]`) at the start of an attribute list.
 
