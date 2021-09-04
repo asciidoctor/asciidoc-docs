@@ -24,7 +24,6 @@ nav:
 - modules/verbatim/nav.adoc
 - modules/tables/nav.adoc
 - modules/stem/nav.adoc
-- modules/attributes/nav-counter.adoc
 - modules/blocks/nav-open.adoc
 - modules/ROOT/nav-comment.adoc
 - modules/toc/nav.adoc
