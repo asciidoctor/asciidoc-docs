@@ -1,6 +1,39 @@
 = Audio and Video
 :url-video-element: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
-:url-video-browsers: https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility
+:url-audio-element: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+:url-media-formats: https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility
+
+== Audio macro syntax
+
+The block audio macro enables to to embed audio streams into your documentation.
+You can embed self-hosted audio files that are supported by the browser.
+
+The audio formats AsciiDoc supports is dictated by the output format, such as the formats supported by the browser when generating HTML.
+While this was once a precarious ordeal, HTML 5 has brought sanity to audio support in the browser by adding a dedicated {url-audio-element}[`<audio>`^] element and by introducing several standard audio formats.
+Those formats are now widely supported across browsers and systems.
+
+For a canonical list of supported web audio formats and their interaction with modern browsers, see the {url-media-formats}[Mozilla Developer Supported Media Formats^] documentation.
+
+.Basic audio file include
+----
+include::example$audio.adoc[tag=basic]
+----
+
+You can control the audio settings using additional attributes on the macro.
+For instance, you can offset the start time of playback using the `start` attribute and enable autoplay using the `autoplay` option.
+
+.Set attributes for local audio playback
+----
+include::example$audio.adoc[tag=attrs]
+----
+
+You can include a caption above the audio using the title attribute.
+
+.Add a caption to the audio
+[source]
+----
+include::example$audio.adoc[tag=caption]
+----
 
 == Video macro syntax
 
@@ -11,7 +44,7 @@ The video formats AsciiDoc supports is dictated by the output format, such as th
 While this was once a precarious ordeal, HTML 5 has brought sanity to video support in the browser by adding a dedicated {url-video-element}[`<video>`^] element and by introducing several standard video formats.
 Those formats are now widely supported across browsers and systems.
 
-For a canonical list of supported web video formats and their interaction with modern browsers, see the {url-video-browsers}[Mozilla Developer Supported Media Formats^] documentation.
+For a canonical list of supported web video formats and their interaction with modern browsers, see the {url-media-formats}[Mozilla Developer Supported Media Formats^] documentation.
 
 .A recommendation for serving video to browsers
 ****
@@ -58,13 +91,13 @@ To use this feature, put the video ID in the macro target and the name of the ho
 .Embed a YouTube video
 [source]
 ----
-include::example$video.adoc[tag=you]
+include::example$video.adoc[tag=youtube]
 ----
 
 .Embed a Vimeo video
 [source]
 ----
-include::example$video.adoc[tag=vim]
+include::example$video.adoc[tag=vimeo]
 ----
 
 == Audio and video attributes and options

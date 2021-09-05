@@ -5,22 +5,22 @@ Included in:
 ////
 
 // tag::base[]
-video::video_file.mp4[]
+video::video-file.mp4[]
 // end::base[]
 
 // tag::attr[]
-video::video_file.mp4[width=640,start=60,end=140,opts=autoplay]
+video::video-file.mp4[width=640,start=60,opts=autoplay]
 // end::attr[]
 
 // tag::caption[]
 .A walkthrough of the product
-video::video_file.mp4[]
+video::video-file.mp4[]
 // end::caption[]
 
-// tag::you[]
+// tag::youtube[]
 video::rPQoq7ThGAU[youtube]
-// end::you[]
+// end::youtube[]
 
-// tag::vim[]
+// tag::vimeo[]
 video::67480300[vimeo]
-// end::vim[]
+// end::vimeo[]

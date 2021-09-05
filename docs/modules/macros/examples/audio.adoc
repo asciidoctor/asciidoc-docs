@@ -1,0 +1,12 @@
+// tag::basic[]
+audio::ocean-waves.wav[]
+// end::basic[]
+
+// tag::attrs[]
+audio::ocean-waves.wav[start=60,opts=autoplay]
+// end::attrs[]
+
+// tag::caption[]
+.Take a zen moment
+audio::ocean-waves.wav[]
+// end::caption[]
