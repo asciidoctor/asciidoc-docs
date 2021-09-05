@@ -5,9 +5,24 @@
 |===
 |Attribute |Value(s) |Example Syntax |Notes
 
-|`options`
+|`title`
+|User defined text
+|`.Ocean waves`
+|
+
+|`start`
+|User-defined playback start time in seconds.
+|`start=30`
+|
+
+|`end`
+|User-defined playback end time in seconds.
+|`end=90`
+|
+
+|`options` (`opts`)
 |`autoplay`, `loop`, `controls`, `nocontrols`
-|`audio::ocean_waves.mp3[options="autoplay,loop"]`
+|`opts="autoplay,loop"`
 |The controls value is enabled by default
 |===
 
@@ -37,12 +52,6 @@ Also used to specify the service when referring to a video hosted on YouTube (`y
 |`height=480`
 |Can be specified as the third positional (unnamed) attribute.
 
-|`options`
-|`autoplay`, `loop`, `modest`, `nocontrols`, `nofullscreen`
-|`opts="autoplay,loop"`
-|The controls are enabled by default.
-The `modest` option enables modest branding for a YouTube video.
-
 |`start`
 |User-defined playback start time in seconds.
 |`start=30`
@@ -62,4 +71,10 @@ The `modest` option enables modest branding for a YouTube video.
 |The language used in the YouTube frame.
 |`lang=fr`
 |A BCP 47 language tag (typically a two-letter language code, like `en`).
+
+|`options` (`opts`)
+|`autoplay`, `loop`, `modest`, `nocontrols`, `nofullscreen`
+|`opts="autoplay,loop"`
+|The controls are enabled by default.
+The `modest` option enables modest branding for a YouTube video.
 |===

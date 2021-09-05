@@ -26,6 +26,7 @@ Added::
 * document the linenums option on source blocks
 * add `pp` to the table of character replacement attributes
 * document the partintro block style (#84)
+* document start and end attributes on audio macro (#74)
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
