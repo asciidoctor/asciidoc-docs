@@ -27,6 +27,8 @@ Added::
 * add `pp` to the table of character replacement attributes
 * document the partintro block style (#84)
 * document start and end attributes on audio macro (#74)
+* full document the audio macro, providing both an introduction and examples
+* add the audio macro to the syntax quick reference
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
