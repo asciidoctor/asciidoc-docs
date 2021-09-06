@@ -34,7 +34,19 @@ If you want to specify alt text, enter it inside the square brackets.
 include::example$image.adoc[tag=alt]
 ----
 
-You can also give the image an id, title, set its dimensions and make it a link.
+If the alt text contains a comma, you must enclose the alt text in double quotes.
+The double quote enclosure effectively escapes the comma from being interpreted as an attribute separator.
+
+.Block image macro with alt text that contains a comma
+[source#ex-alt-with-comma]
+----
+include::example$image.adoc[tag=alt-with-comma]
+----
+
+NOTE: Although you could enclose the alt text in single quotes to escape the comma, doing so implicitly enables substitutions.
+Unless you need substitutions to be applied to the alt text, prefer using double quotes as the enclosure.
+
+You can also give the image an ID, title, set its dimensions and make it a link.
 
 .Block image macro with attribute list
 [source#ex-attributes]
