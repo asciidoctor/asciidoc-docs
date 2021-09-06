@@ -29,6 +29,7 @@ Added::
 * document start and end attributes on audio macro (#74)
 * full document the audio macro, providing both an introduction and examples
 * add the audio macro to the syntax quick reference
+* show example of how to specify alt text that contains a comma
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro

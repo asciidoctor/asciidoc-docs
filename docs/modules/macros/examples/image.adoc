@@ -17,6 +17,10 @@ image::macros:sunset.jpg[]
 image::sunset.jpg[Sunset]
 // end::alt[]
 
+// tag::alt-with-comma[]
+image::sunset.jpg["Mesa Verde Sunset, by JAVH"]
+// end::alt-with-comma[]
+
 // in qr as result
 // tag::qr-alt[]
 image::macros:sunset.jpg[Sunset]
