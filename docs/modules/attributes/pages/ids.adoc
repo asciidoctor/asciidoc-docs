@@ -13,6 +13,44 @@ An ID:
 You can assign an ID to blocks using the shorthand hash (`+#+`) syntax, longhand (`id=`) syntax, or the legacy anchor (`[[]]`) syntax.
 You can assign an ID to inline elements using the shorthand hash (`+#+`) syntax or by adding an anchor adjacent to the inline element using the anchor (`[[]]`) syntax.
 
+== Valid ID characters
+
+AsciiDoc does not restrict the set of characters that can be used for an ID when the ID is defined using the named `id` attribute.
+All the language requires in this case is that the value be non-empty.
+When the ID is defined using the shorthand hash syntax or the anchor syntax, the acceptable characters is more limited (for example, spaces are not permitted).
+Regardless, it's not advisable to exploit the ability to use any characters the AsciiDoc syntax allows.
+The reason to be cautious is because the ID is passed through to the output, and not all output formats afford the same latitude.
+For example, XML is far more restrictive about which characters are permitted in an ID value.
+
+To ensure portability of your IDs, it's best to conform to a universal standard.
+The standard we recommend following is a https://www.w3.org/TR/REC-xml/#NT-Name[Name] value as defined by the XML specification.
+At a high level, the first character of a Name must be a letter, colon, or underscore and the optional following characters must be a letter, colon, underscore, hyphen, period, or digit.
+You should not use any space characters in an ID.
+Starting the ID with a digit is less likely to be problematic, but still best to avoid.
+It's best to use lowercase letters whenever possible as this solves portability problem when using case-insensitive platforms.
+
+When the AsciiDoc processor auto-generates IDs for section titles and discrete headings, it adheres to this standard.
+
+Here are examples of valid IDs (according to the recommendations above):
+
+[listing]
+----
+install
+data-structures
+error-handling
+subject-and-body
+unset_an_attribute
+----
+
+Here are examples of invalid IDs:
+
+[listing]
+----
+install the gem
+3 blind mice
+-about-the-author
+----
+
 ////
 BlockId
 
