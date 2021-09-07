@@ -1,0 +1,18 @@
+= Passthroughs
+
+A passthrough is a mechanism in AsciiDoc for passing chunks of content directly through to the output.
+Most passthroughs give you control over which substitutions are applied to the content.
+AsciiDoc provides both block and inline forms of the passthrough.
+//Typically, a passthrough is used either to pass raw content like HTML to the output, or to escape content from inline formatting.
+
+The xref:pass-block.adoc[block form] of the passthrough is represented either by the `pass:[++++]` block delimiters or the `pass` style on a paragraph.
+The main use of the block form is to pass a chunk of non-AsciiDoc content directly through to the output.
+For example, you can use the passthrough block to pass raw HTML to the HTML output.
+However, by doing so, you're coupling your AsciiDoc content to an output format, thus making it less portable.
+It's best either to leave the use of the passthough block up to an extension, or enclose it in a preprocessor conditional.
+
+The xref:pass-macro.adoc[inline form] of the passthrough comes in more forms and thus has more uses.
+An inline passthrough is represented by the `+pass:[]+` macro or by pairs of one to three pluses.
+Only the macro gives you control over the substitutions that are applied.
+While an inline passthrough can be used to pass raw content like HTML to the output, far more often it's used as a way to escape content from inline formatting.
+For example, you can use an inline passthrough to output characters that would otherwise be replaced, such as three sequential periods.
