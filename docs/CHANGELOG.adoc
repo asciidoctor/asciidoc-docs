@@ -31,6 +31,7 @@ Added::
 * add the audio macro to the syntax quick reference
 * show example of how to specify alt text that contains a comma
 * document which characters AsciiDoc allows in an ID value and provide recommendations
+* add intro page to passthroughs section
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
