@@ -38,7 +38,7 @@ include::example$audio.adoc[tag=caption]
 == Video macro syntax
 
 The block video macro enables you to embed videos into your documentation.
-You can embed self-hosted videos or videos shared on popular video hosting sites such as YouTube and Vimeo.
+You can embed self-hosted videos or videos shared on popular video hosting sites such as Vimeo and YouTube.
 
 The video formats AsciiDoc supports is dictated by the output format, such as the formats supported by the browser when generating HTML.
 While this was once a precarious ordeal, HTML 5 has brought sanity to video support in the browser by adding a dedicated {url-video-element}[`<video>`^] element and by introducing several standard video formats.
@@ -48,12 +48,12 @@ For a canonical list of supported web video formats and their interaction with m
 
 .A recommendation for serving video to browsers
 ****
-Where appropriate, we recommend using a video hosting service like YouTube or Vimeo to serve videos in online documentation.
+Where appropriate, we recommend using a video hosting service like Vimeo or YouTube to serve videos in online documentation.
 These services specialize in streaming optimized video to the browser, with the lowest latency possible given hardware, software, and network capabilities of the device viewing the video.
 
 Vimeo even offers a white label mode so users aren't made aware that the video is being served through its service.
 
-See <<YouTube and Vimeo videos>> for details about how to serve videos from these services.
+See <<Vimeo and YouTube videos>> for details about how to serve videos from these services.
 ****
 
 .Basic video file include
@@ -79,14 +79,18 @@ You can include a caption on the video using the title attribute.
 include::example$video.adoc[tag=caption]
 ----
 
-=== YouTube and Vimeo videos
+=== Vimeo and YouTube videos
 
-The video macro supports embedding videos from external video hosting services like YouTube and Vimeo.
+The video macro supports embedding videos from external video hosting services like Vimeo and YouTube.
 The AsciiDoc processor, specifically the converter, automatically generates the correct code to embed the video in the HTML output.
 
 To use this feature, put the video ID in the macro target and the name of the hosting service in the first positional attribute.
 
-// TODO document dynamic playlist functionality for YouTube videos
+.Embed a Vimeo video
+[source]
+----
+include::example$video.adoc[tag=vimeo]
+----
 
 .Embed a YouTube video
 [source]
@@ -94,10 +98,37 @@ To use this feature, put the video ID in the macro target and the name of the ho
 include::example$video.adoc[tag=youtube]
 ----
 
-.Embed a Vimeo video
+When embedding a YouTube video, you can specify a playlist to associate with the video using the `list` attribute.
+The playlist must be specified by its ID.
+
+.Embed a YouTube video with a playlist
 [source]
 ----
-include::example$video.adoc[tag=vimeo]
+include::example$video.adoc[tag=youtube-with-list]
+----
+
+Instead of using the `list` attribute, you can specify the ID of the playlist after the video ID in the target, separated by a slash.
+
+.Embed a YouTube video with a playlist in the target
+[source]
+----
+include::example$video.adoc[tag=youtube-with-list-in-target]
+----
+
+Alternatively, you can also create a dynamic, unnamed playlist by listing several additional video IDs in the `playlist` attribute.
+
+.Embed a YouTube video with a dynamic playlist
+[source]
+----
+include::example$video.adoc[tag=youtube-with-playlist]
+----
+
+Instead of using the `playlist` attribute, you can create a dynamic, unnamed playlist by listing several video IDs in the target separated by a comma.
+
+.Embed a YouTube video with a dynamic playlist in the target
+[source]
+----
+include::example$video.adoc[tag=youtube-with-playlist-in-target]
 ----
 
 == Audio and video attributes and options
@@ -142,7 +173,7 @@ include::example$video.adoc[tag=vimeo]
 |A URL to an image to show until the user plays or seeks.
 |`poster=sunset.jpg`
 |Can be specified as the first positional (unnamed) attribute.
-Also used to specify the service when referring to a video hosted on YouTube (`youtube`) or Vimeo (`vimeo`).
+Also used to specify the service when referring to a video hosted on Vimeo (`vimeo`) or YouTube (`youtube`).
 
 |`width`
 |User-defined size in pixels.
@@ -173,6 +204,18 @@ Also used to specify the service when referring to a video hosted on YouTube (`y
 |The language used in the YouTube frame.
 |`lang=fr`
 |A BCP 47 language tag (typically a two-letter language code, like `en`).
+
+|`list`
+|The ID of a playlist to associate with a YouTube video.
+|`list=PLabc123`
+|Only applies to YouTube videos.
+
+|`playlist`
+|Additional video IDs to create a dynamic YouTube playlist.
+|`playlist="video-abc,video-xyz"`
+|IDs must be separated by commas.
+Therefore, the value must be enclosed in double quotes.
+Only applies to YouTube videos.
 
 |`options` (`opts`)
 |`autoplay`, `loop`, `modest`, `nocontrols`, `nofullscreen`

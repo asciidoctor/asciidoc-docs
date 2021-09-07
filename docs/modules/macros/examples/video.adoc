@@ -18,8 +18,24 @@ video::video-file.mp4[]
 // end::caption[]
 
 // tag::youtube[]
-video::rPQoq7ThGAU[youtube]
+video::RvRhUHTV_8k[youtube]
 // end::youtube[]
+
+// tag::youtube-with-list[]
+video::RvRhUHTV_8k[youtube,list=PLDitloyBcHOm49bxNhvGgg0f9NRZ5lSaP]
+// end::youtube-with-list[]
+
+// tag::youtube-with-list-in-target[]
+video::RvRhUHTV_8k/PLDitloyBcHOm49bxNhvGgg0f9NRZ5lSaP[youtube]
+// end::youtube-with-list-in-target[]
+
+// tag::youtube-with-playlist[]
+video::RvRhUHTV_8k[youtube,playlist="_SvwdK_HibQ,SGqg_ZzThDU"]
+// end::youtube-with-playlist[]
+
+// tag::youtube-with-playlist-in-target[]
+video::RvRhUHTV_8k,_SvwdK_HibQ,SGqg_ZzThDU[youtube]
+// end::youtube-with-playlist-in-target[]
 
 // tag::vimeo[]
 video::67480300[vimeo]
