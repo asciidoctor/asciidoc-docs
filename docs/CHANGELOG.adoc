@@ -30,6 +30,7 @@ Added::
 * full document the audio macro, providing both an introduction and examples
 * add the audio macro to the syntax quick reference
 * show example of how to specify alt text that contains a comma
+* document which characters AsciiDoc allows in an ID value and provide recommendations
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro
