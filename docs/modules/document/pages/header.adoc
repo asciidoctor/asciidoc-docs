@@ -4,10 +4,10 @@ The document header is a series of contiguous lines at the start of the document
 
 == Document header structure
 
-The document header is a series of contiguous lines that starts on the first line of the file.
+The document header is a series of contiguous lines that starts on the first non-empty line of the file.
 
-WARNING: The document header can't contain blank lines or block content.
-The first blank line that the processor encounters is interpreted as the end of the document header and the beginning of the document body.
+IMPORTANT: *The document header cannot contain empty lines.*
+The first empty line that the processor encounters is interpreted as the end of the document header and the beginning of the document body.
 
 A header typically begins with a xref:title.adoc[].
 When a document title is specified, it can be immediately followed by two special (but optional) lines of content that assign xref:author-information.adoc[] and xref:revision-information.adoc[].
