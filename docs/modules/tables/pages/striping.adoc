@@ -21,6 +21,9 @@ The `stripes` attribute accepts the following values:
 * `all` - all rows are shaded
 * `hover` - the row under the mouse cursor is shaded (HTML only)
 
+The stripes setting is inherited by nested tables.
+If you want different striping to be applied to a nested table, it's necessary to set the `stripes` attribute on that table explicitly.
+
 == stripes block attribute
 
 In the following example, the stripes are enabled for even rows in the table body (the row that contains A2 and B2).
