@@ -115,7 +115,7 @@ Instead of using the `list` attribute, you can specify the ID of the playlist af
 include::example$video.adoc[tag=youtube-with-list-in-target]
 ----
 
-Alternatively, you can also create a dynamic, unnamed playlist by listing several additional video IDs in the `playlist` attribute.
+Alternatively, you can create a dynamic, unnamed playlist by listing several additional video IDs in the `playlist` attribute.
 
 .Embed a YouTube video with a dynamic playlist
 [source]
