@@ -42,6 +42,7 @@ Changed::
 * clarify that formatting pairs cannot be overlapped
 * move discrete headings page to blocks module and map to top-level entry in nav (#4)
 * clarify that the custom cell separator on a table must be a single character
+* clarify that the stripes setting on a table is inherited by nested tables
 
 == Published Q2 2021
 
