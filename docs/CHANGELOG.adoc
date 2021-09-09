@@ -41,6 +41,7 @@ Changed::
 * change mentions of Asciidoctor to AsciiDoc processor where applicable
 * clarify that formatting pairs cannot be overlapped
 * move discrete headings page to blocks module and map to top-level entry in nav (#4)
+* clarify that the custom cell separator on a table must be a single character
 
 == Published Q2 2021
 

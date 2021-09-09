@@ -46,8 +46,8 @@ d|specifiers
 |!
 |default for nested tables
 d|user-defined
-|any sequence of literal characters (e.g., `{brvbar}` or `][`).
-_Ideally a pattern not found in the cell content._
+|any single character or `\t` for tab (e.g., `{brvbar}` or `%`).
+_Ideally a character not found in the cell content._
 
 .4+|frame
 .4+|draws a border around the table
