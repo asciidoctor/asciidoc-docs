@@ -12,7 +12,7 @@ Only a converter should override them when the output format requires the use of
 |===
 |Attribute name |Replacement text |Appearance
 
-|blank
+d|``blank``^[1]^
 e|nothing
 |{empty}
 
@@ -28,11 +28,11 @@ e|space
 |&#160;
 |{nbsp}
 
-d|``zwsp``^[1]^
+d|``zwsp``^[2]^
 |&#8203;
 |{zwsp}
 
-d|``wj``^[2]^
+d|``wj``^[3]^
 |&#8288;
 |{wj}
 
@@ -133,9 +133,11 @@ d|``wj``^[2]^
 |&#43;&#43;
 |===
 
-^[1]^ The Zero Width Space (ZWSP) is a code point in Unicode that shows where a long word can be split if necessary.
+^[1]^ An alias for the attribute `empty`, for those who find this terminology clearer.
 
-^[2]^ The word joiner (WJ) is a code point in Unicode that prevents a line break at its position.
+^[2]^ The Zero Width Space (ZWSP) is a code point in Unicode that shows where a long word can be split if necessary.
+
+^[3]^ The word joiner (WJ) is a code point in Unicode that prevents a line break at its position.
 
 Notice that some replacement values are Unicode characters, whereas others are numeric character references (e.g., \&#34;).
 The numeric character reference is when the Unicode character could interfere with the AsciiDoc syntax.
