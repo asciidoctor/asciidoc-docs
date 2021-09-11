@@ -33,6 +33,7 @@ Added::
 * document which characters AsciiDoc allows in an ID value and provide recommendations
 * add intro page to passthroughs section
 * document the list and playlist attributes when embedding YouTube videos
+* document the proposed description list with marker list type
 
 Changed::
 * provide more details and examples that explain how to use the attribute list of a mailto macro

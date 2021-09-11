@@ -1,0 +1,142 @@
+= Description Lists With Marker
+
+WARNING: Not yet an official part of the AsciiDoc language and thus should be considered experimental.
+
+Asciidoctor introduces a list type that's a hybrid between a description list and either an unordered or ordered list.
+This hybrid list, often referred to as an unordered or ordered description list, has the appearance of an unordered or ordered list, respectively, except that the subject of each list item is emphasized in bold text and either offset from the description by a stop character followed by a space or stacked above it.
+
+NOTE: Currently, only Asciidoctor PDF supports the syntax defined on this page, though support in the HTML converter is in the works.
+Asciidoctor EPUB 3 supports a slightly different variation in that is uses a different block style for unordered lists (`itemized` instead of `unordered`).
+Though that difference will be aligned in a future release.
+
+== Introduction
+
+In an unordered and ordered description list, the first term in each item is preceded by a marker.
+Additional terms are ignored.
+The marker is a bullet for an unordered list or a number for an ordered list.
+The term effectively becomes the subject, appearing in bold text.
+
+Here's an example of a description list with marker.
+
+====
+* *boolean:* use true and false, not 1 and 0 or T and F
+* *number:* use Arabic numerals without punctuation (other than the decimal point in a floating point number)
+* *enumerated value:* use only one of the allowed values, respecting case
+====
+
+This list type also provides control over the stop character that's inserted after the term so it can more naturally flow into the item description.
+It can also be configured so that the subject is stacked above the description.
+This page describes the syntax of this list type and how to customize its appearance.
+
+== Syntax
+
+In AsciiDoc, a description list with a marker is defined just like a normal description list.
+The difference is that it must be annotated with either the `unordered` or `ordered` block style.
+The `unordered` block style creates an unordered list and the `ordered` block style creates an ordered list.
+
+Here's an example of an unordered description list.
+
+----
+[unordered]
+boolean:: use true and false, not 1 and 0 or T and F
+number:: use Arabic numerals without punctuation (other than the decimal point to make a floating point number)
+enumerated value:: use only one of the allowed values, respecting case
+----
+
+Here's how this syntax will appear, where supported:
+
+====
+* *boolean:* use true and false, not 1 and 0 or T and F
+* *number:* use Arabic numerals without punctuation (other than the decimal point in a floating point number)
+* *enumerated value:* use only one of the allowed values, respecting case
+====
+
+To make an ordered list instead, change the block style to `ordered`.
+
+----
+[ordered]
+&:: ampersand
+>:: grea
+----
+
+Here's how this syntax will appear, where supported:
+
+====
+. *&:* ampersand
+. *>:* greater than
+====
+
+== Subject stop
+
+By default, the subject (i.e., the term) is followed immediately by a colon (still in bold) and offset from the description by a space.
+You can replace the colon with another character (or sequence of characters) using the block attribute named `subject-stop`.
+
+----
+[unordered,subject-stop=)]
+alpha:: partially feature complete, unstable, and subject to change
+beta:: feature complete and undergoing testing
+----
+
+Here's how this syntax will appear, where supported:
+
+====
+* *alpha)* partially feature complete, unstable, and subject to change
+* *beta)* feature complete and undergoing testing
+====
+
+If the term ends with a period or the value of the subject-stop attribute, the subject stop is not added.
+
+TIP: To insert a space between the subject and visible stop character(s), add a space character at the start of the value of the subject-stop attribute.
+You'll also need to enclose the value in double quotes so the space character is preserved.
+
+== Stacked
+
+A description list with marker uses a run-in layout by default.
+In other words, the subject appears on the same line as the description, separated by the subject stop and a space.
+To make the subject appear above the description, like in a normal description list, add the `stack` role to the list.
+In this case, the stop character is only added if specified explicitly.
+
+----
+[unordered.stack]
+boolean:: use true and false, not 1 and 0 or T and F
+number:: use Arabic numerals without punctuation (other than the decimal point to make a floating point number)
+enumerated value:: use only one of the allowed values, respecting case
+----
+
+Here's how this syntax will appear, where supported:
+
+====
+* *boolean* +
+use true and false, not 1 and 0 or T and F
+* *number* +
+use Arabic numerals without punctuation (other than the decimal point in a floating point number)
+* *enumerated value* +
+use only one of the allowed values, respecting case
+====
+
+WARNING: We may decide to replace the `stack` role with the `stacked` option (i.e., `%stacked`).
+Alternately, we may decide to reverse the default behavior and make a description list with marker stacked by default, with `run-in` as an option (i.e., `%run-in`).
+These adjustments will be made when this feature is standardized.
+
+== Alternatives
+
+As an alternative to using a description list with marker, you can use a normal unordered or ordered list and format the subject and stop character manually.
+
+----
+* *boolean:* use true and false, not 1 and 0 or T and F
+* *number:* use Arabic numerals without punctuation (other than the decimal point in a floating point number)
+* *enumerated value:* use only one of the allowed values, respecting case
+----
+
+This syntax gives you maximum portability in the short-term.
+
+Although lacking proper semantics, the other way to achieve the same result is to nest a single-item description list inside an otherwise empty list item.
+
+----
+* {empty}
+boolean:: use true and false, not 1 and 0 or T and F
+* {empty}
+number:: use Arabic numerals without punctuation (other than the decimal point in a floating point number)
+* {empty}
+enumerated value:: use only one of the allowed values, respecting case
+----
