@@ -31,5 +31,4 @@ nav:
 - modules/directives/nav.adoc
 - modules/subs/nav.adoc
 - modules/pass/nav.adoc
-- modules/ROOT/nav-compare.adoc
 - modules/attributes/nav-ref.adoc
