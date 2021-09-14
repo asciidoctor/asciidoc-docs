@@ -34,8 +34,10 @@ Added::
 * add intro page to passthroughs section
 * document the list and playlist attributes when embedding YouTube videos
 * document the proposed description list with marker list type
+* add block name, context, block style, structural container, and content model to the glossary
 
 Changed::
+* rewrite the documentation for blocks to include information about content models, contexts, structural containers, delimited blocks, block masquerading, and nesting delimited blocks
 * provide more details and examples that explain how to use the attribute list of a mailto macro
 * make it more clear that GitHub, GitLab, and the browser preview extensions automatically adjust relfilesuffix
 * rewrite page about multiline attribute values to describe line joiner as a line continuation
