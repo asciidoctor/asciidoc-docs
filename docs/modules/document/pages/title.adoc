@@ -58,6 +58,6 @@ The `doctitle` attribute can also be explicitly set and assigned a value using a
 [#title-attr]
 == title attribute
 
-By default, the text of the document title is used as the value of the HTML `<title>` tag and main DocBook `<info>` tag.
+By default, the text of the document title is used as the value of the HTML `<title>` element and main DocBook `<info>` element.
 You can override this behavior by setting the `title` attribute in the header with an attribute entry.
 If neither a level-0 section title or `doctitle` is specified in the header, but `title` is, its value is used as a fallback document title.

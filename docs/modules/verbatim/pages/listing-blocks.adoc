@@ -60,7 +60,7 @@ include::example$listing.adoc[tag=block]
 
 You should notice a few things about how the content is processed.
 
-* The HTML tag `<pre>` is escaped, that is, it's displayed verbatim, not interpreted.
+* The HTML element `<pre>` is escaped, that is, it's displayed verbatim, not interpreted.
 * The endlines are preserved.
 * The phrase _delimited listing block_ isn't italicized, despite having the underscore formatting marks around it.
 

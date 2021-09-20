@@ -30,7 +30,7 @@ Here's how you can assign a custom role to text so you can apply your own styles
 include::example$text.adoc[tag=css-custom]
 ----
 
-When <<ex-custom>> is converted to HTML, the word _asciidoctor_ is wrapped in `<span>` tags and the role `userinput` is used as the element's CSS class.
+When <<ex-custom>> is converted to HTML, the word _asciidoctor_ is enclosed in a `<span>` element and the role `userinput` is used as the element's CSS class.
 
 .HTML output
 [,html]

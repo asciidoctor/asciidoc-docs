@@ -14,7 +14,7 @@ The replacement of the formatting markup on inline elements is called the quotes
 Happy werewolves are *really* slobbery.
 ----
 
-For instance, when a document containing the markup in <<ex-quotes>> is converted to HTML, any asterisks enclosing text are replaced with `<strong>` HTML tags.
+For instance, when a document containing the markup in <<ex-quotes>> is converted to HTML, any asterisks enclosing text are replaced with the start and end tags of the `<strong>` element.
 The resulting HTML can be seen in <<ex-html>> below.
 
 .HTML output

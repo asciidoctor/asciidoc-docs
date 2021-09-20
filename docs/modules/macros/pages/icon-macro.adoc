@@ -111,7 +111,7 @@ icon:download[link=https://rubygems.org/downloads/whizbang-1.0.0.gem, window=_bl
 The attributes listed below only apply when using the image icon mode.
 
 `alt`::
-The alternative text on the `<img>` tag (HTML output) or text for `<inlinemediaobject>` (DocBook output)
+The alternative text on the `<img>` element (HTML output) or text of `<inlinemediaobject>` element (DocBook output)
 
 `width`::
 The width applied to the image.

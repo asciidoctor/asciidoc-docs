@@ -84,7 +84,7 @@ https://asciidoctor.org[Asciidoctor,window=_blank]
 
 === noopener and nofollow
 
-When the value of the `window` attribute is `_blank`, the AsciiDoc processor will also add the `rel="noopener"` attribute to the link tag in the HTML output.
+When the value of the `window` attribute is `_blank`, the AsciiDoc processor will also add the `rel="noopener"` attribute to the `<a>` element in the HTML output.
 Doing so is considered a security best practice.
 
 If the window is not `_blank`, you need to enable this behavior explicitly by setting the `noopener` option on the macro:

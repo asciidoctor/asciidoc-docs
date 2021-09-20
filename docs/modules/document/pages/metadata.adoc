@@ -1,7 +1,7 @@
 = Document Metadata
 
 Document metadata, such as a description of the document, keywords, and custom information, can be assigned to attributes in the header.
-When converted to HTML, the values of these attributes will correspond to tags contained in the `<head>` section of an HTML document.
+When converted to HTML, the values of these attributes will correspond to elements contained in the `<head>` section of an HTML document.
 
 [#description]
 == Description
@@ -14,7 +14,7 @@ include::example$metadata.adoc[tag=desc-base]
 ----
 <.> If the document's description is long, you can break the attribute's value across several lines by ending each line with a backslash `\` that is preceded by a space.
 
-When converted to HTML, the document description value is assigned to the HTML `<meta>` tag.
+When converted to HTML, the document description value is assigned to the HTML `<meta>` element.
 
 .HTML output
 include::example$metadata.adoc[tag=desc-html]
@@ -24,7 +24,7 @@ include::example$metadata.adoc[tag=desc-html]
 [#keywords]
 == Keywords
 
-The `keywords` attribute contains a list of comma separated values that are assigned to the HTML `<meta>` tag.
+The `keywords` attribute contains a list of comma separated values that are assigned to the HTML `<meta>` element.
 
 [source]
 ----
