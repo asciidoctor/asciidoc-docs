@@ -111,7 +111,7 @@ They can be changed to curved by adding backticks (`++`++`) as a formatting hint
 
 == Quotes substitution
 
-When the AsciiDoc processor encounters text enclosed by designated formatting marks, those marks are replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution step].
+When the AsciiDoc processor encounters text enclosed by designated formatting marks, those marks are replaced by the start and end tags of the corresponding HTML or XML element, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution step].
 You can control when inline formatting is applied to inline text, macros, or blocks with the xref:subs:quotes.adoc#quotes-value[quotes substitution value].
 
 ////

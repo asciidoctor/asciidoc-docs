@@ -13,9 +13,9 @@ The AsciiDoc processor builds an ID from a section title using the following ord
 * Inline formatting is applied (in title substitution order).
 * All characters are converted to lowercase.
 * The value of the xref:id-prefix-and-separator.adoc#prefix[idprefix attribute] (`+_+` by default) is prepended.
-* Character references, HTML/XML tags, and invalid ID characters are removed.
+* Character references, HTML/XML tags (not their contents), and invalid ID characters are removed.
 ** Refer to the {url-ntname}[NT-Name^] section of the XML specification for a list of valid ID characters.
-//** Prior to 1.5.7, HTML/XML tags were not removed and character references and invalid ID characters were replaced with the value of the `idseparator` attribute (`+_+` by default).
+//** Prior to 1.5.7, start and end HTML/XML tags were not removed and character references and invalid ID characters were replaced with the value of the `idseparator` attribute (`+_+` by default).
 * Spaces, hyphens, and periods are replaced with the value of the xref:id-prefix-and-separator.adoc#separator[idseparator attribute] (`+_+` by default)
 * Repeating separator characters are condensed.
 * If necessary, a sequence number is appended until the ID is unique within the document.

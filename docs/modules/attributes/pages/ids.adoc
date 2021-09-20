@@ -8,7 +8,7 @@ Thus, the identifier can only be used once in a document.
 An ID:
 
 . provides an internal link or cross reference anchor for an element
-. can be used for adding additional styling to a specific elements (e.g., via a CSS ID selector)
+. can be used for adding additional styling to specific elements (e.g., via a CSS ID selector)
 
 You can assign an ID to blocks using the shorthand hash (`+#+`) syntax, longhand (`id=`) syntax, or the legacy anchor (`[[]]`) syntax.
 You can assign an ID to inline elements using the shorthand hash (`+#+`) syntax or by adding an anchor adjacent to the inline element using the anchor (`[[]]`) syntax.
@@ -212,7 +212,7 @@ include::example$id.adoc[tag=anchor-header-extra]
 ----
 
 CAUTION: If you add additional anchors to a section title, make sure you also assign an explicit ID to that section.
-Otherwise, the anchor tag gets caught up in the generated ID.
+Otherwise, the start and end tags of the anchor element get caught up in the generated ID.
 //See {issue-ref}/840[#840] for details.
 
 Remember that inline anchors are discovered where ever the macro substitution is applied (e.g., paragraph text).

@@ -12,7 +12,7 @@ The inline pass macro (`++pass:[]++`) accepts the shorthand values in addition t
 == Apply substitutions to inline text
 
 Custom substitutions can also be applied to inline text with the xref:pass:pass-macro.adoc[pass macro].
-For instance, let's assume you need to underline a snippet of text using HTML tags in your AsciiDoc document.
+For instance, let's assume you need to underline a span of text using the HTML element `<u>` in your AsciiDoc document.
 You'd do this with the inline pass macro.
 
 .Inline pass macro syntax
