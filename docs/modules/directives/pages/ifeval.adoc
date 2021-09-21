@@ -68,7 +68,7 @@ For example:
 
 .ifeval that compares two string expressions
 ----
-ifeval::["{backend}" == "html5"]
+\ifeval::["{backend}" == "html5"]
 ----
 
 Whereas if you expect the attribute to resolve to a number, you do not need to enclose the expression in quotes.
