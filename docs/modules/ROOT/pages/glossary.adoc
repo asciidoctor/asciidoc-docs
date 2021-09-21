@@ -12,7 +12,15 @@ backend:: a moniker for the expected output format; used as a key to select whic
 
 block attribute:: an attribute associated with a delimited block or paragraph; these attributes can affect processing of the block, and are available to block processors, but cannot be referenced using an attribute reference.
 
+block name:: used to refer to custom blocks, which can map an arbitrary name to one or more contexts; has a similar role as the style for a built-in block, such as an admonition block
+
+block style:: a modifier that specializes the context of a block
+
 built-in attribute:: a document attribute that controls processing, integrations, styling, and localization.
+
+content model:: determines how the content of a block is parsed and processed (e.g., simple, compound, verbatim, raw, etc.)
+
+context:: the element's type; describes the primary function of an element (e.g., sidebar, listing, example)
 
 converter:: a software component that an AsciiDoc processor calls to convert a parsed AsciiDoc document to a given output format;
 the converter and output format are correlated using a backend identifier.
@@ -32,6 +40,8 @@ macro:: a syntax for representing non-text elements or that expands into text us
 macro attribute:: an attribute associated with a block or inline macro; these attributes can affect processing of the macro, and are available to macro processors, but cannot be referenced using an attribute reference.
 
 predefined attribute:: a document attribute defined for convenience; often used for inserting special content characters.
+
+structural container:: the fixed set of reusable block enclosures (delimited regions) defined by the AsciiDoc language; implies the block's content model; characterized by a pair of matching delimited lines defining the boundaries of the block's content
 
 quoted text:: text which is enclosed in special punctuation to give it emphasis or special meaning.
 

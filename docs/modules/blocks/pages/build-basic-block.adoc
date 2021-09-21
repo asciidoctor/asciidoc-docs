@@ -2,14 +2,7 @@
 :y: Yes
 :n: No
 
-== Delimited blocks
-
-Block content can be styled by enclosing it in a pair of delimiters (i.e., delimiter lines).
-A *delimited block* has an *opening delimiter* and a *closing delimiter*.
-The opening and closing delimiters must be the same length.
-The style and substitutions applied to the delimited block's content is indicated by the characters in the delimiters.
-
-=== Build a block using delimiters
+== Build a delimited block
 
 In this section, we'll create a delimited sidebar block.
 The delimiter for the sidebar style is four asterisks (`+****+`).
@@ -55,7 +48,7 @@ This is more content in the sidebar block.
 That's it.
 You've built a delimited block.
 
-== Build a block using a block style attribute
+== Build a block from a paragraph
 
 In some cases, you can style a block using the style's name.
 If the content is contiguous (not interrupted by blank lines), you can assign the block style's name in an attribute list placed above the content.
@@ -72,7 +65,7 @@ or single-line quotes:
 include::example$block.adoc[tag=quote-name]
 ----
 
-== Built-in block styles summary
+== Summary of built-in blocks
 // This section is just hanging here for the moment, it's not its final destination, I just didn't want to comment it out.
 
 The following table identifies the built-in block styles, their delimiter syntax, purposes, and the substitutions performed on their contents.
