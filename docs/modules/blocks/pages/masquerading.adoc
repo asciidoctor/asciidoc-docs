@@ -1,0 +1,95 @@
+= Block Masquerading
+:page-aliases: masquerade.adoc
+
+The declared block style (i.e., the first positional attribute of the block attribute list) can be used to modify the context of any paragraph and most structural containers.
+This practice is know as block masquerading (meaning to disguise one block as another).
+
+When the context of a paragraph is changed using the declared block style, the block retains the simple content model.
+When masquerading the context of a structural container, only contexts that preserve the expected content model are permitted.
+
+== How it works
+
+If the block style declared on a block matches the name of a context, it sets the context of the block to that value and the resolved block style will be left unset.
+If the declared block style does not match the name of a context, it will either specialize the context or set the context implicitly and also specialize that context.
+How the declared block style is handled for a custom block is up to the extension, though a similar process takes place.
+
+Let's consider the case of using the declared block style to change the context of a structural container.
+In this case, we're using the declared block style to change a literal block to a listing block.
+
+----
+[listing]
+....
+a > b
+....
+----
+
+Even though the default context for the structural container is `:literal`, the declared block style changes it to `:listing`.
+The resolved block style of the block remains unset.
+
+The declared block style can also be used to transform a paragraph into a different kind of block.
+The block will still retain the simple content model.
+Let's consider the case of turning a normal paragraph into a sidebar.
+
+----
+[sidebar]
+This sidebar is short, so a styled paragraph will do.
+----
+
+Finally, let's consider an admonition block.
+Declaring the NOTE block style on an example structural container transforms it to an admonition block and also sets the style of the block to NOTE.
+
+----
+[NOTE]
+====
+Remember the milk.
+====
+----
+
+This technique also works for converting a paragraph into an admonition block.
+
+----
+[NOTE]
+Remember the milk.
+----
+
+Where permitted, the declared block style can be used to specialize the context of the block, change the context of the block, or both.
+
+== Built-in permutations
+
+The table below lists the xref:delimited.adoc#table-of-structural-containers[structural containers] whose context can be altered, and which contexts are valid, using the declared block style.
+
+[cols="1,1,3"]
+|===
+|Type |Default context |Masquerading contexts
+
+|example
+|:example
+|admonition (designated by the NOTE, TIP, WARNING, CAUTION, or IMPORTANT style)
+
+|listing
+|:listing
+|literal
+
+|literal
+|:literal
+|listing (can be designated using the source style)
+
+|open
+|:open
+|abstract, admonition (designated by the NOTE, TIP, WARNING, CAUTION, or IMPORTANT style), comment, example, literal, listing (can be designated using the source style), partintro, pass, quote, sidebar, verse
+
+|pass
+|:pass
+|stem, latexmath, asciimath
+
+|sidebar
+|:sidebar
+|_n/a_
+
+|quote
+|:quote
+|verse
+|===
+
+All the contexts that can be applied to an open block can also be applied to a paragraph.
+A paragraph also access the `normal` style, which can be applied to revert a literal paragraph to a normal paragraph.

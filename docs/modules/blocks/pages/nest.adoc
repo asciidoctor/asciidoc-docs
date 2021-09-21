@@ -1,14 +1,4 @@
 = Nesting Blocks
+:page-archived:
 
-You can nest blocks inside each other.
-To nest blocks of the same type, add a pair of extra symbols to the delimiter.
-For example:
-
-----
-====
-This is an example
-======
-This is an example inside an example
-======
-====
-----
+Moved xref:delimited.adoc#nesting[here].
