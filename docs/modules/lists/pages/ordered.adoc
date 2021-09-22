@@ -35,20 +35,23 @@ In general, though, rather than typing numbers, if you need to interrupt the def
 include::example$ordered.adoc[tag=base-start]
 ----
 
-When your ordered-list items include multiple block elements—images, captions, code, tables, paragraphs, source blocks, etc., as is often the case when you document steps in a procedure—your steps may reset to 1 when you don't want them to.
-In these cases, don't use the `start` attribute to continue the numbering.
-You don't want to have to manually update `start` numbers or risk having the `start` numbers become wrong every time you add or remove a step.
-Instead, use a list continuation—a `{plus}` symbol on its own line—between block elements.
-The list continuation glues the elements together within a given step.
-If a step includes any blank lines between elements, the next step goes back to 1.
-(A blank line directly before a step has no effect on step numbering.)
-The list continuation also keeps the elements aligned at the same level of indent, as shown here:
+.When not to use the start attribute
+****
+When an ordered list item includes block content (e.g., images, tables, paragraphs, source blocks, empty lines, etc.), you may observe that the number of the next item in the list resets to 1.
+In fact, what's happened is that a new list has been started due to a missing list continuation.
+
+In these cases, you should not resort to using the `start` attribute to fix the numbering.
+Not only does that require manual adjustment as items are added to the list, it doesn't address the underlying semantics problem of the list being separated.
+Instead, use a list continuation between each block element you want to attach to the list item to ensure the list item is continuous.
+The list continuation glues the blocks together within a given item and keeps them at the same level of indentation, as shown in this illustration:
 
 image::step-numbers-list-continuation.png[Example of continuous step numbering with complex content]
 
-* For how-to details, see the xref:continuation.adoc[] section of this documentation.
-* For an example of the list continuation used in a complex ordered list, see the launch steps in https://github.com/aws-quickstart/quickstart-microsoft-sql-fci-fsx/edit/main/docs/partner_editable/deploy_steps.adoc[this .adoc file in GitHub^].
-* To see how those launch steps look in the final output, see the https://aws-quickstart.github.io/quickstart-microsoft-sql-fci-fsx/#_launch_the_quick_start[Launch the Quick Start^] section of the generated deployment guide. The list continuations prevent step 2 from resetting to 1. They also prevent step 5, which is pulled in from a separate .adoc file, from resetting to 1.
+* For details on how to use a list continuation, refer to the xref:continuation.adoc[] page.
+* For an example of the list continuation used in a complex ordered list, see the launch steps in https://github.com/aws-quickstart/quickstart-microsoft-sql-fci-fsx/blob/main/docs/partner_editable/deploy_steps.adoc[this .adoc file in GitHub^].
+* To see how those launch steps look in the final output, see the https://aws-quickstart.github.io/quickstart-microsoft-sql-fci-fsx/#_launch_the_quick_start[Launch the Quick Start^] section of the generated deployment guide.
+The list continuations prevent step 2 from resetting to 1. They also prevent step 5, which is pulled in from a separate .adoc file, from resetting to 1.
+****
 
 To present list items in reverse order, add the `reversed` option:
 
