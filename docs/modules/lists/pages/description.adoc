@@ -1,18 +1,34 @@
 = Description Lists
 :keywords: labeled list, definition list
 
-// tag::label[]
 A description list (often abbreviated as dlist in AsciiDoc) is an association list that consists of one or more pairs of terms that have attached text and/or blocks.
-This list type is useful when you need to provide a description, definition, or supporting text for a list of terms.
+This list type is useful when you need to associate terms with a description, definition, or supporting text.
 
 NOTE: You may know this list variation by the antiquated term _definition list_.
 The preferred term is now _description list_, which matches the terminology used by the https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element[HTML specification^].
 
+== Anatomy
+
+A description list term marks the beginning of a description list.
 Each item in a description list consists of:
 
-* one or more terms, each followed by a separator (typically a double colon, `::`)
+* one or more terms, each followed by a term delimiter (typically a double colon, `::`)
 * at least one space or newline character
 * the supporting content (i.e., description) (can be text, attached blocks, or both)
+
+The first term defines which term delimiter is used for the description list.
+The terms for the remaining entries at that level must use the same delimiter.
+
+The valid set of term delimiters is fixed.
+When the term delimiter is changed, that term starts a new, nested description list (similar to how ordered and unordered lists work).
+The available term delimiters you can use for this purpose are as follows:
+
+* `::`
+* `:::`
+* `::::`
+* `;;`
+
+== Basic description list
 
 Here's an example of a description list that identifies parts of a computer:
 
@@ -28,6 +44,8 @@ Here's a preview of how this list is rendered:
 include::example$description.adoc[tag=base]
 ====
 
+== Horizontal description list
+
 If you want the label and content to appear on the same line, add the horizontal style to the list.
 
 ----
@@ -37,6 +55,8 @@ include::example$description.adoc[tag=base-horz]
 ====
 include::example$description.adoc[tag=base-horz]
 ====
+
+== Mixing lists
 
 The content of a description list can be any AsciiDoc element.
 For instance, we could rewrite the grocery list from above so that each aisle is a label rather than a parent outline list item.
@@ -54,14 +74,15 @@ Description lists are quite lenient about whitespace, so you can spread the item
 ----
 include::example$description.adoc[tag=base-mix-alt]
 ----
-// end::label[]
 
-// tag::hybrid[]
+== Nested description list
+
 [#three-hybrid]
 Finally, you can mix and match the three list types within a single hybrid list.
 The AsciiDoc syntax tries hard to infer the relationships between the items that are most intuitive to us humans.
 
-Here's a list that mixes description, ordered, and unordered list items:
+Here's a list that mixes description, ordered, and unordered lists.
+Notice how the term delimiter is varied to create a nested description list.
 
 ----
 include::example$description.adoc[tag=3-mix]
@@ -75,4 +96,3 @@ include::example$description.adoc[tag=3-mix]
 ====
 
 You can include more xref:continuation.adoc[complex content in a list item] as well.
-// end::hybrid[]
