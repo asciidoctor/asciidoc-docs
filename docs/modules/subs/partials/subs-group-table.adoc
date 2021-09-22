@@ -4,7 +4,7 @@
 |===
 |Group |Special characters |Quotes |Attributes |Replacements |Macros |Post replacements
 
-s|xref:subs:substitutions.adoc#header-group[Header]
+s|xref:subs:index.adoc#header-group[Header]
 |{y}
 |{n}
 |{y}
@@ -12,7 +12,7 @@ s|xref:subs:substitutions.adoc#header-group[Header]
 |{n}
 |{n}
 
-s|xref:subs:substitutions.adoc#none-group[None]
+s|xref:subs:index.adoc#none-group[None]
 |{n}
 |{n}
 |{n}
@@ -20,7 +20,7 @@ s|xref:subs:substitutions.adoc#none-group[None]
 |{n}
 |{n}
 
-s|xref:subs:substitutions.adoc#normal-group[Normal]
+s|xref:subs:index.adoc#normal-group[Normal]
 |{y}
 |{y}
 |{y}
@@ -28,7 +28,7 @@ s|xref:subs:substitutions.adoc#normal-group[Normal]
 |{y}
 |{y}
 
-s|xref:subs:substitutions.adoc#pass-group[Pass]
+s|xref:subs:index.adoc#pass-group[Pass]
 |{n}
 |{n}
 |{n}
@@ -36,7 +36,7 @@ s|xref:subs:substitutions.adoc#pass-group[Pass]
 |{n}
 |{n}
 
-s|xref:subs:substitutions.adoc#verbatim-group[Verbatim]
+s|xref:subs:index.adoc#verbatim-group[Verbatim]
 |{y}
 |{n}
 |{n}
