@@ -35,7 +35,24 @@ However, in general the best practice is to use the `start` attribute to configu
 include::example$ordered.adoc[tag=base-start]
 ----
 
-To present the items in reverse order, add the `reversed` option:
+.When not to use the start attribute
+****
+When an ordered list item contains block content--such as an image, source block, or table--you may observe that the number of the next item in the list resets to 1.
+In fact, what's happened is that a new list has been started where the number resets due to a missing list continuation.
+
+In these cases, you should not resort to using the `start` attribute to fix the numbering.
+Not only does that require manual adjustment as items are added to the list, it doesn't address the underlying semantics problem, which is what is causing it to be broken.
+Instead, use a list continuation between each block element you want to attach to the list item to ensure the list item is continuous.
+The list continuation glues the blocks together within a given item and keeps them at the same level of indentation.
+
+* For details on how to use a list continuation, refer to the xref:continuation.adoc[] page.
+* For an example of the list continuation used in a complex ordered list, see the launch steps in https://github.com/aws-quickstart/quickstart-microsoft-sql-fci-fsx/blob/main/docs/partner_editable/deploy_steps.adoc[this .adoc file in GitHub^].
+* To see how those launch steps look in the final output, see the https://aws-quickstart.github.io/quickstart-microsoft-sql-fci-fsx/#_launch_the_quick_start[Launch the Quick Start^] section of the generated deployment guide.
+The list continuations prevent step 2 from resetting to 1.
+They also prevent step 5, which is pulled in from a separate AsciiDoc file, from resetting to 1.
+****
+
+To present list items in reverse order, add the `reversed` option:
 
 ----
 include::example$ordered.adoc[tag=reversed]
