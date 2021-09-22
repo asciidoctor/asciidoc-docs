@@ -55,7 +55,7 @@ To help you determine whether a particular syntax pattern requires an unconstrai
 === Unconstrained pair edge cases
 
 There are cases when it might seem logical to use a constrained pair, but an unconstrained pair is required.
-xref:subs:substitutions.adoc[Substitutions] may be applied by the parser before getting to the formatting marks, in which case the characters adjacent to those marks may not be what you see in the original source.
+xref:subs:index.adoc[Substitutions] may be applied by the parser before getting to the formatting marks, in which case the characters adjacent to those marks may not be what you see in the original source.
 
 One such example is enclosing a xref:monospace.adoc[monospace phrase] inside xref:quotation-marks-and-apostrophes.adoc[curved quotation marks], such as "```end points```".
 

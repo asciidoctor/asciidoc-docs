@@ -1,4 +1,5 @@
 = Substitutions
+:page-aliases: substitutions.adoc
 :y: Yes
 //icon:check[role="green"]
 :n: No

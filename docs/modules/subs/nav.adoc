@@ -1,4 +1,4 @@
-* xref:substitutions.adoc[]
+* xref:index.adoc[]
 ** xref:special-characters.adoc[]
 ** xref:quotes.adoc[]
 ** xref:attributes.adoc[]

@@ -275,5 +275,5 @@ Go off on a tangent to describe what a style of music is.
 When it comes to processing content, blocks split off into different groups.
 These groups are primarily associated with the block's content model.
 
-Paragraph blocks and verbatim blocks have an implicit and modifiable set of xref:subs:substitutions.adoc[substitutions].
+Paragraph blocks and verbatim blocks have an implicit and modifiable set of xref:subs:index.adoc[substitutions].
 Substitutions do not apply to compound blocks (i.e., blocks that may contain nested blocks).

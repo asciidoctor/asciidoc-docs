@@ -65,7 +65,7 @@ To avoid this risk, you should consider using conditional preprocessor directive
 
 What sets the inline pass macro apart from the alternatives is that it allows the substitutions to be customized.
 The inline pass macro also plays a critical role in the document header.
-In fact, it's the only macro that is processed in the document header by default as part of the xref:subs:substitutions.adoc#header-group[header substitution group] (though it can be used to enable other substitutions, as demonstrated in this section).
+In fact, it's the only macro that is processed in the document header by default as part of the xref:subs:index.adoc#header-group[header substitution group] (though it can be used to enable other substitutions, as demonstrated in this section).
 
 Let's look at how to use the inline pass macro to hand select substitutions.
 
