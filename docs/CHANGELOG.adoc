@@ -35,6 +35,7 @@ Added::
 * document the list and playlist attributes when embedding YouTube videos
 * document the proposed description list with marker list type
 * add block name, context, block style, structural container, and content model to the glossary
+* document the valid set of term delimiters for use in a description list (#95)
 
 Changed::
 * rewrite the documentation for blocks to include information about content models, contexts, structural containers, delimited blocks, block masquerading, and nesting delimited blocks
