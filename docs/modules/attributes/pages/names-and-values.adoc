@@ -3,7 +3,7 @@
 == Valid built-in names
 
 Built-in attribute names are reserved and can't be re-purposed for user-defined attribute names.
-The built-in attribute names are listed in the xref:document-attributes-reference.adoc[] and xref:character-replacement-reference.adoc[].
+The built-in attribute names are listed in the xref:document-attributes-ref.adoc[] and xref:character-replacement-ref.adoc[].
 
 [#user-defined]
 == Valid user-defined names
@@ -34,7 +34,7 @@ Many built-in attributes have one or more built-in values.
 One of these values may be designated as the attribute's default value.
 The AsciiDoc processor will fall back to this default value if you set the attribute but leave the value blank.
 Additionally, the processor automatically sets numerous built-in attributes at processing time and assigns them their default values unless you explicitly unset the attribute or assign it another value.
-For instance, the processor automatically sets all of the xref:character-replacement-reference.adoc[character replacement attributes].
+For instance, the processor automatically sets all of the xref:character-replacement-ref.adoc[character replacement attributes].
 
 If you want to use the non-default value of a built-in attribute, you need to set it and assign it an alternative value.
 
@@ -64,7 +64,7 @@ For example,
 ----
 <1> The xref:header:metadata.adoc#keywords[built-in keywords attribute] doesn't have a default value, so you must explicitly assign it a value when you set it.
 <2> Attributes that accept string values may include <<attribute-reference,references to other attributes>>, e.g, `+{meta-topics}+`.
-See the xref:document-attributes-reference.adoc[Document Attributes Reference] for information about each built-in attribute's accepted value types.
+See the xref:document-attributes-ref.adoc[Document Attributes Reference] for information about each built-in attribute's accepted value types.
 
 You must explicitly assign a value to a built-in attribute when you want to override its default value.
 For instance, when a section in a document is assigned the appendix style, that section title will be automatically prefixed with a label and a letter that signifies that section's order, e.g., Appendix A, by default.

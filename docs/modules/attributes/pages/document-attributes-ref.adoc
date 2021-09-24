@@ -1,4 +1,5 @@
 = Document Attributes Reference
+:page-aliases: document-attributes-reference.adoc
 // TODO use icons or emoji for y and n
 :y: Yes
 :n: No

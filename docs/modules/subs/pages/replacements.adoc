@@ -57,7 +57,7 @@ However, the AsciiDoc syntax doesn't recognize Unicode escape sequences at this 
 ****
 
 TIP: AsciiDoc also provides built-in attributes for representing some common symbols.
-These attributes and their corresponding output are listed in xref:attributes:character-replacement-reference.adoc[].
+These attributes and their corresponding output are listed in xref:attributes:character-replacement-ref.adoc[].
 
 == Default replacements substitution
 
