@@ -1,7 +1,7 @@
 = Character Replacement Attributes Reference
 :page-aliases: character-replacement-reference.adoc
 
-This page identifies built-in document attributes provided by the AsciiDoc processor that can be used as character replacements.
+This page identifies built-in document https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#attributes-and-substitutions[attributes] provided by the AsciiDoc processor that can be used as character replacements.
 These attributes provide replacements for non-visible characters (e.g., empty and no break space), common typographical marks (e.g., smart quotes), and characters which have special meaning in AsciiDoc (e.g., plus and colons).
 
 The AsciiDoc processor does not prevent you from reassigning these predefined attributes.
