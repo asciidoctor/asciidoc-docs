@@ -1112,8 +1112,8 @@ Be sure to read the {link-docs} too!
 
 To learn more about the available attributes and substitution groups see:
 
-* xref:attributes:document-attributes-reference.adoc[]
-* xref:attributes:character-replacement-reference.adoc[]
+* xref:attributes:document-attributes-ref.adoc[]
+* xref:attributes:character-replacement-ref.adoc[]
 * xref:subs:apply-subs-to-blocks.adoc#subs-groups[Substitution Groups]
 
 .Counter attributes

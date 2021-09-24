@@ -56,7 +56,7 @@ Actually, please don't.
 == Reference a built-in attribute
 
 A built-in document attribute (i.e., a document attribute which is automatically set by the processor) is referenced the same way as a custom (i.e., user-defined) document attribute.
-For instance, an AsciiDoc processor automatically sets these supported xref:character-replacement-reference.adoc[character replacement attributes].
+For instance, an AsciiDoc processor automatically sets these supported xref:character-replacement-ref.adoc[character replacement attributes].
 That means that you can reference them throughout your document without having to create an attribute entry in its header.
 
 [source]

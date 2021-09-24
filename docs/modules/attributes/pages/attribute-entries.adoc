@@ -51,7 +51,7 @@ The attribute's value can be reassigned or the attribute unset at any subsequent
 
 Many, but not all, document attributes can be set, assigned a value, or unset in the document's body (anywhere below the document header).
 When you set an attribute in the body, it's visible from the point it's set until it's unset.
-See the xref:document-attributes-reference.adoc[] for where in a document each attribute can be set.
+See the xref:document-attributes-ref.adoc[] for where in a document each attribute can be set.
 
 Finally, document attributes can also be set, assigned values, and unset via the CLI and API, but these methods don't use the attribute entry syntax.
 When an attribute is set from the command line or API, it's defined for the whole document and can't be changed in the document header or body unless `@` is added to the end of the value.
