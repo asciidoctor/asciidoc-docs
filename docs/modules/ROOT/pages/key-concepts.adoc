@@ -33,8 +33,8 @@ Inline elements are less structured than block elements as they are more geared 
 
 == Attributes
 
-An attribute is a name/value pair used for storing metadata in the AsciiDoc language.
-Attributes can be used to influence the syntax, control behavior, customize styles, activate or configure integrations, or store replacement content.
+An attribute is a name/value pair used for storing and disclosing metadata in the AsciiDoc language.
+Attributes can be used to influence the syntax, control behavior, customize styles, activate or configure integrations, or store inline replacement content.
 Attributes truly set AsciiDoc apart from other lightweight markup languages.
 
 An attribute is actually an abstract term.
@@ -52,10 +52,14 @@ Not all document attributes can be modified.
 
 === Element attributes
 
-Element attributes are metadata on a specific element, like a block or an inline element, and only apply to that element.
-The name can either be a string (i.e., a named attribute) or a numerical index (i.e., an unnamed, positional attribute).
+Element attributes are metadata on a specific element, like a block or an inline element.
+They are defined in an attribute list and only apply to that element.
+The placement of the attribute list depends on the element.
+The attribute name can either be a string (i.e., a named attribute) or an implicit numerical index (i.e., an unnamed, positional attribute).
 
-Element attributes are not accessible at all from the content, so they cannot be referenced like document attributes.
+//Element attributes are not accessible at all from the content, so they cannot be referenced like document attributes.
+Unlike document attributes, element attributes cannot be referenced directly from the content, on the document model.
+In other words, they cannot be resolved using an attribute reference.
 Element attributes enrich or configure the behavior of an element, such as to apply a role or set the width of an image.
 An element attribute is defined using an attribute list on an element, or an available shorthand like a block title line.
 
@@ -95,6 +99,8 @@ A preprocessor directive is function that controls lines that are fed into the p
 A conditional preprocessor directive can configure lines to be included or excluded based on the presence of an attribute (ifdef, ifndef) or another arbitrary condition (ifeval).
 An include directive can add additional lines to the document taken from another document.
 
+Preprocessor directives share common traits with a block macro.
 Like a block macro, a preprocessor directive must be on a line by itself.
-While the preprocessor directive can access document attributes, it is not otherwise aware of the context around it.
+While the preprocessor directive can access document attributes, it's not otherwise aware of the context around it.
 It's only a line processor.
+Like a block macro, the include directive can have element attributes, though they only apply to the preprocessing operation itself.
