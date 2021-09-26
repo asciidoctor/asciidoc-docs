@@ -1,5 +1,5 @@
 * xref:element-attributes.adoc[]
 ** xref:positional-and-named-attributes.adoc[]
-** xref:ids.adoc[]
+** xref:id.adoc[]
 ** xref:role.adoc[]
 ** xref:options.adoc[]

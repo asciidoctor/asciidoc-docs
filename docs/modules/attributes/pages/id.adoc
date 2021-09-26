@@ -1,4 +1,5 @@
 = ID Attribute
+:page-aliases: ids.adoc
 
 You can assign an identifier (i.e., unique name) to a block or inline element using the `id` attribute.
 The `id` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
