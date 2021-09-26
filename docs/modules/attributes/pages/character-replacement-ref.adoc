@@ -1,12 +1,14 @@
 = Character Replacement Attributes Reference
 :page-aliases: character-replacement-reference.adoc
 
-This page identifies built-in document attributes provided by the AsciiDoc processor that can be used as character replacements.
-These attributes provide replacements for non-visible characters (e.g., empty and no break space), common typographical marks (e.g., smart quotes), and characters which have special meaning in AsciiDoc (e.g., plus and colons).
+This page identifies built-in document attributes populated by the AsciiDoc processor that are geared towards character replacement.
 
-The AsciiDoc processor does not prevent you from reassigning these predefined attributes.
-However, you are encouraged to treat them as read-only.
-Only a converter should override them when the output format requires the use of a different encoding scheme.
+This category of attributes provide either a shorthand or an escaping mechanism for non-visible characters (e.g., empty and no break space), common typographical marks (e.g., smart quotes), and characters which have special meaning in AsciiDoc (e.g., plus and colons).
+Like all document attributes, you can insert the value of any one of these attributes in your content using an xref:reference-attributes.adoc#reference-built-in[attribute reference] (e.g., `\{nbsp}`).
+
+NOTE: The AsciiDoc processor does not prevent you from reassigning these predefined attributes.
+However, you're encouraged to treat them as read-only.
+Only a converter should override these attributes if the output format requires the use of a different encoding scheme.
 
 .Built-in document attributes for character replacement
 [%autowidth,cols="^~m,^~l,^~"]
