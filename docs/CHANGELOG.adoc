@@ -50,6 +50,7 @@ Changed::
 * clarify that the stripes setting on a table is inherited by nested tables
 * to be consistent with MDN, prefer the term element instead of tag when referring to an element node in HTML and XML
 * change -reference.adoc suffix to -ref.adoc for document-attributes-reference.adoc and character-replacement-reference.adoc
+* rewrite explanation of element attributes
 
 == Published Q2 2021
 

@@ -1,14 +1,19 @@
 = Element Attributes
 
-Element attributes are a powerful means of controlling the built-in settings of individual block and inline elements.
-They're also used to apply user-defined behavior and supplemental information, such as citation information and fallback content, to certain elements.
+Element attributes are a powerful means of controlling the built-in settings of individual block and inline elements in the AsciiDoc syntax.
+They can also be used to add supplemental information, such as citation metadata and fallback content, to certain elements.
 
 == What are element attributes?
 
-[.term]*Element attributes* define the built-in and user-defined styles, behavior, and metadata that are applied to an individual block element or inline element in a document.
-Element attributes can also be defined on the include directive.
+[.term]*Element attributes* define the built-in and user-defined styles, behavior, and metadata that are applied to an individual block element or inline element in a document (including macros).
+Even though it's not technically an element, element attributes can also be defined on the include directive.
 
-Element attributes:
+Element attributes may be positional (value only) or named (key/value pair).
+Some built-in and extension elements will map a positional attribute to a named attribute.
+Each element recognizes a predefined set of positional and/or named element attributes.
+Authors may define any number of custom element attributes for passing information to an extension or document analyzer.
+
+Element attributes are commonly used for the following purposes:
 
 * Declare the ID of an element
 * Turn on or turn off an individual element's built-in features
@@ -16,19 +21,27 @@ Element attributes:
 * Apply user-defined information, such as citation metadata, fallback text, link text, and target content, to an individual element
 * Apply user-defined roles and behaviors to an individual element
 
-Element attributes are classified as positional or named.
-They're set and defined directly on the element they're modifying using an attribute list.
+Unlike document attributes, element attributes are defined directly on the element to which they apply using an <<attribute-list,attribute list>>.
 
 [#attribute-list]
 == Attribute lists
 
 Attributes are assigned to block and inline elements using an [.term]*attribute list*.
+For block elements, the attribute list is placed in a block attribute lines above the block.
+For block and inline macros, the attribute list is placed between the square brackets of the macro.
+For formatted text, the attribute list is placed in the square brackets in front of the text enclosure.
+However, formatted text only supports a specialized form of the attribute list.
 
 Attribute lists:
 
 * apply to blocks, macros, and inline elements
 * can contain xref:positional-and-named-attributes.adoc[positional and named attributes]
-* take precedence over xref:document-attributes.adoc[document attributes] (attribute entries)
+* take precedence over xref:document-attributes.adoc[document attributes] if the element allows a particular attribute to be defined in either scope
 
 .Anatomy of an attribute list
- [positional_attribute_1,positional_attribute_2,named_attribute="value"]
+----
+[positional_attribute_1,positional_attribute_2,named_attribute="value"]
+----
+
+Entries in an attribute list are separated by commas, excluding commas inside a quoted value.
+The syntax used for an entry in the attribute list determines whether it's a positional or named attribute.
