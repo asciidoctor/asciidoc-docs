@@ -20,7 +20,7 @@ Don't add a value to the entry.
 
 Let's use an attribute entry to turn off the built-in boolean attribute named `sectids`.
 The AsciiDoc processor automatically sets `sectids` at processing time unless you unset it.
-The `sectids` attribute xref:sections:ids.adoc[generates an ID for each section] from the section's title.
+The `sectids` attribute xref:sections:auto-ids.adoc[generates an ID for each section] from the section's title.
 
 .Unset a boolean attribute
 [source#ex-unset-boolean]

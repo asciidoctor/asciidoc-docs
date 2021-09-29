@@ -1,7 +1,7 @@
 * Sections
 ** xref:titles-and-levels.adoc[]
 *** xref:title-links.adoc[]
-** xref:ids.adoc[]
+** xref:auto-ids.adoc[]
 *** xref:id-prefix-and-separator.adoc[]
 ** xref:custom-ids.adoc[]
 ** xref:numbers.adoc[]

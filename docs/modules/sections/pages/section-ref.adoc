@@ -48,7 +48,7 @@
 |NA
 |
 
-|xref:ids.adoc[Section ID]
+|xref:auto-ids.adoc[Section ID]
 |`sectids`
 |NA
 |Set by default
