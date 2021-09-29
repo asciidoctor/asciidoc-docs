@@ -69,7 +69,7 @@ Otherwise, the *basic* style is used.
 == Reference signifiers
 
 You can use document attributes to customize the signifier that is placed in front of the reference's number.
-This [.term]_reference signifier_ indicates the reference's type (e.g., Chapter or Section).
+This [.term]*reference signifier* indicates the reference's type (e.g., Chapter or Section).
 
 * `chapter-refsig` -- defines the signifier to use for a cross reference to a chapter (default: Chapter)
 * `section-refsig` -- defines the signifier to use for a cross reference to a section (default: Section)

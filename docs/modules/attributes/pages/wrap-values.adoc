@@ -4,7 +4,7 @@
 
 If the value of a document attribute is too long to fit on the screen, you can split the value across multiple lines with a line continuation to make it easier to read.
 
-A [.term]_line continuation_ consists of a space followed by a backslash character (`\`) at the end of the line.
+A [.term]*line continuation* consists of a space followed by a backslash character (`\`) at the end of the line.
 The line continuation must be placed on every line of a multiline value except for the last line.
 Lines that follow a line continuation character may be indented, but that indentation will not be included in the value.
 
