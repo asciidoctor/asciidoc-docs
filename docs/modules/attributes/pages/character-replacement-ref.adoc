@@ -3,7 +3,7 @@
 
 This page identifies built-in document attributes populated by the AsciiDoc processor that are geared towards character replacement.
 
-This category of attributes provide either a shorthand or an escaping mechanism for non-visible characters (e.g., empty and no break space), common typographical marks (e.g., smart quotes), and characters which have special meaning in AsciiDoc (e.g., plus and colons).
+This category of attributes provide portable replacements for common typographical marks (e.g., smart quotes and symbols) and non-visible characters (e.g., empty and no break space), an escaping mechanism for characters which have special meaning in AsciiDoc (e.g., plus and colon), and passthroughs for characters which get encoded by default (e.g., less than and greater than).
 Like all document attributes, you can insert the value of any one of these attributes in your content using an xref:reference-attributes.adoc#reference-built-in[attribute reference] (e.g., `\{nbsp}`).
 
 NOTE: The AsciiDoc processor does not prevent you from reassigning these predefined attributes.
