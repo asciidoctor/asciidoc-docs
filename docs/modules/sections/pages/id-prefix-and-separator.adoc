@@ -1,6 +1,6 @@
 = Change the ID Prefix and Separator
 
-When an AsciiDoc processor xref:ids.adoc[auto-generates section IDs], it begins the value with an underscore and uses a hyphen between each word.
+When an AsciiDoc processor xref:auto-ids.adoc[auto-generates section IDs], it begins the value with an underscore and uses a hyphen between each word.
 These characters can be customized with the `idprefix` and `idseparator` attributes.
 
 [#prefix]

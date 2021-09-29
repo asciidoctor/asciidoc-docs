@@ -23,7 +23,7 @@ For example, considering the following section.
 
 The AsciiDoc processor automatically assigns the ID `_section_title` to this section, which you can then use as the target of an xref to create a reference to this section.
 You can also customize how this ID is generated.
-Refer to xref:sections:ids.adoc[] for more information about how an AsciiDoc processor generates these IDs.
+Refer to xref:sections:auto-ids.adoc[] for more information about how an AsciiDoc processor generates these IDs.
 
 If you're referring to a content element other than a section, you'll need to define an anchor on that element explicitly.
 

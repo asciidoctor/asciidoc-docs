@@ -700,7 +700,7 @@ _Book doctype only_.
 |{y}
 |{n}
 |Generates and assigns an ID to any section that does not have an ID.
-See xref:sections:ids.adoc#disable[Disable ID generation].
+See xref:sections:auto-ids.adoc#disable[Disable automatic ID generation].
 
 |sectlinks
 |_empty_
