@@ -4,6 +4,14 @@ This document summarizes the changes introduced to the AsciiDoc Language Documen
 For a detailed view of what's changed, refer to the repository's
 https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
+== Published Q4 2021
+
+Fixed::
+* state that scaledwidth attribute with % value scales the image relative to the content area
+
+Changed::
+* clarify that the value of the width and height attributes must be an integer value without a unit
+
 == Published Q3 2021
 
 Fixed::
