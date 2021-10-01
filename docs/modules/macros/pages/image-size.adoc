@@ -103,7 +103,7 @@ DocBook also accepts the `width` attribute if `scaledwidth` is not provided.
 |pdfwidth=80%
 |pdfwidth=50vw
 
-|docbook
+|docbook, pdf
 |scaledwidth=100mm +
 (or cm, em, in, pc, pt, px)
 |scale=80
