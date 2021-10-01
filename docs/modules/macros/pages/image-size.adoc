@@ -63,8 +63,8 @@ See {url-pdf-scaling}[image scaling in Asciidoctor PDF^] for more details.
 
 AsciiDoc recognizes the following attributes to size images when converting to PDF using the DocBook toolchain:
 
-* `scaledwidth` - The preferred width of the image when converting to PDF using the DocBook toolchain. (mutually exclusive with scale)
-* `scale` - Scales the original image size by this amount when converting to PDF using the DocBook toolchain (mutually exclusive with scaledwidth).
+* `scaledwidth` - The preferred width of the image when converting to PDF using the DocBook toolchain. (Mutually exclusive with `scale`).
+* `scale` - Scales the original image size by this amount when converting to PDF using the DocBook toolchain. (Mutually exclusive with `scaledwidth`).
 
 `scaledwidth` sizes images much like `pdfwidth`, except it does not accept the vw unit.
 
@@ -78,7 +78,7 @@ cm:: Centimeters
 mm:: Millimeters
 in:: Inches
 em:: Ems (current font size)
-% (or none):: Percentage of intrinsic image size
+% (or no units):: Percentage of the content width (area between margins)
 
 DocBook also accepts the `width` attribute if `scaledwidth` is not provided.
 
@@ -106,7 +106,7 @@ DocBook also accepts the `width` attribute if `scaledwidth` is not provided.
 |docbook, pdf
 |scaledwidth=100mm +
 (or cm, em, in, pc, pt, px)
-|scale=80
+|scale=75
 |scaledwidth=50%
 |Not possible
 |====
