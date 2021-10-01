@@ -10,7 +10,7 @@ In most output formats, the specified width is obeyed unless the image would exc
 == width and height attributes
 
 The primary way to specify the size of an image is to define the `width` and `height` attributes on the image macro.
-Since these two attributes are so common, they are the second and third (unnamed) positional attributes on the image macros.
+Since these two attributes are so common, they're mapped as the second and third (unnamed) positional attributes on both image macros.
 
 [source]
 ----
@@ -26,9 +26,9 @@ image::flower.jpg[alt=Flower,width=640,height=480]
 
 The value of the width and height attributes should be an integer without a unit.
 The px unit is implied.
-Although the processor may allow it, you should not rely on a % value.
+Although the processor may allow it, you should never rely on a % value.
 While the % unit was supported in older versions of HTML, it was removed starting in HTML 5.
-If you need to specify a % value for PDF or DocBook output, using `pdfwidth` or `scaledwidth`, respectively.
+If you need to specify a % value for PDF or DocBook output, use `pdfwidth` or `scaledwidth`, respectively.
 To scale the image relative to the content area in HTML output, use a role.
 
 While the values of `width` and `height` can be used to scale the image, these attributes are primarily intended to specify the {url-w3-dimensions}[intrinsic size of the image in CSS pixels^].
@@ -40,8 +40,9 @@ The `height` attribute should only be specified if the `width` attribute is also
 ****
 The default Asciidoctor stylesheet implements responsive images (using width-wise scaling).
 If the width of the content area is smaller than the width of the image, the image will be scaled down to fit.
-To support this feature, the original aspect ratio of the image is preserved at all sizes.
-Thus, when specifying the image's dimensions, the values you choose should honor the intrinsic aspect ratio of the image.
+To support this feature, the intrinsic aspect ratio of the image is preserved at all sizes.
+
+Thus, when specifying the image's dimensions, you should choose values that honor the intrinsic aspect ratio of the image.
 If the values don't respect the aspect ratio, the height is ignored by the browser.
 ****
 
@@ -101,13 +102,14 @@ DocBook also accepts the `width` attribute if `scaledwidth` is not provided.
 |width=120 +
 (assumed to be px)
 |Not possible
-|width=50%
-|Not possible
+|role=half-width
+|role=half-view-width
 
 |pdf
 |pdfwidth=100mm +
 (or cm, in, pc, pt, px)
-|Not possible
+|Not possible +
+(support for the scale attribute is pending)
 |pdfwidth=80%
 |pdfwidth=50vw
 
@@ -126,38 +128,42 @@ Here's an example of how you might bring these attributes together to control th
 image::flower.jpg[Flower,640,480,pdfwidth=50%,scaledwidth=50%]
 ----
 
-A practice you might consider is using attributes to set the values for each output:
+If the cascading behavior of the sizing attributes does not work for your use case, you might consider a document attribute to set the attribute that is suitable for the backend you are using.
+Consider the following example:
 
 [source,indent=0]
 ----
  ifdef::backend-html5[]
- :twoinches: width='144'
- :full-width: width='100%'
- :half-width: width='50%'
- :half-size:
- :thumbnail: width='60'
+ :twoinches: width=144
+ // using a role requires adding a corresponding rule to the CSS
+ :full-width: role=full-width
+ :half-width: role=half-width
+ :half-size: role=half-size
+ :thumbnail: width=60
  endif::[]
  ifdef::backend-pdf[]
- :twoinches: pdfwidth='2in'
- :full-width: pdfwidth='100vw'
- :half-width: pdfwidth='50vw'
- :half-size: pdfwidth='50%'
- :thumbnail: pdfwidth='20mm'
+ :twoinches: pdfwidth=2in
+ // NOTE use pdfwidth=100vw to make the image stretch edge to edge
+ :full-width: pdfwidth=100%
+ :half-width: pdfwidth=50%
+ // NOTE scale is not yet supported by the PDF converter
+ :half-size: pdfwidth=50%
+ :thumbnail: pdfwidth=20mm
  endif::[]
  ifdef::backend-docbook5[]
- :twoinches: width='50mm'
- :full-width: scaledwidth='100%'
- :half-width: scaledwidth='50%'
- :half-size: width='50%'
- :thumbnail: width='20mm'
+ :twoinches: scaledwidth=2in
+ :full-width: scaledwidth=100%
+ :half-width: scaledwidth=50%
+ :half-size: scale=50
+ :thumbnail: scaledwidth=20mm
  endif::[]
 ----
 
-Then you can specify a half-size image using:
+Then you can specify the image to be half the width of the content area using the following syntax:
 
 [source]
 ----
-image::image.jpg[{half-size}]
+image::image.jpg[{half-width}]
 ----
 
 In addition to providing consistency across your document, this technique will help insulate you from future changes.
