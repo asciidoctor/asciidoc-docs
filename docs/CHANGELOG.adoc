@@ -6,6 +6,9 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
 == Published Q4 2021
 
+Added::
+* Add dedicated section to introduce the attribute shorthand on blocks and formatted text
+
 Fixed::
 * state that scaledwidth attribute with % value scales the image relative to the content area
 
