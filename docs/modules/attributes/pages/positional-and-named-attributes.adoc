@@ -26,8 +26,73 @@ image::sunset.jpg[Sunset,300,400]
 image::sunset.jpg[alt=Sunset,width=300,height=400]
 ----
 
-The second macro is just a duplicate of the first macro written out longhand.
+The second macro is the same as the first, but written out in longhand form.
 // end::pos[]
+
+=== Block style and attribute shorthand
+
+The first positional attribute on all blocks (including sections) is special.
+It's used to define the xref:blocks:index.adoc#block-style[block style].
+It also supports a shorthand syntax for defining the ID, role, and options attributes.
+This shorthand syntax can also be used on formatted text, even though formatted text doesn't technically support attributes.
+
+The attribute shorthand is inspired by the HAML and Slim template languages as a way of saving the author some typing.
+Instead of having to use the longhand form of a name attribute, it's possible to compress the assignment to a value prefixed by a special marker.
+The markers are mapped as follows:
+
+* `#` - ID
+* `.` - role
+* `%` - option
+
+Each shorthand entry is placed directly adjacent to previous one, starting immediately after the optional block style.
+The order of the entries does not matter, except for the style, which must come first.
+
+Here's an example that shows how to set an ID on a section using this shorthand syntax:
+
+----
+[#custom-id]
+== Section with Custom ID
+----
+
+The shorthand entry must follow the block style, if present.
+Here's an example that shows how to set an ID on an appendix section using this shorthand syntax:
+
+----
+[appendix#custom-id]
+== Appendix with Custom ID
+----
+
+Here's an example of a block that uses the shorthand syntax to set the ID, a role, and an option for a list.
+Specifically, this syntax sets the ID to `rules`, adds the role `prominent`, and sets the option `incremental`.
+
+----
+[#rules.prominent%incremental]
+* Work hard
+* Play hard
+* Be happy
+----
+
+A block can have multiple roles and options, so these shorthand entries may be repeated.
+Here's an example that shows how to set several options on a table.
+Specifically, this syntax sets the `header`, `footer`, and `autowidth` options.
+
+----
+[%header%footer%autowidth]
+|===
+|Header A |Header B
+|Footer A |Footer B
+|===
+----
+
+This shorthand syntax also appears on formatted text.
+Here's an example that shows how to set the ID and add a role to a strong phrase.
+Specifically, this syntax sets the ID to `free-world` and adds the `goals` role.
+
+----
+[#free-world.goals]*free the world*
+----
+
+Formatted text does not support a style, so the first and only positional attribute is always the shorthand syntax.
 
 [#named]
 == Named attribute
