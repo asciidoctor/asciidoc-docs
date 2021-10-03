@@ -1,6 +1,6 @@
 = Positional and Named Attributes
 
-Let's break down the difference between positional and named attributes.
+This page breaks down the difference between positional and named attributes on an element and the rules for parsing an attribute list.
 
 [#positional]
 == Positional attribute
@@ -114,9 +114,12 @@ To undefine a named attribute, set the value to `None` (case sensitive).
 
 == Attribute list parsing
 
-The exact rules for determining whether an attribute is positional, and what defines the boundaries of an individual attribute, are defined below.
+The source text that's used to define attributes for an element is referred to as an [.term]*attrlist*.
+An attrlist is always enclosed in a pair of square brackets.
+The processor splits the attrlist into individual attribute entries, determines whether each entry is a positional or named attribute, parses the entry accordingly, and assigns the result as an attribute on the node.
 
-A `name` consists of a word character (letter or numeral) followed by any number of word characters, `.` charactes, or `-` characters, followed by something else (including the end of the string)
+The rules for what defines the boundaries of an individual attribute, and whether the attribute is positional or named, are defined below.
+In these rules, a `name` consists of a word character (letter or numeral) followed by any number of word characters, `.` charactes, or `-` characters, followed by something else (including the end of the string)
 
 * Parsing an attribute proceeds from the beginning of the attribute list string or after a previously recognized delimiter (`,`).
 * Blank space is skipped.
@@ -132,10 +135,16 @@ If there is a closing quote, the quotes are removed; if not, the initial quote i
 If there is a closing `'`, the enclosing `'` characters are removed; if not, the initial `'` is retained.
 If there is a closing `'` and the first character is not an escaped `'` substitutions are performed as described above.
 
-TIP: In line-oriented syntax such as a block attribute list, a block macro, and an include directive, you do not have to escape closing square brackets that appear in the attrlist itself.
+.When to escape a closing square bracket
+****
+Since the terminal of an attrlist is a closing square bracket, it's sometimes necessary to escape a closing square bracket if it appears in the value of an attribute.
+
+In line-oriented syntax such as a block attribute list, a block macro, and an include directive, you do not have to escape closing square brackets that appear in the attrlist itself.
 That's because the parser already knows to look for the closing square bracket at the end of the line.
-However, if a closing square bracket appears in the attrlist of an inline element, such as an inline macro, it usually has to be escaped using a backslash or by using the character reference `+&#93;+`.
+
+If a closing square bracket appears in the attrlist of an inline element, such as an inline macro, it usually has to be escaped using a backslash or by using the character reference `+&#93;+`.
 There are some exceptions to this rule, such as a link macro in a footnote, which are influenced by the substitution order.
+****
 
 == Substitutions
 
