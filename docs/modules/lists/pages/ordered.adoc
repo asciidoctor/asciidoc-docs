@@ -95,7 +95,7 @@ include::example$ordered.adoc[tag=nest]
 [TIP]
 ====
 Like with the asterisks in an unordered list, the number of dots in an ordered list doesn't represent the nesting level.
-However, it's much more intuitive to follow this convention:
+However, it's much more intuitive to follow the convention that the number of dots equals the level of nesting.
 
 *# of dots = level of nesting*
 

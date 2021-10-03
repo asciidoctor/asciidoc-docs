@@ -87,7 +87,18 @@ include::example$unordered.adoc[tag=max]
 
 While it would seem as though the number of asterisks represents the nesting level, that's not how depth is determined.
 A new level is created for each unique marker encountered.
-However, it's much more intuitive to follow the convention that the number of asterisks equals the level of nesting.
+For example, you can create a second level using the hyphen marker instead of two asterisks.
+
+.Using hyphen to mark the second level is not recommended
+----
+include::example$unordered.adoc[tag=nest-alt]
+----
+
+However, it's much more intuitive to follow the convention that the marker length (i.e., number of asterisks) equals the level of nesting.
+The hyphen should only be used as the marker for the first level.
+
+*marker length = level of nesting*
+
 After all, we're shooting for plain text markup that is readable _as is_.
 
 [#markers]
