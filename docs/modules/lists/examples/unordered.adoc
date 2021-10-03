@@ -64,6 +64,12 @@
 * Level 1 list item
 // end::max[]
 
+// tag::nest-alt[]
+* Level 1 list item
+- Level 2 list item
+* Level 1 list item
+// end::nest-alt[]
+
 // tag::square[]
 [square]
 * one
