@@ -1,7 +1,13 @@
 = Cross Reference Text and Styles
 
-Starting in Asciidoctor 1.5.6, when you use one of the built-in converters (HTML, PDF, and EPUB3), you can customize the style of the automatic cross reference text using the `xrefstyle` document attribute.
-This customization brings the cross reference text formatting from the DocBook toolchain to the built-in Asciidoctor converters.
+You can customize the style of the automatic cross reference text using the `xrefstyle` document attribute.
+This customization brings the cross reference text formatting from the DocBook toolchain to AsciiDoc processing, specifically during conversion.
+
+CAUTION: Since this is a newer feature of the AsciiDoc language, it may not be supported by all converters.
+Where you can find support for it is in Asciidoctor's HTML, PDF, and EPUB 3 converters.
+It's not supported by the DocBook converter since it's a feature the DocBook toolchain already provides.
+
+== Default styling
 
 By default, the cross reference text matches the title of the referenced element.
 For example, if you're linking to a section titled “Installation”, the text of the cross reference link appears as:
