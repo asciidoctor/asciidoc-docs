@@ -133,7 +133,7 @@ Spaces around the equals sign (=) are ignored.
 If there is a closing quote, the quotes are removed; if not, the initial quote is retained.
 ** If the next character is `'` then the string is read until the next unescaped `'`, or if there is no closing `'`, the next delimiter.
 If there is a closing `'`, the enclosing `'` characters are removed; if not, the initial `'` is retained.
-If there is a closing `'` and the first character is not an escaped `'` substitutions are performed as described above.
+If there is a closing `'`, and the first character is not an escaped `'`, substitutions are performed as described in <<Substitutions>>.
 
 .When to escape a closing square bracket
 ****
