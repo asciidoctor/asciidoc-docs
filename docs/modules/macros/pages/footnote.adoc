@@ -28,15 +28,19 @@ a|
 include::example$footnote.adoc[tag=base-x]
 |===
 
+Just like normal paragraph text, you can use text formatting markup in the text of the footnote.
+
 == Externalizing a footnote
 
-Since footnotes are defined using an inline macro, the footnote content must be inserted alongside the text it's annotating, making the text harder to read.
+Since footnotes are defined using an inline macro, the footnote content must be inserted alongside the text it's annotating.
+This requirement can make the text harder to read.
 You can solve this problem by externalizing your footnotes using document attributes.
-You can name the document attributes whatever you want, though a common practice is to name them with the `fn-` prefix.
+
+When defining a document attribute that holds a footnote, you can name the document attributes whatever you want.
+A common practice is to name the attribute using the `fn-` prefix.
 The name of the attribute can be as verbose (`fn-disclaimer`) or concise (`fn-1`) as you prefer.
 
 Here's the previous example with the footnotes defined in document attributes and inserted using attribute references.
-Notice you still get the benefit of seeing where the footnote is placed without all the noise.
 
 .Externalized footnote
 [source]
@@ -44,8 +48,25 @@ Notice you still get the benefit of seeing where the footnote is placed without 
 include::example$footnote.adoc[tag=externalized]
 ----
 
+Notice you still get the benefit of seeing where the footnote is placed without all the noise.
+And since the footnotes are now defined in the document header, they could be further externalized to an include file.
+
 This approach works since attribute references are expanded before footnotes are parsed.
-Since the footnotes are now defined in the document header, they could be further externalized to an include file.
+However, this technique does not work if you have text formatting markup in the text of the footnote (e.g., `+*bold*+`).
+That markup will not be interpreted.
+That's because the attributes substitution (which replaces attribute references) is applied _after_ the quotes substitution (which interprets text formatting markup).
+In order to use text formatting markup in the text of the footnote, you need to configure the substitutions on the value of the attribute entry using the `\pass:[]` macro.
+
+The following example demonstrates how to configure the substitutions applied to the text of an externalized footnote so that text formatting markup is honored.
+
+.Externalized footnote with text formatting
+[source]
+----
+include::example$footnote.adoc[tag=externalized-format]
+----
+
+The `c,q` target on the pass macro instructs the processor to apply the special characters substitution followed by the quotes substitution.
+That means the text formatting in the footnote text will already be applied when the footnote is inserted using an attribute reference.
 
 == Footnotes in Headings
 

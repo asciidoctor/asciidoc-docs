@@ -43,13 +43,13 @@ A bold statement!{fn-disclaimer}
 Another outrageous statement.{fn-disclaimer}
 // end::externalized[]
 
-// tag::externalized-with-formatting[]
+// tag::externalized-format[]
 :fn-disclaimer: pass:c,q[footnote:disclaimer[Opinions are _mine_, and mine *alone*.]]
 
 A bold statement!{fn-disclaimer}
 
 Another outrageous statement.{fn-disclaimer}
-// end::externalized-with-formatting[]
+// end::externalized-format[]
 
 // tag::base[]
 A statement.footnote:[Clarification about this statement.]
