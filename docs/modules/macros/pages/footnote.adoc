@@ -1,21 +1,26 @@
 = Footnotes
 
-You can add footnotes to your document using the footnote macro (`+footnote:[]+`).
-If you plan to reference a footnote more than once, use the footnote macro with a target (`+footnote:id[]+`).
+You can add footnotes to your document using the footnote macro (`+footnote:[text]+`).
+If you specify a target (`+footnote:id[text]+`), you can refer to that footnote from multiple locations in the document. 
+The target becomes the ID of the footnote, which you can use to refer to it (`+footnote:id[]+`).
 
 .Footnote syntax
 [source#ex-footnote]
 ----
 include::example$footnote.adoc[tag=base-c]
 ----
-<.> Insert the footnote macro directly after any punctuation. Note that the footnote macro only uses a single colon (`:`).
-<.> Insert the footnote's content within the square brackets (`+[]+`). The text may span several lines.
+<.> Insert the footnote macro directly after any punctuation.
+Note that the footnote macro only uses a single colon (`:`).
+<.> Insert the footnote's content within the square brackets (`+[]+`).
+The text may span several lines.
 <.> If you plan to reuse a footnote, specify a unique ID in the target position.
-<.> To reference an existing footnote, you only need to insert the ID in the target slot (leaving the text in the square brackets empty).
+<.> To reference an existing footnote, you only need to specify the ID of the footnote in the target slot.
+The text between the square brackets should be empty.
+If both the ID and text are specified, and the ID has already been defined by an earlier footnote, the text is ignored.
 
 The footnotes will be numbered consecutively throughout the article.
 
-The results of <<ex-footnote>> are displayed below
+The results of <<ex-footnote>> are displayed below.
 
 [.unstyled]
 |===
@@ -25,8 +30,10 @@ include::example$footnote.adoc[tag=base-x]
 
 == Externalizing a footnote
 
-Since footnotes are defined using an inline macro, the footnote content ends up right alongside the text it's annotating, making that text harder to read.
+Since footnotes are defined using an inline macro, the footnote content must be inserted alongside the text it's annotating, making the text harder to read.
 You can solve this problem by externalizing your footnotes using document attributes.
+You can name the document attributes whatever you want, though a common practice is to name them with the `fn-` prefix.
+The name of the attribute can be as verbose (`fn-disclaimer`) or concise (`fn-1`) as you prefer.
 
 Here's the previous example with the footnotes defined in document attributes and inserted using attribute references.
 Notice you still get the benefit of seeing where the footnote is placed without all the noise.
@@ -38,10 +45,7 @@ include::example$footnote.adoc[tag=externalized]
 ----
 
 This approach works since attribute references are expanded before footnotes are parsed.
-The redundant text in the second disclaimer footnote is simply ignored.
-
-You could even simplify the attribute names to fn-1, fn-2, etc. if brevity is your main concern.
-And once in document attributes, these defintions could even be moved to an included file.
+Since the footnotes are now defined in the document header, they could be further externalized to an include file.
 
 == Footnotes in Headings
 
