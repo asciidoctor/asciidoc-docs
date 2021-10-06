@@ -18,7 +18,9 @@ The text may span several lines.
 The text between the square brackets should be empty.
 If both the ID and text are specified, and the ID has already been defined by an earlier footnote, the text is ignored.
 
-The footnotes will be numbered consecutively throughout the article.
+TIP: If you find that having to put the footnote macro directly adjacent to a word makes it difficult to read, you can insert an attribute reference in between that resolves to an empty string (e.g., `+word{empty}footnote:[text]+`).
+
+The footnotes are numbered consecutively throughout the article.
 
 The results of <<ex-footnote>> are displayed below.
 
