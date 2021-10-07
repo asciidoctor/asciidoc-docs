@@ -1,8 +1,16 @@
 = Customize the Substitutions Applied to Blocks
 
+Each block context is associated with a set default substitutions that best suit the content model.
+However, there are situations where you may need a different set of substitutions to be applied.
+For example, you may want the AsciiDoc processor to substitute attribute references in a listing block.
+Therefore, the AsciiDoc language provides a mechanism for altering the substitutions on a block.
+
 == The subs attribute
 
-Substitution steps or groups can be applied to any block and certain inline elements by setting the `subs` attribute and assigning it a comma-separated list of one or more of the substitution group or step values.
+The substitutions that get applied to a block (and to certain inline elements) can be changed or modified using the `subs` element attribute.
+This attribute accepts a comma-separated list of substitution steps or groups.
+
+The names of those substitution steps and groups are as follows:
 
 [#subs-groups]
 `none`:: Substitution group that disables all substitutions.
@@ -12,6 +20,7 @@ Substitution steps or groups can be applied to any block and certain inline elem
 `verbatim`:: Substitution group that replaces special characters and processes callouts.
 
 `specialchars`:: Substitution step that replaces `<`, `>`, and `&` with their corresponding entities.
+For source blocks, this substitution step enables syntax highlighting as well.
 
 `callouts`:: Substitution step that processes callouts in literal, listing, and source blocks.
 
@@ -26,17 +35,29 @@ The output of `replacements` may depend on whether the `specialcharacters` subst
 
 `post_replacements`:: Substitution step that processes the line break character (`{plus}`).
 
+If a `+` or `-` modifier is added to a step, the existing substitutions are modified accordingly (see <<incremental,incremental subs>>).
+Otherwise, the existing substitutions are replaced.
+The value also specifies the order in which the substitutions are applied.
+
+NOTE: The `subs` element attribute does not inherit to nested it blocks.
+It can only be applied to a leaf block, a paragraph or listing block), which is any block that cannot have child blocks (e.g., a paragraph or a listing block).
+
 == Set the subs attribute on a block
 
-Let's look at an example where you only want to process special characters, inline formatting markup, and callouts in a literal block.
-By default, literal blocks are only subject to special characters substitution.
-But you can change this behavior by setting the `subs` attribute in the block's attribute list.
+CAUTION: You should always prefer to use <<incremental,incremental substitutions>>, and only revert to exact substitutions when you require the additional control.
+
+Let's look at an example where you want to process inline formatting markup in a source block.
+By default, source blocks (as well as other verbatim blocks) are only subject to the verbatim substitution group (specialchars and callouts).
+You can change this behavior by setting the `subs` attribute in the block's attribute list.
 
 ....
 include::example$subs.adoc[tag=subs-in]
 ....
 <.> The `subs` attribute is set in the attribute list and assigned the `verbatim` and `quotes` values.
-<.> The formatting markup in this line will be replaced when the `quotes` step runs.
+It's important to reinstate the `verbatim` substitution step to ensure special characters are encoded (which, for source blocks, also enables syntax highlighting).
+<.> The formatting markup in this line will be replaced when the `quotes` substitution step runs.
+
+Here's the result.
 
 ====
 include::example$subs.adoc[tag=subs-out]
@@ -45,13 +66,14 @@ include::example$subs.adoc[tag=subs-out]
 <.> The `quotes` value enables the bold text formatting to be processed.
 
 You may be wondering why `verbatim` is specified in the previous example since it's applied to literal blocks by default.
-It's added because the `subs` attribute removes all of a block or inline elements default substitutions when it is set.
-The next section explains this concept in more detail.
+The reason is that when you specify substitutions without a modifier, it replaces all existing substitutions.
+Therefore, it's necessary to start with `verbatim` in order to restore the default substitutions.
+You can avoid having to do this by using incremental substitutions instead, which is covered in the next section.
 
 [#incremental]
 == Add and remove substitution types from a default substitution group
 
-When you set the `subs` attribute on a block, you automatically remove all of its default substitutions.
+When you set the `subs` attribute on a block, you automatically *remove* all of its default substitutions.
 For example, if you set `subs` on a literal block, and assign it a value of `attributes`, only attribute references are substituted.
 The `verbatim` substitution group will not be applied.
 To remedy this situation, AsciiDoc provides a syntax to append or remove substitutions instead of replacing them outright.
