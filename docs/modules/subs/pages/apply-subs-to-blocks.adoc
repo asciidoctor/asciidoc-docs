@@ -50,6 +50,7 @@ Let's look at an example where you want to process inline formatting markup in a
 By default, source blocks (as well as other verbatim blocks) are only subject to the verbatim substitution group (specialchars and callouts).
 You can change this behavior by setting the `subs` attribute in the block's attribute list.
 
+[source,asciidoc]
 ....
 include::example$subs.adoc[tag=subs-in]
 ....
@@ -65,7 +66,19 @@ include::example$subs.adoc[tag=subs-out]
 <.> The `verbatim` value enables any special characters and callouts to be processed.
 <.> The `quotes` value enables the bold text formatting to be processed.
 
-You may be wondering why `verbatim` is specified in the previous example since it's applied to literal blocks by default.
+If enabling the quotes substitution step on the whole block causes problems, you can instead enable the macros substitution step, then use the pass macro to enable the quotes substitution step locally.
+
+[source,asciidoc]
+....
+[source,java,subs="verbatim,macros"]
+----
+System.out.println("No bold *here*");
+pass:c,q[System.out.println("Hello *<name>*");] <1>
+----
+....
+<1> The pass macro with the `c,q` target applies the specialchars and quotes substitution steps to the enclosed text.
+
+You may be wondering why `verbatim` is specified in the previous examples since it's applied to literal blocks by default.
 The reason is that when you specify substitutions without a modifier, it replaces all existing substitutions.
 Therefore, it's necessary to start with `verbatim` in order to restore the default substitutions.
 You can avoid having to do this by using incremental substitutions instead, which is covered in the next section.
