@@ -1,5 +1,9 @@
 = List Continuation
 
+This section applies to complex lists.
+A complex list is defined as a list with at least one item that contains block content that follows the item's primary text.
+The list continuation is the markup hint in AsciiDoc that keeps those blocks attached to the list item.
+
 == Indented lines
 
 Aside from nested lists, all of the list items you've seen only have one line of text.
