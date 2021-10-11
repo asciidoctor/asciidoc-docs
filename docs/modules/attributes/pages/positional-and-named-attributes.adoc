@@ -119,7 +119,7 @@ An attrlist is always enclosed in a pair of square brackets.
 The processor splits the attrlist into individual attribute entries, determines whether each entry is a positional or named attribute, parses the entry accordingly, and assigns the result as an attribute on the node.
 
 The rules for what defines the boundaries of an individual attribute, and whether the attribute is positional or named, are defined below.
-In these rules, a `name` consists of a word character (letter or numeral) followed by any number of word characters, `.` charactes, or `-` characters, followed by something else (including the end of the string)
+In these rules, `name` consists of a word character (letter or numeral) followed by any number of word or `-` characters (e.g., `see-also`).
 
 * Parsing an attribute proceeds from the beginning of the attribute list string or after a previously identified delimiter (`,`).
 * The first character of an attribute list cannot be a tab or space.
