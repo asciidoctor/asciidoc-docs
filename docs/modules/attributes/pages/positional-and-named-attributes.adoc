@@ -121,12 +121,14 @@ The processor splits the attrlist into individual attribute entries, determines 
 The rules for what defines the boundaries of an individual attribute, and whether the attribute is positional or named, are defined below.
 In these rules, a `name` consists of a word character (letter or numeral) followed by any number of word characters, `.` charactes, or `-` characters, followed by something else (including the end of the string)
 
-* Parsing an attribute proceeds from the beginning of the attribute list string or after a previously recognized delimiter (`,`).
-* Blank space is skipped.
+* Parsing an attribute proceeds from the beginning of the attribute list string or after a previously identified delimiter (`,`).
+* The first character of an attribute list cannot be a tab or space.
+For subsequent attributes, any leading space or tab characters are skipped.
 * If a valid attribute name is found, and it is followed by an equals sign (=), then the parser recognizes this as a named attribute.
 The text after the equals sign (=) and up to the next comma or end of list is taken as the attribute value.
-Spaces around the equals sign (=) are ignored.
-* Otherwise this is a positional attribute with value starting after the skipped blank space and ending before (optional) blank space preceding the next delimiter (`,`).
+Space and tab characters around the equals sign (=) and at the end of the value are ignored.
+* Otherwise, this is a positional attribute with a value that ends at the next delimiter or end of list.
+Any space or tab characters at the boundaries of the value are ignored.
 * To parse the attribute value:
 ** If the first character is not a quote, the string is read until the next delimiter or end of string.
 ** If the first character is `"`, then the string is read until the next unescaped quote or, if there is no closing quote, the next delimiter.
