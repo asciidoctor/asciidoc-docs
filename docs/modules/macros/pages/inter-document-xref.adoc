@@ -11,7 +11,7 @@ Here's how a cross reference is normally defined in AsciiDoc:
 include::example$xref.adoc[tag=base]
 ----
 
-This cross reference creates a link to the section with the ID _images_.
+This cross reference creates a link to the section with the ID _anchors_.
 
 Let's assume the cross reference is defined in the document [.path]_document-a.adoc_.
 If the target section is in a separate document, [.path]_document-b.adoc_, the author may be tempted to write:
