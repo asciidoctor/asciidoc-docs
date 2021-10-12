@@ -3,7 +3,7 @@
 
 If you're familiar with the AsciiDoc syntax, you may notice that a URL almost looks like an inline macro.
 All that's missing is the pair of the trailing square brackets.
-In fact, if you add them, then a URL is treated an an inline macro.
+In fact, if you add them, then a URL is treated as an inline macro.
 We call this a URL macro.
 
 This page introduces the URL macro, when you would want to use it, and how it differs from the link macro.
