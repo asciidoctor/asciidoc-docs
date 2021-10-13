@@ -49,18 +49,6 @@ Here's a preview of how this list is rendered:
 include::example$description.adoc[tag=base]
 ====
 
-== Horizontal description list
-
-If you want the label and content to appear on the same line, add the horizontal style to the list.
-
-----
-include::example$description.adoc[tag=base-horz]
-----
-
-====
-include::example$description.adoc[tag=base-horz]
-====
-
 == Mixing lists
 
 The content of a description list can be any AsciiDoc element.

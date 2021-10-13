@@ -7,5 +7,6 @@
 
 []
 * xref:description.adoc[]
+** xref:horizontal.adoc[]
 ** xref:qanda.adoc[]
 ** xref:description-with-marker.adoc[]
