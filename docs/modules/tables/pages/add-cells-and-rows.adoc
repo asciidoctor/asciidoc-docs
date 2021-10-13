@@ -25,7 +25,7 @@ Taking into account any xref:span-cells.adoc[spans], which are applied via a <<s
 === Cell specifiers and operators
 
 A [.term]*cell specifier* is a positional attribute placed directly in front of a cell separator that represents the position and style properties assigned to a cell's content.
-In the example below, a vertical alignment operator and style operator have been assigned to the first cell's specifier.
+In the example below, a horizontal alignment operator and style operator have been assigned to the first cell's specifier.
 
 .Using cell specifiers
 [source#ex-specifier]
