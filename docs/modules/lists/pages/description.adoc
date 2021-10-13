@@ -28,7 +28,10 @@ The available term delimiters you can use for this purpose are as follows:
 * `::::`
 * `;;`
 
-While the level of nesting is not determined by the number of characters in the delimiter, it's customary to use the delimiters in this order to provide a hint that the list is nested at a given level.
+There's no direct correlation between the number of characters in the delimiter and the nesting level.
+Each time you change delimiters (selected from this set), it introduces a new level of nesting.
+This is how list depth is implied in a language with a left-aligned syntax.
+It's customary to use the delimiters in the order shown above to provide a hint that the list is nested at a certain level.
 
 == Basic description list
 
