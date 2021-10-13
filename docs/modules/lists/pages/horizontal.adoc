@@ -1,0 +1,11 @@
+= Horizontal description list
+
+If you want the label and content to appear on the same line, add the horizontal style to the list.
+
+----
+include::example$description.adoc[tag=base-horz]
+----
+
+====
+include::example$description.adoc[tag=base-horz]
+====
