@@ -6,16 +6,18 @@ This page breaks down the difference between positional and named attributes on 
 == Positional attribute
 
 // tag::pos[]
-Values placed in a specific order in an attribute list don't require an attribute name.
-The attribute that the value is assigned to depends on the type of the element.
-Here are some examples:
+Entries in an attribute list that only consist of a value are referred to as positional attributes.
+The position is the 1-based index of the entry once all named attributes have been removed (so they may be interspersed).
 
-* `icon:` (1) size
-* `image:` and `image::` (1) alt text, (2) width, (3) height
-* Delimited blocks: (1) block name (aka style)
-* Other inline quoted text: (1) role and ID shorthand
-* `link:` and `xref:` (1) link text
-* Custom blocks and macros can specify positional attributes
+The positional attribute may be dually assigned to an implicit attribute name if the block or macro defines a mapping for positional attributes.
+Here are some examples of those mappings:
+
+* `icon:` 1 => size
+* `image:` and `image::` 1 => alt (text), 2 => width, 3 => height
+* Delimited blocks: 1 => block style and attribute shorthand
+* Other inline quoted text: 1 => attribute shorthand
+* `link:` and `xref:` 1 => text
+* Custom blocks and macros can also specify positional attributes
 
 For example, the following two image macros are equivalent.
 
@@ -122,9 +124,9 @@ The processor splits the attrlist into individual attribute entries, determines 
 The rules for what defines the boundaries of an individual attribute, and whether the attribute is positional or named, are defined below.
 In these rules, `name` consists of a word character (letter or numeral) followed by any number of word or `-` characters (e.g., `see-also`).
 
-* Attribute references are expanded before the attrlist is parsed.
+* Attribute references are expanded before the attrlist is parsed (i.e., the attributes substitution is applied).
 * Parsing an attribute proceeds from the beginning of the attribute list string or after a previously identified delimiter (`,`).
-* The first character of an attribute list cannot be a tab or space.
+** The first character of an attribute list cannot be a tab or space.
 For subsequent attributes, any leading space or tab characters are skipped.
 * If a valid attribute name is found, and it is followed by an equals sign (=), then the parser recognizes this as a named attribute.
 The text after the equals sign (=) and up to the next comma or end of list is taken as the attribute value.
