@@ -17,8 +17,7 @@ The include directive is a <<include-processing,preprocessor directive>>, so it 
 
 The include directive is useful when you want to:
 
-* Partition a large document into smaller files for better organization and to make restructuring simpler.
-//** always separate consecutive include directives by a blank line unless your intent is for the included lines to run together
+* Partition a large document into smaller files for better organization and to make restructuring simpler.footnote:[Always separate consecutive include directives by an empty line unless your intent is to adjoin the content in the include files so it becomes contiguous.]
 * Insert source code from the external files where the code is maintained.
 * Populate tables with output, such as CSV data, from other programs.
 * Create document variants by combining the include directive with xref:conditionals.adoc[conditional preprocessor directives].
@@ -34,11 +33,40 @@ An include directive must be placed on a line by itself with the following synta
 \include::path[leveloffset=__offset__,lines=__ranges__,tag(s)=__name(s)__,indent=__depth__,opts=optional]
 ----
 
-The leveloffset, lines, tag(s), indent, and opts attributes are optional, making the simplest case look like:
+The leveloffset, lines, tag(s), indent, and opts attributes are optional, thus reducing the simplest case to the following:
 
 ----
 \include::content.adoc[]
 ----
+
+When using consecutive include directives, you should always separate them by an empty line unless your intention is to adjoin the content in the include files so it becomes contiguous.
+
+For example, if you're using the include directive to include individual chapters, the include directives should be offset from each other by an empty line.
+This strategy avoids relying on empty lines imported from the include file to keep the chapters separated.
+That separation should be encoded in the parent document instead.
+
+----
+\include::chapter01.adoc[]
+
+\include::chapter02.adoc[]
+
+\include::chapter03.adoc[]
+----
+
+On the other hand, if you're using the include directive to lay down contiguous lines, such as common document attribute entries, then you would put the include directives on adjacent lines to avoid inserting empty lines.
+
+----
+= Document Title
+Author Name
+\include::attributes-settings.adoc[]
+\include::attributes-urls.adoc[]
+:url-example: https://example.org
+
+Document body.
+----
+
+In either case, don't rely on the empty lines at the boundaries of the include file.
+And mind where empty lines are used in that include file.
 
 [#include-processing]
 == Include processing
