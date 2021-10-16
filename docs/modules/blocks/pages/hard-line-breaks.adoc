@@ -4,7 +4,7 @@ Since adjacent lines of text in AsciiDoc are combined into a single paragraph wh
 The line breaks won't appear in the output.
 
 However, if you want the line breaks in a paragraph to be preserved, you can use a space followed by a plus sign (`{plus}`) or set the `hardbreaks` option on the paragraph.
-All of the line breaks in paragarphs for an entire document can be preserved with the `hardbreaks-option` document attribute.
+All of the line breaks in paragraphs for an entire document can be preserved with the `hardbreaks-option` document attribute.
 
 TIP: Hard line breaks are automatically retained in xref:verbatim:literal-blocks.adoc[literal], xref:verbatim:listing-blocks.adoc[listing], xref:verbatim:source-blocks.adoc[source], and xref:verses.adoc[verse] blocks and paragraphs.
 
