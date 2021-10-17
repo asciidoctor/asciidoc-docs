@@ -3,6 +3,9 @@
 The `options` attribute (often abbreviated as `opts`) is a versatile xref:positional-and-named-attributes.adoc#named[named attribute] that can be assigned one or more values.
 It can be defined globally as document attribute as well as a block attribute on an individual block.
 
+There is no strict schema for options.
+Any options which are not recognized are ignored.
+
 == Assign options to blocks
 
 You can assign one or more options to a block using the shorthand or formal syntax for the `options` attribute.
