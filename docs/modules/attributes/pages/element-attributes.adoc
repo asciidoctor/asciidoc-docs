@@ -5,8 +5,8 @@ They can also be used to add supplemental information, such as citation metadata
 
 == What are element attributes?
 
-[.term]*Element attributes* define the built-in and user-defined styles, behavior, and metadata that are applied to an individual block element or inline element in a document (including macros).
-Even though it's not technically an element, element attributes can also be defined on the include directive.
+[.term]*Element attributes* define the built-in and user-defined settings and metadata that can be applied to an individual block element or inline element in a document (including macros).
+Although the include directive is not technically an element, element attributes can also be defined on an include directive.
 
 Element attributes may be positional (value only) or named (key/value pair).
 Some built-in and extension elements will map a positional attribute to a named attribute.
