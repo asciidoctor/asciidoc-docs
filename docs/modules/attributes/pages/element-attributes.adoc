@@ -13,6 +13,13 @@ Some built-in and extension elements will map a positional attribute to a named 
 Each element recognizes a predefined set of positional and/or named element attributes.
 Authors may define any number of custom element attributes for passing information to an extension or document analyzer.
 
+Like document attributes, there's no strict schema for element attributes, or for the value of the `options` element attribute.
+There's a core set of reserved attributes shared by all block elements and most inline elements, which includes id, role, opts, and title.
+Certain elements may reserve additional attributes and option values.
+For example, the source block reserves the `lang` attribute to set the source language and the `linenums` option to enable line numbers.
+The link macro reserves the `window` attribute to change the target window of a link and the `nofollow` option to prevent crawlers from following it.
+Otherwise, the schema for element attributes is open-ended, thus allowing extensions to use them for their own purpose.
+
 Element attributes are commonly used for the following purposes:
 
 * Declare the ID of an element
@@ -45,3 +52,7 @@ Attribute lists:
 
 Entries in an attribute list are separated by commas, excluding commas inside a quoted value.
 The syntax used for an entry in the attribute list determines whether it's a positional or named attribute.
+
+As mentioned in the previous setting, the schema for element attributes is open-ended.
+Any positional or named attributes that are not recognized will be stored on the element, but will not have an impact on the behavior or output.
+Extensions may use this auxiliary information to influence their behavior and/or customize the output.

@@ -19,6 +19,7 @@ Fixed::
 Changed::
 * clarify that the value of the width and height attributes must be an integer value without a unit
 * provide clarity about image sizing attributes in general
+* clarify that the schema for element attributes is open-ended (#87)
 
 == Published Q3 2021
 
