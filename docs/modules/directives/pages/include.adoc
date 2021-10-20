@@ -30,13 +30,20 @@ An include directive must be placed on a line by itself with the following synta
 
 [listing,subs=+quotes]
 ----
-\include::path[leveloffset=__offset__,lines=__ranges__,tag(s)=__name(s)__,indent=__depth__,opts=optional]
+\include::target[leveloffset=__offset__,lines=__ranges__,tag(s)=__name(s)__,indent=__depth__,opts=optional]
 ----
+
+The target is required.
+The target may be an absolute path, a path relative to the current document, or a URL.
+Since the include directive is a line-oriented expression, the target may contain space characters.
+An absolute or relative path outside the directory of the outermost document will only be honored if the safe mode is unsafe.
+A URL target will only be resolved if the security settings on the processor allow it.
+See xref:include-uri.adoc[].
 
 The leveloffset, lines, tag(s), indent, and opts attributes are optional, thus reducing the simplest case to the following:
 
 ----
-\include::content.adoc[]
+\include::partial.adoc[]
 ----
 
 When using consecutive include directives, you should always separate them by an empty line unless your intention is to adjoin the content in the include files so it becomes contiguous.
