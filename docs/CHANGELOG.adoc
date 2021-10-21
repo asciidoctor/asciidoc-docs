@@ -11,6 +11,8 @@ Added::
 * define the term attrlist as the source text that defines attributes for an element or include directive
 * document how to use text formatting markup in the text of an externalized footnote
 * add recommendation to separate consecutive include directives by an empty line unless the intend is to adjoin the content
+* document acceptable values for the image target
+* document that spaces in the image target are encoded when converting to HTML
 
 Fixed::
 * state that scaledwidth attribute with % value scales the image relative to the content area
