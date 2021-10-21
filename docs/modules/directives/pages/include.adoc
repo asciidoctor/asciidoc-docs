@@ -37,7 +37,7 @@ The target is required.
 The target may be an absolute path, a path relative to the current document, or a URL.
 Since the include directive is a line-oriented expression, the target may contain space characters.
 An absolute or relative path outside the directory of the outermost document will only be honored if the safe mode is unsafe.
-A URL target will only be resolved if the security settings on the processor allow it.
+A URL target will only be resolved if the security settings on the processor allows it (e.g., `allow-uri-read`).
 See xref:include-uri.adoc[].
 
 The leveloffset, lines, tag(s), indent, and opts attributes are optional, thus reducing the simplest case to the following:

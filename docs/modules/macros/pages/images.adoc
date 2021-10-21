@@ -27,6 +27,8 @@ The result of <<ex-block>> is displayed below.
 
 include::example$image.adoc[tag=base]
 
+include::partial$image-target.adoc[]
+
 You can specify a comma-separated list of optional attributes inside the square brackets or leave them empty.
 If you want to specify alt text, enter it inside the square brackets.
 
@@ -95,5 +97,7 @@ Complete the macro with a pair of square brackets (`+[]+`).
 The result of <<ex-inline>> is displayed below.
 
 include::example$image.adoc[tag=inline]
+
+include::partial$image-target.adoc[]
 
 For inline images, the optional title is displayed as a tooltip.

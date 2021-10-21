@@ -1,0 +1,9 @@
+The target is required.
+The target may be a relative path or a URL.
+How the target is interpreted depends on the processor settings and/or output format.
+If the converter generates output that references the image, the path must be relative to the published document.
+If the converter embeds the image in the output document (e.g., inline SVG, `data-uri` is set, converting to PDF directly), the target must be resolvable at convert time.
+In the latter case, a URL will only be resolved if the security settings on the processor allows it (e.g., `allow-uri-read`).
+
+The target may contain space characters.
+In the HTML output, these spaces will be URL encoded (i.e., `%20`).
