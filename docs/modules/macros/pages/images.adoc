@@ -1,6 +1,8 @@
 = Images
 
 There are two AsciiDoc image macro types, block and inline.
+As with all macros, the block and inline forms differ by the number of colons that follow the macro name.
+The block form uses two colons (`::`), whereas the inline form only uses one (`:`).
 
 == Block image macro
 
