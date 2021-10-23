@@ -31,4 +31,4 @@ Here's an example of how to include complex content from another file into a lis
 --
 ----
 
-See xref:lists:continuation.adoc#dropping-the-principal-text[dropping the principal text of a list item] for another example of this technique.
+See xref:lists:continuation.adoc#drop-principal-text[dropping the principal text of a list item] for another example of this technique.
