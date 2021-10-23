@@ -1,6 +1,5 @@
 = Preface
 :keywords: front matter, forward, introduction, proem, pref
-// anchor from um: user-preface
 
 A preface is a special section that precedes the first chapter of a book or a book part.
 

@@ -1,6 +1,5 @@
 = Index
 :page-aliases: index.adoc
-// anchor from um: user-index
 
 You can mark index terms explicitly in AsciiDoc content.
 Index terms form a controlled vocabulary that can be used to navigate the document by keyword starting from an index.

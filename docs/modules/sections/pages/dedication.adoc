@@ -1,6 +1,5 @@
 = Dedication
 :keywords: respect, homage, front matter
-// anchor from um: user-dedication
 
 A dedication page is used to express gratitude.
 

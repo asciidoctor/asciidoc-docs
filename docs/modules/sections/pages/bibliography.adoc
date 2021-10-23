@@ -1,5 +1,4 @@
 = Bibliography
-// anchor from um: user-biblio
 
 AsciiDoc has basic support for bibliographies.
 AsciiDoc doesn't concern itself with the structure of the bibliography entry itself, which is entirely freeform.
