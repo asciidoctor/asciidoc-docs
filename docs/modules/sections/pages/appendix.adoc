@@ -1,5 +1,4 @@
 = Appendix
-// anchor um: user-appendix
 
 The `appendix` section style can be used in books and articles, and it can have subsections.
 While the AsciiDoc structure allows appendices to be placed anywhere, it's customary to place them near the end of the document.
