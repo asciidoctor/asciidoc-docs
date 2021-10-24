@@ -55,13 +55,13 @@ You can think of a constrained pair as being a weaker markup than an unconstrain
 === Unconstrained formatting pair
 
 An [.term]*unconstrained formatting pair* can be used anywhere in the text.
-When the conditions are not met for a constrained formatting pair, then an unconstrained formatting pair must be used instead.
-An unconstrained pair uses a double opening mark and a double closing mark to enclose the text to be styled (e.g., `+Sara**h**+`).
+When the conditions are not met for a constrained formatting pair, the situation calls for an unconstrained formatting pair.
+An unconstrained pair consists of a double opening mark and a double closing mark that encloses the text to be styled (e.g., `+Sara**h**+`).
 
-For example, you'd use an unconstrained pair to format just one or a few letters in a word.
+For example, you'd use an unconstrained pair to format one or more letters in a word.
 
 ----
-She spells her name with an "`h`", as in Sara**h**.
+The man page, short for **man**ual page, is a form of software documentation.
 ----
 
 The unconstrained pair provides a more brute force approach to formatting at the tradeoff of being more verbose.
