@@ -123,6 +123,12 @@ It was Beatle**__mania__**!
 `+WHERE id <= 20 AND value = "{name}"+` is a SQL WHERE clause.
 // end::monospace-vs-codespan[]
 
+// tag::straight-quotes[]
+In Ruby, '\n' represents a backslash followed by the letter n.
+Single quotes prevent escape sequences from being interpretted.
+In constrast, "\n" represents a newline.
+// end::straight-quotes[]
+
 // tag::c-quote-co[]
 "`What kind of charm?`" Lazarus asked.
 "`An odoriferous one or a mineral one?`" <.>
