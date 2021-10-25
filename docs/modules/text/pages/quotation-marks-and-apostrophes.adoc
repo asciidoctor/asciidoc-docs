@@ -44,28 +44,22 @@ In that case, it's necessary to input the curved quotation marks directly using 
 
 == Apostrophe syntax
 
-When entered with the kbd:[{apos}] key, the AsciiDoc processor outputs an apostrophe that is directly preceded and followed by a character, such as in contractions and possessive singular forms, as a curved apostrophe.
-This inconsistent handling of apostrophes and quotation marks is a hold over from the original AsciiDoc processor.
-An apostrophe directly bounded by two characters is processed during the xref:subs:replacements.adoc[replacements substitution phase], not the inline formatting (quotes) phase.
-This is why an apostrophe directly followed by white space, such as the possessive plural form, is not curved by default.
+When entered using the kbd:['] key, the AsciiDoc processor translates a straight apostrophe directly preceded and followed by a word character, such as in contractions and possessive singular forms, as a curved apostrophe.
+This partial support for smart typography without any special syntax is a legacy inherited from AsciiDoc.py.
 
-To render an apostrophe as curved when it is not bound by two characters, mark it as you would a single curved quote.
-
-.Curved apostrophe syntax
-[#ex-apostrophe]
+.Curved apostrophe replacement
+[#ex-apostrophe-replacement]
 ----
-include::example$text.adoc[tag=apos]
+Olaf's desk was a mess.
 ----
 
-In the rendered output, note that the plural possessive apostrophe, seen trailing _werewolves_, is curved, as is the omission apostrophe before _00s_.
-The result of <<ex-apostrophe>> is rendered below.
+The result of <<ex-apostrophe-replacement>> is rendered below.
 
 ====
-include::example$text.adoc[tag=apos]
+Olaf's desk was a mess.
 ====
 
-If you don't want an apostrophe that is bound by two characters to be rendered as curved, escape it by preceding it with a backslash (`{backslash}`).
-The xref:subs:prevent.adoc[] and xref:pass:pass-macro.adoc[] pages detail additional ways to prevent punctuation substitutions.
+If you don't want a straight apostrophe that's bounded by two word characters to be rendered as a curved apostrophe, escape it by preceding it with a backslash (`{backslash}`).
 
 .Escape an apostrophe
 [#ex-escape]
@@ -79,21 +73,46 @@ The result of <<ex-escape>> is rendered below.
 Olaf\'s desk ...
 ====
 
+An apostrophe directly bounded by two word characters is processed during the xref:subs:replacements.adoc[replacements substitution phase], not the inline formatting (quotes) phase.
+To learn about additional ways to prevent the replacements substitution, see xref:subs:prevent.adoc[] and xref:pass:pass-macro.adoc[].
+
+An apostrophe directly followed by a space or punctuation, such as the possessive plural form, is not curved by default.
+To render a curved apostrophe when not bounded by two word characters, mark it as you would the second half of single curved quote (i.e., `pass:[`']`).
+This syntax for a curved apostrophe is effectively unconstrained.
+
+.Curved apostrophe syntax
+[#ex-apostrophe]
+----
+include::example$text.adoc[tag=apos]
+----
+
+In the rendered output for <<ex-apostrophe>> below, notice that the plural possessive apostrophe, seen trailing _werewolves_, is curved, as is the omission apostrophe before _00s_.
+
+====
+include::example$text.adoc[tag=apos]
+====
+
+=== Possessive monospace
+
 In order to make a possessive, monospaced phrase, you need to switch to unconstrained formatting followed by an explicit typographic apostrophe.
 
 .Use a curved apostrophe with monospace in a word
 [#ex-word]
 ----
 ``npm```'s job is to manage the dependencies for your application.
+
+A ``std::vector```'s size is the number of items it contains.
 ----
 
 The result of <<ex-word>> is rendered below.
 
 ====
 ``npm```'s job is to manage the dependencies for your application.
+
+A ``std::vector```'s size is the number of items it contains.
 ====
 
-The same goes if the monospaced phrase ends in an "`s`".
+You'll need to use a similar syntax when the last (or only) word in the monospace phrase ends in an "`s`" (i.e., the plural possessive form).
 
 .Use a curved apostrophe with monospace at the end of a word
 [#ex-word-end]
@@ -108,11 +127,15 @@ The word _class_ is rendered in monospace with a curved apostrophe at the end of
 This ``class```' static methods make it easy to operate on files and directories.
 ====
 
-Alternately, you could encode the typographic apostrophe directly in the AsciiDoc source to get the same result without the need to use unconstrained formatting.
+You can get the same result by inserting a typographic apostrophe immediately following a constrained formatting pair.
+In this case, you're able to leverage the fact that a typographic apostrophe is a punctuation character to avoid the need to resort to unconstrained formatting.
 
 ----
 The `class`’ static methods make it easy to operate on files and directories.
 ----
+
+As you can see, it's often simpler to input the curved apostrophe directly using the character kbd:[’].
+The shorthand syntax AsciiDoc provides is only meant as a convenience.
 
 ////
 Add a sidebar describing the history and concerns with smart quotes regarding copy and paste and correct Unicode output.
