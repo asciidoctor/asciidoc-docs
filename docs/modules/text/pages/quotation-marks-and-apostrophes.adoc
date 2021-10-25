@@ -1,13 +1,31 @@
 = Quotation Marks and Apostrophes
 
+This page describes how to insert curved quotation marks and apostrophes using the AsciiDoc syntax.
+It covers the shorthand syntax, the limitations of that syntax, and when it's necessary to input these characters directly.
+
 == Single and double quotation mark syntax
 
-Single and double quotation marks are *not* rendered as curved quotation marks (also known as smart, curly, typographic, or book quotation marks).
-When entered using the kbd:[{apos}] and kbd:[{quot}] key, the AsciiDoc processor outputs straight quotation marks (also known as vertical or typewriter quotation marks).
-However, by creating a pair of backticks (`{backtick}`) contained within a pair of single quotes (`{apos}`) or double quotes (`{quot}`), you can tell the AsciiDoc processor where to output curved quotation marks.
+AsciiDoc does not assign special meaning to single or double quotation marks when used as constrained formatting pairs (e.g., around a word or phrase).
+In this case, the kbd:['] and kbd:["] characters are taken to be straight quotation marks (also known as dumb, vertical, or typewriter quotation marks).
+When an AsciiDoc processor encounters straight quotation marks in this context, it outputs them as entered.
+
+.Single and double straight quotation marks syntax
+[#ex-straight-quotes]
+----
+include::example$text.adoc[tag=straight-quotes]
+----
+
+The result of <<ex-straight-quotes>> is rendered below.
+
+====
+include::example$text.adoc[tag=straight-quotes]
+====
+
+You can instruct the AsciiDoc processor to output curved quotation marks (also known as smart, curly, or typographic quotation marks) by adding a repurposed constrained monospace formatting pair (i.e., a pair of backticks, `{backtick}`) directly inside the pair of quotation marks.
+The combination of these two formatting pairs forms a new constrained formatting pair for producing single and double curved quotation marks.
 
 .Single and double curved quotation marks syntax
-[#ex-quote-marks]
+[#ex-curved-quotes]
 ----
 include::example$text.adoc[tag=c-quote-co]
 ----
@@ -15,11 +33,14 @@ include::example$text.adoc[tag=c-quote-co]
 <.> To output single curved quotes, enclose a word or phrase in a pair of single quotes (`{apos}`) and a pair of backticks (`{backtick}`).
 In this example, the phrase _wormwood and licorice_ should be enclosed in curved single quotes when the document is rendered.
 
-The result of <<ex-quote-marks>> is rendered below.
+The result of <<ex-curved-quotes>> is rendered below.
 
 ====
 include::example$text.adoc[tag=c-quote]
 ====
+
+There's no uncontrained equivalent for producing double and single curved quotation marks.
+In that case, it's necessary to input the curved quotation marks directly using the characters kbd:[‘], kbd:[’], kbd:[“], and kbd:[”].
 
 == Apostrophe syntax
 

@@ -24,6 +24,7 @@ Changed::
 * clarify that the schema for element attributes is open-ended (#87)
 * revise the Document Attributes page so it provides a clearer and more accurate introduction to document attributes
 * clarify what values the target of an include directive accepts
+* rewrite the introduction of single and double curved quotes; add example for straight quotes
 
 == Published Q3 2021
 
