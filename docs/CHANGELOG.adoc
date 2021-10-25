@@ -25,6 +25,7 @@ Changed::
 * revise the Document Attributes page so it provides a clearer and more accurate introduction to document attributes
 * clarify what values the target of an include directive accepts
 * rewrite the introduction of single and double curved quotes; add example for straight quotes
+* rewrite the introduction of the apostrophe behavior and syntax; add example for the smart typography replacement
 
 == Published Q3 2021
 
