@@ -29,7 +29,26 @@ If you're referring to a content element other than a section, you'll need to de
 
 == Internal cross references
 
-In AsciiDoc, the inline xref macro is used to create cross references (also called in-text or page citations) to content elements (sections, blocks, or phrases) that have an ID (regardless of whether that ID is explicit or auto-generated).
+In AsciiDoc, the shorthand xref is used to create a cross reference to an element (e.g., section, block, list item, etc.) that has an ID within the same document.
+The shorthand xref is processed by the macros substitution.
+
+If the cross reference specifies both an ID and text, the text is formatted and used as the link text.
+If the cross reference only specifies the ID, the formatted title of the target element is automatically used as the link text.
+If the element does not have a title, a stylized form of the ID is used instead.
+Whether the ID is assigned explicitly on the referenced element or auto-generated does not affect how this mechanism works.
+
+Currently, an AsciiDoc processor can resolve a cross reference to the following elements:
+
+* Section (ID or block anchor)
+* Block (ID or block anchor)
+* Block macro (ID)
+* Inline anchor anywhere in a paragraph
+* Inline anchor at the start of a list item or table cell
+* Bibliography anchor in a bibliography list
+
+Note that the processor cannot resolve the ID assigned to a span of formatted text.
+If the cross reference cannot be resolved, an verbose mode is enabled, the AsciiDoc processor issues a warning about a possible invalid reference.
+In this case, the output document will reference the target blindly, so it's possible it will still function.
 
 You create a cross reference by enclosing the ID of the target block or section (or the path of another document with an optional anchor) in double angled brackets.
 
@@ -41,7 +60,9 @@ include::example$xref.adoc[tag=base]
 
 The result of <<ex-section>> is displayed below.
 
+====
 include::example$xref.adoc[tag=base]
+====
 
 You can also link to a block or section using the title by referencing its title, referred to as a [.term]*natural cross reference*.
 The title must contain at least one space character or contain at least one uppercase letter.
