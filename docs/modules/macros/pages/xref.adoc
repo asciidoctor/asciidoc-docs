@@ -33,8 +33,8 @@ In AsciiDoc, the shorthand xref is used to create a cross reference to an elemen
 The shorthand xref is processed by the macros substitution.
 
 If the cross reference specifies both an ID and text, the text is formatted and used as the link text.
-If the cross reference only specifies the ID, the formatted title of the target element is automatically used as the link text.
-If the element does not have a title, a stylized form of the ID is used instead.
+If the cross reference only specifies the ID, the reftext of the target element (typically the formatted title) is automatically used as the link text.
+If the element does not define reftext, a stylized form of the ID is used instead.
 Whether the ID is assigned explicitly on the referenced element or auto-generated does not affect how this mechanism works.
 
 Currently, an AsciiDoc processor can resolve a cross reference to the following elements:
@@ -64,23 +64,7 @@ The result of <<ex-section>> is displayed below.
 include::example$xref.adoc[tag=base]
 ====
 
-You can also link to a block or section using the title by referencing its title, referred to as a [.term]*natural cross reference*.
-The title must contain at least one space character or contain at least one uppercase letter.
-(If you are using Ruby < 2.4, that uppercase letter is restricted to the basic Latin charset).
-
-.Cross reference using a section's title
-[source#ex-title]
-----
-include::example$xref.adoc[tag=xref-title]
-----
-
-////
-From @graphitefriction: This result will need some attributes to be adjusted if we want it to work.
-
-The result of <<ex-title>> is displayed below.
-
-include::example$xref.adoc[tag=xref-title]
-////
+=== Explicit link text
 
 Converters usually use the reftext of the target as the default text of the link.
 When the document is parsed, attribute references in the reftext are substituted immediately.
@@ -95,17 +79,29 @@ After the ID, add a comma and then enter the custom text you want the cross refe
 include::example$xref.adoc[tag=text]
 ----
 
-////
-From @graphitefriction: This result will need to be fixed to work in the new site.
-The result of <<ex-custom>> is displayed below.
-
-include::example$xref.adoc[tag=text]
-////
-
-You can also use the inline xref macro as an alternative to the double angled bracket form.
+You can also use the inline xref macro as an alternative to the xref shorthand.
 
 .Inline xref macro
 [source]
 ----
 include::example$xref.adoc[tag=xref-macro]
 ----
+
+However, it's best to reserve the use of the xref macro for creating interdocument cross references.
+
+=== Natural cross reference
+
+You can also create a reference to a block or section using its title rather than its ID.
+This type of reference is referred to as a [.term]*natural cross reference*.
+The title must contain at least one space character or contain at least one uppercase letter.
+//(If you are using Ruby < 2.4, that uppercase letter is restricted to the basic Latin charset).
+
+.Cross reference using a section's title
+[source#ex-title]
+----
+include::example$xref.adoc[tag=xref-title]
+----
+
+As a rule of thumb, the natural cross reference should only be used for rapid development or short-lived content.
+As the content matures, you should switch to using IDs for referencing, ideally IDs which are declared explicitly.
+By doing so, it ensures your references have maximum stability and are shielded against title revisions.
