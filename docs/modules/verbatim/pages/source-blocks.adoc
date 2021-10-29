@@ -13,8 +13,8 @@ NOTE we really want this ID on the section, but there are problems w/ multiple I
 
 Developers are accustomed to seeing source code colorized to emphasize the code's structure (i.e., keywords, types, delimiters, etc.).
 This technique is known as [.term]*syntax highlighting*.
-Since this technique is so prevalent, Asciidoctor integrates with a number of libraries to syntax highlight the source code blocks in your document.
-The list of integrated libraries includes Rouge, CodeRay, Pygments, and highlight.js.
+Since this technique is so prevalent, AsciiDoc processors will integrate at least one library to syntax highlight the source code blocks in your document.
+For example, Asciidoctor provides integration with Rouge, CodeRay, Pygments, and highlight.js, as well as an adapter API to add support for additional libraries.
 
 <<ex-source>> shows a listing block with the `source` style and language `ruby` applied to its content, hence a source block.
 
