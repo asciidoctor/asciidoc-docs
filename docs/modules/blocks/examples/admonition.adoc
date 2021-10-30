@@ -44,19 +44,20 @@ While werewolves are hardy community members, keep in mind the following dietary
 ======
 // end::bl-nest[]
 
-// in qr
 // tag::b-para[]
-NOTE: An admonition draws attention to auxiliary information.
+NOTE: An admonition draws the reader's attention to auxiliary information.
 
 Here are the other built-in admonition types:
 
-TIP: Pro tip...
+IMPORTANT: Don't forget the children!
 
-IMPORTANT: Don't forget...
+TIP: Look for the warp zone under the bridge.
 
-WARNING: Watch out for...
+CAUTION: Slippery when wet.
 
-CAUTION: Ensure that...
+WARNING: The software you're about to use is untested.
+
+IMPORTANT: Sign off before stepping away from your computer.
 // end::b-para[]
 
 // in qr
