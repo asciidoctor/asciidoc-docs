@@ -29,6 +29,7 @@ This is documentation for project X.
 // end::last[]
 
 // tag::include-with-tag[]
+// selects lines between tag::definition[] and end::definition[] lines
 \include::filename.txt[tag=definition]
 // end::include-with-tag[]
 
