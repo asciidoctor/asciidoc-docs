@@ -92,5 +92,5 @@ class Bar {
 
 // used in qr
 // tag::uri[]
-\include::https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/README.adoc[]
+\include::https://raw.githubusercontent.com/asciidoctor/asciidoctor/main/README.adoc[]
 // end::uri[]
