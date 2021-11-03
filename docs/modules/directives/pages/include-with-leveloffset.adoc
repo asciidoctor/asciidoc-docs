@@ -1,5 +1,4 @@
 = Offset Section Levels
-// in Included Content
 //Partitioning Large Documents and using leveloffset
 // [#include-partitioning]
 

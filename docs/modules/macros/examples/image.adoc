@@ -1,4 +1,3 @@
-// in qr as syntax
 // tag::base[]
 image::sunset.jpg[]
 // end::base[]
@@ -7,12 +6,10 @@ image::sunset.jpg[]
 image::sunset.jpg[] <.> <.>
 // end::base-co[]
 
-// in qr as result
 // tag::qr-base[]
 image::macros:sunset.jpg[]
 // end::qr-base[]
 
-// in qr as syntax
 // tag::alt[]
 image::sunset.jpg[Sunset]
 // end::alt[]
@@ -21,7 +18,6 @@ image::sunset.jpg[Sunset]
 image::sunset.jpg["Mesa Verde Sunset, by JAVH"]
 // end::alt-with-comma[]
 
-// in qr as result
 // tag::qr-alt[]
 image::macros:sunset.jpg[Sunset]
 // end::qr-alt[]
@@ -33,7 +29,6 @@ image::macros:sunset.jpg[Sunset]
 image::sunset.jpg[Sunset,200,100] <.> <.>
 // end::attr-co[]
 
-// in qr as syntax
 // tag::attr[]
 .A mountain sunset
 [#img-sunset]
@@ -41,7 +36,6 @@ image::sunset.jpg[Sunset,200,100] <.> <.>
 image::sunset.jpg[Sunset,200,100]
 // end::attr[]
 
-// in qr as result
 // tag::qr-attr[]
 .A mountain sunset
 [#img-sunset]
@@ -49,31 +43,26 @@ image::sunset.jpg[Sunset,200,100]
 image::macros:sunset.jpg[Sunset,200,100]
 // end::qr-attr[]
 
-// in qr as syntax and result
 // tag::ab-url[]
 image::https://asciidoctor.org/images/octocat.jpg[GitHub mascot]
 // end::ab-url[]
 
-// in qr as syntax
 // tag::inline[]
 Click image:play.png[] to get the party started.
 
 Click image:pause.png[title="Pause"] when you need a break.
 // end::inline[]
 
-// in qr as result
 // tag::qr-inline[]
 Click image:macros:play.png[] to get the party started.
 
 Click image:macros:pause.png[title="Pause"] when you need a break.
 // end::qr-inline[]
 
-// in qr as syntax
 // tag::in-role[]
 image:sunset.jpg[Sunset,150,150,role=right] What a beautiful sunset!
 // end::in-role[]
 
-// in qr as result
 // tag::qr-role[]
 image:macros:sunset.jpg[Sunset,150,150,role=right] What a beautiful sunset!
 // end::qr-role[]
@@ -113,7 +102,6 @@ image::3/35/Tux.svg[Tux,250,350]
 :imagesdir: {imagesdir-old}
 // end::base-url[]
 
-// in qr as syntax and result
 // tag::data[]
 = Document Title
 :data-uri:

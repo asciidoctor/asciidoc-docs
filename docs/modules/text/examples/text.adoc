@@ -4,7 +4,6 @@ This journey begins one late Monday afternoon in Antwerp.
 Our team desperately needs coffee, but none of us dare open the office door.
 // end::para[]
 
-// used in qr
 // FIXME this should be in the blocks module
 // tag::b-para[]
 Paragraphs don't require special markup in AsciiDoc.
@@ -14,7 +13,6 @@ Newlines within a paragraph are not displayed.
 Leave at least one blank line to begin a new paragraph.
 // end::b-para[]
 
-//used in qr
 // tag::hb-all[]
 Roses are red, +
 violets are blue.
@@ -77,7 +75,6 @@ But **u**ltimate victory could only be won if we divined the
 *_true name_* of the __war__lock.
 // end::b-i-n[]
 
-// used in qr
 // tag::b-bold-italic-mono[]
 bold *constrained* & **un**constrained
 
@@ -116,7 +113,6 @@ Don't pass generic ``Object``s to methods that accept ``String``s!
 It was Beatle**__mania__**!
 // end::unconstrained-bold-italic-mono[]
 
-// used in qr
 // tag::monospace-vs-codespan[]
 `{cpp}` is valid syntax in the programming language by the same name.
 
@@ -147,7 +143,6 @@ Kizmet shrugged.
 but these could be normal groceries for werewolves.`"
 // end::c-quote[]
 
-// used in qr
 // tag::b-c-quote[]
 "`double curved quotes`"
 
@@ -176,7 +171,6 @@ of a shopping list, but I don't think the local bodega sells
 E=mc^2^,`" Lazarus replied.
 // end::sub-sup[]
 
-//used in qr
 // tag::b-sub-sup[]
 ^super^script phrase
 
@@ -199,7 +193,6 @@ the syntax `+{name}+`, where `name` is the attribute name.
 `pass:[++]` is the increment operator in C.
 // end::literal-mono-with-plus[]
 
-// used in qr
 // tag::b-mono-code[]
 Reference code like `types` or `methods` inline.
 
@@ -234,7 +227,6 @@ Do werewolves believe in [.small]#small print#?
 [big]##O##nce upon an infinite loop.
 // end::css[]
 
-// used in qr
 // tag::qr-all[]
 Werewolves are allergic to #cinnamon#.
 

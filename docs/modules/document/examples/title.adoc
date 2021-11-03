@@ -1,4 +1,3 @@
-// used in qr
 // tag::qr-title[]
 = Document Title
 

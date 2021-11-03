@@ -60,7 +60,6 @@ WARNING: The software you're about to use is untested.
 IMPORTANT: Sign off before stepping away from your computer.
 // end::b-para[]
 
-// in qr
 // tag::b-bl[]
 [NOTE]
 ====

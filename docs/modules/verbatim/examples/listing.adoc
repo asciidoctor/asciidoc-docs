@@ -18,7 +18,6 @@ The content inside is displayed as <pre> text.
 ----
 // end::block[]
 
-// in qr
 // tag::qr-listing[]
 .Gemfile.lock
 ----
@@ -35,7 +34,6 @@ DEPENDENCIES
 ----
 // end::qr-listing[]
 
-// in qr
 // tag::subs[]
 :release-version: pass:a[{release-version}]
 
@@ -49,7 +47,6 @@ DEPENDENCIES
 ----
 // end::subs[]
 
-// in qr
 // tag::subs-out[]
 [source,xml,subs=attributes+]
 ----

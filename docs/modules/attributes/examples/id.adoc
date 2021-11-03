@@ -8,7 +8,6 @@ This paragraph gets a lot of attention.
 This paragraph gets a lot of attention.
 // end::block-id-shorthand[]
 
-// used in qr
 // tag::anchor[]
 // tag::anchor-brackets[]
 [[bookmark-a]]Inline anchors make arbitrary content referenceable.

@@ -1,4 +1,3 @@
-// all tags are in qr
 // tag::csv[]
 [%header,format=csv]
 |===
