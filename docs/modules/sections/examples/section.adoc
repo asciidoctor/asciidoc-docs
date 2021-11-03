@@ -1,4 +1,3 @@
-// in qr
 // tag::base[]
 = Document Title (Level 0)
 
@@ -63,7 +62,6 @@ Content of nested section
 Content of second section
 // end::content[]
 
-// in qr
 // tag::book[]
 = Document Title (Level 0)
 
@@ -180,7 +178,6 @@ Unnumbered Section
 :sectnumlevels: 2 <.>
 // end::sectnuml[]
 
-// in qr
 // tag::md[]
 # Document Title (Level 0)
 
@@ -195,7 +192,6 @@ Unnumbered Section
 ###### Section Level 5
 // end::md[]
 
-//in qr
 // tag::b-md[]
 [float]
 # Document Title (Level 0)

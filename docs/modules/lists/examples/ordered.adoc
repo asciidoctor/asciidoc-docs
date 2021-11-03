@@ -38,7 +38,6 @@
 . Neutrons
 // end::reversed[]
 
-// in qr
 // tag::nest[]
 . Step 1
 . Step 2
@@ -47,7 +46,6 @@
 . Step 3
 // end::nest[]
 
-// in qr
 // tag::max[]
 . Level 1 list item
 .. Level 2 list item

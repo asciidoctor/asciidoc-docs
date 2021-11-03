@@ -1,4 +1,3 @@
-// in qr
 // tag::base[]
 .Parts{counter2:index:0}
 |===

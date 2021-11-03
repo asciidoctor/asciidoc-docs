@@ -52,7 +52,6 @@ link:downloads/report.pdf[Get Report]
 link:tools.html#editors[]
 // end::hash[]
 
-// used in qr
 // tag::b-base[]
 https://asciidoctor.org - automatic!
 
@@ -63,7 +62,6 @@ https://asciidoctor.org[Asciidoctor]
 Email us at hello@example.com to say hello.
 // end::bare-email[]
 
-// used in qr
 // tag::b-scheme[]
 devel@discuss.example.org
 
@@ -72,21 +70,18 @@ mailto:devel@discuss.example.org[Discuss]
 mailto:join@discuss.example.org[Subscribe,Subscribe me,I want to join!]
 // end::b-scheme[]
 
-// used in qr
 // tag::b-linkattrs[]
 https://discuss.asciidoctor.org[Discuss Asciidoctor,role=external,window=_blank]
 
 https://discuss.asciidoctor.org[Discuss Asciidoctor^]
 // end::b-linkattrs[]
 
-// used in qr
 // tag::b-spaces[]
 link:++https://example.org/?q=[a b]++[URL with special characters]
 
 https://example.org/?q=%5Ba%20b%5D[URL with special characters]
 // end::b-spaces[]
 
-// used in qr
 // tag::b-windows[]
 link:\\server\share\whitepaper.pdf[Whitepaper]
 // end::b-windows[]

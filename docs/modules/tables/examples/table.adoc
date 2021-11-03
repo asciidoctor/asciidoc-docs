@@ -20,7 +20,6 @@
 |=== <1>
 // end::base-co[]
 
-// in qr
 // tag::b-col-h-co[]
 [%header,cols=2*] <.>
 |===
@@ -35,7 +34,6 @@
 |===
 // end::b-col-h-co[]
 
-// in qr
 // tag::b-col-h[]
 [%header,cols=2*]
 |===
@@ -101,7 +99,6 @@
 |===
 // end::indv[]
 
-// in qr
 // tag::b-base-h-co[]
 .Table Title
 |===
@@ -115,7 +112,6 @@
 |===
 // end::b-base-h-co[]
 
-// in qr
 // tag::b-base-h[]
 .Table Title
 |===
@@ -129,7 +125,6 @@
 |===
 // end::b-base-h[]
 
-// in qr
 // tag::b-col-indv-co[]
 .Applications
 [cols="1,1,2"] <.>
@@ -168,7 +163,6 @@ Empowers developers to easily create real, automated tests.
 |===
 // end::b-col-indv[]
 
-// in qr
 // tag::b-col-a[]
 [cols="2,2,5a"]
 |===

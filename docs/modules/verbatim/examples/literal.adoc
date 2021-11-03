@@ -2,7 +2,6 @@
  ~/secure/vault/defops
 // end::indent[]
 
-// in qr
 // tag::qr-para[]
 A normal paragraph.
 
@@ -16,7 +15,6 @@ A normal paragraph.
  are preserved.
 // end::qr-para[]
 
-// in qr
 // tag::b-imp-code[]
 Normal line.
 
@@ -46,7 +44,6 @@ Computer: Calculating ...
 ....
 // end::block[]
 
-//in qr
 // tag::b-block[]
 ....
 error: 1954 Forbidden search

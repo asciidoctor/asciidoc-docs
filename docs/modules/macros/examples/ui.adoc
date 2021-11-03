@@ -1,11 +1,9 @@
-// in qr
 // tag::button[]
 Press the btn:[OK] button when you are finished.
 
 Select a file in the file navigator and click btn:[Open].
 // end::button[]
 
-// in qr
 // tag::qr-key[]
 |===
 |Shortcut |Purpose
@@ -42,7 +40,6 @@ Select a file in the file navigator and click btn:[Open].
 |===
 // end::key[]
 
-// in qr
 // tag::menu[]
 To save the file, select menu:File[Save].
 

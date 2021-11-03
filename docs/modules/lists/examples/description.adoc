@@ -63,7 +63,6 @@ Produce::
   * Bananas
 // end::base-mix-alt[]
 
-// in qr
 // tag::3-mix[]
 Operating Systems::
   Linux:::
@@ -85,7 +84,6 @@ Cloud Providers::
     . Rackspace
 // end::3-mix[]
 
-// in qr
 // tag::qa[]
 [qanda]
 What is the answer?::

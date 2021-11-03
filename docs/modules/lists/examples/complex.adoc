@@ -34,7 +34,6 @@ v1.0, 2022-01-01
 ----
 // end::complex[]
 
-// used in qr
 // tag::b-complex[]
 * Every list item has at least one paragraph of content,
   which may be wrapped, even using a hanging indent.

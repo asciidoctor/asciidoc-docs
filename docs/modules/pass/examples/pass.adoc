@@ -30,7 +30,6 @@ will appear in a monospace font but without any other
 text formatting.
 // end::tick[]
 
-// in qr
 // tag::plus[]
 Text between + characters, such as +/document/{id}+
 is not substituted.
@@ -42,7 +41,6 @@ If you need to reference another {pp} language,
 you can write it as `+SQL{pp}+`.
 // end::plus[]
 
-// in qr
 // tag::backtick-plus[]
 Output literal monospace text such as `+{backtick}+` or `+http://localhost:8080+` by enclosing the text in a pair of pluses surrounded by a pair backticks.
 // end::backtick-plus[]
@@ -71,7 +69,6 @@ pass:quotes[But I should contain *bold* text.]
 ++++
 // end::bl[]
 
-// in qr
 // tag::b-bl[]
 ++++
 <p>

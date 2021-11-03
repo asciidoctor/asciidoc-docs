@@ -54,7 +54,6 @@
 * Untracked file in git repository
 // end::nest[]
 
-// in qr
 // tag::max[]
 * Level 1 list item
 ** Level 2 list item
