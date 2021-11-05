@@ -11,7 +11,6 @@ A part must contain at least one level 1 section.
 The first part is the first level 0 section in the document that comes after the document title.
 Like the document title, a part is designated by a level 0 section title (`=`).
 
-[source]
 ----
 include::example$part.adoc[tag=basic]
 
@@ -29,14 +28,12 @@ AsciiDoc provides document attributes to control the xref:part-numbers-and-label
 The content between the part title and the first section in the part is the part intro.
 Normally, the part intro is inferred, as shown here:
 
-[source]
 -----
 include::example$part.adoc[tags=**;!style]
 -----
 
 You can mark the part intro explicitly by adding the `partintro` style on the sole block before the first section.
 
-[source]
 -----
 include::example$part.adoc[tags=**]
 -----
@@ -45,7 +42,28 @@ include::example$part.adoc[tags=**]
 
 A part can have its own xref:preface.adoc[preface], xref:bibliography.adoc[bibliography], xref:glossary.adoc[glossary] and xref:user-index.adoc[index].
 
-[source]
 ----
 include::example$multi-special.adoc[tag=part]
 ----
+
+== Special sections as part siblings
+
+In a multipart book, parts occupy the top level of the hierarchy.
+If you define a special section at level 1 that follows the parts in a multipart book, it will become a child of the last part.
+If, instead, you want the special section to be a sibling, it has to be part-like, meaning it must be defined as as a level-0 section.
+To be consistent, it's best to do the same for special sections that come before parts, though technically the syntax doesn't require it.
+
+The AsciiDoc syntax allows special sections in a multipart book to be defined using a level-0 section title (i.e., `=`).
+When the document is parsed, these sections still end up as level-1 sections.
+Despite this level change, they remain siblings of parts in the hierarchy.
+If the special section supports nested sections, the next level must be level 2 (i.e., `===`), since the special section itself has level 1.
+
+Here's an example of a multi-part book that has a special section before and after the part.
+
+----
+include::example$multipart-with-special-sections.adoc[]
+----
+
+When you convert this document, notice that the special sections are siblings of the part in the table of contents.
+
+image::multipart-toc-with-special-sections.png[TOC of multipart book with special sections,350]

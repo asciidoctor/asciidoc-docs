@@ -1,0 +1,26 @@
+= Multi-Part Book with Special Sections
+Author Name <author@example.com>
+:doctype: book
+:toc:
+
+[colophon]
+= The Colophon
+
+Text at the beginning of a book describing facts about its production.
+
+= The First Part
+
+== The First Chapter
+
+Chapters can be grouped by preceeding them with a level 0 Book Part title.
+
+[appendix]
+= The Appendix
+
+=== Basics
+
+A multipart book can have appendixes, which should be defined at section level 0.
+
+=== Subsections
+
+Subsections of an appendix in a multipart book should start at level 2.
