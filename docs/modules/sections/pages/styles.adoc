@@ -8,33 +8,34 @@ The document type, `article` or `book`, determines which section styles are avai
 
 The following section styles are permitted in the `book` document type:
 
-// front matter
+// front
 * colophon
 * dedication
 * acknowledgments
-//(translated into a chapter)
 * preface
-// matter
-* part
-// part introduction style???
-* chapter
-// back matter
+//* partintro (this is permitted by DocBook, but not by Asciidoctor)
+// back
 * appendix
 * glossary
 * bibliography
 * index
-//(placeholder only)
+
+The following styles are implied by the location of the section in the document and are thus not special sections.
+
+* part
+* chapter
 
 == Article section styles
 
 The following section styles are permitted in the `article` document type:
 
+// front
 * abstract
+// back
 * appendix
 * glossary
 * bibliography
 * index
-//(placeholder only)
 
 ////
 Only these section styles can have subsections:
