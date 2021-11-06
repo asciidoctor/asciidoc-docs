@@ -13,7 +13,7 @@ The dedication section must be a level 1 section (`==`), unless the book has par
 [dedication]
 == Dedication
 
-include::example$multi-special.adoc[tag=dedicate]
+include::example$dedication.adoc[tag=body]
 ----
 
 If the book has parts, the dedication section must be a level 0 section (`=`).
@@ -23,5 +23,5 @@ If the book has parts, the dedication section must be a level 0 section (`=`).
 [dedication]
 = Dedication
 
-include::example$multi-special.adoc[tag=dedicate]
+include::example$dedication.adoc[tag=body]
 ----

@@ -6,7 +6,7 @@ If supported by the converter, the title of a xref:styles.adoc[special section],
 [dedication%untitled]
 == Dedication
 
-include::example$multi-special.adoc[tag=dedicate]
+include::example$dedication.adoc[tag=body]
 ----
 
 Although the title is hidden in the output document, it still needs to be specified in the AsciiDoc source for the purpose of referencing.

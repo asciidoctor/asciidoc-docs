@@ -43,7 +43,7 @@ include::example$part.adoc[tags=**]
 A part can have its own xref:preface.adoc[preface], xref:bibliography.adoc[bibliography], xref:glossary.adoc[glossary] and xref:user-index.adoc[index].
 
 ----
-include::example$multi-special.adoc[tag=part]
+include::example$part-with-special-sections.adoc[]
 ----
 
 == Special sections as part siblings
@@ -61,7 +61,7 @@ If the special section supports nested sections, the next level must be level 2 
 Here's an example of a multi-part book that has a special section before and after the part.
 
 ----
-include::example$multipart-with-special-sections.adoc[]
+include::example$multipart-book-with-special-sections.adoc[]
 ----
 
 When you convert this document, notice that the special sections are siblings of the part in the table of contents.

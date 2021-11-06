@@ -1,0 +1,20 @@
+= Book with Colophon
+:doctype: book
+
+[colophon]
+== Colophon
+// tag::body[]
+The Asciidoctor Press, Ceres and Denver.
+
+(C) 2020 by The Asciidoctor Press
+
+Published in the Milky Way Galaxy.
+
+This book is designed by Dagger Flush, Denver, Colorado.
+The types are handset Volcano Dust and Papaya, designed by Leeloo.
+Leeloo created the typefaces to soften the bluntness of documentation.
+
+Built with Asciidoctor on Fedora 33.
+
+Printing and binding by Ceres Lithographing, Inc., Ceres, Milky Way.
+// end::body[]

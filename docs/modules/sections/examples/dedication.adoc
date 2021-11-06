@@ -1,0 +1,11 @@
+= Book with Dedication
+:doctype: book
+
+[dedication]
+== Dedication
+
+// tag::body[]
+For S.S.T.--
+
+thank you for the plague of archetypes.
+// end::body[]
