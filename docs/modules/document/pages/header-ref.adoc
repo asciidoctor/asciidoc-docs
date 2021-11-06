@@ -1,4 +1,4 @@
-= Header Reference
+= Document Header Reference
 //Attributes and Values
 
 [%autowidth]
