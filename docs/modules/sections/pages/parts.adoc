@@ -50,11 +50,11 @@ include::example$part-with-special-sections.adoc[]
 
 In a multipart book, parts occupy the top level of the hierarchy.
 If you define a special section at level 1 that follows the parts in a multipart book, it will become a child of the last part.
-If, instead, you want the special section to be a sibling, it has to be part-like, meaning it must be defined as as a level-0 section.
+If, instead, you want the special section to be a sibling, it has to be part-like, meaning it must be defined as as a level 0 section.
 To be consistent, it's best to do the same for special sections that come before parts, though technically the syntax doesn't require it.
 
-The AsciiDoc syntax allows special sections in a multipart book to be defined using a level-0 section title (i.e., `=`).
-When the document is parsed, these sections still end up as level-1 sections.
+The AsciiDoc syntax allows special sections in a multipart book to be defined using a level 0 section title (i.e., `=`).
+When the document is parsed, these sections still end up as level 1 sections.
 Despite this level change, they remain siblings of parts in the hierarchy.
 If the special section supports nested sections, the next level must be level 2 (i.e., `===`), since the special section itself has level 1.
 

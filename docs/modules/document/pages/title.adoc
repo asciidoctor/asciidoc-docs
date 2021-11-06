@@ -19,12 +19,12 @@ image::document-title.png[Title of document]
 
 === Doctypes and titles
 
-Technically, a document title is a level-0 section title (`=`).
-The `article` and `manpage` document types (`doctype`) can only have one level-0 title.
+Technically, a document title is a level 0 section title (`=`).
+The `article` and `manpage` document types (`doctype`) can only have one level 0 section.
 
-The `book` document type permits multiple level-0 section titles.
-When the `doctype` is `book`, the level-0 title in the header is set as the document's title.
-Subsequent level-0 section titles in the document's body are set as xref:sections:parts.adoc[part titles].
+The `book` document type permits multiple level 0 section titles.
+When the `doctype` is `book`, the title of the level 0 section in the header is used as the document's title.
+Subsequent level 0 section titles in the document body are interpreted as xref:sections:parts.adoc[part titles], unless labeled with a xref:sections:styles.adoc[style].
 
 [#hide-or-show]
 == Hide or show the document title
@@ -41,7 +41,7 @@ The author and revision information isn't shown below the document title in the 
 [#reference-doctitle]
 == Reference the document title
 
-The level-0 section title in a document's header, that is, its title, is automatically assigned to the document attribute `doctitle`.
+The level 0 section title in a document's header, that is, its title, is automatically assigned to the document attribute `doctitle`.
 You can reference the `doctitle` attribute anywhere in your document and the document's title will be displayed.
 
 .Reference the doctitle attribute
@@ -60,4 +60,4 @@ The `doctitle` attribute can also be explicitly set and assigned a value using a
 
 By default, the text of the document title is used as the value of the HTML `<title>` element and main DocBook `<info>` element.
 You can override this behavior by setting the `title` attribute in the header with an attribute entry.
-If neither a level-0 section title or `doctitle` is specified in the header, but `title` is, its value is used as a fallback document title.
+If neither a level 0 section title or `doctitle` is specified in the header, but `title` is, its value is used as a fallback document title.

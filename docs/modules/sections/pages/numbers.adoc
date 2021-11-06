@@ -61,7 +61,7 @@ include::example$section.adoc[tag=sectnuml]
 <.> When the `sectnumlevels` attribute is assigned a value of `2`, level 3 through 5 section titles are not numbered.
 // (i.e., not prefixed with a number).
 
-When the `doctype` is `book`, level-1 sections become xref:chapters.adoc[chapters].
+When the `doctype` is `book`, level 1 sections become xref:chapters.adoc[chapters].
 Therefore, a `sectnumlevels` of `4` translates to 3 levels of numbered sections inside each chapter.
 
 Assigning `sectnumlevels` a value of `0` is effectively the same as disabling section numbering (`sectnums!`).

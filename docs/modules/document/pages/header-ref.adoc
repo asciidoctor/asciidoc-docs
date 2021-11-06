@@ -26,7 +26,7 @@
 |
 
 |`doctitle`
-|*Derived from level-0 section title*, _user-defined_
+|*Derived from level 0 section title*, _user-defined_
 |all
 |
 
@@ -96,7 +96,7 @@
 |
 
 |`title`
-|*Derived from level-0 section title or `doctitle`*, _user-defined_
+|*Derived from level 0 section title or `doctitle`*, _user-defined_
 |html, docbook
 |
 

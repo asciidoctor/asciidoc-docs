@@ -366,7 +366,7 @@ _Book doctype only_.
 |_any_
 |{n}
 |{n}
-|xref:sections:chapters.adoc[Label added to level-1 section titles (chapters)].
+|xref:sections:chapters.adoc[Label added to level 1 section titles (chapters)].
 _Book doctype only_.
 
 |example-caption
@@ -464,7 +464,7 @@ _Book doctype only_.
 |_any_
 |{n}
 |{n}
-|xref:sections:chapters.adoc[Label added to level-0 section titles (parts)].
+|xref:sections:chapters.adoc[Label added to level 0 section titles (parts)].
 _Book doctype only_.
 
 |preface-title

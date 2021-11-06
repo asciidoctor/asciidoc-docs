@@ -237,7 +237,7 @@ include::document:example$header.adoc[tag=qr-attributes]
 [#section-titles]
 == Section titles
 
-When the document type is `article` (the default), the document can only have one level-0 section title (`=`), which is the document title (i.e., doctitle).
+When the document type is `article` (the default), the document can only have one level 0 section title (`=`), which is the document title (i.e., doctitle).
 
 .Article section levels
 [#ex-article]
@@ -251,7 +251,7 @@ include::sections:example$section.adoc[tag=base]
 include::sections:example$section.adoc[tag=b-base]
 ====
 
-The `book` document type can have additional level-0 section titles, which are interpreted as xref:sections:parts.adoc[parts].
+The `book` document type can have additional level 0 section titles, which are interpreted as xref:sections:parts.adoc[parts].
 The presence of at least one part implicitly makes the document a multi-part book.
 
 .Book section levels
