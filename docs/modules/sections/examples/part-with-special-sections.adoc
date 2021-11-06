@@ -1,0 +1,41 @@
+= Multi-Part Book with Parts that Have Special Sections
+Author Name <author@example.com>
+:doctype: book
+
+[preface]
+= Book Preface
+
+This is the preface for the whole book.
+
+=== Preface Subsection
+
+Chinchillas rule the world.
+
+= Part 1
+
+This is the introduction to the first part of our mud-encrusted journey.
+
+== Chapter 1
+
+There was mud...
+
+== Chapter 2
+
+Great gobs of mud...
+
+[glossary]
+== Part 1 Glossary
+
+[glossary]
+mud:: wet, cold dirt
+
+= Part 2
+
+[preface]
+== Part 2 Preface
+
+This is a preface just for part 2.
+
+== Chapter 3
+
+The mud had turned to cement...
