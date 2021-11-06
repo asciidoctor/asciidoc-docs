@@ -9,7 +9,7 @@ For example, the chapter title may appear in the output document as follows:
 
  Chapter 1. Title
 
-A chapter is defined as a level-1 section without a block style when the doctype type is book.
+A chapter is defined as a level 1 section without a block style when the doctype type is book.
 You can modify the signifier by defining the `chapter-signifier` attribute in the header of your book.
 
 ----
