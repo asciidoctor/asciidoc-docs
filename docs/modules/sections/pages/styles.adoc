@@ -9,11 +9,12 @@ The document type, `article` or `book`, determines which section styles are avai
 The following section styles are permitted in the `book` document type:
 
 // front
+* abstract (becomes a chapter)
 * colophon
 * dedication
 * acknowledgments
 * preface
-//* partintro (this is permitted by DocBook, but not by Asciidoctor)
+* partintro (must be first child of part)
 // back
 * appendix
 * glossary
