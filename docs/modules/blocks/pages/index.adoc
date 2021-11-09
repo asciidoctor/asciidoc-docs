@@ -6,14 +6,14 @@ Block elements form the main structure of an AsciiDoc document, starting with th
 
 A block element (aka block) is a discrete, line-oriented chunk of content in an AsciiDoc document.
 Once parsed, that chunk of content becomes a block element in the parsed document model.
-Certain blocks may contain other blocks, so we say blocks can be nested.
-The converter handles each block in turn, in document order, converting it to a corresponding chunk of output.
+Certain blocks may contain other blocks, so we say that blocks can be nested.
+The converter visits each block in turn, in document order, converting it to a corresponding chunk of output.
 
 == Block forms
 
 How the boundaries of a block are defined in the AsciiDoc syntax varies.
-The boundaries of some blocks are implied, like a list or a paragraph.
-Other blocks have boundaries that are explicitly marked (i.e., delimited blocks).
+The boundaries of some blocks, like lists, paragraphs, and block macro, are implicit.
+Other blocks have boundaries that are explicitly marked using delimiters (i.e., delimited blocks).
 The main commonality is that a block is always line-oriented.
 
 A _paragraph block_ is defined as a discrete set of contiguous (non-empty) lines.
@@ -22,12 +22,12 @@ A _section block_ (aka section) is defined by a section title that's prefixed by
 The section includes all content that follows the section title line until the next sibling or parent section title or the document boundary.
 A _list block_ is defined by a group of sibling list items, each denoted by a marker.
 A _description list_ block is defined by a sibling group of list items, each denoted by one or more terms.
-A _macro block_ is defined by a line that matches the block macro syntax.
-And the _document_ itself is a block.
+A _block macro_ is defined by a single line that matches the block macro syntax.
+And the _document_ is also a block.
 
-A block (including its metadata lines) should always be surrounded by an empty line or document boundary on either side.
+A block (including its metadata lines) should always be bounded by an empty line or document boundary on either side.
 
-Whether or not a block is permitted to contain nested blocks depends on content model of the block (and what the syntax allows).
+Whether or not a block supports nested blocks depends on content model of the block (and what the syntax allows).
 
 == Content model
 
