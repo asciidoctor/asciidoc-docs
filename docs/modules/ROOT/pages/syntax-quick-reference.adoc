@@ -570,7 +570,7 @@ include::macros:example$ui.adoc[tag=button]
 include::macros:example$ui.adoc[tag=button]
 ====
 
-== Literals and Source Code
+== Literals and source code
 
 ////
 .Inline monospace only
