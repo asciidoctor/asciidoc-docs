@@ -129,7 +129,7 @@ The default context is assumed when an explicit block style is not present.
 
 Currently, table is a specialized structural container that cannot be enlisted as a custom block.
 
-Unlike other structural containers, a comment block is not preserved in the parsed document and therefore don't have a context or content model.
+Unlike other structural containers, a comment block is not preserved in the parsed document and therefore doesn't have a context or content model.
 
 TIP: When creating a custom block, it's important to choose a structural container that provides the right content model.
 This allows a text editor to understand how to parse the block and provide a reasonable fallback when the extension is not loaded.
