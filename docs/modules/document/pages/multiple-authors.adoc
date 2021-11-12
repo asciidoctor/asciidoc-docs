@@ -16,6 +16,18 @@ firstname middlename lastname <email>; firstname middlename lastname <email>
 
 Directly after each author's last name or optional email, enter a semicolon (`;`) followed by a blank space, and then enter the next author's information.
 
+=== Escape a trailing character reference
+
+If an author name segment ends with a character reference (e.g., `\&#174;`), you must escape it from processing.
+One way to escape it is to add a trailing attribute reference (e.g., `\{blank}`).
+If the character reference appears at the end of the last author name segment, you can use a second semicolon instead.
+
+A better way of escaping the character reference is to replace it with an attribute reference (e.g., `\{reg}`).
+
+Even if the character reference is escaped, the segments of the author name will not be processed.
+Instead, the whole name will be assigned to the `author` and `firstname` attributes.
+This limitation may be lifted in the future.
+
 == List multiple authors on the author line
 
 The author line in <<ex-line-multiple>> lists the information for three authors.
@@ -33,3 +45,18 @@ The result of <<ex-line-multiple>> is displayed below.
 image::author-line-with-multiple-authors.png[Multiple authors and their emails displayed on the byline,role=screenshot]
 
 The information for each author can also be xref:reference-author-attributes.adoc#reference-multiple-authors[referenced in the document] using their respective built-in attribute.
+
+If an author name ends with with a character reference, you can preserve the semicolon in the character reference by adding a trailing attribute reference:
+
+----
+AsciiDoc&#174;{blank} WG; Another Author
+----
+
+Another solution entails moving the character reference to an attribute and inserting it using an attribute reference:
+
+----
+:reg: &#174;
+AsciiDoc{reg} WG; Another Author
+----
+
+Even though the character reference is escaped, the segments of the author name will not be processed.
