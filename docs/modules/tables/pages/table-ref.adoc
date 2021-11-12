@@ -98,12 +98,14 @@ _Ideally a character not found in the cell content._
 |all rows are shaded
 
 .3+|align
-.3+|horizontally aligns table within page width
+.3+|horizontally aligns whole table within page width
 |left
 |aligns to left side of page (default)
-.3+|Not yet implemented in Asciidoctor.
-Applies to HTML output only.
-The `align` and `float` attributes are mutually exclusive.
+.3+|`align` applies to HTML output only.
+The `align` and `float` attributes are mutually exclusive. +
+Note: usage of `[align=_value_]` is deprecated;
+instead use `[role=_value_]` (e.g. `[role=center]`) or
+`[._value_]` (e.g. `[.center]`; furthermore, `role=` works for both HTML and PDF output.
 
 |right
 |aligns to right side of page
