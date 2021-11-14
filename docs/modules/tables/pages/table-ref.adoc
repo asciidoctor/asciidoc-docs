@@ -95,7 +95,7 @@ _Ideally a character not found in the cell content._
 .3+|horizontally aligns table within page width
 |left
 |aligns to left side of page (default)
-.3+|Not yet implemented in Asciidoctor.
+.3+|Not recognized by Asciidoctor.
 Applies to HTML output only.
 The `align` and `float` attributes are mutually exclusive.
 
@@ -120,7 +120,7 @@ The `float` and `align` attributes are mutually exclusive.
 .3+|horizontally aligns all of the cell contents in a table
 |left
 |aligns the contents of the cells to the left (default)
-.3+|Not implemented in Asciidoctor.
+.3+|Not recognized by Asciidoctor.
 Define instead using column or cell specifiers (e.g., `3*>`), which take precedence over this value.
 
 |right
@@ -133,7 +133,8 @@ Define instead using column or cell specifiers (e.g., `3*>`), which take precede
 .3+|vertically aligns all of the cell contents in a table
 |top
 |aligns the cell contents to the top of the cell (default)
-.3+|Define instead using column or cell specifiers (e.g., `3*.>`), which take precedence over this value.
+.3+|Not recognized by Asciidoctor.
+Define instead using column or cell specifiers (e.g., `3*.>`), which take precedence over this value.
 
 |bottom
 |aligns the cell contents to the bottom of the cell
