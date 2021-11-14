@@ -76,11 +76,11 @@ _Ideally a character not found in the cell content._
 .5+|stripes
 .5+|controls row shading (via background color)
 |none
-|no rows are shaded
+|no rows are shaded (default)
 .5+|
 
 |even
-|even rows are shaded (default in Asciidoctor < 2.0)
+|even rows are shaded
 
 |odd
 |odd rows are shaded
