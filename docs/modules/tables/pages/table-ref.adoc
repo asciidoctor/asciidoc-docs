@@ -14,7 +14,7 @@ d|user-defined
 |cols
 |comma-separated list of column specifiers
 d|specifiers
-|see `cols` for details
+|Specifies the number of columns and the distribution ratio and default formatting for each column. See xref:add-columns.adoc[] for details
 |
 
 .4+|format
