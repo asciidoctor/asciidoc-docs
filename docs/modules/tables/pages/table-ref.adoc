@@ -11,12 +11,6 @@ d|user-defined
 |
 |
 
-|table-caption
-|defines the title label on all titled tables
-d|`Table <n>.`, user-defined
-|
-|
-
 |cols
 |comma-separated list of column specifiers
 d|specifiers
