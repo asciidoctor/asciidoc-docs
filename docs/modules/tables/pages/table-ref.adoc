@@ -166,7 +166,7 @@ DocBook only (specifically for generating PDF output).
 |prevents the table from being split across a page
 
 |autowidth
-|disables explicit column widths (ignores `cols` attribute)
+|disables explicit column widths (ignores distribution ratios in `cols` attribute)
 |
 
 |rotate
