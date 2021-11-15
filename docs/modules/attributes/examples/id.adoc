@@ -40,12 +40,9 @@ The brain of the computer.
 Permanent storage for operating system and/or user files.
 // end::anchor-dlist-item[]
 
-// tag::anchor-header[]
-=== Version 4.9 [[version-4_9]]
-// end::anchor-header[]
-
 // tag::anchor-header-extra[]
-=== [[current]]Version 4.9 [[version-4_9]]
+[#version-4_9]
+=== [[current]][[latest]]Version 4.9
 // end::anchor-header-extra[]
 
 // tag::anchor-xreflabel[]
@@ -54,6 +51,10 @@ Permanent storage for operating system and/or user files.
 image::tiger.png[]
 // end::anchor-xreflabel[]
 
-// tag::anchor-macro[]
-anchor:tiger-image[Image of a tiger]
-// end::anchor-macro[]
+// tag::inline-anchor-brackets[]
+[[tiger-image]]image:tiger.png[Image of a tiger]
+// end::inline-anchor-brackets[]
+
+// tag::inline-anchor-macro[]
+anchor:tiger-image[]image:tiger.png[Image of a tiger]
+// end::inline-anchor-macro[]
