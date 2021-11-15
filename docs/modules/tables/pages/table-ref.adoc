@@ -92,12 +92,13 @@ _Ideally a character not found in the cell content._
 |all rows are shaded
 
 .3+|align
-.3+|horizontally aligns table within page width
+.3+|horizontally aligns a table with restricted width
 |left
 |aligns to left side of page (default)
 .3+|Not recognized by Asciidoctor.
-Applies to HTML output only.
-The `align` and `float` attributes are mutually exclusive.
+To align the table, use an alignment role (e.g., `[role=center]` or `[.center]`).
+The alignment roles work for both HTML and PDF output.
+Alignment roles and the `float` attributes are mutually exclusive.
 
 |right
 |aligns to right side of page
