@@ -176,6 +176,23 @@ DocBook only (specifically for generating PDF output).
 d|Equivalent to setting the orientation to landscape.
 DocBook only.
 
+.4+|role
+.4+|comma-separated list of role names
+|left
+|floats the table to the left margin
+.3+d|The role is the preferred way to specify the alignment of a table with restricted width.
+May be specified using role shorthand (e.g., `[.center]`).
+
+|right
+|floats the table to the right
+
+|center
+|aligns the table to center
+
+|stretch
+|stretches an autowidth table to the width of the page
+|
+
 |width
 |the table width relative to the available page width
 d|user defined value
