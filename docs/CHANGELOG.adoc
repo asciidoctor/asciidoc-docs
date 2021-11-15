@@ -20,6 +20,7 @@ Fixed::
 * state that scaledwidth attribute with % value scales the image relative to the content area
 * remove dot from the list of valid characters in an element attribute name; this was never a valid character
 * improve the accuracy of the description for internal cross references
+* fix numerous problems with how the inline anchor is explained
 
 Changed::
 * clarify that the value of the width and height attributes must be an integer value without a unit
