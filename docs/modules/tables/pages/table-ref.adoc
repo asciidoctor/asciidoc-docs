@@ -11,16 +11,10 @@ d|user-defined
 |
 |
 
-|table-caption
-|defines the title label on all titled tables
-d|`Table <n>.`, user-defined
-|
-|
-
 |cols
 |comma-separated list of column specifiers
 d|specifiers
-|see `cols` for details
+|Specifies the number of columns and the distribution ratio and default formatting for each column. See xref:add-columns.adoc[] for details
 |
 
 .4+|format
@@ -82,11 +76,11 @@ _Ideally a character not found in the cell content._
 .5+|stripes
 .5+|controls row shading (via background color)
 |none
-|no rows are shaded
+|no rows are shaded (default)
 .5+|
 
 |even
-|even rows are shaded (default in Asciidoctor < 2.0)
+|even rows are shaded
 
 |odd
 |odd rows are shaded
@@ -98,14 +92,13 @@ _Ideally a character not found in the cell content._
 |all rows are shaded
 
 .3+|align
-.3+|horizontally aligns whole table within page width
+.3+|horizontally aligns a table with restricted width
 |left
 |aligns to left side of page (default)
-.3+|`align` applies to HTML output only.
-The `align` and `float` attributes are mutually exclusive. +
-Note: usage of `[align=_value_]` is deprecated;
-instead use `[role=_value_]` (e.g. `[role=center]`) or
-`[._value_]` (e.g. `[.center]`; furthermore, `role=` works for both HTML and PDF output.
+.3+|Not recognized by Asciidoctor.
+To align the table, use an alignment role (e.g., `[role=center]` or `[.center]`).
+The alignment roles work for both HTML and PDF output.
+Alignment roles and the `float` attributes are mutually exclusive.
 
 |right
 |aligns to right side of page
@@ -128,7 +121,7 @@ The `float` and `align` attributes are mutually exclusive.
 .3+|horizontally aligns all of the cell contents in a table
 |left
 |aligns the contents of the cells to the left (default)
-.3+|Not implemented in Asciidoctor.
+.3+|Not recognized by Asciidoctor.
 Define instead using column or cell specifiers (e.g., `3*>`), which take precedence over this value.
 
 |right
@@ -141,7 +134,8 @@ Define instead using column or cell specifiers (e.g., `3*>`), which take precede
 .3+|vertically aligns all of the cell contents in a table
 |top
 |aligns the cell contents to the top of the cell (default)
-.3+|Define instead using column or cell specifiers (e.g., `3*.>`), which take precedence over this value.
+.3+|Not recognized by Asciidoctor.
+Define instead using column or cell specifiers (e.g., `3*.>`), which take precedence over this value.
 
 |bottom
 |aligns the cell contents to the bottom of the cell
@@ -174,7 +168,7 @@ DocBook only (specifically for generating PDF output).
 |prevents the table from being split across a page
 
 |autowidth
-|disables explicit column widths (ignores `cols` attribute)
+|disables explicit column widths (ignores distribution ratios in `cols` attribute)
 |
 
 |rotate
