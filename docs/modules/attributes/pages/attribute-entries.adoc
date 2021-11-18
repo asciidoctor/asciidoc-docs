@@ -43,18 +43,32 @@ The values of built-in boolean attributes are always blank because their only ac
 Other built-in attributes may have a default value.
 If you set a built-in attribute and leave its value blank, the AsciiDoc processor assigns the default value, if it has one, to the attribute at processing time.
 
-== Where can I use an attribute entry?
+== Where can an attribute entry be declared?
 
-An attribute entry is typically defined in the document header.
-When set in the document header, the attribute is available to the entire document until it is reset or unset.
-The attribute's value can be reassigned or the attribute unset at any subsequent point in the document, unless the attribute is locked (typically by defining it using the CLI or API).
+An attribute entry is most often declared in the document header.
+For attributes that allow it (which includes general purpose attributes), the attribute entry can alternately be declared between blocks in the document body (i.e., the portion of the document below the header).
 
-Many, but not all, document attributes can be set, assigned a value, or unset in the document's body (anywhere below the document header).
-When you set an attribute in the body, it's visible from the point it's set until it's unset.
+WARNING: An attribute entry should not be declared inside the boundaries of a delimited block.
+When an attribute entry is declared inside a delimited block, the behavior is undefined.
+
+When an attribute is defined in the document header using an attribute entry, that's referred to as a header attribute.
+A header attribute is available to the entire document until it is unset.
+A header attribute is also accessible from the document metadata for use by built-in behavior, extensions, and other applications that need to consult its value (e.g., `source-highlighter`).
+
+When an attribute is defined in the document body using an attribute entry, that's simply referred to as a document attribute.
+For any attribute defined in the body, the attribute is available from the point it is set until it is unset.
+Attributes defined in the body are not available via the document metadata.
+
+Unless the attribute is unlocked, it can be unset or assigned a new value in the document header or body.
+However, note that unsetting or redefining a header attribute that controls behavior in the document body usually has no affect.
 See the xref:document-attributes-ref.adoc[] for where in a document each attribute can be set.
 
-Finally, document attributes can also be set, assigned values, and unset via the CLI and API, but these methods don't use the attribute entry syntax.
+== Defining document attributes without an attribute entry
+
+Document attributes can also be set, assigned values, and unset via the CLI and API.
+These methods don't use the attribute entry syntax.
 When an attribute is set from the command line or API, it's defined for the whole document and can't be changed in the document header or body unless `@` is added to the end of the value.
+These attributes are implicitly header attributes.
 See xref:assignment-precedence.adoc[] for more information.
 The one exception to this rule is the `sectnums` attribute, which can always be changed.
 
