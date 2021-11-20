@@ -72,12 +72,12 @@ NOTE: The header is optional.
 // end::complex-o[]
 
 // tag::complex-only[]
-. {blank}
+. {empty}
 +
 ----
 print("one")
 ----
-. {blank}
+. {empty}
 +
 ----
 print("one")

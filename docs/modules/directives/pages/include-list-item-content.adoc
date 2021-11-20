@@ -4,12 +4,12 @@ You can use the include directive to include the content of a list item from ano
 
 Recall that the `include` directive must be defined on a line by itself.
 This presents a challenge with lists since each list item must begin with the list marker.
-We can solve this by using the built-in `blank` attribute to initiate the list item, then follow that line with the include directive to bring in the actual content.
+We can solve this by using the built-in `empty` attribute to initiate the list item, then follow that line with the include directive to bring in the actual content.
 
-Here's an example of how to use the `blank` attribute and the include directive to define a list item, then include the primary text from another file:
+Here's an example of how to use the `empty` attribute and the include directive to define a list item, then include the primary text from another file:
 
 ----
-* {blank}
+* {empty}
 \include::item-text.adoc[]
 ----
 
@@ -24,7 +24,7 @@ You then attach this block to the list item using a list continuation (i.e., `+`
 Here's an example of how to include complex content from another file into a list item:
 
 ----
-* {blank}
+* {empty}
 +
 --
 \include::complex-list-item.adoc[]

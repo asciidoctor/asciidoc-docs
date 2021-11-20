@@ -19,7 +19,7 @@ include::example$complex.adoc[tag=indent]
 include::example$complex.adoc[tag=indent]
 ====
 
-TIP: When items contain more than one line of text, leave a blank line before the next item to make the list easier to read.
+TIP: When list items contain more than one line of text, leave an empty line between each item to make the list in the AsciiDoc source easier to read.
 
 A list item may contain any type of AsciiDoc content, including paragraphs, delimited blocks, and block macros.
 You just need to attach them to the list item.
@@ -92,9 +92,9 @@ The only limitation of this technique is that the content itself may not contain
 [#drop-principal-text]
 == Drop the principal text
 
-If the principal text of a list item is blank, the node for the principal text is dropped.
+If the principal text of a list item is empty, the node for the principal text is dropped.
 This is how you can get the first block (such as a listing block) to line up with the list marker.
-You can make the principal text blank by using the `+{blank}+` attribute reference.
+You can make the principal text empty by using the `+{empty}+` attribute reference.
 
 Here's an example of a list that has items with _only_ complex content.
 
