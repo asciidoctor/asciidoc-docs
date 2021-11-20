@@ -144,7 +144,7 @@ Alternately, you can write is as follows:
 
 [source]
 ----
-.{blank}
+.{empty}
 [caption='{table-caption} {counter:table-number}']
 include::example$table.adoc[tag=b-col-h]
 ----

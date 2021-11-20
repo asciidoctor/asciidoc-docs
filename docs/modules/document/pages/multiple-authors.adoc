@@ -14,12 +14,12 @@ The information for each author is concluded with a semicolon (`;`).
 firstname middlename lastname <email>; firstname middlename lastname <email>
 ----
 
-Directly after each author's last name or optional email, enter a semicolon (`;`) followed by a blank space, and then enter the next author's information.
+Directly after each author's last name or optional email, enter a semicolon (`;`) followed by a space, and then enter the next author's information.
 
 === Escape a trailing character reference
 
 If an author name segment ends with a character reference (e.g., `\&#174;`), you must escape it from processing.
-One way to escape it is to add a trailing attribute reference (e.g., `\{blank}`).
+One way to escape it is to add a trailing attribute reference (e.g., `\{empty}`).
 If the character reference appears at the end of the last author name segment, you can use a second semicolon instead.
 
 A better way of escaping the character reference is to replace it with an attribute reference (e.g., `\{reg}`).
@@ -49,7 +49,7 @@ The information for each author can also be xref:reference-author-attributes.ado
 If an author name ends with with a character reference, you can preserve the semicolon in the character reference by adding a trailing attribute reference:
 
 ----
-AsciiDoc&#174;{blank} WG; Another Author
+AsciiDoc&#174;{empty} WG; Another Author
 ----
 
 Another solution entails moving the character reference to an attribute and inserting it using an attribute reference:

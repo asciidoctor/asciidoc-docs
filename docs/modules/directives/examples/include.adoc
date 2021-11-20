@@ -35,18 +35,18 @@ This is documentation for project X.
 [source,ruby,subs=attributes+]
 ----
 // tag::tag-co[]
-# tag::timings[{blank}] # <.> <.>
+# tag::timings[{empty}] # <.> <.>
 if timings
   timings.record :read
   timings.start :parse
 end
-# end::timings[{blank}] # <.> <.>
-# tag::parse[{blank}] # <.>
+# end::timings[{empty}] # <.> <.>
+# tag::parse[{empty}] # <.>
 doc = (options[:parse] == false ? (Document.new lines, options) :
     (Document.new lines,options).parse)
 timings.record :parse if timings
 doc
-# end::parse[{blank}] # <.>
+# end::parse[{empty}] # <.>
 // end::tag-co[]
 ----
 

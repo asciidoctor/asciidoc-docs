@@ -15,11 +15,11 @@ include::example$complex.adoc[tag=indent]
 include::example$complex.adoc[tag=indent]
 ====
 
-TIP: When list items contain more than one line of text, leave a blank line between items to make the list easier to read while working in the code.
+TIP: When list items contain more than one line of text, leave an empty line between items to make the list easier to read while working in the code.
 
 Blank lines between items in an ordered list do not reset numbering to 1 as long as each adjacent line starts with a period.
 Blank lines do reset numbering to 1 when something, such as a figure or a supporting paragraph, comes between two lines that start with a period.
-To keep numbering continuous in those cases—for example, if you're documenting steps in a procedure—put a `{plus}` symbol in the otherwise blank line. A `{plus}` used in this way is called a list continuation. For details on continuous numbering in an ordered list, see xref:ordered.adoc[].
+To keep numbering continuous in those cases—for example, if you're documenting steps in a procedure—put a `{plus}` symbol in the otherwise empty line. A `{plus}` used in this way is called a list continuation. For details on continuous numbering in an ordered list, see xref:ordered.adoc[].
 
 A list item may contain any type of AsciiDoc content, including paragraphs, delimited blocks, and block macros.
 You just need to attach that content to the list item by using a list continuation.
@@ -94,9 +94,9 @@ The only limitation of this technique is that the content itself may not contain
 [#drop-principal-text]
 == Drop the principal text
 
-If the principal text of a list item is blank, the node for the principal text is dropped.
+If the principal text of a list item is empty, the node for the principal text is dropped.
 This is how you can get the first block (such as a listing block) to line up with the list marker.
-You can make the principal text blank by using the `+{blank}+` attribute reference.
+You can make the principal text empty by using the `+{empty}+` attribute reference.
 
 Here's an example of a list that has items with _only_ complex content.
 
