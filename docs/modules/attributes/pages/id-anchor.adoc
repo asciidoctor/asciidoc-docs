@@ -1,0 +1,282 @@
+= ID Attributes and Anchors
+:page-aliases: ids.adoc
+
+== ID Attributes
+
+You can assign an identifier (i.e., unique name) to a block or inline element using the `id` attribute.
+The `id` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
+Its purpose is to identify the element when linking, scripting, or styling.
+Thus, the same identifier can only be used once in a document.
+
+=== Anchors
+
+An anchor is a fixed location in a document that can be referenced by an internal link, or a cross
+reference from another document. For all intents and purposes, any blocks or inline elements with an ID attribute associated to them are effectively anchors.
+
+=== IDs
+
+An ID:
+
+. provides an internal link or cross reference anchor for an element
+. can be used for adding additional styling to specific elements (e.g., via a CSS ID selector)
+
+You can assign an ID to blocks using the shorthand hash (`+#+`) syntax, longhand (`id=`) syntax, or the legacy anchor (`[[]]`) syntax.
+You can assign an ID to inline elements using the shorthand hash (`+#+`) syntax or by adding an anchor adjacent to the inline element using the anchor (`[[]]`) syntax.
+
+== Valid ID characters
+
+AsciiDoc does not restrict the set of characters that can be used for an ID when the ID is defined using the named `id` attribute.
+All the language requires in this case is that the value be non-empty.
+When the ID is defined using the shorthand hash syntax or the anchor syntax, the acceptable characters is more limited (for example, spaces are not permitted).
+Regardless, it's not advisable to exploit the ability to use any characters the AsciiDoc syntax allows.
+The reason to be cautious is because the ID is passed through to the output, and not all output formats afford the same latitude.
+For example, XML is far more restrictive about which characters are permitted in an ID value.
+
+To ensure portability of your IDs, it's best to conform to a universal standard.
+The standard we recommend following is a https://www.w3.org/TR/REC-xml/#NT-Name[Name] value as defined by the XML specification.
+At a high level, the first character of a Name must be a letter, colon, or underscore and the optional following characters must be a letter, colon, underscore, hyphen, period, or digit.
+You should not use any space characters in an ID.
+Starting the ID with a digit is less likely to be problematic, but still best to avoid.
+It's best to use lowercase letters whenever possible as this solves portability problem when using case-insensitive platforms.
+
+When the AsciiDoc processor auto-generates IDs for section titles and discrete headings, it adheres to this standard.
+
+Here are examples of valid IDs (according to the recommendations above):
+
+[listing]
+----
+install
+data-structures
+error-handling
+subject-and-body
+unset_an_attribute
+----
+
+Here are examples of invalid IDs:
+
+[listing]
+----
+install the gem
+3 blind mice
+-about-the-author
+----
+
+////
+BlockId
+
+NOTE: Section pending
+////
+
+== Reference Feedback
+
+When internal, or cross references are made to an anchor, the anchor can influence the rendering of the cross reference with certain attributes. Please see xref:macros:xref-text-and-style.adoc[] for more information on these attributes.
+
+== Assigning the IDs
+
+[#anchor-syntax]
+=== Legacy Anchor Syntax
+
+It's strongly encouraged to only create anchors by assigning an ID attribute to a block or an inline element. However, Asciidoc has a legacy anchor syntax (`[[ ]]`) that creates an anchor based on the current document context.
+
+The anchor is declared by enclosing a _valid_ XML Name in double square brackets (e.g., `+[[idname]]+`), optionally followed by a comma and a cross reference label (e.g., `+[[idname,label]]+`). The cross reference label is interpreted as a value of the `reftext` attribute.
+
+This syntax requires the ID to start with a letter, an underscore, or a colon, ensuring the ID is portable.
+According to the https://www.w3.org/TR/REC-xml/#NT-Name[XML Name] rules, a portable ID may not begin with a number, even though a number is allowed elsewhere in the name.
+When defining the ID using an attribute list, whether with short- or longhand form, this restriction is not imposed.
+
+=== Block assignment
+
+// tag::bl[]
+You can assign an ID to a block using the shorthand syntax, the longhand syntax, or a legacy block anchor.
+
+In this section, we'll assign an ID to this blockquote:
+
+[quote#roads,Dr. Emmett Brown,Back to the Future]
+Roads? Where we're going, we don't need roads.
+
+When the style attribute is explicitly assigned to a block, the style name is always placed in the first position of the attribute list.
+Then, the ID is attached directly to the end of the style name.
+
+The blockquote with an assigned style and ID in <<ex-style-id>> shows this order of attributes.
+
+.Assign a style and ID to a block
+[#ex-style-id]
+----
+[quote#roads]
+Roads? Where we're going, we don't need roads.
+----
+
+Since <<ex-style-id>> is a blockquote it should have some attribution and citation information.
+In <<ex-cite>>, let's attribute this quote to its speaker and original context using the positional attribution attributes that are built into the `quote` style.
+
+.Assign a style, ID, and positional attributes to a block
+[#ex-cite]
+----
+[quote#roads,Dr. Emmett Brown,Back to the Future]
+Roads? Where we're going, we don't need roads.
+----
+
+Except when the `role` and `options` attributes are assigned values using their shorthand syntax (`.` and `%`, respectively), all other block attributes are typically separated by commas (`,`).
+
+.Assign ID using named attributes
+[#ex-longhand-cite]
+----
+[quote,id=roads,title=Dr. Emmett Brown,Back to the Future]
+Roads? Where we're going, we don't need roads.
+----
+
+.Assign ID using legacy anchor syntax
+[#ex-anchor-cite]
+----
+[[roads]]
+[quote,title=Dr. Emmett Brown,Back to the Future]
+Roads? Where we're going, we don't need roads.
+----
+
+IMPORTANT: Specifying anchoring information of a block using the legacy anchor syntax is akin to adding corresponding attributes to the block's attributes list. If the block also has explicit definitions of the corresponding attributes, they take precedence other the ones specified in the
+legacy anchor syntax.
+
+////
+
+In addition to a title, a block can be assigned additional metadata including:
+
+* ID (xref:attributes:id.adoc#anchor[anchor])
+* Block style (first positional attribute)
+* Block attributes
+
+Here's an example of a quote block with metadata:
+
+----
+include::example$block.adoc[tag=meta-co]
+----
+<1> Title: Gettysburg Address
+<2> ID: gettysburg
+<3> Block name: quote
+<4> attribution: Abraham Lincoln (Named block attribute)
+<5> citetitle: Address delivered at the dedication of the Cemetery at Gettysburg (Named block attribute)
+
+TIP: A block can have multiple block attribute lines.
+The attributes will be aggregated.
+If there is a name conflict, the last attribute defined wins.
+
+Some metadata is used as supplementary content, such as the title, whereas other metadata controls how the block is converted, such as the block name.
+////
+
+TIP: The order of ID and role values in the shorthand syntax does not matter.
+
+CAUTION: If the ID contains a `.`, you must define it using either a longhand assignment (e.g., `id=classname.propertyname`) or the anchor shorthand (e.g., `+[[classname.propertyname]]+`).
+This is necessary since the `.` character in the shorthand syntax is the delimiter for a role, and thus gets misinterpreted as such.
+// end::bl[]
+
+WARNING: The use of legacy anchor syntax for assigning IDs to blocks is being deprecated.
+
+=== Inline assignment
+
+// tag::in[]
+The id (`#`) shorthand can be used on inline quoted text.
+
+.Quoted text block with id assignment using shorthand syntax
+----
+In other words, [#free_the_world]*free the world*
+----
+// end::in[]
+
+////
+.Quoted text block with `id` assignment using traditional AsciiDoc syntax
+----
+[[free_the_world]]*free the world*
+----
+////
+
+IMPORTANT: Longhand syntax can not be used in this case, and additional attributes (e.g., `reftext`) can not be specified.
+
+IMPORTANT: The assignment must precede an inline style declaration, or an inline object, it can not be specified in the middle of arbitrary text.
+
+[#freestanding-anchor]
+=== Freestanding inline anchor
+
+A freestanding anchor (an anchor that is not bound to a particular block or an inline element) can be defined almost anywhere in the document, including on a section title, on a discrete heading, on a paragraph, on an image, on a delimited block, on an inline phrase, and so forth.
+
+Such anchor must be defined using legacy anchor syntax (`[[ ]]`), and can be defined anywhere in content that receives normal substitutions (specifically the macro substitution). Such anchors get replaced with invisible anchor points in the output.
+
+.Define an inline anchor
+[source]
+----
+include::example$id.adoc[tag=anchor-brackets]
+----
+
+For example, you would not put an anchor in front of a list item:
+
+.*Invalid* position for an anchor ID in front of a list item
+[source]
+----
+include::example$id.adoc[tag=anchor-wrong]
+----
+
+Instead, you would put it at the very start of the text of the list item:
+
+.Define an inline anchor on a list item
+[source]
+----
+include::example$id.adoc[tag=anchor-list-item]
+----
+
+For a description list, the anchor must be placed at the start of the term:
+
+.Define an inline anchor on a description list item
+[source]
+----
+include::example$id.adoc[tag=anchor-dlist-item]
+----
+
+To add additional anchors to a section (with or without an autogenerated ID), place the anchors in front of the title (without any spaces).
+
+.Add additional anchors to a section using inline anchors
+[source]
+----
+include::example$id.adoc[tag=anchor-header-extra]
+----
+
+CAUTION: You cannot use inline anchors in a section title to make internal references to that section.
+The processor will flag these as possible invalid references.
+These additional anchors are only intented for making deep links using an alternate ID.
+
+Remember that inline anchors are discovered where ever the macro substitution is applied (e.g., paragraph text).
+If text content doesn't belong somewhere, neither does an inline anchor point.
+
+// TODO introduce a subsection here
+
+////
+// this portion doesn't belong here, as it's covered in the    cross references document
+
+It's possible to customize the text that will be used in the cross reference link (called `xreflabel`).
+If not defined, the AsciiDoc processor does it best to find suitable text (the solution differs from case to case).
+In case of an image, the image caption will be used.
+In case of a section header, the text of the section's title will be used.
+
+To define the `xreflabel`, add it in the anchor definition right after the ID (separated by a comma).
+
+.An anchor ID with a defined xreflabel. The caption will not be used as link text.
+[source]
+----
+include::example$id.adoc[tag=anchor-xreflabel]
+----
+
+You cannot currently define an ID on an inline image.
+Instead you need to place an inline anchor adjacent to it.
+
+.Placing an inline anchor adjacent to an inline image using shorthand
+[source]
+----
+include::example$id.adoc[tag=inline-anchor-brackets]
+----
+
+Instead of the shorthand form, you can use the macro `anchor` to achieve the same goal.
+
+.Placing an inline anchor adjacent to an inline image using a macro
+[source]
+----
+include::example$id.adoc[tag=inline-anchor-macro]
+----
+
+////

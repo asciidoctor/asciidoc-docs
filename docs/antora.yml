@@ -12,6 +12,7 @@ nav:
 - modules/blocks/nav-basics.adoc
 - modules/attributes/nav-document.adoc
 - modules/attributes/nav-element.adoc
+- modules/attributes/nav-id-anchor.adoc
 - modules/document/nav.adoc
 - modules/sections/nav.adoc
 - modules/blocks/nav-paragraph.adoc
