@@ -23,8 +23,37 @@ content with only select substitutions applied: pass:c,a[__<{email}>__]
 
 TIP: When you need to prevent or control the substitutions on one or more blocks of content, use a xref:pass-block.adoc[delimited passthrough block or the pass block style].
 
+[#single-double-plus]
+== Single and double plus
+
+The single and double plus passthroughs prevent text enclosed in either a pair of single pluses (`+`) or a pair of double pluses (`++`) from being formatted.
+The single and double pluses represent the constrained and unconstrained passthrough, respectively.
+They have boundaries that match the xref:text.adoc#formatting-marks-and-pairs[constrained and unconstrained formatting marks].
+The main difference, however, is that they get applied first to surpress other formatting marks.
+
+This type of passthrough is intended to surpress any special meaning of the source text itself.
+This passthrough type still ensures, however, that the content is properly escaped in the output.
+That means the xref:subs:special-characters.adoc[special characters] substitution is still applied.
+
+As with all constrained pairs, the single plus passthrough is designed to be applied around a word or phrase.
+
+----
+A word or phrase between plus characters, such as +/document/{id}+, is not substituted.
+You can also refer to formatting marks, like the backtick, using `+`+`.
+However, special characters like +<+ and +>+ are still escaped in the output.
+----
+
+Being an uncontrained pair, the double plus passthrough can be applied anywhere in the text.
+
+----
+Text formatting is not applied to a link target if it is surrounded by double plus characters.
+For example, link:++https://example.org/now_this__link_works.html++[].
+----
+
+The single and plus passthroughs are a surefire alternative to backslash escaping.
+
 [#triple-plus]
-== Triple plus macro
+== Triple plus
 
 The triple plus passthrough excludes content enclosed in a pair of triple pluses (pass:[+++]) from all substitutions.
 
