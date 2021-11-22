@@ -31,7 +31,7 @@ text formatting.
 // end::tick[]
 
 // tag::plus[]
-Text between + characters, such as +/document/{id}+
+Text between + characters, such as +/document/{id}+,
 is not substituted.
 However, special characters like +<+ and +>+
 are still escaped.
@@ -42,7 +42,7 @@ you can write it as `+SQL{pp}+`.
 // end::plus[]
 
 // tag::backtick-plus[]
-Output literal monospace text such as `+{backtick}+` or `+http://localhost:8080+` by enclosing the text in a pair of pluses surrounded by a pair backticks.
+Output literal monospace text, such as `+{backtick}+` or `+http://localhost:8080+`, by enclosing the text in a pair of pluses surrounded by a pair backticks.
 // end::backtick-plus[]
 
 // tag::sub-in[]
