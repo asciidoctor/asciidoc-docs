@@ -56,6 +56,8 @@ Text formatting is not applied to a link target if it is surrounded by double pl
 For example, link:++https://example.org/now_this__link_works.html++[].
 
 You can also escape formatting marks, like all-natural++*++.
+
+An attribute reference within a word, such as dev++{conf}++, is not replaced.
 ----
 
 The single and plus passthroughs are a surefire alternative to backslash escaping.
