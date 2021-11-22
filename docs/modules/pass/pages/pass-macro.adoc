@@ -27,30 +27,42 @@ TIP: When you need to prevent or control the substitutions on one or more blocks
 == Single and double plus
 
 The single and double plus passthroughs prevent text enclosed in either a pair of single pluses (`+`) or a pair of double pluses (`++`) from being formatted.
+
+----
+A +word+, a +sequence of words+, or ++char++acters that are escaped from formatting.
+----
+
 The single and double pluses represent the constrained and unconstrained passthrough, respectively.
-They have boundaries that match the xref:text.adoc#formatting-marks-and-pairs[constrained and unconstrained formatting marks].
-The main difference, however, is that they get applied first to surpress other formatting marks.
+They have boundaries that match the xref:text:index.adoc#formatting-marks-and-pairs[constrained and unconstrained formatting marks].
+The main difference, however, is that they are applied first to suppress formatting.
 
 This type of passthrough is intended to surpress any special meaning of the source text itself.
 This passthrough type still ensures, however, that the content is properly escaped in the output.
 That means the xref:subs:special-characters.adoc[special characters] substitution is still applied.
 
-As with all constrained pairs, the single plus passthrough is designed to be applied around a word or phrase.
+As with all constrained pairs, the single plus passthrough is designed to be used around a word or phrase.
 
 ----
-A word or phrase between plus characters, such as +/document/{id}+, is not substituted.
-You can also refer to formatting marks, like the backtick, using `+`+`.
-However, special characters like +<+ and +>+ are still escaped in the output.
+A word or phrase between single pluses, such as +/document/{id}+, is not substituted.
+However, the special characters +<+ and +>+ are still escaped in the output.
+
+You can also escape formatting marks, like +``+.
 ----
 
-Being an uncontrained pair, the double plus passthrough can be applied anywhere in the text.
+Being an uncontrained pair, the double plus passthrough can be used anywhere in the text.
 
 ----
-Text formatting is not applied to a link target if it is surrounded by double plus characters.
+Text formatting is not applied to a link target if it is surrounded by double pluses.
 For example, link:++https://example.org/now_this__link_works.html++[].
+
+You can also escape formatting marks, like all-natural++*++.
 ----
 
 The single and plus passthroughs are a surefire alternative to backslash escaping.
+
+Note that the single and plus passthroughs only prevent substitutions.
+They do not format the text in monospace.
+If you want to do both, you must enclose the pair in a monospace formatting pair, known as xref:text:monospace.adoc#literal-monospace[literal monospace].
 
 [#triple-plus]
 == Triple plus
