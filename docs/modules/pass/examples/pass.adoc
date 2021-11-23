@@ -31,14 +31,16 @@ text formatting.
 // end::tick[]
 
 // tag::plus[]
-Text between + characters, such as +/document/{id}+,
+A word or phrase between single pluses, such as +/user/{id}+,
 is not substituted.
-However, special characters like +<+ and +>+
-are still escaped.
+However, the special characters like +<+ and +>+ are still
+escaped in the output.
 
-You can write `C++{plus}{plus}++` as `+{cpp}+`.
-If you need to reference another {pp} language,
-you can write it as `+SQL{pp}+`.
+An attribute reference within a word, such as dev++{conf}++,
+is not replaced.
+
+A plus passthrough will escape standalone formatting marks,
+like +``+, or formatting marks within a word, like all-natural++*++.
 // end::plus[]
 
 // tag::backtick-plus[]

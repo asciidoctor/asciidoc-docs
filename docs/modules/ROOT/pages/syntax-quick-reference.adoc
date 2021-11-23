@@ -1150,7 +1150,7 @@ include::subs:example$subs.adoc[tag=backslash]
 include::subs:example$subs.adoc[tag=backslash]
 ====
 
-.Single and double plus inline macros
+.Single and double plus inline passthroughs
 [#ex-single-plus]
 ----
 include::pass:example$pass.adoc[tag=plus]
@@ -1162,7 +1162,7 @@ include::pass:example$pass.adoc[tag=plus]
 include::pass:example$pass.adoc[tag=plus]
 ====
 
-.Triple plus inline macro and inline pass macro
+.Triple plus inline passthrough and inline pass macro
 [#ex-inline-pass]
 ----
 include::pass:example$pass.adoc[tag=b-3p-macro]
