@@ -1297,7 +1297,7 @@ Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
 To begin a new paragraph, separate it by at least one empty line.
-Newlines within a paragraph are not displayed.
+Line breaks within a paragraph are not displayed.
 ----
 
 .View Result (Normal)
@@ -1307,7 +1307,7 @@ Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
 To begin a new paragraph, separate it by at least one empty line.
-Newlines within a paragraph are not displayed.
+Line breaks within a paragraph are not displayed.
 ====
 
 '''
@@ -1322,7 +1322,7 @@ Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
 To begin a new paragraph, separate it by at least one empty line.
-Newlines within a paragraph are not displayed.
+Line breaks within a paragraph are not displayed.
 ----
 
 Output::
@@ -1332,7 +1332,7 @@ Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
 To begin a new paragraph, separate it by at least one empty line.
-Newlines within a paragraph are not displayed.
+Line breaks within a paragraph are not displayed.
 --
 ====
 ////

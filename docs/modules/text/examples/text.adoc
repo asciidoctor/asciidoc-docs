@@ -8,7 +8,7 @@ Our team desperately needs coffee, but none of us dare open the office door.
 // tag::b-para[]
 Paragraphs don't require special markup in AsciiDoc.
 A paragraph is defined by one or more consecutive lines of text.
-Newlines within a paragraph are not displayed.
+Line breaks within a paragraph are not displayed.
 
 Leave at least one empty line to begin a new paragraph.
 // end::b-para[]
