@@ -1,6 +1,6 @@
 = Image Icons Mode
 
-Setting the `icons` attribute to `image` (or blank) instructs the AsciiDoc processor to use images for icons.
+Setting the `icons` attribute to `image` (or leaving it empty) instructs the AsciiDoc processor to use images for icons.
 This page defines where the processor looks for these image files by default, which image file extension it prepends, and how to configure both.
 
 == Enable image-based icons

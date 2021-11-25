@@ -39,9 +39,9 @@ Some built-in attributes don't require a value to be explicitly assigned in an a
 ----
 <.> If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
 
-The values of built-in boolean attributes are always blank because their only accepted value is an _empty string_.
+When set, the value of a built-in boolean attribute is always empty (i.e., an _empty string_).
 Other built-in attributes may have a default value.
-If you set a built-in attribute and leave its value blank, the AsciiDoc processor assigns the default value, if it has one, to the attribute at processing time.
+If you set a built-in attribute and leave its value empty, the AsciiDoc processor may infer a default value, if it has one, at processing time.
 
 == Where can an attribute entry be declared?
 
