@@ -90,7 +90,7 @@ Now, let's add two more cells to the table.
 |    This cell is in column 2, row 2 <.>
 |===
 ----
-<.> Separate rows by one or more blank lines.
+<.> Separate rows by one or more empty lines.
 <.> The processor places this cell on the second row because the table has two columns and this is the third cell separator (`|`) it encounters.
 <.> Any leading or trailing spaces around the cell content is stripped by the processor.
 
@@ -128,7 +128,7 @@ When entering cells on a single line, *at least one blank space must be entered 
 |===
 ----
 <.> Since `cols` is not set, the first row in this table must have the cells entered on a single line in order to implicitly assign three columns to the table.
-<.> The first row is entered on the line directly after the opening table delimiter (`|===`) and followed by a blank line.
+<.> The first row is entered on the line directly after the opening table delimiter (`|===`) and followed by an empty line.
 This automatically assigns the `header` option to it.
 <.> When multiple cells are entered on a single line, enter at least one space between the last character of the previous cell's content and the cell separator (`|`) of the next cell.
 <.> A row's cells can be entered on a combination of lines as long as the lines are consecutive.

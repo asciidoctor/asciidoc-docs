@@ -60,7 +60,7 @@ A cell starts with a vertical bar (`|`).
 After the vertical bar (`|`), enter the content you want displayed in that cell.
 <.> On a new line, start another cell with a `|`.
 Each consecutive cell is placed in a separate, consecutive column in a row.
-<.> Rows are separated by one or more blank lines.
+<.> Rows are separated by one or more empty lines.
 <.> When you finish adding cells to your table, press kbd:[Enter] to go to a new line.
 <.> Enter the closing delimiter (`|===`) to end the table block.
 
@@ -105,7 +105,7 @@ You can implicitly identify the first row of a table as a header row by entering
 |===
 ----
 <.> On the line directly after the opening delimiter (`|===`), enter all of the first row's cells on a single line.
-<.> Leave the line directly after the header row blank.
+<.> Leave the line directly after the header row empty.
 
 The table from <<ex-header>> is displayed below.
 

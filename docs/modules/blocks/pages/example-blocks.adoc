@@ -13,7 +13,7 @@ Normal substitutions are applied to example content.
 
 == Example style syntax
 
-If the example content is contiguous, i.e., not interrupted by blank lines, the block style name `example` can be placed directly on top of the text in an attribute list (`[]`).
+If the example content is contiguous, i.e., not interrupted by empty lines, the block style name `example` can be placed directly on top of the text in an attribute list (`[]`).
 
 .Assign example block style to paragraph
 [#ex-style]
@@ -32,7 +32,7 @@ This is an example of an example block.
 [#delimited]
 == Delimited example syntax
 
-If the example content includes multiple blocks or content separated by blank lines, place the content between delimiter lines consisting of four equals signs (`pass:[====]`).
+If the example content includes multiple blocks or content separated by empty lines, place the content between delimiter lines consisting of four equals signs (`pass:[====]`).
 
 You don't need to set the block style name when you use the example delimiters.
 

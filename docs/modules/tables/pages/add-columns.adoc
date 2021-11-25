@@ -1,6 +1,6 @@
 = Add Columns to a Table
 
-The number of columns in a table is specified by the `cols` attribute or <<implicit-cols,by the number of cells found in the first non-blank line>> after the opening table delimiter (`|===`).
+The number of columns in a table is specified by the `cols` attribute or <<implicit-cols,by the number of cells found in the first non-empty line>> after the opening table delimiter (`|===`).
 
 [#cols-attribute]
 == Specify the number of columns with the cols attribute
@@ -51,7 +51,7 @@ Let's use the `cols` value in <<ex-cols-alt>> to create a table.
 A table delimiter is one vertical bar followed by three equals signs (`|===`).
 <.> A table cell is specified by a vertical bar (`|`).
 Since four consecutive cells are entered on the first line directly after the delimiter, this row is implicitly set as the table's header row.
-<.> Insert a blank line after the header row.
+<.> Insert an empty line after the header row.
 <.> The cells for the next row can be entered on a single line or on individual lines.
 <.> On a new line after the last cell of the last row, enter another table delimiter (`|===`) to close the table block.
 
@@ -155,7 +155,7 @@ The processor will derive the number columns from the number of cells in this ro
 |Cell in column 3, row 2
 |===
 ----
-<.> After the opening delimiter, insert a blank line before the first row, unless you want the first row to be treated as header row.
+<.> After the opening delimiter, insert an empty line before the first row, unless you want the first row to be treated as header row.
 <.> Enter all of the first row's cells on a single line.
 Each cell represents one column.
 <.> The cells in subsequent rows don't need to be entered on a single line.

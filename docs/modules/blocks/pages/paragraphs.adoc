@@ -7,7 +7,7 @@ You can just start typing.
 == Create a paragraph
 
 Adjacent or consecutive lines of text form a paragraph element.
-To start a new paragraph after another element, such as a section title or table, hit the kbd:[RETURN] key twice to insert a blank line, and then continue typing your content.
+To start a new paragraph after another element, such as a section title or table, hit the kbd:[RETURN] key twice to insert an empty line, and then continue typing your content.
 
 .Two paragraphs in an AsciiDoc document
 [#ex-paragraph]

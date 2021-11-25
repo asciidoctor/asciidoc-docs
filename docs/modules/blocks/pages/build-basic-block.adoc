@@ -51,7 +51,7 @@ You've built a delimited block.
 == Build a block from a paragraph
 
 In some cases, you can style a block using the style's name.
-If the content is contiguous (not interrupted by blank lines), you can assign the block style's name in an attribute list placed above the content.
+If the content is contiguous (not interrupted by empty lines), you can assign the block style's name in an attribute list placed above the content.
 This format is often used for single-line listings:
 
 [source]

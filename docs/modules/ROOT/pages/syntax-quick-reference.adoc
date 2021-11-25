@@ -210,7 +210,7 @@ include::macros:example$xref.adoc[tag=b-inter]
 == Document header
 
 The xref:document:header.adoc[document header] is optional.
-The header may not contain blank lines and must be separated from the content by at least one blank line.
+The header may not contain any empty lines and must be separated from the content by at least one empty line.
 
 .Title
 ----
@@ -323,8 +323,8 @@ include::lists:example$unordered.adoc[tag=qr-base]
 include::lists:example$unordered.adoc[tag=qr-base]
 ====
 
-TIP: A blank line is required before and after a list to separate it from other blocks.
-You can force two adjacent lists apart by adding a blank attribute list (i.e., `[]`) above the second list or by inserting a blank line followed by a line comment after the first list.
+TIP: An empty line is required before and after a list to separate it from other blocks.
+You can force two adjacent lists apart by adding a blank attribute list (i.e., `[]`) above the second list or by inserting an empty line followed by a line comment after the first list.
 If you use a line comment, the convention is to use `//-` to provide a hint to other authors that it's serving as a list divider.
 
 .Unordered list max level nesting
@@ -711,7 +711,7 @@ When indent is 0, the leading block indent is stripped.
 When indent is greater than 0, the leading block indent is first stripped, then a block is indented by the number of columns equal to this value.
 ====
 
-.Source paragraph (no blank lines)
+.Source paragraph (no empty lines)
 [#ex-source-para]
 ----
 include::verbatim:example$source.adoc[tag=src-para]
@@ -855,7 +855,7 @@ include::verbatim:example$listing.adoc[tag=subs-out]
 include::tables:example$table.adoc[tag=b-base-h-co]
 ----
 <.> Unless the `cols` attribute is specified, the number of columns is equal to the number of cell separators on the first (non-blank) line.
-<.> When a blank line follows the first non-blank line, the cells in the first line get promoted to the table header.
+<.> When an empty line immediately follows a non-empty line at the start of the table, the cells in the first line get promoted to the table header.
 
 .View result of <<ex-header-row>>
 [%collapsible.result]
@@ -1296,7 +1296,7 @@ Possible change for future to `%collapsible` blocks
 Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
-To begin a new paragraph, separate it by at least one blank line.
+To begin a new paragraph, separate it by at least one empty line.
 Newlines within a paragraph are not displayed.
 ----
 
@@ -1306,7 +1306,7 @@ Newlines within a paragraph are not displayed.
 Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
-To begin a new paragraph, separate it by at least one blank line.
+To begin a new paragraph, separate it by at least one empty line.
 Newlines within a paragraph are not displayed.
 ====
 
@@ -1321,7 +1321,7 @@ Source::
 Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
-To begin a new paragraph, separate it by at least one blank line.
+To begin a new paragraph, separate it by at least one empty line.
 Newlines within a paragraph are not displayed.
 ----
 
@@ -1331,7 +1331,7 @@ Output::
 Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
-To begin a new paragraph, separate it by at least one blank line.
+To begin a new paragraph, separate it by at least one empty line.
 Newlines within a paragraph are not displayed.
 --
 ====
