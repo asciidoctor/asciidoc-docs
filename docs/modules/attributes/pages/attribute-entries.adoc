@@ -28,7 +28,7 @@ Be aware that xref:attribute-entry-substitutions.adoc[header substitutions] auto
 ----
 :name-of-an-attribute: value of the attribute <.>
 ----
-<.> An explicitly assigned value is offset from the closing colon (`:`) by at least one blank space.
+<.> An explicitly assigned value is offset from the closing colon (`:`) by at least one space.
 At the end of the value, press kbd:[Enter].
 
 Some built-in attributes don't require a value to be explicitly assigned in an attribute entry because they're a boolean attribute or have a default value.

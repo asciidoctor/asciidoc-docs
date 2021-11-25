@@ -20,7 +20,7 @@ The duplication operator tells the converter to interpret the duplication factor
 == Duplicate a cell and its properties
 
 To duplicate a cell, enter the duplication factor and duplication operator (`+<n>*+`) in the cell specifier.
-Don't insert any blank spaces between the duplication, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any spaces between the duplication, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
 
 .Duplicate the contents of two cells
 [source#ex-clone]

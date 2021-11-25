@@ -27,7 +27,7 @@ A span is the first operator in a xref:add-cells-and-rows.adoc#specifiers[cell s
 == Span multiple columns
 
 To have a cell span consecutive columns, enter the <<col-factor,column span factor>> and span operator (`<n>+`) in the cell specifier.
-Don't insert any blank spaces between the span, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any spaces between the span, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
 
 .Span three columns with a cell
 [source#ex-span-columns]
@@ -44,7 +44,7 @@ include::example$cell.adoc[tag=span-cols]
 
 To have a cell span consecutive rows, enter the <<row-factor,row span factor>> and span operator (`.<n>+`) in the cell specifier.
 Remember to prefix the span factor with a dot (`.`).
-Don't insert any blank spaces between the span, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any spaces between the span, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
 
 .Span two rows with a cell
 [source#ex-span-rows]
