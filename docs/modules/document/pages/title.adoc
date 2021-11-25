@@ -4,7 +4,7 @@ A document title, while optional, is usually the first element entered in a docu
 
 == Title syntax
 
-A document title is specified using a single equals sign (`=`), followed by a blank space, and then the text of your title.
+A document title is specified using a single equals sign (`=`), followed by a space, then the title text.
 
 .Document with a title
 [source#ex-title]

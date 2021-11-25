@@ -11,7 +11,7 @@ TIP: Hard line breaks are automatically retained in xref:verbatim:literal-blocks
 [#per-line]
 == Inline line break syntax
 
-To preserve a line break in a paragraph, type a blank space followed by a plus sign (`{plus}`) at the end of the line.
+To preserve a line break in a paragraph, insert a space followed by a plus sign (`{plus}`) at the end of the line.
 This results in a visible line break (e.g., `<br>`) following the line.
 
 .Line breaks preserved using a space followed by the plus sign ({plus})

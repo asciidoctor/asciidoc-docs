@@ -11,7 +11,7 @@ When a style operator isn't explicitly assigned to a cell specifier (or xref:for
 == Apply a style to a table cell
 
 The style operator is always entered last in a xref:add-cells-and-rows.adoc#specifiers[cell specifier].
-Don't insert any blank spaces between the `|` and the operator.
+Don't insert any spaces between the `|` and the operator.
 
 ====
 <factor><span or duplication operator><horizontal alignment operator><vertical alignment operator><**style operator**>|<cell's content>
@@ -84,7 +84,7 @@ d|This content is rendered as regular paragraph text because the `d` operator in
 == Use AsciiDoc block elements in a table cell
 
 To use AsciiDoc block elements, such as delimited source blocks and lists, in a cell, place the `a` operator directly in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
-Don't insert any blank spaces between the `|` and the operator.
+Don't insert any spaces between the `|` and the operator.
 
 .Apply the AsciiDoc block style operator to two cells
 [source#ex-asciidoc]

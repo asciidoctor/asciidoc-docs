@@ -5,7 +5,7 @@
 
 [[cell-separator]]Each new cell in a table is declared with a cell separator.
 The default [.term]*cell separator* is a vertical bar (`|`).
-All of the content entered after a cell separator is included in that cell until the processor encounters a blank space followed by another vertical bar (`|`) or a new line that begins with a `|`.
+All of the content entered after a cell separator is included in that cell until the processor encounters a space followed by another vertical bar (`|`) or a new line that begins with a `|`.
 
 .Creating table cells with the default cell separator
 [source#ex-separator]
@@ -113,7 +113,7 @@ The cells in a row can be entered on the same line or consecutive lines because 
 
 You can enter a row's cells on a single line.
 //This method is how the number or columns in a table are implicitly assigned and implicitly assign the `header` option to the table's first row.
-When entering cells on a single line, *at least one blank space must be entered between the last character of the previous cell's content and the cell separator (`|`) of the next cell*.
+When entering cells on a single line, *at least one space must be entered between the last character of the previous cell's content and the cell separator (`|`) of the next cell*.
 
 .Cells entered on the same line
 [source#ex-single-line]
