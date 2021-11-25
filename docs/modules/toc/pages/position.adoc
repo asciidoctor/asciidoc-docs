@@ -1,6 +1,6 @@
 = Position the TOC
 
-By default, the table of contents is inserted directly below the document title, author, and revision lines when the `toc` attribute is set and its value is left blank (empty) or set to `auto`.
+By default, the table of contents is inserted directly below the document title, author, and revision lines when the `toc` attribute is set and its value is left empty or set to `auto`.
 This location can be changed by assigning one of the built-in positional values to the `toc` attribute.
 The values are:
 
@@ -53,7 +53,7 @@ The result of <<ex-preamble>> is displayed below.
 image::toc-preamble.png[Display the table of contents below the preamble,role=screenshot]
 
 CAUTION: When using the `preamble` value, the TOC will not appear if your document does not have a preamble.
-To fix this problem, set the `toc` attribute to an empty value (i.e., leave the value blank) or assign it the value `auto`.
+To fix this problem, set the `toc` attribute to an empty value (i.e., leave the value empty) or assign it the value `auto`.
 
 [#at-macro]
 == Use the TOC macro to position the TOC

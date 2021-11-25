@@ -15,7 +15,7 @@ include::example$toc.adoc[tag=header]
 include::example$toc.adoc[tag=body]
 ----
 <.> Set the `toc` attribute in the header using an attribute entry.
-When the value of `toc` is left blank, the processor will use the attribute's default value.
+When the value of `toc` is empty, the processor will use the attribute's default value.
 
 By default, the TOC is rendered directly below the document header, is titled _Table of Contents_, and contains section 1 and section 2 level titles only.
 The result of <<ex-default>> is displayed below.

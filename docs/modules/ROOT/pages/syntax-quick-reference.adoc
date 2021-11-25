@@ -324,7 +324,7 @@ include::lists:example$unordered.adoc[tag=qr-base]
 ====
 
 TIP: An empty line is required before and after a list to separate it from other blocks.
-You can force two adjacent lists apart by adding a blank attribute list (i.e., `[]`) above the second list or by inserting an empty line followed by a line comment after the first list.
+You can force two adjacent lists apart by adding an empty attribute list (i.e., `[]`) above the second list or by inserting an empty line followed by a line comment after the first list.
 If you use a line comment, the convention is to use `//-` to provide a hint to other authors that it's serving as a list divider.
 
 .Unordered list max level nesting
@@ -854,7 +854,7 @@ include::verbatim:example$listing.adoc[tag=subs-out]
 ----
 include::tables:example$table.adoc[tag=b-base-h-co]
 ----
-<.> Unless the `cols` attribute is specified, the number of columns is equal to the number of cell separators on the first (non-blank) line.
+<.> Unless the `cols` attribute is specified, the number of columns is equal to the number of cell separators on the first (non-empty) line.
 <.> When an empty line immediately follows a non-empty line at the start of the table, the cells in the first line get promoted to the table header.
 
 .View result of <<ex-header-row>>

@@ -7,7 +7,7 @@ Its sole function is to turn on a feature or behavior.
 == Boolean attribute entry syntax
 
 A boolean attribute is set using an attribute entry in the header or body of a document.
-The value of a boolean value is always left blank because boolean attributes in AsciiDoc only accept an _empty string_ value.
+The value of a boolean value is always empty because boolean attributes in AsciiDoc only accept an _empty string_ value.
 In AsciiDoc, an attribute that is set, but has an empty value, is interpreted as the _true_ state and an attribute which is not set is interpreted as the _false_ state.
 However, a processor may interpret a value of `true` as the true state as well.
 

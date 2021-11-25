@@ -32,7 +32,7 @@ The type of value an attribute accepts and whether it uses a default value, has 
 
 Many built-in attributes have one or more built-in values.
 One of these values may be designated as the attribute's default value.
-The AsciiDoc processor will fall back to this default value if you set the attribute but leave the value blank.
+The AsciiDoc processor will fall back to this default value if you set the attribute but leave the value empty.
 Additionally, the processor automatically sets numerous built-in attributes at processing time and assigns them their default values unless you explicitly unset the attribute or assign it another value.
 For instance, the processor automatically sets all of the xref:character-replacement-ref.adoc[character replacement attributes].
 
@@ -79,15 +79,15 @@ Now the first section assigned the appendix style will be prefixed Appendix 1, t
 
 === User-defined values
 
-The value field of a built-in attribute is left blank if it's a boolean attribute.
-The value can also be left blank if the attribute has a default value and that's the value you want to assign to it.
+The value field of a built-in attribute is left empty if it's a boolean attribute.
+The value can also be left empty if the attribute has an inferred default value and that's the value you want to use.
 
 When you're setting a built-in attribute, the value may be _empty string_ if it's a boolean attribute, a built-in value, or a user-defined value.
 However, if the document attribute is built-in, the value may be _empty
 Depending on the type of document attribute--built-in or user-defined--the value may be _empty string_,
 Some attributes may not have a value explicitly assigned to them.
 When a value is not specified, the value _empty string_ is assumed.
-An empty value is often used to set a boolean attribute (thus making a blank value implicitly true).
+An empty value is often used to set a boolean attribute (thus making an empty value implicitly true).
 
 * it's a built-in attribute doesn't accept any explicitly set values because it only turns on a behavior,
 * it's a built-in attribute that uses a default value when its value is left empty, or
