@@ -5,7 +5,7 @@ Verses are defined by setting `verse` on a paragraph or an excerpt block delimit
 
 == verse style syntax
 
-When verse content doesn't contain any blank lines, you can assign the `verse` style using the first position in an attribute list.
+When verse content doesn't contain any empty lines, you can assign the `verse` style using the first position in an attribute list.
 
 .Verse style syntax
 [#ex-style]
@@ -19,7 +19,7 @@ include::example$verse.adoc[tag=para]
 
 == Delimited verse block syntax
 
-When the verse content includes blank lines, enclose it in a delimited excerpt block.
+When the verse content includes empty lines, enclose it in a delimited excerpt block.
 
 .Verse delimited block syntax
 [#ex-block]

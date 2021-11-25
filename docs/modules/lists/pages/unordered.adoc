@@ -15,7 +15,7 @@ include::example$unordered.adoc[tag=base]
 A list item's first line of text must be offset from the marker (`+*+`) by at least one space.
 If you prefer, you can indent list items.
 Blank lines are required before and after a list.
-Additionally, blank lines are permitted, but not required, between list items.
+Additionally, empty lines are permitted, but not required, between list items.
 
 .Rendered unordered list
 ====
@@ -48,7 +48,7 @@ Now that we've mentioned nested lists, let's go to the next section and learn ho
 .Forcing lists apart
 ****
 If you have adjacent lists, they have the tendency to want to fuse together.
-To force lists apart, insert a line comment (`//`) surrounded by blank lines between the two lists.
+To force lists apart, insert a line comment (`//`) surrounded by empty lines between the two lists.
 Here's an example, where the `-` text in the line comment indicates the line serves as an "`end of list`" marker:
 
 ----

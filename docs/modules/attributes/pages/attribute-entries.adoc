@@ -83,5 +83,5 @@ An exclamation point (`!`) before (or after) the attribute name unsets the attri
 In this case, the value is ignored.
 
 An attribute entry must start at the beginning of the line.
-If the attribute entry follows a paragraph, it must be offset by a blank line.
+If the attribute entry follows a paragraph, it must be offset by an empty line.
 ////

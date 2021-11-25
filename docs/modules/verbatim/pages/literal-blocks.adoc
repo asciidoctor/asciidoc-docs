@@ -43,7 +43,7 @@ include::example$literal.adoc[tag=style]
 === Delimited literal block
 
 Finally, you can surround the content you want rendered as literal by enclosing it in a pair of literal block delimiters (`\....`).
-This method is useful when the content contains blank lines.
+This method is useful when the content contains empty lines.
 
 .Delimited literal block syntax
 [source#ex-block]

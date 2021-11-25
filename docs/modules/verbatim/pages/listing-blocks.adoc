@@ -44,7 +44,7 @@ include::example$listing.adoc[tag=style]
 == Delimited listing block
 
 A delimited listing block is surrounded by lines composed of four hyphens (`----`).
-This method is useful when the content contains blank lines.
+This method is useful when the content contains empty lines.
 
 .Delimited listing block syntax
 [#ex-block]

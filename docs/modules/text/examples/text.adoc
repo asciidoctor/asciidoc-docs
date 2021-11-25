@@ -10,7 +10,7 @@ Paragraphs don't require special markup in AsciiDoc.
 A paragraph is defined by one or more consecutive lines of text.
 Newlines within a paragraph are not displayed.
 
-Leave at least one blank line to begin a new paragraph.
+Leave at least one empty line to begin a new paragraph.
 // end::b-para[]
 
 // tag::hb-all[]

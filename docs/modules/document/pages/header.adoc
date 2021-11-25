@@ -12,13 +12,13 @@ The first empty line that the processor encounters is interpreted as the end of 
 A header typically begins with a xref:title.adoc[].
 When a document title is specified, it can be immediately followed by two special (but optional) lines of content that assign xref:author-information.adoc[] and xref:revision-information.adoc[].
 
-Additionally, the header can contain the following elements as long as there aren't any blank lines between any of the entries:
+Additionally, the header can contain the following elements as long as there aren't any empty lines between any of the entries:
 
 * optional document-wide attributes (built-in and user-defined) that are declared using xref:attributes:attribute-entries.adoc[attribute entries],
 * optional xref:metadata.adoc[metadata], such as a description or keywords, and
 * optional xref:ROOT:comments.adoc#comment-lines[comment lines].
 
-Notice in <<ex-basic-header>> that there are no blank lines between any of the entries; the lines are contiguous.
+Notice in <<ex-basic-header>> that there are no empty lines between any of the entries; the lines are contiguous.
 
 .Common elements in a header
 [source#ex-basic-header]
@@ -44,8 +44,8 @@ Since the document title is optional, it's possible for the header to only consi
 
 == When does the document header end?
 
-*The first blank line in the document marks the end of the header.*
-The next line after the first blank line that contains content is interpreted as the beginning of the document's body.
+*The first empty line in the document marks the end of the header.*
+The next line after the first empty line that contains content is interpreted as the beginning of the document's body.
 
 .Terminating a document header
 [source#ex-terminate]
@@ -56,11 +56,11 @@ Kismet R. Lee <kismet@asciidoctor.org>
 <.>
 This is the first line of content in the document body. <.>
 ----
-<.> A blank line ends the document header.
-<.> After the blank line, the next line with content starts the body of the document.
+<.> An empty line ends the document header.
+<.> After the empty line, the next line with content starts the body of the document.
 
 The first line of the document body can be any valid AsciiDoc content, such as a section heading, paragraph, table, include directive, image, etc.
-Any attributes defined below the first blank line are not part of the document header and will not be scoped to the entire document.
+Any attributes defined below the first empty line are not part of the document header and will not be scoped to the entire document.
 
 == Header requirements per doctype
 

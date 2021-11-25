@@ -7,7 +7,7 @@ immediately follows the header title.
 
 * The document header must be separated from
   the remainder of the document by one or more
-  blank lines and cannot contain blank lines.
+  empty lines and cannot contain empty lines.
 // end::indent[]
 
 // tag::cont[]

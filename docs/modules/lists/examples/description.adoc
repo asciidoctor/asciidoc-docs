@@ -10,7 +10,7 @@ Permanent storage for operating system and/or user files.
 ----
 <1> Follow each term with two colons.
 <2> Enter the definition text on a new line below the term.
-<3> Enter a single blank line between each term/definition pair.
+<3> Enter a single empty line between each term/definition pair.
 
 ////
 

@@ -12,8 +12,8 @@ A document title is specified using a single equals sign (`=`), followed by a bl
 include::example$document-title.adoc[]
 ----
 
-In <<ex-title>>, notice the blank line between the document title and the first line of prose.
-That blank line is what separates the document header from the document body.
+In <<ex-title>>, notice the empty line between the document title and the first line of prose.
+That empty line is what separates the document header from the document body.
 
 image::document-title.png[Title of document]
 

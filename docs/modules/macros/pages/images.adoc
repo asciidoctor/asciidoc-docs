@@ -8,7 +8,7 @@ The block form uses two colons (`::`), whereas the inline form only uses one (`:
 
 A [.term]*block image* is displayed as a discrete element, i.e., on its own line, in a document.
 A block image is designated by `image` macro name and followed by two colons (`::`)
-It's preceded by a blank line, entered on a line by itself, and then followed by blank line.
+It's preceded by an empty line, entered on a line by itself, and then followed by an empty line.
 
 .Block image macro
 [source#ex-block]
