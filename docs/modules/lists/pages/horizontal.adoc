@@ -1,4 +1,4 @@
-= Horizontal description list
+= Horizontal Description List
 
 If you want the label and content to appear on the same line, add the horizontal style to the list.
 

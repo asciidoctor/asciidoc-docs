@@ -1,4 +1,4 @@
-= Turn off the Title Label
+= Turn Off the Title Label
 :table-caption!:
 
 == Disable the label using table-caption
