@@ -1,13 +1,13 @@
 // tag::indent[]
-* The header in AsciiDoc is optional, but if
-it is used it must start with a document title.
+* The document header in AsciiDoc is optional.
+If present, it must start with a document title.
 
-* Optional Author and Revision information
-immediately follows the header title.
+* Optional author and revision information lines
+immediately follow the document title.
 
 * The document header must be separated from
   the remainder of the document by one or more
-  empty lines and cannot contain empty lines.
+  empty lines and it cannot contain empty lines.
 // end::indent[]
 
 // tag::cont[]
@@ -25,7 +25,7 @@ The header is optional.
 +
 Keep in mind that the header is optional.
 
-* Optional Author and Revision information immediately follows the header title.
+* Optional author and revision information lines immediately follow the document title.
 +
 ----
 = Document Title
