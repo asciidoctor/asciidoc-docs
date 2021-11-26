@@ -14,7 +14,7 @@ include::example$unordered.adoc[tag=base]
 
 A list item's first line of text must be offset from the marker (`+*+`) by at least one space.
 If you prefer, you can indent list items.
-Blank lines are required before and after a list.
+Empty lines are required before and after a list.
 Additionally, empty lines are permitted, but not required, between list items.
 
 .Rendered unordered list
