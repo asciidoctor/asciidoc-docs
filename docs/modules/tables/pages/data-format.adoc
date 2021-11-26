@@ -178,7 +178,7 @@ The following two sections outline those differences.
 Table data in either CSV or TSV format is parsed according to the following rules, loosely based on {url-rfc-4180}[RFC 4180^]:
 
 * The default delimiter for CSV is a comma (`,`) while the default delimiter for TSV is a tab character.
-* Blank lines are skipped (unless enclosed in a quoted value).
+* Empty lines are skipped (unless enclosed in a quoted value).
 * Whitespace surrounding each value is stripped.
 * Values can be enclosed in double quotes (`"`).
  ** A quoted value may contain zero or more separator or newline characters.
@@ -195,7 +195,7 @@ Table data in either CSV or TSV format is parsed according to the following rule
 Table data in DSV format is parsed according to the following rules:
 
 * The default delimiter for DSV is a colon (`:`).
-* Blank lines are skipped.
+* Empty lines are skipped.
 * Whitespace surrounding each value is stripped.
 * The delimiter character can be included in the value if escaped using a single backslash (`\:`).
 * If rows do not have the same number of cells ("`ragged`" tables), cells are shuffled to fully fill the rows.

@@ -35,7 +35,7 @@ Kismet R. Lee <kismet@asciidoctor.org> <.>
 <.> Attribute entry assigning metadata to a built-in document attribute
 <.> Attribute entry setting a built-in document attribute
 <.> Attribute entry assigning a value to a user-defined document attribute
-<.> Blank line that ends the document header
+<.> An empty line that ends the document header
 
 There are a few attribute entries in <<ex-basic-header>>.
 Each attribute entry, whether built-in or user-defined, must be entered on its own line.
