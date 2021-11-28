@@ -169,7 +169,7 @@ or using the shorthand ID syntax.
 include::example$id.adoc[tag=anchor-shorthand]
 ----
 
-In addition to being able to define anchors on sections and blocks, anchors can be defined inline where ever you can type normal text (anchors are a macro substitution).
+In addition to being able to define anchors on sections and blocks, anchors can be defined inline wherever you can type normal text (anchors are a macro substitution).
 The anchors in the text get replaced with invisible anchor points in the output.
 
 For example, you would not put an anchor in front of a list item:
@@ -208,7 +208,7 @@ CAUTION: You cannot use inline anchors in a section title to make internal refer
 The processor will flag these as possible invalid references.
 These additional anchors are only intented for making deep links using an alternate ID.
 
-Remember that inline anchors are discovered where ever the macro substitution is applied (e.g., paragraph text).
+Remember that inline anchors are discovered wherever the macro substitution is applied (e.g., paragraph text).
 If text content doesn't belong somewhere, neither does an inline anchor point.
 
 // TODO introduce a subsection here
