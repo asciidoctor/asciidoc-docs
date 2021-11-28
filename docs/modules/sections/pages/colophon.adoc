@@ -1,13 +1,17 @@
 = Colophon
-:keywords: edition notice, impressum, masthead, imprint, disclosure, imprint
+:keywords: edition notice, impressum, masthead, imprint, disclosure, imprint, copyright
 
-Book colophons list information such as the ISBN, publishing house, edition and copyright dates, legal notices and disclaimers, cover art, book layout credits, and any significant production notes.
-The colophon, sometimes referred to as a copyright page, is displayed on the verso side of the title page; however, it can also be located in the book's back matter.
+A colophon contains factual information about the book, particularly relating to its production.
+It may include information such as the ISBN, publishing house, edition and copyright dates, legal notices and disclaimers, typographic style, fonts and paper used, cover art and layout credits, binding method, and any other significant production notes.
+
+The colophon (or colophons), if present, almost always occur at the very beginning (front matter) or end (back matter) of a book.
+However, they can also be placed anywhere in an AsciiDoc manuscript as a top-level section.
+In a printed book, the colophon is often found on the verso side of the title page.
 
 == Colophon section syntax
 
 To use the `colophon` section style, the document type must be `book`.
-The section must be a level 1 section (`==`), unless the book has parts.
+If the book does not have parts, the colophon must be a level 1 section (`==`).
 
 [source]
 ----
@@ -17,7 +21,7 @@ The section must be a level 1 section (`==`), unless the book has parts.
 include::example$colophon.adoc[tag=body]
 ----
 
-If the book has parts, the section must be a level 0 section (`=`).
+If the book has parts, the colophon must be a level 0 section (`=`).
 
 [source]
 ----
@@ -26,3 +30,5 @@ If the book has parts, the section must be a level 0 section (`=`).
 
 include::example$colophon.adoc[tag=body]
 ----
+
+The colophon will only be numbered if the `sectnums` attribute has the value `all`.
