@@ -1,6 +1,8 @@
 = Automatic Table of Contents
 
-A table of contents (TOC) is an index of section titles that is automatically generated from the document's structure.
+A table of contents (TOC) is an index of section titles in an AsciiDoc document.
+When the TOC is enabled, the AsciiDoc processor automatically generates the TOC from the document's structure and inserts it into the output document.
+The number of levels (i.e., depth) of the TOC is configurable.
 
 == Activate the TOC
 
