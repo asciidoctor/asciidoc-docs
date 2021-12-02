@@ -1,16 +1,57 @@
 = Comments
 
+Like programming languages, AsciiDoc provides a way to add commentary to your document that's not carried over into the published document.
+This artifact is collectively known as a [.term]_comment_.
+Putting text in a comment is often referred to as "`commenting it out`".
+
+A comment is often used to insert a writer-facing notation or to hide draft content that's not ready for publishing.
+In general, you can use comments anytime you want to hide lines from the processor.
+Comments can also be useful as a processor hint to keep adjacent blocks of content separate.
+
+The AsciiDoc processor will ignore comments during parsing and, thus, will not include them in the parsed document.
+It will, however, account for the lines when mapping line numbers back to the source document.
+
+AsciiDoc supports two styles of comments, line and block.
+A line comment is for making comments line-by-line (i.e., comment line).
+A block comment is for enclosing an arbtrary range of lines as a comment (i.e., comment block).
+
 [#comment-lines]
 == Comment lines
+
+A comment line is any line outside of a verbatim block that begins with a double forward slash (`//`) that's not immediately followed by a third forward slash.
+Following this prefix, the line may contain an arbitrary number of characters.
+It's customary to insert a single space between the prefix and the comment text (e.g., `// line comment`).
 
 .Line comment syntax
 ----
 // A single-line comment.
 ----
 
-Single-line comments can be used to divide elements, such as two adjacent lists.
+When the processor encounters a line comment, it ignores the line and continues processing as though the line is not there.
+Line comments are processed as lines are read, so they can be used where paragraph text is not permitted, such as between attribute entries in the document header.
+
+Line comments can be used strategically to separate blocks that otherwise have affinity, such as two adjacent lists.
+
+.Line comment separating two lists
+----
+* first list
+
+//
+
+* second list
+----
+
+In this case, the single line comment effectively acts as an empty paragraph that's dropped from the parsed document.
+But before then, it will have served its purpose as a block boundary.
 
 == Comment blocks
+
+A comment block is a specialized delimited block.
+It consists of an arbitrary number of lines bounded on either side by `////` delimiter lines.
+
+A comment block can be used anywhere a delimited block is normal accepted.
+The main difference is that once the block is read, it's dropped from the parsed document (effectively ignored).
+Additionally, no AsciiDoc syntax within the delimited lines is interpreted, not even preprocessor directives.
 
 .Block comment syntax
 ----
@@ -20,3 +61,36 @@ A block comment.
 Notice it's a delimited block.
 ////
 ----
+
+If comment blocks are used in a list item, they must be attached to the list item just like any other block.
+
+.Block comment attached to list item
+----
+* first item
++
+////
+A block comment in a list.
+
+Notice it's attached to the preceding list item.
+////
+
+* second item
+----
+
+Within a table, a block comment can only be used in an AsciiDoc table cell.
+
+.Block comment within a table
+----
+|===
+a|
+cell text
+
+////
+A block comment in a table.
+
+Notice the cell has the "a" (AsciiDoc) style.
+////
+|===
+----
+
+Block comments can be very effective for commenting out sections of the document that are not ready for publishing or that provide backgrond material or an outline for the text being drafted.
