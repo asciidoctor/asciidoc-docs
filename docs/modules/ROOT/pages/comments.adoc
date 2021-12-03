@@ -1,7 +1,7 @@
 = Comments
 
 Like programming languages, AsciiDoc provides a way to add commentary to your document that's not carried over into the published document.
-This artifact is collectively known as a [.term]_comment_.
+This artifact is collectively known as a [.term]*comment*.
 Putting text in a comment is often referred to as "`commenting it out`".
 
 A comment is often used to insert a writer-facing notation or to hide draft content that's not ready for publishing.
