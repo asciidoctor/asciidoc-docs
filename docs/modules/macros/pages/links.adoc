@@ -1,31 +1,34 @@
 = Links
 :url-url-def: https://en.wikipedia.org/wiki/URL
 
-AsciiDoc offers a variety of ways of creating links (aka hyperlinks) to addressable resources.
-The pages in this section document how to add and customize links in an AsciiDoc document.
+AsciiDoc offers a variety of ways of creating links (aka hyperlinks) to other addressable resources.
+The pages in this section document how to add and customize links in AsciiDoc.
 
 == URLs and links
 
-The target of a link is a {url-url-def}[Uniform Resource Locator^] (URL), otherwise known as a web address.
-The text you click to be navigate to that target is referred to as the link text.
+The [.term]*target* of a link is a {url-url-def}[Uniform Resource Locator^] (URL), otherwise known as a web address.
+The text the reader clicks to navigate to that target is referred to as the [.term]*link text*.
 
 NOTE: You may sometimes see the term URI used in place of a URL.
 Although the URI is more technically correct in some cases, URL is the accepted term.
 
-A URL consists of a scheme, an authority (i.e., domain name), a path with optional file extension, and metadata in the form of a query string and fragment.
-You may recognize the URL as what you type in the location bar of a web browser (such as the one for this page).
+The URL is the web address of a unique resource.
+A URL can either be absolute or relative.
+An absolute URL consists of a scheme, an authority (i.e., domain name), a path with an optional file extension, and metadata in the form of a query string and fragment (e.g., `\https://example.org/asciidoc/links.html?source=home`).
+You may recognize an absolute URL as what you type in the location bar of a web browser, such as the one for this page.
+A relative URL is the portion of an absolute URL that starts after either the root path or a subpath (e.g., `guides/getting-started.html`).
 
-Since a URL has a distinct, recognizable syntax, an AsciiDoc processor will detect them (unless escaped) wherever the macro substitution step is applied and automatically convert them into links.
+Since an absolute URL has a distinct, recognizable syntax, an AsciiDoc processor will detect URLs (unless escaped) and automatically convert them to links wherever the macro substitution step is applied.
 This also works for bare email addresses.
 You can learn more about this behavior in xref:autolinks.adoc[].
+To make a link to a relative URL, you must be specify it explicitly as the target of a xref:link-macro.adoc[link macro].
 
 == Link-related macros
 
 Instead of showing the bare URL or email address as the link text, you may want to customize that text.
 Or perhaps you want to apply attributes to the link, such as a role.
-To do so, you'd use either the xref:url-macro.adoc[URL macro] or, if you're linking to xref:complex-urls.adoc[a complex URL], the more explicit xref:link-macro.adoc[link macro].
-
-You can also use the xref:link-macro.adoc[link macro] to make a link to a target that is not recognized as a URL, such as a relative path.
+To do so, you'd use either the xref:url-macro.adoc[URL macro] or, if you're linking to xref:complex-urls.adoc[a complex URL], the more decisive xref:link-macro.adoc[link macro].
+(You can also use the xref:link-macro.adoc[link macro] to make a link to an addressable resource using a relative URL or a URL that is not otherwise recognized as an absolute URL).
 
 When linking to an email address, you can use the specialized xref:mailto-macro.adoc[mailto macro] to enhance the link with prepopulated subject and body text.
 

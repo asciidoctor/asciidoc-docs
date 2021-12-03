@@ -19,11 +19,11 @@ https://asciidoctor.org[]
 ----
 
 Since no text is specified, this macro behaves the same as an autolink.
-In this case, the link automatically gets assigned the "bare" role.
+In this case, the link automatically gets assigned the "`bare`" role.
 
 When the URL is followed by a pair of square brackets, the URL scheme dually serves as the macro name.
-AsciiDoc recognizes all the xref:autolinks.adoc#schemes[URL schemes] for autolinks as macro names.
-That's why we say "URL macros" and not just "URL macro".
+AsciiDoc recognizes all the xref:autolinks.adoc#schemes[URL schemes] for autolinks as macro names (e.g., `https`).
+That's why we say "`URL macros`" and not just "`URL macro`".
 It's a family of macros.
 With the exception of the xref:mailto-macro.adoc[mailto macro], all the URL macros behave the same, and also behave the same as the xref:link-macro.adoc[link macro].
 
