@@ -56,10 +56,33 @@ Additionally, no AsciiDoc syntax within the delimited lines is interpreted, not 
 .Block comment syntax
 ----
 ////
-A block comment.
+A comment block.
 
 Notice it's a delimited block.
 ////
+----
+
+A comment block can also be written as an open block with the comment style:
+
+.Alternate block comment syntax
+----
+[comment]
+--
+A comment block.
+
+Notice it's a delimited block.
+--
+----
+
+A comment block that can consists of a single paragraph can be written as a paragraph with the comment style:
+
+.Comment paragraph syntax
+----
+[comment]
+A paragraph comment.
+Like all paragraphs, the lines must be contiguous.
+
+Not a comment.
 ----
 
 If comment blocks are used in a list item, they must be attached to the list item just like any other block.
@@ -69,7 +92,7 @@ If comment blocks are used in a list item, they must be attached to the list ite
 * first item
 +
 ////
-A block comment in a list.
+A comment block in a list.
 
 Notice it's attached to the preceding list item.
 ////
@@ -77,7 +100,7 @@ Notice it's attached to the preceding list item.
 * second item
 ----
 
-Within a table, a block comment can only be used in an AsciiDoc table cell.
+Within a table, a comment block can only be used in an AsciiDoc table cell.
 
 .Block comment within a table
 ----
@@ -86,11 +109,11 @@ a|
 cell text
 
 ////
-A block comment in a table.
+A comment block in a table.
 
 Notice the cell has the "a" (AsciiDoc) style.
 ////
 |===
 ----
 
-Block comments can be very effective for commenting out sections of the document that are not ready for publishing or that provide backgrond material or an outline for the text being drafted.
+Comment blocks can be very effective for commenting out sections of the document that are not ready for publishing or that provide backgrond material or an outline for the text being drafted.
