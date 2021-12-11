@@ -1,6 +1,6 @@
 = Document Attributes
 
-Each document holds an unordered set of name-value pairs called document attributes.
+Each document holds a set of name-value pairs called document attributes.
 //Document attributes are an unordered collection of key-value pairs named attributes that are stored directly on the document.
 These attributes provide a means of configuring the AsciiDoc processor, declaring document metadata, and defining reusable content.
 This page introduces document attributes and answers some questions about the terminology used when referring to them.
@@ -8,9 +8,12 @@ This page introduces document attributes and answers some questions about the te
 == What are document attributes?
 
 Document attributes are effectively document-scoped variables for the AsciiDoc language.
-The AsciiDoc language defines a set of built-in attributes, and also allows the author (or extensions) to define additional attributes.
+The AsciiDoc language defines a set of built-in attributes, and also allows the author (or extensions) to define additional document attributes, which may replace built-in attributes when permitted.
+
 Built-in attributes either provide access to read-only information about the document and its environment or allow the author to configure behavior of the AsciiDoc processor for a whole document or select regions.
+Built-in attributes are effectively unordered.
 User-defined attribute serve as a powerful text replacement tool.
+User-defined attributes are stored in the order in which they are defined.
 
 Here's a summary of some of the things document attributes are used for:
 

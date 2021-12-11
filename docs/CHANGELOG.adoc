@@ -26,6 +26,7 @@ Fixed::
 
 Changed::
 * repurpose the List Continuation page as Complex List Items
+* clarify that user-defined document attributes are stored in the order in which they are defined
 * clarify that the value of the width and height attributes must be an integer value without a unit
 * provide clarity about image sizing attributes in general
 * clarify that the schema for element attributes is open-ended (#87)
