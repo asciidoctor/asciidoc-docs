@@ -31,7 +31,7 @@ Be aware that xref:attribute-entry-substitutions.adoc[header substitutions] auto
 <.> An explicitly assigned value is offset from the closing colon (`:`) by at least one space.
 At the end of the value, press kbd:[Enter].
 
-Some built-in attributes don't require a value to be explicitly assigned in an attribute entry because they're a boolean attribute or have a default value.
+Some built-in attributes don't require a value to be explicitly assigned in an attribute entry because they're a boolean attribute or have an implied value.
 
 [source]
 ----
@@ -40,8 +40,7 @@ Some built-in attributes don't require a value to be explicitly assigned in an a
 <.> If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
 
 When set, the value of a built-in boolean attribute is always empty (i.e., an _empty string_).
-Other built-in attributes may have a default value.
-If you set a built-in attribute and leave its value empty, the AsciiDoc processor may infer a default value, if it has one, at processing time.
+If you set a built-in attribute and leave its value empty, the AsciiDoc processor may infer a value at processing time.
 
 == Where can an attribute entry be declared?
 
