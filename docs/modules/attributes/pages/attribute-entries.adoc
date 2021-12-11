@@ -22,7 +22,6 @@ This [.term]*sets* -- that is, turns on -- the document attribute so you can use
 
 In many cases, you explicitly assign a value to a document attribute by entering information after its name in the attribute entry.
 The value must be offset from the closing colon (`:`) by at least one space.
-Be aware that xref:attribute-entry-substitutions.adoc[header substitutions] automatically get applied to the value by default.
 
 [source]
 ----
@@ -30,6 +29,18 @@ Be aware that xref:attribute-entry-substitutions.adoc[header substitutions] auto
 ----
 <.> An explicitly assigned value is offset from the closing colon (`:`) by at least one space.
 At the end of the value, press kbd:[Enter].
+
+Take note that xref:attribute-entry-substitutions.adoc[header substitutions] automatically get applied to the value by default.
+That means you don't need to escape special characters such in an HTML tag.
+It also means you can reference the value of attributes which have already been defined when defining the value of an attribute.
+Attribute references in the value of an attribute entry are resolved immediately.
+
+[source]
+----
+:url-org: https://example.org/projects
+:url-project: {url-org}/project-name <.>
+----
+<.> You can reuse the value of an attribute which has already been set using using an attribute reference in the value.
 
 Some built-in attributes don't require a value to be explicitly assigned in an attribute entry because they're a boolean attribute or have an implied value.
 
