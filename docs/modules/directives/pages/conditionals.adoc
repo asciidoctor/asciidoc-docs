@@ -1,13 +1,15 @@
 = Conditionals
 
-You can include or exclude lines of text in your document using one of the following conditional preprocessor directives:
+You can include or exclude lines of text in your document using the following conditional preprocessor directives:
 
 * xref:ifdef-ifndef.adoc#ifdef[ifdef]
 * xref:ifdef-ifndef.adoc#ifndef[ifndef]
 * xref:ifeval.adoc[ifeval]
 
-These directives tell the processor whether to include the enclosed content based on certain conditions.
-The conditions are based on the presence or value of document attributes.
+When the processor encounters one of these conditionals, it evaluates the specified condition.
+The condition is based on the presence or value of one or more document attributes.
+If the condition evaluates to true, the lines the conditional encloses are included.
+Otherwise, the lines are skipped.
 
 ////
 For example, say you want to include a certain section of content only when converting to HTML.
