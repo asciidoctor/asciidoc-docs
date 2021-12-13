@@ -8,10 +8,10 @@ Where that content is included in the document determines how it will be process
 
 == What is an include directive?
 
-An [.term]*include directive* imports content from an external file into the content of the current document.
+An [.term]*include directive* imports content from a separate file or URL into the content of the current document.
 When the current document is processed, the include directive syntax is replaced by the contents of the include file.
 Think of the include directive like a file expander.
-The include directive is a <<include-processing,preprocessor directive>>, so it has no awareness of the surrounding context.
+The include directive is a <<include-processing,preprocessor directive>>, which means it has no awareness of the surrounding context.
 
 == When is an include directive useful?
 
