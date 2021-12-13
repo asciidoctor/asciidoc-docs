@@ -8,6 +8,8 @@ It's this output that you publish.
 
 Converting the AsciiDoc source is an opportunity to interpret and embellish your content to get more out of it than what you put in.
 The work of converting the AsciiDoc source to another format is handled by a converter.
+While there is a strong relationship between the language and the converters, these two aspects are not explicitly coupled.
+
 An AsciiDoc processor provides several built-in converters, including ones for making HTML and DocBook.
 To activate one of these converters, you set the backend on the document (default: html).
 The backend is a keyword that tells the processor which output format you want to make.
