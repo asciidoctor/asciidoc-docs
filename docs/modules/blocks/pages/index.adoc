@@ -58,7 +58,7 @@ Let's consider the following normal section:
 Content of section.
 ----
 
-The context of this block is `:section`.
+The context of this block is `section`.
 We often refer to this as a section (or section block), using the context as an adjective to describe the block.
 The writer does not have to specify the context in this case since it's implied by the syntax.
 
@@ -85,93 +85,99 @@ All literal blocks implicitly have the verbatim content model because the purpos
 === Summary of built-in contexts
 
 Here's a list of the contexts of all the built-in blocks in AsciiDoc.
-The names of the contexts are prefixed with a colon to indicate that the context is represented as a symbol in the Ruby API.
+
+NOTE: In the Asciidoctor API, the contexts are represented as symbols.
+In Ruby, a symbol is a name prefixed with a colon (e.g., `:listing`).
+This documentation will sometimes use this notation when referring to the name of a context.
+However, this notation is not universal.
+Some processors, such as Asciidoctor.js, store the context as a string instead.
 
 .Built-in contexts
 [#table-of-contexts,cols="1s,2"]
 |===
 |Name | Purpose
 
-|:admonition
+|admonition
 |One of five admonition blocks.
 
-|:audio
+|audio
 |An audio block.
 
-|:colist
+|colist
 |A callout list.
 
-|:dlist
+|dlist
 |A description list.
 
-|:document
+|document
 |The top-level document or the document in an AsciiDoc table cell
 
-|:example
+|example
 |An example block.
 
-|:floating_title
+|floating_title
 |A discrete heading.
 
-|:image
+|image
 |An image block.
 
-|:list_item
+|list_item
 |An item in an ordered, unordered, or description list (only relevant inside a list or description list block).
 In a description list, this block is used to represent the term and the description.
 
-|:listing
+|listing
 |A listing block.
 
-|:literal
+|literal
 |A literal block.
 
-|:olist
+|olist
 |An ordered list.
 
-|:open
+|open
 |An open block.
 
-|:page_break
+|page_break
 |A page break.
 
-|:paragraph
+|paragraph
 |A paragraph.
 
-|:pass
+|pass
 |A passthrough block.
 
-|:preamble
+|preamble
 |The preamble of the document.
 
-|:quote
+|quote
 |A quote block (aka blockquote).
 
-|:section
+|section
 |A section.
+May also be a part, chapter, or special section.
 
-|:sidebar
+|sidebar
 |A sidebar block.
 
-|:table
+|table
 |A table block.
 
-|:table_cell
+|table_cell
 |A table cell (only relevant inside a table block).
 
-|:thematic_break
+|thematic_break
 |A thematic break (aka horizontal rule).
 
-|:toc
+|toc
 |A TOC block (to designate custom TOC placement).
 
-|:ulist
+|ulist
 |An unordered list.
 
-|:verse
+|verse
 |A verse block.
 
-|:video
+|video
 |A video block.
 |===
 
@@ -185,7 +191,7 @@ The context is what the converter uses to dispatch to a convert method.
 The style is then used by the converter to apply special behavior to blocks of the same family.
 
 With two exceptions, there's a 1-to-1 mapping between the contexts and the handler methods of a converter.
-Those exceptions are the `:list_item` and `:table_cell` contexts, which are not mapped to a handler method.
+Those exceptions are the `list_item` and `table_cell` contexts, which are not mapped to a handler method.
 In the converter, these blocks must be accessed from their parent block.
 
 [#block-style]
@@ -213,7 +219,7 @@ puts "Hello, World!"
 ----
 ....
 
-The context of a source block is `:listing` (as inferred from the block delimiters) and the style is `source` (as specified by the writer).
+The context of a source block is `listing` (as inferred from the block delimiters) and the style is `source` (as specified by the writer).
 We say that the style specializes the block as a source block.
 (Technically, the presence of a source language already implies the `source` style, but under the covers this is what's happening).
 The context of the block is still the same, but it has additional metadata to indicate that it requires special processing.
@@ -237,7 +243,7 @@ a > b
 ....
 ----
 
-Since the declared block style matches the name of a context, the context of the block becomes `:listing` and the resolved block style remains unset.
+Since the declared block style matches the name of a context, the context of the block becomes `listing` and the resolved block style remains unset.
 That means the resolved block style differs from the declared block style.
 To learn more about how to change the context of a block using the declared block style, see xref:masquerading.adoc[].
 

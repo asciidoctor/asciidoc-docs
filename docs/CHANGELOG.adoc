@@ -41,6 +41,7 @@ Changed::
 * clarify that the colophon section can be placed anywhere in a book
 * make a distinction between an absolute and relative URL on the Links intro page
 * promote Literal Monospace section to a page
+* show contexts without leading colon to avoid confusion
 
 == Published Q3 2021
 
