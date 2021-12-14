@@ -2,6 +2,7 @@
 ** xref:bold.adoc[]
 ** xref:italic.adoc[]
 ** xref:monospace.adoc[]
+** xref:literal-monospace.adoc[]
 ** xref:text-span-built-in-roles.adoc[]
 ** xref:highlight.adoc[]
 ** xref:quotation-marks-and-apostrophes.adoc[]

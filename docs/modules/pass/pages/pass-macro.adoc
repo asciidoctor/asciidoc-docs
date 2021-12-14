@@ -64,7 +64,7 @@ The single and plus passthroughs are a surefire alternative to backslash escapin
 
 Note that the single and plus passthroughs only prevent substitutions.
 They do not format the text in monospace.
-If you want to do both, you must enclose the pair in a monospace formatting pair, known as xref:text:monospace.adoc#literal-monospace[literal monospace].
+If you want to do both, you must enclose the pair in a monospace formatting pair, known as xref:text:literal-monospace.adoc[literal monospace].
 
 [#triple-plus]
 == Triple plus
