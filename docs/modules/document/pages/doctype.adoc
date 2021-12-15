@@ -1,4 +1,5 @@
 = Document Type
+:page-aliases: doctypes.adoc
 
 The document type (aka doctype) declares the expected structure of an AsciiDoc document.
 AsciiDoc defines a fixed set of document types.
