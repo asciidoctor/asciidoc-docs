@@ -1,4 +1,15 @@
-= Document Types
+= Document Type
+
+The document type (aka doctype) declares the expected structure of an AsciiDoc document.
+AsciiDoc defines a fixed set of document types.
+Each document type provides a slight variation on the permitted structure of an AsciiDoc document to accommodate different uses cases.
+
+The default doctype is `article`, which provides the foundation strcuture on which other doctypes build.
+The `book` doctype permits multiple level-0 sections that act as part sections.
+The `manpage` doctype provides an extended header for defining standard metadata of a manpage, such as the volume number, man, and purpose.
+The `inline` doctype is ended for embedded scenarios.
+
+== Document types
 
 Article (`article`)::
 The default doctype.
@@ -21,7 +32,7 @@ There may be cases when you only want to apply inline AsciiDoc formatting to inp
 For example, in the Asciidoclet project (AsciiDoc in Javadoc), only the inline formatting is needed for the text in Javadoc tags.
 // {asciidoclet-ref}[Asciidoclet project]
 
-== Inline doctype
+== Inline doctype rules
 
 The rules for the inline doctype are as follows:
 
