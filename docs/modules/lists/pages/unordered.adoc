@@ -1,8 +1,13 @@
 = Unordered Lists
 :keywords: bulleted list
 
-If you were to create a list in an e-mail, how would you do it?
-Chances are, you'd mark list items using the same characters that AsciiDoc reserves to identify list items.
+You can make unordered lists in AsciiDoc by starting the lines with a designated marker.
+An unordered list is a list with items that are prefixed with symbol, such as a bullet.
+
+AsciiDoc builds on the well-established convention of using an asterisk or hyphen to identify a list item.
+Adjacent list items are joined into a single list.
+Unordered lists can be nested by varying the marker and list items may contain attached blocks.
+They can also be combined with other types of lists.
 
 == Basic unordered list
 
