@@ -1,6 +1,9 @@
 = Open Blocks
 
 The most versatile block of all is the open block.
+It allows you to apply block attributes to a chunk of text without giving it any other semantics.
+In other words, it provides a generic structural container for enclosing content.
+The only notable limitation is that an open block cannot be nested inside of another open block.
 
 == Open block syntax
 
