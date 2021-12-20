@@ -70,7 +70,7 @@ include::example$footnote.adoc[tag=externalized-format]
 The `c,q` target on the pass macro instructs the processor to apply the special characters substitution followed by the quotes substitution.
 That means the text formatting in the footnote text will already be applied when the footnote is inserted using an attribute reference.
 
-== Footnotes in Headings
+== Footnotes in headings
 
 If you use a footnote in a heading, you'll likely find that the footnote sequence is wrong.
 That's because headings (section titles and discrete headings) get converted out of document order for the purpose of generating IDs and setting up cross references.
