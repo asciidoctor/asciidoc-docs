@@ -123,6 +123,20 @@ a|
 ``m``onospace
 ----
 
+|Literal monospace
+a|
+[source,markdown]
+----
+`http://localhost:8080`
+`/issue/{id}`
+----
+a|
+[source]
+----
+`+http://localhost:8080+`
+`+/issue/{id}+`
+----
+
 |Link with label
 a|
 [source,markdown]
