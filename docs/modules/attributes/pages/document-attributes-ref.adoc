@@ -397,6 +397,13 @@ _Book doctype only_.
 |{n}
 |Sets the seed value for the figure number sequence.^[<<note-number,1>>]^
 
+|footnote-number
+|_number_ +
+(`0`)
+|{n}
+|{n}
+|Sets the seed value for the footnote number sequence.^[<<note-number,1>>]^
+
 |important-caption
 |_any_ +
 `*Important*`
