@@ -1,16 +1,22 @@
 = Admonitions
 
-// tag::intro[]
 There are certain statements you may want to draw attention to by taking them out of the content's flow and labeling them with a priority.
 These are called admonitions.
-It's rendered style is determined by the assigned label (i.e., value).
-The AsciiDoc language provides five admonition style labels:
+This page introduces you to admonition types AsciiDoc provides, how to add admonitions to your document, and how to enhance them using icons or emoji.
+
+== Admonition types
+
+The rendered style of an admonition is determined by the assigned type (i.e., name).
+The AsciiDoc language provides five admonition types represented by the following labels:
 
 * `NOTE`
 * `TIP`
 * `IMPORTANT`
 * `CAUTION`
 * `WARNING`
+
+The label is specified either as the block style or as a special paragraph prefix.
+The label becomes visible to the reader unless icons are enable, in which case the icon is shown in its place.
 
 .Caution vs. Warning
 [#caution-vs-warning]
@@ -24,6 +30,8 @@ Here's a simple rule to help you differentiate the two:
 To find a deeper analysis, see https://www.differencebetween.com/difference-between-caution-and-vs-warning/.
 ****
 
+== Admonition syntax
+
 When you want to call attention to a single paragraph, start the first line of the paragraph with the label you want to use.
 The label must be uppercase and followed by a colon (`:`).
 
@@ -34,7 +42,6 @@ include::example$admonition.adoc[tag=para-c]
 ----
 <.> The label must be uppercase and immediately followed by a colon (`:`).
 <.> Separate the first line of the paragraph from the label by a single space.
-// end::intro[]
 
 The result of <<ex-label>> is displayed below.
 
