@@ -1,8 +1,10 @@
 = Paragraphs
 
-The bulk of the content in a document is paragraph text.
-This is why the AsciiDoc language doesn't require any special markup or attributes to specify paragraph content.
-You can just start typing.
+The primary block type in most documents is the paragraph.
+That's why in AsciiDoc, you don't need to use any special markup or attributes to create paragraphs.
+You can just start typing sentences and that content becomes a paragraph.
+
+This page introduces you to the paragraph in AsciiDoc and explains how to set it apart from other paragraphs.
 
 == Create a paragraph
 
