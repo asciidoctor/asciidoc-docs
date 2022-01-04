@@ -1,11 +1,26 @@
 = Keyboard Macro
 
-IMPORTANT: You must set the `experimental` attribute to enable the UI macros.
+The keyboard macro allows to create a reference to a key or key sequence on a keyboard.
+You can use this macro when you need to communicate to a reader what key or key sequence to press to perform a function.
+
+IMPORTANT: In order to use the keyboard macro, you must set the `experimental` document attribute.
+Although this attribute is named `experimental`, the keyboard macro is considered a stable feature of the AsciiDoc language.
+The requirement to specify the attribute is merely an optimization for the processor.
 
 == Keyboard macro syntax
 
-The keyboard macro helps communicate what keys on a keyboard should be pressed.
-The macro uses the syntax `+kbd:[key(+key)*]+`.
+The keyboard macro uses the short (no target) macro syntax `+kbd:[key(+key)*]+`.
+Each key is displayed as entered in the document.
+Multiple keys are separated by a plus (e.g., `Ctrl+T`) or a comma (e.g., `Ctrl,T`).
+The plus is preferred.
+
+It's customary to represent alpha keys in uppercase, though this is not enforced.
+
+If the last key is a backslash (`\`), it must be followed by a space.
+Without this space, the processor will not recognize the macro.
+If one of the keys is a closing square bracket (`]`), it must be proceeded by a backslash.
+Without the backslash escape, the macro will end prematurely.
+You can find example of these cases in the example below.
 
 .Using the keyboard macro syntax
 [#ex-kbd]
