@@ -1,4 +1,4 @@
-= Attribute References Substitutions
+= Attribute References Substitution
 :navtitle: Attribute References
 :table-caption: Table
 :y: Yes
@@ -6,7 +6,7 @@
 :n: No
 //icon:times[role="red"]
 
-Attribute references are replaced with their values when they're processed by the attributes substitution step.
+Attribute references are replaced with the values of the attribute they reference when processed by the attributes substitution step.
 
 == Default attributes substitution
 
