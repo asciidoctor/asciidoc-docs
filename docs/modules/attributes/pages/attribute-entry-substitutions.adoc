@@ -1,7 +1,7 @@
-= Customize Attribute Entry Substitutions
+= Attribute Entry Substitutions
 
 The AsciiDoc processor automatically applies substitutions from the header substitution group to the value of an attribute entry prior to the assignment, regardless of where the attribute entry is declared in the document.
-The header substitution group, which replaces xref:subs:special-characters.adoc[special characters] and xref:subs:attributes.adoc[attribute references] in text, is applied to the values of attribute entries, regardless of whether the entries are defined in the header or in the document body.
+The header substitution group, which replaces xref:subs:special-characters.adoc[special characters] followed by xref:subs:attributes.adoc[attribute references], is applied to the values of attribute entries, regardless of whether the entries are defined in the header or in the document body.
 This is the same group that gets applied to metadata lines (author and revision information) in the document header.
 
 That means that any inline formatting in an attribute value isn't interpreted because:
@@ -61,6 +61,36 @@ If the processor detects that an inline pass macro completely surrounds the attr
 . applies the substitutions to the value
 
 If the macro is absent, the value is processed with the header substitution group.
+
+== Substitutions for attributes defined outside the document
+
+Unlike attribute entries, substitutions are *not* applied to the value of an attribute passed in to the AsciiDoc processor.
+An attribute can be passed into the AsciiDoc processor using the `-a` CLI option or the `:attributes` API option.
+When attributes are defined external to the document, the value must be prepared so it's ready to be referenced as is.
+If the value contains XML special characters, that means those characters must be pre-escaped.
+The exception would be if you intend for XML/HTML tags in the value to be preserved.
+If the value needs to reference other attributes, those values must be pre-replaced.
+
+Let's consider the case when the value of an attribute defined external to the document contains an ampersand.
+In order to reference this attribute safely in the AsciiDoc document, the ampersand must be escaped:
+
+ $ asciidoctor -a equipment="a bat &amp; ball" document.adoc
+
+You can reference the attribute as follows:
+
+[,asciidoc]
+----
+To play, you'll need {equipment}.
+----
+
+If the attribute were to be defined in the document, this escaping would not be necessary.
+
+[,asciidoc]
+----
+:equipment: a bat & ball
+----
+
+That's because, in contrast, substitutions are applied to the value of an attribute entry.
 
 == Change substitutions when referencing an attribute
 
