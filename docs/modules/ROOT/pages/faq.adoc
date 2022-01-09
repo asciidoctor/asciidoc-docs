@@ -1,4 +1,5 @@
-= Frequently Asked Questions (FAQs)
+= Frequently Asked Questions (FAQ)
+:page-aliases: faqs.adoc
 
 == Does AsciiDoc only support ASCII text?
 

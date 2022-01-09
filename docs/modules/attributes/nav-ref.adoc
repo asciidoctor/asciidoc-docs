@@ -1,6 +1,6 @@
 * Reference
 ** xref:ROOT:syntax-quick-reference.adoc[]
-** xref:ROOT:faqs.adoc[]
+** xref:ROOT:faq.adoc[]
 ** xref:ROOT:asciidoc-vs-markdown.adoc[]
 ** xref:document-attributes-ref.adoc[]
 ** xref:character-replacement-ref.adoc[]
