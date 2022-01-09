@@ -1,0 +1,77 @@
+= Frequently Asked Questions (FAQs)
+
+== Does AsciiDoc only support ASCII text?
+
+No.
+AsciiDoc provides full Unicode support (UTF-8 by default, UTF-16 with a BOM).
+👌
+
+The "`Ascii`" in AsciiDoc (and Asciidoctor) merely refers to the range of characters used to define the language syntax (e.g., block delimiters, section markers, list markers, attribute list boundaries, built-in attribute and block names, etc.).
+In other words, you only have to use characters from US-ASCII in order to express the structure of an AsciiDoc document.
+The content itself, which includes paragraphs, titles, verbatim blocks, attribute names and values, custom block names, and so forth, may contain characters from any character range in Unicode.
+
+An AsciiDoc processor assumes the input is encoded in UTF-8 and it encodes output documents in UTF-8 as well.
+
+== What's the relationship between a converter and a backend?
+
+A *converter* is the software that performs conversion from AsciiDoc to a publishable format.
+A *backend* is an identifier for the intended output format, and thus tells the AsciiDoc processor which converter to use.
+You can think of the backend as an alias for a converter.
+
+The backend represents the user's intent to transform the AsciiDoc document to a given format (e.g., `html5` for HTML 5).
+That backend also serves as an identifier that tells the processor which converter to use.
+More than one converter can bind to (i.e., stake claim to) the same backend in order to provide the user with alternatives for generating a given output format.
+For example, the backend `pdf` could be satisfied by Asciidoctor PDF, but it may also be mapped to a different implementation.
+The last converter that registers itself with a backend wins.
+
+== What's the media type (aka MIME type) for AsciiDoc?
+
+A https://en.wikipedia.org/wiki/Media_type[media type], or MIME type, is a code for identifying file formats and content formats transmitted over the Internet.
+As of yet, there's no official media type registered for AsciiDoc.
+However, the AsciiDoc Working Group, which oversees the specification for the AsciiDoc language, has plans to submit a proposal to register an official the media type for AsciiDoc.
+See https://github.com/asciidoctor/asciidoctor/issues/2502[asciidoctor#2502].
+
+The proposed media type for AsciiDoc is as follows:
+
+ name: text/asciidoc
+ extensions: .adoc, .asciidoc
+
+The name `text/asciidoc` follows the convention used for Markdown.
+The `.adoc` extension is the preferred one.
+The `.asciidoc` extension is only included for backwards compatibility with existing documents.
+
+See https://tools.ietf.org/html/rfc7763 for details about naming a media type.
+
+== Why is my document attribute being ignored?
+
+If the document attribute is a header-only attribute, make sure it is defined in the document header or passed in via a CLI or API.
+Otherwise, the document attribute will not have any affect.
+
+Recall that the document header ends at the first empty line or block, whichever comes first.
+If you have an empty line somewhere in what you intend to be the document header, the attribute entries that fall after that empty line are going to be defined in the body, not the header.
+That likely explains your problem.
+If you remove the empty line(s), your attribute should be recognized.
+
+If the document attribute is not a header-only attribute, make sure it is being defined (using an attribute entry) outside of any delimited block and offset from other blocks by at least one empty line.
+
+== Part way through the document, the blocks stop rendering correctly. What went wrong?
+
+When content does not display as you expect in the later part of a document, it's usually due to a delimited block missing its closing delimiter line.
+The parsing rules inside a delimited block are different.
+If left open, it can impact how the AsciiDoc processor interprets the document structure.
+For example, the AsciiDoc processor will stop recognizing section titles from that point forward.
+
+To solve this problem, first look for missing delimiter lines.
+An AsciiDoc processor must warn you when this situation is detected.
+Syntax highlighting in your text editor can also help with this.
+Also look at the rendered output to see if the block styles are extending past where you intended.
+
+The most sly culprit is the open block.
+Although an open block doesn't have any special styling, it does apply delimited block semantics to its contents.
+You can add a role that applies a custom style, such as a red outline, so you can see its boundaries.
+
+== Why don't links to URLs that contain an underscore or caret work?
+
+An AsciiDoc processor applies normal substitutions to paragraph content, including the target of a URL or link macro.
+It's up to the author to escape this syntax.
+See xref:macros:complex-urls.adoc[] to find techniques you can use to address this problem.
