@@ -48,5 +48,7 @@ This URL has repeating underscores link:++https://asciidoctor.org/now_this__link
 ====
 
 For more information, see {url-org}/asciidoctor/issues/625[issue #625^].
+
+Note, if the URL contains eg. double quotes (`"`) and if you are using `asciidoctor-pdf` to generate pdf files, you will get _pdf build errors_. To fix this issue, replace the double quotes manually with `%22` (utf8-encoding).
 // end::sb[]
 --
