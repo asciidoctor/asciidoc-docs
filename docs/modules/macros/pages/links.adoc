@@ -32,6 +32,34 @@ To do so, you'd use either the xref:url-macro.adoc[URL macro] or, if you're link
 
 When linking to an email address, you can use the specialized xref:mailto-macro.adoc[mailto macro] to enhance the link with prepopulated subject and body text.
 
+== Encode reserved characters
+
+If the URL contains reserved characters, such as double quote (`"`), space, or an unconstrained AsciiDoc formatting mark, you'll need to encode these characters using URI encoding.
+For example, a double quote is encoded as `%22`.
+An underscore is encoded as `%5F`.
+If you do not encode these characters, the URL may be mangled or cause the processor to fail.
+
+Let's assume we are creating a URL that contains a query string parameter named `q` that contains reserved characters:
+
+....
+https://example.org?q=label:"Requires docs"
+....
+
+To encode a URL, open the development tools in your browser and pass the URL to the `encodeURI` function:
+
+[,js]
+----
+encodeURI('http://example.org?q=label:"Requires docs"')
+----
+
+Here's the encoded URL that we'd use in the AsciiDoc document:
+
+....
+https://example.org?q=label:%22Requires%20docs%22
+....
+
+Depending on the capabilities of the web application, the space character can be encoded as `+` instead of `%20`.
+
 [#hide-uri-scheme]
 == Hide the URL scheme
 

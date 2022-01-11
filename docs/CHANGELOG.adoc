@@ -8,6 +8,7 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
 Added::
 * add section to clarify that substitutions are not applied to the value of attributes defined externally
+* document that double quote in a URL must be encoded using %22
 
 == Published Q4 2021
 
