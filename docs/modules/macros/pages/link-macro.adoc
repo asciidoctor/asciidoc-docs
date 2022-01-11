@@ -83,7 +83,7 @@ link:pass:[My Documents/report.pdf][Get Report]
 link:My%20Documents/report.pdf[Get Report]
 ----
 
-.Encode a space using a character reference (&#32;)
+.Encode a space using a character reference (\&#32;)
 [source]
 ----
 link:My&#32;Documents/report.pdf[Get Report]
