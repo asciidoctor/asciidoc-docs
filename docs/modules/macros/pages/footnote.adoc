@@ -8,7 +8,7 @@ You can refer to the same footnote in multiple locations by assigning an ID to t
 NOTE: All AsciiDoc processors, including Asciidoctor, currently implement footnotes as endnotes.
 The placement and numbering of footnotes can be customized using a custom converter.
 
-== Footnote syntax
+== Footnote macro syntax
 
 You can insert footnotes into your document using the footnote macro.
 The text of the footnote is defined between the square brackets of the footnote macro (`+footnote:[text]`).
