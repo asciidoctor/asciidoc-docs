@@ -206,7 +206,7 @@ include::example$id.adoc[tag=anchor-header-extra]
 
 CAUTION: You cannot use inline anchors in a section title to make internal references to that section.
 The processor will flag these as possible invalid references.
-These additional anchors are only intented for making deep links using an alternate ID.
+These additional anchors are only intended for making deep links using an alternate ID.
 
 Remember that inline anchors are discovered wherever the macro substitution is applied (e.g., paragraph text).
 If text content doesn't belong somewhere, neither does an inline anchor point.
