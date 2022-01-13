@@ -144,8 +144,8 @@ d|``wj``^[3]^
 
 Notice that some replacement values are Unicode characters, whereas others are numeric character references (e.g., \&#34;).
 The numeric character reference is when the Unicode character could interfere with the AsciiDoc syntax.
-In this case, it's the responsiblity of the converter to transform that numeric character reference into a format that is compatibile with the output format.
+In this case, it's the responsibility of the converter to transform that numeric character reference into a format that is compatible with the output format.
 For example, in the man page converter, each character reference is replaced with a troff macro.
 
 Thus, the abstraction of using AsciiDoc attributes for character replacements not only gives the author control over how the document is interpreted, it also helps decouple content and presentation.
-In other words, it's more protable to use an attribute reference in the content rather than hardcode a nummeric character reference.
+In other words, it's more portable to use an attribute reference in the content rather than hardcode a numeric character reference.
