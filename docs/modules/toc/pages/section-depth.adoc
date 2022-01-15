@@ -1,5 +1,4 @@
-= Change the Section Level Depth in the TOC
-:navtitle: Change the Section Level Depth
+= Change the TOC Depth
 
 You can adjust the depth of section levels that are displayed in the table of contents with the `toclevels` attribute.
 
