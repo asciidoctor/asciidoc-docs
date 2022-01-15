@@ -285,7 +285,7 @@ Doc Writer <doc.writer@email.org>
 :toc:
 ----
 
-The Table of Content's xref:toc:title.adoc[title], xref:toc:section-depth.adoc[displayed section depth], and xref:toc:position.adoc[position] can be customized.
+The Table of Content's xref:toc:title.adoc[title], xref:toc:levels.adoc[displayed section depth], and xref:toc:position.adoc[position] can be customized.
 
 == Includes
 
