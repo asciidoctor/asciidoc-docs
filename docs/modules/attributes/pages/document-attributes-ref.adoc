@@ -751,7 +751,7 @@ See xref:sections:auto-ids.adoc#disable[Disable automatic ID generation].
 (`2`)
 |{n}
 |{y}
-|xref:toc:section-depth.adoc[Maximum section level to display].
+|xref:toc:levels.adoc[Maximum section level to display].
 
 |fragment
 |_empty_

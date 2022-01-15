@@ -24,7 +24,7 @@ The result of <<ex-default>> is displayed below.
 
 image::toc.png[Default table of contents,role=screenshot]
 
-You can customize the xref:title.adoc[title of the TOC], the xref:section-depth.adoc[depth of the section levels], and the xref:position.adoc[position of the TOC in the document].
+You can customize the xref:title.adoc[title of the TOC], the xref:levels.adoc[depth of the section levels], and the xref:position.adoc[position of the TOC in the document].
 However, not all of the attributes are supported by all converters.
 See xref:toc-ref.adoc[] for which attributes are available to each converter.
 
