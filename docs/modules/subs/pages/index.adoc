@@ -17,6 +17,16 @@ The single plus macro has no explanation (at least not in this module).
 The deprecate syntax needs to be moved to the deprecated table and/or migration docs.
 ////
 
+Substitutions are applied to leaf content of a block.
+Substitutions determine how the text is interpretted.
+If no substitutions are applied, the text is passed to the converter as entered.
+Otherwise, the substitutions transform that text.
+
+Substitutions replace references, formatting marks, characters and character sequences, and macros.
+Substitutions are organized into types and those types are bundled into groups.
+This page provides an overview of these classifications.
+Subsequence pages go into detail about each substitution type.
+
 == Substitution types
 
 Each substitution type replace characters, markup, attribute references, and macros in text with the appropriate output for a given converter.
