@@ -5,7 +5,7 @@ The document type (aka doctype) declares the expected structure of an AsciiDoc d
 AsciiDoc defines a fixed set of document types.
 Each document type provides a slight variation on the permitted structure of an AsciiDoc document to accommodate different uses cases.
 
-The default doctype is `article`, which provides the foundation strcuture on which other doctypes build.
+The default doctype is `article`, which provides the foundation structure on which other doctypes build.
 The `book` doctype permits multiple level-0 sections that act as part sections.
 The `manpage` doctype provides an extended header for defining standard metadata of a manpage, such as the volume number, man, and purpose.
 The `inline` doctype is ended for embedded scenarios.
