@@ -1,16 +1,16 @@
 = Section Titles and Levels
-////
-This is a new page extracted from sections.adoc.
-The tag "intro" begins on that page, at "Sections partition the document into a content hierarchy." and ends on this page right before Titles as HTML headings.
-////
 
 Sections partition the document into a content hierarchy.
+A section is an implicit enclosure.
+Each section begins with a title and ends at the next sibling section, ancestor section, or end of document.
+Nested section levels must be sequential.
 
 == Section level syntax
 
-A section title represents the heading for a section.
-Section title levels are specified by two to six equal signs.
-The number of equal signs in front of the title represents the nesting level (using a 0-based index) of the section.
+A section title marks the beginning of a section and also acts as the heading for that section.
+The section title must be prefixed with a section marker, which indicates the section level.
+A section marker can range from two to six equal signs and must be followed by a space.
+The number of equal signs in the marker represents the nesting level (using a 0-based index) of the section.
 
 .Section titles available in an article doctype
 [source]
