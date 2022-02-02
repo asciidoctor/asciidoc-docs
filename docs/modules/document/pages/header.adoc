@@ -71,8 +71,7 @@ See the xref:asciidoctor:manpage-backend:index.adoc[manpage doctype] section for
 
 == Header processing
 
-The information in the document header is included by default when converting to a standalone document.
-This means that the header of a document called via an xref:directives:include.adoc[include directive] will be processed and converted.
+The information in the document header is displayed by default when converting to a standalone document.
 If you don't want the header of a document to be displayed, set the `noheader` attribute in the document's header or via the CLI.
 
 == Front matter
