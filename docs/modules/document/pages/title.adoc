@@ -1,6 +1,6 @@
 = Document Title
 
-A document title, while optional, is usually the first element entered in a document's header.
+A document title, while optional, is usually the first element in the document header.
 
 == Title syntax
 
@@ -30,7 +30,7 @@ Subsequent level 0 section titles in the document body are interpreted as xref:s
 == Hide or show the document title
 
 When converting a standalone document, the document title is shown by default.
-You can control whether or not the document title appears with the `showtitle` attribute.
+You can control whether the document title appears with the `showtitle` attribute.
 If you don't want the title to be shown, unset the `showtitle` attribute using `showtitle!` in the document header or via the CLI or API.
 
 //Need to link to a definition of embeddable doc
