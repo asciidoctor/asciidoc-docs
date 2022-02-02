@@ -1,13 +1,14 @@
 = Document Header
 
-The document header is a series of contiguous lines at the start of the document that encapsulates the document title, author and revision information, metadata, and document-wide attributes.
+An AsciiDoc document may begin with a document header.
+The document header encapsulates the document title, author and revision information, document metadata, and document-scoped attributes.
 
 == Document header structure
 
-The document header is a series of contiguous lines that starts on the first non-empty line of the file.
+If present, the document header is a sequence of contiguous lines that start at the top of the file, ignoring any empty lines or comments.
 
 IMPORTANT: *The document header cannot contain empty lines.*
-The first empty line that the processor encounters is interpreted as the end of the document header and the beginning of the document body.
+The first empty line that the processor encounters after the document header begins marks the end of the document header and the beginning of the document body.
 
 A header typically begins with a xref:title.adoc[].
 When a document title is specified, it can be immediately followed by two special (but optional) lines of content that assign xref:author-information.adoc[] and xref:revision-information.adoc[].
