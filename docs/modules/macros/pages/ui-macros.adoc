@@ -2,8 +2,8 @@
 
 IMPORTANT: You must set the `experimental` attribute to enable the UI macros.
 
-IMPORTANT: In order to use the keyboard macro, you must set the `experimental` document attribute.
-Although this attribute is named `experimental`, the keyboard macro is considered a stable feature of the AsciiDoc language.
+IMPORTANT: In order to use the UI macros, you must set the `experimental` document attribute.
+Although this attribute is named `experimental`, the UI macros are considered a stable feature of the AsciiDoc language.
 The requirement to specify the attribute is merely an optimization for the processor.
 
 == Button macro syntax
