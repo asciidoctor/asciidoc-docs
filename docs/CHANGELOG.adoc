@@ -10,6 +10,7 @@ Added::
 * add section to clarify that substitutions are not applied to the value of attributes defined externally
 * document that double quote in a URL must be encoded using %22
 * add dedicated section with examples for multiple attributes with ifndef directive
+* explicitly state that , and + combinators on ifdef and ifndef directive cannot be combined
 
 Changed::
 * clarify the interpretation of multiple attributes with ifdef directive
