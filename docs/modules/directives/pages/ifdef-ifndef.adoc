@@ -68,23 +68,51 @@ The `ifndef` directive supports the same single-line and long-form variants as `
 
 Both the `ifdef` and `ifndef` directives accept multiple attribute names.
 The combinator can be "`and`" or "`or`".
+The two combinators cannot be combined in the same expression.
 
-Any attribute (or)::
-Multiple comma-separated (`,`) directive names evaluate to true, allowing the content to be included, if one or more of the directives is defined.
-Otherwise the content is not included.
+=== ifdef with multiple attributes
+
+If any attribute is set (or)::
+Multiple attribute names must be separated by commas (`,`).
+If one or more of the attributes are set, the content is included.
+Otherwise, the content is not included.
 +
-.Any attribute example
+.If any attribute example
 ----
-\ifdef::backend-html5,backend-docbook5[Only shown when converting to HTML5 or DocBook 5.]
+\ifdef::backend-html5,backend-docbook5[Only shown if converting to HTML (backend-html5 is set) or DocBook (backend-docbook5 is set).]
 ----
 
-All attributes (and)::
-Multiple plus-separated (`+`) directive names evaluate to true, allowing the content to be included, if all of the directives are defined.
-Otherwise the content is not included.
+If all attributes are set (and)::
+Multiple attribute names must be separated by pluses (`+`).
+If all the attributes are set, the content is included.
+Otherwise, the content is not included.
 +
-.All attributes example
+.If all attributes example
 ----
-\ifdef::env-github+backend-html5[Only shown when converting to HTML5 on GitHub.]
+\ifdef::backend-html5+env-github[Only shown when converting to HTML (backend-html5 is set) on GitHub (env-github is set).]
 ----
+
+=== ifndef with multiple attributes
 
 The `ifndef` directive negates the results of the expression.
+When using the `ifndef` directive, the expression should be read with the prefix "`unless`".
+
+Unless any attribute is set (or)::
+Multiple attribute names must be separated by commas (`,`).
+If one or more of the attributes are set, the content is not included.
+Otherwise, the content is included.
++
+.Unless any attribute example
+----
+\ifndef::profile-production,env-site[Not shown if profile-production or env-site is set.]
+----
+
+Unless all attributes are set (and)::
+Multiple attribute names must be separated by pluses (`+`).
+If all of the attributes are set, the content is not included.
+Otherwise, the content is included.
++
+.Unless all attributes example
+----
+\ifndef::profile-staging+env-site[Not shown if profile-staging and env-site are set.]
+----
