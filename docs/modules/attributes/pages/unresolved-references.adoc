@@ -67,8 +67,8 @@ It's up to the application code to decide how and when to terminate the applicat
 [#undefined]
 == Undefined attribute
 
-The `attribute-undefined` attribute controls how expressions that undefine an attribute are handled.
-By default, the line is dropped since the expression is a statement, not content.
+The `attribute-undefined` attribute controls how an expression that undefines an attribute (e.g., `+{set:name!}+`) are handled.
+By default, the line containing the expression is dropped since the expression is intended to be a statement, not a content reference.
 
 This attribute has two possible values:
 
