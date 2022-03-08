@@ -1,5 +1,5 @@
 = Font Icons Mode
-:url-fontawesome-icons: https://fontawesome.com/icons?d=gallery
+:url-fontawesome-icons: https://fontawesome.com/v4/icons/
 
 Setting the `icons` attribute to `font` instructs the AsciiDoc processor to select icons from an icon font.
 
