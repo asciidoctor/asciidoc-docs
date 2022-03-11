@@ -7,6 +7,10 @@ These characters can be customized with the `idprefix` and `idseparator` attribu
 == Change the ID prefix
 
 By default, the AsciiDoc processor begins an auto-generated section ID with an underscore (`+_+`).
+This default can cause problems when using it as an xref target in AsciiDoc.
+The leading underscore may get paired with an underscore somewhere else in the paragraph, thus resulting in unexpected text formatting.
+That's why we strongly encourage you to customize the ID prefix.
+
 You can change this prefix by setting the `idprefix` attribute and assigning it a new value.
 The value of `idprefix` must begin with a valid ID start character and can have any number of additional valid ID characters.
 
