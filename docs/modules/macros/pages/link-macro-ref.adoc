@@ -29,7 +29,7 @@ These attributes apply to the link, URL, and email macros.
 |`window` +
 (shorthand)
 |`^`
-|+https://example.org[Google, Yahoo, Bing^]+ +
+|+https://example.org[Google, DuckDuckGo, Ecosia^]+ +
 +https://discuss.asciidoctor.org[Discuss Asciidoctor^]+
 |
 
