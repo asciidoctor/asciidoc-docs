@@ -1,6 +1,6 @@
 = Key Concepts
 
-This pages gives you more of a sense of the concepts and terms you'll encounter as you learn about AsciiDoc.
+This page lists the concepts and terms you'll encounter as you learn about AsciiDoc.
 Each concept will be covered in more depth later in the documentation.
 So just use this page to start to familiarize yourself with the lingo.
 
