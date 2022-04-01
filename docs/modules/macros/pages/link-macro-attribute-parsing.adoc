@@ -123,9 +123,16 @@ include::example$url.adoc[tag=linkattrs-s]
 
 CAUTION: If you use the caret syntax more than once in a single paragraph, you may need to escape the first occurrence with a backslash.
 
-If the attribute list has both link text and named attributes, the caret should fall at the end of the link text, but inside the double quotes if present.
+If the attribute list has both link text in double quotes and named attributes, the caret should be placed at the end of the link text, but inside the double quotes.
 
 [source]
 ----
-https://example.org["Google, DuckDuckGo, Bing^",role=teal]
+https://example.org["Google, DuckDuckGo, Bing^",role=btn]
+----
+
+If no named attributes are present, the link text should not be enclosed in quotes.
+
+[source]
+----
+https://example.org[Google, DuckDuckGo, Bing^]
 ----
