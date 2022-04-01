@@ -34,7 +34,7 @@ In this case, you must enclose the link text in double quotes so that it is capt
 
 [source]
 ----
-https://example.org["Google, DuckDuckGo, Bing",role=teal]
+https://example.org["Google, DuckDuckGo, Ecosia",role=teal]
 ----
 
 Similarly, if the link text contains an equals sign, you can enclose the link text in double quotes to ensure the parser recognizes it as the first positional attribute.
@@ -127,12 +127,12 @@ If the attribute list has both link text in double quotes and named attributes, 
 
 [source]
 ----
-https://example.org["Google, DuckDuckGo, Bing^",role=btn]
+https://example.org["Google, DuckDuckGo, Ecosia^",role=btn]
 ----
 
 If no named attributes are present, the link text should not be enclosed in quotes.
 
 [source]
 ----
-https://example.org[Google, DuckDuckGo, Bing^]
+https://example.org[Google, DuckDuckGo, Ecosia^]
 ----
