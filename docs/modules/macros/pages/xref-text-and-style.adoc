@@ -69,7 +69,7 @@ Installation
 ====
 
 The *full* and *short* styles only apply for references that have a caption.
-Specifically, the corresponding `*-caption` attribute must be set for the target's block type (e.g., `listing-caption` for listing blocks, `example-caption` for example blocks, `table-caption` for tables, etc.).
+Specifically, the corresponding `<context>-caption` attribute must be set for the target's block type (e.g., `listing-caption` for listing blocks, `example-caption` for example blocks, `table-caption` for tables, etc.).
 Otherwise, the *basic* style is used.
 
 == Reference signifiers
