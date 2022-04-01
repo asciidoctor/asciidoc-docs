@@ -1,8 +1,8 @@
 = Key Concepts
 
-This page lists the concepts and terms you'll encounter as you learn about AsciiDoc.
+This page introduces you to some of the concepts and terms you'll encounter as you learn about AsciiDoc.
 Each concept will be covered in more depth later in the documentation.
-So just use this page to start to familiarize yourself with the lingo.
+Use this page as a way to start to familiarize yourself with the lingo.
 
 == Document
 
