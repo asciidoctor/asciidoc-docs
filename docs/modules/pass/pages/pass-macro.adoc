@@ -49,7 +49,7 @@ However, the special characters +<+ and +>+ are still escaped in the output.
 You can also escape formatting marks, like +``+.
 ----
 
-Being an uncontrained pair, the double plus passthrough can be used anywhere in the text.
+Being an unconstrained pair, the double plus passthrough can be used anywhere in the text.
 
 ----
 Text formatting is not applied to a link target if it is surrounded by double pluses.
