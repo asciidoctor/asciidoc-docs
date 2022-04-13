@@ -60,6 +60,22 @@ _ex._ html5
 |The backend used to select and activate the converter that creates the output file.
 Usually named according to the output format (e.g., `html5`)
 
+|backend-<backend>
+|_empty_
+|{n}
+|n/a
+|A convenience attribute for checking which backend is selected.
+<backend> is the value of the `backend` attribute (e.g., `backend-html5`).
+Only one such attribute is set at time.
+
+//|backend-<backend>-doctype-<doctype>
+//|_empty_
+//|{n}
+//|n/a
+//|A convenience attribute for checking the current backend/doctype combination.
+//<backend> is the value of the `backend` attribute and <doctype> is the value of the `doctype` attribute (e.g., `backend-html5-doctype-article`).
+//Only one such attribute is set at time.
+
 |basebackend
 |_any_ +
 _ex._ html
@@ -68,6 +84,22 @@ _ex._ html
 |The generic backend on which the backend is based.
 Typically derived from the backend value minus trailing numbers (e.g., the basebackend for `docbook5` is `docbook`).
 May also indicate the internal backend employed by the converter (e.g., the basebackend for `pdf` is `html`).
+
+|basebackend-<basebackend>
+|_empty_
+|{n}
+|n/a
+|A convenience attribute for checking which basebackend is active.
+<basebackend> is the value of the `basebackend` attribute (e.g., `basebackend-html`).
+Only one such attribute is set at time.
+
+//|basebackend-<basebackend>-doctype-<doctype>
+//|_empty_
+//|{n}
+//|n/a
+//|A convenience attribute for checking the current basebackend/doctype combination.
+//<basebackend> is the value of the `basebackend` attribute and <doctype> is the value of the `doctype` attribute (e.g., `basebackend-html-doctype-article`).
+//Only one such attribute is set at time.
 
 |docdate
 |_date (ISO)_ +
@@ -120,6 +152,14 @@ _ex._ 19:26:06 UTC
 |{n}
 |Last modified time of the source document.^[<<note-docdatetime,1>>,<<note-sourcedateepoch,2>>]^
 
+|doctype-<doctype>
+|_empty_
+|{n}
+|n/a
+|A convenience attribute for checking the doctype of the document.
+<doctype> is the value of the `doctype` attribute (e.g., `doctype-book`).
+Only one such attribute is set at time.
+
 |docyear
 |_integer_ +
 _ex._ {docyear}
@@ -139,6 +179,14 @@ _ex._ html
 |If input is a string
 |{y}
 |File extension of the output file name (without leading period).
+
+|filetype-<filetype>
+|_empty_
+|{n}
+|n/a
+|A convenience attribute for checking the filetype of the output.
+<filetype> is the value of the `filetype` attribute (e.g., `filetype-html`).
+Only one such attribute is set at time.
 
 |htmlsyntax
 |`html` +
