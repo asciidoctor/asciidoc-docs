@@ -104,9 +104,10 @@ A named attribute consists of a name and a value separated by an `=` character (
 
 If the value contains a space, comma, or quote character, it must be enclosed in double or single quotes (e.g., `name="value with space"`).
 In all other cases, the surrounding quotes are optional.
-If present, the enclosing quotes are dropped from the parsed value.
 
-If the value contains the same quote character used to enclose the value, escape the quote character in the value by prefixing it with a backslash (e.g., `value="the song \"Dark Horse\""`).
+If the value contains the *same* quote character used to enclose the value, the quote character in the value must be escaped by prefixing it with a backslash (e.g., `value="the song \"Dark Horse\""`).
+
+If enclosing quotes are used, they are dropped from the parsed value and the preceding backslash is dropped from any escaped quotes.
 
 [#unset]
 === Unset a named attribute
@@ -135,11 +136,11 @@ Space and tab characters around the equals sign (=) and at the end of the value 
 Any space or tab characters at the boundaries of the value are ignored.
 * To parse the attribute value:
 ** If the first character is not a quote, the string is read until the next delimiter or end of string.
-** If the first character is `"`, then the string is read until the next unescaped quote or, if there is no closing quote, the next delimiter.
-If there is a closing quote, the quotes are removed; if not, the initial quote is retained.
-** If the next character is `'` then the string is read until the next unescaped `'`, or if there is no closing `'`, the next delimiter.
-If there is a closing `'`, the enclosing `'` characters are removed; if not, the initial `'` is retained.
-If there is a closing `'`, and the first character is not an escaped `'`, substitutions are performed as described in <<Substitutions>>.
+** If the first character is a double quote (i.e., `"`), then the string is read until the next unescaped double quote or, if there is no closing double quote, the next delimiter.
+If there is a closing double quote, the enclosing double quote characters are removed and escaped double quote characters are unescaped; if not, the initial double quote is retained.
+** If the next character is a single quote (i.e., `'`), then the string is read until the next unescaped single quote or, if there is no closing single quote, the next delimiter.
+If there is a closing single quote, the enclosing single quote characters are removed and escaped single quote characters are unescaped; if not, the initial single quote is retained.
+If there is a closing single quote, and the first character is not an escaped single quote, substitutions are performed on the value as described in <<Substitutions>>.
 
 .When to escape a closing square bracket
 ****
