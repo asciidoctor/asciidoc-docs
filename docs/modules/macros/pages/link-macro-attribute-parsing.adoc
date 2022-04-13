@@ -14,10 +14,10 @@ https://discuss.asciidoctor.org[Discuss Asciidoctor]
 
 However, if the text contains an equals sign (`=`), the text is parsed as an xref:attributes:element-attributes.adoc#attribute-list[attribute list].
 The exact rules for attribute list parsing and positional attributes are rather complex, and discussed on xref:attributes:positional-and-named-attributes.adoc[].
-As a simplified rule, to be sure that the link text is recognized properly, it can either:
+To be sure the link text is recognized properly, you can apply these two simple checks:
 
-* contain no comma (`,`) or equals sign (`=`)
-* or be enclosed in double quotes (`"`).
+* contains no comma (`,`) or equals sign (`=`) or
+* enclosed in double quotes (`"`)
 
 There are several other situations in which text before the first comma may be recognized as the link text.
 Let's consider some examples.
@@ -42,6 +42,13 @@ Similarly, if the link text contains an equals sign, you can enclose the link te
 [source]
 ----
 https://example.org["1=2 posits the problem of inequality"]
+----
+
+If the quoted link text itself contains the quote character used to enclose the text, escape the quote character in the text by prefixing it with a backslash.
+
+[source]
+----
+https://example.org["href=\"#top\" attribute"] creates link to top of page
 ----
 
 The double quote enclosure is not required in all cases when the link text contains an equals sign.

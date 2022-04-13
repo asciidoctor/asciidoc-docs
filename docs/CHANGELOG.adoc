@@ -8,6 +8,7 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
 Added::
 * document the flattened `backend`, `basebackend`, `doctype`, and `filetype` value attributes (e.g., `backend-html5`)
+* document how to encode link text that contains both an equals sign and quotes
 
 == Published Q1 2022
 
