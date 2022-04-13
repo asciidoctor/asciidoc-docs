@@ -10,6 +10,9 @@ Added::
 * document the flattened `backend`, `basebackend`, `doctype`, and `filetype` value attributes (e.g., `backend-html5`)
 * document how to encode link text that contains both an equals sign and quotes
 
+Changed::
+* specify more precisely when quotes in a named attribute value are unescaped
+
 == Published Q1 2022
 
 Added::
