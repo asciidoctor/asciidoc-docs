@@ -2,17 +2,18 @@
 :page-aliases: roles.adoc
 
 You can assign one or more roles to blocks and most inline elements using the `role` attribute.
-Even though the attribute is singular, it may contain multiple roles.
 The `role` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
+Even though the attribute name is singular, it may contain multiple (space-separated) roles.
+Roles may also be defined using a shorthand (dot-prefixed) syntax.
 
 A role:
 
 . adds additional semantics to an element
-. can be used for adding additional styling to a group of elements (e.g., via a CSS class selector)
-. may activate additional behavior if supported by the converter
+. can be used to apply additional styling to a group of elements (e.g., via a CSS class selector)
+. may activate additional behavior if recognized by the converter
 
 TIP: The `role` attribute in AsciiDoc always get mapped to the `class` attribute in the HTML output.
-In other words, role names are HTML class names, and thus can be targeted using CSS class selectors.
+In other words, role names are synonymous with HTML class names, thus allowing output elements to be identified and styled in CSS using class selectors (e.g., `sidebarblock.role1`).
 
 == Assign roles to blocks
 
@@ -20,7 +21,7 @@ You can assign roles to blocks using the shorthand dot (`.`) syntax or the longh
 
 === Shorthand role syntax for blocks
 
-To assign a role to a block, prefix the value with a dot (`.`) in an attribute list.
+To assign a role to a block, prefix the value with a dot (`.`) in style style position of an attribute list.
 The dot implicitly sets the `role` attribute.
 
 .Sidebar block with a role assigned using the shorthand dot
@@ -43,19 +44,12 @@ This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
 
-In this case, the value of the role attribute becomes a space separated list of values, `role1 role2`.
-
-////
-[source]
-----
-[.summary.incremental]
-* This is a list with two roles assigned to it.
-----
-////
+The role values are turned into a space-separated list of values, `role1 role2`.
 
 === Formal role syntax for blocks
 
-Explicitly set `role`, followed by the equals sign (`=`), and then the value in an attribute list.
+You can define the roles using a named attribute instead, which is the longhand syntax for adding roles to an element.
+When using this syntax, add the attribute name `role` followed by the equals sign (`=`) then the role name or names to any position in the block attribute list.
 
 .Sidebar block with a role assigned using the formal syntax
 [source#ex-block-formal]
@@ -66,27 +60,22 @@ This is a sidebar with one role assigned to it, rolename.
 ****
 ----
 
-Separate multiple role values with commas (`,`).
-Since the value contains a comma, the value must be enclosed in quotes.
+Separate multiple role values using spaces.
+Since the value has spaces, it's easier to read if enclosed in quotes, though the quotes are not strictly required.
 
 .Sidebar with two roles assigned using the formal syntax
 [source#ex-two-roles-formal]
 ----
-[role="role1,role2"]
+[role="role1 role2"]
 ****
 This is a sidebar with two roles assigned to it, role1 and role2.
 ****
 ----
 
-In this case, the value of the role attribute becomes a space separated list of values, `role1 role2`.
+In this form, the value of the role attribute is already in the right form to be passed through to the output.
+No additional processing is done on it.
 
-////
-[source]
-----
-[role="summary,incremental"]
-* This is a list with two roles assigned to it.
-----
-////
+This longhand syntax can also be used on inline macros, but it cannot be used with formatted (aka quoted) text.
 
 == Assign roles to formatted inline elements
 
