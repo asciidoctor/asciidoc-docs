@@ -11,6 +11,9 @@ Added::
 * document how to encode link text that contains both an equals sign and quotes
 * document that the `xrefstyle` attribute can be specified on the xref macro to override the xrefstyle value for a single reference
 
+Fixed::
+* clarify that multiple role values in the role attribute must be separated by spaces (#114)
+
 Changed::
 * specify more precisely when quotes in a named attribute value are unescaped
 
