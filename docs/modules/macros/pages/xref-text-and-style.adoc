@@ -46,7 +46,9 @@ There are three built-in styles you can choose from to customize the generated t
 
  :xrefstyle: basic:: Uses the title only (Installation or Big Cats), applying emphasis if the reference is a chapter or appendix.
 
-This formatting only applies to references that have both a title and number (or explicit caption), but no explicit reftext.
+The `xrefstyle` attribute can also be specified directly on the xref:xref.adoc[xref macro] to override the xrefstyle value for a single reference (e.g., `+xref:installation[xrefstyle=short]+`).
+
+The xrefstyle formatting only applies to references that have both a title and number (or explicit caption), but no explicit reftext.
 If the reference is a chapter or an appendix, the title is displayed in italics instead of quotes (even when the xrefstyle is basic).
 
 Let's assume you want to reference a section titled “Installation” that has the number 2.3.
