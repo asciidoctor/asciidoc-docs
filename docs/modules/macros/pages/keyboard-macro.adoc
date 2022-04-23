@@ -18,7 +18,7 @@ It's customary to represent alpha keys in uppercase, though this is not enforced
 
 If the last key is a backslash (`\`), it must be followed by a space.
 Without this space, the processor will not recognize the macro.
-If one of the keys is a closing square bracket (`]`), it must be proceeded by a backslash.
+If one of the keys is a closing square bracket (`]`), it must be preceded by a backslash.
 Without the backslash escape, the macro will end prematurely.
 You can find example of these cases in the example below.
 
