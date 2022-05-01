@@ -42,6 +42,7 @@ include::example$quote.adoc[tag=para2]
 
 If the quote or excerpt is more than one paragraph, place the text between delimiter lines consisting of four underscores (`+____+`).
 
+[#quote-block-syntax]
 .Quote block syntax
 [#ex-block]
 ----
@@ -83,6 +84,19 @@ include::example$quote.adoc[tag=md]
 The result of <<ex-md>> is displayed below.
 
 include::example$quote.adoc[tag=md]
+
+[WARNING]
+====
+Not all AsciiDoc syntax elements
+work within Markdown-style blockquotes,
+and some may even prevent the "blockquote" from being recognized as such.
+For complex quote content,
+prefer the quoted block syntax described <<quote-block-syntax,above>>.
+
+Even elements documented <<ex-md-block,below>>,
+such as lists within Markdown-style blockquotes,
+may stop working in future versions of the language.
+====
 
 Like Markdown, Asciidoctor supports block content inside the blockquote, including nested blockquotes.
 
