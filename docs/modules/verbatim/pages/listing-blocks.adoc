@@ -3,12 +3,11 @@
 
 Blocks and paragraphs assigned the `listing` style display their rendered content exactly as you enter it.
 Listing content is converted to preformatted text (i.e., `<pre>`).
-The content is shown in a fixed-width font and endlines are preserved.
-It's only subject to xref:subs:special-characters.adoc[special character] and callout substitutions.
+The content is presented in a fixed-width font and endlines are preserved.
+Only xref:subs:special-characters.adoc[special characters] and callouts are replaced when the document is converted.
 
-The listing style can be applied to content using any of the following methods:
+The listing style can be applied to content using one of the following methods:
 
-* indenting the first line of a paragraph by one or more spaces,
 * setting the `listing` style on a block or paragraph using an attribute list, or
 * enclosing the content within a pair of listing block delimiters (`----`).
 
