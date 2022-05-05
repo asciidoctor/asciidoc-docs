@@ -1,7 +1,7 @@
 = Listing Blocks
 :replace-me: I've been replaced!
 
-Blocks and paragraphs assigned the `listing` style display their rendered content exactly as you enter it.
+Blocks and paragraphs assigned the `listing` style display their rendered content exactly as you see it in the source.
 Listing content is converted to preformatted text (i.e., `<pre>`).
 The content is presented in a fixed-width font and endlines are preserved.
 Only xref:subs:special-characters.adoc[special characters] and callouts are replaced when the document is converted.
