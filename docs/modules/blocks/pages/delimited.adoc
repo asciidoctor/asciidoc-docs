@@ -7,7 +7,7 @@ Delimited blocks are a subset of all block types in AsciiDoc.
 == Overview
 
 Delimited blocks are defined using structural containers, which are the fixed set of recognized block enclosures in the AsciiDoc syntax.
-Here's the structural container for a verbatim block:
+Here's the structural container for a literal block:
 
 ----
 ....
@@ -16,10 +16,13 @@ This text will be treated as verbatim content.
 ----
 
 A structural container has an opening delimiter and a closing delimiter.
+The opening delimiter follows the block metadata, if present.
+Leading and trailing empty lines in a structure container are not considered significant and are automatically removed.
+The remaining lines define a block's content.
+
 These enclosures not only define the boundaries of a block's content, but also imply a content model (e.g., verbatim content or a subtree).
-They also provide a mechanism for nesting blocks.
-//The block metadata (block attribute and anchor lines) goes above the opening delimiter (thus outside the delimited region).
-//Delimited blocks cannot be interleaved.
+In certain cases, they provide a mechanism for nesting blocks.
+However, delimited blocks cannot be interleaved.
 
 A delimited block has the unique ability of being able to be repurposed by the AsciiDoc syntax, through both built-in mappings and mappings for custom blocks defined by an extension.
 To understand how delimited blocks work, it's important to understand structural containers, their linewise delimiters, their default contexts, and their expected content models, as well as block nesting and masquerading.

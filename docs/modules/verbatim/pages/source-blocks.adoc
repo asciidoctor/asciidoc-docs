@@ -11,6 +11,7 @@ NOTE we really want this ID on the section, but there are problems w/ multiple I
 [#syntax-highlighting]
 ////
 
+A source block is a specialization of a xref:listing-blocks.adoc[listing block].
 Developers are accustomed to seeing source code colorized to emphasize the code's structure (i.e., keywords, types, delimiters, etc.).
 This technique is known as [.term]*syntax highlighting*.
 Since this technique is so prevalent, AsciiDoc processors will integrate at least one library to syntax highlight the source code blocks in your document.

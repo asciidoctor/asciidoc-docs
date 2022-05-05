@@ -10,6 +10,7 @@ Added::
 * document the flattened `backend`, `basebackend`, `doctype`, and `filetype` value attributes (e.g., `backend-html5`)
 * document how to encode link text that contains both an equals sign and quotes
 * document that the `xrefstyle` attribute can be specified on the xref macro to override the xrefstyle value for a single reference
+* document that leading and trailing empty lines are automatically removed from delimited blocks
 
 Fixed::
 * clarify that multiple role values in the role attribute must be separated by spaces (#114)
