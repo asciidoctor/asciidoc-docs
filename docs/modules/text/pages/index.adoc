@@ -72,27 +72,31 @@ See xref:troubleshoot-unconstrained-formatting.adoc#use-unconstrained[When shoul
 
 AsciiDoc provides six inline text styles and one punctuation style that are applied solely with formatting marks.
 
-xref:bold.adoc[Bold]::
+xref:bold.adoc[Bold] (type: strong)::
 Text that is bold will stand out against the regular, surrounding text due to the application of a thicker and/or darker font.
 Bold is useful when the text needs to catch the attention of a person visually scanning a page.
 The formatting mark for bold is an asterisk (`*`).
 
-xref:italic.adoc[Italic]::
+xref:italic.adoc[Italic] (type: emphasis)::
 Text is often italicized in order to stress a word or phrase, quote a speaker, or introduce a term.
 Italic type slants slightly to the right, and depending on the font, may have cursive swashes and flourishes.
 The formatting mark for italic is an underscore (`+_+`).
 
-xref:monospace.adoc[Monospace]::
+xref:monospace.adoc[Monospace] (type: monospaced)::
 Technical content often requires text to be styled in a way that indicates a command or source code.
 Such text is usually emphasized using a fixed-width (i.e., monospace) font.
 The formatting mark for monospace is a backtick (`++`++`).
 
-xref:highlight.adoc[Highlight]::
+xref:highlight.adoc[Highlight] (type: mark)::
 Another way to draw attention to text is to highlight it.
 This semantic style is used for reference or notation purposes, or to mark the importance of a key subject or point.
 The formatting mark for highlight is a hash (`+#+`).
 
-xref:subscript-and-superscript.adoc[Subscript and superscript]::
+xref:custom-inline-styles.adoc[Styled phrase] (type: unquoted)::
+Adding a role to a span of text that uses the highlight formatting mark (`+#+`) converts to generic phrase that can be styled.
+AsciiDoc defines several built-in roles that you can use to style text, and the style/theming system of the converter can allow you to define styles for a custom role.
+
+xref:subscript-and-superscript.adoc[Subscript and superscript] (type: subscript/superscript)::
 Subscript and superscript text is common in mathematical expressions and chemical formulas.
 The formatting mark for subscript is a tilde (`{tilde}`).
 The formatting mark for superscript is a caret (`{caret}`).
@@ -105,7 +109,7 @@ Strike through::
 Underline::
 ////
 
-xref:quotation-marks-and-apostrophes.adoc[Curved quotation marks and apostrophes]::
+xref:quotation-marks-and-apostrophes.adoc[Curved quotation marks and apostrophes] (type: double/single)::
 By default, the AsciiDoc processor outputs straight quotation marks and apostrophes.
 They can be changed to curved by adding backticks (`++`++`) as a formatting hint.
 
