@@ -4,6 +4,8 @@
 Text that is marked up as bold will stand out against the regular, surrounding text due to the application of a thicker and/or darker font.
 Bold is useful when the text needs to catch the attention of a site visitor quickly scanning a page.
 
+The bold presentation of text maps to the formatted text type known as *strong* in the AsciiDoc language.
+
 == Bold syntax
 
 You can mark a word or phrase as bold by enclosing it in a single pair of asterisks (e.g., `+*word*+`) (constrained).

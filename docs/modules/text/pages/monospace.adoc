@@ -3,6 +3,8 @@
 In AsciiDoc, a span of text enclosed in a single pair of backticks (`{backtick}`) is displayed using a fixed-width (i.e., monospaced) font.
 Monospace text formatting is typically used to represent text shown in computer terminals or code editors (often referred to as a codespan).
 
+The monospace presentation of text maps to the formatted text type known as *monospaced* in the AsciiDoc language.
+
 == Constrained
 
 Here's an example:

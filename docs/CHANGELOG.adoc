@@ -14,6 +14,7 @@ Added::
 
 Fixed::
 * clarify that multiple role values in the role attribute must be separated by spaces (#114)
+* draw clear association between the type and visual presentation of formatted text (strong=bold, emphasis=italic, etc)
 
 Changed::
 * specify more precisely when quotes in a named attribute value are unescaped

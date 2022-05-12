@@ -2,7 +2,9 @@
 // content written and moved upstream from Antora by @graphitefriction
 
 Text is often italicized in order to stress a word or phrase, quote a speaker, or introduce a term.
-Italic type slants slightly to the right, and depending on the font, may have cursive swashes and flourishes.
+Italic text slants slightly to the right, and depending on the font, may have cursive swashes and flourishes.
+
+The italic presentation of text maps to the formatted text type known as *emphasis* in the AsciiDoc language.
 
 == Italic syntax
 
