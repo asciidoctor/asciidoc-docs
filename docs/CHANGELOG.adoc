@@ -18,6 +18,8 @@ Fixed::
 
 Changed::
 * specify more precisely when quotes in a named attribute value are unescaped
+* revise text about window attribute on URL and link macros
+* add caution about underscore in window=_blank unexpectedly forming a constrained formatting pair; recommend the shorthand syntax instead
 
 == Published Q1 2022
 
