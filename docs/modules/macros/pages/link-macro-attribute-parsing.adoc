@@ -94,7 +94,7 @@ https://asciidoctor.org[Asciidoctor,window=_blank]
 In the HTML output, the value of the `window` attribute is assigned to the `target` attribute on the `<a>` tag (e.g., `target=_blank`) along with the <<noopener and nofollow,`rel=noopener` attribute>>.
 
 CAUTION: The underscore at the start of the value `_blank` can unexpectedly form a constrained formatting pair when another underscore appears somewhere else in the line or paragraph, thus causing the macro to break.
-You can avoid this problem using the <<Blank window shorthand>> instead.
+You can avoid this problem either by escaping the underscore at the start of the value (i.e., `+window=\_blank+`) or by using the <<Blank window shorthand>> instead.
 
 === noopener and nofollow
 
