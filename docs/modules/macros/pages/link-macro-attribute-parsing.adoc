@@ -1,6 +1,6 @@
 = Link Macro Attribute Parsing
 
-If named attributes are detected between the square brackets of a link macro (including URL macros), that text is parsed as an attribute list.
+If named attributes are detected between the square brackets of a link or URL macro, that text is parsed as an attribute list.
 This page explains the conditions when this occurs and how to write the link text so it is recognized as a single positional attribute.
 
 == Linked text alongside named attributes
@@ -78,9 +78,11 @@ You can configure the link to open in a separate window (or tab) using the `wind
 https://asciidoctor.org[Asciidoctor,window=read-later]
 ----
 
+In the HTML output, the value of the `window` attribute is assigned to the `target` attribute on the `<a>` tag (e.g., `target=read-later`).
+
 === Target a blank window
 
-Since the behavior of browsers is so widely varied, most of the time, you'll use the `window` attribute to target a blank window.
+Most of the time, you'll use the `window` attribute to target a blank window.
 Configuring a link that points to a location outside the current site is common practice to avoid disrupting the reader's flow.
 To enable this behavior, you set the `window` attribute to the special value `_blank`.
 
@@ -88,6 +90,11 @@ To enable this behavior, you set the `window` attribute to the special value `_b
 ----
 https://asciidoctor.org[Asciidoctor,window=_blank]
 ----
+
+In the HTML output, the value of the `window` attribute is assigned to the `target` attribute on the `<a>` tag (e.g., `target=_blank`) along with the <<noopener and nofollow,`rel=noopener` attribute>>.
+
+CAUTION: The underscore at the start of the value `_blank` can unexpectedly form a constrained formatting pair when another underscore appears somewhere else in the line or paragraph, thus causing the macro to break.
+You can avoid this problem using the <<Blank window shorthand>> instead.
 
 === noopener and nofollow
 
@@ -120,15 +127,19 @@ To fine tune indexing within the site, you can specify the nofollow option even 
 
 === Blank window shorthand
 
-Since configuring an external link to target a blank window is a common practice, AsciiDoc provides a shorthand for it.
-Instead of having to include `window=_blank` in the attribute list, you can add a caret (`+^+`) to the end of the link text.
+Configuring an external link to target a blank window is a common practice.
+Therefore, AsciiDoc provides a shorthand for it.
+
+In place of the named attribute `+window=_blank+`, you can insert a caret (`+^+`) at the end of the link text.
+This syntax has the added benefit of not having to worry about the underscore at the start of the value `+_blank+` unexpectedly forming a constrained formatting pair when another underscore appears in the same line or paragraph.
 
 [source]
 ----
 include::example$url.adoc[tag=linkattrs-s]
 ----
 
-CAUTION: If you use the caret syntax more than once in a single paragraph, you may need to escape the first occurrence with a backslash.
+CAUTION: In rare circumstances, if you use the caret syntax more than once in the same line or paragraph, you may need to escape the first occurrence with a backslash.
+However, the processor should try to avoid making this a requirement.
 
 If the attribute list has both link text in double quotes and named attributes, the caret should be placed at the end of the link text, but inside the double quotes.
 
