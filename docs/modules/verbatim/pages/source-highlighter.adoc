@@ -100,7 +100,11 @@ include::example$source.adoc[tag=src-para]
 
 == Enable line numbering
 
-Provide the feature is supported by the source highlighter, you can enable line numbering on a source block by setting the `linenums` option on the block.
+Provided the feature is supported by the source highlighter, you can enable line numbering on a source block by setting the `linenums` option on the block.
+
+IMPORTANT: Line numbering is added by the source highlighter, not the AsciiDoc converter.
+Therefore, to get line numbering on a source block, you must have a source highlighter set and that source highlighter must support line numbering.
+When using Asciidoctor, the only source highlighter that does not support line numbering is highlight.js.
 
 The `linenums` option can either be specified as a normal block option named `linenums`, or as the third positional attribute on the block.
 The value of the positional attribute doesn't matter, though it's customary to use `linenums`.
