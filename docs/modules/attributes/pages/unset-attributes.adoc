@@ -5,7 +5,7 @@ Document attributes--built-in, boolean, and custom--can be unset in the document
 
 == Unset a document attribute in the header
 
-Document attributes are unset by adding a bang symbol (`!`) directly in front of or after the attribute's name.
+Document attributes are unset by adding a bang symbol (`!`) directly in front of (preferred) or after the attribute's name.
 Like when setting an attribute in a document header, the attribute entry must be on its own line.
 Don't add a value to the entry.
 
@@ -15,7 +15,7 @@ Don't add a value to the entry.
 :!name: <.>
 :name!: <.>
 ----
-<.> An attribute is unset when a `!` is prefixed to its name.
+<.> An attribute is unset when a `!` is prefixed to its name (preferred).
 <.> An attribute is unset when a `!` is appended to its name.
 
 Let's use an attribute entry to turn off the built-in boolean attribute named `sectids`.
