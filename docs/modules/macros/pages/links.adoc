@@ -18,7 +18,7 @@ An absolute URL consists of a scheme, an authority (i.e., domain name), a path w
 You may recognize an absolute URL as what you type in the location bar of a web browser, such as the one for this page.
 A relative URL is the portion of an absolute URL that starts after either the root path or a subpath (e.g., `guides/getting-started.html`).
 
-Since an absolute URL has a distinct, recognizable syntax, an AsciiDoc processor will detect URLs (unless escaped) and automatically convert them to links wherever the macro substitution step is applied.
+Since an absolute URL has a distinct, recognizable syntax, an AsciiDoc processor will detect URLs (unless escaped) and automatically convert them to links wherever the macros substitution step is applied.
 This also works for bare email addresses.
 You can learn more about this behavior in xref:autolinks.adoc[].
 To make a link to a relative URL, you must be specify it explicitly as the target of a xref:link-macro.adoc[link macro].

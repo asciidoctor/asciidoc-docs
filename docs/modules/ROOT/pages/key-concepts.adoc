@@ -89,7 +89,7 @@ A syntax of macro follows the form of a name, a target which is sometimes option
 There are two variations of a macro: block and inline.
 In a block macro, the name and target are separated by two colons (`::`) and it must reside on a line by itself.
 In an inline macro, the name and target are separated by a single colon (`:`) and it can be alongside text and other inline elements.
-A block macro is always parsed, whereas an inline macro is only parsed where the macro substitution is enabled.
+A block macro is always parsed, whereas an inline macro is only parsed where the macros substitution is enabled.
 
 == Preprocessor directives
 
