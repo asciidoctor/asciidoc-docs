@@ -79,3 +79,12 @@ If you don't want the header of a document to be displayed, set the `noheader` a
 Many static site generators, such as Jekyll and Middleman, rely on front matter added to the top of the document to determine how to convert the content.
 Asciidoctor has a number of attributes available to correctly handle front matter.
 See xref:asciidoctor:html-backend:skip-front-matter.adoc[] to learn more.
+
+
+TIP:  By default, AsciiDoc files are processed as articles. Articles may not have text content above the headline title. You might get an error such as "level 0 sections can only be used when doctype is book." This means you have content above the top headline title. Make sure the very first line in your AsciiDoc file is a headline title, like this:
+
+= My Document Title
+
+Variables should be set after this line.
+For more information on this requirement in AsciiDoc see `You are attempting to use content above the document title. That is not permitted.`
+
