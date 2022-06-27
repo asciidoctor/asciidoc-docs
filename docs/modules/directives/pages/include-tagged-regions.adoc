@@ -95,9 +95,14 @@ Notice that none of the lines with the tag directives are displayed.
 
 The previous section showed how to select tagged regions explicitly, but you can also use wildcards and exclusions.
 These expressions give you the ability to include or exclude tags in bulk.
-When tag filtering is used, lines that contain a tag directive _are always discarded_ (like a line comment).
+For example, here's how to include all lines that are not enclosed in a tag:
 
-TIP: Even if you're not including content by tags, you can specify the double wildcard (`+**+`) to filter out all lines in the include file that contain a tag directive.
+----
+\include::file-with-snippets.adoc[tag=!*]
+----
+
+When tag filtering is used, lines that contain a tag directive _are always discarded_ (like a line comment).
+Even if you're not including content by tags, you can specify the double wildcard (`+**+`) to filter out all lines in the include file that contain a tag directive.
 
 The modifiers you can use for filtering are as follows:
 
