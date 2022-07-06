@@ -22,7 +22,7 @@ include::example$unordered.adoc[tag=divide]
 
 This technique works for seperating any type of list.
 
-== Using an block attribute line
+== Using a block attribute line
 
 Another way to start a new list is to place a block attribute line (even an empty one) above the second list, offset by an empty line.
 
