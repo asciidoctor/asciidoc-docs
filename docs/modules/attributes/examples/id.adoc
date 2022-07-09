@@ -23,7 +23,7 @@ anchor:bookmark-c[]Use a cross reference to link to this location.
 // end::anchor[]
 
 // tag::anchor-wrong[]
-[[anchor-point]]* list item text
+[[anchor-point]]* list item with invalid anchor
 // end::anchor-wrong[]
 
 // tag::anchor-list-item[]
