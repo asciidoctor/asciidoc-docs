@@ -1,19 +1,22 @@
 = Counters
 // document attributes and counters are NOT the same thing, but modifying a document attribute with the same name as the counter modifies the counter at the same time.
 
-Counters are used to store and display ad-hoc sequences of numbers or latin characters.
-They are designed for simple use cases.
-Possible uses include inline itemized lists, paragraph numbers and serial item numbers.
+Counters are used to store and display ad-hoc sequences of numbers or Latin characters.
+
+WARNING: Counters are a poorly defined feature in AsciiDoc and should be avoided if possible.
+If you do use counters, you should only used them for the most rudimentary use cases, such as making a sequence in a list, table column, or prose.
+You should *not* use counters to build IDs (i.e., references) or reference text.
+Using counters across the boundaries of a reference will very likely result in unexpected behavior.
 
 A counter is implemented as a specialized document attribute.
-You declare and display a counter using an augmented attribute reference, in which the attribute name is prefixed with `counter:` (e.g., `+{counter:name}+`).
+You declare and display a counter using an attribute reference, where the attribute name is prefixed with `counter:` (e.g., `+{counter:name}+`).
 Since counters are attributes, counter names follow the same rules as xref:names-and-values.adoc#user-defined[attribute names].
 The most important rule to note is that letters in counter names _must be lowercase_.
 
-The counter value is incremented and displayed every time the `counter:` attribute reference is used.
-The term [.term]*increment* means advance to the next value in the sequence.
+The counter value is incremented and displayed every time the `counter:` attribute reference is resolved.
+The term [.term]*increment* means to advance the attribute value to the next value in the sequence.
 If the counter value is an integer, add 1.
-If the counter value is a character, move to the next letter in the Latin alphabet.
+If the counter value is a character, move to the next letter in the Latin alphabet (e.g., a -> b).
 The default start value of a counter is 1.
 
 To create a sequence starting at 1, use the simple form `+{counter:name}+` as shown here:
@@ -26,6 +29,38 @@ Here's the resulting output:
 ====
 :!seq1:
 The salad calls for {counter:seq1}) apples, {counter:seq1}) oranges and {counter:seq1}) pears.
+====
+
+If you want to use a counter value in a section title, you should define it first using an attribute reference.
+
+----
+:seq1: {counter:seq1}
+== Section {seq1}
+
+The sequence in this section is {seq1}.
+
+:seq1: {counter:seq1}
+== Section {seq1}
+
+The sequence in this section is {seq1}.
+----
+
+Here's the resulting output:
+
+====
+:!seq1:
+
+:seq1: {counter:seq1}
+[discrete]
+== Section {seq1}
+
+The sequence in this section is {seq1}.
+
+:seq1: {counter:seq1}
+[discrete]
+== Section {seq1}
+
+The sequence in this section is {seq1}.
 ====
 
 To increment the counter without displaying it (i.e., to skip an item in the sequence), use the `counter2` prefix instead:
