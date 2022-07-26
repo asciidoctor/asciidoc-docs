@@ -11,8 +11,8 @@ The placement and numbering of footnotes can be customized using a custom conver
 == Footnote macro syntax
 
 You can insert footnotes into your document using the footnote macro.
-The text of the footnote is defined between the square brackets of the footnote macro (`+footnote:[text]`).
-The footnote macro accepts an optional ID using the target of the macro (`+footnote:id[text]`).
+The text of the footnote is defined between the square brackets of the footnote macro (`+footnote:[text]+`).
+The footnote macro accepts an optional ID using the target of the macro (`+footnote:id[text]+`).
 Specifying an ID allows you to refer to that same footnote from multiple locations in the document.
 To make a reference to a previously defined footnote, you specify the ID in the target without specifying text (`+footnote:id[]+`).
 
