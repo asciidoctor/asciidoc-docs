@@ -40,11 +40,11 @@ By default, this text is the title of the reference.
 
 There are three built-in styles you can choose from to customize the generated text of a cross reference, as controlled by the xrefstyle document attribute.
 
- :xrefstyle: full:: Uses the signifier for the reference (e.g., Section) followed by the reference number and emphasized (chapter or appendix) or quoted title (e.g., Section 2.3, “Installation” or Figure 1, “Big Cats”).
+ :xrefstyle: full:: Uses the signifier for the reference (e.g., Section) followed by the reference number and emphasized (chapter or appendix) or quoted title (e.g., Section 2.3, “Installation”).
 
  :xrefstyle: short:: Uses the signifier for the reference (e.g., Section) followed by the reference number (e.g., Section 2.3 or Figure 1).
 
- :xrefstyle: basic:: Uses the title only (Installation or Big Cats), applying emphasis if the reference is a chapter or appendix.
+ :xrefstyle: basic:: Uses the title only (e.g., Installation), applying emphasis if the reference is a chapter or appendix.
 
 The `xrefstyle` attribute can also be specified directly on the xref:xref.adoc[xref macro] to override the xrefstyle value for a single reference (e.g., `+xref:installation[xrefstyle=short]+`).
 
