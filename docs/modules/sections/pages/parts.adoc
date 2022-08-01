@@ -46,19 +46,67 @@ A part can have its own xref:preface.adoc[preface], xref:bibliography.adoc[bibli
 include::example$part-with-special-sections.adoc[]
 ----
 
+Special sections can also be correlated directly with the book, as part siblings.
+Since the book preface in the previous example comes before the first part, you can write it as level 1 section if you prefer.
+
+[,asciidoc]
+----
+[preface]
+== Book Preface
+
+This is the preface for the whole book.
+
+=== Preface Subsection
+
+Chinchillas rule the world.
+----
+
+Read on to find out how to use special sections as part sibings.
+
 == Special sections as part siblings
 
-In a multipart book, parts occupy the top level of the hierarchy.
-If you define a special section at level 1 that follows the parts in a multipart book, it will become a child of the last part.
-If, instead, you want the special section to be a sibling, it has to be part-like, meaning it must be defined as as a level 0 section.
-To be consistent, it's best to do the same for special sections that come before parts, though technically the syntax doesn't require it.
+In a multi-part book, parts occupy the top level in the hierarchy.
+If you were to define a special section at level 1 that follows a part in a multi-part book, it will become a child of that part.
+If you want the special section to be owned by the book instead, as a sibling of parts, it must be defined at the top level too.
 
-The AsciiDoc syntax allows special sections in a multipart book to be defined using a level 0 section title (i.e., `=`).
-When the document is parsed, these sections still end up as level 1 sections.
-Despite this level change, they remain siblings of parts in the hierarchy.
+The AsciiDoc syntax allows special sections in a multi-part book to be defined using a level 0 section title (i.e., `=`).
+When the document is parsed, the level of the special section will automatically be adjusted to a level 1 section in the model.
+Despite this level change, the special section remains as a sibling of parts in the hierarchy.
+The one level of offset (level 0 instead of level 1) is only a hint to the parser to make the special section a sibling of parts.
+
+You can see this syntax used for the appendix in the following example.
+
+[,asciidoc]
+----
+= Multi-Part Book
+:doctype: book
+
+= Part Title
+
+== Chapter Title
+
+[appendix]
+= Appendix Title
+----
+
+For consistency, it's best to also make special sections part-like if they become before the first part.
+However, technically the syntax doesn't require it.
+
+[,asciidoc]
+----
+= Multi-Part Book
+:doctype: book
+
+[preface]
+= Book Preface
+
+= Part Title
+
+== Chapter Title
+----
+
 If the special section supports nested sections, the next level must be level 2 (i.e., `===`), since the special section itself has level 1.
-
-Here's an example of a multi-part book that has a special section before and after the part.
+Here's an example of a multi-part book that has a special section before the part and a special section with subsections after the part.
 
 ----
 include::example$multipart-book-with-special-sections.adoc[]
@@ -66,4 +114,6 @@ include::example$multipart-book-with-special-sections.adoc[]
 
 When you convert this document, notice that the special sections are siblings of the part in the table of contents.
 
-image::multipart-toc-with-special-sections.png[TOC of multipart book with special sections,350]
+image::multipart-toc-with-special-sections.png[TOC of multi-part book with special sections,350]
+
+Notice that the subsections of the special sections are only a single level below the parent section rather than two levels below.
