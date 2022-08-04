@@ -1,6 +1,6 @@
 = ifeval Directive
 
-Content between `ifeval` and `endif` gets included if the expression inside the square brackets evaluates to true.
+Lines enclosed by an `ifeval` directive (i.e., between the `ifeval` and `endif` directives) are included if the expression inside the square brackets of the `ifeval` directive evaluates to true.
 
 .ifeval example
 ----
@@ -30,11 +30,12 @@ conditional content
 \endif::[]
 ----
 
-If you're mixing `ifeval` directives with `ifdef` or `ifndef` directives, you should always terminate the `ifdef` and `ifndef` directives by name (`endif::attribute-name[]`) so the `ifeval` directive does not get terminated prematurely.
+If you're mixing `ifeval` directives with `ifdef` or `ifndef` directives, you should always close multiline `ifdef` and `ifndef` directives by name (`endif::name-of-attribute[]`) so the `ifeval` directive does not end prematurely.
 
 == Anatomy
 
-The expression consists of a left-hand value and a right-hand value with an operator in between.
+The expression of an `ifeval` directive consists of a left-hand value and a right-hand value with an operator in between.
+It's customary to include a single space on either side of the operator.
 
 .ifeval expression examples
 ----
@@ -58,9 +59,9 @@ The expression consists of a left-hand value and a right-hand value with an oper
 
 == Values
 
-Each expression value can reference the name of zero or more AsciiDoc attribute using the attribute reference syntax (for example, `+{backend}+`).
+Each expression value can reference the name of zero or more AsciiDoc attributes using the attribute reference syntax (for example, `+{backend}+`).
 
-Attribute references are resolved (substituted) first.
+Attribute references are resolved (i.e., substituted) first.
 Once attributes references have been resolved, each value is coerced to a recognized type.
 
 When you expect the attribute reference to resolve to a string, that is, a sequence of characters, enclose that side of the expression in quotes.
@@ -71,9 +72,17 @@ For example:
 \ifeval::["{backend}" == "html5"]
 ----
 
-Whereas if you expect the attribute to resolve to a number, you do not need to enclose the expression in quotes.
+If you expect the attribute to resolve to a number, you do not need to enclose the expression in quotes.
 In this case, the values will be compared as numbers.
 The same rule applies to boolean values.
+
+You should not attempt to mix value types in a comparison.
+For example, the following expression is not valid:
+
+.Invalid ifeval expression
+----
+\ifeval::["{sectnumlevels}" > 3]
+----
 
 The following values types are recognized:
 
@@ -83,11 +92,11 @@ boolean:: Literal value of `true` or `false`.
 
 === How value type coercion works
 
-If a value is enclosed in quotes, the characters between the quotes are preserved and coerced to a string.
+If a value is enclosed in quotes, the characters between the quotes is used and always coerced to a string.
 
-If a value is not enclosed in quotes, it is subject to the following type coercion rules:
+If a value is *not* enclosed in quotes, it's subject to the following type coercion rules:
 
-* an empty value becomes nil (aka null).
+* an empty value becomes nil (aka null) (and thus safe for use in a comparison).
 * a value of `true` or `false` becomes a boolean value.
 * a value of only repeating whitespace becomes a single whitespace string.
 * a value containing a period becomes a floating-point number.
@@ -110,4 +119,8 @@ Checks whether the left-hand side is greater than the right-hand side.
 `+>=+`::
 Checks whether the left-hand side is greater than or equal to the right-hand side.
 
-NOTE: The operators follow the same rules as operators in Ruby.
+Both sides should be of the same value type.
+If they are not, the comparison will fail.
+If the comparison fails, the condition will evaluate to false (i.e., the content inside the directive will be skipped).
+
+The operators follow the same rules as operators in Ruby.

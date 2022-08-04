@@ -9,6 +9,7 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 Changed::
 * added subsections to ID attribute page
 * be more clear about how special sections work in a multi-part book
+* clarify that each side of the expression of an `ifeval` directive should have the same type
 
 == Published Q2 2022
 
