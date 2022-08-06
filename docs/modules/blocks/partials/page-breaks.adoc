@@ -1,7 +1,25 @@
 == Page breaks
 
+A line with three less-than characters (i.e., `<<<`), shown in <<ex-page-break>>, is a special macro that serves as a hint to the converter to insert a page break.
+Like other block forms, the line must be offset by a preceding paragraph by at least one blank line.
+
 .Page break syntax
 [#ex-page-break]
 ----
 <<<
 ----
+
+A page break is only relevant for page-oriented / printable output formats such as DocBook, PDF, and HTML in print mode.
+
+If the page break macro falls at the top of an empty page, it will be ignored.
+This behavior can be overridden by setting the `always` option on the macro as shown in <<ex-forced-page-break>>.
+
+.Forced page break
+[#ex-forced-page-break]
+----
+[%always]
+<<<
+----
+
+Some converters support additional options on the page break macro.
+For example, Asciidoctor PDF allows the page layout of the new page to be specified.

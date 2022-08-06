@@ -6,6 +6,9 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
 == Published Q3 2022
 
+Added::
+* add more detail about the page break macro
+
 Changed::
 * added subsections to ID attribute page
 * be more clear about how special sections work in a multi-part book
