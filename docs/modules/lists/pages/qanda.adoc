@@ -1,10 +1,20 @@
 = Question and Answer Lists
-:keywords: Q&A, Q and A
+:keywords: qanda, Q & A, Q and A
+
+A question and answer (qanda) list is a special form of a description list that renders as an ordered list.
+The entries are numbered using arabic numerals starting at 1.
 
 == Question and answer list syntax
 
+Each entry in the description list represents one question and answer combination.
+The term or terms are used as the question and the description is used as the answer.
+If an entry has multiple questions, each question is rendered on a new line.
+
 ----
 include::example$description.adoc[tag=qa]
 ----
 
+.Rendered qanda list
+====
 include::example$description.adoc[tag=qa]
+====
