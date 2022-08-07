@@ -89,5 +89,7 @@ Cloud Providers::
 What is the answer?::
 This is the answer.
 
-Have you seen my duck?:: No.
+Are cameras allowed?::
+Are backpacks allowed?::
+No.
 // end::qa[]
