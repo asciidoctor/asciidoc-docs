@@ -1,6 +1,7 @@
 == Thematic breaks
 
-A thematic break is created by entering three single quotation marks (`++'''++`) on a line.
+A line with three single quotation marks (i.e., `pass:[''']`), shown in <<ex-rule>>, is a special macro that inserts a thematic break (aka horizontal rule).
+Like other block forms, the line must be offset by a preceding paragraph by at least one empty line.
 
 .Thematic break syntax
 [#ex-rule]
@@ -10,15 +11,17 @@ A thematic break is created by entering three single quotation marks (`++'''++`)
 
 The result of <<ex-rule>> is displayed below.
 
+====
 '''
+====
 
 === Markdown-style thematic breaks
 
 Asciidoctor recognizes Markdown thematic breakes.
-The motivation here is to ease migration of Markdown documents to AsciiDoc documents.
+The motivation for this support is to ease migration of Markdown documents to AsciiDoc documents.
 
 To avoid conflicts with AsciiDoc's block delimiter syntax, only 3 repeating characters (`-` or `+*+`) are recognized.
-As with Markdown, whitespace between the characters is optional.
+As with Markdown, spaces between the characters is optional.
 
 .Markdown-style thematic break syntax
 ----
