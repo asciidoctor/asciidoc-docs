@@ -1,7 +1,7 @@
 == Page breaks
 
 A line with three less-than characters (i.e., `<<<`), shown in <<ex-page-break>>, is a special macro that serves as a hint to the converter to insert a page break.
-Like other block forms, the line must be offset by a preceding paragraph by at least one blank line.
+Like other block forms, the line must be offset by a preceding paragraph by at least one empty line.
 
 .Page break syntax
 [#ex-page-break]
