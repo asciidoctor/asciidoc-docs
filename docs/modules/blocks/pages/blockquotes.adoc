@@ -73,6 +73,7 @@ include::example$quote.adoc[tag=abbr]
 == Markdown-style blockquotes
 
 Asciidoctor supports Markdown-style blockquotes.
+This syntax was adopted both to ease the transition from Markdown and because it's the most common method of quoting in email messages.
 
 .Markdown-style blockquote syntax
 [source#ex-md]
