@@ -85,7 +85,7 @@ The result of <<ex-md>> is displayed below.
 
 include::example$quote.adoc[tag=md]
 
-Like Markdown, Asciidoctor supports block content inside the blockquote, including nested blockquotes.
+Like Markdown, Asciidoctor supports some block content inside the blockquote, including paragraphs, lists, and nested blockquotes.
 
 .Markdown-style blockquote containing block content
 [source#ex-md-block]
@@ -96,3 +96,12 @@ include::example$quote.adoc[tag=md-alt]
 Here's how the conversation from <<ex-md-block>> is rendered.
 
 include::example$quote.adoc[tag=md-alt]
+
+Be aware that not all AsciiDoc block elements are supported inside a Markdown-style blockquote.
+In particular, a description list is not permitted.
+The parser looks for the Markdown-style blockquote only after looking for a description list, meaning the description list takes precedence.
+Since the quote marker is a valid prefix for a description list term, the Markdown-style blockquote is not recognized in this case.
+If you need to put a description list inside a blockquote, you should use the AsciiDoc syntax for a blockquote instead.
+
+The Markdown-style blockquote should only be used in simple cases and when migrating from Markdown.
+The AsciiDoc syntax should always be preferred, if possible.
