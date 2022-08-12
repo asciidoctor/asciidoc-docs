@@ -1,5 +1,5 @@
 = Description Lists
-:keywords: labeled list, definition list
+:keywords: dlist, definition list, labeled list
 
 A description list (often abbreviated as dlist in AsciiDoc) is an association list that consists of one or more terms (or sets of terms) that each have a description.
 This list type is useful when you have a list of terms that you want to emphasize and describe with text or other supporting content.
@@ -15,6 +15,8 @@ Each item in a description list consists of:
 * one or more terms, each followed by a term delimiter (typically a double colon, `::`, unless the list is nested)
 * one space or newline character
 * the description in the form of text, attached blocks, or both
+
+If a term has an anchor, the anchor must be defined at the start of the same line as the term.
 
 The first term defines which term delimiter is used for the description list.
 The terms for the remaining entries at that level must use the same delimiter.
