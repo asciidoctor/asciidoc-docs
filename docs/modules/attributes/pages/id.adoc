@@ -187,7 +187,7 @@ For example, you would not put an anchor in front of a list item:
 include::example$id.adoc[tag=anchor-wrong]
 ----
 
-Instead, you would put it at the very start of the text of the list item:
+Instead, you would put it at the start of the text of the list item:
 
 .Define an inline anchor on a list item
 [source]
@@ -202,6 +202,10 @@ For a description list, the anchor must be placed at the start of the term:
 ----
 include::example$id.adoc[tag=anchor-dlist-item]
 ----
+
+You can add multiple anchors to a list item or description list term.
+However, only the first anchor is registered for use as an xref within the document.
+The remaining anchors are auxiliary and are used for making deep links (i.e., accessible from a URL fragment).
 
 === On an inline image
 
