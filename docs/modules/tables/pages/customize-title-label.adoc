@@ -136,7 +136,7 @@ If you want the caption of the table to only consist of the caption label, use t
 
 [source]
 ----
-[caption=,title='{table-caption} {counter:table-number}']
+[caption=,title="{table-caption} {counter:table-number}"]
 include::example$table.adoc[tag=b-col-h]
 ----
 
@@ -145,6 +145,6 @@ Alternately, you can write is as follows:
 [source]
 ----
 .{empty}
-[caption='{table-caption} {counter:table-number}']
+[caption="{table-caption} {counter:table-number}"]
 include::example$table.adoc[tag=b-col-h]
 ----
