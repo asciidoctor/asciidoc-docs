@@ -8,7 +8,7 @@ Each document type provides a slight variation on the permitted structure of an 
 The default doctype is `article`, which provides the foundation structure on which other doctypes build.
 The `book` doctype permits multiple level-0 sections that act as part sections.
 The `manpage` doctype provides an extended header for defining standard metadata of a manpage, such as the volume number, man, and purpose.
-The `inline` doctype is ended for embedded scenarios.
+The `inline` doctype is intended for embedded scenarios.
 
 == Document types
 
