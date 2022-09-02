@@ -47,7 +47,7 @@ Currently, an AsciiDoc processor can resolve a cross reference to the following 
 * Bibliography anchor in a bibliography list
 
 Note that the processor cannot resolve the ID assigned to a span of formatted text.
-If the cross reference cannot be resolved, an verbose mode is enabled, the AsciiDoc processor issues a warning about a possible invalid reference.
+If the cross reference cannot be resolved, and verbose mode is enabled, the AsciiDoc processor issues a warning about a possible invalid reference.
 In this case, the output document will reference the target blindly, so it's possible it will still function.
 
 You create a cross reference by enclosing the ID of the target block or section (or the path of another document with an optional anchor) in double angled brackets.
