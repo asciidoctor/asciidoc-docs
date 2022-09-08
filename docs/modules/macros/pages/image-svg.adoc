@@ -6,6 +6,20 @@ Both block and inline image macros have built-in support for scalable vector gra
 But there's more than one way to include an SVG into a web page, and the strategy used can affect how the SVG behaves (or misbehaves).
 Therefore, these macros provide additional options to control how the SVG is included (i.e., referenced).
 
+== SVG dimensions
+
+SVGs that do not specify a width and height on the root `<svg>` element work best in a document.
+Only the viewBox is required.
+The viewBox establishes the coordinate space on to which x and y values inside the SVG data are placed.
+But the SVG data itself is infinitely scalable.
+Thus, by assigning an explicit width and height, you may end up limiting how the SVG can be sized or positioned in the document.
+It's better to specify the width on the image macro instead, or using CSS.
+
+You particularly want to avoid using a percentage width, such as `width="100%"`.
+According to the SVG spec, this means using all available space, but without altering the aspect ratio.
+As a result, you can get a large gap above and below the SVG in page-oriented media, such as PDF.
+If you do specify a width and height, at least make sure the values are fixed and that they respect the aspect ratio of the data.
+
 == Options for SVG images
 
 When the image target is an SVG, the `options` attribute (often abbreviated as `opts`) on the macro accepts one of the following values to control how the SVG is referenced:
