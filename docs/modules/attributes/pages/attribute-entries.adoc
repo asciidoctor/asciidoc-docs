@@ -82,7 +82,7 @@ For the API, attributes are declared using the `:attributes` option (which suppo
 For the CLI, the attribute is declared using the `-a` option.
 
 When an attribute is assigned a value outside of the document, the value is stored as is, meaning substitutions are not applied to it.
-That also means that the xref:subs.adoc[special characters and quote substitutions] are not applied to the value of that attribute when it is referenced in the document.
+That also means that the xref:subs:index.adoc[special characters and quote substitutions] are not applied to the value of that attribute when it is referenced in the document.
 However, subsequent substitutions, such as the macro substitution, do get applied.
 This behavior is due to that fact that the attributes substitution is applied after the special characters and quote substitutions.
 In order to force these substitutions to be applied to the value of the attribute, you must alter the substitution order at the point of reference.
