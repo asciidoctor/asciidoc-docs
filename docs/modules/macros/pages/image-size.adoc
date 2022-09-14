@@ -1,7 +1,6 @@
 = Adjust Image Sizes
 :url-w3-dimensions: https://www.w3.org/TR/2014/REC-html5-20141028/embedded-content-0.html#dimension-attributes
 :url-discuss-measure: https://discuss.asciidoctor.org/Unit-of-measure-for-image-dimensions-td3040.html#a3222
-:url-pdf-scaling: https://github.com/asciidoctor/asciidoctor-pdf#image-scaling
 
 Since images often need to be sized according to the medium, there are several ways to specify an image size.
 
@@ -67,7 +66,7 @@ iw:: Percentage of the intrinsic width of the image
 
 If `pdfwidth` is not provided, Asciidoctor PDF also accepts `scaledwidth`, or `width` (no units, assumed to be pixels), in that order.
 
-See {url-pdf-scaling}[image scaling in Asciidoctor PDF^] for more details.
+See xref:pdf-converter::image-scaling.adoc[image scaling in Asciidoctor PDF] for more details.
 
 == scaledwidth attribute
 
