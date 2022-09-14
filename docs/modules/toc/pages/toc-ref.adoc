@@ -21,7 +21,7 @@ Defaults to `auto` if value is unspecified.
 |`auto`
 |`:toc:`
 |Not set by default.
-The table of contents is placed after the title page (See https://github.com/asciidoctor/asciidoctor-pdf/issues/233[issue #233^] for developments).
+When the title page is enabled in PDF output, the table of contents is placed directly after the title page.
 |pdf
 
 |`auto`
