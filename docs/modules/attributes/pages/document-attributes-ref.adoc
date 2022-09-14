@@ -992,6 +992,34 @@ Mutually exclusive with the `notitle` attribute.
 |{y}
 |Enables xref:stem:index.adoc[mathematics processing and interpreter].
 
+|table-frame
+|(`all`) +
+`ends` +
+`sides` +
+`none`
+|{n}
+|{n}
+|Controls default value for `frame` attribute on tables.
+
+|table-grid
+|(`all`) +
+`cols` +
+`rows` +
+`none`
+|{n}
+|{n}
+|Controls default value for `grid` attribute on tables.
+
+|table-stripes
+|(`none`) +
+`even` +
+`odd` +
+`hover` +
+`all`
+|{n}
+|{n}
+|Controls default value for `stripes` attribute on tables.
+
 |tabsize
 |_integer_ (≥ 0)
 |{n}
