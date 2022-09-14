@@ -1,22 +1,22 @@
 = Table Striping
 
-In the HTML output, table striping is done using CSS and thus depends on the stylesheet to supply the necessary styles.
-The default stylesheet for Asciidoctor includes striping styles.
+You can configure rows of a table to be striped (as in zebra stripes).
+Striping is done by adding a background color to the specified rows.
 
-[caption="Asciidoctor &#8805; 2.0"]
-NOTE: Starting with Asciidoctor 2.0, the rows in the body of a table are not shaded by default.
+NOTE: In the HTML output, table striping is done using CSS and thus depends on the stylesheet to supply the necessary styles.
+The default stylesheet for Asciidoctor includes the necessary styles for table striping.
 
 == Striping attributes
 
-You can configure the rows to be striped (as in zebra stripes) using an attribute.
-Use the `stripes` table attribute to configure the stripes for a single table.
-Use the `table-stripes` document attribute to configure stripes for all tables.
+Which rows are striped is controlled using the `stripes` attribute on the table.
+The stripes attribute does not have a default value, which means rows are not striped by default.
+This default can be changed by setting the `table-stripes` document attribute.
+You can override the default value by setting the stripes attribute on the table.
 
-Striping is done by adding a background color to the specified rows.
-The `stripes` attribute accepts the following values:
+The `stripes` attribute on a table and the `table-stripes` document attribute accept the following values:
 
-* `none` - no rows are shaded (default in Asciidoctor &#8805; 2)
-* `even` - even rows are shaded (default in Asciidoctor < 2)
+* `none` - no rows are shaded (default)
+* `even` - even rows are shaded
 * `odd` - odd rows are shaded
 * `all` - all rows are shaded
 * `hover` - the row under the mouse cursor is shaded (HTML only)

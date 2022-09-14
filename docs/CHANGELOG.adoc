@@ -15,6 +15,8 @@ Changed::
 * added subsections to ID attribute page
 * be more clear about how special sections work in a multi-part book
 * clarify that each side of the expression of an `ifeval` directive should have the same type
+* clarify that the default value for `frame` and `grid` attributes on tables can be controlled using `table-frame` and `table-grid` document attributes, respectively
+* clarify that the frame and grid attributes both accept the value `all`
 
 == Published Q2 2022
 
