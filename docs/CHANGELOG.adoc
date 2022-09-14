@@ -11,6 +11,7 @@ Added::
 * add more detail about the thematic break macro
 * add more detail about qanda lists
 * add entries for `table-frame`, `table-grid`, and `table-stripes` to document attribute reference table
+* document `iw` units for `pdfwidth` attribute on image
 
 Changed::
 * added subsections to ID attribute page

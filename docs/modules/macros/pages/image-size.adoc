@@ -63,6 +63,7 @@ mm:: Millimeters
 in:: Inches
 %:: Percentage of the content width (area between margins)
 vw:: Percentage of the page width (edge to edge)
+iw:: Percentage of the intrinsic width of the image
 
 If `pdfwidth` is not provided, Asciidoctor PDF also accepts `scaledwidth`, or `width` (no units, assumed to be pixels), in that order.
 
