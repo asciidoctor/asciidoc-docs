@@ -8,7 +8,7 @@ You can combine these two attributes to achieve a variety of border styles for y
 == Frame
 
 The border around a table is controlled using the `frame` attribute on the table.
-The frame attribute defaults to the value `all`, which draws a border on each side of the table.
+The frame attribute defaults to the value `all` (implied value), which draws a border on each side of the table.
 This default can be changed by setting the `table-frame` document attribute.
 You can override the default value by setting the frame attribute on the table to the value `all, `ends`, `sides` or `none`.
 
@@ -54,7 +54,7 @@ include::example$row.adoc[tag=base-h]
 == Grid
 
 The borders between the cells in a table are controlled using the `grid` attribute on the table.
-The grid attribute defaults to the value `all`, which draws a border between all cells.
+The grid attribute defaults to the value `all` (implied value), which draws a border between all cells.
 This default can be changed by setting the `table-grid` document attribute.
 You can override the default value by setting the grid attribute on the table to the value `all`, `rows`, `cols` or `none`.
 

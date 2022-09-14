@@ -10,6 +10,7 @@ Added::
 * add more detail about the page break macro
 * add more detail about the thematic break macro
 * add more detail about qanda lists
+* add entries for `table-frame`, `table-grid`, and `table-stripes` to document attribute reference table
 
 Changed::
 * added subsections to ID attribute page

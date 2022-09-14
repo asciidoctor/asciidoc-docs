@@ -1,7 +1,7 @@
 = Table Striping
 
-You can configure rows of a table to be striped (as in zebra stripes).
-Striping is done by adding a background color to the specified rows.
+You can add zebra-striping to rows of a table.
+When this feature is enabled, the specified rows are shaded using a background color to create a zebra striping effect.
 
 NOTE: In the HTML output, table striping is done using CSS and thus depends on the stylesheet to supply the necessary styles.
 The default stylesheet for Asciidoctor includes the necessary styles for table striping.
@@ -9,7 +9,7 @@ The default stylesheet for Asciidoctor includes the necessary styles for table s
 == Striping attributes
 
 Which rows are striped is controlled using the `stripes` attribute on the table.
-The stripes attribute does not have a default value, which means rows are not striped by default.
+The stripes attribute defaults to the value `none` (implied value), which means rows are not striped by default.
 This default can be changed by setting the `table-stripes` document attribute.
 You can override the default value by setting the stripes attribute on the table.
 
