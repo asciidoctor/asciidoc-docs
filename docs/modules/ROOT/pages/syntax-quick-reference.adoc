@@ -751,9 +751,11 @@ include::blocks:example$admonition.adoc[tag=b-bl]
 
 == More delimited blocks
 
-Any block can have a title, positioned above the block.
-A block title is a line of text that starts with a dot.
-The dot cannot be followed by a space.
+Any block can have a title.
+A block title is defined using a line of text above the block that starts with a dot.
+That dot cannot be followed by a space.
+For block images, the title is displayed below the block.
+For all other blocks, the title is typically displayed above it.
 
 .Sidebar block
 [#ex-sidebar]
