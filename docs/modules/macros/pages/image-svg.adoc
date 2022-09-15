@@ -8,12 +8,15 @@ Therefore, these macros provide additional options to control how the SVG is inc
 
 == SVG dimensions
 
-SVGs that do not specify a width and height on the root `<svg>` element work best in a document.
-Only the viewBox is required.
+The viewBox attribute on the root `<svg>` element is required.
 The viewBox establishes the coordinate space on to which x and y values inside the SVG data are placed.
-But the SVG data itself is infinitely scalable.
-Thus, by assigning an explicit width and height, you may end up limiting how the SVG can be sized or positioned in the document.
-It's better to specify the width on the image macro instead, or using CSS.
+Without this information, converters cannot properly interpret the SVG data and translate it to the canvas.
+
+We strongly recommend not using the width and height attributes on the root `<svg>` element.
+You will find that SVGs that only specify a viewBox work best in a document.
+That's because the SVG data itself is infinitely scalable.
+By assigning an explicit width and height, you may end up limiting how the SVG can be sized or positioned in the document.
+It's better to specify the width (or similar, such as pdfwidth) on the image macro instead, or using CSS.
 
 You particularly want to avoid using a percentage width, such as `width="100%"`.
 According to the SVG spec, this means using all available space, but without altering the aspect ratio.
