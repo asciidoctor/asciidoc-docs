@@ -151,7 +151,7 @@ Block content
 The block title will be displayed with a caption label and number, as shown here:
 
 :example-caption: Example
-:prev-example-number: {example-number}
+ifdef::example-number[:prev-example-number: {example-number}]
 :example-number: 0
 
 .Block that supports captioned title
@@ -160,7 +160,7 @@ Block content
 ====
 
 :!example-caption:
-:example-number: {prev-example-number}
+ifdef::prev-example-number[:example-number: {prev-example-number}]
 :!prev-example-number:
 
 If you unset the `example-caption` attribute, the caption will not be prepended to the title.
