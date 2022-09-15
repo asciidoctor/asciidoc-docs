@@ -98,3 +98,104 @@ If you don't plant it in a container, it will take over your garden.
 
 You may notice that unlike the titles in the previous rendered listing and source block examples, the sidebar's title is centered and displayed inside the sidebar's background.
 How the title of a block is displayed depends on the converter and stylesheet you're applying to your AsciiDoc documents.
+
+== Captioned titles
+
+Several block contexts support captioned titles.
+A [.term]*captioned title* is a title that's prefixed with a caption label and a number followed by a dot (e.g., `Table 1. Properties`).
+
+The captioned title is only used if the corresponding caption attribute is set.
+Otherwise, the original title is displayed.
+
+The following table lists the blocks that support captioned titles and the attributes that the converter uses to generate and control them.
+
+.Blocks that support captioned titles
+[cols=1;m;m]
+|===
+|Block context | Caption attribute | Counter attribute
+
+|appendix
+|appendix-caption
+|appendix-number
+
+|example
+|exampe-caption
+|example-number
+
+|image
+|figure-caption
+|figure-number
+
+|listing, source
+|listing-caption
+|listing-number
+
+|table
+|table-caption
+|table-number
+|===
+
+All caption attributes are set by default except for the attribute for listing and source blocks (`listing-caption`).
+The number is sequential, computed automatically, and stored in a corresponding counter attribute.
+
+Let's assume you've added a title to an example block as follows:
+
+[,asciidoc]
+----
+.Block that supports captioned title
+====
+Block content
+====
+----
+
+The block title will be displayed with a caption label and number, as shown here:
+
+:example-caption: Example
+:prev-example-number: {example-number}
+:example-number: 0
+
+.Block that supports captioned title
+====
+Block content
+====
+
+:!example-caption:
+:example-number: {prev-example-number}
+:!prev-example-number:
+
+If you unset the `example-caption` attribute, the caption will not be prepended to the title.
+
+.Block that supports captioned title
+====
+Block content
+====
+
+The counter attribute (e.g., `example-number`) can be used to influence the start number for the first block with that context or the next number selected in the sequence for subsequent occurrences.
+However, this practice should be used judiciously.
+
+The caption can be overridden using the `caption` attribute on the block.
+The value of the caption attribute replaces the entire caption, including the space that precedes the title.
+
+Here's how to define a custom caption on a block:
+
+[,asciidoc]
+----
+.Block Title
+[caption="Example {counter:my-example-number:A}: "]
+====
+Block content
+====
+----
+
+Here's how the block will be displayed with the custom caption:
+
+.Block Title
+[caption="Example {counter:my-example-number:A}: "]
+====
+Block content
+====
+
+Notice we've used a counter attribute in the value of the caption attribute to create a custom number sequence.
+
+If you refer to a block with a custom caption using an xref, you may not get the result that you expect.
+Therefore, it's always best to define custom xref:attributes:id.adoc#customize-automatic-xreftext[xreftext] when you define a custom caption.

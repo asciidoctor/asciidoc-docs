@@ -12,6 +12,7 @@ Added::
 * add more detail about qanda lists
 * add entries for `table-frame`, `table-grid`, and `table-stripes` to document attribute reference table
 * document `iw` units for `pdfwidth` attribute on image
+* document block captions (captioned titles) and the attributes that are used to generate and control them
 
 Changed::
 * added subsections to ID attribute page
