@@ -22,6 +22,7 @@ Changed::
 * clarify that the default value for `frame` and `grid` attributes on tables can be controlled using `table-frame` and `table-grid` document attributes, respectively
 * clarify that the frame and grid attributes both accept the value `all`
 * clarify in the quick reference where the block title is displayed
+* clarify that formatted text can span multiple, contiguous lines
 
 == Published Q2 2022
 
