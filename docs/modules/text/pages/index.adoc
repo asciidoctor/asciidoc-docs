@@ -13,6 +13,7 @@ A [#def-format-mark.term]*formatting mark* is a symbolic character, such as `+*+
 Formatting marks come in pairs.
 
 A [#def-format-pair.term]*formatting pair* consists of an identical opening mark and closing mark that encloses the text you want to style.
+The formatted text (i.e., the text enclosed by a formatting pair) can span multiple, contiguous lines.
 
 The [#def-open-mark.term]*opening mark* specifies where you want the style to start.
 The [#def-close-mark.term]*closing mark* specifies where you want the style to end.
