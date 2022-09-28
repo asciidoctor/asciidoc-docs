@@ -12,16 +12,19 @@ Prose excerpts, quotes and verses share the same syntax structure, including:
 // tag::basic[]
 For content that doesn't require the preservation of line breaks, set the `quote` attribute in the first position of the attribute list.
 Next, set the attribution and relevant citation information.
-However, these positional attributes are optional.
+These positional attributes are all optional.
 
 .Anatomy of a basic quote
 [#ex-basic]
 ----
-[quote, attribution, citation title and information]
+[quote,attribution,citation title and information]
 Quote or excerpt text
 ----
 
-If the quote is a single line or paragraph, you can place the attribute list directly on top of the text.
+You can include an optional space after the comma that separates each positional attribute.
+If an attribute value includes a comma, enclose the value in double or single quotes.
+
+If the quote is a single line or paragraph (i.e., a styled paragraph), you can place the attribute list directly on top of the text.
 
 .Quote paragraph syntax
 [#ex-style]
