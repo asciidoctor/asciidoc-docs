@@ -95,7 +95,7 @@ You add `quote` (the block style) in front of the `#` (the ID) in the first attr
 
 [source]
 ----
-[quote.movie#roads, Dr. Emmett Brown]
+[quote.movie#roads,Dr. Emmett Brown]
 ____
 Roads? Where we're going, we don't need roads.
 ____
