@@ -40,7 +40,7 @@ Otherwise, the existing substitutions are replaced.
 The value also specifies the order in which the substitutions are applied.
 
 NOTE: The `subs` element attribute does not inherit to nested blocks.
-It can only be applied to a leaf block which is any block that cannot have child blocks (e.g., a paragraph or a listing block).
+It can only be applied to a leaf block, which is any block that cannot have child blocks (e.g., a paragraph or a listing block).
 
 == Set the subs attribute on a block
 
