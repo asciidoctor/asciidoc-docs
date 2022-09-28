@@ -1,11 +1,11 @@
 // tag::para[]
-[verse, Carl Sandburg, two lines from the poem Fog]
+[verse,Carl Sandburg, two lines from the poem Fog]
 The fog comes
 on little cat feet.
 // end::para[]
 
 // tag::bl[]
-[verse, Carl Sandburg, Fog]
+[verse,Carl Sandburg,Fog]
 ____
 The fog comes
 on little cat feet.

@@ -56,7 +56,7 @@
 // end::max[]
 
 // tag::num[]
-["lowerroman", start=5]
+[lowerroman,start=5]
 . Five
 . Six
 [loweralpha]

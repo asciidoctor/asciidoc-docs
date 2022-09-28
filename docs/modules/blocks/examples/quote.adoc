@@ -1,5 +1,5 @@
 // tag::bl[]
-[quote, Abraham Lincoln, Address delivered at the dedication of the Cemetery at Gettysburg]
+[quote,Abraham Lincoln,Address delivered at the dedication of the Cemetery at Gettysburg]
 ____
 Four score and seven years ago our fathers brought forth
 on this continent a new nation...
@@ -7,7 +7,7 @@ ____
 // end::bl[]
 
 // tag::bl-alt[]
-[quote, Thomas Jefferson, Papers of Thomas Jefferson: Volume 11]
+[quote,Thomas Jefferson,Papers of Thomas Jefferson: Volume 11]
 ____
 I hold it that a little rebellion now and then is a good thing,
 and as necessary in the political world as storms in the physical.
@@ -15,24 +15,24 @@ ____
 // end::bl-alt[]
 
 // tag::para[]
-[quote, Albert Einstein]
+[quote,Albert Einstein]
 A person who never made a mistake never tried anything new.
 // end::para[]
 
 // tag::para2-c[]
 .After landing the cloaked Klingon bird of prey in Golden Gate park: <.>
-[quote, Captain James T. Kirk, Star Trek IV: The Voyage Home] <.> <.> <.>
+[quote,Captain James T. Kirk,Star Trek IV: The Voyage Home] <.> <.> <.>
 Everybody remember where we parked. <.>
 // end::para2-c[]
 
 // tag::para2[]
 .After landing the cloaked Klingon bird of prey in Golden Gate park:
-[quote, Captain James T. Kirk, Star Trek IV: The Voyage Home]
+[quote,Captain James T. Kirk,Star Trek IV: The Voyage Home]
 Everybody remember where we parked.
 // end::para2[]
 
 // tag::comp[]
-[quote, Monty Python and the Holy Grail]
+[quote,Monty Python and the Holy Grail]
 ____
 Dennis: Come and see the violence inherent in the system. Help! Help! I'm being repressed!
 
@@ -77,7 +77,7 @@ and as necessary in the political world as storms in the physical."
 // end::md-alt[]
 
 // tag::link-text[]
-[quote, Charles Lutwidge Dodgson, 'Mathematician and author, also known as https://en.wikipedia.org/wiki/Lewis_Carroll[Lewis Carroll]']
+[quote,Charles Lutwidge Dodgson,'Mathematician and author, also known as https://en.wikipedia.org/wiki/Lewis_Carroll[Lewis Carroll]']
 ____
 If you don't know where you are going, any road will get you there.
 ____
