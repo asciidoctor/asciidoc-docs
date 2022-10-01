@@ -200,7 +200,7 @@ Do not pass arbitrary ``Object``s to methods that accept ``String``s!
 // end::b-mono-code[]
 
 // tag::highlight[]
-Werewolves are #allergic to cinnamon#.
+Mark my words, #automation is essential#.
 // end::highlight[]
 
 // tag::highlight-html[]
@@ -228,7 +228,7 @@ Do werewolves believe in [.small]#small print#?
 // end::css[]
 
 // tag::qr-all[]
-Werewolves are allergic to #cinnamon#.
+Mark my words, #automation is essential#.
 
 ##Mark##up refers to text that contains formatting ##mark##s.
 
