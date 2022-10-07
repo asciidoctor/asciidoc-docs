@@ -4,6 +4,11 @@ This document summarizes the changes introduced to the AsciiDoc Language Documen
 For a detailed view of what's changed, refer to the repository's
 https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
+== Published Q4 2022
+
+Fixed::
+* fix image block example so source matches output
+
 == Published Q3 2022
 
 Added::

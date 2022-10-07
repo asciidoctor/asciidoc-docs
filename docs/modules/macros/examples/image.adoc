@@ -23,23 +23,20 @@ image::macros:sunset.jpg[Sunset]
 // end::qr-alt[]
 
 // tag::attr-co[]
-[#img-sunset] <.>
 .A mountain sunset <.>
-[link=https://www.flickr.com/photos/javh/5448336655] <.>
+[#img-sunset,link=https://www.flickr.com/photos/javh/5448336655] <.>
 image::sunset.jpg[Sunset,200,100] <.> <.>
 // end::attr-co[]
 
 // tag::attr[]
 .A mountain sunset
-[#img-sunset]
-[caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
+[#img-sunset,link=https://www.flickr.com/photos/javh/5448336655]
 image::sunset.jpg[Sunset,200,100]
 // end::attr[]
 
 // tag::qr-attr[]
 .A mountain sunset
-[#img-sunset]
-[caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
+[#img-sunset,caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
 image::macros:sunset.jpg[Sunset,200,100]
 // end::qr-attr[]
 

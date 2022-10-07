@@ -57,9 +57,9 @@ You can also give the image an ID, title, set its dimensions and make it a link.
 ----
 include::example$image.adoc[tag=attr-co]
 ----
-<.> Assigns an ID to the block.
 <.> Defines the title of the block image, which gets displayed underneath the image when rendered.
-<.> `link` makes the image a link (this can also be defined inside the attribute list of the block macro)
+<.> Assigns an ID to the block and makes the image a link.
+The `link` attribute can also be defined inside the attribute list of the block macro.
 <.> The first positional attribute, _Sunset_, is the image's alt text.
 <.> The second and third positional attributes define the width and height, respectively.
 
