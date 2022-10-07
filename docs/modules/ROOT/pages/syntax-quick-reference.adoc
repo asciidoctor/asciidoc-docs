@@ -444,7 +444,7 @@ include::macros:example$image.adoc[tag=base]
 
 include::macros:example$image.adoc[tag=alt]
 
-include::macros:example$image.adoc[tag=attr]
+include::macros:example$image.adoc[tag=qr-attr]
 
 include::macros:example$image.adoc[tag=ab-url]
 ----
