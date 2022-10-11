@@ -16,7 +16,7 @@ The AsciiDoc language provides five admonition types represented by the followin
 * `WARNING`
 
 The label is specified either as the block style or as a special paragraph prefix.
-The label becomes visible to the reader unless icons are enable, in which case the icon is shown in its place.
+The label becomes visible to the reader unless icons are enabled, in which case the icon is shown in its place.
 
 .Caution vs. Warning
 [#caution-vs-warning]
