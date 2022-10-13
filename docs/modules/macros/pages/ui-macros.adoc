@@ -21,7 +21,9 @@ include::example$ui.adoc[tag=button]
 
 The result of <<ex-btn>> is displayed below.
 
+====
 include::example$ui.adoc[tag=button]
+====
 
 == Menu macro syntax
 
@@ -36,4 +38,17 @@ include::example$ui.adoc[tag=menu]
 
 The instructions in <<ex-menu>> appear below.
 
+====
 include::example$ui.adoc[tag=menu]
+====
+
+If the menu has more than one item, it can be expressed using a shorthand.
+In the shorthand syntax, each item is separated by a greater than sign (`>`) and the whole expression must be enclosed in double quotes (`"`).
+
+.Using the short menu macro syntax
+[#ex-menu-short]
+----
+include::example$ui.adoc[tag=menu-short]
+----
+
+The shorthand syntax can be escaped by preceding the opening double quote with a backslash character.
