@@ -6,6 +6,9 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 
 == Published Q4 2022
 
+Added::
+* Restore the documentation for the menu macro shorthand syntax
+
 Fixed::
 * fix image block example so source matches output
 
