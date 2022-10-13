@@ -43,7 +43,12 @@ include::example$ui.adoc[tag=menu]
 ====
 
 If the menu has more than one item, it can be expressed using a shorthand.
-In the shorthand syntax, each item is separated by a greater than sign (`>`) and the whole expression must be enclosed in double quotes (`"`).
+In the shorthand syntax:
+
+* each item is separated by a greater than sign (`>`) with spaces on either side
+* the whole expression must be enclosed in double quotes (`"`)
+
+The text of the item itself may contain spaces.
 
 .Using the short menu macro syntax
 [#ex-menu-short]
