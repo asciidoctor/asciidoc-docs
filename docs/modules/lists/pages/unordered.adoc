@@ -1,13 +1,14 @@
 = Unordered Lists
 :keywords: bulleted list
 
-You can make unordered lists in AsciiDoc by starting the lines with a designated marker.
-An unordered list is a list with items that are prefixed with symbol, such as a bullet.
+You can make unordered lists in AsciiDoc by starting lines with a designated marker.
+An unordered list is a list with items prefixed with symbol, such as a disc (aka bullet).
 
-AsciiDoc builds on the well-established convention of using an asterisk or hyphen to identify a list item.
+AsciiDoc builds on the well-established convention of using either an asterisk or hyphen to identify a list item.
 Adjacent list items are joined into a single list.
-Unordered lists can be nested by varying the marker and list items may contain attached blocks.
-They can also be combined with other types of lists.
+Unordered lists can be nested by varying the marker character or length (asterisk only).
+List items may contain attached blocks.
+They can also be interleaved with other types of lists.
 
 == Basic unordered list
 
@@ -18,7 +19,6 @@ include::example$unordered.adoc[tag=base]
 ----
 
 A list item's first line of text must be offset from the marker (`+*+`) by at least one space.
-If you prefer, you can indent list items.
 Empty lines are required before and after a list.
 Additionally, empty lines are permitted, but not required, between list items.
 
@@ -78,6 +78,9 @@ include::example$unordered.adoc[tag=nest]
 include::example$unordered.adoc[tag=nest]
 ====
 
+If you prefer, you can indent the marker an arbitrary number of spaces from the left margin.
+The indentation is not significant and may aid in visualizing the nesting level.
+
 You can nest unordered lists to any depth.
 Keep in mind, however, that some interfaces will begin flattening lists after a certain depth.
 For instance, GitHub starts flattening list after 10 levels of nesting.
@@ -86,9 +89,13 @@ For instance, GitHub starts flattening list after 10 levels of nesting.
 include::example$unordered.adoc[tag=max]
 ----
 
+[#ex-deep]
+.Unordered lists can be nested to any depth
 ====
 include::example$unordered.adoc[tag=max]
 ====
+
+=== Determining list depth
 
 While it would seem as though the number of asterisks represents the nesting level, that's not how depth is determined.
 A new level is created for each unique marker encountered.
@@ -107,10 +114,37 @@ The hyphen should only be used as the marker for the first level.
 After all, we're shooting for plain text markup that is readable _as is_.
 
 [#markers]
-== Custom markers
+== Markers
 
-AsciiDoc offers numerous bullet styles for lists.
-The list marker (bullet) is set using the list's block style.
+When rendered, an unordered list item is designated by a leading marker (bullet) (not to be confused with the marker used to define the list).
+This marker can be controlled using the list style.
+If no marker is specified, a default marker will be selected by the renderer.
+
+=== Default markers
+
+By default, AsciiDoc assumes that the first three levels of an unordered list will be styled using the markers disc, circle, and squared when rendered.
+Consider the following list:
+
+----
+include::example$unordered.adoc[tag=markers]
+----
+
+.Default alternating markers for nested lists
+====
+include::example$unordered.adoc[tag=markers]
+====
+
+Observe that the marker for the first level is a disc (filled circle), the second level is a circle (outline), and the third level is a square (filled).
+The AsciiDoc processor does not specify these markers explicitly in the model or converted output.
+Rather, these defaults are added by the renderer (e.g., CSS), adhering to a convention established by HTML.
+
+Beyond the third level of nesting, the marker choice is not specified.
+Typically, the renderer will continue to use the square marker, as shown in <<ex-deep,an earlier example>>.
+
+=== Custom markers
+
+AsciiDoc offers numerous marker styles for lists.
+The list marker can be specified using the list's block style.
 
 The unordered list marker can be set using any of the following block styles:
 
@@ -118,7 +152,7 @@ The unordered list marker can be set using any of the following block styles:
 * circle
 * disc
 * none or no-bullet (indented, but no bullet)
-* unstyled (no indentation or bullet) (HTML only)
+* unstyled (no indentation or bullet) (not supported in DocBook output)
 
 NOTE: These styles are supported by the default Asciidoctor stylesheet.
 
@@ -128,12 +162,38 @@ For HTML:: the style name is assigned to the `class` attribute on the `<ul>` ele
 
 For DocBook:: the style name is assigned to the `mark` attribute on the `<itemizedlist>` element.
 
-Here's an unordered list that has square bullets:
+Here's an unordered list that has square markers:
 
 ----
 include::example$unordered.adoc[tag=square]
 ----
 
+.A list with square markers
 ====
 include::example$unordered.adoc[tag=square]
+====
+
+Once the list style is set, that style is used for all nested lists until it is set again.
+The assumption is that it's no longer possible to infer the alternation, so it stops.
+The inherited style is not specified in the model, but rather applied by the renderer (e.g., CSS).
+For example, if we set the list style to circle on the top-level list, it will be used for all levels.
+
+----
+include::example$unordered.adoc[tag=marker-lock]
+----
+
+.The list style is inherited once set
+====
+include::example$unordered.adoc[tag=marker-lock]
+====
+
+The inherited style can be set or reset at any level.
+
+----
+include::example$unordered.adoc[tag=marker-override]
+----
+
+.The list style can be reset
+====
+include::example$unordered.adoc[tag=marker-override]
 ====

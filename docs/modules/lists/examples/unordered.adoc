@@ -1,7 +1,7 @@
 // tag::qr-base[]
 * List item
 ** Nested list item
-*** Nested list item
+*** Deeper nested list item
 * List item
  ** Another nested list item
 * List item
@@ -60,6 +60,7 @@
 *** Level 3 list item
 **** Level 4 list item
 ***** Level 5 list item
+****** etc.
 * Level 1 list item
 // end::max[]
 
@@ -69,9 +70,33 @@
 * Level 1 list item
 // end::nest-alt[]
 
+// tag::markers[]
+* disc
+** circle
+*** square
+// end::markers[]
+
 // tag::square[]
 [square]
 * one
 * two
 * three
 // end::square[]
+
+// tag::marker-lock[]
+[circle]
+* circles
+** all
+*** the
+**** way
+***** down
+// end::marker-lock[]
+
+// tag::marker-override[]
+[square]
+* squares
+** up top
+[circle]
+*** circles
+**** down below
+// end::marker-override[]
