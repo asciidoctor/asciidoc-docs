@@ -70,7 +70,13 @@ In other words, the `source-highlighter` attribute means "`use this syntax highl
 
 == Apply source highlighting
 
-To apply highlighting to source code, you must add the `source` style to a listing block, literal block, or paragraph and specify a source language.
+To apply highlighting to a block of source code, you must specify a source langauge.
+If the block is a literal block or paragraph, you must also specify the `source` style.
+
+The available source language values are defined by the syntax highlighter library.
+In most cases, the source language value is the proper name of the language in lowercase (e.g., `ruby`, `java`).
+Most syntax highlighters also accept using the source file extension (e.g., `js`, `rb`), though it's important to be consistent.
+If the syntax highlighter doesn't recognize or support the source language, the block will not be highlighted.
 
 .Source block with ID and source highlighting
 [source#ex-code,line-comment=]
