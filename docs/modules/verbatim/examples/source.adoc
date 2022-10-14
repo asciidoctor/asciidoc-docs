@@ -21,7 +21,7 @@ end
 // end::src-implied[]
 
 // tag::src-base-co[]
-[source#hello,ruby] <.> <.> <.>
+[#hello,ruby] <.> <.> <.>
 ---- <.>
 require 'sinatra'
 
@@ -33,7 +33,7 @@ end
 
 // src-base-co-res is the result of src-base-co
 // tag::src-base-co-res[]
-[source#hello,ruby]
+[#hello,ruby]
 ----
 require 'sinatra'
 
@@ -44,7 +44,7 @@ end
 // end::src-base-co-res[]
 
 // tag::src-para-co[]
-[source,xml] <!--.-->
+[source,xml] <.>
 <meta name="viewport"
   content="width=device-width, initial-scale=1.0">
 <.>
@@ -64,7 +64,6 @@ This is normal content.
 :source-highlighter: pygments
 :source-language: java
 
-[source]
 ----
 public void setAttributes(Attributes attributes) {
     this.options.put(ATTRIBUTES, attributes.map());
@@ -77,12 +76,12 @@ public void setAttributes(Attributes attributes) {
 :source-highlighter: pygments
 :source-language: java
 
-[source,ruby]
+[,ruby]
 require 'sinatra'
 // end::override[]
 
 // tag::src-inc[]
-[source,ruby]
+[,ruby]
 ----
 \include::app.rb[]
 ----
@@ -115,7 +114,7 @@ end
 // end::fence[]
 
 // tag::linenums-option[]
-[source%linenums,ruby]
+[%linenums,ruby]
 ----
 puts 1
 puts 2
@@ -124,7 +123,7 @@ puts 3
 // end::linenums-option[]
 
 // tag::linenums-posattr[]
-[source,ruby,linenums]
+[,ruby,linenums]
 ----
 puts 1
 puts 2

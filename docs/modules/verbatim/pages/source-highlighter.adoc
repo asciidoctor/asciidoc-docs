@@ -1,8 +1,8 @@
 = Source Highlighting
 :table-caption: Table
 
-Source highlighting is applied to text that's assigned the `source` block style and a language.
-You can define the source language directly on the block or globally using the `source-language` document attribute.
+Source highlighting is applied to text that's assigned the `source` block style (either explicitly or implicitly) and a source language.
+The source language is defined either on the block or inherited from the `source-language` document attribute.
 
 [#source-highlighter]
 == source-highlighter attribute
@@ -72,27 +72,28 @@ In other words, the `source-highlighter` attribute means "`use this syntax highl
 
 To apply highlighting to source code, you must add the `source` style to a listing block, literal block, or paragraph and specify a source language.
 
-.Source block with title and source highlighting
+.Source block with ID and source highlighting
 [source#ex-code,line-comment=]
 ....
 include::example$source.adoc[tag=src-base-co]
 ....
-<.> Assign the block style `source` to the first position in the attribute list.
+<.> The block style `source` is implied since a source language is specified.
 <.> An optional ID can be added to the block by appending it to style using the shorthand syntax (`#`) for `id`.
 <.> Assign a source language to the second position.
-<.> The source style explicitly marks this listing block as a source block.
+<.> An implicit source block uses the listing structural container.
 
 The result of <<ex-code>> is displayed below.
 
 include::example$source.adoc[tag=src-base-co-res]
 
-.Source style
+.Source paragraph
 [source#ex-style]
 ----
 include::example$source.adoc[tag=src-para-co]
 ----
-<.> Place the attribute list directly on the paragraph.
-<.> Once an empty line is encountered the syntax highlighting is unset.
+<.> Place the attribute list directly above the paragraph.
+In this case, the `source` style is always required.
+<.> Once an empty line is encountered the source block ends.
 
 The result of <<ex-style>> is displayed below.
 
@@ -136,6 +137,7 @@ To disable source highlighting for a given source block, specify the language as
 == source-language attribute
 
 If the majority of your source blocks use the same source language, you can set the `source-language` attribute in the document header and assign a language to it.
+Setting the `source-language` document attribute implicitly promotes listing blocks to source blocks.
 
 .Set source-language attribute
 [source#ex-language]
@@ -143,7 +145,10 @@ If the majority of your source blocks use the same source language, you can set 
 include::example$source.adoc[tag=src-lang]
 ....
 
-You can override the global source language on an individual block by specifying a source language after `source`.
+Notice that it's not necessary to specify the `source` style or source language on the block.
+To make a listing block in this situation, you must set the `listing` style on the block.
+
+You can override the global source language on an individual block by specifying a source language directly on the block.
 
 .Override source-language attribute
 [source#ex-override]
