@@ -13,6 +13,7 @@ Added::
 Changed::
 * Clarify which markers are selected by default for a rendered unordered list
 * Be more clear that the source style is not required on a listing block if the source language is set
+* Clarify that source language values are defined by the syntax highlighter library
 
 Fixed::
 * fix image block example so source matches output
