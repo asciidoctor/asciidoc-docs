@@ -105,6 +105,47 @@ The result of <<ex-style>> is displayed below.
 
 include::example$source.adoc[tag=src-para]
 
+=== shell vs console
+
+The source language for shell and console are often mixed up.
+The language `shell` is intended for the contents of a shell script, often indicated by a shebang for the generic shell.
+If the shell script is written for a particular shell, you might use that language instead (e.g., `bash` or `zsh`).
+The language `console` is intended to represent text that's typed into a console (i.e., a terminal application).
+
+Here's an example of when you would use `shell`:
+
+[source]
+....
+[,shell]
+----
+#!/bin/sh
+
+fail () {
+    echo
+    echo "$*"
+    echo
+    exit 1
+} >&2
+
+JAVACMD=java
+which java >/dev/null 2>&1 || fail "ERROR: no 'java' command could be found in your PATH.
+
+exec "$JAVACMD" "$@"
+----
+....
+
+Here's an example of when you would use `console`:
+
+[source]
+....
+[source,console]
+$ asciidoctor -v
+....
+
+Typically, the syntax highlighter will parse the prompt (e.g., `$`) at the start of each line, then handle the remaining text using the shell language.
+
+Often times, a basic console command is represented using a literal paragraph since there isn't much to be gained from syntax highlighting in this case.
+
 == Enable line numbering
 
 Provided the feature is supported by the source highlighter, you can enable line numbering on a source block by setting the `linenums` option on the block.

@@ -9,6 +9,7 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 Added::
 * Restore the documentation for the menu macro shorthand syntax
 * Document that the unordered list style inherits when set explicitly
+* Document difference between shell and console source language
 
 Changed::
 * Clarify which markers are selected by default for a rendered unordered list
