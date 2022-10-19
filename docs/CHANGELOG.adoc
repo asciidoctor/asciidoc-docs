@@ -10,6 +10,7 @@ Added::
 * Restore the documentation for the menu macro shorthand syntax
 * Document that the unordered list style inherits when set explicitly
 * Document difference between shell and console source language
+* Document the `labelwidth` and `itemwidth` attributes of a horizontal dlist
 
 Changed::
 * Clarify which markers are selected by default for a rendered unordered list
