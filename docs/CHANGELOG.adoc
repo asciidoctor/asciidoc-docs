@@ -17,6 +17,7 @@ Changed::
 * Be more clear that the source style is not required on a listing block if the source language is set
 * Clarify that source language values are defined by the syntax highlighter library
 * Add example of encoding a colon in the target of a link macro
+* Show full example of mixing AsciiMath and LaTeX math in same document
 
 Fixed::
 * fix image block example so source matches output

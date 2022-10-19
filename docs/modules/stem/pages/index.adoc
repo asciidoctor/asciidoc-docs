@@ -91,7 +91,9 @@ include::example$stem.adoc[tag=bl-co]
 
 The result <<ex-block>> is rendered beautifully in the browser thanks to MathJax!
 
+====
 include::example$stem.adoc[tag=bl]
+====
 
 TIP: You don't need to add special delimiters around the expression as the {url-mathjax-docs}[MathJax documentation^] suggests.
 The AsciiDoc processor handles that for you automatically!
@@ -234,12 +236,20 @@ include::example$stem.adoc[tag=multi-l]
 
 The result of <<ex-latexmath>> is displayed below.
 
+====
 include::example$stem.adoc[tag=multi-l]
+====
 
 The name that maps to the notation you want to use can also be applied to block STEM content.
 
-.Delimited asciimath block syntax
+.Using both asciimath and latexmath notations in a single document
 [source]
 ----
 include::example$stem.adoc[tag=multi-a]
 ----
+
+Here's how the body of this example will be shown:
+
+=====
+include::example$stem.adoc[tag=multi-a-render]
+=====
