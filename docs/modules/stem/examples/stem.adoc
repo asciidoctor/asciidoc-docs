@@ -63,8 +63,29 @@ latexmath:[C = \alpha + \beta Y^{\gamma} + \epsilon]
 Jamie Moriarty
 :stem: latexmath
 
+.An e-xciting limit with LaTeX!
+[stem]
+++++
+\lim_{n \to \infty}\frac{n}{\sqrt[n]{n!}} = {\large e}
+++++
+
+.A basic square root with AsciiMath
 [asciimath]
 ++++
 sqrt(4) = 2
 ++++
 // end::multi-a[]
+
+// tag::multi-a-render[]
+.An e-xciting limit with LaTeX!
+[latexmath]
+++++
+\lim_{n \to \infty}\frac{n}{\sqrt[n]{n!}} = {\large e}
+++++
+
+.A basic square root with AsciiMath
+[stem]
+++++
+sqrt(4) = 2
+++++
+// end::multi-a-render[]
