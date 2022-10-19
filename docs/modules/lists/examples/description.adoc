@@ -30,6 +30,12 @@ Hard drive:: Permanent storage for operating system and/or user files.
 RAM:: Temporarily stores information the CPU uses during operation.
 // end::base-horz[]
 
+// tag::widths[]
+[horizontal,labelwidth=25,itemwidth=75]
+A short term:: The term for this item likely fits inside the column's width.
+A long term that wraps across multiple lines:: The term for this item wraps since the width of the term column is restricted using the `labelwidth` attribute.
+// end::widths[]
+
 // tag::qr-base[]
 First term:: The description can be placed on the same line
 as the term.
