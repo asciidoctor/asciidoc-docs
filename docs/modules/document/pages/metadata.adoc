@@ -37,4 +37,4 @@ include::example$metadata.adoc[tag=key-html]
 == Custom metadata, styles, and functions
 
 You can add content, such as custom metadata, stylesheet, and script information, to the header of the output document using docinfo (document information) files.
-The xref:asciidoctor::docinfo.adoc[docinfo file] section details what these files can contain and how to use them.
+The xref:docinfo:index.adoc[docinfo file] section details what these files can contain and how to use them.
