@@ -11,6 +11,7 @@ Added::
 * Document that the unordered list style inherits when set explicitly
 * Document difference between shell and console source language
 * Document the `labelwidth` and `itemwidth` attributes of a horizontal dlist
+* Add page that documents the `docinfo` attribute and docinfo files
 
 Changed::
 * Clarify which markers are selected by default for a rendered unordered list
