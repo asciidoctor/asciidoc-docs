@@ -28,6 +28,7 @@ nav:
 - modules/blocks/nav-collapsible.adoc
 - modules/ROOT/nav-comment.adoc
 - modules/toc/nav.adoc
+- modules/docinfo/nav.adoc
 - modules/directives/nav.adoc
 - modules/subs/nav.adoc
 - modules/pass/nav.adoc
