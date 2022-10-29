@@ -19,6 +19,7 @@ Changed::
 * Clarify that source language values are defined by the syntax highlighter library
 * Add example of encoding a colon in the target of a link macro
 * Show full example of mixing AsciiMath and LaTeX math in same document
+* Clarify when line highlighting can be used on a source block and how it works
 
 Fixed::
 * fix image block example so source matches output
