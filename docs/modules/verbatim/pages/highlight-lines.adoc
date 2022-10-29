@@ -19,7 +19,6 @@ a|
 
 |`rouge`
 a|
-* The `linenums` option is enabled on the block.
 * The `highlight` attribute is defined on the block.
 * The CSS to support line highlighting is supplied by docinfo.
 
@@ -35,7 +34,8 @@ a|* The `highlight` attribute is defined on the block.
 == highlight attribute
 
 Line highlighting is activated on a source block if the highlight attribute is defined and at least one of the line numbers falls in this range.
-However, keep in mind that some syntax highlighter libraries require additional options (e.g., CodeRay and Rouge), and some don't support line highlighting at all (e.g., highlight.js).
+
+IMPORTANT: Keep in mind that some syntax highlighter libraries require additional options (e.g., CodeRay and Rouge), and some don't support line highlighting at all (e.g., highlight.js).
 
 The `highlight` attribute accepts a comma or semicolon delimited list of line ranges.
 The numbers correspond to the line numbers of the source block.
@@ -70,7 +70,8 @@ ORDERED_LIST_KEYWORDS = {
 ----
 ....
 
-When using CodeRay as the source highlighter, line highlighting is only applied to the line number, which is emphasized using bold text.
+When using CodeRay as the source highlighter, the `linenums` option is required to use line highlighting.
+That's because line highlighting is only applied to the line number, which is emphasized using bold text.
 CodeRay does not shade the line of code itself.
 
 === Rouge
@@ -82,7 +83,7 @@ CodeRay does not shade the line of code itself.
 :source-highlighter: rouge
 :docinfo: shared
 
-[%linenums,ruby,highlight=2..5]
+[,ruby,highlight=2..5]
 ----
 ORDERED_LIST_KEYWORDS = {
   'loweralpha' => 'a',
@@ -127,5 +128,3 @@ ORDERED_LIST_KEYWORDS = {
 }
 ----
 ....
-
-When using Pygments as the source highlighter, the `linenums` option is not required to use line highlighting.
