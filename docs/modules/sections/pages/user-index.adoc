@@ -70,7 +70,7 @@ I, King Arthur.
 (((knight, "Arthur, King")))
 ----
 
-//Follow https://github.com/asciidoctor/asciidoctor/issues/450[issue #450] to track the progress of this feature.
+//Follow https://github.com/asciidoctor/asciidoctor/issues/450[Asciidoctor issue #450] to track the progress of this feature.
 
 == Placement of hidden index terms
 
