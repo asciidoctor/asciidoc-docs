@@ -59,4 +59,4 @@ If you specify xreftext on the bibliography anchor (e.g., `+[[[label,xreftext]]]
 If you want the bibliography anchor and reference to appear as a number, assign the number of the entry using the xreftext.
 For example, `+[[[label,1]]]+` will be converted to `[1]`.
 
-If you want more advanced features such as automatic numbering and custom citation styles, try the {url-org}/asciidoctor-bibtex[asciidoctor-bibtex^] project.
+If you want more advanced features such as automatic numbering and custom citation styles, try the https://github.com/asciidoctor/asciidoctor-bibtex[asciidoctor-bibtex^] project.

@@ -112,7 +112,7 @@ The `class`’ static methods make it easy to operate on files and directories.
 ----
 
 This situation is expected to improve in the future when the AsciiDoc language switches to using a parsing expression grammar for inline formatting instead of the current regular expression-based strategy.
-For details, follow https://github.com/asciidoctor/asciidoctor/issues/61[issue #61].
+For details, follow https://github.com/asciidoctor/asciidoctor/issues/61[Asciidoctor issue #61].
 
 [#escape-unconstrained]
 == Escape unconstrained formatting marks
