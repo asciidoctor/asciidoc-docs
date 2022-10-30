@@ -13,7 +13,7 @@ These attributes apply to the link, URL, and email macros.
 
 |`role`
 |CSS classes available to inline elements
-|+https://discuss.asciidoctor.org[Discuss Asciidoctor,role=teal]+
+|+https://chat.asciidoc.org[Discuss AsciiDoc,role=teal]+
 |
 
 |`title`
@@ -23,14 +23,14 @@ These attributes apply to the link, URL, and email macros.
 
 |`window`
 |any
-|+https://discuss.asciidoctor.org[Discuss Asciidoctor,window=_blank]+
+|+https://chat.asciidoc.org[Discuss AsciiDoc,window=_blank]+
 |The blank window target can also be specified using `^` at the end of the link text.
 
 |`window` +
 (shorthand)
 |`^`
 |+https://example.org[Google, DuckDuckGo, Ecosia^]+ +
-+https://discuss.asciidoctor.org[Discuss Asciidoctor^]+
++https://chat.asciidoc.org[Discuss AsciiDoc^]+
 |
 
 |`opts`

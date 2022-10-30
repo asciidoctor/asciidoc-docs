@@ -3,7 +3,7 @@ The homepage for the Asciidoctor Project is https://asciidoctor.org.
 
 Chat with other Fedora users in the irc://irc.freenode.org/#fedora[Fedora IRC channel].
 
-Ask questions on the https://discuss.asciidoctor.org/[*mailing list*].
+Ask questions in the https://chat.asciidoc.org[*community chat*].
 // end::base[]
 
 // tag::base-co[]
@@ -15,7 +15,7 @@ Chat with other Fedora users in the irc://irc.freenode.org/#fedora[Fedora IRC ch
 // end::irc[]
 
 // tag::text[]
-Ask questions on the https://discuss.asciidoctor.org/[*mailing list*].
+Ask questions in the https://chat.asciidoc.org[*community chat*].
 // end::text[]
 
 // tag::scheme[]
@@ -41,7 +41,7 @@ Let's view the raw HTML of the link:view-source:asciidoctor.org[Asciidoctor home
 // end::linkattrs-s[]
 
 // tag::css[]
-Chat with other Asciidoctor users on the https://discuss.asciidoctor.org/[*mailing list*^,role=green].
+Chat with other AsciiDoc users in the https://chat.asciidoc.org[*project chat*^,role=green].
 // end::css[]
 
 // tag::link[]
@@ -71,9 +71,9 @@ mailto:join@discuss.example.org[Subscribe,Subscribe me,I want to join!]
 // end::b-scheme[]
 
 // tag::b-linkattrs[]
-https://discuss.asciidoctor.org[Discuss Asciidoctor,role=external,window=_blank]
+https://chat.asciidoc.org[Discuss AsciiDoc,role=external,window=_blank]
 
-https://discuss.asciidoctor.org[Discuss Asciidoctor^]
+https://chat.asciidoc.org[Discuss AsciiDoc^]
 // end::b-linkattrs[]
 
 // tag::b-spaces[]
