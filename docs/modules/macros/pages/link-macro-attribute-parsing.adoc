@@ -9,7 +9,7 @@ Normally, the whole text between the square brackets of a link macro is treated 
 
 [source]
 ----
-https://discuss.asciidoctor.org[Discuss Asciidoctor]
+https://chat.asciidoc.org[Discuss AsciiDoc]
 ----
 
 However, if the text contains an equals sign (`=`), the text is parsed as an xref:attributes:element-attributes.adoc#attribute-list[attribute list].
@@ -26,7 +26,7 @@ The following example shows a URL macro with custom link text alongside named at
 
 [source]
 ----
-https://discuss.asciidoctor.org[Discuss Asciidoctor,role=resource,window=_blank]
+https://chat.asciidoc.org[Discuss AsciiDoc,role=resource,window=_blank]
 ----
 
 Let's consider a case where the link text contains a comma and the macro also has named attributes.
@@ -60,7 +60,7 @@ Finally, to use named attributes without specifying link text, you simply specif
 
 [source]
 ----
-https://discuss.asciidoctor.org[role=bagel,window=_blank,opts=nofollow]
+https://chat.asciidoc.org[role=button,window=_blank,opts=nofollow]
 ----
 
 The link macro recognizes all the common attributes (id, role, and opts).
