@@ -19,6 +19,19 @@ To add a title to a table, use the block title syntax.
 ----
 <.> On the line directly above the table's opening delimiter (or its attribute list), enter a dot (`.`) directly followed by the text of the title.
 
+.Add an optional title to a table with an attribute list
+[source#ex-title2]
+----
+.A table with a title
+[%header%autowidth]
+|===
+|Column 1, header row |Column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+----
+
 The table from <<ex-title>> is displayed below.
 
 .A table with a title
