@@ -76,7 +76,7 @@ Even though it's not specified in the attribute, one space is still permitted im
 
 === Disable line comment processing
 
-If the source language you're embedding does not support trailing line comments, or the line comment prefix is being misinterpretted, you can disable this feature using the `line-comment` attribute.
+If the source language you're embedding does not support trailing line comments, or the line comment prefix is being misinterpreted, you can disable this feature using the `line-comment` attribute.
 
 Let's say we want to put a callout at the end of a block delimiter for an open block in AsciiDoc.
 In this case, the processor will think the double hyphen is a line comment, when in fact it's the block delimiter.

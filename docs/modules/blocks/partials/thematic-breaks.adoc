@@ -17,7 +17,7 @@ The result of <<ex-rule>> is displayed below.
 
 === Markdown-style thematic breaks
 
-Asciidoctor recognizes Markdown thematic breakes.
+Asciidoctor recognizes Markdown thematic breaks.
 The motivation for this support is to ease migration of Markdown documents to AsciiDoc documents.
 
 To avoid conflicts with AsciiDoc's block delimiter syntax, only 3 repeating characters (`-` or `+*+`) are recognized.
