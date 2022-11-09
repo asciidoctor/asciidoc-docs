@@ -3,7 +3,7 @@
 AsciiDoc provides the `footnote` macro for adding footnotes to your document.
 A footnote is a reference to an item in a footnote list.
 The footnote is defined in AsciiDoc at the location of the reference, but the text is extracted to an item in the footnote list.
-You can refer to the same footnote in multiple locations by assigning an ID to the first occurance and referencing that ID in subsequent occurrences.
+You can refer to the same footnote in multiple locations by assigning an ID to the first occurrence and referencing that ID in subsequent occurrences.
 
 NOTE: All AsciiDoc processors, including Asciidoctor, currently implement footnotes as endnotes.
 The placement and numbering of footnotes can be customized using a custom converter.

@@ -18,7 +18,7 @@ The deprecate syntax needs to be moved to the deprecated table and/or migration 
 ////
 
 Substitutions are applied to leaf content of a block.
-Substitutions determine how the text is interpretted.
+Substitutions determine how the text is interpreted.
 If no substitutions are applied, the text is passed to the converter as entered.
 Otherwise, the substitutions transform that text.
 

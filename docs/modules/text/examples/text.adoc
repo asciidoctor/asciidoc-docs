@@ -121,8 +121,8 @@ It was Beatle**__mania__**!
 
 // tag::straight-quotes[]
 In Ruby, '\n' represents a backslash followed by the letter n.
-Single quotes prevent escape sequences from being interpretted.
-In constrast, "\n" represents a newline.
+Single quotes prevent escape sequences from being interpreted.
+In contrast, "\n" represents a newline.
 // end::straight-quotes[]
 
 // tag::c-quote-co[]

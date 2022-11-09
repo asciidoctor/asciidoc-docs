@@ -129,4 +129,4 @@ The *basic* xrefstyle is unaffected by the value of the signifier.
 Only the aforementioned styles are provided out of the box.
 Support for a custom formatting string is planned.
 Refer to https://github.com/asciidoctor/asciidoctor/issues/2212[#2212^] for details.
-Until then, you can implement custom formatting in a custom converter or overridding the xreftext method on the node.
+Until then, you can implement custom formatting in a custom converter or overriding the xreftext method on the node.

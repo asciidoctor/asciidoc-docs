@@ -36,7 +36,7 @@ The single and double pluses represent the constrained and unconstrained passthr
 They have boundaries that match the xref:text:index.adoc#formatting-marks-and-pairs[constrained and unconstrained formatting marks].
 The main difference, however, is that they are applied first to suppress formatting.
 
-This type of passthrough is intended to surpress any special meaning of the source text itself.
+This type of passthrough is intended to suppress any special meaning of the source text itself.
 This passthrough type still ensures, however, that the content is properly escaped in the output.
 That means the xref:subs:special-characters.adoc[special characters] substitution is still applied.
 

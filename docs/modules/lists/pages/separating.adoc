@@ -2,7 +2,7 @@
 
 In AsciiDoc, lists items have natural affinity towards one another.
 If adjacent lines start with the same list marker, they are joined together into the same list, even if separated by empty lines.
-If the adacent line starts with a different list marker, even if offset by empty lines, it will be placed into a nested list.
+If the adjacent line starts with a different list marker, even if offset by empty lines, it will be placed into a nested list.
 
 These rules make it easier to keep list items together in a single list.
 However, they can present a challenge if what you want is to create separate lists.
@@ -20,7 +20,7 @@ The `-` following the line comment prefix is a hint to authors to indicate that 
 include::example$unordered.adoc[tag=divide]
 ----
 
-This technique works for seperating any type of list.
+This technique works for separating any type of list.
 
 == Using a block attribute line
 
@@ -36,4 +36,4 @@ The preceding empty line is important.
 If that were not present, the ordered list would still be nested inside the ordered list.
 If the second list requires block attributes, you can add them to the block attribute line.
 
-This technique works for seperating any type of list.
+This technique works for separating any type of list.

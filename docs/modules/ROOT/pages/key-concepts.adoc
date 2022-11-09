@@ -46,7 +46,7 @@ Document attributes, as the name implies, are associated directly with the docum
 They are used to export information about the document at runtime, control behavior of the processor, and to store reusable values or phrases.
 Thus, they are a sort of two-way communication channel with the processor.
 
-Document attributes can be referenced in the content using an attribute reference (whereever the attribute substitution is enabled).
+Document attributes can be referenced in the content using an attribute reference (wherever the attribute substitution is enabled).
 A document attribute can be defined either in the document using an attribute entry (typically in the document header) or from the API or CLI.
 Not all document attributes can be modified.
 

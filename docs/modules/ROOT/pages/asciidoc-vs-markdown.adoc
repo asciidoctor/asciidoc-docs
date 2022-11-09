@@ -7,7 +7,7 @@ While that's certainly the goal of both AsciiDoc and Markdown, and both are very
 
 == Starting with Markdown
 
-The most prevelant lightweight markup language is Markdown.
+The most prevalent lightweight markup language is Markdown.
 (At least, Markdown is what you call it at first).
 The main advantage of Markdown lies in its primitive syntax: its manual and cheatsheet are one and the same.
 But this advantage is also its greatest weakness.

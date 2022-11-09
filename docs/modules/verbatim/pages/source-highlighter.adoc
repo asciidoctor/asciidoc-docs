@@ -70,7 +70,7 @@ In other words, the `source-highlighter` attribute means "`use this syntax highl
 
 == Apply source highlighting
 
-To apply highlighting to a block of source code, you must specify a source langauge.
+To apply highlighting to a block of source code, you must specify a source language.
 If the block is a literal block or paragraph, you must also specify the `source` style.
 
 The available source language values are defined by the syntax highlighter library.
