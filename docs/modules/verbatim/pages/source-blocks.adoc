@@ -41,7 +41,7 @@ include::example$source.adoc[tag=src-implied]
 ....
 
 This shorthand also works if the `source-language` attribute is set on the document, which serves as the default language for source blocks.
-If the `source-language` attribute is set on the doucment and you want to make a regular listing block, add the `listing` style to the block.
+If the `source-language` attribute is set on the document and you want to make a regular listing block, add the `listing` style to the block.
 
 == Using include directives in source blocks
 

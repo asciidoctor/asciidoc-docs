@@ -12,7 +12,7 @@ Text at the beginning of a book describing facts about its production.
 
 == The First Chapter
 
-Chapters can be grouped by preceeding them with a level 0 Book Part title.
+Chapters can be grouped by preceding them with a level 0 Book Part title.
 
 [appendix]
 = The Appendix

@@ -86,7 +86,7 @@ So the question remains, how do you prevent substitutions in text formatted as m
 
 By not mixing monospace formatting with passthrough (literal) semantics, we are deviating slightly from the behavior of backticks in Markdown. However, that's because AsciiDoc has additional features, such as attribute references, that we want to be able to leverage when formatting text as monospace (just as we would anywhere). As it turns out, the lack of ability for substitutions when creating monospaced text in Markdown is quite limiting (and frustrating).
 
-Let's give this separation of inline passthroughs (using single and double plus) and monospace formatting (using single and double backticks) a try and see how it goes. If we need to remove or reduce the number of subsitution applied when formatting text as monospace, we can entertain the idea once we've given this configuration a trial.
+Let's give this separation of inline passthroughs (using single and double plus) and monospace formatting (using single and double backticks) a try and see how it goes. If we need to remove or reduce the number of substitution applied when formatting text as monospace, we can entertain the idea once we've given this configuration a trial.
 
 Since we're swapping behavior between two existing formatting marks, we had to introduce a transitional syntax that will work in with both 0.1.4 and 1.5.0 to ease migration. I'll document those options here.
 
