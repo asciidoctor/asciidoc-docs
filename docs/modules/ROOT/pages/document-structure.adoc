@@ -105,7 +105,7 @@ By requiring blocks to start at the left margin, it avoids the tedium of having 
 == Text and inline elements
 
 Surrounded by the markers, delimiters, and metadata lines is the text.
-The text is the main focus of a document and the reason the AsciiDoc syntax gives it so much room the breathe.
+The text is the main focus of a document and the reason the AsciiDoc syntax gives it so much room to breathe.
 Text is most often found in the lines of a block (e.g., paragraph), the block title (e.g., section title), and in list items, though there are other places where it can exist.
 
 Text is subject to substitutions.
