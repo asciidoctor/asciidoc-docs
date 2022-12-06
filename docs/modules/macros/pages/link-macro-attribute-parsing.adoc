@@ -3,7 +3,7 @@
 If named attributes are detected between the square brackets of a link or URL macro, that text is parsed as an attribute list.
 This page explains the conditions when this occurs and how to write the link text so it is recognized as a single positional attribute.
 
-== Linked text alongside named attributes
+== Link text alongside named attributes
 
 Normally, the whole text between the square brackets of a link macro is treated as the link text (i.e., the first positional attribute).
 
