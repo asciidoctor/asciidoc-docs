@@ -20,6 +20,8 @@ This repository is a registered content source in the {url-org}/docs.asciidoctor
 The source files are organized into a documentation component as described by the [.path]_antora.yml_ file.
 To learn how to build this documentation using the playbook and Antora, see the https://docs.antora.org/antora/latest/install-and-run-quickstart/[Install and Run Antora Quickstart].
 
+For locally building the documentation in this repository use the file link:local-antora-playbook.yml[] provided in the root directory.
+
 == Copyright and License
 
 Copyright (C) 2012-present Sarah White, Dan Allen, and the individual contributors to {url-org}/asciidoctor/graphs/contributors[Asciidoctor] and {url-org}/asciidoctor.org/graphs/contributors[asciidoctor.org].
