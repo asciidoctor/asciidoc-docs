@@ -18,9 +18,9 @@ To view it properly, you should read it {url-docs}[on the site where it is publi
 
 This repository is a registered content source in the {url-org}/docs.asciidoctor.org/blob/main/antora-playbook.yml[playbook file for docs.asciidoctor.org].
 The source files are organized into a documentation component as described by the [.path]_antora.yml_ file.
-To learn how to build this documentation using the playbook and Antora, see the https://docs.antora.org/antora/latest/install-and-run-quickstart/[Install and Run Antora Quickstart].
 
-For locally building the documentation in this repository use the file link:local-antora-playbook.yml[] provided in the root directory.
+To build and preview the documentation locally, follow the instructions in the file link:local-antora-playbook.yml[] at the root of this repository.
+To learn more about how to build a documentation site with Antora, see the https://docs.antora.org/antora/latest/install-and-run-quickstart/[Install and Run Antora Quickstart].
 
 == Copyright and License
 
