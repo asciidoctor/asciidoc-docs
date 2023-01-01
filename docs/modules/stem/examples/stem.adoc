@@ -59,7 +59,7 @@ latexmath:[C = \alpha + \beta Y^{\gamma} + \epsilon]
 // end::multi-l[]
 
 // tag::multi-a[]
-= My Diabolical Mathmatical Opus
+= My Diabolical Mathematical Opus
 Jamie Moriarty
 :stem: latexmath
 
