@@ -51,7 +51,7 @@ If it is unset (`sectnums!`) on the command line or API, then the numbers are di
 == Specify the section levels that are numbered
 
 When `sectnums` is set, level 1 (`==`) through level 3 (`====`) section titles are numbered by default.
-You can increase or reduce the section level limit be setting the `sectnumlevels` attribute and assigning it the section level you want it to number.
+You can increase or reduce the section level limit by setting the `sectnumlevels` attribute and assigning it the section level you want it to number.
 The `sectnumlevels` attribute accepts a value of 0 through 5, and it can only be set in the document header.
 
 [source]
