@@ -5,7 +5,7 @@
 
 == Audio macro syntax
 
-The block audio macro enables to to embed audio streams into your documentation.
+The block audio macro enables you to embed audio streams into your documentation.
 You can embed self-hosted audio files that are supported by the browser.
 
 The audio formats AsciiDoc supports is dictated by the output format, such as the formats supported by the browser when generating HTML.
