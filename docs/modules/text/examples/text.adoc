@@ -171,10 +171,14 @@ of a shopping list, but I don't think the local bodega sells
 E=mc^2^,`" Lazarus replied.
 // end::sub-sup[]
 
-// tag::b-sub-sup[]
-^super^script phrase
+// tag::sup-with-spaces[]
+The deepest body of water is Deep Creek Lake.^[citation{sp}needed]^
+// end::sup-with-spaces[]
 
-~sub~script phrase
+// tag::b-sub-sup[]
+^super^script
+
+~sub~script
 // end::b-sub-sup[]
 
 // tag::mono[]
