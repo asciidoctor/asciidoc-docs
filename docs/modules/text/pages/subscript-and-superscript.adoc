@@ -7,10 +7,17 @@ The size and precise placement of the text depends on the font and other stylesh
 
 == Subscript and superscript syntax
 
-Text is subscripted when you enclose it in a pair of tildes (`{tilde}`) and superscripted with a pair of carets (`{caret}`)
+Text is rendered as subscript (below the baseline) when you enclose it in a pair of tildes (`{tilde}`).
+Text is rendered as superscript (above the baseline) when you enclose it in a pair of carets (`{caret}`)
 
-Subscript:: One tilde (`{tilde}`) on either side of a word or phrase makes it subscript.
-Superscript:: One caret (`{caret}`) on either side of a word or phrase makes it superscript.
+Superscript and subscript have unique boundary constraints in AsciiDoc that are neither constrained nor unconstrained.
+Rather, they are unconstrained with the key restriction that the text must be continuous.
+(It may not contain spaces).
+This restriction is in place to avoid unexpected behavior where `{tilde}` and `{caret}` have meaning in other contexts.
+It's a tradeoff to have a more predictable syntax.
+
+Subscript:: One tilde (`{tilde}`) on either side of a continuous run of text makes it subscript.
+Superscript:: One caret (`{caret}`) on either side of a continuous run of text makes it superscript.
 
 .Subscript and superscript syntax
 [#ex-basic]
@@ -24,4 +31,12 @@ The result of <<ex-basic>> is rendered below.
 include::example$text.adoc[tag=sub-sup]
 ====
 
-NOTE: You can write equations and formulas in xref:stem:index.adoc[AsciiDoc documents using MathJax].
+If you need to include spaces in the superscript or subscript text, you must use the attribute reference `\{sp}` in place of the space character.
+
+.Superscript syntax that contains spaces
+[#ex-with-spaces]
+----
+include::example$text.adoc[tag=sup-with-spaces]
+----
+
+To write text that makes use of more complex variations and combinations of superscript and subscript, such as in equations and formulas, you're encourages to use the xref:stem:index.adoc[stem block or inline macro].
