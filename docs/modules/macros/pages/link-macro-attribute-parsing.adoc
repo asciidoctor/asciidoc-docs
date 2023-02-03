@@ -1,4 +1,4 @@
-= Link Macro Attribute Parsing
+= Link & URL Macro Attribute Parsing
 
 If named attributes are detected between the square brackets of a link or URL macro, that text is parsed as an attribute list.
 This page explains the conditions when this occurs and how to write the link text so it is recognized as a single positional attribute.

@@ -1,6 +1,6 @@
-= Link Macro Attributes Reference
+= Link, URL, and Mailto Macro Attributes Reference
 
-These attributes apply to the link, URL, and email macros.
+These attributes apply to the link, URL, and mailto (email) macros.
 
 [%autowidth]
 |===
