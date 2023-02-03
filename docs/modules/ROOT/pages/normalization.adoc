@@ -1,6 +1,6 @@
 = Normalization
 
-When an AsciiDoc processor reads the AsciiDoc source, the first thing it does is normalize the lines.
+When an AsciiDoc processor reads the AsciiDoc source, the first thing it does is to normalize the lines.
 (This operation can be performed up front or as each line is visited).
 
 Normalization consists of the following operations:
@@ -8,7 +8,7 @@ Normalization consists of the following operations:
 * Force the encoding to UTF-8 (An AsciiDoc processor always assumes the content is UTF-8 encoded)
 * Strip trailing spaces from each line (including any end of line character)
 
-This normalization is performed independent of any structured context.
+This normalization is performed independently of any structured context.
 It doesn't matter if the line is part of a literal block or a regular paragraph. All lines get normalized.
 
 Normalization is only applied in certain cases to the lines of an include file.
