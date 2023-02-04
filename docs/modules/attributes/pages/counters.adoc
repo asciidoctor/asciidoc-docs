@@ -1,7 +1,7 @@
 = Counters
 // document attributes and counters are NOT the same thing, but modifying a document attribute with the same name as the counter modifies the counter at the same time.
 
-Counters are used to store and display ad-hoc sequences of numbers or Latin characters.
+Counters are used to store and display ad hoc sequences of numbers or Latin characters.
 
 WARNING: Counters are a poorly defined feature in AsciiDoc and should be avoided if possible.
 If you do use counters, you should only used them for the most rudimentary use cases, such as making a sequence in a list, table column, or prose.
