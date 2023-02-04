@@ -49,7 +49,7 @@ Asciidoctor is {url-repo}[open source].
 
 WARNING: {disclaimer}
 If you're missing a lime colored sock, file a ticket in the {url-repo}/issues[Asciidoctor issue tracker].
-Actually, please don't.
+(Actually, please don't.)
 ====
 
 [#reference-built-in]
