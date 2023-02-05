@@ -89,7 +89,7 @@ You can see this syntax used for the appendix in the following example.
 = Appendix Title
 ----
 
-For consistency, it's best to also make special sections part-like if they become before the first part.
+For consistency, it's best to also make special sections part-like if they come before the first part.
 However, technically the syntax doesn't require it.
 
 [,asciidoc]
