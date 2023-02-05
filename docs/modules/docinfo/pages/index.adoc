@@ -29,7 +29,7 @@ The docinfo file for HTML output may contain valid elements to populate the HTML
 * `<script>`
 * `<style>`
 
-CAUTION: Use of the `<title>` element is not recommend as it's already emitted by the converter.
+CAUTION: Use of the `<title>` element is not recommended as it's already emitted by the converter.
 
 You do not need to include the enclosing `<head>` element as it's assumed to be the envelope.
 
