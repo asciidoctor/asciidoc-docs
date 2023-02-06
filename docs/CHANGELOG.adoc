@@ -9,6 +9,9 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 Changed::
 * Clarify that superscript and subscript formatting is neither constrained nor unconstrained, but rather is a specialty hybrid
 
+Fixed::
+* Update docinfo example so it picks up docinfo file
+
 == Published Q4 2022
 
 Added::
@@ -27,7 +30,7 @@ Changed::
 * Clarify when line highlighting can be used on a source block and how it works
 
 Fixed::
-* fix image block example so source matches output
+* Fix image block example so source matches output
 
 == Published Q3 2022
 
