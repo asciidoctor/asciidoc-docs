@@ -256,7 +256,7 @@ Then the converted DocBook output would be:
 [,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" lang="en">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>Document Title</title>
 <date>2020-12-30</date>
@@ -269,16 +269,16 @@ Then the converted DocBook output would be:
 <authorinitials>AN</authorinitials>
 <revhistory>
 <revision>
-<revnumber>1.0</revnumber> <!--.-->
+<revnumber>1.0</revnumber>
 <date>2020-12-30</date>
 <authorinitials>AN</authorinitials>
 </revision>
 </revhistory>
-<edition>1.0</edition>
+<edition>1.0</edition> <!--.-->
 </info>
 </book>
 ----
-<.> The revnumber attribute reference was replaced by the source document's revision number in the converted output.
+<.> The revnumber attribute reference in `docinfo.xml` was replaced by the source document's revision number in the converted output.
 
 Another example is if you want to define the the licence link tag in the HTML head.
 
