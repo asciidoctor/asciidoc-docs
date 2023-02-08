@@ -2,8 +2,8 @@ name: Deploy Docs
 on:
   push:
     branches: [ main ]
-    paths: [ 'docs/**' ]
-permissions: write-all
+    #paths: [ 'docs/**' ]
+permissions: read-all
 jobs:
   build:
     if: github.repository_owner == 'asciidoctor'
@@ -11,5 +11,5 @@ jobs:
     steps:
     - name: Trigger
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN_SCOPE_REPO }}
       run: gh workflow run trigger.yml -R asciidoctor/docs.asciidoctor.org -r main
