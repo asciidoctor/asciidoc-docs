@@ -48,10 +48,22 @@ In the shorthand syntax:
 
 The text of the item itself may contain spaces.
 
-.Using the short menu macro syntax
+.Using the shorthand menu syntax
 [#ex-menu-short]
 ----
 include::example$ui.adoc[tag=menu-short]
 ----
 
 The shorthand syntax can be escaped by preceding the opening double quote with a backslash character.
+
+Both the menu macro and menu shorthand require the first menu item start with a word character (alphanumeric character or underscore) or ampersand (to accomodate a character reference).
+If you need the first menu item to start with a non-word character, you will need to substitute it with the equivalent character reference.
+For example, to make a menu item that starts with vertical ellipsis, you must use `\&#8942;`.
+
+.Using a character reference at the start of the menu
+[#ex-menu-short-charref]
+----
+include::example$ui.adoc[tag=menu-charref]
+----
+
+Subsequent menu items don't have this requirement and thus can start with any character.
