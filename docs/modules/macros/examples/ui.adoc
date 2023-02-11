@@ -49,3 +49,7 @@ Select menu:View[Zoom > Reset] to reset the zoom level to the default setting.
 // tag::menu-short[]
 Select "Zoom > Reset" to reset the zoom level.
 // end::menu-short[]
+
+// tag::menu-charref[]
+Select "&#8942; > More Tools > Extensions" to find and enable extensions.
+// end::menu-charref[]
