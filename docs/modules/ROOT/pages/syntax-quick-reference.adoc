@@ -271,10 +271,22 @@ Section title anchors depend on support from the stylesheet to render properly.
 ////
 
 .Discrete heading (not a section)
+[#ex-discrete]
 ----
 [discrete]
 === I'm an independent heading!
+
+This paragraph is it's sibling, not it's child.
 ----
+
+.View result of <<ex-discrete>>
+[%collapsible.result]
+====
+[discrete]
+=== I'm an independent heading!
+
+This paragraph is it's sibling, not it's child.
+====
 
 == Automatic TOC
 
