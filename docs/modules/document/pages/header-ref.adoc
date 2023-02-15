@@ -20,7 +20,7 @@
 |html
 |
 
-|`docinfo`, `docinfo1`, `docinfo2`
+|`docinfo`
 |
 |html, docbook
 |
@@ -131,7 +131,7 @@ From @graphitefriction: Old table with descriptions that can probably be deleted
 |
 |html
 
-|`docinfo`, `docinfo1`, `docinfo2`
+|`docinfo`
 |
 |Adds content from a docinfo file to header
 |
