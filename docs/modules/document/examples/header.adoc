@@ -1,14 +1,14 @@
 //all examples used in qr
 // tag::qr-author[]
 = Document Title
-Author Name <author@email.org>; Author Name <author@email.org>
+Author Name <author@email.org>
 
 This document provides...
 // end::qr-author[]
 
 // tag::qr-rev[]
 = Document Title
-Author Name <author@email.org>
+Author Name <author@email.org>; Another Author <a.author@email.org>
 v2.0, 2019-03-22
 
 This document provides...
