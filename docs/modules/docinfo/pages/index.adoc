@@ -178,18 +178,6 @@ For example:
 
 This docinfo configuration will apply the shared docinfo head, header and footer files, if they exist, as well as the private footer file, if it exists.
 
-// NOTE migrate this NOTE to the migration guide once 1.6 is released
-[NOTE]
-====
-
-`docinfo` attribute values were introduced in Asciidoctor 1.5.5 to replace the less descriptive `docinfo1` and `docinfo2` attributes.
-Here are the equivalents of the old attributes using the new values:
-
-* `:docinfo:` = `:docinfo: private`
-* `:docinfo1:` = `:docinfo: shared`
-* `:docinfo2:` = `:docinfo: shared,private`
-====
-
 Let's apply this to an example:
 
 You have two AsciiDoc documents, [.path]_adventure.adoc_ and [.path]_insurance.adoc_, saved in the same folder.

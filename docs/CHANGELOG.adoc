@@ -14,6 +14,9 @@ Fixed::
 * Update docinfo example so it picks up docinfo file
 * Remove redundant admonition about the `experimental` attribute on the UI macros page
 
+Removed::
+* Drop information about obsolete `docinfo1` and `docinfo2` document attributes
+
 == Published Q4 2022
 
 Added::
