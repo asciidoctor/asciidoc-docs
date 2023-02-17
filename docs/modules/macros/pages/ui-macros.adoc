@@ -41,6 +41,10 @@ include::example$ui.adoc[tag=menu]
 ====
 
 If the menu has more than one item, it can be expressed using a shorthand.
+
+IMPORTANT: The shorthand syntax for menu is not on a standards track.
+You can use it for transient documents, but do not rely on it long term.
+
 In the shorthand syntax:
 
 * each item is separated by a greater than sign (`>`) with spaces on either side
