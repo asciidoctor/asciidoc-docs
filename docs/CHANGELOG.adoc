@@ -9,6 +9,7 @@ https://github.com/asciidoctor/asciidoc-docs/commits/main[commit history].
 Changed::
 * Clarify that superscript and subscript formatting is neither constrained nor unconstrained, but rather a specialty hybrid
 * Clarify that first menu item must start with word character or character reference
+* Emphasize that the shorthand syntax for menu is not on a standards track
 
 Fixed::
 * Update docinfo example so it picks up docinfo file
