@@ -96,7 +96,7 @@ A block macro is always parsed, whereas an inline macro is only parsed where the
 There's another syntax in AsciiDoc that looks a lot like block macros, only they aren't.
 These are the preprocessor directives.
 
-A preprocessor directive is function that controls lines that are fed into the parser.
+A preprocessor directive is a function that controls lines that are fed into the parser.
 A conditional preprocessor directive can configure lines to be included or excluded based on the presence of an attribute (ifdef, ifndef) or another arbitrary condition (ifeval).
 An include directive can add additional lines to the document taken from another document.
 
