@@ -14,7 +14,7 @@ The `inline` doctype is intended for embedded scenarios.
 
 Article (`article`)::
 The default doctype.
-In DocBook, includes the appendix, abstract, bibliography, glossary, and index sections.
+In DocBook, this includes the appendix, abstract, bibliography, glossary, and index sections.
 Unless you are making a book or a man page, you don't need to worry about the doctype.
 The default will suffice.
 
