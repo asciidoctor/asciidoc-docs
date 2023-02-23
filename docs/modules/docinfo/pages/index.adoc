@@ -268,7 +268,7 @@ Then the converted DocBook output would be:
 ----
 <.> The revnumber attribute reference in `docinfo.xml` was replaced by the source document's revision number in the converted output.
 
-Another example is if you want to define the the licence link tag in the HTML head.
+Another example is if you want to define the licence link tag in the HTML head.
 
 .Docinfo file (docinfo.html) containing a license meta tag
 [,html]
