@@ -1,46 +1,58 @@
 = Document Header
 
 An AsciiDoc document may begin with a document header.
-The document header encapsulates the document title, author and revision information, document metadata, and document-scoped attributes.
+The document header encapsulates the document title, author and revision information, document-wide attributes, and other document metadata.
 
 == Document header structure
 
-If present, the document header is a sequence of contiguous lines that start at the top of the file, ignoring any empty lines or comments.
+The optional document header is a series of contiguous lines at the start of the AsciiDoc source, after skipping any empty or comment lines.
+If a document has a header, _no content blocks are permitted above it_.
+In other words, the document must start with a document header if it has one.
 
-IMPORTANT: *The document header cannot contain empty lines.*
-The first empty line that the processor encounters after the document header begins marks the end of the document header and the beginning of the document body.
+[IMPORTANT]
+====
+[.lead]
+*The document header may not contain empty lines.*
+The first empty line the processor encounters after the document header begins marks the <<when-does-the-document-header-end,end of the document header>> and the start of the document body.
+====
 
 A header typically begins with a xref:title.adoc[].
-When a document title is specified, it can be immediately followed by two special (but optional) lines of content that assign xref:author-information.adoc[] and xref:revision-information.adoc[].
+When a document title is specified, it may be immediately followed by one or two designated lines of content.
+These implicit content lines are used to assign xref:author-information.adoc[] and xref:revision-information.adoc[] to the document.
 
-Additionally, the header can contain the following elements as long as there aren't any empty lines between any of the entries:
+The header may contain the following elements as long as there aren't any empty lines between them:
 
-* optional document-wide attributes (built-in and user-defined) that are declared using xref:attributes:attribute-entries.adoc[attribute entries],
-* optional xref:metadata.adoc[metadata], such as a description or keywords, and
-* optional xref:ROOT:comments.adoc#comment-lines[comment lines].
+* optional document title (a level-0 heading)
+* optional author line or author and revision lines if the document title is present (should immediately follow the document title)
+* optional document-wide attributes (built-in and user-defined) declared using xref:attributes:attribute-entries.adoc[attribute entries],
+** includes optional xref:metadata.adoc[metadata], such as a description or keywords
+* optional xref:ROOT:comments.adoc#comment-lines[comment lines]
 
-Notice in <<ex-basic-header>> that there are no empty lines between any of the entries; the lines are contiguous.
+Notice in <<ex-basic-header>> that there are no empty lines between any of the entries.
+In other words, the lines are contiguous.
 
 .Common elements in a header
 [source#ex-basic-header]
 ----
+// this comment line is ignored
 = Document Title <.>
 Kismet R. Lee <kismet@asciidoctor.org> <.>
 :description: The document's description. <.>
 :sectanchors: <.>
 :url-repo: https://my-git-repo.com <.>
 <.>
+The document body starts here.
 ----
 <.> Document title
 <.> Author line
 <.> Attribute entry assigning metadata to a built-in document attribute
 <.> Attribute entry setting a built-in document attribute
 <.> Attribute entry assigning a value to a user-defined document attribute
-<.> An empty line that ends the document header
+<.> The document body is separated from the document header by an empty line
 
 There are a few attribute entries in <<ex-basic-header>>.
 Each attribute entry, whether built-in or user-defined, must be entered on its own line.
-While attribute entries can be placed anywhere in the header, including above the document title, the preferred placement is below the title, if it's present.
+While attribute entries may be placed anywhere in the header, including above the document title, the preferred placement is below the title, if it's present.
 Since the document title is optional, it's possible for the header to only consist of attribute entries.
 
 == When does the document header end?
@@ -68,6 +80,16 @@ Any attributes defined below the first empty line are not part of the document h
 The header is optional when the `doctype` is `article` or `book`.
 A header is required when the document type is `manpage`.
 See the xref:asciidoctor:manpage-backend:index.adoc[manpage doctype] section for manual page (man page) requirements.
+
+If you put content blocks above the document header when using the default article doctype, you will see the following warning:
+
+....
+level 0 sections can only be used when doctype is book
+....
+
+While this warning can be mitigated by changing the doctype to book, it may lead to a secondary warning about an invalid part.
+That's because the document title will be repurposed as a part title and any lines that follow it as content blocks.
+If you're going to use the book doctype, you must structure your document to use xref:sections:parts.adoc[].
 
 == Header processing
 
