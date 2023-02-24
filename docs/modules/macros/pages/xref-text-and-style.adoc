@@ -38,15 +38,28 @@ By default, this text is the title of the reference.
 
 == Cross reference styles
 
-There are three built-in styles you can choose from to customize the generated text of a cross reference, as controlled by the xrefstyle document attribute.
+The generated text of a cross reference is controlled by the xrefstyle.
+It will also vary for different element types (section, figure, etc).
+Let's consider the following document to learn how the xrefstyle value affects the generated text of a cross reference.
 
- :xrefstyle: full:: Uses the signifier for the reference (e.g., Section) followed by the reference number and emphasized (chapter or appendix) or quoted title (e.g., Section 2.3, “Installation” or Figure 1, “Big Cats”).
+[,asciidoc]
+----
+== Installation
 
- :xrefstyle: short:: Uses the signifier for the reference (e.g., Section) followed by the reference number (e.g., Section 2.3 or Figure 1).
+.Big Cats
+image::big-cats.png[]
+----
 
- :xrefstyle: basic:: Uses the title only (Installation or Big Cats), applying emphasis if the reference is a chapter or appendix.
+There are three built-in styles supported by the xrefstyle document attribute that you can choose from to customize the generated text of a cross reference.
+
+ :xrefstyle: full:: Uses the signifier for the reference followed by the reference number and emphasized (chapter or appendix) or title enclosed in quotes (e.g., Section 2.3, “Installation”) (e.g., Figure 1, “Big Cats”).
+
+ :xrefstyle: short:: Uses the signifier for the reference followed by the reference number (e.g., Section 2.3) (e.g., Figure 1).
+
+ :xrefstyle: basic:: Uses the title only, only applying emphasis if the reference is a chapter or appendix (e.g., Installation) (e.g., Big Cats).
 
 The `xrefstyle` attribute can also be specified directly on the xref:xref.adoc[xref macro] to override the xrefstyle value for a single reference (e.g., `+xref:installation[xrefstyle=short]+`).
+The element attribute supports the same three styles.
 
 The xrefstyle formatting only applies to references that have both a title and number (or explicit caption), but no explicit reftext.
 If the reference is a chapter or an appendix, the title is displayed in italics instead of quotes (even when the xrefstyle is basic).
