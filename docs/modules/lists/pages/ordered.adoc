@@ -20,20 +20,26 @@ include::example$ordered.adoc[tag=base]
 include::example$ordered.adoc[tag=base]
 ====
 
-If you decide to manually number your ordered list, you have to keep them sequential.
+If you number the ordered list explicitly, you have to manually keep the list numerals sequential.
+Otherwise, you will get a warning.
 This differs from other lightweight markup languages.
-It's one way to adjust the numbering offset of a list.
+But there's a reason for it.
+
+Using explicit numbering is one way to adjust the numbering offset of a list.
 For instance, you can type:
 
 ----
 include::example$ordered.adoc[tag=base-num-start]
 ----
 
-However, in general the best practice is to use the `start` attribute to configure this sort of thing:
+However, there's a simpler way to accomplish the same result without the manual effort.
+You can use the `start` attribute on the list to define the number at which you want the numerals to start.
 
 ----
 include::example$ordered.adoc[tag=base-start]
 ----
+
+The start value is always a positive integer value even when using a different numeration style such as loweralpha.
 
 .When not to use the start attribute
 ****
