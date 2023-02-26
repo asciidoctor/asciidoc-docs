@@ -1,26 +1,17 @@
-= AsciiDoc Language Documentation
+= AsciiDoc Language User Documentation
 :url-org: https://github.com/asciidoctor
-:url-asciidoc-lang: https://projects.eclipse.org/projects/technology.asciidoc
+:url-asciidoc-lang: https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang
 :url-docs: https://docs.asciidoctor.org/asciidoc/latest
 
-This repository contains the user-facing documentation for the AsciiDoc(R) language as it's implemented in {url-org}/asciidoctor[Asciidoctor].
-You can view the {url-docs}[published version] online.
-This documentation has been submitted as the initial contribution for the {url-asciidoc-lang}[AsciiDoc Language(TM) project at Eclipse].
+**This repository is now archived.**
 
-== Publishing
+This repository provided the source of the initial contribution for the {url-asciidoc-lang}[AsciiDoc Language(TM) project at Eclipse].
+That contribution consisted of the user documentation for the AsciiDoc(R) language as interpreted by {url-org}/asciidoctor[Asciidoctor]. 
+It was contributed by the Asciidoctor project.
+The user documentation now resides in the [.path]_docs_ folder of the {url-asciidoc-lang}[repository] for the AsciiDoc Language project.
 
-This repository only contains the documentation source files and assets.
-The documentation is published {url-docs}[online] for reading.
-Although you can view a preview of the files through the GitHub interface, it's not an official rendering and you should not expect all content to display properly.
-To view it properly, you should read it {url-docs}[on the site where it is published].
-
-== Documentation Structure
-
-This repository is a registered content source in the {url-org}/docs.asciidoctor.org/blob/main/antora-playbook.yml[playbook file for docs.asciidoctor.org].
-The source files are organized into a documentation component as described by the [.path]_antora.yml_ file.
-
-To build and preview the documentation locally, follow the instructions in the file link:local-antora-playbook.yml[] at the root of this repository.
-To learn more about how to build a documentation site with Antora, see the https://docs.antora.org/antora/latest/install-and-run-quickstart/[Install and Run Antora Quickstart].
+The Asciidoctor project will continue to host a copy of the AsciiDoc user documentation.
+You can view the published version of the user documentation {url-docs}[online].
 
 == Copyright and License
 
@@ -35,7 +26,7 @@ The project was initiated in 2012 by https://github.com/erebor[Ryan Waldron] and
 
 *AsciiDoc* was started and maintained by Stuart Rackham from https://github.com/asciidoc/asciidoc/blob/master/CHANGELOG.txt[2002 to 2013] and has received contributions from many individuals in the https://github.com/asciidoc/asciidoc/graphs/contributors[AsciiDoc community].
 
-This documentation for the AsciiDoc language was extracted from the tip of the https://github.com/asciidoctor/asciidoctor.org/tree/docs-archive[docs-archive branch] in the https://github.com/asciidoctor/asciidoctor.org repository.
+The user documentation for the AsciiDoc language was extracted from the tip of the https://github.com/asciidoctor/asciidoctor.org/tree/docs-archive[docs-archive branch] in the https://github.com/asciidoctor/asciidoctor.org repository, imported into this repository, revised for accuracy, and contributed by the Asciidoctor project.
 
 == Trademarks
 
